@@ -19,6 +19,16 @@ LoginWindow::LoginWindow(QWidget *parent)
 
     myDb.initDistanceList("C:/Users/Trevor Rizzi/Desktop/College-Touring/College Campus Distances and Souvenirs.xlsx");
 
+    //myDb.clearDb(); deletes the tables with college info
+
+    if(!myDb.isOpen())
+    {
+        ui->dbStatus->setText("Failed to open database!");
+    }
+    else
+    {
+        ui->dbStatus->setText("Connected...");
+    }
 
 
 }
@@ -42,22 +52,37 @@ void LoginWindow::onLoginClick()
     QString passWord;
     QString userName;
 
-    passWord = this->ui->Username->text();
-    userName = this->ui->Password->text();
-    if(userName == "N" && passWord == "N")
+    userName = this->ui->Username->text();
+    passWord = this->ui->Password->text();
+
+    //check for admin login -> open admin window
+    //check for reg login ->open user window
+
+    //***************************************
+
+    if(passWord == myDb.getPassword(userName))
     {
-
-
-        //opens the user window = user window not yet implemented
-
-        this->hide();
-        //myUser = new userWindow(this);
-        //myUser->show();
+        if(myDb.checkAdmin(userName))
+        {
+            this->hide();
+            admin = new AdminWindow(this);
+            admin->show();
+        }
+        else
+        {
+            this->hide();
+            //open the user window here
+            //
+            //
+            //
+        }
     }
     else
     {
         this->ui->invalidLabel->setText("Invalid Credentials!");
     }
+
+
 
 }
 
@@ -91,4 +116,5 @@ void LoginWindow::onClearClick()
 
 
 }
+
 
