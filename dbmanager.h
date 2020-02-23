@@ -22,9 +22,12 @@ public:
 
     void initDistanceList(const QString &path);
 
+    void addUser(const QString &user, const QString &pass);
+
+    bool userExists(const QString &user);
+
 
 private:
-
     QSqlDatabase myDB;
 };
 
