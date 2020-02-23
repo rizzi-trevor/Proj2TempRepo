@@ -48,6 +48,7 @@ void DbManager::InitCollegeList(const QString &path)//path to the excel file
 
        while(query->next())
        {
+
            if(myDB.open())
            {
 
@@ -58,7 +59,7 @@ void DbManager::InitCollegeList(const QString &path)//path to the excel file
                if(compare != column1)
                {
                    querytoDb->bindValue(":collegeName",query->value(0).toString());
-                   qDebug() << querytoDb->exec() << endl;
+                   qDebug() << querytoDb->exec();
 
                }
                compare = column1;
@@ -113,7 +114,7 @@ void DbManager::initSouvenirList(const QString &path)
                     querytoDb->bindValue(":collegeName", column1);
                     querytoDb->bindValue(":souvenirName",column2);
                     querytoDb->bindValue(":cost",column3);
-                    qDebug() << querytoDb->exec() << endl;
+                    qDebug() << querytoDb->exec();
 
                 }
 
@@ -160,9 +161,61 @@ void DbManager::initDistanceList(const QString &path)
                 querytoDb->bindValue(":startCollege", column1);
                 querytoDb->bindValue(":endCollege",column2);
                 querytoDb->bindValue(":distance",column3);
-                qDebug() << querytoDb->exec() << endl;
+                qDebug() << querytoDb->exec();
             }
         }
         fileDB.close();
     }
 }
+
+//QSqlDatabase::removeDatabase("xlsx_connection"); // need to put this out of scope of the initialised db
+
+
+void DbManager::addUser(const QString &user, const QString &pass)
+{
+    QSqlQuery *query = new QSqlQuery(myDB);
+
+   if(!userExists(user))
+   {
+    if(myDB.open())
+    {
+        query->exec("CREATE TABLE Logins ("
+                    "Username TEXT,"
+                    "Password TEXT);");
+
+        query->prepare("INSERT INTO Logins(Username, Password) VALUES(:Username, :Password)");
+
+        query->bindValue(":Username", user);
+        query->bindValue(":Password", pass);
+        qDebug() << query->exec();
+    }
+   }
+
+}
+
+bool DbManager::userExists(const QString &user)
+{
+    bool exists = false;
+
+    QSqlQuery *checkQuery = new QSqlQuery(myDB);
+
+    checkQuery->prepare("SELECT FROM Logins WHERE (Username) = (:Usernmae)");
+    checkQuery->bindValue(":Username", user);
+
+    if(checkQuery->exec())
+    {
+        if(checkQuery->next())
+        {
+                exists = true;
+                QString userName = checkQuery->value("Username").toString();
+                qDebug() << userName;
+        }
+    }
+    else
+    {
+        qDebug() << "person exists failed: " << checkQuery->lastError();
+    }
+
+    return exists;
+}
+
