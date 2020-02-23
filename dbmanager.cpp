@@ -174,6 +174,7 @@ void DbManager::initDistanceList(const QString &path)
 void DbManager::addUser(const QString &user, const QString &pass)
 {
     QSqlQuery *query = new QSqlQuery(myDB);
+    QString userVal = "User";
 
    if(!userExists(user))
    {
@@ -181,12 +182,14 @@ void DbManager::addUser(const QString &user, const QString &pass)
     {
         query->exec("CREATE TABLE Logins ("
                     "Username TEXT,"
-                    "Password TEXT);");
+                    "Password TEXT,"
+                    "UserValue TEXT);");
 
-        query->prepare("INSERT INTO Logins(Username, Password) VALUES(:Username, :Password)");
+        query->prepare("INSERT INTO Logins(Username, Password, UserValue) VALUES(:Username, :Password, :UserValue)");
 
         query->bindValue(":Username", user);
         query->bindValue(":Password", pass);
+        query->bindValue(":UserValue", userVal);
         qDebug() << query->exec();
     }
    }
@@ -199,7 +202,7 @@ bool DbManager::userExists(const QString &user)
 
     QSqlQuery *checkQuery = new QSqlQuery(myDB);
 
-    checkQuery->prepare("SELECT FROM Logins WHERE (Username) = (:Usernmae)");
+    checkQuery->prepare("SELECT Username FROM Logins WHERE (Username) = (:Username)");
     checkQuery->bindValue(":Username", user);
 
     if(checkQuery->exec())
@@ -219,3 +222,88 @@ bool DbManager::userExists(const QString &user)
     return exists;
 }
 
+void DbManager::clearDb()
+{
+    QSqlQuery *deleteQuery = new QSqlQuery(myDB);
+
+    deleteQuery->prepare("DROP TABLE IF EXISTS Colleges");
+
+    deleteQuery->exec();
+
+    deleteQuery->prepare("DROP TABLE IF EXISTS Distances");
+
+    deleteQuery->exec();
+
+    deleteQuery->prepare("DROP TABLE IF EXISTS Souvenirs");
+
+    deleteQuery->exec();
+
+}
+
+bool DbManager::isOpen() const
+{
+    return myDB.isOpen();
+}
+
+bool DbManager::checkAdmin(const QString &username) const
+{
+    bool admin = false;
+
+    QSqlQuery *checkQuery = new QSqlQuery(myDB);
+
+    checkQuery->prepare("SELECT UserValue FROM logins where (Username) = (:Username)");
+    checkQuery->bindValue(":Username", username);
+
+    if(checkQuery->exec())
+    {
+        if(checkQuery->next())
+        {
+            QString userVal = checkQuery->value("UserValue").toString();
+
+            if(userVal == "admin")
+            {
+                admin = true;
+            }
+            qDebug() << admin;
+        }
+    }
+    else
+    {
+        qDebug() << "Admin exists failed:";
+
+    }
+
+    if(admin)
+    {
+        qDebug() << "Admin";
+    }
+
+    return admin;
+}
+
+QString DbManager::getPassword(const QString &username) const
+{
+    QString password;
+    QSqlQuery *getQuery = new QSqlQuery(myDB);
+        getQuery->prepare("SELECT Password FROM logins WHERE (Username) = (:Username)");
+        getQuery->bindValue(":Username", username);
+
+        if (getQuery->exec())
+        {
+            if (getQuery->next())
+            {
+                password = getQuery->value("Password").toString();
+                qDebug() << password;
+            }
+            else
+            {
+                qDebug() << "next query fail: " << getQuery->lastError();
+            }
+        }
+        else
+        {
+            qDebug() << "person 1exists failed: " << getQuery->lastError();
+        }
+
+        return password;
+}
