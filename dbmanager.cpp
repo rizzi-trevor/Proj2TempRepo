@@ -27,7 +27,7 @@ DbManager::DbManager(const QString &path)
 
 }
 
-void DbManager::initCollegeList(const QString &path)//path to the excel file
+void DbManager::InitCollegeList(const QString &path)//path to the excel file
 {
    QSqlDatabase fileDB = QSqlDatabase::addDatabase("QODBC", "xlsx_connection");
    fileDB.setDatabaseName("DRIVER={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};DBQ=" + path);
@@ -39,7 +39,6 @@ void DbManager::initCollegeList(const QString &path)//path to the excel file
        QSqlQuery *query = new QSqlQuery(fileDB);
        query->exec("select * from [" + QString("Distances") + "$A1:A111]");   //Distances is the sheet name!
 
-
        QSqlQuery * querytoDb = new QSqlQuery(myDB);
 
        querytoDb->exec("CREATE TABLE Colleges ("
@@ -49,9 +48,6 @@ void DbManager::initCollegeList(const QString &path)//path to the excel file
 
        while(query->next())
        {
-           //QSqlDatabase myDB = QSqlDatabase::database("sqlite_connection");
-
-
            if(myDB.open())
            {
 
@@ -62,23 +58,109 @@ void DbManager::initCollegeList(const QString &path)//path to the excel file
                if(compare != column1)
                {
                    querytoDb->bindValue(":collegeName",query->value(0).toString());
-                   qDebug() << querytoDb->exec() << endl;
                }
-
-
                compare = column1;
-
            }
        }
 
        fileDB.close();
-
-       //QSqlDatabase::removeDatabase("xlsx_connection"); // need to put this out of scope of the initialised db
-
    }
-
-
-
-
 }
 
+void DbManager::initSouvenirList(const QString &path)
+{
+    QSqlDatabase fileDB = QSqlDatabase::addDatabase("QODBC", "xlsx_connection");
+    fileDB.setDatabaseName("DRIVER={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};DBQ=" + path);
+
+    if(fileDB.open())
+    {
+        qDebug() << "Excel connection successful" << endl;
+
+        QSqlQuery *query = new QSqlQuery(fileDB);
+        query->exec("select * from [" + QString("Souvenirs") + "$A1:C61]");
+
+        QSqlQuery * querytoDb = new QSqlQuery(myDB);
+
+        querytoDb->exec("CREATE TABLE Souvenirs ("
+                        "collegeName TEXT,"
+                        "souvenirName TEXT,"
+                        "cost FLOAT);");
+
+        QString tempColumn1;
+        QString check;
+
+        while(query->next())
+        {
+            if(myDB.open())
+            {
+                querytoDb->prepare("INSERT INTO Souvenirs(collegeName, souvenirName, cost) VALUES(:collegeName, :souvenirName, :cost)");
+
+                QString column1 = query->value(0).toString();
+                check = column1;
+                if(column1 == "" || column1 == " ")
+                {
+                    column1 = tempColumn1;
+                }
+
+                QString column2 = query->value(1).toString();
+
+                float column3 = query->value(2).toFloat();
+
+                if(check == "" && column2 != "")
+                {
+                    querytoDb->bindValue(":collegeName", column1);
+                    querytoDb->bindValue(":souvenirName",column2);
+                    querytoDb->bindValue(":cost",column3);
+                    qDebug() << querytoDb->exec() << endl;
+
+                }
+
+                tempColumn1 = column1;
+            }
+        }
+        fileDB.close();
+    }
+}
+
+void DbManager::initDistanceList(const QString &path)
+{
+    QSqlDatabase fileDB = QSqlDatabase::addDatabase("QODBC", "xlsx_connection");
+    fileDB.setDatabaseName("DRIVER={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};DBQ=" + path);
+
+    if(fileDB.open())
+    {
+        qDebug() << "Excel connection successful" << endl;
+
+        QSqlQuery *query = new QSqlQuery(fileDB);
+        query->exec("select * from [" + QString("Distances") + "$A2:C111]");
+
+        QSqlQuery * querytoDb = new QSqlQuery(myDB);
+
+        querytoDb->exec("CREATE TABLE Distances ("
+                        "startCollege TEXT,"
+                        "endCollege TEXT,"
+                        "distance INTEGER);");
+
+        while(query->next())
+        {
+            //QSqlDatabase myDB = QSqlDatabase::database("sqlite_connection");
+
+            if(myDB.open())
+            {
+                querytoDb->prepare("INSERT INTO Distances(startCollege, endCollege, distance) VALUES(:startCollege, :endCollege, :distance)");
+
+                QString column1 = query->value(0).toString();
+
+                QString column2 = query->value(1).toString();
+
+                int column3 = query->value(2).toInt();
+
+                querytoDb->bindValue(":startCollege", column1);
+                querytoDb->bindValue(":endCollege",column2);
+                querytoDb->bindValue(":distance",column3);
+                qDebug() << querytoDb->exec() << endl;
+            }
+        }
+        fileDB.close();
+    }
+}
