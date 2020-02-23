@@ -58,6 +58,8 @@ void DbManager::InitCollegeList(const QString &path)//path to the excel file
                if(compare != column1)
                {
                    querytoDb->bindValue(":collegeName",query->value(0).toString());
+                   qDebug() << querytoDb->exec() << endl;
+
                }
                compare = column1;
            }
