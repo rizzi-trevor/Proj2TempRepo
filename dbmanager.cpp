@@ -87,7 +87,7 @@ void DbManager::initSouvenirList(const QString &path)
         querytoDb->exec("CREATE TABLE Souvenirs ("
                         "collegeName TEXT,"
                         "souvenirName TEXT,"
-                        "cost FLOAT);");
+                        "cost DOUBLE);");
 
         QString tempColumn1;
         QString check;
@@ -107,7 +107,7 @@ void DbManager::initSouvenirList(const QString &path)
 
                 QString column2 = query->value(1).toString();
 
-                float column3 = query->value(2).toFloat();
+                double column3 = query->value(2).toDouble();
 
                 if(check == "" && column2 != "")
                 {
