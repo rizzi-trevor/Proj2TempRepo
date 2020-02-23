@@ -26,6 +26,14 @@ public:
 
     bool userExists(const QString &user);
 
+    void clearDb();
+
+    bool isOpen() const;
+
+    bool checkAdmin(const QString &username) const;
+
+    QString getPassword(const QString &username) const;
+
 
 private:
     QSqlDatabase myDB;
