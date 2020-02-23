@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "dbmanager.h"
+#include "adminwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LoginWindow; }
@@ -27,6 +28,7 @@ private:
     Ui::LoginWindow *ui;
 
     DbManager myDb = DbManager("C:/Users/Trevor Rizzi/Documents/College-Touring/college.db");
+    AdminWindow *admin;
 
 };
 #endif // LOGINWINDOW_H
