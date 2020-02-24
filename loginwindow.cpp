@@ -13,11 +13,11 @@ LoginWindow::LoginWindow(QWidget *parent)
     //Running instances just to test the database creation
     // Makes necessary tables from input file
 
-    myDb.InitCollegeList("C:/Users/Trevor Rizzi/Desktop/College-Touring/College Campus Distances and Souvenirs.xlsx");
+    myDb.InitCollegeList("C:/Users/Nick/source/repos/CS1D-Project1-College-Touring/College Campus Distances and Souvenirs.xlsx");
 
-    myDb.initSouvenirList("C:/Users/Trevor Rizzi/Desktop/College-Touring/College Campus Distances and Souvenirs.xlsx");
+    myDb.initSouvenirList("C:/Users/Nick/source/repos/CS1D-Project1-College-Touring/College Campus Distances and Souvenirs.xlsx");
 
-    myDb.initDistanceList("C:/Users/Trevor Rizzi/Desktop/College-Touring/College Campus Distances and Souvenirs.xlsx");
+    myDb.initDistanceList("C:/Users/Nick/source/repos/CS1D-Project1-College-Touring/College Campus Distances and Souvenirs.xlsx");
 
     //myDb.clearDb(); deletes the tables with college info
 
@@ -118,3 +118,18 @@ void LoginWindow::onClearClick()
 }
 
 
+
+void LoginWindow::on_Password_returnPressed()
+{
+    onLoginClick();
+}
+
+void LoginWindow::on_Username_returnPressed()
+{
+    onLoginClick();
+}
+
+void LoginWindow::on_loginButton_pressed()
+{
+    onLoginClick();
+}

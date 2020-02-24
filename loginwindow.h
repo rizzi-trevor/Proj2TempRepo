@@ -24,6 +24,13 @@ public:
     LoginWindow(QWidget *parent = nullptr);
     ~LoginWindow();
 
+private slots:
+    void on_Username_returnPressed();
+
+    void on_Password_returnPressed();
+
+    void on_loginButton_pressed();
+
 private:
     Ui::LoginWindow *ui;
 
