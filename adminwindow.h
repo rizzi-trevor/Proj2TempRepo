@@ -26,6 +26,7 @@ private slots:
     void on_addSouvenir_released();
 
     void on_removeSouvenir_released();
+    void onAddColleges();
 
 private:
 
