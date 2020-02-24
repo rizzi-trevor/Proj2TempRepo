@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Main">
      <attribute name="title">
@@ -156,7 +156,7 @@
        <rect>
         <x>240</x>
         <y>360</y>
-        <width>131</width>
+        <width>113</width>
         <height>20</height>
        </rect>
       </property>
@@ -188,8 +188,8 @@
    <slot>onInitialise()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>98</x>
-     <y>57</y>
+     <x>100</x>
+     <y>103</y>
     </hint>
     <hint type="destinationlabel">
      <x>99</x>
@@ -204,8 +204,8 @@
    <slot>clearCollegeData()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>121</x>
-     <y>135</y>
+     <x>123</x>
+     <y>181</y>
     </hint>
     <hint type="destinationlabel">
      <x>127</x>
@@ -213,9 +213,26 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>AdminWindow</receiver>
+   <slot>onAddColleges()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>151</x>
+     <y>263</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>147</x>
+     <y>522</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>onInitialise()</slot>
   <slot>clearCollegeData()</slot>
+  <slot>onAddColleges()</slot>
  </slots>
 </ui>
