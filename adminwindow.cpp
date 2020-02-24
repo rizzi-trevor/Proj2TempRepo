@@ -22,7 +22,7 @@ void AdminWindow::updateCollegeTable()
 
     QSqlQuery* qry=new QSqlQuery();
 
-    qry->prepare("SELECT * FROM Colleges");
+    qry->prepare("SELECT * FROM Distances");
 
     if(qry->exec())
     {
@@ -149,4 +149,24 @@ void AdminWindow::on_removeSouvenir_released()
     }
 
     updateSouvenirTable();
+}
+
+void AdminWindow::onAddColleges()
+{
+    confirmpage confirm;
+    bool check = false;
+
+    confirm.setModal(true);
+    confirm.exec();
+    check = confirm.getData();
+
+    if(check)
+    {
+        myDb.addColleges("C:/Users/trevo/Desktop/Data/College Campus Distances and Souvenirs.xlsx");
+    }
+    else
+    {
+        qDebug() << "Cancel!";
+    }
+
 }
