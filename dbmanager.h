@@ -23,8 +23,13 @@ public:
     void initDistanceList(const QString &path);
 
     void addUser(const QString &user, const QString &pass);
+    void addSou(const QString &college, const QString &souName, const double &cost);
+    void removeSou(const QString &souName);
+    
+    void addColleges(const QString &path);
 
     bool userExists(const QString &user);
+    bool souExists(const QString &name);
 
     void clearDb();
 

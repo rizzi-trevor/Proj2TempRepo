@@ -16,20 +16,26 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addsouvenir.cpp \
     adminwindow.cpp \
+    confirmpage.cpp \
     dbmanager.cpp \
     main.cpp \
     loginwindow.cpp \
     tripplanner.cpp
 
 HEADERS += \
+    addsouvenir.h \
     adminwindow.h \
+    confirmpage.h \
     dbmanager.h \
     loginwindow.h \
     tripplanner.h
 
 FORMS += \
+    addsouvenir.ui \
     adminwindow.ui \
+    confirmpage.ui \
     loginwindow.ui \
     tripplanner.ui
 

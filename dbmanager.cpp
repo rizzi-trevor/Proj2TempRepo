@@ -170,6 +170,50 @@ void DbManager::initDistanceList(const QString &path)
 
 //QSqlDatabase::removeDatabase("xlsx_connection"); // need to put this out of scope of the initialised db
 
+void DbManager::removeSou(const QString &souName)
+{
+    QSqlQuery *query = new QSqlQuery(myDB);
+
+    if(souExists(souName))
+    {
+        if(myDB.open())
+        {
+            query->prepare("DELETE FROM Souvenirs WHERE (souvenirName) = (:souvenirName)");
+            query->bindValue(":souvenirName", souName);
+
+            if(query->exec())
+                qDebug() << "sou delete success!";
+            else
+                qDebug() << "sou delete failed!";
+        }
+    }
+
+}
+
+void DbManager::addSou(const QString &college, const QString &souName, const double &cost)
+{
+    QSqlQuery *query = new QSqlQuery(myDB);
+
+    if(!souExists(souName))
+    {
+        if(myDB.open())
+        {
+            query->prepare("INSERT INTO Souvenirs(collegeName, souvenirName, cost) VALUES(:collegeName, :souvenirName, :cost)");
+            query->bindValue(":collegeName", college);
+            query->bindValue(":souvenirName", souName);
+            query->bindValue(":cost", cost);
+
+            if(query->exec())
+                qDebug() << "sou add success!";
+            else
+                qDebug() << "sou add failed!";
+        }
+    }
+    else
+    {
+        qDebug() << "name exists!";
+    }
+}
 
 void DbManager::addUser(const QString &user, const QString &pass)
 {
@@ -194,6 +238,32 @@ void DbManager::addUser(const QString &user, const QString &pass)
     }
    }
 
+}
+
+bool DbManager::souExists(const QString &name)
+{
+    bool exists = false;
+
+    QSqlQuery *checkQuery = new QSqlQuery(myDB);
+
+    checkQuery->prepare("SELECT souvenirName FROM Souvenirs WHERE (souvenirName) = (:souvenirName)");
+    checkQuery->bindValue(":souvenirName", name);
+
+    if(checkQuery->exec())
+    {
+        if(checkQuery->next())
+        {
+            exists = true;
+            QString souName = checkQuery->value("souvenirName").toString();
+            qDebug() << souName;
+        }
+    }
+    else
+    {
+        qDebug() << "souvenir exists failed: " << checkQuery->lastError();
+    }
+
+    return exists;
 }
 
 bool DbManager::userExists(const QString &user)
@@ -306,4 +376,50 @@ QString DbManager::getPassword(const QString &username) const
         }
 
         return password;
+}
+
+void DbManager::addColleges(const QString &path)
+{
+    QSqlDatabase fileDB = QSqlDatabase::addDatabase("QODBC", "xlsx_connection");
+    fileDB.setDatabaseName("DRIVER={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};DBQ=" + path);
+
+    if(fileDB.open())
+    {
+        qDebug() << "Excel connection successful" << endl;
+
+        QSqlQuery *query = new QSqlQuery(fileDB);
+        query->exec("select * from [" + QString("New Campuses") + "$A2:C47]");
+
+        QSqlQuery * querytoDb = new QSqlQuery(myDB);
+        QSqlQuery * querytoList = new QSqlQuery(myDB);
+
+        while(query->next())
+        {
+            if(myDB.open())
+            {
+                querytoDb->prepare("INSERT INTO Distances(startCollege, endCollege, distance) VALUES(:startCollege, :endCollege, :distance)");
+                querytoList->prepare("INSERT OR REPLACE INTO Colleges(collegeName) values(:collegeName)");
+
+                QString column1 = query->value(0).toString();
+                QString column2 = query->value(1).toString();
+
+                int column3 = query->value(2).toInt();
+
+                querytoDb->bindValue(":startCollege", column1);
+                querytoDb->bindValue(":endCollege",column2);
+                querytoDb->bindValue(":distance",column3);
+                qDebug() << querytoDb->exec();
+
+
+                {
+                    querytoList->bindValue(":collegeName",query->value(0).toString());
+                    qDebug() << querytoList->exec();
+
+                }
+
+            }
+        }
+
+        fileDB.close();
+    }
 }
