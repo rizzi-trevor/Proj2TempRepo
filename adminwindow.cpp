@@ -123,14 +123,21 @@ void AdminWindow::on_removeSouvenir_released()
         success = true;
     }
 
-    if(!success)
+    if(!myDb.souExists(ui->removeEdit->text()))
     {
-    confirm.setModal(true);
-    confirm.exec();
-    check = confirm.getData();
+       ui->removeEdit->setText("");
+       ui->removeEdit->setPlaceholderText("souvenir doesn't exist!");
+       success = true;
     }
 
-    if(!myDb.souExists(ui->removeEdit->text()) && !success && check)
+    if(!success)
+    {
+        confirm.setModal(true);
+        confirm.exec();
+        check = confirm.getData();
+    }
+
+    if(myDb.souExists(ui->removeEdit->text()) && !success && check)
     {
         myDb.removeSou(ui->removeEdit->text());
         ui->removeEdit->setText("");
@@ -141,4 +148,5 @@ void AdminWindow::on_removeSouvenir_released()
         qDebug() << "remove didn't work!";
     }
 
+    updateSouvenirTable();
 }
