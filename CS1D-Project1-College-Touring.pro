@@ -19,16 +19,19 @@ SOURCES += \
     adminwindow.cpp \
     dbmanager.cpp \
     main.cpp \
-    loginwindow.cpp
+    loginwindow.cpp \
+    tripplanner.cpp
 
 HEADERS += \
     adminwindow.h \
     dbmanager.h \
-    loginwindow.h
+    loginwindow.h \
+    tripplanner.h
 
 FORMS += \
     adminwindow.ui \
-    loginwindow.ui
+    loginwindow.ui \
+    tripplanner.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

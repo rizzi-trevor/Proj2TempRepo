@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "dbmanager.h"
 #include "adminwindow.h"
-
+#include "tripplanner.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class LoginWindow; }
 QT_END_NAMESPACE
@@ -34,7 +34,7 @@ private slots:
 private:
     Ui::LoginWindow *ui;
 
-    DbManager myDb = DbManager("C:/Users/Trevor Rizzi/Documents/College-Touring/college.db");
+    DbManager myDb = DbManager("C:/Users/Nick/source/repos/CS1D-Project1-College-Touring/college.db");
     AdminWindow *admin;
 
 };
