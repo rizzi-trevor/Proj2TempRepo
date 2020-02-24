@@ -7,11 +7,51 @@ AdminWindow::AdminWindow(QWidget *parent) :
     ui(new Ui::AdminWindow)
 {
     ui->setupUi(this);
+    updateCollegeTable();
+    updateSouvenirTable();
 }
 
 AdminWindow::~AdminWindow()
 {
     delete ui;
+}
+
+void AdminWindow::updateCollegeTable()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT * FROM Colleges");
+
+    if(qry->exec())
+    {
+        qDebug() << "worked.";
+    }
+
+    model->setQuery(*qry);
+
+    ui->collegeView->setModel(model);
+    ui->collegeView->setColumnWidth(0, 300);
+}
+
+void AdminWindow::updateSouvenirTable()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT * FROM Souvenirs");
+
+    if(qry->exec())
+    {
+        qDebug() << "worked.";
+    }
+
+    model->setQuery(*qry);
+
+    ui->souvenirView->setModel(model);
+    ui->souvenirView->setColumnWidth(0, 220);
 }
 
 
@@ -59,4 +99,14 @@ void AdminWindow::clearCollegeData()
     {
         qDebug() << "Cancel!";
     }
+}
+
+void AdminWindow::on_addSouvenir_released()
+{
+    addSouvenir adding;
+    adding.setModal(true);
+    adding.exec();
+
+
+    updateSouvenirTable();
 }

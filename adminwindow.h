@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "dbmanager.h"
+#include <QDialog>
+#include "addsouvenir.h"
 
 namespace Ui {
 class AdminWindow;
@@ -14,11 +16,15 @@ class AdminWindow : public QMainWindow
 
 public:
     explicit AdminWindow(QWidget *parent = nullptr);
+    void updateCollegeTable();
+    void updateSouvenirTable();
     ~AdminWindow();
 
 private slots:
     void onInitialise();
     void clearCollegeData();
+    void on_addSouvenir_released();
+
 private:
 
     Ui::AdminWindow *ui;
