@@ -42,9 +42,8 @@ LoginWindow::~LoginWindow()
 void LoginWindow::onPlanClick()
 {
     this->hide();
-    //opens the user window = user window not yet implemented
-    //myUser = new userWindow(this);
-    //myUser->show();
+    tripPlanner *planner = new tripPlanner(this);
+    planner->show();
 }
 
 void LoginWindow::onLoginClick()
@@ -70,6 +69,8 @@ void LoginWindow::onLoginClick()
         }
         else
         {
+
+            qDebug() << "User login succuss";
             this->hide();
             //open the user window here
             //

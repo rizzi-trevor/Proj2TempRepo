@@ -1,17 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>tripPlanner</class>
- <widget name="tripPlanner" class="QDialog">
+ <widget class="QDialog" name="tripPlanner">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>825</width>
+    <height>569</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QScrollArea" name="CollegeList_scrollArea">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>291</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>289</width>
+      <height>209</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
  </widget>
  <resources/>
  <connections/>
