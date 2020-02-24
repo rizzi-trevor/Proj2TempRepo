@@ -23,6 +23,8 @@ public:
     void initDistanceList(const QString &path);
 
     void addUser(const QString &user, const QString &pass);
+    
+    void addColleges(const QString &path);
 
     bool userExists(const QString &user);
 
