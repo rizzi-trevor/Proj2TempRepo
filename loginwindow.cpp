@@ -1,7 +1,7 @@
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
 #include "dbmanager.h"
-
+#include "tripplanner.h"
 
 
 LoginWindow::LoginWindow(QWidget *parent)
@@ -72,10 +72,8 @@ void LoginWindow::onLoginClick()
 
             qDebug() << "User login succuss";
             this->hide();
-            //open the user window here
-            //
-            //
-            //
+            tripPlanner *planner = new tripPlanner(this);
+            planner->show();
         }
     }
     else
