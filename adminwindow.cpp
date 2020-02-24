@@ -1,5 +1,6 @@
 #include "adminwindow.h"
 #include "ui_adminwindow.h"
+#include "confirmpage.h"
 
 AdminWindow::AdminWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -16,19 +17,46 @@ AdminWindow::~AdminWindow()
 
 void AdminWindow::onInitialise()
 {
-    myDb.clearDb();
+    confirmpage confirm;
+    bool check = false;
 
-    myDb.InitCollegeList("C:/Users/Trevor Rizzi/Desktop/College-Touring/College Campus Distances and Souvenirs.xlsx");
+    confirm.setModal(true);
+    confirm.exec();
+    check = confirm.getData();
 
-    myDb.initSouvenirList("C:/Users/Trevor Rizzi/Desktop/College-Touring/College Campus Distances and Souvenirs.xlsx");
+    if(check)
+    {
+        myDb.clearDb();
 
-    myDb.initDistanceList("C:/Users/Trevor Rizzi/Desktop/College-Touring/College Campus Distances and Souvenirs.xlsx");
+        myDb.InitCollegeList("C:/Users/Trevor Rizzi/Desktop/College-Touring/College Campus Distances and Souvenirs.xlsx");
+
+        myDb.initSouvenirList("C:/Users/Trevor Rizzi/Desktop/College-Touring/College Campus Distances and Souvenirs.xlsx");
+
+        myDb.initDistanceList("C:/Users/Trevor Rizzi/Desktop/College-Touring/College Campus Distances and Souvenirs.xlsx");
+    }
+    else
+    {
+        qDebug() << "Cancel!";
+    }
 
 }
 
 void AdminWindow::clearCollegeData()
 {
-    myDb.clearDb();
-    qDebug() << "Database: clear";
+    confirmpage confirm;
+    bool check = false;
 
+    confirm.setModal(true);
+    confirm.exec();
+    check = confirm.getData();
+
+    if(check)
+    {
+        myDb.clearDb();
+        qDebug() << "Database: clear";
+    }
+    else
+    {
+        qDebug() << "Cancel!";
+    }
 }

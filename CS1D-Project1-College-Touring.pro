@@ -17,17 +17,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     adminwindow.cpp \
+    confirmpage.cpp \
     dbmanager.cpp \
     main.cpp \
     loginwindow.cpp
 
 HEADERS += \
     adminwindow.h \
+    confirmpage.h \
     dbmanager.h \
     loginwindow.h
 
 FORMS += \
     adminwindow.ui \
+    confirmpage.ui \
     loginwindow.ui
 
 # Default rules for deployment.

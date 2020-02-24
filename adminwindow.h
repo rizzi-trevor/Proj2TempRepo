@@ -24,7 +24,7 @@ private:
     Ui::AdminWindow *ui;
 
 
-    DbManager myDb = DbManager("C:/Users/Trevor Rizzi/Documents/College-Touring/college.db");
+    DbManager myDb = DbManager("C:/Users/farna/Documents/CS1D-Project1-College-Touring/college.db");
 
 };
 
