@@ -25,6 +25,8 @@ private slots:
     void clearCollegeData();
     void on_addSouvenir_released();
 
+    void on_removeSouvenir_released();
+
 private:
 
     Ui::AdminWindow *ui;

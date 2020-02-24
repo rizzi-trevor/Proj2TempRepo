@@ -26,7 +26,7 @@ void AdminWindow::updateCollegeTable()
 
     if(qry->exec())
     {
-        qDebug() << "worked.";
+        qDebug() << "college table updated.";
     }
 
     model->setQuery(*qry);
@@ -45,7 +45,7 @@ void AdminWindow::updateSouvenirTable()
 
     if(qry->exec())
     {
-        qDebug() << "worked.";
+        qDebug() << "souvenir table updated.";
     }
 
     model->setQuery(*qry);
@@ -109,4 +109,36 @@ void AdminWindow::on_addSouvenir_released()
 
 
     updateSouvenirTable();
+}
+
+void AdminWindow::on_removeSouvenir_released()
+{
+    bool success = false;
+    confirmpage confirm;
+    bool check = false;
+
+    if(ui->removeEdit->text() == "")
+    {
+        ui->removeEdit->setPlaceholderText("souvenir name empty!");
+        success = true;
+    }
+
+    if(!success)
+    {
+    confirm.setModal(true);
+    confirm.exec();
+    check = confirm.getData();
+    }
+
+    if(!myDb.souExists(ui->removeEdit->text()) && !success && check)
+    {
+        myDb.removeSou(ui->removeEdit->text());
+        ui->removeEdit->setText("");
+        ui->removeEdit->setPlaceholderText("souvenir name");
+    }
+    else
+    {
+        qDebug() << "remove didn't work!";
+    }
+
 }

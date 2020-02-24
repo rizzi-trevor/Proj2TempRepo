@@ -170,6 +170,50 @@ void DbManager::initDistanceList(const QString &path)
 
 //QSqlDatabase::removeDatabase("xlsx_connection"); // need to put this out of scope of the initialised db
 
+void DbManager::removeSou(const QString &souName)
+{
+    QSqlQuery *query = new QSqlQuery(myDB);
+
+    if(souExists(souName))
+    {
+        if(myDB.open())
+        {
+            query->prepare("DELETE FROM Souvenirs WHERE (souvenirName) = (:souvenirName)");
+            query->bindValue(":souvenirName", souName);
+
+            if(query->exec())
+                qDebug() << "sou delete success!";
+            else
+                qDebug() << "sou delete failed!";
+        }
+    }
+
+}
+
+void DbManager::addSou(const QString &college, const QString &souName, const double &cost)
+{
+    QSqlQuery *query = new QSqlQuery(myDB);
+
+    if(!souExists(souName))
+    {
+        if(myDB.open())
+        {
+            query->prepare("INSERT INTO Souvenirs(collegeName, souvenirName, cost) VALUES(:collegeName, :souvenirName, :cost)");
+            query->bindValue(":collegeName", college);
+            query->bindValue(":souvenirName", souName);
+            query->bindValue(":cost", cost);
+
+            if(query->exec())
+                qDebug() << "sou add success!";
+            else
+                qDebug() << "sou add failed!";
+        }
+    }
+    else
+    {
+        qDebug() << "name exists!";
+    }
+}
 
 void DbManager::addUser(const QString &user, const QString &pass)
 {
@@ -194,6 +238,32 @@ void DbManager::addUser(const QString &user, const QString &pass)
     }
    }
 
+}
+
+bool DbManager::souExists(const QString &name)
+{
+    bool exists = false;
+
+    QSqlQuery *checkQuery = new QSqlQuery(myDB);
+
+    checkQuery->prepare("SELECT souvenirName FROM Souvenirs WHERE (souvenirName) = (:souvenirName)");
+    checkQuery->bindValue(":souvenirName", name);
+
+    if(checkQuery->exec())
+    {
+        if(checkQuery->next())
+        {
+            exists = true;
+            QString souName = checkQuery->value("souvenirName").toString();
+            qDebug() << souName;
+        }
+    }
+    else
+    {
+        qDebug() << "souvenir exists failed: " << checkQuery->lastError();
+    }
+
+    return exists;
 }
 
 bool DbManager::userExists(const QString &user)
