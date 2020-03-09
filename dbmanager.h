@@ -25,7 +25,7 @@ public:
     void addUser(const QString &user, const QString &pass);
     void addSou(const QString &college, const QString &souName, const double &cost);
     void removeSou(const QString &souName, const QString &college);
-    void updateSou(const QString &souName, const QString &college, const double &spin);
+    void updateSou(const QString &souName, const QString &college, const double &spin, const QString &newSouvenir);
     
     void addColleges(const QString &path);
 
