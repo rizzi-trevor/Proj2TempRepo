@@ -28,6 +28,10 @@ private slots:
     void on_removeSouvenir_released();
     void onAddColleges();
 
+    void on_souvenirView_clicked(const QModelIndex &index);
+
+    void on_removeSouvenir_2_clicked();
+
 private:
 
     Ui::AdminWindow *ui;
