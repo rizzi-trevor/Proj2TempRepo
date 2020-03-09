@@ -14,11 +14,11 @@ LoginWindow::LoginWindow(QWidget *parent)
     // Makes necessary tables from input file
     //myDb.clearDb();
 
-    //myDb.InitCollegeList("C:/Users/farna/Documents/CS1D-Project1-College-Touring/College Campus Distances and Souvenirs.xlsx");
+    //myDb.InitCollegeList(PROJECT_PATH + "/College Campus Distances and Souvenirs.xlsx");
 
-    //myDb.initSouvenirList("C:/Users/farna/Documents/CS1D-Project1-College-Touring/College Campus Distances and Souvenirs.xlsx");
+    //myDb.initSouvenirList(PROJECT_PATH + "/College Campus Distances and Souvenirs.xlsx");
 
-    //myDb.initDistanceList("C:/Users/farna/Documents/CS1D-Project1-College-Touring/College Campus Distances and Souvenirs.xlsx");
+    //myDb.initDistanceList(PROJECT_PATH + "/College Campus Distances and Souvenirs.xlsx");
 
      // the tables with college info
 
