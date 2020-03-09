@@ -22,11 +22,6 @@ void addSouvenir::on_pushButton_released()
 {
     confirmpage confirm;
     bool check = false;
-
-    confirm.setModal(true);
-    confirm.exec();
-    check = confirm.getData();
-
     bool success = false;
 
     if(ui->collegeEdit->text() == "")
@@ -41,7 +36,14 @@ void addSouvenir::on_pushButton_released()
         success = true;
     }
 
-    if(myDb.souExists(ui->souEdit->text()))
+    if(!success)
+    {
+        confirm.setModal(true);
+        confirm.exec();
+        check = confirm.getData();
+    }
+
+    if(myDb.souExists(ui->souEdit->text(), ui->collegeEdit->text()))
     {
         ui->souEdit->setText("");
         ui->souEdit->setPlaceholderText("souvinir name exists!");
