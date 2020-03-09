@@ -33,6 +33,7 @@ private slots:
     void on_removeSouvenir_2_clicked();
 
 private:
+    QString souve;
 
     Ui::AdminWindow *ui;
 

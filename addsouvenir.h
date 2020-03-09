@@ -17,10 +17,13 @@ public:
     explicit addSouvenir(QWidget *parent = nullptr);
     ~addSouvenir();
 
+    void updateCombo();
+
 private slots:
     void on_pushButton_2_released();
 
     void on_pushButton_released();
+
 
 private:
     Ui::addSouvenir *ui;
