@@ -35,7 +35,7 @@ private:
     Ui::LoginWindow *ui;
 
 
-    DbManager myDb = DbManager("C:/Users/farna/Documents/CS1D-Project1-College-Touring/college.db");
+    DbManager myDb = DbManager(PROJECT_PATH + "/college.db");
 
     AdminWindow *admin;
 

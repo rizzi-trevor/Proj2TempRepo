@@ -68,11 +68,11 @@ void AdminWindow::onInitialise()
     {
         myDb.clearDb();
 
-        myDb.InitCollegeList("C:/Users/farna/Documents/CS1D-Project1-College-Touring/College_Campus_Distances_and_Souvenirs.xlsx");
+        myDb.InitCollegeList(PROJECT_PATH + "/College_Campus_Distances_and_Souvenirs.xlsx");
 
-        myDb.initSouvenirList("C:/Users/farna/Documents/CS1D-Project1-College-Touring/College_Campus_Distances_and_Souvenirs.xlsx");
+        myDb.initSouvenirList(PROJECT_PATH + "/College_Campus_Distances_and_Souvenirs.xlsx");
 
-        myDb.initDistanceList("C:/Users/farna/Documents/CS1D-Project1-College-Touring/College_Campus_Distances_and_Souvenirs.xlsx");
+        myDb.initDistanceList(PROJECT_PATH + "/College_Campus_Distances_and_Souvenirs.xlsx");
     }
     else
     {
@@ -168,7 +168,7 @@ void AdminWindow::onAddColleges()
 
     if(check)
     {
-        myDb.addColleges("C:/Users/farna/Documents/CS1D-Project1-College-Touring/College_Campus_Distances_and_Souvenirs.xlsx");
+        myDb.addColleges(PROJECT_PATH + "/College_Campus_Distances_and_Souvenirs.xlsx");
     }
     else
     {
