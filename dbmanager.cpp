@@ -170,11 +170,11 @@ void DbManager::initDistanceList(const QString &path)
 
 //QSqlDatabase::removeDatabase("xlsx_connection"); // need to put this out of scope of the initialised db
 
-void DbManager::removeSou(const QString &souName, const QString &college)
+void DbManager::removeSou(const QString &souName)
 {
     QSqlQuery *query = new QSqlQuery(myDB);
 
-    if(souExists(souName, college))
+    if(souExists(souName))
     {
         if(myDB.open())
         {
@@ -194,7 +194,7 @@ void DbManager::addSou(const QString &college, const QString &souName, const dou
 {
     QSqlQuery *query = new QSqlQuery(myDB);
 
-    if(!souExists(souName, college))
+    if(!souExists(souName))
     {
         if(myDB.open())
         {
@@ -212,31 +212,6 @@ void DbManager::addSou(const QString &college, const QString &souName, const dou
     else
     {
         qDebug() << "name exists!";
-    }
-}
-
-void DbManager::updateSou(const QString &souName, const QString &college, const double &spin, const QString &newSouvenir)
-{
-    QSqlQuery *query = new QSqlQuery(myDB);
-
-
-    if(myDB.open())
-    {
-        query->prepare("UPDATE Souvenirs SET (souvenirName, cost) = (:newSouvenirName, :cost) "
-                       "WHERE (collegeName, souvenirName) = (:collegeName, :souvenirName)");
-        query->bindValue(":newSouvenirName", newSouvenir);
-        query->bindValue(":collegeName", college);
-        query->bindValue(":souvenirName", souName);
-        query->bindValue(":cost", spin);
-
-        if(query->exec())
-        {
-            qDebug() << "UPDATE WORKED" << endl;
-        }
-        else
-        {
-            qDebug() << "UPDATE failed: " << query->lastError() << endl;
-        }
     }
 }
 
@@ -265,16 +240,14 @@ void DbManager::addUser(const QString &user, const QString &pass)
 
 }
 
-bool DbManager::souExists(const QString &name, const QString &college)
+bool DbManager::souExists(const QString &name)
 {
     bool exists = false;
 
     QSqlQuery *checkQuery = new QSqlQuery(myDB);
 
-    checkQuery->prepare("SELECT souvenirName FROM Souvenirs WHERE (collegeName, souvenirName) = (:collegeName, :souvenirName)");
+    checkQuery->prepare("SELECT souvenirName FROM Souvenirs WHERE (souvenirName) = (:souvenirName)");
     checkQuery->bindValue(":souvenirName", name);
-    checkQuery->bindValue(":collegeName", college);
-
 
     if(checkQuery->exec())
     {
@@ -282,8 +255,7 @@ bool DbManager::souExists(const QString &name, const QString &college)
         {
             exists = true;
             QString souName = checkQuery->value("souvenirName").toString();
-            QString college = checkQuery->value("collegeName").toString();
-            qDebug() << souName << " " << college;
+            qDebug() << souName;
         }
     }
     else
@@ -381,7 +353,7 @@ bool DbManager::checkAdmin(const QString &username) const
 
 QString DbManager::getPassword(const QString &username) const
 {
-    QString password = "ksaflkzfsdjfsflkzfsjlkfxzjkjfklsz";
+    QString password;
     QSqlQuery *getQuery = new QSqlQuery(myDB);
         getQuery->prepare("SELECT Password FROM logins WHERE (Username) = (:Username)");
         getQuery->bindValue(":Username", username);
@@ -451,3 +423,98 @@ void DbManager::addColleges(const QString &path)
         fileDB.close();
     }
 }
+
+void DbManager::updateSou(const QString &souName, const QString &college, const double &spin, const QString &newSouvenir)
+{
+    QSqlQuery *query = new QSqlQuery(myDB);
+
+
+    if(myDB.open())
+    {
+        query->prepare("UPDATE Souvenirs SET (souvenirName, cost) = (:newSouvenirName, :cost) "
+                       "WHERE (collegeName, souvenirName) = (:collegeName, :souvenirName)");
+        query->bindValue(":newSouvenirName", newSouvenir);
+        query->bindValue(":collegeName", college);
+        query->bindValue(":souvenirName", souName);
+        query->bindValue(":cost", spin);
+
+        if(query->exec())
+        {
+            qDebug() << "UPDATE WORKED" << endl;
+        }
+        else
+        {
+            qDebug() << "UPDATE failed: " << query->lastError() << endl;
+        }
+    }
+
+}
+
+void DbManager::createTripTable()
+{
+    QSqlQuery *query = new QSqlQuery(myDB);
+    QString userVal = "User";
+
+    if(myDB.open())
+    {
+        query->exec("CREATE TABLE Trips ("
+                    "tripID TEXT,"
+                    "college TEXT,"
+                    "tripProgress INT);");
+
+        query->exec("CREATE TABLE Purchases ("
+                    "tripID TEXT,"
+                    "college TEXT,"
+                    "souvenir TEXT,"
+                    "price DOUBLE,"
+                    "quantity INTEGER);");
+    }
+
+}
+
+void DbManager::addTrip(QString tripID, QString plannedCollege, int index)
+{
+    QSqlQuery *query = new QSqlQuery(myDB);
+
+    if(myDB.open())
+    {
+        query->prepare("INSERT INTO Trips(tripID, college, tripProgress) VALUES(:tripID, :college, :int)");
+
+        query->bindValue(":tripID", tripID);
+        query->bindValue(":college", plannedCollege);
+        query->bindValue(":int", (index + 1));
+        qDebug() << query->exec();
+
+    }
+
+
+
+}
+
+
+bool DbManager::tripIdExists(QString tripID)
+{
+
+    bool exists = false;
+
+    QSqlQuery *checkQuery = new QSqlQuery(myDB);
+
+    checkQuery->prepare("SELECT tripID FROM Trips WHERE (tripID) = (:tripID)");
+    checkQuery->bindValue(":tripID", tripID);
+
+    if(checkQuery->exec())
+    {
+        if(checkQuery->next())
+        {
+                exists = true;
+        }
+    }
+    else
+    {
+        qDebug() << "trip id does not exist";
+    }
+
+    return exists;
+
+}
+
