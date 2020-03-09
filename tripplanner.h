@@ -22,6 +22,7 @@ public:
     void planAlgorithm(QString start);
     bool collegeDoesExist(QString colName);
     bool planDoesExist(QString colName);
+    void updateCombo();
 
 
 private slots:
