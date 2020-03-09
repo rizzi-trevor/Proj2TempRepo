@@ -6,11 +6,34 @@ addSouvenir::addSouvenir(QWidget *parent) :
     ui(new Ui::addSouvenir)
 {
     ui->setupUi(this);
+    updateCombo();
 }
 
 addSouvenir::~addSouvenir()
 {
     delete ui;
+}
+
+void addSouvenir::updateCombo()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT DISTINCT startCollege FROM Distances");
+
+    if(qry->exec())
+    {
+        qDebug() << "college1 table updated.";
+    }
+    else
+        qDebug() << "failed";
+
+    model->setQuery(*qry);
+
+    ui->comboBox->setModel(model);
+
+
 }
 
 void addSouvenir::on_pushButton_2_released()
@@ -23,16 +46,21 @@ void addSouvenir::on_pushButton_released()
     confirmpage confirm;
     bool check = false;
     bool success = false;
+    QString collegeName = ui->comboBox->currentText();
 
-    if(ui->collegeEdit->text() == "")
-    {
-        ui->collegeEdit->setPlaceholderText("college name empty!");
-        success = true;
-    }
 
     if(ui->souEdit->text() == "")
     {
         ui->souEdit->setPlaceholderText("souvinir name empty!");
+        success = true;
+    }
+
+    if(myDb.souExists(ui->souEdit->text(), collegeName))
+    {
+        qDebug() << collegeName;
+        qDebug() << ui->souEdit->text();
+        ui->souEdit->setText("");
+        ui->souEdit->setPlaceholderText("souvinir name exists!");
         success = true;
     }
 
@@ -43,16 +71,9 @@ void addSouvenir::on_pushButton_released()
         check = confirm.getData();
     }
 
-    if(myDb.souExists(ui->souEdit->text(), ui->collegeEdit->text()))
-    {
-        ui->souEdit->setText("");
-        ui->souEdit->setPlaceholderText("souvinir name exists!");
-        success = true;
-    }
-
     if(!success && check)
     {
-        myDb.addSou(ui->collegeEdit->text(),ui->souEdit->text(),ui->costBox->value());
+        myDb.addSou(collegeName,ui->souEdit->text(),ui->costBox->value());
         hide();
     }
 }

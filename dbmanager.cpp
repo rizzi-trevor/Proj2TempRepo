@@ -271,9 +271,10 @@ bool DbManager::souExists(const QString &name, const QString &college)
 
     QSqlQuery *checkQuery = new QSqlQuery(myDB);
 
-    checkQuery->prepare("SELECT souvenirName FROM Souvenirs WHERE (collegeName) = (:collegeName)");
+    checkQuery->prepare("SELECT souvenirName FROM Souvenirs WHERE (collegeName, souvenirName) = (:collegeName, :souvenirName)");
     checkQuery->bindValue(":souvenirName", name);
     checkQuery->bindValue(":collegeName", college);
+
 
     if(checkQuery->exec())
     {

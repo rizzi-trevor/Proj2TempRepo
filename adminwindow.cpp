@@ -187,6 +187,7 @@ void AdminWindow::on_souvenirView_clicked(const QModelIndex &index)
         int row = index.row();
         QString firstText = index.sibling(row, 0).data().toString();
         QString secondText = index.sibling(row, 1).data().toString();
+        souve = index.sibling(row, 1).data().toString();
         double thirdText = index.sibling(row, 2).data().toDouble();
 
         ui->removeEdit->setText(secondText);
@@ -211,13 +212,6 @@ void AdminWindow::on_removeSouvenir_2_clicked()
         success = true;
     }
 
-    if(!myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()))
-    {
-       ui->removeEdit->setText("");
-       ui->removeEdit->setPlaceholderText("souvenir doesn't exist!");
-       success = true;
-    }
-
     if(!success)
     {
         confirm.setModal(true);
@@ -225,15 +219,28 @@ void AdminWindow::on_removeSouvenir_2_clicked()
         check = confirm.getData();
     }
 
-    if(myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()) && !success && check)
+
+    if(!myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()))
     {
-        myDb.updateSou(ui->removeEdit->text(), ui->labelCollege->text(),ui->priceSpin->value());
-        ui->removeEdit->setText("");
-        ui->removeEdit->setPlaceholderText("souvenir name");
+        if(!success && check)
+        {
+            myDb.updateSou(souve, ui->labelCollege->text(),ui->priceSpin->value(), ui->removeEdit->text());
+        }
+        else
+        {
+            qDebug() << "remove didn't work!";
+        }
     }
-    else
+    else if(souve == ui->removeEdit->text())
     {
-        qDebug() << "remove didn't work!";
+        if(!success && check)
+        {
+            myDb.updateSou(souve, ui->labelCollege->text(),ui->priceSpin->value(), ui->removeEdit->text());
+        }
+        else
+        {
+            qDebug() << "remove didn't work!";
+        }
     }
 
     updateSouvenirTable();
