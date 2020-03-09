@@ -215,15 +215,16 @@ void DbManager::addSou(const QString &college, const QString &souName, const dou
     }
 }
 
-void DbManager::updateSou(const QString &souName, const QString &college, const double &spin)
+void DbManager::updateSou(const QString &souName, const QString &college, const double &spin, const QString &newSouvenir)
 {
     QSqlQuery *query = new QSqlQuery(myDB);
 
+
     if(myDB.open())
     {
-        query->prepare("UPDATE Souvenirs SET (souvenirName, cost) = (:souvenirName, :cost) "
+        query->prepare("UPDATE Souvenirs SET (souvenirName, cost) = (:newSouvenirName, :cost) "
                        "WHERE (collegeName, souvenirName) = (:collegeName, :souvenirName)");
-        query->bindValue(":souvenirName", souName);
+        query->bindValue(":newSouvenirName", newSouvenir);
         query->bindValue(":collegeName", college);
         query->bindValue(":souvenirName", souName);
         query->bindValue(":cost", spin);
@@ -237,8 +238,6 @@ void DbManager::updateSou(const QString &souName, const QString &college, const 
             qDebug() << "UPDATE failed: " << query->lastError() << endl;
         }
     }
-
-
 }
 
 void DbManager::addUser(const QString &user, const QString &pass)
