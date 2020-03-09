@@ -10,33 +10,11 @@ tripPlanner::tripPlanner(QWidget *parent) :
     ui->setupUi(this);
 
     initializeList();
-    updateCombo();
 }
 
 tripPlanner::~tripPlanner()
 {
     delete ui;
-}
-
-void tripPlanner::updateCombo()
-{
-    QSqlQueryModel* model=new QSqlQueryModel();
-
-    QSqlQuery* qry=new QSqlQuery();
-
-    qry->prepare("SELECT DISTINCT startCollege FROM Distances");
-
-    if(qry->exec())
-    {
-        qDebug() << "college1 table updated.";
-    }
-    else
-        qDebug() << "failed";
-
-    model->setQuery(*qry);
-
-    ui->colName->setModel(model);
-
 }
 
 
@@ -148,7 +126,9 @@ void tripPlanner::selectedCollegeList()// creates a list of the selected college
 void tripPlanner::onPlanClick()
 {
     QString startingCollege;
-    startingCollege = this->ui->colName->currentText();
+    QString tripID;
+    startingCollege = this->ui->colName->text();
+    tripID = this->ui->trip->text();
 
     selectedCollegeList();
 
@@ -158,8 +138,21 @@ void tripPlanner::onPlanClick()
     }
     else
     {
-        this->ui->warningLabel->setText("");
-        planAlgorithm(startingCollege); // will plan the trip
+        qDebug() << myDb.tripIdExists(tripID);
+        if(tripID.size() == 3 && !myDb.tripIdExists(tripID))
+        {
+            this->ui->warningLabel->setText("");
+            this->ui->tripWarning->setText("");
+            planAlgorithm(startingCollege); // will plan the trip
+            for(int index = 0; index < plannedColleges.size(); index++)
+            {
+                myDb.addTrip(tripID, plannedColleges[index], index); // uploads trip to DB
+            }
+        }
+        else
+        {
+            this->ui->tripWarning->setText("That trip ID is taken or invalid!");
+        }
 
     }
 

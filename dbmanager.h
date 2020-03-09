@@ -9,9 +9,6 @@
 #include "QSqlQuery"
 #include "QDebug"
 
-
-static const QString PROJECT_PATH = "C:/Users/farna/Documents/CS1D-Project1-College-Touring/";
-
 class DbManager
 {
 
@@ -27,13 +24,12 @@ public:
 
     void addUser(const QString &user, const QString &pass);
     void addSou(const QString &college, const QString &souName, const double &cost);
-    void removeSou(const QString &souName, const QString &college);
-    void updateSou(const QString &souName, const QString &college, const double &spin, const QString &newSouvenir);
+    void removeSou(const QString &souName);
     
     void addColleges(const QString &path);
 
     bool userExists(const QString &user);
-    bool souExists(const QString &name, const QString &college);
+    bool souExists(const QString &name);
 
     void clearDb();
 
@@ -42,6 +38,14 @@ public:
     bool checkAdmin(const QString &username) const;
 
     QString getPassword(const QString &username) const;
+
+    void updateSou(const QString &souName, const QString &college, const double &spin, const QString &newSouvenir);
+
+    void createTripTable();
+
+    void addTrip(QString tripID, QString plannedCollege, int index);
+
+    bool tripIdExists(QString tripID);
 
 
 private:
