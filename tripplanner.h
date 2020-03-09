@@ -23,6 +23,8 @@ public:
     bool collegeDoesExist(QString colName);
     bool planDoesExist(QString colName);
 
+    void updateCombo();
+
 
 private slots:
     void ChecboxChanged();
@@ -31,7 +33,7 @@ private slots:
 private:
     Ui::tripPlanner *ui;
 
-    DbManager myDb = DbManager("C:/Users/Trevor Rizzi/Documents/College-Touring/college.db");
+    DbManager myDb = DbManager(PROJECT_PATH + "/college.db");
     QVector<QCheckBox*> checkBoxVector;
     QStringList selectedColleges; // a string to hold the selected colleges - should be helpful for the plan trip algorithm
 
