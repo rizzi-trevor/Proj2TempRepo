@@ -49,16 +49,6 @@
     <string>Find shortest route!</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="colName">
-   <property name="geometry">
-    <rect>
-     <x>460</x>
-     <y>120</y>
-     <width>301</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="startCampusHeader">
    <property name="geometry">
     <rect>
@@ -83,6 +73,16 @@
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="colName">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>120</y>
+     <width>251</width>
+     <height>22</height>
+    </rect>
    </property>
   </widget>
  </widget>

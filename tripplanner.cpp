@@ -10,11 +10,33 @@ tripPlanner::tripPlanner(QWidget *parent) :
     ui->setupUi(this);
 
     initializeList();
+    updateCombo();
 }
 
 tripPlanner::~tripPlanner()
 {
     delete ui;
+}
+
+void tripPlanner::updateCombo()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT DISTINCT startCollege FROM Distances");
+
+    if(qry->exec())
+    {
+        qDebug() << "college1 table updated.";
+    }
+    else
+        qDebug() << "failed";
+
+    model->setQuery(*qry);
+
+    ui->colName->setModel(model);
+
 }
 
 
@@ -126,7 +148,7 @@ void tripPlanner::selectedCollegeList()// creates a list of the selected college
 void tripPlanner::onPlanClick()
 {
     QString startingCollege;
-    startingCollege = this->ui->colName->text();
+    startingCollege = this->ui->colName->currentText();
 
     selectedCollegeList();
 
