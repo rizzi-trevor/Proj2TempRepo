@@ -19,6 +19,8 @@ LoginWindow::LoginWindow(QWidget *parent)
     //myDb.initSouvenirList(PROJECT_PATH + "/College Campus Distances and Souvenirs.xlsx");
 
     //myDb.initDistanceList(PROJECT_PATH + "/College Campus Distances and Souvenirs.xlsx");
+        
+    //myDb.createTripTable();
 
      // the tables with college info
 
