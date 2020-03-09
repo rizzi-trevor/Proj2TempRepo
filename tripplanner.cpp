@@ -80,6 +80,7 @@ void tripPlanner::ChecboxChanged()
             {
                 checkBoxVector[i]->setDisabled(true);
             }
+            qDebug() << checkBoxVector[i] << endl;
         }
     }
     else
@@ -89,4 +90,110 @@ void tripPlanner::ChecboxChanged()
             checkBoxVector[i]->setDisabled(false);
         }
     }
+}
+
+void tripPlanner::selectedCollegeList()// creates a list of the selected colleges from the checked boxes
+{
+    selectedColleges.clear();
+    QSqlQuery *query = new QSqlQuery();
+    int i = 0;
+
+    query->prepare("SELECT DISTINCT startCollege FROM Distances");
+    if(!query->exec())
+    {
+        qDebug() << "tripPlanner initializeList query failed";
+
+
+    }
+    else
+    {
+        while(query->next())
+        {
+            if(checkBoxVector[i]->checkState() == Qt::CheckState::Checked)
+            {
+                QString temp = query->value("startCollege").toString();
+                selectedColleges << temp;
+                qDebug()<< temp << endl;
+
+            }
+            i++;
+        }
+
+    }
+
+}
+
+void tripPlanner::onPlanClick()
+{
+    QString startingCollege;
+    startingCollege = this->ui->colName->text();
+
+    selectedCollegeList();
+
+    if(!collegeDoesExist(startingCollege)) // checks if the user input a correct college
+    {
+        this->ui->warningLabel->setText("Please enter a college that you have selected!");
+    }
+    else
+    {
+        this->ui->warningLabel->setText("");
+        planAlgorithm(startingCollege); // will plan the trip
+
+    }
+
+}
+
+void tripPlanner::planAlgorithm(QString start)// start is the user selected starting college
+{
+    QSqlQuery *query = new QSqlQuery;
+
+    query->prepare("SELECT distance, endCollege FROM Distances WHERE startCollege = (:start) ORDER BY distance ASC");
+    query->bindValue(":start", start);
+
+    if(query->exec())
+    {
+        while(query->next())// goes to next college
+        {
+
+            QString temp = query->value("endCollege").toString();
+            if(!planDoesExist(temp) && collegeDoesExist(temp))
+            {
+                plannedColleges<< start;
+                start = query->value("endCollege").toString();
+                planAlgorithm(start); // recursive call
+            }
+
+        }
+    }
+    else
+    {
+        qDebug() << "failed";
+    }
+
+}
+
+bool tripPlanner::collegeDoesExist(QString colName)// checks if a college is added to the trip
+{
+    for(int i = 0; i < selectedColleges.size(); i++)
+    {
+        if(colName == selectedColleges[i])
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool tripPlanner::planDoesExist(QString colName) // checks if a college is in the planned list
+{
+    for(int i = 0; i < plannedColleges.size(); i++)
+    {
+        if(colName == plannedColleges[i])
+        {
+            return true;
+        }
+    }
+
+    return false;
 }
