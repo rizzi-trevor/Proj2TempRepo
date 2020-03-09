@@ -24,12 +24,13 @@ public:
 
     void addUser(const QString &user, const QString &pass);
     void addSou(const QString &college, const QString &souName, const double &cost);
-    void removeSou(const QString &souName);
+    void removeSou(const QString &souName, const QString &college);
+    void updateSou(const QString &souName, const QString &college, const double &spin, const QString &newSouvenir);
     
     void addColleges(const QString &path);
 
     bool userExists(const QString &user);
-    bool souExists(const QString &name);
+    bool souExists(const QString &name, const QString &college);
 
     void clearDb();
 

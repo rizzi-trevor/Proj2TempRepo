@@ -12,14 +12,15 @@ LoginWindow::LoginWindow(QWidget *parent)
 
     //Running instances just to test the database creation
     // Makes necessary tables from input file
+    //myDb.clearDb();
 
-    myDb.InitCollegeList("C:/Users/Nick/source/repos/CS1D-Project1-College-Touring/College Campus Distances and Souvenirs.xlsx");
+    //myDb.InitCollegeList("C:/Users/farna/Documents/CS1D-Project1-College-Touring/College Campus Distances and Souvenirs.xlsx");
 
-    myDb.initSouvenirList("C:/Users/Nick/source/repos/CS1D-Project1-College-Touring/College Campus Distances and Souvenirs.xlsx");
+    //myDb.initSouvenirList("C:/Users/farna/Documents/CS1D-Project1-College-Touring/College Campus Distances and Souvenirs.xlsx");
 
-    myDb.initDistanceList("C:/Users/Nick/source/repos/CS1D-Project1-College-Touring/College Campus Distances and Souvenirs.xlsx");
+    //myDb.initDistanceList("C:/Users/farna/Documents/CS1D-Project1-College-Touring/College Campus Distances and Souvenirs.xlsx");
 
-    //myDb.clearDb(); deletes the tables with college info
+     // the tables with college info
 
     if(!myDb.isOpen())
     {

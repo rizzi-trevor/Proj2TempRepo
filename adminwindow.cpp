@@ -68,16 +68,19 @@ void AdminWindow::onInitialise()
     {
         myDb.clearDb();
 
-        myDb.InitCollegeList("C:/Users/Trevor Rizzi/Desktop/College-Touring/College Campus Distances and Souvenirs.xlsx");
+        myDb.InitCollegeList("C:/Users/farna/Documents/CS1D-Project1-College-Touring/College_Campus_Distances_and_Souvenirs.xlsx");
 
-        myDb.initSouvenirList("C:/Users/Trevor Rizzi/Desktop/College-Touring/College Campus Distances and Souvenirs.xlsx");
+        myDb.initSouvenirList("C:/Users/farna/Documents/CS1D-Project1-College-Touring/College_Campus_Distances_and_Souvenirs.xlsx");
 
-        myDb.initDistanceList("C:/Users/Trevor Rizzi/Desktop/College-Touring/College Campus Distances and Souvenirs.xlsx");
+        myDb.initDistanceList("C:/Users/farna/Documents/CS1D-Project1-College-Touring/College_Campus_Distances_and_Souvenirs.xlsx");
     }
     else
     {
         qDebug() << "Cancel!";
     }
+
+    updateCollegeTable();
+    updateSouvenirTable();
 
 }
 
@@ -99,6 +102,9 @@ void AdminWindow::clearCollegeData()
     {
         qDebug() << "Cancel!";
     }
+
+    updateCollegeTable();
+    updateSouvenirTable();
 }
 
 void AdminWindow::on_addSouvenir_released()
@@ -123,7 +129,7 @@ void AdminWindow::on_removeSouvenir_released()
         success = true;
     }
 
-    if(!myDb.souExists(ui->removeEdit->text()))
+    if(!myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()))
     {
        ui->removeEdit->setText("");
        ui->removeEdit->setPlaceholderText("souvenir doesn't exist!");
@@ -137,9 +143,9 @@ void AdminWindow::on_removeSouvenir_released()
         check = confirm.getData();
     }
 
-    if(myDb.souExists(ui->removeEdit->text()) && !success && check)
+    if(myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()) && !success && check)
     {
-        myDb.removeSou(ui->removeEdit->text());
+        myDb.removeSou(ui->removeEdit->text(), ui->labelCollege->text());
         ui->removeEdit->setText("");
         ui->removeEdit->setPlaceholderText("souvenir name");
     }
@@ -162,11 +168,73 @@ void AdminWindow::onAddColleges()
 
     if(check)
     {
-        myDb.addColleges("C:/Users/trevo/Desktop/Data/College Campus Distances and Souvenirs.xlsx");
+        myDb.addColleges("C:/Users/farna/Documents/CS1D-Project1-College-Touring/College_Campus_Distances_and_Souvenirs.xlsx");
     }
     else
     {
         qDebug() << "Cancel!";
     }
 
+    updateCollegeTable();
+    updateSouvenirTable();
+}
+
+void AdminWindow::on_souvenirView_clicked(const QModelIndex &index)
+{
+
+    if(index.isValid())
+    {
+        int row = index.row();
+        QString firstText = index.sibling(row, 0).data().toString();
+        QString secondText = index.sibling(row, 1).data().toString();
+        double thirdText = index.sibling(row, 2).data().toDouble();
+
+        ui->removeEdit->setText(secondText);
+        ui->labelCollege->setText(firstText);
+        ui->priceSpin->setValue(thirdText);
+
+        qDebug() << firstText << " " << secondText << " " << thirdText << endl;
+        qDebug() << index << endl;
+    }
+
+}
+
+void AdminWindow::on_removeSouvenir_2_clicked()
+{
+    bool success = false;
+    confirmpage confirm;
+    bool check = false;
+
+    if(ui->removeEdit->text() == "")
+    {
+        ui->removeEdit->setPlaceholderText("souvenir name empty!");
+        success = true;
+    }
+
+    if(!myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()))
+    {
+       ui->removeEdit->setText("");
+       ui->removeEdit->setPlaceholderText("souvenir doesn't exist!");
+       success = true;
+    }
+
+    if(!success)
+    {
+        confirm.setModal(true);
+        confirm.exec();
+        check = confirm.getData();
+    }
+
+    if(myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()) && !success && check)
+    {
+        myDb.updateSou(ui->removeEdit->text(), ui->labelCollege->text(),ui->priceSpin->value());
+        ui->removeEdit->setText("");
+        ui->removeEdit->setPlaceholderText("souvenir name");
+    }
+    else
+    {
+        qDebug() << "remove didn't work!";
+    }
+
+    updateSouvenirTable();
 }
