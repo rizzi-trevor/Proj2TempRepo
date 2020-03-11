@@ -186,6 +186,7 @@ void tripPlanner::onPlanClick()
 
 void tripPlanner::planAlgorithm(QString start)// start is the user selected starting college
 {
+    plannedColleges<< start;
     QSqlQuery *query = new QSqlQuery;
 
     query->prepare("SELECT distance, endCollege FROM Distances WHERE startCollege = (:start) ORDER BY distance ASC");
@@ -199,7 +200,6 @@ void tripPlanner::planAlgorithm(QString start)// start is the user selected star
             QString temp = query->value("endCollege").toString();
             if(!planDoesExist(temp) && collegeDoesExist(temp))
             {
-                plannedColleges<< start;
                 start = query->value("endCollege").toString();
                 planAlgorithm(start); // recursive call
             }
