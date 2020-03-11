@@ -10,7 +10,8 @@
 #include "QDebug"
 
 
-static const QString PROJECT_PATH = "C:/Users/farna/Documents/github/CS1D-Project1-College-Touring/";
+static const QString PROJECT_PATH = "C:/Users/Trevor Rizzi/Documents/UP_CollegeProj/";
+
 
 class DbManager
 {
@@ -46,6 +47,8 @@ public:
     void addTrip(QString tripID, QString plannedCollege, int index);
 
     bool tripIdExists(QString tripID);
+
+    void createTripTable();
 
 
 private:

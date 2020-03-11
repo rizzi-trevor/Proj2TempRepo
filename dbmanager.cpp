@@ -452,6 +452,28 @@ void DbManager::addColleges(const QString &path)
     }
 }
 
+void DbManager::createTripTable()
+{
+    QSqlQuery *query = new QSqlQuery(myDB);
+    QString userVal = "User";
+
+    if(myDB.open())
+    {
+        query->exec("CREATE TABLE Trips ("
+                    "tripID TEXT,"
+                    "college TEXT,"
+                    "tripProgress INT);");
+
+        query->exec("CREATE TABLE Purchases ("
+                    "tripID TEXT,"
+                    "college TEXT,"
+                    "souvenir TEXT,"
+                    "price DOUBLE,"
+                    "quantity INTEGER);");
+    }
+
+}
+
 void DbManager::addTrip(QString tripID, QString plannedCollege, int index)
 {
     QSqlQuery *query = new QSqlQuery(myDB);

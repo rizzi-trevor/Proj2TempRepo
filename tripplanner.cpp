@@ -155,7 +155,7 @@ void tripPlanner::onPlanClick()
 
     if(!collegeDoesExist(startingCollege)) // checks if the user input a correct college
     {
-        this->ui->warningLabel->setText("Please enter a college that you have selected!");
+        this->ui->warningLabel->setText("Please enter a college that you have selected on the left!");
     }
     else
     {
