@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "dbmanager.h"
 #include <qcheckbox.h>
+#include "tripsummary.h"
 namespace Ui {
 class tripPlanner;
 }
@@ -19,9 +20,12 @@ public:
 
     void initializeList();
     void selectedCollegeList();
-    void planAlgorithm(QString start);
+    void planAlgorithm(QString start, int dist);
     bool collegeDoesExist(QString colName);
     bool planDoesExist(QString colName);
+    void updateCollegeTable(QString start);
+    void updateSouvTable(QString start);
+    void showTrip(QString ID);
 
     void updateCombo();
 
@@ -29,6 +33,7 @@ public:
 private slots:
     void ChecboxChanged();
     void onPlanClick();
+    void onDisplayClick();
 
 private:
     Ui::tripPlanner *ui;
@@ -38,7 +43,7 @@ private:
     QStringList selectedColleges; // a string to hold the selected colleges - should be helpful for the plan trip algorithm
 
     QStringList plannedColleges;
-
+    int distance;
 
 
 };
