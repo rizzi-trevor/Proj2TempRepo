@@ -7,6 +7,7 @@ addSouvenir::addSouvenir(QWidget *parent) :
 {
     ui->setupUi(this);
     updateCombo();
+        
 }
 
 addSouvenir::~addSouvenir()

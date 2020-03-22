@@ -146,6 +146,7 @@ void tripPlanner::selectedCollegeList()// creates a list of the selected college
 
 void tripPlanner::onPlanClick()
 {
+    distance = 0;
     QString startingCollege;
     QString tripID;
     startingCollege = this->ui->colName->currentText();
@@ -159,16 +160,25 @@ void tripPlanner::onPlanClick()
     }
     else
     {
+        updateSouvTable(startingCollege);
+        updateCollegeTable(startingCollege);
+
         qDebug() << myDb.tripIdExists(tripID);
         if(tripID.size() == 3 && !myDb.tripIdExists(tripID))
         {
             this->ui->warningLabel->setText("");
             this->ui->tripWarning->setText("");
-            planAlgorithm(startingCollege); // will plan the trip
+            planAlgorithm(startingCollege, distance); // will plan the trip
             for(int index = 0; index < plannedColleges.size(); index++)
             {
                 myDb.addTrip(tripID, plannedColleges[index], index); // uploads trip to DB
             }
+            showTrip(tripID);
+            QString out = QString::number(distance);
+            this->ui->dist->setText(out);
+
+            //tripSummary *summary = new tripSummary(this);
+            //summary->show();
         }
         else
         {
@@ -184,7 +194,7 @@ void tripPlanner::onPlanClick()
 
 }
 
-void tripPlanner::planAlgorithm(QString start)// start is the user selected starting college
+void tripPlanner::planAlgorithm(QString start, int dist)// start is the user selected starting college
 {
     plannedColleges<< start;
     QSqlQuery *query = new QSqlQuery;
@@ -200,8 +210,10 @@ void tripPlanner::planAlgorithm(QString start)// start is the user selected star
             QString temp = query->value("endCollege").toString();
             if(!planDoesExist(temp) && collegeDoesExist(temp))
             {
+                dist+= query->value("distance").toInt();
+                distance = dist;
                 start = query->value("endCollege").toString();
-                planAlgorithm(start); // recursive call
+                planAlgorithm(start, dist); // recursive call
             }
 
         }
@@ -210,6 +222,8 @@ void tripPlanner::planAlgorithm(QString start)// start is the user selected star
     {
         qDebug() << "failed";
     }
+
+    qDebug() << distance;
 
 }
 
@@ -238,3 +252,87 @@ bool tripPlanner::planDoesExist(QString colName) // checks if a college is in th
 
     return false;
 }
+
+void tripPlanner::updateCollegeTable(QString start)
+{
+    this->ui->collegeLabel->setText("College distances from: " + start);
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT endCollege, distance FROM Distances WHERE startCollege = (:startCollege)");
+    qry->bindValue(":startCollege", start);
+
+    if(qry->exec())
+    {
+        qDebug() << "college table updated.";
+    }
+
+    model->setQuery(*qry);
+
+    ui->sadView->setModel(model);
+    ui->sadView->setColumnWidth(20, 250);
+}
+
+void tripPlanner::updateSouvTable(QString start)
+{
+    this->ui->souvLabel->setText("Souvenirs at: " + start);
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT souvenirName FROM Souvenirs WHERE collegeName = (:startCollege)");
+    qry->bindValue(":startCollege", start);
+
+    if(qry->exec())
+    {
+        qDebug() << "college table updated.";
+    }
+    else
+        qDebug() << "failed";
+
+    model->setQuery(*qry);
+
+    ui->sadView_2->setModel(model);
+    ui->sadView_2->setColumnWidth(20, 400);
+
+}
+
+void tripPlanner::showTrip(QString ID)
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+    qDebug() << ID;
+
+    qry->prepare("SELECT college FROM Trips WHERE tripID = (:tripId)");
+    qry->bindValue(":tripId" , ID);
+    if(qry->exec())
+    {
+        qDebug() << "trip table updated.";
+    }
+    else
+        qDebug() << "failed trip table";
+
+    model->setQuery(*qry);
+
+    //clear here?
+    ui->window->setModel(model);
+    ui->window->setColumnWidth(20, 400);
+}
+
+void tripPlanner::onDisplayClick()
+{
+    QString startingCollege;
+    startingCollege = this->ui->colName->currentText();
+
+    updateSouvTable(startingCollege);
+    updateCollegeTable(startingCollege);
+
+
+}
+
+
+
+
+

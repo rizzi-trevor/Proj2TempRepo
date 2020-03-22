@@ -29,6 +29,7 @@ private:
     Ui::addSouvenir *ui;
     DbManager myDb = DbManager(PROJECT_PATH + "/college.db");
 
+
 };
 
 #endif // ADDSOUVENIR_H
