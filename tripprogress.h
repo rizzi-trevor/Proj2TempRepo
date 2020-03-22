@@ -1,22 +1,44 @@
 #ifndef TRIPPROGRESS_H
 #define TRIPPROGRESS_H
 
-#include <QDialog>
+#include <QMainWindow>
+#include "dbmanager.h"
 
 namespace Ui {
-class tripProgress;
+class tripprogress;
 }
 
-class tripProgress : public QDialog
+class tripprogress : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit tripProgress(QWidget *parent = nullptr);
-    ~tripProgress();
+    explicit tripprogress(QWidget *parent = nullptr);
+    ~tripprogress();
+
+    QString tripID;
+    QString currentCol;
+
+
+    void displaySouv();
+    void nextTrip();
+    void prevTrip();
+    void updateCart();
+
+  public slots:
+    void onLoadClick();
+    void onNextClick();
+    void onPrevClick();
 
 private:
-    Ui::tripProgress *ui;
+    Ui::tripprogress *ui;
+
+    DbManager myDb = DbManager(PROJECT_PATH + "/college.db");
+
+    QStringList trip;
+
+    int counter;
+    int max;
 };
 
 #endif // TRIPPROGRESS_H
