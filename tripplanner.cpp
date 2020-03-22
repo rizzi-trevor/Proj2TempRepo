@@ -168,12 +168,15 @@ void tripPlanner::onPlanClick()
         {
             this->ui->warningLabel->setText("");
             this->ui->tripWarning->setText("");
+            plannedColleges.clear();
             planAlgorithm(startingCollege, distance); // will plan the trip
             for(int index = 0; index < plannedColleges.size(); index++)
             {
                 myDb.addTrip(tripID, plannedColleges[index], index); // uploads trip to DB
             }
             showTrip(tripID);
+            id = tripID;
+
             QString out = QString::number(distance);
             this->ui->dist->setText(out);
 
@@ -328,6 +331,27 @@ void tripPlanner::onDisplayClick()
 
     updateSouvTable(startingCollege);
     updateCollegeTable(startingCollege);
+
+
+}
+
+void tripPlanner::onStartClick()
+{
+
+    if(!plannedColleges.isEmpty())
+    {
+        this->ui->startLabel->setText("");
+        this->hide();
+        tripprogress *prog = new tripprogress(this);
+
+        prog->tripID = id;
+        qDebug() << prog->tripID;
+        prog->show();
+    }
+    else
+    {
+        this->ui->startLabel->setText("Please create a trip first!");
+    }
 
 
 }

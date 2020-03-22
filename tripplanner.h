@@ -5,6 +5,8 @@
 #include "dbmanager.h"
 #include <qcheckbox.h>
 #include "tripsummary.h"
+#include "tripprogress.h"
+
 namespace Ui {
 class tripPlanner;
 }
@@ -34,6 +36,7 @@ private slots:
     void ChecboxChanged();
     void onPlanClick();
     void onDisplayClick();
+    void onStartClick();
 
 private:
     Ui::tripPlanner *ui;
@@ -44,6 +47,10 @@ private:
 
     QStringList plannedColleges;
     int distance;
+
+    QString id;
+
+    tripprogress *progress;
 
 
 };
