@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,73,159"/>
+<area shape="rect" id="node2" href="$classadd_souvenir.html" title=" " alt="" coords="128,5,220,32"/>
+<area shape="rect" id="node3" href="$class_admin_window.html" title="class initializes AdminWindow UI and manages all Admin only permissive execution in editing user data..." alt="" coords="121,56,227,83"/>
+<area shape="rect" id="node4" href="$classconfirmpage.html" title=" " alt="" coords="128,107,220,133"/>
+<area shape="rect" id="node5" href="$classtrip_planner.html" title="class recusively planning (calculating) the most efficient trip, manages data tables,..." alt="" coords="132,157,216,184"/>
+<area shape="rect" id="node6" href="$classtripprogress.html" title="class for displaying and calculating student trip progress, destinations, and student shopping cart f..." alt="" coords="129,208,219,235"/>
+<area shape="rect" id="node7" href="$classtrip_summary.html" title="class for generating and updating sql data from read DB and overall planned trip summary" alt="" coords="126,259,222,285"/>
+</map>

@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classconfirmpage" kind="class" language="C++" prot="public">
+    <compoundname>confirmpage</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QDialog</basecompoundref>
+    <includes refid="confirmpage_8h" local="no">confirmpage.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classconfirmpage_1a70abbfbae1f18f62351cdb0bcbe25370" prot="private" static="no" mutable="no">
+        <type>Ui::confirmpage *</type>
+        <definition>Ui::confirmpage* confirmpage::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+<para>points to confirmpage UI </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="confirmpage.h" line="67" column="21" bodyfile="confirmpage.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classconfirmpage_1a9ab63cac70f11a102709bf142ecb03df" compoundref="confirmpage_8cpp" startline="11" endline="14">~confirmpage</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classconfirmpage_1a2cd5a13aaedf11aab6f14eedebaf17c3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool confirmpage::answer</definition>
+        <argsstring></argsstring>
+        <name>answer</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>declares boolean to default val </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="confirmpage.h" line="72" column="10" bodyfile="confirmpage.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="classconfirmpage_1a14e6471474d987fc336bba295be937d1" compoundref="confirmpage_8cpp" startline="16" endline="20">getData</referencedby>
+        <referencedby refid="classconfirmpage_1aa2fa168c098e4d1238a72ac021fbd35e" compoundref="confirmpage_8cpp" startline="28" endline="32">on_cancelButton_released</referencedby>
+        <referencedby refid="classconfirmpage_1a63d2524a9929f2ee215da9a0ae41b686" compoundref="confirmpage_8cpp" startline="22" endline="26">on_okButton_released</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classconfirmpage_1aa9d064a0417fb18b27e215178c654e1a" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>confirmpage::confirmpage</definition>
+        <argsstring>(QWidget *parent=nullptr)</argsstring>
+        <name>confirmpage</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>explicit default Constructor </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor intializes UI for confirmpage <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- for QDialog </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="confirmpage.h" line="34" column="14" bodyfile="confirmpage.cpp" bodystart="4" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classconfirmpage_1a9ab63cac70f11a102709bf142ecb03df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>confirmpage::~confirmpage</definition>
+        <argsstring>()</argsstring>
+        <name>~confirmpage</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Close the loginwindow UI </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="confirmpage.h" line="41" column="5" bodyfile="confirmpage.cpp" bodystart="11" bodyend="14"/>
+        <references refid="classconfirmpage_1a70abbfbae1f18f62351cdb0bcbe25370" compoundref="confirmpage_8h" startline="67">ui</references>
+      </memberdef>
+      <memberdef kind="function" id="classconfirmpage_1aab79592328400a263a72cdea47ef829a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>confirmpage::confirmpage</definition>
+        <argsstring>(QWidget *parent, bool &amp;returnAnswer)</argsstring>
+        <name>confirmpage</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>returnAnswer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="confirmpage.h" line="43" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classconfirmpage_1a14e6471474d987fc336bba295be937d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool confirmpage::getData</definition>
+        <argsstring>()</argsstring>
+        <name>getData</name>
+        <briefdescription>
+<para>returns answer to calling function </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool- answer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="confirmpage.h" line="49" column="10" bodyfile="confirmpage.cpp" bodystart="16" bodyend="20"/>
+        <references refid="classconfirmpage_1a2cd5a13aaedf11aab6f14eedebaf17c3" compoundref="confirmpage_8h" startline="72">answer</references>
+        <referencedby refid="class_admin_window_1adb75fb0689794491accb94c3bd9989be" compoundref="adminwindow_8cpp" startline="88" endline="109">AdminWindow::clearCollegeData</referencedby>
+        <referencedby refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" compoundref="tripprogress_8cpp" startline="68" endline="130">tripprogress::nextTrip</referencedby>
+        <referencedby refid="classtripprogress_1ace30eef309fc1cb6ce4abaecf4472e1a" compoundref="tripprogress_8cpp" startline="322" endline="336">tripprogress::on_pushButton_4_released</referencedby>
+        <referencedby refid="classadd_souvenir_1ad1c3059a79d8df7f357d0a89927c54da" compoundref="addsouvenir_8cpp" startline="45" endline="80">addSouvenir::on_pushButton_released</referencedby>
+        <referencedby refid="class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49" compoundref="adminwindow_8cpp" startline="204" endline="248">AdminWindow::on_removeSouvenir_2_clicked</referencedby>
+        <referencedby refid="class_admin_window_1ab4bb07b30224270802c48b3666514a89" compoundref="adminwindow_8cpp" startline="121" endline="159">AdminWindow::on_removeSouvenir_released</referencedby>
+        <referencedby refid="class_admin_window_1abd378ec54897e75624563d579837ee40" compoundref="adminwindow_8cpp" startline="161" endline="181">AdminWindow::onAddColleges</referencedby>
+        <referencedby refid="class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b" compoundref="adminwindow_8cpp" startline="59" endline="86">AdminWindow::onInitialise</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="classconfirmpage_1a63d2524a9929f2ee215da9a0ae41b686" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void confirmpage::on_okButton_released</definition>
+        <argsstring>()</argsstring>
+        <name>on_okButton_released</name>
+        <briefdescription>
+<para>sets answer to true, hides ui </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void- none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="confirmpage.h" line="56" column="10" bodyfile="confirmpage.cpp" bodystart="22" bodyend="26"/>
+        <references refid="classconfirmpage_1a2cd5a13aaedf11aab6f14eedebaf17c3" compoundref="confirmpage_8h" startline="72">answer</references>
+        <referencedby refid="class_admin_window_1adb75fb0689794491accb94c3bd9989be" compoundref="adminwindow_8cpp" startline="88" endline="109">AdminWindow::clearCollegeData</referencedby>
+        <referencedby refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" compoundref="tripprogress_8cpp" startline="68" endline="130">tripprogress::nextTrip</referencedby>
+        <referencedby refid="classtripprogress_1ace30eef309fc1cb6ce4abaecf4472e1a" compoundref="tripprogress_8cpp" startline="322" endline="336">tripprogress::on_pushButton_4_released</referencedby>
+        <referencedby refid="classadd_souvenir_1ad1c3059a79d8df7f357d0a89927c54da" compoundref="addsouvenir_8cpp" startline="45" endline="80">addSouvenir::on_pushButton_released</referencedby>
+        <referencedby refid="class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49" compoundref="adminwindow_8cpp" startline="204" endline="248">AdminWindow::on_removeSouvenir_2_clicked</referencedby>
+        <referencedby refid="class_admin_window_1ab4bb07b30224270802c48b3666514a89" compoundref="adminwindow_8cpp" startline="121" endline="159">AdminWindow::on_removeSouvenir_released</referencedby>
+        <referencedby refid="class_admin_window_1abd378ec54897e75624563d579837ee40" compoundref="adminwindow_8cpp" startline="161" endline="181">AdminWindow::onAddColleges</referencedby>
+        <referencedby refid="class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b" compoundref="adminwindow_8cpp" startline="59" endline="86">AdminWindow::onInitialise</referencedby>
+      </memberdef>
+      <memberdef kind="slot" id="classconfirmpage_1aa2fa168c098e4d1238a72ac021fbd35e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void confirmpage::on_cancelButton_released</definition>
+        <argsstring>()</argsstring>
+        <name>on_cancelButton_released</name>
+        <briefdescription>
+<para>sets answer to false, hides ui </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void- none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="confirmpage.h" line="62" column="10" bodyfile="confirmpage.cpp" bodystart="28" bodyend="32"/>
+        <references refid="classconfirmpage_1a2cd5a13aaedf11aab6f14eedebaf17c3" compoundref="confirmpage_8h" startline="72">answer</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>confirmpage</label>
+        <link refid="classconfirmpage"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QDialog</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>confirmpage</label>
+        <link refid="classconfirmpage"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QDialog</label>
+      </node>
+    </collaborationgraph>
+    <location file="confirmpage.h" line="25" column="1" bodyfile="confirmpage.h" bodystart="24" bodyend="73"/>
+    <listofallmembers>
+      <member refid="classconfirmpage_1a2cd5a13aaedf11aab6f14eedebaf17c3" prot="private" virt="non-virtual"><scope>confirmpage</scope><name>answer</name></member>
+      <member refid="classconfirmpage_1aa9d064a0417fb18b27e215178c654e1a" prot="public" virt="non-virtual"><scope>confirmpage</scope><name>confirmpage</name></member>
+      <member refid="classconfirmpage_1aab79592328400a263a72cdea47ef829a" prot="public" virt="non-virtual"><scope>confirmpage</scope><name>confirmpage</name></member>
+      <member refid="classconfirmpage_1a14e6471474d987fc336bba295be937d1" prot="public" virt="non-virtual"><scope>confirmpage</scope><name>getData</name></member>
+      <member refid="classconfirmpage_1aa2fa168c098e4d1238a72ac021fbd35e" prot="private" virt="non-virtual"><scope>confirmpage</scope><name>on_cancelButton_released</name></member>
+      <member refid="classconfirmpage_1a63d2524a9929f2ee215da9a0ae41b686" prot="private" virt="non-virtual"><scope>confirmpage</scope><name>on_okButton_released</name></member>
+      <member refid="classconfirmpage_1a70abbfbae1f18f62351cdb0bcbe25370" prot="private" virt="non-virtual"><scope>confirmpage</scope><name>ui</name></member>
+      <member refid="classconfirmpage_1a9ab63cac70f11a102709bf142ecb03df" prot="public" virt="non-virtual"><scope>confirmpage</scope><name>~confirmpage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

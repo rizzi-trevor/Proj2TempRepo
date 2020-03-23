@@ -1,0 +1,370 @@
+\hypertarget{classtrip_summary}{}\doxysection{trip\+Summary Class Reference}
+\label{classtrip_summary}\index{tripSummary@{tripSummary}}
+
+
+class for generating and updating sql data from read DB and overall planned trip summary  
+
+
+
+
+{\ttfamily \#include $<$tripsummary.\+h$>$}
+
+
+
+Inheritance diagram for trip\+Summary\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classtrip_summary__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for trip\+Summary\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classtrip_summary__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtrip_summary_a4ac151fe65a383fdd04e9ac133f21d55}{trip\+Summary}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em default explicit Constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtrip_summary_a990accf373da48ade41def873014fdf6}{trip\+Summary}} (const Q\+String \&id, Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em explicit Constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtrip_summary_aaccf37c3e9d1691c8dcf1dd9349b2ea2}{$\sim$trip\+Summary}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtrip_summary_a7e935c92f7047ad2b207c6dec90a54ff}{on\+\_\+school\+\_\+combo\+Box\+\_\+current\+Index\+Changed}} (const Q\+String \&arg1)
+\begin{DoxyCompactList}\small\item\em prepares a query and binds trip\+Id and college\+Names to appropiate Database \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_summary_ac5267f51220eb49c45707b1eccce8587}{update\+Trip\+School\+List}} ()
+\begin{DoxyCompactList}\small\item\em updates trip\+ID and UI model when called. Prepares query for all availble trip\+I\+Ds \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_summary_adb1411877190127a126618a437ff47b3}{update\+School\+Combo\+Box}} ()
+\item 
+void \mbox{\hyperlink{classtrip_summary_a1d82d9dd567f2be49d1710651c4d8fe8}{update\+Total\+Distance}} ()
+\item 
+void \mbox{\hyperlink{classtrip_summary_a3b1175846c928336711b236e878dfd11}{update\+School\+Total}} ()
+\item 
+void \mbox{\hyperlink{classtrip_summary_ad20de08790de627fdf704c0991222c09}{update\+Trip\+Total}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::trip\+Summary $\ast$ \mbox{\hyperlink{classtrip_summary_a7d531afb03fb3f3b426bf8f164b57c41}{ui}}
+\begin{DoxyCompactList}\small\item\em points to \mbox{\hyperlink{classtrip_summary}{trip\+Summary}} UI \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_db_manager}{Db\+Manager}} \mbox{\hyperlink{classtrip_summary_a55cf5c4aeadc2820b51c951af075b7a1}{my\+Db}} = \mbox{\hyperlink{class_db_manager}{Db\+Manager}}(P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH + \char`\"{}/college.\+db\char`\"{})
+\begin{DoxyCompactList}\small\item\em assigns DB to predefined P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH constant \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{classtrip_summary_acb03d46422badb024292c69c3763c433}{trip\+ID}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class for generating and updating sql data from read DB and overall planned trip summary 
+
+\mbox{\hyperlink{classtrip_summary}{trip\+Summary}} displays an overview of what the user has planned for his trip this updates all data from souvenier, collegename, price, quantity, etc for the plan tripped 
+
+Definition at line 26 of file tripsummary.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtrip_summary_a4ac151fe65a383fdd04e9ac133f21d55}\label{classtrip_summary_a4ac151fe65a383fdd04e9ac133f21d55}} 
+\index{tripSummary@{tripSummary}!tripSummary@{tripSummary}}
+\index{tripSummary@{tripSummary}!tripSummary@{tripSummary}}
+\doxysubsubsection{\texorpdfstring{tripSummary()}{tripSummary()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily trip\+Summary\+::trip\+Summary (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+default explicit Constructor 
+
+Constructor sets up ui for \mbox{\hyperlink{classtrip_summary}{trip\+Summary}} 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & -\/ for Q\+Dialog \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file tripsummary.\+cpp.
+
+\mbox{\Hypertarget{classtrip_summary_a990accf373da48ade41def873014fdf6}\label{classtrip_summary_a990accf373da48ade41def873014fdf6}} 
+\index{tripSummary@{tripSummary}!tripSummary@{tripSummary}}
+\index{tripSummary@{tripSummary}!tripSummary@{tripSummary}}
+\doxysubsubsection{\texorpdfstring{tripSummary()}{tripSummary()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily trip\+Summary\+::trip\+Summary (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{id,  }\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+explicit Constructor 
+
+Constructor sets up ui for \mbox{\hyperlink{classtrip_summary}{trip\+Summary}} and initilalizes trip\+Id 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & -\/ for Q\+Dialog \\
+\hline
+{\em id} & -\/ trip\+ID \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file tripsummary.\+cpp.
+
+
+
+References trip\+Summary(), update\+School\+Combo\+Box(), update\+Total\+Distance(), update\+Trip\+School\+List(), and update\+Trip\+Total().
+
+
+
+Referenced by trip\+Summary().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtrip_summary_a990accf373da48ade41def873014fdf6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classtrip_summary_a990accf373da48ade41def873014fdf6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtrip_summary_aaccf37c3e9d1691c8dcf1dd9349b2ea2}\label{classtrip_summary_aaccf37c3e9d1691c8dcf1dd9349b2ea2}} 
+\index{tripSummary@{tripSummary}!````~tripSummary@{$\sim$tripSummary}}
+\index{````~tripSummary@{$\sim$tripSummary}!tripSummary@{tripSummary}}
+\doxysubsubsection{\texorpdfstring{$\sim$tripSummary()}{~tripSummary()}}
+{\footnotesize\ttfamily trip\+Summary\+::$\sim$trip\+Summary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Close the \mbox{\hyperlink{classtrip_summary}{trip\+Summary}} UI 
+
+Definition at line 24 of file tripsummary.\+cpp.
+
+
+
+References ui.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtrip_summary_a7e935c92f7047ad2b207c6dec90a54ff}\label{classtrip_summary_a7e935c92f7047ad2b207c6dec90a54ff}} 
+\index{tripSummary@{tripSummary}!on\_school\_comboBox\_currentIndexChanged@{on\_school\_comboBox\_currentIndexChanged}}
+\index{on\_school\_comboBox\_currentIndexChanged@{on\_school\_comboBox\_currentIndexChanged}!tripSummary@{tripSummary}}
+\doxysubsubsection{\texorpdfstring{on\_school\_comboBox\_currentIndexChanged}{on\_school\_comboBox\_currentIndexChanged}}
+{\footnotesize\ttfamily void trip\+Summary\+::on\+\_\+school\+\_\+combo\+Box\+\_\+current\+Index\+Changed (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+prepares a query and binds trip\+Id and college\+Names to appropiate Database 
+
+\begin{DoxyReturn}{Returns}
+nothing -\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file tripsummary.\+cpp.
+
+
+
+References update\+School\+Total().
+
+
+
+Referenced by tripprogress\+::next\+Trip().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtrip_summary_a7e935c92f7047ad2b207c6dec90a54ff_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtrip_summary_a7e935c92f7047ad2b207c6dec90a54ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtrip_summary_adb1411877190127a126618a437ff47b3}\label{classtrip_summary_adb1411877190127a126618a437ff47b3}} 
+\index{tripSummary@{tripSummary}!updateSchoolComboBox@{updateSchoolComboBox}}
+\index{updateSchoolComboBox@{updateSchoolComboBox}!tripSummary@{tripSummary}}
+\doxysubsubsection{\texorpdfstring{updateSchoolComboBox}{updateSchoolComboBox}}
+{\footnotesize\ttfamily void trip\+Summary\+::update\+School\+Combo\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 83 of file tripsummary.\+cpp.
+
+
+
+Referenced by trip\+Summary().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtrip_summary_adb1411877190127a126618a437ff47b3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtrip_summary_a3b1175846c928336711b236e878dfd11}\label{classtrip_summary_a3b1175846c928336711b236e878dfd11}} 
+\index{tripSummary@{tripSummary}!updateSchoolTotal@{updateSchoolTotal}}
+\index{updateSchoolTotal@{updateSchoolTotal}!tripSummary@{tripSummary}}
+\doxysubsubsection{\texorpdfstring{updateSchoolTotal}{updateSchoolTotal}}
+{\footnotesize\ttfamily void trip\+Summary\+::update\+School\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 128 of file tripsummary.\+cpp.
+
+
+
+Referenced by on\+\_\+school\+\_\+combo\+Box\+\_\+current\+Index\+Changed().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtrip_summary_a3b1175846c928336711b236e878dfd11_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtrip_summary_a1d82d9dd567f2be49d1710651c4d8fe8}\label{classtrip_summary_a1d82d9dd567f2be49d1710651c4d8fe8}} 
+\index{tripSummary@{tripSummary}!updateTotalDistance@{updateTotalDistance}}
+\index{updateTotalDistance@{updateTotalDistance}!tripSummary@{tripSummary}}
+\doxysubsubsection{\texorpdfstring{updateTotalDistance}{updateTotalDistance}}
+{\footnotesize\ttfamily void trip\+Summary\+::update\+Total\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 104 of file tripsummary.\+cpp.
+
+
+
+Referenced by trip\+Summary().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtrip_summary_a1d82d9dd567f2be49d1710651c4d8fe8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtrip_summary_ac5267f51220eb49c45707b1eccce8587}\label{classtrip_summary_ac5267f51220eb49c45707b1eccce8587}} 
+\index{tripSummary@{tripSummary}!updateTripSchoolList@{updateTripSchoolList}}
+\index{updateTripSchoolList@{updateTripSchoolList}!tripSummary@{tripSummary}}
+\doxysubsubsection{\texorpdfstring{updateTripSchoolList}{updateTripSchoolList}}
+{\footnotesize\ttfamily void trip\+Summary\+::update\+Trip\+School\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+updates trip\+ID and UI model when called. Prepares query for all availble trip\+I\+Ds 
+
+\begin{DoxyReturn}{Returns}
+nothing -\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file tripsummary.\+cpp.
+
+
+
+Referenced by trip\+Summary().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtrip_summary_ac5267f51220eb49c45707b1eccce8587_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtrip_summary_ad20de08790de627fdf704c0991222c09}\label{classtrip_summary_ad20de08790de627fdf704c0991222c09}} 
+\index{tripSummary@{tripSummary}!updateTripTotal@{updateTripTotal}}
+\index{updateTripTotal@{updateTripTotal}!tripSummary@{tripSummary}}
+\doxysubsubsection{\texorpdfstring{updateTripTotal}{updateTripTotal}}
+{\footnotesize\ttfamily void trip\+Summary\+::update\+Trip\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 153 of file tripsummary.\+cpp.
+
+
+
+Referenced by trip\+Summary().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtrip_summary_ad20de08790de627fdf704c0991222c09_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtrip_summary_a55cf5c4aeadc2820b51c951af075b7a1}\label{classtrip_summary_a55cf5c4aeadc2820b51c951af075b7a1}} 
+\index{tripSummary@{tripSummary}!myDb@{myDb}}
+\index{myDb@{myDb}!tripSummary@{tripSummary}}
+\doxysubsubsection{\texorpdfstring{myDb}{myDb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_db_manager}{Db\+Manager}} trip\+Summary\+::my\+Db = \mbox{\hyperlink{class_db_manager}{Db\+Manager}}(P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH + \char`\"{}/college.\+db\char`\"{})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+assigns DB to predefined P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH constant 
+
+
+
+Definition at line 88 of file tripsummary.\+h.
+
+\mbox{\Hypertarget{classtrip_summary_acb03d46422badb024292c69c3763c433}\label{classtrip_summary_acb03d46422badb024292c69c3763c433}} 
+\index{tripSummary@{tripSummary}!tripID@{tripID}}
+\index{tripID@{tripID}!tripSummary@{tripSummary}}
+\doxysubsubsection{\texorpdfstring{tripID}{tripID}}
+{\footnotesize\ttfamily Q\+String trip\+Summary\+::trip\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 90 of file tripsummary.\+h.
+
+\mbox{\Hypertarget{classtrip_summary_a7d531afb03fb3f3b426bf8f164b57c41}\label{classtrip_summary_a7d531afb03fb3f3b426bf8f164b57c41}} 
+\index{tripSummary@{tripSummary}!ui@{ui}}
+\index{ui@{ui}!tripSummary@{tripSummary}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::trip\+Summary$\ast$ trip\+Summary\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+points to \mbox{\hyperlink{classtrip_summary}{trip\+Summary}} UI 
+
+
+
+Definition at line 83 of file tripsummary.\+h.
+
+
+
+Referenced by $\sim$trip\+Summary().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tripsummary_8h}{tripsummary.\+h}}\item 
+\mbox{\hyperlink{tripsummary_8cpp}{tripsummary.\+cpp}}\end{DoxyCompactItemize}

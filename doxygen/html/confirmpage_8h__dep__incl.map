@@ -1,0 +1,15 @@
+<map id="confirmpage.h" name="confirmpage.h">
+<area shape="rect" id="node1" title=" " alt="" coords="235,5,338,32"/>
+<area shape="rect" id="node2" href="$addsouvenir_8h.html" title=" " alt="" coords="170,80,272,107"/>
+<area shape="rect" id="node5" href="$adminwindow_8cpp.html" title=" " alt="" coords="119,304,243,331"/>
+<area shape="rect" id="node9" href="$tripprogress_8h.html" title=" " alt="" coords="301,80,402,107"/>
+<area shape="rect" id="node13" href="$confirmpage_8cpp.html" title=" " alt="" coords="426,80,544,107"/>
+<area shape="rect" id="node3" href="$addsouvenir_8cpp.html" title=" " alt="" coords="26,155,141,181"/>
+<area shape="rect" id="node4" href="$adminwindow_8h.html" title=" " alt="" coords="166,155,276,181"/>
+<area shape="rect" id="node6" href="$loginwindow_8h.html" title=" " alt="" coords="246,229,348,256"/>
+<area shape="rect" id="node7" href="$loginwindow_8cpp.html" title=" " alt="" coords="416,304,532,331"/>
+<area shape="rect" id="node8" href="$main_8cpp.html" title=" " alt="" coords="268,304,342,331"/>
+<area shape="rect" id="node10" href="$tripplanner_8h.html" title=" " alt="" coords="440,155,533,181"/>
+<area shape="rect" id="node12" href="$tripprogress_8cpp.html" title=" " alt="" coords="301,155,416,181"/>
+<area shape="rect" id="node11" href="$tripplanner_8cpp.html" title=" " alt="" coords="373,229,480,256"/>
+</map>

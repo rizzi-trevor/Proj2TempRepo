@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classtripprogress" kind="class" language="C++" prot="public">
+    <compoundname>tripprogress</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QDialog</basecompoundref>
+    <includes refid="tripprogress_8h" local="no">tripprogress.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classtripprogress_1ab1335cc9223dad530a3f35eb06972b78" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString tripprogress::tripID</definition>
+        <argsstring></argsstring>
+        <name>tripID</name>
+        <briefdescription>
+<para>field member for storing tripID </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="53" column="13" bodyfile="tripprogress.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtripprogress_1a856d3a6267e275be3dfdcfb8ffe257a0" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString tripprogress::currentCol</definition>
+        <argsstring></argsstring>
+        <name>currentCol</name>
+        <briefdescription>
+<para>field member for storing currentCol(db) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="58" column="13" bodyfile="tripprogress.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtripprogress_1a4e1d0acb1efdfd2a3765d8d79e939af9" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString tripprogress::souvenirName</definition>
+        <argsstring></argsstring>
+        <name>souvenirName</name>
+        <briefdescription>
+<para>field member for storing college souvenirName </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="63" column="13" bodyfile="tripprogress.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtripprogress_1a9ba6e7ced08717df6b9062b56f2414ce" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tripprogress::souvenirPrice</definition>
+        <argsstring></argsstring>
+        <name>souvenirPrice</name>
+        <briefdescription>
+<para>field member for storing college souvenirPrice </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="68" column="12" bodyfile="tripprogress.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtripprogress_1a2c34c3a30ec0761d13a8d9b8595a0c93" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tripprogress::row</definition>
+        <argsstring></argsstring>
+        <name>row</name>
+        <briefdescription>
+<para>field member for storing sql table row </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="73" column="9" bodyfile="tripprogress.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtripprogress_1afc2d14cce76354532bd5a6c8584001e4" prot="private" static="no" mutable="no">
+        <type>Ui::tripprogress *</type>
+        <definition>Ui::tripprogress* tripprogress::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+<para>points to tripprogress UI </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="147" column="22" bodyfile="tripprogress.h" bodystart="147" bodyend="-1"/>
+        <referencedby refid="classtripprogress_1a82e49a09f6f78bbf740db47483e0faed" compoundref="tripprogress_8cpp" startline="17" endline="22">~tripprogress</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classtripprogress_1a6c35388e562a1f48162c0de3d963033a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_db_manager" kindref="compound">DbManager</ref></type>
+        <definition>DbManager tripprogress::myDb</definition>
+        <argsstring></argsstring>
+        <name>myDb</name>
+        <initializer>= <ref refid="class_db_manager" kindref="compound">DbManager</ref>(PROJECT_PATH + &quot;/college.db&quot;)</initializer>
+        <briefdescription>
+<para>assigns DB to predefined PROJECT_PATH constant </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="152" column="15" bodyfile="tripprogress.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtripprogress_1a2b31d42774f3ece541d191a5f555965e" prot="private" static="no" mutable="no">
+        <type>QStringList</type>
+        <definition>QStringList tripprogress::trip</definition>
+        <argsstring></argsstring>
+        <name>trip</name>
+        <briefdescription>
+<para>stores list of each trip/destination data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="157" column="17" bodyfile="tripprogress.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtripprogress_1a3a728c8ec21f34eb9aca73c4c64fbd8c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tripprogress::counter</definition>
+        <argsstring></argsstring>
+        <name>counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="159" column="9" bodyfile="tripprogress.h" bodystart="159" bodyend="-1"/>
+        <referencedby refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" compoundref="tripprogress_8cpp" startline="68" endline="130">nextTrip</referencedby>
+        <referencedby refid="classtripprogress_1af5ebcd299537bca0cffe94483aea1633" compoundref="tripprogress_8cpp" startline="133" endline="169">prevTrip</referencedby>
+        <referencedby refid="classtripprogress_1aa7127633dc3a458db319f23b06dc8c38" compoundref="tripprogress_8cpp" startline="4" endline="15">tripprogress</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classtripprogress_1a84787adb6ef3ef20df3cbb77534b34c6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tripprogress::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="160" column="9" bodyfile="tripprogress.h" bodystart="160" bodyend="-1"/>
+        <referencedby refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" compoundref="tripprogress_8cpp" startline="68" endline="130">nextTrip</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtripprogress_1aa7127633dc3a458db319f23b06dc8c38" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripprogress::tripprogress</definition>
+        <argsstring>(QWidget *parent=nullptr)</argsstring>
+        <name>tripprogress</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>default explicit Constructor </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor sets up ui for tripprogress and initializes counter to default <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- for QDialog </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="40" column="14" bodyfile="tripprogress.cpp" bodystart="4" bodyend="15"/>
+        <references refid="classtripprogress_1a3a728c8ec21f34eb9aca73c4c64fbd8c" compoundref="tripprogress_8h" startline="159">counter</references>
+      </memberdef>
+      <memberdef kind="function" id="classtripprogress_1a82e49a09f6f78bbf740db47483e0faed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripprogress::~tripprogress</definition>
+        <argsstring>()</argsstring>
+        <name>~tripprogress</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Close the tripprogress UI </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="47" column="5" bodyfile="tripprogress.cpp" bodystart="17" bodyend="22"/>
+        <references refid="classtripprogress_1afc2d14cce76354532bd5a6c8584001e4" compoundref="tripprogress_8h" startline="147">ui</references>
+      </memberdef>
+      <memberdef kind="function" id="classtripprogress_1a7bfe8b49dc2f937e09808514087ae912" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::displaySouv</definition>
+        <argsstring>()</argsstring>
+        <name>displaySouv</name>
+        <briefdescription>
+<para>updates sql query to update requested college souverniers and displays <ref refid="namespace_ui" kindref="compound">Ui</ref> table with updated model </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>nothing - void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="79" column="10" bodyfile="tripprogress.cpp" bodystart="200" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::nextTrip</definition>
+        <argsstring>()</argsstring>
+        <name>nextTrip</name>
+        <briefdescription>
+<para>calculates and displays next destination for student planned trip </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>nothing - void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="85" column="10" bodyfile="tripprogress.cpp" bodystart="68" bodyend="130"/>
+        <references refid="classtripprogress_1a3a728c8ec21f34eb9aca73c4c64fbd8c" compoundref="tripprogress_8h" startline="159">counter</references>
+        <references refid="classconfirmpage_1a14e6471474d987fc336bba295be937d1" compoundref="confirmpage_8cpp" startline="16" endline="20">confirmpage::getData</references>
+        <references refid="classtripprogress_1a84787adb6ef3ef20df3cbb77534b34c6" compoundref="tripprogress_8h" startline="160">max</references>
+        <references refid="classconfirmpage_1a63d2524a9929f2ee215da9a0ae41b686" compoundref="confirmpage_8cpp" startline="22" endline="26">confirmpage::on_okButton_released</references>
+        <references refid="classtrip_summary_1a7e935c92f7047ad2b207c6dec90a54ff" compoundref="tripsummary_8cpp" startline="31" endline="56">tripSummary::on_school_comboBox_currentIndexChanged</references>
+        <references refid="classtripprogress_1a0101030d65a5d71cbc3dcb9d17b0fc65" compoundref="tripprogress_8cpp" startline="234" endline="253">updateCart</references>
+        <references refid="classtripprogress_1a96e02bbd9e9bd253b04fb4a6efbb90eb" compoundref="tripprogress_8cpp" startline="255" endline="279">updateTotal</references>
+        <referencedby refid="classtripprogress_1af61ad9424ede3e9f90394c5870fc8ef6" compoundref="tripprogress_8cpp" startline="24" endline="66">onLoadClick</referencedby>
+        <referencedby refid="classtripprogress_1a310e32e2a2054d98098d7744797dd7db" compoundref="tripprogress_8cpp" startline="223" endline="227">onNextClick</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classtripprogress_1af5ebcd299537bca0cffe94483aea1633" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::prevTrip</definition>
+        <argsstring>()</argsstring>
+        <name>prevTrip</name>
+        <briefdescription>
+<para>calculates and displays previous destination for student planned trip </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>nothing - void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="91" column="10" bodyfile="tripprogress.cpp" bodystart="133" bodyend="169"/>
+        <references refid="classtripprogress_1a3a728c8ec21f34eb9aca73c4c64fbd8c" compoundref="tripprogress_8h" startline="159">counter</references>
+        <referencedby refid="classtripprogress_1aa1de9c0f88801b3dd07d3a8425e60e80" compoundref="tripprogress_8cpp" startline="229" endline="232">onPrevClick</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classtripprogress_1a8d485f178adc042180af1aa82359ede8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::getDistance</definition>
+        <argsstring>()</argsstring>
+        <name>getDistance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="93" column="10" bodyfile="tripprogress.cpp" bodystart="171" bodyend="198"/>
+        <referencedby refid="classtripprogress_1af61ad9424ede3e9f90394c5870fc8ef6" compoundref="tripprogress_8cpp" startline="24" endline="66">onLoadClick</referencedby>
+        <referencedby refid="classtripprogress_1a310e32e2a2054d98098d7744797dd7db" compoundref="tripprogress_8cpp" startline="223" endline="227">onNextClick</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classtripprogress_1a0101030d65a5d71cbc3dcb9d17b0fc65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::updateCart</definition>
+        <argsstring>()</argsstring>
+        <name>updateCart</name>
+        <briefdescription>
+<para>calculates and displays updated student cart for souveniers, total and quantity requested by the student at each school destination </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>nothing - void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="99" column="10" bodyfile="tripprogress.cpp" bodystart="234" bodyend="253"/>
+        <referencedby refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" compoundref="tripprogress_8cpp" startline="68" endline="130">nextTrip</referencedby>
+        <referencedby refid="classtripprogress_1a557a636592a8c518dab01e7ec9d4650c" compoundref="tripprogress_8cpp" startline="299" endline="319">on_addCart_clicked</referencedby>
+        <referencedby refid="classtripprogress_1a569959bf68a5a8b3d680f9a799032bd6" compoundref="tripprogress_8cpp" startline="338" endline="343">on_removeCart_clicked</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classtripprogress_1a96e02bbd9e9bd253b04fb4a6efbb90eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::updateTotal</definition>
+        <argsstring>()</argsstring>
+        <name>updateTotal</name>
+        <briefdescription>
+<para>calculates and displays updated student price total for shopping souverniers from cart </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>nothing - void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="105" column="10" bodyfile="tripprogress.cpp" bodystart="255" bodyend="279"/>
+        <referencedby refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" compoundref="tripprogress_8cpp" startline="68" endline="130">nextTrip</referencedby>
+        <referencedby refid="classtripprogress_1a557a636592a8c518dab01e7ec9d4650c" compoundref="tripprogress_8cpp" startline="299" endline="319">on_addCart_clicked</referencedby>
+        <referencedby refid="classtripprogress_1a569959bf68a5a8b3d680f9a799032bd6" compoundref="tripprogress_8cpp" startline="338" endline="343">on_removeCart_clicked</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="classtripprogress_1af61ad9424ede3e9f90394c5870fc8ef6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::onLoadClick</definition>
+        <argsstring>()</argsstring>
+        <name>onLoadClick</name>
+        <briefdescription>
+<para>initializes tripProgress on execution , binds tripID, updates size, and calculates nextTrip </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>nothing - void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="112" column="10" bodyfile="tripprogress.cpp" bodystart="24" bodyend="66"/>
+        <references refid="classtripprogress_1a8d485f178adc042180af1aa82359ede8" compoundref="tripprogress_8cpp" startline="171" endline="198">getDistance</references>
+        <references refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" compoundref="tripprogress_8cpp" startline="68" endline="130">nextTrip</references>
+      </memberdef>
+      <memberdef kind="slot" id="classtripprogress_1a310e32e2a2054d98098d7744797dd7db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::onNextClick</definition>
+        <argsstring>()</argsstring>
+        <name>onNextClick</name>
+        <briefdescription>
+<para>executes <ref refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" kindref="member">nextTrip()</ref>; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>nothing - void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="118" column="10" bodyfile="tripprogress.cpp" bodystart="223" bodyend="227"/>
+        <references refid="classtripprogress_1a8d485f178adc042180af1aa82359ede8" compoundref="tripprogress_8cpp" startline="171" endline="198">getDistance</references>
+        <references refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" compoundref="tripprogress_8cpp" startline="68" endline="130">nextTrip</references>
+      </memberdef>
+      <memberdef kind="slot" id="classtripprogress_1aa1de9c0f88801b3dd07d3a8425e60e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::onPrevClick</definition>
+        <argsstring>()</argsstring>
+        <name>onPrevClick</name>
+        <briefdescription>
+<para>executes <ref refid="classtripprogress_1af5ebcd299537bca0cffe94483aea1633" kindref="member">prevTrip()</ref>; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>nothing - void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="124" column="10" bodyfile="tripprogress.cpp" bodystart="229" bodyend="232"/>
+        <references refid="classtripprogress_1af5ebcd299537bca0cffe94483aea1633" compoundref="tripprogress_8cpp" startline="133" endline="169">prevTrip</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="classtripprogress_1a25dab95c13ca05aa89fb4faf3059d51a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::on_souvTable_clicked</definition>
+        <argsstring>(const QModelIndex &amp;index)</argsstring>
+        <name>on_souvTable_clicked</name>
+        <param>
+          <type>const QModelIndex &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="127" column="10" bodyfile="tripprogress.cpp" bodystart="280" bodyend="297"/>
+        <referencedby refid="classtrip_planner_1ae89f2d2671f765b8ae4e6701f682046c" compoundref="tripplanner_8cpp" startline="346" endline="365">tripPlanner::onStartClick</referencedby>
+      </memberdef>
+      <memberdef kind="slot" id="classtripprogress_1a557a636592a8c518dab01e7ec9d4650c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::on_addCart_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_addCart_clicked</name>
+        <briefdescription>
+<para>updates database, cart, and total; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>nothing - void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="133" column="10" bodyfile="tripprogress.cpp" bodystart="299" bodyend="319"/>
+        <references refid="classtripprogress_1a0101030d65a5d71cbc3dcb9d17b0fc65" compoundref="tripprogress_8cpp" startline="234" endline="253">updateCart</references>
+        <references refid="classtripprogress_1a96e02bbd9e9bd253b04fb4a6efbb90eb" compoundref="tripprogress_8cpp" startline="255" endline="279">updateTotal</references>
+      </memberdef>
+      <memberdef kind="slot" id="classtripprogress_1ace30eef309fc1cb6ce4abaecf4472e1a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::on_pushButton_4_released</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_4_released</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="135" column="10" bodyfile="tripprogress.cpp" bodystart="322" bodyend="336"/>
+        <references refid="classconfirmpage_1a14e6471474d987fc336bba295be937d1" compoundref="confirmpage_8cpp" startline="16" endline="20">confirmpage::getData</references>
+        <references refid="classconfirmpage_1a63d2524a9929f2ee215da9a0ae41b686" compoundref="confirmpage_8cpp" startline="22" endline="26">confirmpage::on_okButton_released</references>
+      </memberdef>
+      <memberdef kind="slot" id="classtripprogress_1a569959bf68a5a8b3d680f9a799032bd6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::on_removeCart_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_removeCart_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="137" column="10" bodyfile="tripprogress.cpp" bodystart="338" bodyend="343"/>
+        <references refid="classtripprogress_1a0101030d65a5d71cbc3dcb9d17b0fc65" compoundref="tripprogress_8cpp" startline="234" endline="253">updateCart</references>
+        <references refid="classtripprogress_1a96e02bbd9e9bd253b04fb4a6efbb90eb" compoundref="tripprogress_8cpp" startline="255" endline="279">updateTotal</references>
+      </memberdef>
+      <memberdef kind="slot" id="classtripprogress_1a2b0d1e4a4428ecc61911d38cc63f8f86" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::on_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="139" column="10"/>
+      </memberdef>
+      <memberdef kind="slot" id="classtripprogress_1a97ede8978e517a6913fa31747085357d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tripprogress::on_pushButton_4_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_4_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripprogress.h" line="141" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>class for displaying and calculating student trip progress, destinations, and student shopping cart for souverniers </para>
+    </briefdescription>
+    <detaileddescription>
+<para>tripprogress displays an overview of what the user has planned for his trip this updates all data from souvenier, collegename, price, quantity, etc for the plan tripped, as well as the student cart, the student next, and previous destinations </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>tripprogress</label>
+        <link refid="classtripprogress"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QDialog</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>tripprogress</label>
+        <link refid="classtripprogress"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-myDb</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DbManager</label>
+        <link refid="class_db_manager"/>
+      </node>
+      <node id="2">
+        <label>QDialog</label>
+      </node>
+    </collaborationgraph>
+    <location file="tripprogress.h" line="29" column="1" bodyfile="tripprogress.h" bodystart="28" bodyend="161"/>
+    <listofallmembers>
+      <member refid="classtripprogress_1a3a728c8ec21f34eb9aca73c4c64fbd8c" prot="private" virt="non-virtual"><scope>tripprogress</scope><name>counter</name></member>
+      <member refid="classtripprogress_1a856d3a6267e275be3dfdcfb8ffe257a0" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>currentCol</name></member>
+      <member refid="classtripprogress_1a7bfe8b49dc2f937e09808514087ae912" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>displaySouv</name></member>
+      <member refid="classtripprogress_1a8d485f178adc042180af1aa82359ede8" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>getDistance</name></member>
+      <member refid="classtripprogress_1a84787adb6ef3ef20df3cbb77534b34c6" prot="private" virt="non-virtual"><scope>tripprogress</scope><name>max</name></member>
+      <member refid="classtripprogress_1a6c35388e562a1f48162c0de3d963033a" prot="private" virt="non-virtual"><scope>tripprogress</scope><name>myDb</name></member>
+      <member refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>nextTrip</name></member>
+      <member refid="classtripprogress_1a557a636592a8c518dab01e7ec9d4650c" prot="private" virt="non-virtual"><scope>tripprogress</scope><name>on_addCart_clicked</name></member>
+      <member refid="classtripprogress_1a97ede8978e517a6913fa31747085357d" prot="private" virt="non-virtual"><scope>tripprogress</scope><name>on_pushButton_4_clicked</name></member>
+      <member refid="classtripprogress_1ace30eef309fc1cb6ce4abaecf4472e1a" prot="private" virt="non-virtual"><scope>tripprogress</scope><name>on_pushButton_4_released</name></member>
+      <member refid="classtripprogress_1a2b0d1e4a4428ecc61911d38cc63f8f86" prot="private" virt="non-virtual"><scope>tripprogress</scope><name>on_pushButton_clicked</name></member>
+      <member refid="classtripprogress_1a569959bf68a5a8b3d680f9a799032bd6" prot="private" virt="non-virtual"><scope>tripprogress</scope><name>on_removeCart_clicked</name></member>
+      <member refid="classtripprogress_1a25dab95c13ca05aa89fb4faf3059d51a" prot="private" virt="non-virtual"><scope>tripprogress</scope><name>on_souvTable_clicked</name></member>
+      <member refid="classtripprogress_1af61ad9424ede3e9f90394c5870fc8ef6" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>onLoadClick</name></member>
+      <member refid="classtripprogress_1a310e32e2a2054d98098d7744797dd7db" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>onNextClick</name></member>
+      <member refid="classtripprogress_1aa1de9c0f88801b3dd07d3a8425e60e80" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>onPrevClick</name></member>
+      <member refid="classtripprogress_1af5ebcd299537bca0cffe94483aea1633" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>prevTrip</name></member>
+      <member refid="classtripprogress_1a2c34c3a30ec0761d13a8d9b8595a0c93" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>row</name></member>
+      <member refid="classtripprogress_1a4e1d0acb1efdfd2a3765d8d79e939af9" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>souvenirName</name></member>
+      <member refid="classtripprogress_1a9ba6e7ced08717df6b9062b56f2414ce" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>souvenirPrice</name></member>
+      <member refid="classtripprogress_1a2b31d42774f3ece541d191a5f555965e" prot="private" virt="non-virtual"><scope>tripprogress</scope><name>trip</name></member>
+      <member refid="classtripprogress_1ab1335cc9223dad530a3f35eb06972b78" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>tripID</name></member>
+      <member refid="classtripprogress_1aa7127633dc3a458db319f23b06dc8c38" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>tripprogress</name></member>
+      <member refid="classtripprogress_1afc2d14cce76354532bd5a6c8584001e4" prot="private" virt="non-virtual"><scope>tripprogress</scope><name>ui</name></member>
+      <member refid="classtripprogress_1a0101030d65a5d71cbc3dcb9d17b0fc65" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>updateCart</name></member>
+      <member refid="classtripprogress_1a96e02bbd9e9bd253b04fb4a6efbb90eb" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>updateTotal</name></member>
+      <member refid="classtripprogress_1a82e49a09f6f78bbf740db47483e0faed" prot="public" virt="non-virtual"><scope>tripprogress</scope><name>~tripprogress</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

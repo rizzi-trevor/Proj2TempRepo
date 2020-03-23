@@ -1,0 +1,27 @@
+var classtrip_planner =
+[
+    [ "tripPlanner", "classtrip_planner.html#a4f1efc2b2d8bc3be648de0584d7f90ba", null ],
+    [ "~tripPlanner", "classtrip_planner.html#adf0269ba1adf0967b99b524572753371", null ],
+    [ "ChecboxChanged", "classtrip_planner.html#a49b42218c58074af9c51e5cc72811147", null ],
+    [ "collegeDoesExist", "classtrip_planner.html#aae916f968748c5bca52525e298e27d6c", null ],
+    [ "initializeList", "classtrip_planner.html#a09ff51f12d0e4eece8f5fd2db9017d38", null ],
+    [ "onDisplayClick", "classtrip_planner.html#ada9cb769efac5b9bfb321e88b1a02b36", null ],
+    [ "onPlanClick", "classtrip_planner.html#a41bad123ae9fe695f0142baee4517e82", null ],
+    [ "onStartClick", "classtrip_planner.html#ae89f2d2671f765b8ae4e6701f682046c", null ],
+    [ "planAlgorithm", "classtrip_planner.html#a76da0bd6a537c328a8f7b7d0b8a5c7c3", null ],
+    [ "planDoesExist", "classtrip_planner.html#a2b7a2f1f4418737c5a0d9d40616de033", null ],
+    [ "selectedCollegeList", "classtrip_planner.html#a4d03f6e0f7b127bbc9e8d49b756891c6", null ],
+    [ "showTrip", "classtrip_planner.html#afa3d43939dff604fe0efa70618d9d75c", null ],
+    [ "updateCollegeTable", "classtrip_planner.html#af0aa45427afac7ce03d47edb8eaaf04e", null ],
+    [ "updateCombo", "classtrip_planner.html#a83f8c209f19db50a76b7ff24eb7527bc", null ],
+    [ "updateSouvTable", "classtrip_planner.html#a8ab9722a483480aa6ddf51a2a90e13c0", null ],
+    [ "checkBoxVector", "classtrip_planner.html#ac59a255ea747293cedcf60e3817f7496", null ],
+    [ "distance", "classtrip_planner.html#a97602084ee12e0cc86907ffb9bb5bc68", null ],
+    [ "distanceTo", "classtrip_planner.html#a34865f6c097f3ed90791e6a519b5c5d1", null ],
+    [ "id", "classtrip_planner.html#a9d8d4e58496c284dabe31279407f5ce3", null ],
+    [ "myDb", "classtrip_planner.html#ac3011789615ebab31141a9ad9a642dc5", null ],
+    [ "plannedColleges", "classtrip_planner.html#ab0953b84602b02cebcdf722294f6d4de", null ],
+    [ "progress", "classtrip_planner.html#a0d904628227e4c833391fc5cb7d187b4", null ],
+    [ "selectedColleges", "classtrip_planner.html#a1884c3bf6bb1b09119c7670e1c5ae395", null ],
+    [ "ui", "classtrip_planner.html#a5426d7d7375464a717292faf1f3138aa", null ]
+];

@@ -1,0 +1,674 @@
+\hypertarget{classtripprogress}{}\doxysection{tripprogress Class Reference}
+\label{classtripprogress}\index{tripprogress@{tripprogress}}
+
+
+class for displaying and calculating student trip progress, destinations, and student shopping cart for souverniers  
+
+
+
+
+{\ttfamily \#include $<$tripprogress.\+h$>$}
+
+
+
+Inheritance diagram for tripprogress\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classtripprogress__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tripprogress\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classtripprogress__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtripprogress_af61ad9424ede3e9f90394c5870fc8ef6}{on\+Load\+Click}} ()
+\begin{DoxyCompactList}\small\item\em initializes trip\+Progress on execution , binds trip\+ID, updates size, and calculates next\+Trip \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtripprogress_a310e32e2a2054d98098d7744797dd7db}{on\+Next\+Click}} ()
+\begin{DoxyCompactList}\small\item\em executes \mbox{\hyperlink{classtripprogress_a67309d76ccd8f5f0fff245e4663f4a56}{next\+Trip()}}; \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtripprogress_aa1de9c0f88801b3dd07d3a8425e60e80}{on\+Prev\+Click}} ()
+\begin{DoxyCompactList}\small\item\em executes \mbox{\hyperlink{classtripprogress_af5ebcd299537bca0cffe94483aea1633}{prev\+Trip()}}; \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtripprogress_aa7127633dc3a458db319f23b06dc8c38}{tripprogress}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em default explicit Constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtripprogress_a82e49a09f6f78bbf740db47483e0faed}{$\sim$tripprogress}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtripprogress_a7bfe8b49dc2f937e09808514087ae912}{display\+Souv}} ()
+\begin{DoxyCompactList}\small\item\em updates sql query to update requested college souverniers and displays \mbox{\hyperlink{namespace_ui}{Ui}} table with updated model \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtripprogress_a67309d76ccd8f5f0fff245e4663f4a56}{next\+Trip}} ()
+\begin{DoxyCompactList}\small\item\em calculates and displays next destination for student planned trip \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtripprogress_af5ebcd299537bca0cffe94483aea1633}{prev\+Trip}} ()
+\begin{DoxyCompactList}\small\item\em calculates and displays previous destination for student planned trip \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtripprogress_a8d485f178adc042180af1aa82359ede8}{get\+Distance}} ()
+\item 
+void \mbox{\hyperlink{classtripprogress_a0101030d65a5d71cbc3dcb9d17b0fc65}{update\+Cart}} ()
+\begin{DoxyCompactList}\small\item\em calculates and displays updated student cart for souveniers, total and quantity requested by the student at each school destination \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtripprogress_a96e02bbd9e9bd253b04fb4a6efbb90eb}{update\+Total}} ()
+\begin{DoxyCompactList}\small\item\em calculates and displays updated student price total for shopping souverniers from cart \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{classtripprogress_ab1335cc9223dad530a3f35eb06972b78}{trip\+ID}}
+\begin{DoxyCompactList}\small\item\em field member for storing trip\+ID \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{classtripprogress_a856d3a6267e275be3dfdcfb8ffe257a0}{current\+Col}}
+\begin{DoxyCompactList}\small\item\em field member for storing current\+Col(db) \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{classtripprogress_a4e1d0acb1efdfd2a3765d8d79e939af9}{souvenir\+Name}}
+\begin{DoxyCompactList}\small\item\em field member for storing college souvenir\+Name \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtripprogress_a9ba6e7ced08717df6b9062b56f2414ce}{souvenir\+Price}}
+\begin{DoxyCompactList}\small\item\em field member for storing college souvenir\+Price \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtripprogress_a2c34c3a30ec0761d13a8d9b8595a0c93}{row}}
+\begin{DoxyCompactList}\small\item\em field member for storing sql table row \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtripprogress_a25dab95c13ca05aa89fb4faf3059d51a}{on\+\_\+souv\+Table\+\_\+clicked}} (const Q\+Model\+Index \&index)
+\item 
+void \mbox{\hyperlink{classtripprogress_a557a636592a8c518dab01e7ec9d4650c}{on\+\_\+add\+Cart\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em updates database, cart, and total; \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtripprogress_ace30eef309fc1cb6ce4abaecf4472e1a}{on\+\_\+push\+Button\+\_\+4\+\_\+released}} ()
+\item 
+void \mbox{\hyperlink{classtripprogress_a569959bf68a5a8b3d680f9a799032bd6}{on\+\_\+remove\+Cart\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classtripprogress_a2b0d1e4a4428ecc61911d38cc63f8f86}{on\+\_\+push\+Button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classtripprogress_a97ede8978e517a6913fa31747085357d}{on\+\_\+push\+Button\+\_\+4\+\_\+clicked}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::tripprogress $\ast$ \mbox{\hyperlink{classtripprogress_afc2d14cce76354532bd5a6c8584001e4}{ui}}
+\begin{DoxyCompactList}\small\item\em points to tripprogress UI \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_db_manager}{Db\+Manager}} \mbox{\hyperlink{classtripprogress_a6c35388e562a1f48162c0de3d963033a}{my\+Db}} = \mbox{\hyperlink{class_db_manager}{Db\+Manager}}(P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH + \char`\"{}/college.\+db\char`\"{})
+\begin{DoxyCompactList}\small\item\em assigns DB to predefined P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH constant \end{DoxyCompactList}\item 
+Q\+String\+List \mbox{\hyperlink{classtripprogress_a2b31d42774f3ece541d191a5f555965e}{trip}}
+\begin{DoxyCompactList}\small\item\em stores list of each trip/destination data \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtripprogress_a3a728c8ec21f34eb9aca73c4c64fbd8c}{counter}}
+\item 
+int \mbox{\hyperlink{classtripprogress_a84787adb6ef3ef20df3cbb77534b34c6}{max}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class for displaying and calculating student trip progress, destinations, and student shopping cart for souverniers 
+
+tripprogress displays an overview of what the user has planned for his trip this updates all data from souvenier, collegename, price, quantity, etc for the plan tripped, as well as the student cart, the student next, and previous destinations 
+
+Definition at line 28 of file tripprogress.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtripprogress_aa7127633dc3a458db319f23b06dc8c38}\label{classtripprogress_aa7127633dc3a458db319f23b06dc8c38}} 
+\index{tripprogress@{tripprogress}!tripprogress@{tripprogress}}
+\index{tripprogress@{tripprogress}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{tripprogress()}{tripprogress()}}
+{\footnotesize\ttfamily tripprogress\+::tripprogress (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+default explicit Constructor 
+
+Constructor sets up ui for tripprogress and initializes counter to default 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & -\/ for Q\+Dialog \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file tripprogress.\+cpp.
+
+
+
+References counter.
+
+\mbox{\Hypertarget{classtripprogress_a82e49a09f6f78bbf740db47483e0faed}\label{classtripprogress_a82e49a09f6f78bbf740db47483e0faed}} 
+\index{tripprogress@{tripprogress}!````~tripprogress@{$\sim$tripprogress}}
+\index{````~tripprogress@{$\sim$tripprogress}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{$\sim$tripprogress()}{~tripprogress()}}
+{\footnotesize\ttfamily tripprogress\+::$\sim$tripprogress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Close the tripprogress UI 
+
+Definition at line 17 of file tripprogress.\+cpp.
+
+
+
+References ui.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtripprogress_a7bfe8b49dc2f937e09808514087ae912}\label{classtripprogress_a7bfe8b49dc2f937e09808514087ae912}} 
+\index{tripprogress@{tripprogress}!displaySouv@{displaySouv}}
+\index{displaySouv@{displaySouv}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{displaySouv()}{displaySouv()}}
+{\footnotesize\ttfamily void tripprogress\+::display\+Souv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+updates sql query to update requested college souverniers and displays \mbox{\hyperlink{namespace_ui}{Ui}} table with updated model 
+
+\begin{DoxyReturn}{Returns}
+nothing -\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 200 of file tripprogress.\+cpp.
+
+\mbox{\Hypertarget{classtripprogress_a8d485f178adc042180af1aa82359ede8}\label{classtripprogress_a8d485f178adc042180af1aa82359ede8}} 
+\index{tripprogress@{tripprogress}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily void tripprogress\+::get\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 171 of file tripprogress.\+cpp.
+
+
+
+Referenced by on\+Load\+Click(), and on\+Next\+Click().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtripprogress_a8d485f178adc042180af1aa82359ede8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtripprogress_a67309d76ccd8f5f0fff245e4663f4a56}\label{classtripprogress_a67309d76ccd8f5f0fff245e4663f4a56}} 
+\index{tripprogress@{tripprogress}!nextTrip@{nextTrip}}
+\index{nextTrip@{nextTrip}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{nextTrip()}{nextTrip()}}
+{\footnotesize\ttfamily void tripprogress\+::next\+Trip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+calculates and displays next destination for student planned trip 
+
+\begin{DoxyReturn}{Returns}
+nothing -\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file tripprogress.\+cpp.
+
+
+
+References counter, confirmpage\+::get\+Data(), max, confirmpage\+::on\+\_\+ok\+Button\+\_\+released(), trip\+Summary\+::on\+\_\+school\+\_\+combo\+Box\+\_\+current\+Index\+Changed(), update\+Cart(), and update\+Total().
+
+
+
+Referenced by on\+Load\+Click(), and on\+Next\+Click().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtripprogress_a67309d76ccd8f5f0fff245e4663f4a56_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtripprogress_a67309d76ccd8f5f0fff245e4663f4a56_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtripprogress_a557a636592a8c518dab01e7ec9d4650c}\label{classtripprogress_a557a636592a8c518dab01e7ec9d4650c}} 
+\index{tripprogress@{tripprogress}!on\_addCart\_clicked@{on\_addCart\_clicked}}
+\index{on\_addCart\_clicked@{on\_addCart\_clicked}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{on\_addCart\_clicked}{on\_addCart\_clicked}}
+{\footnotesize\ttfamily void tripprogress\+::on\+\_\+add\+Cart\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+updates database, cart, and total; 
+
+\begin{DoxyReturn}{Returns}
+nothing -\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 299 of file tripprogress.\+cpp.
+
+
+
+References update\+Cart(), and update\+Total().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtripprogress_a557a636592a8c518dab01e7ec9d4650c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtripprogress_a97ede8978e517a6913fa31747085357d}\label{classtripprogress_a97ede8978e517a6913fa31747085357d}} 
+\index{tripprogress@{tripprogress}!on\_pushButton\_4\_clicked@{on\_pushButton\_4\_clicked}}
+\index{on\_pushButton\_4\_clicked@{on\_pushButton\_4\_clicked}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_4\_clicked}{on\_pushButton\_4\_clicked}}
+{\footnotesize\ttfamily void tripprogress\+::on\+\_\+push\+Button\+\_\+4\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\mbox{\Hypertarget{classtripprogress_ace30eef309fc1cb6ce4abaecf4472e1a}\label{classtripprogress_ace30eef309fc1cb6ce4abaecf4472e1a}} 
+\index{tripprogress@{tripprogress}!on\_pushButton\_4\_released@{on\_pushButton\_4\_released}}
+\index{on\_pushButton\_4\_released@{on\_pushButton\_4\_released}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_4\_released}{on\_pushButton\_4\_released}}
+{\footnotesize\ttfamily void tripprogress\+::on\+\_\+push\+Button\+\_\+4\+\_\+released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 322 of file tripprogress.\+cpp.
+
+
+
+References confirmpage\+::get\+Data(), and confirmpage\+::on\+\_\+ok\+Button\+\_\+released().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtripprogress_ace30eef309fc1cb6ce4abaecf4472e1a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtripprogress_a2b0d1e4a4428ecc61911d38cc63f8f86}\label{classtripprogress_a2b0d1e4a4428ecc61911d38cc63f8f86}} 
+\index{tripprogress@{tripprogress}!on\_pushButton\_clicked@{on\_pushButton\_clicked}}
+\index{on\_pushButton\_clicked@{on\_pushButton\_clicked}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_clicked}{on\_pushButton\_clicked}}
+{\footnotesize\ttfamily void tripprogress\+::on\+\_\+push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\mbox{\Hypertarget{classtripprogress_a569959bf68a5a8b3d680f9a799032bd6}\label{classtripprogress_a569959bf68a5a8b3d680f9a799032bd6}} 
+\index{tripprogress@{tripprogress}!on\_removeCart\_clicked@{on\_removeCart\_clicked}}
+\index{on\_removeCart\_clicked@{on\_removeCart\_clicked}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{on\_removeCart\_clicked}{on\_removeCart\_clicked}}
+{\footnotesize\ttfamily void tripprogress\+::on\+\_\+remove\+Cart\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 338 of file tripprogress.\+cpp.
+
+
+
+References update\+Cart(), and update\+Total().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtripprogress_a569959bf68a5a8b3d680f9a799032bd6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtripprogress_a25dab95c13ca05aa89fb4faf3059d51a}\label{classtripprogress_a25dab95c13ca05aa89fb4faf3059d51a}} 
+\index{tripprogress@{tripprogress}!on\_souvTable\_clicked@{on\_souvTable\_clicked}}
+\index{on\_souvTable\_clicked@{on\_souvTable\_clicked}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{on\_souvTable\_clicked}{on\_souvTable\_clicked}}
+{\footnotesize\ttfamily void tripprogress\+::on\+\_\+souv\+Table\+\_\+clicked (\begin{DoxyParamCaption}\item[{const Q\+Model\+Index \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 280 of file tripprogress.\+cpp.
+
+
+
+Referenced by trip\+Planner\+::on\+Start\+Click().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtripprogress_a25dab95c13ca05aa89fb4faf3059d51a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtripprogress_af61ad9424ede3e9f90394c5870fc8ef6}\label{classtripprogress_af61ad9424ede3e9f90394c5870fc8ef6}} 
+\index{tripprogress@{tripprogress}!onLoadClick@{onLoadClick}}
+\index{onLoadClick@{onLoadClick}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{onLoadClick}{onLoadClick}}
+{\footnotesize\ttfamily void tripprogress\+::on\+Load\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+initializes trip\+Progress on execution , binds trip\+ID, updates size, and calculates next\+Trip 
+
+\begin{DoxyReturn}{Returns}
+nothing -\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 24 of file tripprogress.\+cpp.
+
+
+
+References get\+Distance(), and next\+Trip().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtripprogress_af61ad9424ede3e9f90394c5870fc8ef6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtripprogress_a310e32e2a2054d98098d7744797dd7db}\label{classtripprogress_a310e32e2a2054d98098d7744797dd7db}} 
+\index{tripprogress@{tripprogress}!onNextClick@{onNextClick}}
+\index{onNextClick@{onNextClick}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{onNextClick}{onNextClick}}
+{\footnotesize\ttfamily void tripprogress\+::on\+Next\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+executes \mbox{\hyperlink{classtripprogress_a67309d76ccd8f5f0fff245e4663f4a56}{next\+Trip()}}; 
+
+\begin{DoxyReturn}{Returns}
+nothing -\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 223 of file tripprogress.\+cpp.
+
+
+
+References get\+Distance(), and next\+Trip().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtripprogress_a310e32e2a2054d98098d7744797dd7db_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtripprogress_aa1de9c0f88801b3dd07d3a8425e60e80}\label{classtripprogress_aa1de9c0f88801b3dd07d3a8425e60e80}} 
+\index{tripprogress@{tripprogress}!onPrevClick@{onPrevClick}}
+\index{onPrevClick@{onPrevClick}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{onPrevClick}{onPrevClick}}
+{\footnotesize\ttfamily void tripprogress\+::on\+Prev\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+executes \mbox{\hyperlink{classtripprogress_af5ebcd299537bca0cffe94483aea1633}{prev\+Trip()}}; 
+
+\begin{DoxyReturn}{Returns}
+nothing -\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 229 of file tripprogress.\+cpp.
+
+
+
+References prev\+Trip().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classtripprogress_aa1de9c0f88801b3dd07d3a8425e60e80_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtripprogress_af5ebcd299537bca0cffe94483aea1633}\label{classtripprogress_af5ebcd299537bca0cffe94483aea1633}} 
+\index{tripprogress@{tripprogress}!prevTrip@{prevTrip}}
+\index{prevTrip@{prevTrip}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{prevTrip()}{prevTrip()}}
+{\footnotesize\ttfamily void tripprogress\+::prev\+Trip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+calculates and displays previous destination for student planned trip 
+
+\begin{DoxyReturn}{Returns}
+nothing -\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file tripprogress.\+cpp.
+
+
+
+References counter.
+
+
+
+Referenced by on\+Prev\+Click().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classtripprogress_af5ebcd299537bca0cffe94483aea1633_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtripprogress_a0101030d65a5d71cbc3dcb9d17b0fc65}\label{classtripprogress_a0101030d65a5d71cbc3dcb9d17b0fc65}} 
+\index{tripprogress@{tripprogress}!updateCart@{updateCart}}
+\index{updateCart@{updateCart}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{updateCart()}{updateCart()}}
+{\footnotesize\ttfamily void tripprogress\+::update\+Cart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+calculates and displays updated student cart for souveniers, total and quantity requested by the student at each school destination 
+
+\begin{DoxyReturn}{Returns}
+nothing -\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 234 of file tripprogress.\+cpp.
+
+
+
+Referenced by next\+Trip(), on\+\_\+add\+Cart\+\_\+clicked(), and on\+\_\+remove\+Cart\+\_\+clicked().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtripprogress_a0101030d65a5d71cbc3dcb9d17b0fc65_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtripprogress_a96e02bbd9e9bd253b04fb4a6efbb90eb}\label{classtripprogress_a96e02bbd9e9bd253b04fb4a6efbb90eb}} 
+\index{tripprogress@{tripprogress}!updateTotal@{updateTotal}}
+\index{updateTotal@{updateTotal}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{updateTotal()}{updateTotal()}}
+{\footnotesize\ttfamily void tripprogress\+::update\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+calculates and displays updated student price total for shopping souverniers from cart 
+
+\begin{DoxyReturn}{Returns}
+nothing -\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 255 of file tripprogress.\+cpp.
+
+
+
+Referenced by next\+Trip(), on\+\_\+add\+Cart\+\_\+clicked(), and on\+\_\+remove\+Cart\+\_\+clicked().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtripprogress_a96e02bbd9e9bd253b04fb4a6efbb90eb_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtripprogress_a3a728c8ec21f34eb9aca73c4c64fbd8c}\label{classtripprogress_a3a728c8ec21f34eb9aca73c4c64fbd8c}} 
+\index{tripprogress@{tripprogress}!counter@{counter}}
+\index{counter@{counter}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily int tripprogress\+::counter\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 159 of file tripprogress.\+h.
+
+
+
+Referenced by next\+Trip(), prev\+Trip(), and tripprogress().
+
+\mbox{\Hypertarget{classtripprogress_a856d3a6267e275be3dfdcfb8ffe257a0}\label{classtripprogress_a856d3a6267e275be3dfdcfb8ffe257a0}} 
+\index{tripprogress@{tripprogress}!currentCol@{currentCol}}
+\index{currentCol@{currentCol}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{currentCol}{currentCol}}
+{\footnotesize\ttfamily Q\+String tripprogress\+::current\+Col}
+
+
+
+field member for storing current\+Col(db) 
+
+
+
+Definition at line 58 of file tripprogress.\+h.
+
+\mbox{\Hypertarget{classtripprogress_a84787adb6ef3ef20df3cbb77534b34c6}\label{classtripprogress_a84787adb6ef3ef20df3cbb77534b34c6}} 
+\index{tripprogress@{tripprogress}!max@{max}}
+\index{max@{max}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily int tripprogress\+::max\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 160 of file tripprogress.\+h.
+
+
+
+Referenced by next\+Trip().
+
+\mbox{\Hypertarget{classtripprogress_a6c35388e562a1f48162c0de3d963033a}\label{classtripprogress_a6c35388e562a1f48162c0de3d963033a}} 
+\index{tripprogress@{tripprogress}!myDb@{myDb}}
+\index{myDb@{myDb}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{myDb}{myDb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_db_manager}{Db\+Manager}} tripprogress\+::my\+Db = \mbox{\hyperlink{class_db_manager}{Db\+Manager}}(P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH + \char`\"{}/college.\+db\char`\"{})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+assigns DB to predefined P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH constant 
+
+
+
+Definition at line 152 of file tripprogress.\+h.
+
+\mbox{\Hypertarget{classtripprogress_a2c34c3a30ec0761d13a8d9b8595a0c93}\label{classtripprogress_a2c34c3a30ec0761d13a8d9b8595a0c93}} 
+\index{tripprogress@{tripprogress}!row@{row}}
+\index{row@{row}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily int tripprogress\+::row}
+
+
+
+field member for storing sql table row 
+
+
+
+Definition at line 73 of file tripprogress.\+h.
+
+\mbox{\Hypertarget{classtripprogress_a4e1d0acb1efdfd2a3765d8d79e939af9}\label{classtripprogress_a4e1d0acb1efdfd2a3765d8d79e939af9}} 
+\index{tripprogress@{tripprogress}!souvenirName@{souvenirName}}
+\index{souvenirName@{souvenirName}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{souvenirName}{souvenirName}}
+{\footnotesize\ttfamily Q\+String tripprogress\+::souvenir\+Name}
+
+
+
+field member for storing college souvenir\+Name 
+
+
+
+Definition at line 63 of file tripprogress.\+h.
+
+\mbox{\Hypertarget{classtripprogress_a9ba6e7ced08717df6b9062b56f2414ce}\label{classtripprogress_a9ba6e7ced08717df6b9062b56f2414ce}} 
+\index{tripprogress@{tripprogress}!souvenirPrice@{souvenirPrice}}
+\index{souvenirPrice@{souvenirPrice}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{souvenirPrice}{souvenirPrice}}
+{\footnotesize\ttfamily double tripprogress\+::souvenir\+Price}
+
+
+
+field member for storing college souvenir\+Price 
+
+
+
+Definition at line 68 of file tripprogress.\+h.
+
+\mbox{\Hypertarget{classtripprogress_a2b31d42774f3ece541d191a5f555965e}\label{classtripprogress_a2b31d42774f3ece541d191a5f555965e}} 
+\index{tripprogress@{tripprogress}!trip@{trip}}
+\index{trip@{trip}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{trip}{trip}}
+{\footnotesize\ttfamily Q\+String\+List tripprogress\+::trip\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+stores list of each trip/destination data 
+
+
+
+Definition at line 157 of file tripprogress.\+h.
+
+\mbox{\Hypertarget{classtripprogress_ab1335cc9223dad530a3f35eb06972b78}\label{classtripprogress_ab1335cc9223dad530a3f35eb06972b78}} 
+\index{tripprogress@{tripprogress}!tripID@{tripID}}
+\index{tripID@{tripID}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{tripID}{tripID}}
+{\footnotesize\ttfamily Q\+String tripprogress\+::trip\+ID}
+
+
+
+field member for storing trip\+ID 
+
+
+
+Definition at line 53 of file tripprogress.\+h.
+
+\mbox{\Hypertarget{classtripprogress_afc2d14cce76354532bd5a6c8584001e4}\label{classtripprogress_afc2d14cce76354532bd5a6c8584001e4}} 
+\index{tripprogress@{tripprogress}!ui@{ui}}
+\index{ui@{ui}!tripprogress@{tripprogress}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::tripprogress$\ast$ tripprogress\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+points to tripprogress UI 
+
+
+
+Definition at line 147 of file tripprogress.\+h.
+
+
+
+Referenced by $\sim$tripprogress().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tripprogress_8h}{tripprogress.\+h}}\item 
+\mbox{\hyperlink{tripprogress_8cpp}{tripprogress.\+cpp}}\end{DoxyCompactItemize}

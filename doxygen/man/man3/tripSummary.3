@@ -1,0 +1,199 @@
+.TH "tripSummary" 3 "Mon Mar 23 2020" "Version 1" "CS1D - Project1 - College Touring" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tripSummary \- class for generating and updating sql data from read DB and overall planned trip summary  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tripsummary\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtripSummary\fP (QWidget *parent=nullptr)"
+.br
+.RI "default explicit Constructor "
+.ti -1c
+.RI "\fBtripSummary\fP (const QString &id, QWidget *parent=nullptr)"
+.br
+.RI "explicit Constructor "
+.ti -1c
+.RI "\fB~tripSummary\fP ()"
+.br
+.RI "Destructor\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_school_comboBox_currentIndexChanged\fP (const QString &arg1)"
+.br
+.RI "prepares a query and binds tripId and collegeNames to appropiate Database "
+.ti -1c
+.RI "void \fBupdateTripSchoolList\fP ()"
+.br
+.RI "updates tripID and UI model when called\&. Prepares query for all availble tripIDs "
+.ti -1c
+.RI "void \fBupdateSchoolComboBox\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateTotalDistance\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateSchoolTotal\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateTripTotal\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::tripSummary * \fBui\fP"
+.br
+.RI "points to \fBtripSummary\fP UI "
+.ti -1c
+.RI "\fBDbManager\fP \fBmyDb\fP = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')"
+.br
+.RI "assigns DB to predefined PROJECT_PATH constant "
+.ti -1c
+.RI "QString \fBtripID\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+class for generating and updating sql data from read DB and overall planned trip summary 
+
+\fBtripSummary\fP displays an overview of what the user has planned for his trip this updates all data from souvenier, collegename, price, quantity, etc for the plan tripped 
+.PP
+Definition at line 26 of file tripsummary\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "tripSummary::tripSummary (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+default explicit Constructor Constructor sets up ui for \fBtripSummary\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI*parent\fP - for QDialog 
+.RE
+.PP
+
+.PP
+Definition at line 4 of file tripsummary\&.cpp\&.
+.SS "tripSummary::tripSummary (const QString & id, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+explicit Constructor Constructor sets up ui for \fBtripSummary\fP and initilalizes tripId 
+.PP
+\fBParameters\fP
+.RS 4
+\fI*parent\fP - for QDialog 
+.br
+\fIid\fP - tripID 
+.RE
+.PP
+
+.PP
+Definition at line 11 of file tripsummary\&.cpp\&.
+.PP
+References tripSummary(), updateSchoolComboBox(), updateTotalDistance(), updateTripSchoolList(), and updateTripTotal()\&.
+.PP
+Referenced by tripSummary()\&.
+.SS "tripSummary::~tripSummary ()"
+
+.PP
+Destructor\&. Close the \fBtripSummary\fP UI 
+.PP
+Definition at line 24 of file tripsummary\&.cpp\&.
+.PP
+References ui\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void tripSummary::on_school_comboBox_currentIndexChanged (const QString & arg1)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+prepares a query and binds tripId and collegeNames to appropiate Database 
+.PP
+\fBReturns\fP
+.RS 4
+nothing - void 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file tripsummary\&.cpp\&.
+.PP
+References updateSchoolTotal()\&.
+.PP
+Referenced by tripprogress::nextTrip()\&.
+.SS "void tripSummary::updateSchoolComboBox ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 83 of file tripsummary\&.cpp\&.
+.PP
+Referenced by tripSummary()\&.
+.SS "void tripSummary::updateSchoolTotal ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 128 of file tripsummary\&.cpp\&.
+.PP
+Referenced by on_school_comboBox_currentIndexChanged()\&.
+.SS "void tripSummary::updateTotalDistance ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 104 of file tripsummary\&.cpp\&.
+.PP
+Referenced by tripSummary()\&.
+.SS "void tripSummary::updateTripSchoolList ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+updates tripID and UI model when called\&. Prepares query for all availble tripIDs 
+.PP
+\fBReturns\fP
+.RS 4
+nothing - void 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file tripsummary\&.cpp\&.
+.PP
+Referenced by tripSummary()\&.
+.SS "void tripSummary::updateTripTotal ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 153 of file tripsummary\&.cpp\&.
+.PP
+Referenced by tripSummary()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDbManager\fP tripSummary::myDb = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')\fC [private]\fP"
+
+.PP
+assigns DB to predefined PROJECT_PATH constant 
+.PP
+Definition at line 88 of file tripsummary\&.h\&.
+.SS "QString tripSummary::tripID\fC [private]\fP"
+
+.PP
+Definition at line 90 of file tripsummary\&.h\&.
+.SS "Ui::tripSummary* tripSummary::ui\fC [private]\fP"
+
+.PP
+points to \fBtripSummary\fP UI 
+.PP
+Definition at line 83 of file tripsummary\&.h\&.
+.PP
+Referenced by ~tripSummary()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D - Project1 - College Touring from the source code\&.

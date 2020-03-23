@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classlogin_window" kind="class" language="C++" prot="public">
+    <compoundname>loginWindow</compoundname>
+    <includes refid="loginwindow_8h" local="no">loginwindow.h</includes>
+    <briefdescription>
+<para>class sets ui and manages execution for validating username and password </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classlogin_window" kindref="compound">loginWindow</ref> validates the credentials entered by the user, conncects to the database, and prompts the appropiate screen for the appropate user to execute after the user has been logged in and validated </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>loginWindow</label>
+        <link refid="classlogin_window"/>
+      </node>
+    </collaborationgraph>
+    <location file="loginwindow.h" line="15" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classtrip_summary">
+<title>tripSummary Class Reference</title>
+<indexterm><primary>tripSummary</primary></indexterm>
+<para>
+
+<para>class for generating and updating sql data from read DB and overall planned trip summary </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;tripsummary.h&gt;</computeroutput>
+</para>
+Inheritance diagram for tripSummary:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_summary__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for tripSummary:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_summary__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classtrip_summary_1a4ac151fe65a383fdd04e9ac133f21d55">tripSummary</link> (QWidget *parent=nullptr)</para>
+
+<para>default explicit Constructor </para>
+</listitem>
+            <listitem><para><link linkend="_classtrip_summary_1a990accf373da48ade41def873014fdf6">tripSummary</link> (const QString &amp;id, QWidget *parent=nullptr)</para>
+
+<para>explicit Constructor </para>
+</listitem>
+            <listitem><para><link linkend="_classtrip_summary_1aaccf37c3e9d1691c8dcf1dd9349b2ea2">~tripSummary</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Slots    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classtrip_summary_1a7e935c92f7047ad2b207c6dec90a54ff">on_school_comboBox_currentIndexChanged</link> (const QString &amp;arg1)</para>
+
+<para>prepares a query and binds tripId and collegeNames to appropiate Database </para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_summary_1ac5267f51220eb49c45707b1eccce8587">updateTripSchoolList</link> ()</para>
+
+<para>updates tripID and UI model when called. Prepares query for all availble tripIDs </para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_summary_1adb1411877190127a126618a437ff47b3">updateSchoolComboBox</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_summary_1a1d82d9dd567f2be49d1710651c4d8fe8">updateTotalDistance</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_summary_1a3b1175846c928336711b236e878dfd11">updateSchoolTotal</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_summary_1ad20de08790de627fdf704c0991222c09">updateTripTotal</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Ui::tripSummary * <link linkend="_classtrip_summary_1a7d531afb03fb3f3b426bf8f164b57c41">ui</link></para>
+
+<para>points to <link linkend="_classtrip_summary">tripSummary</link> UI </para>
+</listitem>
+            <listitem><para><link linkend="_class_db_manager">DbManager</link> <link linkend="_classtrip_summary_1a55cf5c4aeadc2820b51c951af075b7a1">myDb</link> = <link linkend="_class_db_manager">DbManager</link>(PROJECT_PATH + &quot;/college.db&quot;)</para>
+
+<para>assigns DB to predefined PROJECT_PATH constant </para>
+</listitem>
+            <listitem><para>QString <link linkend="_classtrip_summary_1acb03d46422badb024292c69c3763c433">tripID</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>class for generating and updating sql data from read DB and overall planned trip summary </para>
+
+
+
+<para><link linkend="_classtrip_summary">tripSummary</link> displays an overview of what the user has planned for his trip this updates all data from souvenier, collegename, price, quantity, etc for the plan tripped </para>
+<para>
+Definition at line 26 of file tripsummary.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classtrip_summary_1a4ac151fe65a383fdd04e9ac133f21d55"/>    <section>
+    <title>tripSummary()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>tripSummary</primary><secondary>tripSummary</secondary></indexterm>
+<indexterm><primary>tripSummary</primary><secondary>tripSummary</secondary></indexterm>
+<para><computeroutput>tripSummary::tripSummary (QWidget * parent = <computeroutput>nullptr</computeroutput>
+)<computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>default explicit Constructor </para>
+</para>
+
+<para>Constructor sets up ui for <link linkend="_classtrip_summary">tripSummary</link> 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>*parent</entry>
+                                <entry>
+<para>- for QDialog </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 4 of file tripsummary.cpp.</para>
+    </section><anchor xml:id="_classtrip_summary_1a990accf373da48ade41def873014fdf6"/>    <section>
+    <title>tripSummary()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>tripSummary</primary><secondary>tripSummary</secondary></indexterm>
+<indexterm><primary>tripSummary</primary><secondary>tripSummary</secondary></indexterm>
+<para><computeroutput>tripSummary::tripSummary (const QString &amp; id, QWidget * parent = <computeroutput>nullptr</computeroutput>
+)<computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>explicit Constructor </para>
+</para>
+
+<para>Constructor sets up ui for <link linkend="_classtrip_summary">tripSummary</link> and initilalizes tripId 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>*parent</entry>
+                                <entry>
+<para>- for QDialog </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>- tripID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 11 of file tripsummary.cpp.</para>
+<para>
+References tripSummary(), updateSchoolComboBox(), updateTotalDistance(), updateTripSchoolList(), and updateTripTotal().</para>
+<para>
+Referenced by tripSummary().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_summary_a990accf373da48ade41def873014fdf6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_summary_a990accf373da48ade41def873014fdf6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classtrip_summary_1aaccf37c3e9d1691c8dcf1dd9349b2ea2"/>    <section>
+    <title>~tripSummary()</title>
+<indexterm><primary>~tripSummary</primary><secondary>tripSummary</secondary></indexterm>
+<indexterm><primary>tripSummary</primary><secondary>~tripSummary</secondary></indexterm>
+<para><computeroutput>tripSummary::~tripSummary ( )</computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+
+<para>Close the <link linkend="_classtrip_summary">tripSummary</link> UI </para>
+<para>
+Definition at line 24 of file tripsummary.cpp.</para>
+<para>
+References ui.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classtrip_summary_1a7e935c92f7047ad2b207c6dec90a54ff"/>    <section>
+    <title>on_school_comboBox_currentIndexChanged</title>
+<indexterm><primary>on_school_comboBox_currentIndexChanged</primary><secondary>tripSummary</secondary></indexterm>
+<indexterm><primary>tripSummary</primary><secondary>on_school_comboBox_currentIndexChanged</secondary></indexterm>
+<para><computeroutput>void tripSummary::on_school_comboBox_currentIndexChanged (const QString &amp; arg1)<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>prepares a query and binds tripId and collegeNames to appropiate Database </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>nothing - void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 31 of file tripsummary.cpp.</para>
+<para>
+References updateSchoolTotal().</para>
+<para>
+Referenced by tripprogress::nextTrip().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_summary_a7e935c92f7047ad2b207c6dec90a54ff_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_summary_a7e935c92f7047ad2b207c6dec90a54ff_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classtrip_summary_1adb1411877190127a126618a437ff47b3"/>    <section>
+    <title>updateSchoolComboBox</title>
+<indexterm><primary>updateSchoolComboBox</primary><secondary>tripSummary</secondary></indexterm>
+<indexterm><primary>tripSummary</primary><secondary>updateSchoolComboBox</secondary></indexterm>
+<para><computeroutput>void tripSummary::updateSchoolComboBox ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 83 of file tripsummary.cpp.</para>
+<para>
+Referenced by tripSummary().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_summary_adb1411877190127a126618a437ff47b3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classtrip_summary_1a3b1175846c928336711b236e878dfd11"/>    <section>
+    <title>updateSchoolTotal</title>
+<indexterm><primary>updateSchoolTotal</primary><secondary>tripSummary</secondary></indexterm>
+<indexterm><primary>tripSummary</primary><secondary>updateSchoolTotal</secondary></indexterm>
+<para><computeroutput>void tripSummary::updateSchoolTotal ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 128 of file tripsummary.cpp.</para>
+<para>
+Referenced by on_school_comboBox_currentIndexChanged().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_summary_a3b1175846c928336711b236e878dfd11_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classtrip_summary_1a1d82d9dd567f2be49d1710651c4d8fe8"/>    <section>
+    <title>updateTotalDistance</title>
+<indexterm><primary>updateTotalDistance</primary><secondary>tripSummary</secondary></indexterm>
+<indexterm><primary>tripSummary</primary><secondary>updateTotalDistance</secondary></indexterm>
+<para><computeroutput>void tripSummary::updateTotalDistance ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 104 of file tripsummary.cpp.</para>
+<para>
+Referenced by tripSummary().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_summary_a1d82d9dd567f2be49d1710651c4d8fe8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classtrip_summary_1ac5267f51220eb49c45707b1eccce8587"/>    <section>
+    <title>updateTripSchoolList</title>
+<indexterm><primary>updateTripSchoolList</primary><secondary>tripSummary</secondary></indexterm>
+<indexterm><primary>tripSummary</primary><secondary>updateTripSchoolList</secondary></indexterm>
+<para><computeroutput>void tripSummary::updateTripSchoolList ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>updates tripID and UI model when called. Prepares query for all availble tripIDs </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>nothing - void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 61 of file tripsummary.cpp.</para>
+<para>
+Referenced by tripSummary().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_summary_ac5267f51220eb49c45707b1eccce8587_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classtrip_summary_1ad20de08790de627fdf704c0991222c09"/>    <section>
+    <title>updateTripTotal</title>
+<indexterm><primary>updateTripTotal</primary><secondary>tripSummary</secondary></indexterm>
+<indexterm><primary>tripSummary</primary><secondary>updateTripTotal</secondary></indexterm>
+<para><computeroutput>void tripSummary::updateTripTotal ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 153 of file tripsummary.cpp.</para>
+<para>
+Referenced by tripSummary().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_summary_ad20de08790de627fdf704c0991222c09_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classtrip_summary_1a55cf5c4aeadc2820b51c951af075b7a1"/>    <section>
+    <title>myDb</title>
+<indexterm><primary>myDb</primary><secondary>tripSummary</secondary></indexterm>
+<indexterm><primary>tripSummary</primary><secondary>myDb</secondary></indexterm>
+<para><computeroutput><link linkend="_class_db_manager">DbManager</link> tripSummary::myDb = <link linkend="_class_db_manager">DbManager</link>(PROJECT_PATH + &quot;/college.db&quot;)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>assigns DB to predefined PROJECT_PATH constant </para>
+</para>
+<para>
+Definition at line 88 of file tripsummary.h.</para>
+    </section><anchor xml:id="_classtrip_summary_1acb03d46422badb024292c69c3763c433"/>    <section>
+    <title>tripID</title>
+<indexterm><primary>tripID</primary><secondary>tripSummary</secondary></indexterm>
+<indexterm><primary>tripSummary</primary><secondary>tripID</secondary></indexterm>
+<para><computeroutput>QString tripSummary::tripID<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 90 of file tripsummary.h.</para>
+    </section><anchor xml:id="_classtrip_summary_1a7d531afb03fb3f3b426bf8f164b57c41"/>    <section>
+    <title>ui</title>
+<indexterm><primary>ui</primary><secondary>tripSummary</secondary></indexterm>
+<indexterm><primary>tripSummary</primary><secondary>ui</secondary></indexterm>
+<para><computeroutput>Ui::tripSummary* tripSummary::ui<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>points to <link linkend="_classtrip_summary">tripSummary</link> UI </para>
+</para>
+<para>
+Definition at line 83 of file tripsummary.h.</para>
+<para>
+Referenced by ~tripSummary().</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_tripsummary_8h">tripsummary.h</link><link linkend="_tripsummary_8cpp">tripsummary.cpp</link></section>
+</section>

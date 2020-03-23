@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="tripprogress_8h" kind="file" language="C++">
+    <compoundname>tripprogress.h</compoundname>
+    <includes local="no">QMainWindow</includes>
+    <includes refid="dbmanager_8h" local="yes">dbmanager.h</includes>
+    <includes refid="confirmpage_8h" local="yes">confirmpage.h</includes>
+    <includes refid="tripsummary_8h" local="yes">tripsummary.h</includes>
+    <includedby refid="tripplanner_8h" local="yes">tripplanner.h</includedby>
+    <includedby refid="tripprogress_8cpp" local="yes">tripprogress.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>tripprogress.h</label>
+        <link refid="tripprogress_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+      <node id="10">
+        <label>confirmpage.h</label>
+        <link refid="confirmpage_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>tripsummary.h</label>
+        <link refid="tripsummary_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>QSqlDatabase</label>
+      </node>
+      <node id="11">
+        <label>QDialog</label>
+      </node>
+      <node id="6">
+        <label>QDebug</label>
+      </node>
+      <node id="4">
+        <label>QAbstractItemModel</label>
+      </node>
+      <node id="9">
+        <label>QSqlQuery</label>
+      </node>
+      <node id="3">
+        <label>dbmanager.h</label>
+        <link refid="dbmanager_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QtSql</label>
+      </node>
+      <node id="7">
+        <label>QFileInfo</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>tripplanner.cpp</label>
+        <link refid="tripplanner_8cpp"/>
+      </node>
+      <node id="6">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>tripprogress.h</label>
+        <link refid="tripprogress_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>tripprogress.cpp</label>
+        <link refid="tripprogress_8cpp"/>
+      </node>
+      <node id="4">
+        <label>adminwindow.cpp</label>
+        <link refid="adminwindow_8cpp"/>
+      </node>
+      <node id="2">
+        <label>tripplanner.h</label>
+        <link refid="tripplanner_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>loginwindow.cpp</label>
+        <link refid="loginwindow_8cpp"/>
+      </node>
+      <node id="3">
+        <label>loginwindow.h</label>
+        <link refid="loginwindow_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtripprogress" prot="public">tripprogress</innerclass>
+    <innernamespace refid="namespace_ui">Ui</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>TRIPPROGRESS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRIPPROGRESS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QMainWindow&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dbmanager_8h" kindref="compound">dbmanager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="confirmpage_8h" kindref="compound">confirmpage.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tripsummary_8h" kindref="compound">tripsummary.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_ui" kindref="compound">Ui</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtripprogress" kindref="compound">tripprogress</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classtripprogress" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtripprogress" kindref="compound">tripprogress</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QDialog</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1aa7127633dc3a458db319f23b06dc8c38" kindref="member">tripprogress</ref>(QWidget<sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtripprogress_1a82e49a09f6f78bbf740db47483e0faed" kindref="member">~tripprogress</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classtripprogress_1ab1335cc9223dad530a3f35eb06972b78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="classtripprogress_1ab1335cc9223dad530a3f35eb06972b78" kindref="member">tripID</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classtripprogress_1a856d3a6267e275be3dfdcfb8ffe257a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="classtripprogress_1a856d3a6267e275be3dfdcfb8ffe257a0" kindref="member">currentCol</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classtripprogress_1a4e1d0acb1efdfd2a3765d8d79e939af9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="classtripprogress_1a4e1d0acb1efdfd2a3765d8d79e939af9" kindref="member">souvenirName</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classtripprogress_1a9ba6e7ced08717df6b9062b56f2414ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a9ba6e7ced08717df6b9062b56f2414ce" kindref="member">souvenirPrice</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classtripprogress_1a2c34c3a30ec0761d13a8d9b8595a0c93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a2c34c3a30ec0761d13a8d9b8595a0c93" kindref="member">row</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a7bfe8b49dc2f937e09808514087ae912" kindref="member">displaySouv</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" kindref="member">nextTrip</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1af5ebcd299537bca0cffe94483aea1633" kindref="member">prevTrip</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a8d485f178adc042180af1aa82359ede8" kindref="member">getDistance</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a0101030d65a5d71cbc3dcb9d17b0fc65" kindref="member">updateCart</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a96e02bbd9e9bd253b04fb4a6efbb90eb" kindref="member">updateTotal</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1af61ad9424ede3e9f90394c5870fc8ef6" kindref="member">onLoadClick</ref>();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a310e32e2a2054d98098d7744797dd7db" kindref="member">onNextClick</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1aa1de9c0f88801b3dd07d3a8425e60e80" kindref="member">onPrevClick</ref>();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a25dab95c13ca05aa89fb4faf3059d51a" kindref="member">on_souvTable_clicked</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QModelIndex<sp/>&amp;index);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a557a636592a8c518dab01e7ec9d4650c" kindref="member">on_addCart_clicked</ref>();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1ace30eef309fc1cb6ce4abaecf4472e1a" kindref="member">on_pushButton_4_released</ref>();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a569959bf68a5a8b3d680f9a799032bd6" kindref="member">on_removeCart_clicked</ref>();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a2b0d1e4a4428ecc61911d38cc63f8f86" kindref="member">on_pushButton_clicked</ref>();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a97ede8978e517a6913fa31747085357d" kindref="member">on_pushButton_4_clicked</ref>();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="147" refid="classtripprogress_1afc2d14cce76354532bd5a6c8584001e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Ui::tripprogress<sp/>*<ref refid="classtripprogress_1afc2d14cce76354532bd5a6c8584001e4" kindref="member">ui</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="classtripprogress_1a6c35388e562a1f48162c0de3d963033a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_db_manager" kindref="compound">DbManager</ref><sp/><ref refid="classtripprogress_1a6c35388e562a1f48162c0de3d963033a" kindref="member">myDb</ref><sp/>=<sp/><ref refid="class_db_manager" kindref="compound">DbManager</ref>(PROJECT_PATH<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/college.db&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="classtripprogress_1a2b31d42774f3ece541d191a5f555965e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QStringList<sp/><ref refid="classtripprogress_1a2b31d42774f3ece541d191a5f555965e" kindref="member">trip</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="classtripprogress_1a3a728c8ec21f34eb9aca73c4c64fbd8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a3a728c8ec21f34eb9aca73c4c64fbd8c" kindref="member">counter</ref>;</highlight></codeline>
+<codeline lineno="160" refid="classtripprogress_1a84787adb6ef3ef20df3cbb77534b34c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtripprogress_1a84787adb6ef3ef20df3cbb77534b34c6" kindref="member">max</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>TRIPPROGRESS_H</highlight></codeline>
+    </programlisting>
+    <location file="tripprogress.h"/>
+  </compounddef>
+</doxygen>

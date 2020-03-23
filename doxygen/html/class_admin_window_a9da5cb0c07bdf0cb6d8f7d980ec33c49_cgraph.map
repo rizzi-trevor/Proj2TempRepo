@@ -1,0 +1,6 @@
+<map id="AdminWindow::on_removeSouvenir_2_clicked" name="AdminWindow::on_removeSouvenir_2_clicked">
+<area shape="rect" id="node1" title=" " alt="" coords="5,57,229,98"/>
+<area shape="rect" id="node2" href="$classconfirmpage.html#a14e6471474d987fc336bba295be937d1" title="returns answer to calling function" alt="" coords="305,5,451,32"/>
+<area shape="rect" id="node3" href="$classconfirmpage.html#a63d2524a9929f2ee215da9a0ae41b686" title="sets answer to true, hides ui" alt="" coords="291,57,465,98"/>
+<area shape="rect" id="node4" href="$class_admin_window.html#aa2e06bdd9305f8c591cf97e8c580f293" title="updates sql data table for college souvenirs when called" alt="" coords="277,122,479,163"/>
+</map>

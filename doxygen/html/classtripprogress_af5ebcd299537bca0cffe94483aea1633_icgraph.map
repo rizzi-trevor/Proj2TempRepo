@@ -1,0 +1,4 @@
+<map id="tripprogress::prevTrip" name="tripprogress::prevTrip">
+<area shape="rect" id="node1" title="calculates and displays previous destination for student planned trip" alt="" coords="220,5,363,32"/>
+<area shape="rect" id="node2" href="$classtripprogress.html#aa1de9c0f88801b3dd07d3a8425e60e80" title="executes prevTrip();" alt="" coords="5,5,172,32"/>
+</map>

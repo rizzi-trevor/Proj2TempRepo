@@ -1,0 +1,8 @@
+<map id="tripprogress::updateTotal" name="tripprogress::updateTotal">
+<area shape="rect" id="node1" title="calculates and displays updated student price total for shopping souverniers from cart" alt="" coords="455,89,620,116"/>
+<area shape="rect" id="node2" href="$classtripprogress.html#a67309d76ccd8f5f0fff245e4663f4a56" title="calculates and displays next destination for student planned trip" alt="" coords="243,31,387,57"/>
+<area shape="rect" id="node5" href="$classtripprogress.html#a557a636592a8c518dab01e7ec9d4650c" title="updates database, cart, and total;" alt="" coords="233,82,397,123"/>
+<area shape="rect" id="node6" href="$classtripprogress.html#a569959bf68a5a8b3d680f9a799032bd6" title=" " alt="" coords="223,147,407,189"/>
+<area shape="rect" id="node3" href="$classtripprogress.html#af61ad9424ede3e9f90394c5870fc8ef6" title="initializes tripProgress on execution , binds tripID, updates size, and calculates nextTrip" alt="" coords="5,5,175,32"/>
+<area shape="rect" id="node4" href="$classtripprogress.html#a310e32e2a2054d98098d7744797dd7db" title="executes nextTrip();" alt="" coords="6,56,174,83"/>
+</map>

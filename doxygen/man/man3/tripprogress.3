@@ -1,0 +1,400 @@
+.TH "tripprogress" 3 "Mon Mar 23 2020" "Version 1" "CS1D - Project1 - College Touring" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tripprogress \- class for displaying and calculating student trip progress, destinations, and student shopping cart for souverniers  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tripprogress\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBonLoadClick\fP ()"
+.br
+.RI "initializes tripProgress on execution , binds tripID, updates size, and calculates nextTrip "
+.ti -1c
+.RI "void \fBonNextClick\fP ()"
+.br
+.RI "executes \fBnextTrip()\fP; "
+.ti -1c
+.RI "void \fBonPrevClick\fP ()"
+.br
+.RI "executes \fBprevTrip()\fP; "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtripprogress\fP (QWidget *parent=nullptr)"
+.br
+.RI "default explicit Constructor "
+.ti -1c
+.RI "\fB~tripprogress\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "void \fBdisplaySouv\fP ()"
+.br
+.RI "updates sql query to update requested college souverniers and displays \fBUi\fP table with updated model "
+.ti -1c
+.RI "void \fBnextTrip\fP ()"
+.br
+.RI "calculates and displays next destination for student planned trip "
+.ti -1c
+.RI "void \fBprevTrip\fP ()"
+.br
+.RI "calculates and displays previous destination for student planned trip "
+.ti -1c
+.RI "void \fBgetDistance\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateCart\fP ()"
+.br
+.RI "calculates and displays updated student cart for souveniers, total and quantity requested by the student at each school destination "
+.ti -1c
+.RI "void \fBupdateTotal\fP ()"
+.br
+.RI "calculates and displays updated student price total for shopping souverniers from cart "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBtripID\fP"
+.br
+.RI "field member for storing tripID "
+.ti -1c
+.RI "QString \fBcurrentCol\fP"
+.br
+.RI "field member for storing currentCol(db) "
+.ti -1c
+.RI "QString \fBsouvenirName\fP"
+.br
+.RI "field member for storing college souvenirName "
+.ti -1c
+.RI "double \fBsouvenirPrice\fP"
+.br
+.RI "field member for storing college souvenirPrice "
+.ti -1c
+.RI "int \fBrow\fP"
+.br
+.RI "field member for storing sql table row "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_souvTable_clicked\fP (const QModelIndex &index)"
+.br
+.ti -1c
+.RI "void \fBon_addCart_clicked\fP ()"
+.br
+.RI "updates database, cart, and total; "
+.ti -1c
+.RI "void \fBon_pushButton_4_released\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_removeCart_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_pushButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_pushButton_4_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::tripprogress * \fBui\fP"
+.br
+.RI "points to tripprogress UI "
+.ti -1c
+.RI "\fBDbManager\fP \fBmyDb\fP = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')"
+.br
+.RI "assigns DB to predefined PROJECT_PATH constant "
+.ti -1c
+.RI "QStringList \fBtrip\fP"
+.br
+.RI "stores list of each trip/destination data "
+.ti -1c
+.RI "int \fBcounter\fP"
+.br
+.ti -1c
+.RI "int \fBmax\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+class for displaying and calculating student trip progress, destinations, and student shopping cart for souverniers 
+
+tripprogress displays an overview of what the user has planned for his trip this updates all data from souvenier, collegename, price, quantity, etc for the plan tripped, as well as the student cart, the student next, and previous destinations 
+.PP
+Definition at line 28 of file tripprogress\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "tripprogress::tripprogress (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+default explicit Constructor Constructor sets up ui for tripprogress and initializes counter to default 
+.PP
+\fBParameters\fP
+.RS 4
+\fI*parent\fP - for QDialog 
+.RE
+.PP
+
+.PP
+Definition at line 4 of file tripprogress\&.cpp\&.
+.PP
+References counter\&.
+.SS "tripprogress::~tripprogress ()"
+
+.PP
+Destructor\&. Close the tripprogress UI 
+.PP
+Definition at line 17 of file tripprogress\&.cpp\&.
+.PP
+References ui\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void tripprogress::displaySouv ()"
+
+.PP
+updates sql query to update requested college souverniers and displays \fBUi\fP table with updated model 
+.PP
+\fBReturns\fP
+.RS 4
+nothing - void 
+.RE
+.PP
+
+.PP
+Definition at line 200 of file tripprogress\&.cpp\&.
+.SS "void tripprogress::getDistance ()"
+
+.PP
+Definition at line 171 of file tripprogress\&.cpp\&.
+.PP
+Referenced by onLoadClick(), and onNextClick()\&.
+.SS "void tripprogress::nextTrip ()"
+
+.PP
+calculates and displays next destination for student planned trip 
+.PP
+\fBReturns\fP
+.RS 4
+nothing - void 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file tripprogress\&.cpp\&.
+.PP
+References counter, confirmpage::getData(), max, confirmpage::on_okButton_released(), tripSummary::on_school_comboBox_currentIndexChanged(), updateCart(), and updateTotal()\&.
+.PP
+Referenced by onLoadClick(), and onNextClick()\&.
+.SS "void tripprogress::on_addCart_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+updates database, cart, and total; 
+.PP
+\fBReturns\fP
+.RS 4
+nothing - void 
+.RE
+.PP
+
+.PP
+Definition at line 299 of file tripprogress\&.cpp\&.
+.PP
+References updateCart(), and updateTotal()\&.
+.SS "void tripprogress::on_pushButton_4_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void tripprogress::on_pushButton_4_released ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 322 of file tripprogress\&.cpp\&.
+.PP
+References confirmpage::getData(), and confirmpage::on_okButton_released()\&.
+.SS "void tripprogress::on_pushButton_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void tripprogress::on_removeCart_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 338 of file tripprogress\&.cpp\&.
+.PP
+References updateCart(), and updateTotal()\&.
+.SS "void tripprogress::on_souvTable_clicked (const QModelIndex & index)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 280 of file tripprogress\&.cpp\&.
+.PP
+Referenced by tripPlanner::onStartClick()\&.
+.SS "void tripprogress::onLoadClick ()\fC [slot]\fP"
+
+.PP
+initializes tripProgress on execution , binds tripID, updates size, and calculates nextTrip 
+.PP
+\fBReturns\fP
+.RS 4
+nothing - void 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file tripprogress\&.cpp\&.
+.PP
+References getDistance(), and nextTrip()\&.
+.SS "void tripprogress::onNextClick ()\fC [slot]\fP"
+
+.PP
+executes \fBnextTrip()\fP; 
+.PP
+\fBReturns\fP
+.RS 4
+nothing - void 
+.RE
+.PP
+
+.PP
+Definition at line 223 of file tripprogress\&.cpp\&.
+.PP
+References getDistance(), and nextTrip()\&.
+.SS "void tripprogress::onPrevClick ()\fC [slot]\fP"
+
+.PP
+executes \fBprevTrip()\fP; 
+.PP
+\fBReturns\fP
+.RS 4
+nothing - void 
+.RE
+.PP
+
+.PP
+Definition at line 229 of file tripprogress\&.cpp\&.
+.PP
+References prevTrip()\&.
+.SS "void tripprogress::prevTrip ()"
+
+.PP
+calculates and displays previous destination for student planned trip 
+.PP
+\fBReturns\fP
+.RS 4
+nothing - void 
+.RE
+.PP
+
+.PP
+Definition at line 133 of file tripprogress\&.cpp\&.
+.PP
+References counter\&.
+.PP
+Referenced by onPrevClick()\&.
+.SS "void tripprogress::updateCart ()"
+
+.PP
+calculates and displays updated student cart for souveniers, total and quantity requested by the student at each school destination 
+.PP
+\fBReturns\fP
+.RS 4
+nothing - void 
+.RE
+.PP
+
+.PP
+Definition at line 234 of file tripprogress\&.cpp\&.
+.PP
+Referenced by nextTrip(), on_addCart_clicked(), and on_removeCart_clicked()\&.
+.SS "void tripprogress::updateTotal ()"
+
+.PP
+calculates and displays updated student price total for shopping souverniers from cart 
+.PP
+\fBReturns\fP
+.RS 4
+nothing - void 
+.RE
+.PP
+
+.PP
+Definition at line 255 of file tripprogress\&.cpp\&.
+.PP
+Referenced by nextTrip(), on_addCart_clicked(), and on_removeCart_clicked()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int tripprogress::counter\fC [private]\fP"
+
+.PP
+Definition at line 159 of file tripprogress\&.h\&.
+.PP
+Referenced by nextTrip(), prevTrip(), and tripprogress()\&.
+.SS "QString tripprogress::currentCol"
+
+.PP
+field member for storing currentCol(db) 
+.PP
+Definition at line 58 of file tripprogress\&.h\&.
+.SS "int tripprogress::max\fC [private]\fP"
+
+.PP
+Definition at line 160 of file tripprogress\&.h\&.
+.PP
+Referenced by nextTrip()\&.
+.SS "\fBDbManager\fP tripprogress::myDb = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')\fC [private]\fP"
+
+.PP
+assigns DB to predefined PROJECT_PATH constant 
+.PP
+Definition at line 152 of file tripprogress\&.h\&.
+.SS "int tripprogress::row"
+
+.PP
+field member for storing sql table row 
+.PP
+Definition at line 73 of file tripprogress\&.h\&.
+.SS "QString tripprogress::souvenirName"
+
+.PP
+field member for storing college souvenirName 
+.PP
+Definition at line 63 of file tripprogress\&.h\&.
+.SS "double tripprogress::souvenirPrice"
+
+.PP
+field member for storing college souvenirPrice 
+.PP
+Definition at line 68 of file tripprogress\&.h\&.
+.SS "QStringList tripprogress::trip\fC [private]\fP"
+
+.PP
+stores list of each trip/destination data 
+.PP
+Definition at line 157 of file tripprogress\&.h\&.
+.SS "QString tripprogress::tripID"
+
+.PP
+field member for storing tripID 
+.PP
+Definition at line 53 of file tripprogress\&.h\&.
+.SS "Ui::tripprogress* tripprogress::ui\fC [private]\fP"
+
+.PP
+points to tripprogress UI 
+.PP
+Definition at line 147 of file tripprogress\&.h\&.
+.PP
+Referenced by ~tripprogress()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D - Project1 - College Touring from the source code\&.

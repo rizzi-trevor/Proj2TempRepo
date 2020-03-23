@@ -1,0 +1,1038 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_db_manager">
+<title>DbManager Class Reference</title>
+<indexterm><primary>DbManager</primary></indexterm>
+<para>
+
+<para>SQL Database Manager class. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;dbmanager.h&gt;</computeroutput>
+</para>
+Collaboration diagram for DbManager:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_db_manager__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_db_manager_1a449b4cc451c4ec493345d799891e7eaa">DbManager</link> (const QString &amp;path)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1a919d96426a334c5f5f2f925b36e7ce86">InitCollegeList</link> (const QString &amp;path)</para>
+
+<para>initalizes sql data table for college and inputs all data from path parameter file location </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1ac339cd04710203c6faf8d4a5d55b0135">initSouvenirList</link> (const QString &amp;path)</para>
+
+<para>initalizes sql data table for souvenir and inputs all data from path parameter file location </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1ac07ce420fd795d2e613d3d58151a3f13">initDistanceList</link> (const QString &amp;path)</para>
+
+<para>initalizes sql data table for college distances and inputs all data from path parameter file location </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1a8f06e6e0365900ada1bf178576299c58">addUser</link> (const QString &amp;user, const QString &amp;pass)</para>
+
+<para>adds a user to DB for future logins </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1aba2fa2af8d63efc7aec75bf690c69a3c">addSou</link> (const QString &amp;college, const QString &amp;souName, const double &amp;cost)</para>
+
+<para>adds a souv to DB for data tables </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1aec7a231230eb9e7f4fac4224304130cb">removeSou</link> (const QString &amp;souName, const QString &amp;college)</para>
+
+<para>removes a souv to DB for data tables </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1adf32025a73fc9b230a8135cb0af35c5d">updateSou</link> (const QString &amp;souName, const QString &amp;college, const double &amp;spin, const QString &amp;newSouvenir)</para>
+
+<para>updates souv to DB for data tables with new values </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1a066c64eeb0214baf725d17cb56227e5f">addCart</link> (const QString trip, const QString college, const QString souvenir, const double price, const int count)</para>
+
+<para>adds souv to cart </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1a0d17a065e941949c2472ddc19436e1a0">updateCart</link> (const QString college, const QString souvenir, const int count)</para>
+
+<para>updates total items in carts with accurate corresponding data </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_db_manager_1ab139c436a07cbd611edd0d169962f5fa">cartQuantity</link> (const QString college, const QString souvenir)</para>
+
+<para>returns quanitity of items in cart </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1a2d75fe15fff87d86cf7445e147f1dc0a">removeCart</link> (const QString college, const QString souvenir)</para>
+
+<para>delete item from cart </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1aedfdf8a34ade856e4fab1ea3adcef5b3">addPurchase</link> ()</para>
+
+<para>adds purchase to DB and cart </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1aeaac0d5a8393040e7b52208c80ea3fd4">resetCart</link> ()</para>
+
+<para>clear all items from cart </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1a3fb7e05878d16c1c5cea11b53cf04d4d">addColleges</link> (const QString &amp;path)</para>
+
+<para>add colleges from file to DB </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_db_manager_1ae1a3c72afdf29e00bc16fd128dc35b94">userExists</link> (const QString &amp;user)</para>
+
+<para>checks to see if the username exists </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_db_manager_1acdbad81f27cdb3f8e3bbf656eeeba382">souExists</link> (const QString &amp;name, const QString &amp;college)</para>
+
+<para>checks to see if the souv exists </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1af9547f6dc3ad170a70c0ee4d89f714fc">clearDb</link> ()</para>
+
+<para>clears database of all data </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_db_manager_1ac04baba8f5d5197f8bcd9230393501de">isOpen</link> () const</para>
+
+<para>checks to see if <link linkend="_class_db_manager">DbManager</link> is open </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_db_manager_1a3ef6d1b5c19b8192420ba8743c7172ef">checkAdmin</link> (const QString &amp;username) const</para>
+
+<para>checks to see if the username entered is an admin </para>
+</listitem>
+            <listitem><para>QString <link linkend="_class_db_manager_1a5d730ddded1f92e418a9c88e570b2117">getPassword</link> (const QString &amp;username) const</para>
+
+<para>Gets password from user. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1ae790551011d6cb42a4fd20a173eb9598">addTrip</link> (QString tripID, QString plannedCollege, int index, int distanceTo)</para>
+
+<para>adds a trip to appropiate dataTables </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_db_manager_1a5bd60338e1ad8ffd0c63f34e84f88808">tripIdExists</link> (QString tripID)</para>
+
+<para>returns whether tripID data exists in DB </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1a42e94ab2a5751c839a6d57221d3d4e99">createTripTable</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>QSqlDatabase <link linkend="_class_db_manager_1a47f7984afa73f976fdc1cbd2f10753cf">myDB</link></para>
+
+<para>decalre database field memberobj </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>SQL Database Manager class. </para>
+
+
+
+<para><link linkend="_class_db_manager">DbManager</link> sets up the connection with SQL database and performs some basics queries. The class requires existing SQL database. You can create it with sqlite:<orderedlist>
+<listitem>
+<para>$ sqlite3 people.db</para>
+</listitem><listitem>
+<para>sqilte&gt; CREATE TABLE people(ids integer primary key, name text);</para>
+</listitem><listitem>
+<para>sqlite&gt; .quit </para>
+</listitem></orderedlist>
+</para>
+<para>
+Definition at line 33 of file dbmanager.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_db_manager_1a449b4cc451c4ec493345d799891e7eaa"/>    <section>
+    <title>DbManager()</title>
+<indexterm><primary>DbManager</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>DbManager</secondary></indexterm>
+<para><computeroutput>DbManager::DbManager (const QString &amp; path)</computeroutput></para><para>
+
+<para>Constructor. </para>
+</para>
+
+<para>Constructor sets up connection with db and opens it 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>path</entry>
+                                <entry>
+<para>- absolute path to db file </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 3 of file dbmanager.cpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_db_manager_1a066c64eeb0214baf725d17cb56227e5f"/>    <section>
+    <title>addCart()</title>
+<indexterm><primary>addCart</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>addCart</secondary></indexterm>
+<para><computeroutput>void DbManager::addCart (const QString trip, const QString college, const QString souvenir, const double price, const int count)</computeroutput></para><para>
+
+<para>adds souv to cart </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>count</entry>
+                                <entry>
+<para>- quantity of items </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>souvenir</entry>
+                                <entry>
+<para>- name of souv </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>price</entry>
+                                <entry>
+<para>- cost of souv </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 277 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1a3fb7e05878d16c1c5cea11b53cf04d4d"/>    <section>
+    <title>addColleges()</title>
+<indexterm><primary>addColleges</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>addColleges</secondary></indexterm>
+<para><computeroutput>void DbManager::addColleges (const QString &amp; path)</computeroutput></para><para>
+
+<para>add colleges from file to DB </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>path</entry>
+                                <entry>
+<para>- absolute path to db file souv </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 534 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1aedfdf8a34ade856e4fab1ea3adcef5b3"/>    <section>
+    <title>addPurchase()</title>
+<indexterm><primary>addPurchase</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>addPurchase</secondary></indexterm>
+<para><computeroutput>void DbManager::addPurchase ( )</computeroutput></para><para>
+
+<para>adds purchase to DB and cart </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 247 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1aba2fa2af8d63efc7aec75bf690c69a3c"/>    <section>
+    <title>addSou()</title>
+<indexterm><primary>addSou</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>addSou</secondary></indexterm>
+<para><computeroutput>void DbManager::addSou (const QString &amp; college, const QString &amp; souName, const double &amp; cost)</computeroutput></para><para>
+
+<para>adds a souv to DB for data tables </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&amp;college</entry>
+                                <entry>
+<para>- college containing souv </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&amp;souName</entry>
+                                <entry>
+<para>- name of souv </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&amp;cost</entry>
+                                <entry>
+<para>- cost of souv </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 299 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1ae790551011d6cb42a4fd20a173eb9598"/>    <section>
+    <title>addTrip()</title>
+<indexterm><primary>addTrip</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>addTrip</secondary></indexterm>
+<para><computeroutput>void DbManager::addTrip (QString tripID, QString plannedCollege, int index, int distanceTo)</computeroutput></para><para>
+
+<para>adds a trip to appropiate dataTables </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>tripID</entry>
+                                <entry>
+<para>- passed in trip ID </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>plannedCollege</entry>
+                                <entry>
+<para>- holds selected college name </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>index-</entry>
+                                <entry>
+<para>position for data structure </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void - nothing </para>
+</formalpara>
+</para>
+<para>
+Definition at line 604 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1a8f06e6e0365900ada1bf178576299c58"/>    <section>
+    <title>addUser()</title>
+<indexterm><primary>addUser</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>addUser</secondary></indexterm>
+<para><computeroutput>void DbManager::addUser (const QString &amp; user, const QString &amp; pass)</computeroutput></para><para>
+
+<para>adds a user to DB for future logins </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&amp;user</entry>
+                                <entry>
+<para>- user name </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&amp;pass</entry>
+                                <entry>
+<para>- password </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 368 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1ab139c436a07cbd611edd0d169962f5fa"/>    <section>
+    <title>cartQuantity()</title>
+<indexterm><primary>cartQuantity</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>cartQuantity</secondary></indexterm>
+<para><computeroutput>int DbManager::cartQuantity (const QString college, const QString souvenir)</computeroutput></para><para>
+
+<para>returns quanitity of items in cart </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>souvenir</entry>
+                                <entry>
+<para>- name of souv </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>college</entry>
+                                <entry>
+<para>- name of college selling souv </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>int - quanity of cart </para>
+</formalpara>
+</para>
+<para>
+Definition at line 193 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1a3ef6d1b5c19b8192420ba8743c7172ef"/>    <section>
+    <title>checkAdmin()</title>
+<indexterm><primary>checkAdmin</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>checkAdmin</secondary></indexterm>
+<para><computeroutput>bool DbManager::checkAdmin (const QString &amp; username) const</computeroutput></para><para>
+
+<para>checks to see if the username entered is an admin </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>username</entry>
+                                <entry>
+<para>of the user </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - will enable admin login, false - the person is not an admin </para>
+</formalpara>
+</para>
+<para>
+Definition at line 471 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1af9547f6dc3ad170a70c0ee4d89f714fc"/>    <section>
+    <title>clearDb()</title>
+<indexterm><primary>clearDb</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>clearDb</secondary></indexterm>
+<para><computeroutput>void DbManager::clearDb ( )</computeroutput></para><para>
+
+<para>clears database of all data </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void - nothing </para>
+</formalpara>
+</para>
+<para>
+Definition at line 448 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1a42e94ab2a5751c839a6d57221d3d4e99"/>    <section>
+    <title>createTripTable()</title>
+<indexterm><primary>createTripTable</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>createTripTable</secondary></indexterm>
+<para><computeroutput>void DbManager::createTripTable ( )</computeroutput></para><para>
+Definition at line 580 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1a5d730ddded1f92e418a9c88e570b2117"/>    <section>
+    <title>getPassword()</title>
+<indexterm><primary>getPassword</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>getPassword</secondary></indexterm>
+<para><computeroutput>QString DbManager::getPassword (const QString &amp; username) const</computeroutput></para><para>
+
+<para>Gets password from user. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>of the user(s) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>obtains the password from user </para>
+</formalpara>
+</para>
+<para>
+Definition at line 507 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1a919d96426a334c5f5f2f925b36e7ce86"/>    <section>
+    <title>InitCollegeList()</title>
+<indexterm><primary>InitCollegeList</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>InitCollegeList</secondary></indexterm>
+<para><computeroutput>void DbManager::InitCollegeList (const QString &amp; path)</computeroutput></para><para>
+
+<para>initalizes sql data table for college and inputs all data from path parameter file location </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&amp;path</entry>
+                                <entry>
+<para>- filepath for DB </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 30 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1ac07ce420fd795d2e613d3d58151a3f13"/>    <section>
+    <title>initDistanceList()</title>
+<indexterm><primary>initDistanceList</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>initDistanceList</secondary></indexterm>
+<para><computeroutput>void DbManager::initDistanceList (const QString &amp; path)</computeroutput></para><para>
+
+<para>initalizes sql data table for college distances and inputs all data from path parameter file location </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&amp;path</entry>
+                                <entry>
+<para>- filepath for DB </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 128 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1ac339cd04710203c6faf8d4a5d55b0135"/>    <section>
+    <title>initSouvenirList()</title>
+<indexterm><primary>initSouvenirList</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>initSouvenirList</secondary></indexterm>
+<para><computeroutput>void DbManager::initSouvenirList (const QString &amp; path)</computeroutput></para><para>
+
+<para>initalizes sql data table for souvenir and inputs all data from path parameter file location </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&amp;path</entry>
+                                <entry>
+<para>- filepath for DB </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 73 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1ac04baba8f5d5197f8bcd9230393501de"/>    <section>
+    <title>isOpen()</title>
+<indexterm><primary>isOpen</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>isOpen</secondary></indexterm>
+<para><computeroutput>bool DbManager::isOpen ( ) const</computeroutput></para><para>
+
+<para>checks to see if <link linkend="_class_db_manager">DbManager</link> is open </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true - <link linkend="_class_db_manager">DbManager</link> is open, false - <link linkend="_class_db_manager">DbManager</link> is closed </para>
+</formalpara>
+</para>
+<para>
+Definition at line 466 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1a2d75fe15fff87d86cf7445e147f1dc0a"/>    <section>
+    <title>removeCart()</title>
+<indexterm><primary>removeCart</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>removeCart</secondary></indexterm>
+<para><computeroutput>void DbManager::removeCart (const QString college, const QString souvenir)</computeroutput></para><para>
+
+<para>delete item from cart </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>souvenir</entry>
+                                <entry>
+<para>- name of souv </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>college</entry>
+                                <entry>
+<para>- name of college selling souv </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 220 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1aec7a231230eb9e7f4fac4224304130cb"/>    <section>
+    <title>removeSou()</title>
+<indexterm><primary>removeSou</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>removeSou</secondary></indexterm>
+<para><computeroutput>void DbManager::removeSou (const QString &amp; souName, const QString &amp; college)</computeroutput></para><para>
+
+<para>removes a souv to DB for data tables </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&amp;college</entry>
+                                <entry>
+<para>- college containing souv </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&amp;souName</entry>
+                                <entry>
+<para>- name of souv </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 173 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1aeaac0d5a8393040e7b52208c80ea3fd4"/>    <section>
+    <title>resetCart()</title>
+<indexterm><primary>resetCart</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>resetCart</secondary></indexterm>
+<para><computeroutput>void DbManager::resetCart ( )</computeroutput></para><para>
+
+<para>clear all items from cart </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 262 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1acdbad81f27cdb3f8e3bbf656eeeba382"/>    <section>
+    <title>souExists()</title>
+<indexterm><primary>souExists</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>souExists</secondary></indexterm>
+<para><computeroutput>bool DbManager::souExists (const QString &amp; name, const QString &amp; college)</computeroutput></para><para>
+
+<para>checks to see if the souv exists </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&amp;name</entry>
+                                <entry>
+<para>- name of souv </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&amp;college</entry>
+                                <entry>
+<para>- college that contains souv </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - username exists, false - username does not exist </para>
+</formalpara>
+</para>
+<para>
+Definition at line 393 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1a5bd60338e1ad8ffd0c63f34e84f88808"/>    <section>
+    <title>tripIdExists()</title>
+<indexterm><primary>tripIdExists</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>tripIdExists</secondary></indexterm>
+<para><computeroutput>bool DbManager::tripIdExists (QString tripID)</computeroutput></para><para>
+
+<para>returns whether tripID data exists in DB </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>tripID-</entry>
+                                <entry>
+<para>trip id to verify </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>bool- whether data exists </para>
+</formalpara>
+</para>
+<para>
+Definition at line 625 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1a0d17a065e941949c2472ddc19436e1a0"/>    <section>
+    <title>updateCart()</title>
+<indexterm><primary>updateCart</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>updateCart</secondary></indexterm>
+<para><computeroutput>void DbManager::updateCart (const QString college, const QString souvenir, const int count)</computeroutput></para><para>
+
+<para>updates total items in carts with accurate corresponding data </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>count</entry>
+                                <entry>
+<para>- quantity of items </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>souvenir</entry>
+                                <entry>
+<para>- name of souv </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>college</entry>
+                                <entry>
+<para>- name of college selling souv </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 324 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1adf32025a73fc9b230a8135cb0af35c5d"/>    <section>
+    <title>updateSou()</title>
+<indexterm><primary>updateSou</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>updateSou</secondary></indexterm>
+<para><computeroutput>void DbManager::updateSou (const QString &amp; souName, const QString &amp; college, const double &amp; spin, const QString &amp; newSouvenir)</computeroutput></para><para>
+
+<para>updates souv to DB for data tables with new values </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&amp;college</entry>
+                                <entry>
+<para>- college containing souv </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&amp;souName</entry>
+                                <entry>
+<para>- name of souv </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&amp;cost</entry>
+                                <entry>
+<para>- cost of souv </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&amp;newSovenir</entry>
+                                <entry>
+<para>- new object data </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 343 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1ae1a3c72afdf29e00bc16fd128dc35b94"/>    <section>
+    <title>userExists()</title>
+<indexterm><primary>userExists</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>userExists</secondary></indexterm>
+<para><computeroutput>bool DbManager::userExists (const QString &amp; user)</computeroutput></para><para>
+
+<para>checks to see if the username exists </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>of the user </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - username exists, false - username does not exist </para>
+</formalpara>
+</para>
+<para>
+Definition at line 422 of file dbmanager.cpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_db_manager_1a47f7984afa73f976fdc1cbd2f10753cf"/>    <section>
+    <title>myDB</title>
+<indexterm><primary>myDB</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>myDB</secondary></indexterm>
+<para><computeroutput>QSqlDatabase DbManager::myDB<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>decalre database field memberobj </para>
+</para>
+<para>
+Definition at line 220 of file dbmanager.h.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_dbmanager_8h">dbmanager.h</link><link linkend="_dbmanager_8cpp">dbmanager.cpp</link></section>
+</section>

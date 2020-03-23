@@ -1,0 +1,271 @@
+.TH "AdminWindow" 3 "Mon Mar 23 2020" "Version 1" "CS1D - Project1 - College Touring" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AdminWindow \- class initializes \fBAdminWindow\fP UI and manages all Admin only permissive execution in editing user database, college database, souv database, etc  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <adminwindow\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAdminWindow\fP (QWidget *parent=nullptr)"
+.br
+.RI "explicit default Constructor "
+.ti -1c
+.RI "void \fBupdateCollegeTable\fP ()"
+.br
+.RI "updates sql data table for colleges when called "
+.ti -1c
+.RI "void \fBupdateSouvenirTable\fP ()"
+.br
+.RI "updates sql data table for college souvenirs when called "
+.ti -1c
+.RI "\fB~AdminWindow\fP ()"
+.br
+.RI "Destructor\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBonInitialise\fP ()"
+.br
+.RI "runs a verification of \fBconfirmPage\fP, if verfied, initalizes distance, college, souvenir lists, updates appropiate data tables and UI models "
+.ti -1c
+.RI "void \fBclearCollegeData\fP ()"
+.br
+.RI "clears database of data "
+.ti -1c
+.RI "void \fBon_addSouvenir_released\fP ()"
+.br
+.RI "executes \fBaddSouvenir\fP class obj "
+.ti -1c
+.RI "void \fBon_removeSouvenir_released\fP ()"
+.br
+.RI "deletes souvenir from data tables "
+.ti -1c
+.RI "void \fBonAddColleges\fP ()"
+.br
+.RI "adds college to connected database "
+.ti -1c
+.RI "void \fBon_souvenirView_clicked\fP (const QModelIndex &index)"
+.br
+.RI "displays and prints data from souvenir data set to UI "
+.ti -1c
+.RI "void \fBon_removeSouvenir_2_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_pushButton_5_released\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBsouve\fP"
+.br
+.RI "string stores temp souv data "
+.ti -1c
+.RI "Ui::AdminWindow * \fBui\fP"
+.br
+.RI "points to adminwindow UI "
+.ti -1c
+.RI "\fBDbManager\fP \fBmyDb\fP = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')"
+.br
+.RI "assigns DB to predefined PROJECT_PATH constant "
+.in -1c
+.SH "Detailed Description"
+.PP 
+class initializes \fBAdminWindow\fP UI and manages all Admin only permissive execution in editing user database, college database, souv database, etc 
+
+\fBAdminWindow\fP allows admin users only to intialize lists, edit lists, add individual college, souv data values 
+.PP
+Definition at line 27 of file adminwindow\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AdminWindow::AdminWindow (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+explicit default Constructor Constructor intializes UI for adminwindow calls \fBupdateCollegeTable()\fP and \fBupdateSouvenirTable()\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI*parent\fP - for QDialog 
+.RE
+.PP
+
+.PP
+Definition at line 6 of file adminwindow\&.cpp\&.
+.PP
+References updateCollegeTable(), and updateSouvenirTable()\&.
+.SS "AdminWindow::~AdminWindow ()"
+
+.PP
+Destructor\&. Close the \fBAdminWindow\fP UI 
+.PP
+Definition at line 15 of file adminwindow\&.cpp\&.
+.PP
+References ui\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void AdminWindow::clearCollegeData ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+clears database of data 
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 88 of file adminwindow\&.cpp\&.
+.PP
+References confirmpage::getData(), confirmpage::on_okButton_released(), updateCollegeTable(), and updateSouvenirTable()\&.
+.SS "void AdminWindow::on_addSouvenir_released ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+executes \fBaddSouvenir\fP class obj 
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 111 of file adminwindow\&.cpp\&.
+.PP
+References addSouvenir::on_pushButton_2_released(), and updateSouvenirTable()\&.
+.SS "void AdminWindow::on_pushButton_5_released ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 250 of file adminwindow\&.cpp\&.
+.SS "void AdminWindow::on_removeSouvenir_2_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 204 of file adminwindow\&.cpp\&.
+.PP
+References confirmpage::getData(), confirmpage::on_okButton_released(), and updateSouvenirTable()\&.
+.SS "void AdminWindow::on_removeSouvenir_released ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+deletes souvenir from data tables 
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 121 of file adminwindow\&.cpp\&.
+.PP
+References confirmpage::getData(), confirmpage::on_okButton_released(), and updateSouvenirTable()\&.
+.SS "void AdminWindow::on_souvenirView_clicked (const QModelIndex & index)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+displays and prints data from souvenir data set to UI 
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 183 of file adminwindow\&.cpp\&.
+.SS "void AdminWindow::onAddColleges ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+adds college to connected database 
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 161 of file adminwindow\&.cpp\&.
+.PP
+References confirmpage::getData(), confirmpage::on_okButton_released(), updateCollegeTable(), and updateSouvenirTable()\&.
+.SS "void AdminWindow::onInitialise ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+runs a verification of \fBconfirmPage\fP, if verfied, initalizes distance, college, souvenir lists, updates appropiate data tables and UI models 
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 59 of file adminwindow\&.cpp\&.
+.PP
+References confirmpage::getData(), confirmpage::on_okButton_released(), updateCollegeTable(), and updateSouvenirTable()\&.
+.SS "void AdminWindow::updateCollegeTable ()"
+
+.PP
+updates sql data table for colleges when called 
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file adminwindow\&.cpp\&.
+.PP
+Referenced by AdminWindow(), clearCollegeData(), onAddColleges(), and onInitialise()\&.
+.SS "void AdminWindow::updateSouvenirTable ()"
+
+.PP
+updates sql data table for college souvenirs when called 
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file adminwindow\&.cpp\&.
+.PP
+Referenced by AdminWindow(), clearCollegeData(), on_addSouvenir_released(), on_removeSouvenir_2_clicked(), on_removeSouvenir_released(), onAddColleges(), and onInitialise()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDbManager\fP AdminWindow::myDb = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')\fC [private]\fP"
+
+.PP
+assigns DB to predefined PROJECT_PATH constant 
+.PP
+Definition at line 115 of file adminwindow\&.h\&.
+.SS "QString AdminWindow::souve\fC [private]\fP"
+
+.PP
+string stores temp souv data 
+.PP
+Definition at line 105 of file adminwindow\&.h\&.
+.SS "Ui::AdminWindow* AdminWindow::ui\fC [private]\fP"
+
+.PP
+points to adminwindow UI 
+.PP
+Definition at line 110 of file adminwindow\&.h\&.
+.PP
+Referenced by ~AdminWindow()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D - Project1 - College Touring from the source code\&.

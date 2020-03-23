@@ -1,0 +1,6 @@
+<map id="tripSummary::on_school_comboBox_currentIndexChanged" name="tripSummary::on_school_comboBox_currentIndexChanged">
+<area shape="rect" id="node1" title="prepares a query and binds tripId and collegeNames to appropiate Database" alt="" coords="415,23,635,65"/>
+<area shape="rect" id="node2" href="$classtripprogress.html#a67309d76ccd8f5f0fff245e4663f4a56" title="calculates and displays next destination for student planned trip" alt="" coords="223,31,367,57"/>
+<area shape="rect" id="node3" href="$classtripprogress.html#af61ad9424ede3e9f90394c5870fc8ef6" title="initializes tripProgress on execution , binds tripID, updates size, and calculates nextTrip" alt="" coords="5,5,175,32"/>
+<area shape="rect" id="node4" href="$classtripprogress.html#a310e32e2a2054d98098d7744797dd7db" title="executes nextTrip();" alt="" coords="6,56,174,83"/>
+</map>
