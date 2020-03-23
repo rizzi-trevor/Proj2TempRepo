@@ -218,7 +218,7 @@ void tripPlanner::planAlgorithm(QString start, int dist)// start is the user sel
                 dist+= query->value("distance").toInt();
                 distTo = query->value("distance").toInt();
                 distanceTo << distTo;
-                qDebug() << "MEEEEEEEEEEEEEEEEEEEEe";
+                qDebug() << "--------------------";
                 qDebug() << distanceTo[0];
                 qDebug() << distTo;
                 distance = dist;
