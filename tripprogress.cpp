@@ -64,6 +64,8 @@ void tripprogress::nextTrip()// shows next college in trip
 
          curCol = trip[counter];
 
+         currentCol = trip[counter];
+
          this->ui->label->setText("CURRENTLY AT: " + curCol);
 
          qry->prepare("SELECT souvenirName, cost FROM Souvenirs WHERE collegeName = (:collegeName)");
@@ -103,6 +105,7 @@ void tripprogress::prevTrip() // shows prev college in trip
          QString curCol;
 
          curCol = trip[counter];
+         currentCol = trip[counter];
 
          this->ui->label->setText("CURRENTLY AT: " + curCol);
 
@@ -162,6 +165,95 @@ void tripprogress::onPrevClick()
 void tripprogress::updateCart()
 {
 
-    // unfinished :/
+    QSqlQueryModel* model=new QSqlQueryModel();
 
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT souvenir, quantity, total FROM Cart");
+
+    if(qry->exec())
+    {
+        qDebug() << "college1 table updated.";
+    }
+    else
+        qDebug() << "failed";
+
+    model->setQuery(*qry);
+
+    ui->cartTable->setModel(model);
+}
+
+void tripprogress::updateTotal()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT SUM(total) FROM Cart");
+
+    if(qry->exec())
+    {
+        qDebug() << "college1 table updated.";
+    }
+    else
+        qDebug() << "failed";
+
+    model->setQuery(*qry);
+
+    ui->totalView->setModel(model);
+}
+
+void tripprogress::on_souvTable_clicked(const QModelIndex &index)
+{
+
+    if(index.isValid())
+    {
+        row = index.row();
+        souvenirName = index.sibling(row, 0).data().toString();
+        souvenirPrice = index.sibling(row, 1).data().toDouble();
+
+        qDebug() << endl;
+
+        qDebug() << tripID << " " << currentCol;
+        qDebug() << souvenirName << " " << souvenirPrice << endl;
+        qDebug() << index << endl;
+
+    }
+
+}
+
+void tripprogress::on_addCart_clicked()
+{
+    int count = 1;
+    int counter = myDb.cartQuantity(currentCol, souvenirName);
+
+    if(counter == 0)
+    {
+        myDb.addCart(tripID,currentCol,souvenirName, souvenirPrice,count);
+    }
+    else
+    {
+        counter++;
+
+
+        myDb.updateCart(currentCol,souvenirName,counter);
+        qDebug() << counter;
+
+    }
+    updateTotal();
+    updateCart();
+}
+
+
+void tripprogress::on_pushButton_4_released()
+{
+    myDb.addPurchase();
+    myDb.resetCart();
+}
+
+void tripprogress::on_removeCart_clicked()
+{
+    myDb.removeCart(currentCol, souvenirName);
+    updateCart();
+    updateTotal();
 }

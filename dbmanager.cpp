@@ -190,6 +190,112 @@ void DbManager::removeSou(const QString &souName, const QString &college)
 
 }
 
+int DbManager::cartQuantity(const QString college, const QString souvenir)
+{
+    int count = 0;
+    QSqlQuery *query = new QSqlQuery(myDB);
+    if(myDB.open())
+    {
+        query->prepare("SELECT quantity FROM Cart WHERE (college, souvenir) = (:college, :souvenir)");
+        query->bindValue(":college", college);
+        query->bindValue(":souvenir", souvenir);
+
+        if(query->exec())
+            qDebug() << "selected quantity";
+        else
+            qDebug() << "coudn't select quantity";
+
+        while(query->next())
+        {
+            count = query->value(0).toInt();
+            qDebug() << count;
+
+            return count;
+        }
+    }
+
+    return 0;
+}
+
+void DbManager::removeCart(const QString college, const QString souvenir)
+{
+    int count = cartQuantity(college, souvenir);
+    count--;
+
+    if(count != 0)
+    {
+        updateCart(college, souvenir, count);
+    }
+    else
+    {
+        QSqlQuery *query = new QSqlQuery(myDB);
+
+        if(myDB.open())
+        {
+            query->prepare("DELETE FROM Cart WHERE (college, souvenir) = (:college, :souvenir)");
+            query->bindValue(":college", college);
+            query->bindValue(":souvenir", souvenir);
+
+            if(query->exec())
+                qDebug() << "cart delete success!";
+            else
+                qDebug() << "cart delete failed!";
+        }
+    }
+}
+
+void DbManager::addPurchase()
+{
+    QSqlQuery *query = new QSqlQuery(myDB);
+
+    if(myDB.open())
+    {
+        query->prepare("INSERT INTO Purchases SELECT * FROM Cart");
+
+        if(query->exec())
+            qDebug() << "added to purchases!";
+        else
+            qDebug() << "coudn't add to purchases!";
+    }
+}
+
+void DbManager::resetCart()
+{
+    QSqlQuery *query = new QSqlQuery(myDB);
+
+    if(myDB.open())
+    {
+        query->prepare("DELETE FROM cart");
+
+        if(query->exec())
+            qDebug() << "Delete cART!";
+        else
+            qDebug() << "coudln't delete cart!";
+    }
+}
+
+void DbManager::addCart(const QString trip, const QString college, const QString souvenir, const double price, const int count)
+{
+   QSqlQuery *query = new QSqlQuery(myDB);
+
+   if(myDB.open())
+   {
+       query->prepare("INSERT INTO Cart(tripID, college, souvenir, price, quantity) VALUES(:tripID, :college, :souvenir, :price, :quantity)");
+       query->bindValue(":tripID", trip);
+       query->bindValue(":college", college);
+       query->bindValue(":souvenir", souvenir);
+       query->bindValue(":price", price);
+       query->bindValue(":quantity",count);
+
+       if(query->exec())
+           qDebug() << "purchase add success!";
+       else
+           qDebug() << "pruchase add failed!";
+   }
+
+}
+
+
 void DbManager::addSou(const QString &college, const QString &souName, const double &cost)
 {
     QSqlQuery *query = new QSqlQuery(myDB);
@@ -213,6 +319,25 @@ void DbManager::addSou(const QString &college, const QString &souName, const dou
     {
         qDebug() << "name exists!";
     }
+}
+
+void DbManager::updateCart(const QString college, const QString souvenir, const int count)
+{
+    QSqlQuery *query = new QSqlQuery(myDB);
+
+    if(myDB.open())
+    {
+        query->prepare("UPDATE Cart SET (quantity) = (:quantity) WHERE (college, souvenir) = (:college, :souvenir)");
+        query->bindValue(":college", college);
+        query->bindValue(":souvenir", souvenir);
+        query->bindValue(":quantity", count);
+
+        if(query->exec())
+            qDebug() << "UPDATE cart";
+        else
+            qDebug() << "UPDATE failed: " << query->lastError() << endl;
+    }
+
 }
 
 void DbManager::updateSou(const QString &souName, const QString &college, const double &spin, const QString &newSouvenir)
