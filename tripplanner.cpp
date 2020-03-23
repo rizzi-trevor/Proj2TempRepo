@@ -170,9 +170,10 @@ void tripPlanner::onPlanClick()
             this->ui->tripWarning->setText("");
             plannedColleges.clear();
             planAlgorithm(startingCollege, distance); // will plan the trip
+            distanceTo << 0; // adds 0 for distance to next college at last college
             for(int index = 0; index < plannedColleges.size(); index++)
             {
-                myDb.addTrip(tripID, plannedColleges[index], index); // uploads trip to DB
+                myDb.addTrip(tripID, plannedColleges[index], index, distanceTo[index]); // uploads trip to DB
             }
             showTrip(tripID);
             id = tripID;
@@ -199,6 +200,7 @@ void tripPlanner::onPlanClick()
 
 void tripPlanner::planAlgorithm(QString start, int dist)// start is the user selected starting college
 {
+    int distTo;
     plannedColleges<< start;
     QSqlQuery *query = new QSqlQuery;
 
@@ -214,9 +216,15 @@ void tripPlanner::planAlgorithm(QString start, int dist)// start is the user sel
             if(!planDoesExist(temp) && collegeDoesExist(temp))
             {
                 dist+= query->value("distance").toInt();
+                distTo = query->value("distance").toInt();
+                distanceTo << distTo;
+                qDebug() << "MEEEEEEEEEEEEEEEEEEEEe";
+                qDebug() << distanceTo[0];
+                qDebug() << distTo;
                 distance = dist;
                 start = query->value("endCollege").toString();
                 planAlgorithm(start, dist); // recursive call
+
             }
 
         }
@@ -355,6 +363,7 @@ void tripPlanner::onStartClick()
 
 
 }
+
 
 
 
