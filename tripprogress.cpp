@@ -2,7 +2,7 @@
 #include "ui_tripprogress.h"
 
 tripprogress::tripprogress(QWidget *parent) :
-    QMainWindow(parent),
+    QDialog(parent),
     ui(new Ui::tripprogress)
 {
     ui->setupUi(this);
@@ -291,11 +291,18 @@ void tripprogress::on_addCart_clicked()
 
 void tripprogress::on_pushButton_4_released()
 {
-    myDb.addPurchase();
-    myDb.resetCart();
-    updateCart();
-    updateTotal();
+    confirmpage confirm;
+    bool check;
 
+    confirm.setModal(true);
+    confirm.exec();
+    check = confirm.getData();
+
+    if(check)
+    {
+        myDb.addPurchase();
+        myDb.resetCart();
+    }
 }
 
 void tripprogress::on_removeCart_clicked()

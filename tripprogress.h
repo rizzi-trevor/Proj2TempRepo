@@ -9,7 +9,7 @@ namespace Ui {
 class tripprogress;
 }
 
-class tripprogress : public QMainWindow
+class tripprogress : public QDialog
 {
     Q_OBJECT
 

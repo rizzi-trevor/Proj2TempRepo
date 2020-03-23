@@ -282,7 +282,7 @@ void tripPlanner::updateCollegeTable(QString start)
     model->setQuery(*qry);
 
     ui->sadView->setModel(model);
-    ui->sadView->setColumnWidth(20, 250);
+    ui->sadView->resizeColumnsToContents();
 }
 
 void tripPlanner::updateSouvTable(QString start)
@@ -305,7 +305,7 @@ void tripPlanner::updateSouvTable(QString start)
     model->setQuery(*qry);
 
     ui->sadView_2->setModel(model);
-    ui->sadView_2->setColumnWidth(20, 400);
+    ui->sadView_2->resizeColumnsToContents();
 
 }
 
@@ -329,7 +329,7 @@ void tripPlanner::showTrip(QString ID)
 
     //clear here?
     ui->window->setModel(model);
-    ui->window->setColumnWidth(20, 400);
+    ui->window->resizeColumnsToContents();
 }
 
 void tripPlanner::onDisplayClick()

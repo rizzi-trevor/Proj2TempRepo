@@ -145,8 +145,8 @@
    <widget class="QPushButton" name="planButton">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>140</y>
+      <x>70</x>
+      <y>180</y>
       <width>271</width>
       <height>101</height>
      </rect>
@@ -173,6 +173,19 @@
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="logoLabel">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>341</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -180,7 +193,7 @@
      <x>0</x>
      <y>0</y>
      <width>832</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
