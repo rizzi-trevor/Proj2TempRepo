@@ -18,17 +18,31 @@ public:
 
     QString tripID;
     QString currentCol;
+    QString souvenirName;
+    double souvenirPrice;
+    int row;
 
 
     void displaySouv();
     void nextTrip();
     void prevTrip();
+
     void updateCart();
+    void updateTotal();
 
   public slots:
     void onLoadClick();
     void onNextClick();
     void onPrevClick();
+
+private slots:
+    void on_souvTable_clicked(const QModelIndex &index);
+
+    void on_addCart_clicked();
+
+    void on_pushButton_4_released();
+
+    void on_removeCart_clicked();
 
 private:
     Ui::tripprogress *ui;
