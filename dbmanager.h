@@ -52,7 +52,7 @@ public:
 
     QString getPassword(const QString &username) const;
 
-    void addTrip(QString tripID, QString plannedCollege, int index);
+    void addTrip(QString tripID, QString plannedCollege, int index, int distanceTo);
 
     bool tripIdExists(QString tripID);
 

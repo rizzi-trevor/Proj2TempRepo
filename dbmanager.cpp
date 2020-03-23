@@ -587,7 +587,8 @@ void DbManager::createTripTable()
         query->exec("CREATE TABLE Trips ("
                     "tripID TEXT,"
                     "college TEXT,"
-                    "tripProgress INT);");
+                    "tripProgress INT,"
+                    "distanceToNext INT);");
 
         query->exec("CREATE TABLE Purchases ("
                     "tripID TEXT,"
@@ -595,21 +596,23 @@ void DbManager::createTripTable()
                     "souvenir TEXT,"
                     "price DOUBLE,"
                     "quantity INTEGER);");
+
     }
 
 }
 
-void DbManager::addTrip(QString tripID, QString plannedCollege, int index)
+void DbManager::addTrip(QString tripID, QString plannedCollege, int index, int distanceTo)
 {
     QSqlQuery *query = new QSqlQuery(myDB);
 
     if(myDB.open())
     {
-        query->prepare("INSERT INTO Trips(tripID, college, tripProgress) VALUES(:tripID, :college, :int)");
+        query->prepare("INSERT INTO Trips(tripID, college, tripProgress, distanceToNext) VALUES(:tripID, :college, :int, :distanceToNext)");
 
         query->bindValue(":tripID", tripID);
         query->bindValue(":college", plannedCollege);
         query->bindValue(":int", (index + 1));
+        query->bindValue(":distanceToNext", distanceTo);
         qDebug() << query->exec();
 
     }
