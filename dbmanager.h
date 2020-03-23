@@ -10,7 +10,7 @@
 #include "QDebug"
 
 
-static const QString PROJECT_PATH = "C:/Users/Trevor Rizzi/Documents/UP_CollegeProj/";
+static const QString PROJECT_PATH = "C:/Users/farna/Documents/CS1D-Project1-College-Touring/";
 
 
 class DbManager
@@ -30,6 +30,14 @@ public:
     void addSou(const QString &college, const QString &souName, const double &cost);
     void removeSou(const QString &souName, const QString &college);
     void updateSou(const QString &souName, const QString &college, const double &spin, const QString &newSouvenir);
+
+    void addCart(const QString trip, const QString college, const QString souvenir, const double price, const int count);
+    void updateCart(const QString college, const QString souvenir, const int count);
+    int cartQuantity(const QString college, const QString souvenir);
+    void removeCart(const QString college, const QString souvenir);
+
+    void addPurchase();
+    void resetCart();
 
     void addColleges(const QString &path);
 
