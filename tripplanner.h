@@ -2,6 +2,7 @@
 #define TRIPPLANNER_H
 
 #include <QDialog>
+#include <QList>
 #include "dbmanager.h"
 #include <qcheckbox.h>
 #include "tripsummary.h"
@@ -28,7 +29,6 @@ public:
     void updateCollegeTable(QString start);
     void updateSouvTable(QString start);
     void showTrip(QString ID);
-
     void updateCombo();
 
 
@@ -49,6 +49,8 @@ private:
     int distance;
 
     QString id;
+
+    QList<int> distanceTo;
 
     tripprogress *progress;
 

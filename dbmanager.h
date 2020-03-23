@@ -10,7 +10,8 @@
 #include "QDebug"
 
 
-static const QString PROJECT_PATH = "C:/Users/farna/Documents/CS1D-Project1-College-Touring/";
+static const QString PROJECT_PATH = "C:/Users/trevo/Desktop/CS1D-Project1-College-Touring-confirmation-page/";
+
 
 
 class DbManager
@@ -52,7 +53,7 @@ public:
 
     QString getPassword(const QString &username) const;
 
-    void addTrip(QString tripID, QString plannedCollege, int index);
+    void addTrip(QString tripID, QString plannedCollege, int index, int distanceTo);
 
     bool tripIdExists(QString tripID);
 
