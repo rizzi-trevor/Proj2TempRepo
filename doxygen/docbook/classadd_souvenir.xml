@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classadd_souvenir">
+<title>addSouvenir Class Reference</title>
+<indexterm><primary>addSouvenir</primary></indexterm>
+<para>
+<computeroutput>#include &lt;addsouvenir.h&gt;</computeroutput>
+</para>
+Inheritance diagram for addSouvenir:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classadd_souvenir__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for addSouvenir:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classadd_souvenir__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classadd_souvenir_1a754edf8aeeabeb26a3f7cb2831194fdc">addSouvenir</link> (QWidget *parent=nullptr)</para>
+
+<para>explicit default Constructor </para>
+</listitem>
+            <listitem><para><link linkend="_classadd_souvenir_1a4264e5a67963e30c43739903d0fc6fca">~addSouvenir</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classadd_souvenir_1a99c04458b2631c5febcb4cb6c9811736">updateCombo</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Slots    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classadd_souvenir_1a3e20aa6346cf68e1ec80cb8bdd106392">on_pushButton_2_released</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classadd_souvenir_1ad1c3059a79d8df7f357d0a89927c54da">on_pushButton_released</link> ()</para>
+
+<para>executes process for adding a souvenir to database </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Ui::addSouvenir * <link linkend="_classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea">ui</link></para>
+
+<para>points to <link linkend="_classadd_souvenir">addSouvenir</link> UI </para>
+</listitem>
+            <listitem><para><link linkend="_class_db_manager">DbManager</link> <link linkend="_classadd_souvenir_1a0848f56796dd5cbe4d914e6fcaf717ef">myDb</link> = <link linkend="_class_db_manager">DbManager</link>(PROJECT_PATH + &quot;/college.db&quot;)</para>
+
+<para>assigns DB to predefined PROJECT_PATH constant </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 12 of file addsouvenir.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classadd_souvenir_1a754edf8aeeabeb26a3f7cb2831194fdc"/>    <section>
+    <title>addSouvenir()</title>
+<indexterm><primary>addSouvenir</primary><secondary>addSouvenir</secondary></indexterm>
+<indexterm><primary>addSouvenir</primary><secondary>addSouvenir</secondary></indexterm>
+<para><computeroutput>addSouvenir::addSouvenir (QWidget * parent = <computeroutput>nullptr</computeroutput>
+)<computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>explicit default Constructor </para>
+</para>
+
+<para>Constructor intializes UI for <link linkend="_classadd_souvenir">addSouvenir</link> calls <link linkend="_classadd_souvenir_1a99c04458b2631c5febcb4cb6c9811736">updateCombo()</link> 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>*parent</entry>
+                                <entry>
+<para>- for QDialog </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 4 of file addsouvenir.cpp.</para>
+<para>
+References updateCombo().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classadd_souvenir_a754edf8aeeabeb26a3f7cb2831194fdc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classadd_souvenir_1a4264e5a67963e30c43739903d0fc6fca"/>    <section>
+    <title>~addSouvenir()</title>
+<indexterm><primary>~addSouvenir</primary><secondary>addSouvenir</secondary></indexterm>
+<indexterm><primary>addSouvenir</primary><secondary>~addSouvenir</secondary></indexterm>
+<para><computeroutput>addSouvenir::~addSouvenir ( )</computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+
+<para>Close the <link linkend="_classadd_souvenir">addSouvenir</link> UI </para>
+<para>
+Definition at line 13 of file addsouvenir.cpp.</para>
+<para>
+References ui.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classadd_souvenir_1a3e20aa6346cf68e1ec80cb8bdd106392"/>    <section>
+    <title>on_pushButton_2_released</title>
+<indexterm><primary>on_pushButton_2_released</primary><secondary>addSouvenir</secondary></indexterm>
+<indexterm><primary>addSouvenir</primary><secondary>on_pushButton_2_released</secondary></indexterm>
+<para><computeroutput>void addSouvenir::on_pushButton_2_released ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 40 of file addsouvenir.cpp.</para>
+<para>
+Referenced by AdminWindow::on_addSouvenir_released().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classadd_souvenir_a3e20aa6346cf68e1ec80cb8bdd106392_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classadd_souvenir_1ad1c3059a79d8df7f357d0a89927c54da"/>    <section>
+    <title>on_pushButton_released</title>
+<indexterm><primary>on_pushButton_released</primary><secondary>addSouvenir</secondary></indexterm>
+<indexterm><primary>addSouvenir</primary><secondary>on_pushButton_released</secondary></indexterm>
+<para><computeroutput>void addSouvenir::on_pushButton_released ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>executes process for adding a souvenir to database </para>
+</para>
+
+<para>Close the loginwindow UI </para>
+<para>
+Definition at line 45 of file addsouvenir.cpp.</para>
+<para>
+References confirmpage::getData(), and confirmpage::on_okButton_released().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classadd_souvenir_ad1c3059a79d8df7f357d0a89927c54da_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classadd_souvenir_1a99c04458b2631c5febcb4cb6c9811736"/>    <section>
+    <title>updateCombo()</title>
+<indexterm><primary>updateCombo</primary><secondary>addSouvenir</secondary></indexterm>
+<indexterm><primary>addSouvenir</primary><secondary>updateCombo</secondary></indexterm>
+<para><computeroutput>void addSouvenir::updateCombo ( )</computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+
+<para>updates sql query for startcollege and sets ui Model </para>
+<para>
+Definition at line 18 of file addsouvenir.cpp.</para>
+<para>
+Referenced by addSouvenir().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classadd_souvenir_a99c04458b2631c5febcb4cb6c9811736_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classadd_souvenir_1a0848f56796dd5cbe4d914e6fcaf717ef"/>    <section>
+    <title>myDb</title>
+<indexterm><primary>myDb</primary><secondary>addSouvenir</secondary></indexterm>
+<indexterm><primary>addSouvenir</primary><secondary>myDb</secondary></indexterm>
+<para><computeroutput><link linkend="_class_db_manager">DbManager</link> addSouvenir::myDb = <link linkend="_class_db_manager">DbManager</link>(PROJECT_PATH + &quot;/college.db&quot;)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>assigns DB to predefined PROJECT_PATH constant </para>
+</para>
+<para>
+Definition at line 60 of file addsouvenir.h.</para>
+    </section><anchor xml:id="_classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea"/>    <section>
+    <title>ui</title>
+<indexterm><primary>ui</primary><secondary>addSouvenir</secondary></indexterm>
+<indexterm><primary>addSouvenir</primary><secondary>ui</secondary></indexterm>
+<para><computeroutput>Ui::addSouvenir* addSouvenir::ui<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>points to <link linkend="_classadd_souvenir">addSouvenir</link> UI </para>
+</para>
+<para>
+Definition at line 55 of file addsouvenir.h.</para>
+<para>
+Referenced by ~addSouvenir().</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_addsouvenir_8h">addsouvenir.h</link><link linkend="_addsouvenir_8cpp">addsouvenir.cpp</link></section>
+</section>

@@ -1,0 +1,5 @@
+<map id="addSouvenir::on_pushButton_released" name="addSouvenir::on_pushButton_released">
+<area shape="rect" id="node1" title="executes process for adding a souvenir to database" alt="" coords="5,27,192,69"/>
+<area shape="rect" id="node2" href="$classconfirmpage.html#a14e6471474d987fc336bba295be937d1" title="returns answer to calling function" alt="" coords="254,5,399,32"/>
+<area shape="rect" id="node3" href="$classconfirmpage.html#a63d2524a9929f2ee215da9a0ae41b686" title="sets answer to true, hides ui" alt="" coords="240,57,413,98"/>
+</map>

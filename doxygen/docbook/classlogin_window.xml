@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classlogin_window">
+<title>loginWindow Class Reference</title>
+<indexterm><primary>loginWindow</primary></indexterm>
+<para>
+
+<para>class sets ui and manages execution for validating username and password </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;loginwindow.h&gt;</computeroutput>
+</para>
+Collaboration diagram for loginWindow:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classlogin_window__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>class sets ui and manages execution for validating username and password </para>
+
+
+
+<para><link linkend="_classlogin_window">loginWindow</link> validates the credentials entered by the user, conncects to the database, and prompts the appropiate screen for the appropate user to execute after the user has been logged in and validated </para>
+<para>
+The documentation for this class was generated from the following file:</para>
+<link linkend="_loginwindow_8h">loginwindow.h</link></section>
+</section>

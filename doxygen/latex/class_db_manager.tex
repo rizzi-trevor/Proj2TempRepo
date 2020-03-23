@@ -1,0 +1,645 @@
+\hypertarget{class_db_manager}{}\doxysection{Db\+Manager Class Reference}
+\label{class_db_manager}\index{DbManager@{DbManager}}
+
+
+S\+QL Database Manager class.  
+
+
+
+
+{\ttfamily \#include $<$dbmanager.\+h$>$}
+
+
+
+Collaboration diagram for Db\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_db_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_db_manager_a449b4cc451c4ec493345d799891e7eaa}{Db\+Manager}} (const Q\+String \&path)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_a919d96426a334c5f5f2f925b36e7ce86}{Init\+College\+List}} (const Q\+String \&path)
+\begin{DoxyCompactList}\small\item\em initalizes sql data table for college and inputs all data from path parameter file location \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_ac339cd04710203c6faf8d4a5d55b0135}{init\+Souvenir\+List}} (const Q\+String \&path)
+\begin{DoxyCompactList}\small\item\em initalizes sql data table for souvenir and inputs all data from path parameter file location \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_ac07ce420fd795d2e613d3d58151a3f13}{init\+Distance\+List}} (const Q\+String \&path)
+\begin{DoxyCompactList}\small\item\em initalizes sql data table for college distances and inputs all data from path parameter file location \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_a8f06e6e0365900ada1bf178576299c58}{add\+User}} (const Q\+String \&user, const Q\+String \&pass)
+\begin{DoxyCompactList}\small\item\em adds a user to DB for future logins \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_aba2fa2af8d63efc7aec75bf690c69a3c}{add\+Sou}} (const Q\+String \&college, const Q\+String \&sou\+Name, const double \&cost)
+\begin{DoxyCompactList}\small\item\em adds a souv to DB for data tables \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_aec7a231230eb9e7f4fac4224304130cb}{remove\+Sou}} (const Q\+String \&sou\+Name, const Q\+String \&college)
+\begin{DoxyCompactList}\small\item\em removes a souv to DB for data tables \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_adf32025a73fc9b230a8135cb0af35c5d}{update\+Sou}} (const Q\+String \&sou\+Name, const Q\+String \&college, const double \&spin, const Q\+String \&new\+Souvenir)
+\begin{DoxyCompactList}\small\item\em updates souv to DB for data tables with new values \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_a066c64eeb0214baf725d17cb56227e5f}{add\+Cart}} (const Q\+String trip, const Q\+String college, const Q\+String souvenir, const double price, const int count)
+\begin{DoxyCompactList}\small\item\em adds souv to cart \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_a0d17a065e941949c2472ddc19436e1a0}{update\+Cart}} (const Q\+String college, const Q\+String souvenir, const int count)
+\begin{DoxyCompactList}\small\item\em updates total items in carts with accurate corresponding data \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_db_manager_ab139c436a07cbd611edd0d169962f5fa}{cart\+Quantity}} (const Q\+String college, const Q\+String souvenir)
+\begin{DoxyCompactList}\small\item\em returns quanitity of items in cart \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_a2d75fe15fff87d86cf7445e147f1dc0a}{remove\+Cart}} (const Q\+String college, const Q\+String souvenir)
+\begin{DoxyCompactList}\small\item\em delete item from cart \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_aedfdf8a34ade856e4fab1ea3adcef5b3}{add\+Purchase}} ()
+\begin{DoxyCompactList}\small\item\em adds purchase to DB and cart \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_aeaac0d5a8393040e7b52208c80ea3fd4}{reset\+Cart}} ()
+\begin{DoxyCompactList}\small\item\em clear all items from cart \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_a3fb7e05878d16c1c5cea11b53cf04d4d}{add\+Colleges}} (const Q\+String \&path)
+\begin{DoxyCompactList}\small\item\em add colleges from file to DB \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_db_manager_ae1a3c72afdf29e00bc16fd128dc35b94}{user\+Exists}} (const Q\+String \&user)
+\begin{DoxyCompactList}\small\item\em checks to see if the username exists \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_db_manager_acdbad81f27cdb3f8e3bbf656eeeba382}{sou\+Exists}} (const Q\+String \&name, const Q\+String \&college)
+\begin{DoxyCompactList}\small\item\em checks to see if the souv exists \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_af9547f6dc3ad170a70c0ee4d89f714fc}{clear\+Db}} ()
+\begin{DoxyCompactList}\small\item\em clears database of all data \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_db_manager_ac04baba8f5d5197f8bcd9230393501de}{is\+Open}} () const
+\begin{DoxyCompactList}\small\item\em checks to see if \mbox{\hyperlink{class_db_manager}{Db\+Manager}} is open \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_db_manager_a3ef6d1b5c19b8192420ba8743c7172ef}{check\+Admin}} (const Q\+String \&username) const
+\begin{DoxyCompactList}\small\item\em checks to see if the username entered is an admin \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_db_manager_a5d730ddded1f92e418a9c88e570b2117}{get\+Password}} (const Q\+String \&username) const
+\begin{DoxyCompactList}\small\item\em Gets password from user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_ae790551011d6cb42a4fd20a173eb9598}{add\+Trip}} (Q\+String trip\+ID, Q\+String planned\+College, int index, int distance\+To)
+\begin{DoxyCompactList}\small\item\em adds a trip to appropiate data\+Tables \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_db_manager_a5bd60338e1ad8ffd0c63f34e84f88808}{trip\+Id\+Exists}} (Q\+String trip\+ID)
+\begin{DoxyCompactList}\small\item\em returns whether trip\+ID data exists in DB \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_a42e94ab2a5751c839a6d57221d3d4e99}{create\+Trip\+Table}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Sql\+Database \mbox{\hyperlink{class_db_manager_a47f7984afa73f976fdc1cbd2f10753cf}{my\+DB}}
+\begin{DoxyCompactList}\small\item\em decalre database field memberobj \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+S\+QL Database Manager class. 
+
+\mbox{\hyperlink{class_db_manager}{Db\+Manager}} sets up the connection with S\+QL database and performs some basics queries. The class requires existing S\+QL database. You can create it with sqlite\+:
+\begin{DoxyEnumerate}
+\item \$ sqlite3 people.\+db
+\item sqilte$>$ C\+R\+E\+A\+TE T\+A\+B\+LE people(ids integer primary key, name text);
+\item sqlite$>$ .quit 
+\end{DoxyEnumerate}
+
+Definition at line 33 of file dbmanager.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_db_manager_a449b4cc451c4ec493345d799891e7eaa}\label{class_db_manager_a449b4cc451c4ec493345d799891e7eaa}} 
+\index{DbManager@{DbManager}!DbManager@{DbManager}}
+\index{DbManager@{DbManager}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{DbManager()}{DbManager()}}
+{\footnotesize\ttfamily Db\+Manager\+::\+Db\+Manager (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor sets up connection with db and opens it 
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ absolute path to db file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file dbmanager.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_db_manager_a066c64eeb0214baf725d17cb56227e5f}\label{class_db_manager_a066c64eeb0214baf725d17cb56227e5f}} 
+\index{DbManager@{DbManager}!addCart@{addCart}}
+\index{addCart@{addCart}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{addCart()}{addCart()}}
+{\footnotesize\ttfamily void Db\+Manager\+::add\+Cart (\begin{DoxyParamCaption}\item[{const Q\+String}]{trip,  }\item[{const Q\+String}]{college,  }\item[{const Q\+String}]{souvenir,  }\item[{const double}]{price,  }\item[{const int}]{count }\end{DoxyParamCaption})}
+
+
+
+adds souv to cart 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & -\/ quantity of items \\
+\hline
+{\em souvenir} & -\/ name of souv \\
+\hline
+{\em price} & -\/ cost of souv \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 277 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_a3fb7e05878d16c1c5cea11b53cf04d4d}\label{class_db_manager_a3fb7e05878d16c1c5cea11b53cf04d4d}} 
+\index{DbManager@{DbManager}!addColleges@{addColleges}}
+\index{addColleges@{addColleges}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{addColleges()}{addColleges()}}
+{\footnotesize\ttfamily void Db\+Manager\+::add\+Colleges (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{path }\end{DoxyParamCaption})}
+
+
+
+add colleges from file to DB 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ absolute path to db file souv \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 534 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_aedfdf8a34ade856e4fab1ea3adcef5b3}\label{class_db_manager_aedfdf8a34ade856e4fab1ea3adcef5b3}} 
+\index{DbManager@{DbManager}!addPurchase@{addPurchase}}
+\index{addPurchase@{addPurchase}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{addPurchase()}{addPurchase()}}
+{\footnotesize\ttfamily void Db\+Manager\+::add\+Purchase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+adds purchase to DB and cart 
+
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 247 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_aba2fa2af8d63efc7aec75bf690c69a3c}\label{class_db_manager_aba2fa2af8d63efc7aec75bf690c69a3c}} 
+\index{DbManager@{DbManager}!addSou@{addSou}}
+\index{addSou@{addSou}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{addSou()}{addSou()}}
+{\footnotesize\ttfamily void Db\+Manager\+::add\+Sou (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{college,  }\item[{const Q\+String \&}]{sou\+Name,  }\item[{const double \&}]{cost }\end{DoxyParamCaption})}
+
+
+
+adds a souv to DB for data tables 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&college} & -\/ college containing souv \\
+\hline
+{\em \&sou\+Name} & -\/ name of souv \\
+\hline
+{\em \&cost} & -\/ cost of souv \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 299 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_ae790551011d6cb42a4fd20a173eb9598}\label{class_db_manager_ae790551011d6cb42a4fd20a173eb9598}} 
+\index{DbManager@{DbManager}!addTrip@{addTrip}}
+\index{addTrip@{addTrip}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{addTrip()}{addTrip()}}
+{\footnotesize\ttfamily void Db\+Manager\+::add\+Trip (\begin{DoxyParamCaption}\item[{Q\+String}]{trip\+ID,  }\item[{Q\+String}]{planned\+College,  }\item[{int}]{index,  }\item[{int}]{distance\+To }\end{DoxyParamCaption})}
+
+
+
+adds a trip to appropiate data\+Tables 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trip\+ID} & -\/ passed in trip ID \\
+\hline
+{\em planned\+College} & -\/ holds selected college name \\
+\hline
+{\em index-\/} & position for data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ nothing 
+\end{DoxyReturn}
+
+
+Definition at line 604 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_a8f06e6e0365900ada1bf178576299c58}\label{class_db_manager_a8f06e6e0365900ada1bf178576299c58}} 
+\index{DbManager@{DbManager}!addUser@{addUser}}
+\index{addUser@{addUser}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}}
+{\footnotesize\ttfamily void Db\+Manager\+::add\+User (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{user,  }\item[{const Q\+String \&}]{pass }\end{DoxyParamCaption})}
+
+
+
+adds a user to DB for future logins 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&user} & -\/ user name \\
+\hline
+{\em \&pass} & -\/ password \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 368 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_ab139c436a07cbd611edd0d169962f5fa}\label{class_db_manager_ab139c436a07cbd611edd0d169962f5fa}} 
+\index{DbManager@{DbManager}!cartQuantity@{cartQuantity}}
+\index{cartQuantity@{cartQuantity}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{cartQuantity()}{cartQuantity()}}
+{\footnotesize\ttfamily int Db\+Manager\+::cart\+Quantity (\begin{DoxyParamCaption}\item[{const Q\+String}]{college,  }\item[{const Q\+String}]{souvenir }\end{DoxyParamCaption})}
+
+
+
+returns quanitity of items in cart 
+
+
+\begin{DoxyParams}{Parameters}
+{\em souvenir} & -\/ name of souv \\
+\hline
+{\em college} & -\/ name of college selling souv \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ quanity of cart 
+\end{DoxyReturn}
+
+
+Definition at line 193 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_a3ef6d1b5c19b8192420ba8743c7172ef}\label{class_db_manager_a3ef6d1b5c19b8192420ba8743c7172ef}} 
+\index{DbManager@{DbManager}!checkAdmin@{checkAdmin}}
+\index{checkAdmin@{checkAdmin}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{checkAdmin()}{checkAdmin()}}
+{\footnotesize\ttfamily bool Db\+Manager\+::check\+Admin (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{username }\end{DoxyParamCaption}) const}
+
+
+
+checks to see if the username entered is an admin 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & of the user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ will enable admin login, false -\/ the person is not an admin 
+\end{DoxyReturn}
+
+
+Definition at line 471 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_af9547f6dc3ad170a70c0ee4d89f714fc}\label{class_db_manager_af9547f6dc3ad170a70c0ee4d89f714fc}} 
+\index{DbManager@{DbManager}!clearDb@{clearDb}}
+\index{clearDb@{clearDb}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{clearDb()}{clearDb()}}
+{\footnotesize\ttfamily void Db\+Manager\+::clear\+Db (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+clears database of all data 
+
+\begin{DoxyReturn}{Returns}
+void -\/ nothing 
+\end{DoxyReturn}
+
+
+Definition at line 448 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_a42e94ab2a5751c839a6d57221d3d4e99}\label{class_db_manager_a42e94ab2a5751c839a6d57221d3d4e99}} 
+\index{DbManager@{DbManager}!createTripTable@{createTripTable}}
+\index{createTripTable@{createTripTable}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{createTripTable()}{createTripTable()}}
+{\footnotesize\ttfamily void Db\+Manager\+::create\+Trip\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 580 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_a5d730ddded1f92e418a9c88e570b2117}\label{class_db_manager_a5d730ddded1f92e418a9c88e570b2117}} 
+\index{DbManager@{DbManager}!getPassword@{getPassword}}
+\index{getPassword@{getPassword}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{getPassword()}{getPassword()}}
+{\footnotesize\ttfamily Q\+String Db\+Manager\+::get\+Password (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{username }\end{DoxyParamCaption}) const}
+
+
+
+Gets password from user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & of the user(s) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+obtains the password from user 
+\end{DoxyReturn}
+
+
+Definition at line 507 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_a919d96426a334c5f5f2f925b36e7ce86}\label{class_db_manager_a919d96426a334c5f5f2f925b36e7ce86}} 
+\index{DbManager@{DbManager}!InitCollegeList@{InitCollegeList}}
+\index{InitCollegeList@{InitCollegeList}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{InitCollegeList()}{InitCollegeList()}}
+{\footnotesize\ttfamily void Db\+Manager\+::\+Init\+College\+List (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{path }\end{DoxyParamCaption})}
+
+
+
+initalizes sql data table for college and inputs all data from path parameter file location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&path} & -\/ filepath for DB \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_ac07ce420fd795d2e613d3d58151a3f13}\label{class_db_manager_ac07ce420fd795d2e613d3d58151a3f13}} 
+\index{DbManager@{DbManager}!initDistanceList@{initDistanceList}}
+\index{initDistanceList@{initDistanceList}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{initDistanceList()}{initDistanceList()}}
+{\footnotesize\ttfamily void Db\+Manager\+::init\+Distance\+List (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{path }\end{DoxyParamCaption})}
+
+
+
+initalizes sql data table for college distances and inputs all data from path parameter file location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&path} & -\/ filepath for DB \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 128 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_ac339cd04710203c6faf8d4a5d55b0135}\label{class_db_manager_ac339cd04710203c6faf8d4a5d55b0135}} 
+\index{DbManager@{DbManager}!initSouvenirList@{initSouvenirList}}
+\index{initSouvenirList@{initSouvenirList}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{initSouvenirList()}{initSouvenirList()}}
+{\footnotesize\ttfamily void Db\+Manager\+::init\+Souvenir\+List (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{path }\end{DoxyParamCaption})}
+
+
+
+initalizes sql data table for souvenir and inputs all data from path parameter file location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&path} & -\/ filepath for DB \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_ac04baba8f5d5197f8bcd9230393501de}\label{class_db_manager_ac04baba8f5d5197f8bcd9230393501de}} 
+\index{DbManager@{DbManager}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{isOpen()}{isOpen()}}
+{\footnotesize\ttfamily bool Db\+Manager\+::is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+checks to see if \mbox{\hyperlink{class_db_manager}{Db\+Manager}} is open 
+
+\begin{DoxyReturn}{Returns}
+true -\/ \mbox{\hyperlink{class_db_manager}{Db\+Manager}} is open, false -\/ \mbox{\hyperlink{class_db_manager}{Db\+Manager}} is closed 
+\end{DoxyReturn}
+
+
+Definition at line 466 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_a2d75fe15fff87d86cf7445e147f1dc0a}\label{class_db_manager_a2d75fe15fff87d86cf7445e147f1dc0a}} 
+\index{DbManager@{DbManager}!removeCart@{removeCart}}
+\index{removeCart@{removeCart}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{removeCart()}{removeCart()}}
+{\footnotesize\ttfamily void Db\+Manager\+::remove\+Cart (\begin{DoxyParamCaption}\item[{const Q\+String}]{college,  }\item[{const Q\+String}]{souvenir }\end{DoxyParamCaption})}
+
+
+
+delete item from cart 
+
+
+\begin{DoxyParams}{Parameters}
+{\em souvenir} & -\/ name of souv \\
+\hline
+{\em college} & -\/ name of college selling souv \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 220 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_aec7a231230eb9e7f4fac4224304130cb}\label{class_db_manager_aec7a231230eb9e7f4fac4224304130cb}} 
+\index{DbManager@{DbManager}!removeSou@{removeSou}}
+\index{removeSou@{removeSou}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{removeSou()}{removeSou()}}
+{\footnotesize\ttfamily void Db\+Manager\+::remove\+Sou (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{sou\+Name,  }\item[{const Q\+String \&}]{college }\end{DoxyParamCaption})}
+
+
+
+removes a souv to DB for data tables 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&college} & -\/ college containing souv \\
+\hline
+{\em \&sou\+Name} & -\/ name of souv \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 173 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_aeaac0d5a8393040e7b52208c80ea3fd4}\label{class_db_manager_aeaac0d5a8393040e7b52208c80ea3fd4}} 
+\index{DbManager@{DbManager}!resetCart@{resetCart}}
+\index{resetCart@{resetCart}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{resetCart()}{resetCart()}}
+{\footnotesize\ttfamily void Db\+Manager\+::reset\+Cart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+clear all items from cart 
+
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 262 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_acdbad81f27cdb3f8e3bbf656eeeba382}\label{class_db_manager_acdbad81f27cdb3f8e3bbf656eeeba382}} 
+\index{DbManager@{DbManager}!souExists@{souExists}}
+\index{souExists@{souExists}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{souExists()}{souExists()}}
+{\footnotesize\ttfamily bool Db\+Manager\+::sou\+Exists (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name,  }\item[{const Q\+String \&}]{college }\end{DoxyParamCaption})}
+
+
+
+checks to see if the souv exists 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&name} & -\/ name of souv \\
+\hline
+{\em \&college} & -\/ college that contains souv \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ username exists, false -\/ username does not exist 
+\end{DoxyReturn}
+
+
+Definition at line 393 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_a5bd60338e1ad8ffd0c63f34e84f88808}\label{class_db_manager_a5bd60338e1ad8ffd0c63f34e84f88808}} 
+\index{DbManager@{DbManager}!tripIdExists@{tripIdExists}}
+\index{tripIdExists@{tripIdExists}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{tripIdExists()}{tripIdExists()}}
+{\footnotesize\ttfamily bool Db\+Manager\+::trip\+Id\+Exists (\begin{DoxyParamCaption}\item[{Q\+String}]{trip\+ID }\end{DoxyParamCaption})}
+
+
+
+returns whether trip\+ID data exists in DB 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trip\+I\+D-\/} & trip id to verify \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool-\/ whether data exists 
+\end{DoxyReturn}
+
+
+Definition at line 625 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_a0d17a065e941949c2472ddc19436e1a0}\label{class_db_manager_a0d17a065e941949c2472ddc19436e1a0}} 
+\index{DbManager@{DbManager}!updateCart@{updateCart}}
+\index{updateCart@{updateCart}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{updateCart()}{updateCart()}}
+{\footnotesize\ttfamily void Db\+Manager\+::update\+Cart (\begin{DoxyParamCaption}\item[{const Q\+String}]{college,  }\item[{const Q\+String}]{souvenir,  }\item[{const int}]{count }\end{DoxyParamCaption})}
+
+
+
+updates total items in carts with accurate corresponding data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & -\/ quantity of items \\
+\hline
+{\em souvenir} & -\/ name of souv \\
+\hline
+{\em college} & -\/ name of college selling souv \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 324 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_adf32025a73fc9b230a8135cb0af35c5d}\label{class_db_manager_adf32025a73fc9b230a8135cb0af35c5d}} 
+\index{DbManager@{DbManager}!updateSou@{updateSou}}
+\index{updateSou@{updateSou}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{updateSou()}{updateSou()}}
+{\footnotesize\ttfamily void Db\+Manager\+::update\+Sou (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{sou\+Name,  }\item[{const Q\+String \&}]{college,  }\item[{const double \&}]{spin,  }\item[{const Q\+String \&}]{new\+Souvenir }\end{DoxyParamCaption})}
+
+
+
+updates souv to DB for data tables with new values 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&college} & -\/ college containing souv \\
+\hline
+{\em \&sou\+Name} & -\/ name of souv \\
+\hline
+{\em \&cost} & -\/ cost of souv \\
+\hline
+{\em \&new\+Sovenir} & -\/ new object data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 343 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_ae1a3c72afdf29e00bc16fd128dc35b94}\label{class_db_manager_ae1a3c72afdf29e00bc16fd128dc35b94}} 
+\index{DbManager@{DbManager}!userExists@{userExists}}
+\index{userExists@{userExists}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{userExists()}{userExists()}}
+{\footnotesize\ttfamily bool Db\+Manager\+::user\+Exists (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{user }\end{DoxyParamCaption})}
+
+
+
+checks to see if the username exists 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & of the user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ username exists, false -\/ username does not exist 
+\end{DoxyReturn}
+
+
+Definition at line 422 of file dbmanager.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_db_manager_a47f7984afa73f976fdc1cbd2f10753cf}\label{class_db_manager_a47f7984afa73f976fdc1cbd2f10753cf}} 
+\index{DbManager@{DbManager}!myDB@{myDB}}
+\index{myDB@{myDB}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{myDB}{myDB}}
+{\footnotesize\ttfamily Q\+Sql\+Database Db\+Manager\+::my\+DB\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+decalre database field memberobj 
+
+
+
+Definition at line 220 of file dbmanager.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dbmanager_8h}{dbmanager.\+h}}\item 
+\mbox{\hyperlink{dbmanager_8cpp}{dbmanager.\+cpp}}\end{DoxyCompactItemize}

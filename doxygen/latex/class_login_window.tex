@@ -1,0 +1,278 @@
+\hypertarget{class_login_window}{}\doxysection{Login\+Window Class Reference}
+\label{class_login_window}\index{LoginWindow@{LoginWindow}}
+
+
+{\ttfamily \#include $<$loginwindow.\+h$>$}
+
+
+
+Inheritance diagram for Login\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_login_window__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Login\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_login_window__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_login_window_abe037678032bbd0584251373cc6670b9}{on\+Plan\+Click}} ()
+\begin{DoxyCompactList}\small\item\em executes \mbox{\hyperlink{classtrip_planner}{trip\+Planner}} class obj \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_login_window_a99244d50f34fe69cceeee38151f16df9}{on\+Login\+Click}} ()
+\begin{DoxyCompactList}\small\item\em executes login sequence for user validates user and pass and usertype \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_login_window_af307b9c8ab38cb4f7a5785d181e19533}{on\+Create\+Click}} ()
+\begin{DoxyCompactList}\small\item\em executes createuser \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_login_window_a6fa354fcb799ca0afb2ac9cf48b18a93}{on\+Clear\+Click}} ()
+\begin{DoxyCompactList}\small\item\em clears dialog \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_login_window_aa4c04d26b299de00156bbf3c32b2a082}{Login\+Window}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em default explicit Constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_login_window_a0c49fe788dcce29aa50e7d974e1ad158}{$\sim$\+Login\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_login_window_a589504e28cc50062c30d6a26ad444fb3}{on\+\_\+\+Username\+\_\+return\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em execute on\+Login\+Clock \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_login_window_ab0218fdb5f9c0a0f4c8c8fa4e7256ca6}{on\+\_\+\+Password\+\_\+return\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em execute on\+Login\+Clock \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_login_window_a4072c1992a805b45728be2be1ad44af9}{on\+\_\+login\+Button\+\_\+pressed}} ()
+\begin{DoxyCompactList}\small\item\em execute on\+Login\+Clock \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Login\+Window $\ast$ \mbox{\hyperlink{class_login_window_a583f5c7dda98acd3e65791101f9ff2a0}{ui}}
+\begin{DoxyCompactList}\small\item\em points to loginwindow UI \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_db_manager}{Db\+Manager}} \mbox{\hyperlink{class_login_window_addd8a2b9a2903d59c13b68ca43d142e6}{my\+Db}} = \mbox{\hyperlink{class_db_manager}{Db\+Manager}}(P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH + \char`\"{}/college.\+db\char`\"{})
+\begin{DoxyCompactList}\small\item\em assigns DB to predefined P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH constant \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_admin_window}{Admin\+Window}} $\ast$ \mbox{\hyperlink{class_login_window_a0bd2fc8ba5af5142895306aef730bca8}{admin}}
+\begin{DoxyCompactList}\small\item\em pointer for instance of adminwindow for admin\+Type \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 28 of file loginwindow.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_login_window_aa4c04d26b299de00156bbf3c32b2a082}\label{class_login_window_aa4c04d26b299de00156bbf3c32b2a082}} 
+\index{LoginWindow@{LoginWindow}!LoginWindow@{LoginWindow}}
+\index{LoginWindow@{LoginWindow}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{LoginWindow()}{LoginWindow()}}
+{\footnotesize\ttfamily Login\+Window\+::\+Login\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+default explicit Constructor 
+
+Constructor sets up ui for loginwindow creates a trip\+Table and verifies connection to database 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & -\/ for Q\+Dialog \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file loginwindow.\+cpp.
+
+\mbox{\Hypertarget{class_login_window_a0c49fe788dcce29aa50e7d974e1ad158}\label{class_login_window_a0c49fe788dcce29aa50e7d974e1ad158}} 
+\index{LoginWindow@{LoginWindow}!````~LoginWindow@{$\sim$LoginWindow}}
+\index{````~LoginWindow@{$\sim$LoginWindow}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{$\sim$LoginWindow()}{~LoginWindow()}}
+{\footnotesize\ttfamily Login\+Window\+::$\sim$\+Login\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Close the loginwindow UI 
+
+Definition at line 41 of file loginwindow.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_login_window_a4072c1992a805b45728be2be1ad44af9}\label{class_login_window_a4072c1992a805b45728be2be1ad44af9}} 
+\index{LoginWindow@{LoginWindow}!on\_loginButton\_pressed@{on\_loginButton\_pressed}}
+\index{on\_loginButton\_pressed@{on\_loginButton\_pressed}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{on\_loginButton\_pressed}{on\_loginButton\_pressed}}
+{\footnotesize\ttfamily void Login\+Window\+::on\+\_\+login\+Button\+\_\+pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+execute on\+Login\+Clock 
+
+\begin{DoxyReturn}{Returns}
+none-\/void 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file loginwindow.\+cpp.
+
+\mbox{\Hypertarget{class_login_window_ab0218fdb5f9c0a0f4c8c8fa4e7256ca6}\label{class_login_window_ab0218fdb5f9c0a0f4c8c8fa4e7256ca6}} 
+\index{LoginWindow@{LoginWindow}!on\_Password\_returnPressed@{on\_Password\_returnPressed}}
+\index{on\_Password\_returnPressed@{on\_Password\_returnPressed}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{on\_Password\_returnPressed}{on\_Password\_returnPressed}}
+{\footnotesize\ttfamily void Login\+Window\+::on\+\_\+\+Password\+\_\+return\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+execute on\+Login\+Clock 
+
+\begin{DoxyReturn}{Returns}
+none-\/void 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file loginwindow.\+cpp.
+
+\mbox{\Hypertarget{class_login_window_a589504e28cc50062c30d6a26ad444fb3}\label{class_login_window_a589504e28cc50062c30d6a26ad444fb3}} 
+\index{LoginWindow@{LoginWindow}!on\_Username\_returnPressed@{on\_Username\_returnPressed}}
+\index{on\_Username\_returnPressed@{on\_Username\_returnPressed}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{on\_Username\_returnPressed}{on\_Username\_returnPressed}}
+{\footnotesize\ttfamily void Login\+Window\+::on\+\_\+\+Username\+\_\+return\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+execute on\+Login\+Clock 
+
+\begin{DoxyReturn}{Returns}
+none-\/void 
+\end{DoxyReturn}
+
+
+Definition at line 131 of file loginwindow.\+cpp.
+
+\mbox{\Hypertarget{class_login_window_a6fa354fcb799ca0afb2ac9cf48b18a93}\label{class_login_window_a6fa354fcb799ca0afb2ac9cf48b18a93}} 
+\index{LoginWindow@{LoginWindow}!onClearClick@{onClearClick}}
+\index{onClearClick@{onClearClick}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{onClearClick}{onClearClick}}
+{\footnotesize\ttfamily void Login\+Window\+::on\+Clear\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+clears dialog 
+
+\begin{DoxyReturn}{Returns}
+none-\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 115 of file loginwindow.\+cpp.
+
+\mbox{\Hypertarget{class_login_window_af307b9c8ab38cb4f7a5785d181e19533}\label{class_login_window_af307b9c8ab38cb4f7a5785d181e19533}} 
+\index{LoginWindow@{LoginWindow}!onCreateClick@{onCreateClick}}
+\index{onCreateClick@{onCreateClick}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{onCreateClick}{onCreateClick}}
+{\footnotesize\ttfamily void Login\+Window\+::on\+Create\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+executes createuser 
+
+\begin{DoxyReturn}{Returns}
+none-\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 93 of file loginwindow.\+cpp.
+
+\mbox{\Hypertarget{class_login_window_a99244d50f34fe69cceeee38151f16df9}\label{class_login_window_a99244d50f34fe69cceeee38151f16df9}} 
+\index{LoginWindow@{LoginWindow}!onLoginClick@{onLoginClick}}
+\index{onLoginClick@{onLoginClick}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{onLoginClick}{onLoginClick}}
+{\footnotesize\ttfamily void Login\+Window\+::on\+Login\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+executes login sequence for user validates user and pass and usertype 
+
+\begin{DoxyReturn}{Returns}
+none-\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file loginwindow.\+cpp.
+
+\mbox{\Hypertarget{class_login_window_abe037678032bbd0584251373cc6670b9}\label{class_login_window_abe037678032bbd0584251373cc6670b9}} 
+\index{LoginWindow@{LoginWindow}!onPlanClick@{onPlanClick}}
+\index{onPlanClick@{onPlanClick}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{onPlanClick}{onPlanClick}}
+{\footnotesize\ttfamily void Login\+Window\+::on\+Plan\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+executes \mbox{\hyperlink{classtrip_planner}{trip\+Planner}} class obj 
+
+\begin{DoxyReturn}{Returns}
+none-\/ void 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file loginwindow.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_login_window_a0bd2fc8ba5af5142895306aef730bca8}\label{class_login_window_a0bd2fc8ba5af5142895306aef730bca8}} 
+\index{LoginWindow@{LoginWindow}!admin@{admin}}
+\index{admin@{admin}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{admin}{admin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_admin_window}{Admin\+Window}}$\ast$ Login\+Window\+::admin\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+pointer for instance of adminwindow for admin\+Type 
+
+
+
+Definition at line 110 of file loginwindow.\+h.
+
+\mbox{\Hypertarget{class_login_window_addd8a2b9a2903d59c13b68ca43d142e6}\label{class_login_window_addd8a2b9a2903d59c13b68ca43d142e6}} 
+\index{LoginWindow@{LoginWindow}!myDb@{myDb}}
+\index{myDb@{myDb}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{myDb}{myDb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_db_manager}{Db\+Manager}} Login\+Window\+::my\+Db = \mbox{\hyperlink{class_db_manager}{Db\+Manager}}(P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH + \char`\"{}/college.\+db\char`\"{})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+assigns DB to predefined P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH constant 
+
+
+
+Definition at line 105 of file loginwindow.\+h.
+
+\mbox{\Hypertarget{class_login_window_a583f5c7dda98acd3e65791101f9ff2a0}\label{class_login_window_a583f5c7dda98acd3e65791101f9ff2a0}} 
+\index{LoginWindow@{LoginWindow}!ui@{ui}}
+\index{ui@{ui}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Login\+Window$\ast$ Login\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+points to loginwindow UI 
+
+
+
+Definition at line 100 of file loginwindow.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{loginwindow_8h}{loginwindow.\+h}}\item 
+\mbox{\hyperlink{loginwindow_8cpp}{loginwindow.\+cpp}}\end{DoxyCompactItemize}

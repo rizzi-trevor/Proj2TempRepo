@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_admin_window" kind="class" language="C++" prot="public">
+    <compoundname>AdminWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QDialog</basecompoundref>
+    <includes refid="adminwindow_8h" local="no">adminwindow.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_admin_window_1a26cd0782e15716c24dd3567e75169fc0" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString AdminWindow::souve</definition>
+        <argsstring></argsstring>
+        <name>souve</name>
+        <briefdescription>
+<para>string stores temp souv data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="105" column="13" bodyfile="adminwindow.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_admin_window_1a3fa27571cf4952084a71a6fdc9b070b2" prot="private" static="no" mutable="no">
+        <type>Ui::AdminWindow *</type>
+        <definition>Ui::AdminWindow* AdminWindow::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+<para>points to adminwindow UI </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="110" column="21" bodyfile="adminwindow.h" bodystart="110" bodyend="-1"/>
+        <referencedby refid="class_admin_window_1ad31a734a759bfb65008b03e6bb9014d0" compoundref="adminwindow_8cpp" startline="15" endline="18">~AdminWindow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_admin_window_1a500f2c07a0c34aa491c7d75ba0c8e3e5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_db_manager" kindref="compound">DbManager</ref></type>
+        <definition>DbManager AdminWindow::myDb</definition>
+        <argsstring></argsstring>
+        <name>myDb</name>
+        <initializer>= <ref refid="class_db_manager" kindref="compound">DbManager</ref>(PROJECT_PATH + &quot;/college.db&quot;)</initializer>
+        <briefdescription>
+<para>assigns DB to predefined PROJECT_PATH constant </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="115" column="15" bodyfile="adminwindow.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_admin_window_1a0a68db6e97108a5b789d7b90dd962f76" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AdminWindow::AdminWindow</definition>
+        <argsstring>(QWidget *parent=nullptr)</argsstring>
+        <name>AdminWindow</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>explicit default Constructor </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor intializes UI for adminwindow calls <ref refid="class_admin_window_1ad1eabd086ea9878c73481fffc7506321" kindref="member">updateCollegeTable()</ref> and <ref refid="class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293" kindref="member">updateSouvenirTable()</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- for QDialog </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="39" column="14" bodyfile="adminwindow.cpp" bodystart="6" bodyend="13"/>
+        <references refid="class_admin_window_1ad1eabd086ea9878c73481fffc7506321" compoundref="adminwindow_8cpp" startline="20" endline="37">updateCollegeTable</references>
+        <references refid="class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293" compoundref="adminwindow_8cpp" startline="39" endline="56">updateSouvenirTable</references>
+      </memberdef>
+      <memberdef kind="function" id="class_admin_window_1ad1eabd086ea9878c73481fffc7506321" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdminWindow::updateCollegeTable</definition>
+        <argsstring>()</argsstring>
+        <name>updateCollegeTable</name>
+        <briefdescription>
+<para>updates sql data table for colleges when called </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="45" column="10" bodyfile="adminwindow.cpp" bodystart="20" bodyend="37"/>
+        <referencedby refid="class_admin_window_1a0a68db6e97108a5b789d7b90dd962f76" compoundref="adminwindow_8cpp" startline="6" endline="13">AdminWindow</referencedby>
+        <referencedby refid="class_admin_window_1adb75fb0689794491accb94c3bd9989be" compoundref="adminwindow_8cpp" startline="88" endline="109">clearCollegeData</referencedby>
+        <referencedby refid="class_admin_window_1abd378ec54897e75624563d579837ee40" compoundref="adminwindow_8cpp" startline="161" endline="181">onAddColleges</referencedby>
+        <referencedby refid="class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b" compoundref="adminwindow_8cpp" startline="59" endline="86">onInitialise</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdminWindow::updateSouvenirTable</definition>
+        <argsstring>()</argsstring>
+        <name>updateSouvenirTable</name>
+        <briefdescription>
+<para>updates sql data table for college souvenirs when called </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="51" column="10" bodyfile="adminwindow.cpp" bodystart="39" bodyend="56"/>
+        <referencedby refid="class_admin_window_1a0a68db6e97108a5b789d7b90dd962f76" compoundref="adminwindow_8cpp" startline="6" endline="13">AdminWindow</referencedby>
+        <referencedby refid="class_admin_window_1adb75fb0689794491accb94c3bd9989be" compoundref="adminwindow_8cpp" startline="88" endline="109">clearCollegeData</referencedby>
+        <referencedby refid="class_admin_window_1af609806ed07d37eedbfa96274c2cd86a" compoundref="adminwindow_8cpp" startline="111" endline="119">on_addSouvenir_released</referencedby>
+        <referencedby refid="class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49" compoundref="adminwindow_8cpp" startline="204" endline="248">on_removeSouvenir_2_clicked</referencedby>
+        <referencedby refid="class_admin_window_1ab4bb07b30224270802c48b3666514a89" compoundref="adminwindow_8cpp" startline="121" endline="159">on_removeSouvenir_released</referencedby>
+        <referencedby refid="class_admin_window_1abd378ec54897e75624563d579837ee40" compoundref="adminwindow_8cpp" startline="161" endline="181">onAddColleges</referencedby>
+        <referencedby refid="class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b" compoundref="adminwindow_8cpp" startline="59" endline="86">onInitialise</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_admin_window_1ad31a734a759bfb65008b03e6bb9014d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AdminWindow::~AdminWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~AdminWindow</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Close the <ref refid="class_admin_window" kindref="compound">AdminWindow</ref> UI </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="58" column="5" bodyfile="adminwindow.cpp" bodystart="15" bodyend="18"/>
+        <references refid="class_admin_window_1a3fa27571cf4952084a71a6fdc9b070b2" compoundref="adminwindow_8h" startline="110">ui</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdminWindow::onInitialise</definition>
+        <argsstring>()</argsstring>
+        <name>onInitialise</name>
+        <briefdescription>
+<para>runs a verification of <ref refid="classconfirm_page" kindref="compound">confirmPage</ref>, if verfied, initalizes distance, college, souvenir lists, updates appropiate data tables and UI models </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="65" column="10" bodyfile="adminwindow.cpp" bodystart="59" bodyend="86"/>
+        <references refid="classconfirmpage_1a14e6471474d987fc336bba295be937d1" compoundref="confirmpage_8cpp" startline="16" endline="20">confirmpage::getData</references>
+        <references refid="classconfirmpage_1a63d2524a9929f2ee215da9a0ae41b686" compoundref="confirmpage_8cpp" startline="22" endline="26">confirmpage::on_okButton_released</references>
+        <references refid="class_admin_window_1ad1eabd086ea9878c73481fffc7506321" compoundref="adminwindow_8cpp" startline="20" endline="37">updateCollegeTable</references>
+        <references refid="class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293" compoundref="adminwindow_8cpp" startline="39" endline="56">updateSouvenirTable</references>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_window_1adb75fb0689794491accb94c3bd9989be" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdminWindow::clearCollegeData</definition>
+        <argsstring>()</argsstring>
+        <name>clearCollegeData</name>
+        <briefdescription>
+<para>clears database of data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="71" column="10" bodyfile="adminwindow.cpp" bodystart="88" bodyend="109"/>
+        <references refid="classconfirmpage_1a14e6471474d987fc336bba295be937d1" compoundref="confirmpage_8cpp" startline="16" endline="20">confirmpage::getData</references>
+        <references refid="classconfirmpage_1a63d2524a9929f2ee215da9a0ae41b686" compoundref="confirmpage_8cpp" startline="22" endline="26">confirmpage::on_okButton_released</references>
+        <references refid="class_admin_window_1ad1eabd086ea9878c73481fffc7506321" compoundref="adminwindow_8cpp" startline="20" endline="37">updateCollegeTable</references>
+        <references refid="class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293" compoundref="adminwindow_8cpp" startline="39" endline="56">updateSouvenirTable</references>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_window_1af609806ed07d37eedbfa96274c2cd86a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdminWindow::on_addSouvenir_released</definition>
+        <argsstring>()</argsstring>
+        <name>on_addSouvenir_released</name>
+        <briefdescription>
+<para>executes <ref refid="classadd_souvenir" kindref="compound">addSouvenir</ref> class obj </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="77" column="10" bodyfile="adminwindow.cpp" bodystart="111" bodyend="119"/>
+        <references refid="classadd_souvenir_1a3e20aa6346cf68e1ec80cb8bdd106392" compoundref="addsouvenir_8cpp" startline="40" endline="43">addSouvenir::on_pushButton_2_released</references>
+        <references refid="class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293" compoundref="adminwindow_8cpp" startline="39" endline="56">updateSouvenirTable</references>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_window_1ab4bb07b30224270802c48b3666514a89" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdminWindow::on_removeSouvenir_released</definition>
+        <argsstring>()</argsstring>
+        <name>on_removeSouvenir_released</name>
+        <briefdescription>
+<para>deletes souvenir from data tables </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="83" column="10" bodyfile="adminwindow.cpp" bodystart="121" bodyend="159"/>
+        <references refid="classconfirmpage_1a14e6471474d987fc336bba295be937d1" compoundref="confirmpage_8cpp" startline="16" endline="20">confirmpage::getData</references>
+        <references refid="classconfirmpage_1a63d2524a9929f2ee215da9a0ae41b686" compoundref="confirmpage_8cpp" startline="22" endline="26">confirmpage::on_okButton_released</references>
+        <references refid="class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293" compoundref="adminwindow_8cpp" startline="39" endline="56">updateSouvenirTable</references>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_window_1abd378ec54897e75624563d579837ee40" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdminWindow::onAddColleges</definition>
+        <argsstring>()</argsstring>
+        <name>onAddColleges</name>
+        <briefdescription>
+<para>adds college to connected database </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="89" column="10" bodyfile="adminwindow.cpp" bodystart="161" bodyend="181"/>
+        <references refid="classconfirmpage_1a14e6471474d987fc336bba295be937d1" compoundref="confirmpage_8cpp" startline="16" endline="20">confirmpage::getData</references>
+        <references refid="classconfirmpage_1a63d2524a9929f2ee215da9a0ae41b686" compoundref="confirmpage_8cpp" startline="22" endline="26">confirmpage::on_okButton_released</references>
+        <references refid="class_admin_window_1ad1eabd086ea9878c73481fffc7506321" compoundref="adminwindow_8cpp" startline="20" endline="37">updateCollegeTable</references>
+        <references refid="class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293" compoundref="adminwindow_8cpp" startline="39" endline="56">updateSouvenirTable</references>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_window_1a3f70aadf219465d9683e9ca52a1472a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdminWindow::on_souvenirView_clicked</definition>
+        <argsstring>(const QModelIndex &amp;index)</argsstring>
+        <name>on_souvenirView_clicked</name>
+        <param>
+          <type>const QModelIndex &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>displays and prints data from souvenir data set to UI </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="95" column="10" bodyfile="adminwindow.cpp" bodystart="183" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdminWindow::on_removeSouvenir_2_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_removeSouvenir_2_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="97" column="10" bodyfile="adminwindow.cpp" bodystart="204" bodyend="248"/>
+        <references refid="classconfirmpage_1a14e6471474d987fc336bba295be937d1" compoundref="confirmpage_8cpp" startline="16" endline="20">confirmpage::getData</references>
+        <references refid="classconfirmpage_1a63d2524a9929f2ee215da9a0ae41b686" compoundref="confirmpage_8cpp" startline="22" endline="26">confirmpage::on_okButton_released</references>
+        <references refid="class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293" compoundref="adminwindow_8cpp" startline="39" endline="56">updateSouvenirTable</references>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_window_1ac2d7d04600f0df63ad3fab0756567c01" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdminWindow::on_pushButton_5_released</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_5_released</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="adminwindow.h" line="99" column="10" bodyfile="adminwindow.cpp" bodystart="250" bodyend="257"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>class initializes <ref refid="class_admin_window" kindref="compound">AdminWindow</ref> UI and manages all Admin only permissive execution in editing user database, college database, souv database, etc </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_admin_window" kindref="compound">AdminWindow</ref> allows admin users only to intialize lists, edit lists, add individual college, souv data values </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AdminWindow</label>
+        <link refid="class_admin_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QDialog</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AdminWindow</label>
+        <link refid="class_admin_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-myDb</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DbManager</label>
+        <link refid="class_db_manager"/>
+      </node>
+      <node id="2">
+        <label>QDialog</label>
+      </node>
+    </collaborationgraph>
+    <location file="adminwindow.h" line="28" column="1" bodyfile="adminwindow.h" bodystart="27" bodyend="117"/>
+    <listofallmembers>
+      <member refid="class_admin_window_1a0a68db6e97108a5b789d7b90dd962f76" prot="public" virt="non-virtual"><scope>AdminWindow</scope><name>AdminWindow</name></member>
+      <member refid="class_admin_window_1adb75fb0689794491accb94c3bd9989be" prot="private" virt="non-virtual"><scope>AdminWindow</scope><name>clearCollegeData</name></member>
+      <member refid="class_admin_window_1a500f2c07a0c34aa491c7d75ba0c8e3e5" prot="private" virt="non-virtual"><scope>AdminWindow</scope><name>myDb</name></member>
+      <member refid="class_admin_window_1af609806ed07d37eedbfa96274c2cd86a" prot="private" virt="non-virtual"><scope>AdminWindow</scope><name>on_addSouvenir_released</name></member>
+      <member refid="class_admin_window_1ac2d7d04600f0df63ad3fab0756567c01" prot="private" virt="non-virtual"><scope>AdminWindow</scope><name>on_pushButton_5_released</name></member>
+      <member refid="class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49" prot="private" virt="non-virtual"><scope>AdminWindow</scope><name>on_removeSouvenir_2_clicked</name></member>
+      <member refid="class_admin_window_1ab4bb07b30224270802c48b3666514a89" prot="private" virt="non-virtual"><scope>AdminWindow</scope><name>on_removeSouvenir_released</name></member>
+      <member refid="class_admin_window_1a3f70aadf219465d9683e9ca52a1472a5" prot="private" virt="non-virtual"><scope>AdminWindow</scope><name>on_souvenirView_clicked</name></member>
+      <member refid="class_admin_window_1abd378ec54897e75624563d579837ee40" prot="private" virt="non-virtual"><scope>AdminWindow</scope><name>onAddColleges</name></member>
+      <member refid="class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b" prot="private" virt="non-virtual"><scope>AdminWindow</scope><name>onInitialise</name></member>
+      <member refid="class_admin_window_1a26cd0782e15716c24dd3567e75169fc0" prot="private" virt="non-virtual"><scope>AdminWindow</scope><name>souve</name></member>
+      <member refid="class_admin_window_1a3fa27571cf4952084a71a6fdc9b070b2" prot="private" virt="non-virtual"><scope>AdminWindow</scope><name>ui</name></member>
+      <member refid="class_admin_window_1ad1eabd086ea9878c73481fffc7506321" prot="public" virt="non-virtual"><scope>AdminWindow</scope><name>updateCollegeTable</name></member>
+      <member refid="class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293" prot="public" virt="non-virtual"><scope>AdminWindow</scope><name>updateSouvenirTable</name></member>
+      <member refid="class_admin_window_1ad31a734a759bfb65008b03e6bb9014d0" prot="public" virt="non-virtual"><scope>AdminWindow</scope><name>~AdminWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_login_window" kind="class" language="C++" prot="public">
+    <compoundname>LoginWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
+    <includes refid="loginwindow_8h" local="no">loginwindow.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" prot="private" static="no" mutable="no">
+        <type>Ui::LoginWindow *</type>
+        <definition>Ui::LoginWindow* LoginWindow::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+<para>points to loginwindow UI </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginwindow.h" line="100" column="21" bodyfile="loginwindow.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_window_1addd8a2b9a2903d59c13b68ca43d142e6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_db_manager" kindref="compound">DbManager</ref></type>
+        <definition>DbManager LoginWindow::myDb</definition>
+        <argsstring></argsstring>
+        <name>myDb</name>
+        <initializer>= <ref refid="class_db_manager" kindref="compound">DbManager</ref>(PROJECT_PATH + &quot;/college.db&quot;)</initializer>
+        <briefdescription>
+<para>assigns DB to predefined PROJECT_PATH constant </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginwindow.h" line="105" column="15" bodyfile="loginwindow.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_window_1a0bd2fc8ba5af5142895306aef730bca8" prot="private" static="no" mutable="no">
+        <type><ref refid="class_admin_window" kindref="compound">AdminWindow</ref> *</type>
+        <definition>AdminWindow* LoginWindow::admin</definition>
+        <argsstring></argsstring>
+        <name>admin</name>
+        <briefdescription>
+<para>pointer for instance of adminwindow for adminType </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginwindow.h" line="110" column="17" bodyfile="loginwindow.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_login_window_1abe037678032bbd0584251373cc6670b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginWindow::onPlanClick</definition>
+        <argsstring>()</argsstring>
+        <name>onPlanClick</name>
+        <briefdescription>
+<para>executes <ref refid="classtrip_planner" kindref="compound">tripPlanner</ref> class obj </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>none- void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginwindow.h" line="37" column="10" bodyfile="loginwindow.cpp" bodystart="47" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_login_window_1a99244d50f34fe69cceeee38151f16df9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginWindow::onLoginClick</definition>
+        <argsstring>()</argsstring>
+        <name>onLoginClick</name>
+        <briefdescription>
+<para>executes login sequence for user validates user and pass and usertype </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>none- void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginwindow.h" line="44" column="10" bodyfile="loginwindow.cpp" bodystart="54" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_login_window_1af307b9c8ab38cb4f7a5785d181e19533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginWindow::onCreateClick</definition>
+        <argsstring>()</argsstring>
+        <name>onCreateClick</name>
+        <briefdescription>
+<para>executes createuser </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>none- void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginwindow.h" line="50" column="10" bodyfile="loginwindow.cpp" bodystart="93" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_login_window_1a6fa354fcb799ca0afb2ac9cf48b18a93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginWindow::onClearClick</definition>
+        <argsstring>()</argsstring>
+        <name>onClearClick</name>
+        <briefdescription>
+<para>clears dialog </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>none- void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginwindow.h" line="56" column="10" bodyfile="loginwindow.cpp" bodystart="115" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_login_window_1aa4c04d26b299de00156bbf3c32b2a082" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LoginWindow::LoginWindow</definition>
+        <argsstring>(QWidget *parent=nullptr)</argsstring>
+        <name>LoginWindow</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>default explicit Constructor </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor sets up ui for loginwindow creates a tripTable and verifies connection to database <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- for QDialog </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginwindow.h" line="68" column="5" bodyfile="loginwindow.cpp" bodystart="7" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_window_1a0c49fe788dcce29aa50e7d974e1ad158" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LoginWindow::~LoginWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~LoginWindow</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Close the loginwindow UI </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginwindow.h" line="75" column="5" bodyfile="loginwindow.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="class_login_window_1a589504e28cc50062c30d6a26ad444fb3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginWindow::on_Username_returnPressed</definition>
+        <argsstring>()</argsstring>
+        <name>on_Username_returnPressed</name>
+        <briefdescription>
+<para>execute onLoginClock </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>none-void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginwindow.h" line="82" column="10" bodyfile="loginwindow.cpp" bodystart="131" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_login_window_1ab0218fdb5f9c0a0f4c8c8fa4e7256ca6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginWindow::on_Password_returnPressed</definition>
+        <argsstring>()</argsstring>
+        <name>on_Password_returnPressed</name>
+        <briefdescription>
+<para>execute onLoginClock </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>none-void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginwindow.h" line="88" column="10" bodyfile="loginwindow.cpp" bodystart="126" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_login_window_1a4072c1992a805b45728be2be1ad44af9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginWindow::on_loginButton_pressed</definition>
+        <argsstring>()</argsstring>
+        <name>on_loginButton_pressed</name>
+        <briefdescription>
+<para>execute onLoginClock </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>none-void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginwindow.h" line="94" column="10" bodyfile="loginwindow.cpp" bodystart="136" bodyend="139"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+      <node id="1">
+        <label>LoginWindow</label>
+        <link refid="class_login_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>AdminWindow</label>
+        <link refid="class_admin_window"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-myDb</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+      <node id="1">
+        <label>LoginWindow</label>
+        <link refid="class_login_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-admin</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-myDb</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DbManager</label>
+        <link refid="class_db_manager"/>
+      </node>
+      <node id="4">
+        <label>QDialog</label>
+      </node>
+    </collaborationgraph>
+    <location file="loginwindow.h" line="29" column="1" bodyfile="loginwindow.h" bodystart="28" bodyend="112"/>
+    <listofallmembers>
+      <member refid="class_login_window_1a0bd2fc8ba5af5142895306aef730bca8" prot="private" virt="non-virtual"><scope>LoginWindow</scope><name>admin</name></member>
+      <member refid="class_login_window_1aa4c04d26b299de00156bbf3c32b2a082" prot="public" virt="non-virtual"><scope>LoginWindow</scope><name>LoginWindow</name></member>
+      <member refid="class_login_window_1addd8a2b9a2903d59c13b68ca43d142e6" prot="private" virt="non-virtual"><scope>LoginWindow</scope><name>myDb</name></member>
+      <member refid="class_login_window_1a4072c1992a805b45728be2be1ad44af9" prot="private" virt="non-virtual"><scope>LoginWindow</scope><name>on_loginButton_pressed</name></member>
+      <member refid="class_login_window_1ab0218fdb5f9c0a0f4c8c8fa4e7256ca6" prot="private" virt="non-virtual"><scope>LoginWindow</scope><name>on_Password_returnPressed</name></member>
+      <member refid="class_login_window_1a589504e28cc50062c30d6a26ad444fb3" prot="private" virt="non-virtual"><scope>LoginWindow</scope><name>on_Username_returnPressed</name></member>
+      <member refid="class_login_window_1a6fa354fcb799ca0afb2ac9cf48b18a93" prot="public" virt="non-virtual"><scope>LoginWindow</scope><name>onClearClick</name></member>
+      <member refid="class_login_window_1af307b9c8ab38cb4f7a5785d181e19533" prot="public" virt="non-virtual"><scope>LoginWindow</scope><name>onCreateClick</name></member>
+      <member refid="class_login_window_1a99244d50f34fe69cceeee38151f16df9" prot="public" virt="non-virtual"><scope>LoginWindow</scope><name>onLoginClick</name></member>
+      <member refid="class_login_window_1abe037678032bbd0584251373cc6670b9" prot="public" virt="non-virtual"><scope>LoginWindow</scope><name>onPlanClick</name></member>
+      <member refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" prot="private" virt="non-virtual"><scope>LoginWindow</scope><name>ui</name></member>
+      <member refid="class_login_window_1a0c49fe788dcce29aa50e7d974e1ad158" prot="public" virt="non-virtual"><scope>LoginWindow</scope><name>~LoginWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

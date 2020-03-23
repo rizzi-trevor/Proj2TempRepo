@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="adminwindow_8h" kind="file" language="C++">
+    <compoundname>adminwindow.h</compoundname>
+    <includes local="no">QMainWindow</includes>
+    <includes refid="dbmanager_8h" local="yes">dbmanager.h</includes>
+    <includes local="no">QDialog</includes>
+    <includes refid="addsouvenir_8h" local="yes">addsouvenir.h</includes>
+    <includedby refid="adminwindow_8cpp" local="yes">adminwindow.cpp</includedby>
+    <includedby refid="loginwindow_8h" local="yes">loginwindow.h</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>addsouvenir.h</label>
+        <link refid="addsouvenir_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+      <node id="12">
+        <label>confirmpage.h</label>
+        <link refid="confirmpage_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>QSqlDatabase</label>
+      </node>
+      <node id="10">
+        <label>QDialog</label>
+      </node>
+      <node id="6">
+        <label>QDebug</label>
+      </node>
+      <node id="4">
+        <label>QAbstractItemModel</label>
+      </node>
+      <node id="9">
+        <label>QSqlQuery</label>
+      </node>
+      <node id="3">
+        <label>dbmanager.h</label>
+        <link refid="dbmanager_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QtSql</label>
+      </node>
+      <node id="7">
+        <label>QFileInfo</label>
+      </node>
+      <node id="1">
+        <label>adminwindow.h</label>
+        <link refid="adminwindow_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="2">
+        <label>adminwindow.cpp</label>
+        <link refid="adminwindow_8cpp"/>
+      </node>
+      <node id="4">
+        <label>loginwindow.cpp</label>
+        <link refid="loginwindow_8cpp"/>
+      </node>
+      <node id="3">
+        <label>loginwindow.h</label>
+        <link refid="loginwindow_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>adminwindow.h</label>
+        <link refid="adminwindow_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_admin_window" prot="public">AdminWindow</innerclass>
+    <innernamespace refid="namespace_ui">Ui</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ADMINWINDOW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADMINWINDOW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QMainWindow&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dbmanager_8h" kindref="compound">dbmanager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDialog&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="addsouvenir_8h" kindref="compound">addsouvenir.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_ui" kindref="compound">Ui</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_admin_window" kindref="compound">AdminWindow</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_admin_window" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_admin_window" kindref="compound">AdminWindow</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QDialog</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a0a68db6e97108a5b789d7b90dd962f76" kindref="member">AdminWindow</ref>(QWidget<sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1ad1eabd086ea9878c73481fffc7506321" kindref="member">updateCollegeTable</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293" kindref="member">updateSouvenirTable</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_admin_window_1ad31a734a759bfb65008b03e6bb9014d0" kindref="member">~AdminWindow</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b" kindref="member">onInitialise</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1adb75fb0689794491accb94c3bd9989be" kindref="member">clearCollegeData</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1af609806ed07d37eedbfa96274c2cd86a" kindref="member">on_addSouvenir_released</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1ab4bb07b30224270802c48b3666514a89" kindref="member">on_removeSouvenir_released</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1abd378ec54897e75624563d579837ee40" kindref="member">onAddColleges</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a3f70aadf219465d9683e9ca52a1472a5" kindref="member">on_souvenirView_clicked</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QModelIndex<sp/>&amp;index);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49" kindref="member">on_removeSouvenir_2_clicked</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1ac2d7d04600f0df63ad3fab0756567c01" kindref="member">on_pushButton_5_released</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="105" refid="class_admin_window_1a26cd0782e15716c24dd3567e75169fc0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_admin_window_1a26cd0782e15716c24dd3567e75169fc0" kindref="member">souve</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="class_admin_window_1a3fa27571cf4952084a71a6fdc9b070b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Ui::AdminWindow<sp/>*<ref refid="class_admin_window_1a3fa27571cf4952084a71a6fdc9b070b2" kindref="member">ui</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="class_admin_window_1a500f2c07a0c34aa491c7d75ba0c8e3e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_db_manager" kindref="compound">DbManager</ref><sp/><ref refid="class_admin_window_1a500f2c07a0c34aa491c7d75ba0c8e3e5" kindref="member">myDb</ref><sp/>=<sp/><ref refid="class_db_manager" kindref="compound">DbManager</ref>(PROJECT_PATH<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/college.db&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ADMINWINDOW_H</highlight></codeline>
+    </programlisting>
+    <location file="adminwindow.h"/>
+  </compounddef>
+</doxygen>

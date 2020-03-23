@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classconfirmpage">
+<title>confirmpage Class Reference</title>
+<indexterm><primary>confirmpage</primary></indexterm>
+<para>
+<computeroutput>#include &lt;confirmpage.h&gt;</computeroutput>
+</para>
+Inheritance diagram for confirmpage:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classconfirmpage__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for confirmpage:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classconfirmpage__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classconfirmpage_1aa9d064a0417fb18b27e215178c654e1a">confirmpage</link> (QWidget *parent=nullptr)</para>
+
+<para>explicit default Constructor </para>
+</listitem>
+            <listitem><para><link linkend="_classconfirmpage_1a9ab63cac70f11a102709bf142ecb03df">~confirmpage</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para><link linkend="_classconfirmpage_1aab79592328400a263a72cdea47ef829a">confirmpage</link> (QWidget *parent, bool &amp;returnAnswer)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classconfirmpage_1a14e6471474d987fc336bba295be937d1">getData</link> ()</para>
+
+<para>returns answer to calling function </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Slots    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classconfirmpage_1a63d2524a9929f2ee215da9a0ae41b686">on_okButton_released</link> ()</para>
+
+<para>sets answer to true, hides ui </para>
+</listitem>
+            <listitem><para>void <link linkend="_classconfirmpage_1aa2fa168c098e4d1238a72ac021fbd35e">on_cancelButton_released</link> ()</para>
+
+<para>sets answer to false, hides ui </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Ui::confirmpage * <link linkend="_classconfirmpage_1a70abbfbae1f18f62351cdb0bcbe25370">ui</link></para>
+
+<para>points to confirmpage UI </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classconfirmpage_1a2cd5a13aaedf11aab6f14eedebaf17c3">answer</link> = false</para>
+
+<para>declares boolean to default val </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 24 of file confirmpage.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classconfirmpage_1aa9d064a0417fb18b27e215178c654e1a"/>    <section>
+    <title>confirmpage()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>confirmpage</primary><secondary>confirmpage</secondary></indexterm>
+<indexterm><primary>confirmpage</primary><secondary>confirmpage</secondary></indexterm>
+<para><computeroutput>confirmpage::confirmpage (QWidget * parent = <computeroutput>nullptr</computeroutput>
+)<computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>explicit default Constructor </para>
+</para>
+
+<para>Constructor intializes UI for confirmpage 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>*parent</entry>
+                                <entry>
+<para>- for QDialog </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 4 of file confirmpage.cpp.</para>
+    </section><anchor xml:id="_classconfirmpage_1a9ab63cac70f11a102709bf142ecb03df"/>    <section>
+    <title>~confirmpage()</title>
+<indexterm><primary>~confirmpage</primary><secondary>confirmpage</secondary></indexterm>
+<indexterm><primary>confirmpage</primary><secondary>~confirmpage</secondary></indexterm>
+<para><computeroutput>confirmpage::~confirmpage ( )</computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+
+<para>Close the loginwindow UI </para>
+<para>
+Definition at line 11 of file confirmpage.cpp.</para>
+<para>
+References ui.</para>
+    </section><anchor xml:id="_classconfirmpage_1aab79592328400a263a72cdea47ef829a"/>    <section>
+    <title>confirmpage()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>confirmpage</primary><secondary>confirmpage</secondary></indexterm>
+<indexterm><primary>confirmpage</primary><secondary>confirmpage</secondary></indexterm>
+<para><computeroutput>confirmpage::confirmpage (QWidget * parent, bool &amp; returnAnswer)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classconfirmpage_1a14e6471474d987fc336bba295be937d1"/>    <section>
+    <title>getData()</title>
+<indexterm><primary>getData</primary><secondary>confirmpage</secondary></indexterm>
+<indexterm><primary>confirmpage</primary><secondary>getData</secondary></indexterm>
+<para><computeroutput>bool confirmpage::getData ( )</computeroutput></para><para>
+
+<para>returns answer to calling function </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>bool- answer </para>
+</formalpara>
+</para>
+<para>
+Definition at line 16 of file confirmpage.cpp.</para>
+<para>
+References answer.</para>
+<para>
+Referenced by AdminWindow::clearCollegeData(), tripprogress::nextTrip(), tripprogress::on_pushButton_4_released(), addSouvenir::on_pushButton_released(), AdminWindow::on_removeSouvenir_2_clicked(), AdminWindow::on_removeSouvenir_released(), AdminWindow::onAddColleges(), and AdminWindow::onInitialise().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classconfirmpage_a14e6471474d987fc336bba295be937d1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classconfirmpage_1aa2fa168c098e4d1238a72ac021fbd35e"/>    <section>
+    <title>on_cancelButton_released</title>
+<indexterm><primary>on_cancelButton_released</primary><secondary>confirmpage</secondary></indexterm>
+<indexterm><primary>confirmpage</primary><secondary>on_cancelButton_released</secondary></indexterm>
+<para><computeroutput>void confirmpage::on_cancelButton_released ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>sets answer to false, hides ui </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void- none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 28 of file confirmpage.cpp.</para>
+<para>
+References answer.</para>
+    </section><anchor xml:id="_classconfirmpage_1a63d2524a9929f2ee215da9a0ae41b686"/>    <section>
+    <title>on_okButton_released</title>
+<indexterm><primary>on_okButton_released</primary><secondary>confirmpage</secondary></indexterm>
+<indexterm><primary>confirmpage</primary><secondary>on_okButton_released</secondary></indexterm>
+<para><computeroutput>void confirmpage::on_okButton_released ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>sets answer to true, hides ui </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void- none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 22 of file confirmpage.cpp.</para>
+<para>
+References answer.</para>
+<para>
+Referenced by AdminWindow::clearCollegeData(), tripprogress::nextTrip(), tripprogress::on_pushButton_4_released(), addSouvenir::on_pushButton_released(), AdminWindow::on_removeSouvenir_2_clicked(), AdminWindow::on_removeSouvenir_released(), AdminWindow::onAddColleges(), and AdminWindow::onInitialise().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classconfirmpage_a63d2524a9929f2ee215da9a0ae41b686_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classconfirmpage_1a2cd5a13aaedf11aab6f14eedebaf17c3"/>    <section>
+    <title>answer</title>
+<indexterm><primary>answer</primary><secondary>confirmpage</secondary></indexterm>
+<indexterm><primary>confirmpage</primary><secondary>answer</secondary></indexterm>
+<para><computeroutput>bool confirmpage::answer = false<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>declares boolean to default val </para>
+</para>
+<para>
+Definition at line 72 of file confirmpage.h.</para>
+<para>
+Referenced by getData(), on_cancelButton_released(), and on_okButton_released().</para>
+    </section><anchor xml:id="_classconfirmpage_1a70abbfbae1f18f62351cdb0bcbe25370"/>    <section>
+    <title>ui</title>
+<indexterm><primary>ui</primary><secondary>confirmpage</secondary></indexterm>
+<indexterm><primary>confirmpage</primary><secondary>ui</secondary></indexterm>
+<para><computeroutput>Ui::confirmpage* confirmpage::ui<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>points to confirmpage UI </para>
+</para>
+<para>
+Definition at line 67 of file confirmpage.h.</para>
+<para>
+Referenced by ~confirmpage().</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_confirmpage_8h">confirmpage.h</link><link linkend="_confirmpage_8cpp">confirmpage.cpp</link></section>
+</section>

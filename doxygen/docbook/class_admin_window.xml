@@ -1,0 +1,446 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_admin_window">
+<title>AdminWindow Class Reference</title>
+<indexterm><primary>AdminWindow</primary></indexterm>
+<para>
+
+<para>class initializes <link linkend="_class_admin_window">AdminWindow</link> UI and manages all Admin only permissive execution in editing user database, college database, souv database, etc </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;adminwindow.h&gt;</computeroutput>
+</para>
+Inheritance diagram for AdminWindow:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AdminWindow:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_admin_window_1a0a68db6e97108a5b789d7b90dd962f76">AdminWindow</link> (QWidget *parent=nullptr)</para>
+
+<para>explicit default Constructor </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1ad1eabd086ea9878c73481fffc7506321">updateCollegeTable</link> ()</para>
+
+<para>updates sql data table for colleges when called </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293">updateSouvenirTable</link> ()</para>
+
+<para>updates sql data table for college souvenirs when called </para>
+</listitem>
+            <listitem><para><link linkend="_class_admin_window_1ad31a734a759bfb65008b03e6bb9014d0">~AdminWindow</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Slots    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b">onInitialise</link> ()</para>
+
+<para>runs a verification of <link linkend="_classconfirm_page">confirmPage</link>, if verfied, initalizes distance, college, souvenir lists, updates appropiate data tables and UI models </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1adb75fb0689794491accb94c3bd9989be">clearCollegeData</link> ()</para>
+
+<para>clears database of data </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1af609806ed07d37eedbfa96274c2cd86a">on_addSouvenir_released</link> ()</para>
+
+<para>executes <link linkend="_classadd_souvenir">addSouvenir</link> class obj </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1ab4bb07b30224270802c48b3666514a89">on_removeSouvenir_released</link> ()</para>
+
+<para>deletes souvenir from data tables </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1abd378ec54897e75624563d579837ee40">onAddColleges</link> ()</para>
+
+<para>adds college to connected database </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1a3f70aadf219465d9683e9ca52a1472a5">on_souvenirView_clicked</link> (const QModelIndex &amp;index)</para>
+
+<para>displays and prints data from souvenir data set to UI </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49">on_removeSouvenir_2_clicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1ac2d7d04600f0df63ad3fab0756567c01">on_pushButton_5_released</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>QString <link linkend="_class_admin_window_1a26cd0782e15716c24dd3567e75169fc0">souve</link></para>
+
+<para>string stores temp souv data </para>
+</listitem>
+            <listitem><para>Ui::AdminWindow * <link linkend="_class_admin_window_1a3fa27571cf4952084a71a6fdc9b070b2">ui</link></para>
+
+<para>points to adminwindow UI </para>
+</listitem>
+            <listitem><para><link linkend="_class_db_manager">DbManager</link> <link linkend="_class_admin_window_1a500f2c07a0c34aa491c7d75ba0c8e3e5">myDb</link> = <link linkend="_class_db_manager">DbManager</link>(PROJECT_PATH + &quot;/college.db&quot;)</para>
+
+<para>assigns DB to predefined PROJECT_PATH constant </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>class initializes <link linkend="_class_admin_window">AdminWindow</link> UI and manages all Admin only permissive execution in editing user database, college database, souv database, etc </para>
+
+
+
+<para><link linkend="_class_admin_window">AdminWindow</link> allows admin users only to intialize lists, edit lists, add individual college, souv data values </para>
+<para>
+Definition at line 27 of file adminwindow.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_admin_window_1a0a68db6e97108a5b789d7b90dd962f76"/>    <section>
+    <title>AdminWindow()</title>
+<indexterm><primary>AdminWindow</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>AdminWindow</secondary></indexterm>
+<para><computeroutput>AdminWindow::AdminWindow (QWidget * parent = <computeroutput>nullptr</computeroutput>
+)<computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>explicit default Constructor </para>
+</para>
+
+<para>Constructor intializes UI for adminwindow calls <link linkend="_class_admin_window_1ad1eabd086ea9878c73481fffc7506321">updateCollegeTable()</link> and <link linkend="_class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293">updateSouvenirTable()</link> 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>*parent</entry>
+                                <entry>
+<para>- for QDialog </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 6 of file adminwindow.cpp.</para>
+<para>
+References updateCollegeTable(), and updateSouvenirTable().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_a0a68db6e97108a5b789d7b90dd962f76_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_admin_window_1ad31a734a759bfb65008b03e6bb9014d0"/>    <section>
+    <title>~AdminWindow()</title>
+<indexterm><primary>~AdminWindow</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>~AdminWindow</secondary></indexterm>
+<para><computeroutput>AdminWindow::~AdminWindow ( )</computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+
+<para>Close the <link linkend="_class_admin_window">AdminWindow</link> UI </para>
+<para>
+Definition at line 15 of file adminwindow.cpp.</para>
+<para>
+References ui.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_admin_window_1adb75fb0689794491accb94c3bd9989be"/>    <section>
+    <title>clearCollegeData</title>
+<indexterm><primary>clearCollegeData</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>clearCollegeData</secondary></indexterm>
+<para><computeroutput>void AdminWindow::clearCollegeData ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>clears database of data </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 88 of file adminwindow.cpp.</para>
+<para>
+References confirmpage::getData(), confirmpage::on_okButton_released(), updateCollegeTable(), and updateSouvenirTable().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_adb75fb0689794491accb94c3bd9989be_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_admin_window_1af609806ed07d37eedbfa96274c2cd86a"/>    <section>
+    <title>on_addSouvenir_released</title>
+<indexterm><primary>on_addSouvenir_released</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_addSouvenir_released</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_addSouvenir_released ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>executes <link linkend="_classadd_souvenir">addSouvenir</link> class obj </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 111 of file adminwindow.cpp.</para>
+<para>
+References addSouvenir::on_pushButton_2_released(), and updateSouvenirTable().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_af609806ed07d37eedbfa96274c2cd86a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_admin_window_1ac2d7d04600f0df63ad3fab0756567c01"/>    <section>
+    <title>on_pushButton_5_released</title>
+<indexterm><primary>on_pushButton_5_released</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_pushButton_5_released</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_pushButton_5_released ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 250 of file adminwindow.cpp.</para>
+    </section><anchor xml:id="_class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49"/>    <section>
+    <title>on_removeSouvenir_2_clicked</title>
+<indexterm><primary>on_removeSouvenir_2_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_removeSouvenir_2_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_removeSouvenir_2_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 204 of file adminwindow.cpp.</para>
+<para>
+References confirmpage::getData(), confirmpage::on_okButton_released(), and updateSouvenirTable().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_a9da5cb0c07bdf0cb6d8f7d980ec33c49_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_admin_window_1ab4bb07b30224270802c48b3666514a89"/>    <section>
+    <title>on_removeSouvenir_released</title>
+<indexterm><primary>on_removeSouvenir_released</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_removeSouvenir_released</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_removeSouvenir_released ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>deletes souvenir from data tables </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 121 of file adminwindow.cpp.</para>
+<para>
+References confirmpage::getData(), confirmpage::on_okButton_released(), and updateSouvenirTable().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_ab4bb07b30224270802c48b3666514a89_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_admin_window_1a3f70aadf219465d9683e9ca52a1472a5"/>    <section>
+    <title>on_souvenirView_clicked</title>
+<indexterm><primary>on_souvenirView_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_souvenirView_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_souvenirView_clicked (const QModelIndex &amp; index)<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>displays and prints data from souvenir data set to UI </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 183 of file adminwindow.cpp.</para>
+    </section><anchor xml:id="_class_admin_window_1abd378ec54897e75624563d579837ee40"/>    <section>
+    <title>onAddColleges</title>
+<indexterm><primary>onAddColleges</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>onAddColleges</secondary></indexterm>
+<para><computeroutput>void AdminWindow::onAddColleges ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>adds college to connected database </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 161 of file adminwindow.cpp.</para>
+<para>
+References confirmpage::getData(), confirmpage::on_okButton_released(), updateCollegeTable(), and updateSouvenirTable().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_abd378ec54897e75624563d579837ee40_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b"/>    <section>
+    <title>onInitialise</title>
+<indexterm><primary>onInitialise</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>onInitialise</secondary></indexterm>
+<para><computeroutput>void AdminWindow::onInitialise ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>runs a verification of <link linkend="_classconfirm_page">confirmPage</link>, if verfied, initalizes distance, college, souvenir lists, updates appropiate data tables and UI models </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 59 of file adminwindow.cpp.</para>
+<para>
+References confirmpage::getData(), confirmpage::on_okButton_released(), updateCollegeTable(), and updateSouvenirTable().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_a79ff9b05e6c99ca908f35e64877b2f8b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_admin_window_1ad1eabd086ea9878c73481fffc7506321"/>    <section>
+    <title>updateCollegeTable()</title>
+<indexterm><primary>updateCollegeTable</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>updateCollegeTable</secondary></indexterm>
+<para><computeroutput>void AdminWindow::updateCollegeTable ( )</computeroutput></para><para>
+
+<para>updates sql data table for colleges when called </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 20 of file adminwindow.cpp.</para>
+<para>
+Referenced by AdminWindow(), clearCollegeData(), onAddColleges(), and onInitialise().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_ad1eabd086ea9878c73481fffc7506321_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293"/>    <section>
+    <title>updateSouvenirTable()</title>
+<indexterm><primary>updateSouvenirTable</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>updateSouvenirTable</secondary></indexterm>
+<para><computeroutput>void AdminWindow::updateSouvenirTable ( )</computeroutput></para><para>
+
+<para>updates sql data table for college souvenirs when called </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void - none </para>
+</formalpara>
+</para>
+<para>
+Definition at line 39 of file adminwindow.cpp.</para>
+<para>
+Referenced by AdminWindow(), clearCollegeData(), on_addSouvenir_released(), on_removeSouvenir_2_clicked(), on_removeSouvenir_released(), onAddColleges(), and onInitialise().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_aa2e06bdd9305f8c591cf97e8c580f293_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_admin_window_1a500f2c07a0c34aa491c7d75ba0c8e3e5"/>    <section>
+    <title>myDb</title>
+<indexterm><primary>myDb</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>myDb</secondary></indexterm>
+<para><computeroutput><link linkend="_class_db_manager">DbManager</link> AdminWindow::myDb = <link linkend="_class_db_manager">DbManager</link>(PROJECT_PATH + &quot;/college.db&quot;)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>assigns DB to predefined PROJECT_PATH constant </para>
+</para>
+<para>
+Definition at line 115 of file adminwindow.h.</para>
+    </section><anchor xml:id="_class_admin_window_1a26cd0782e15716c24dd3567e75169fc0"/>    <section>
+    <title>souve</title>
+<indexterm><primary>souve</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>souve</secondary></indexterm>
+<para><computeroutput>QString AdminWindow::souve<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>string stores temp souv data </para>
+</para>
+<para>
+Definition at line 105 of file adminwindow.h.</para>
+    </section><anchor xml:id="_class_admin_window_1a3fa27571cf4952084a71a6fdc9b070b2"/>    <section>
+    <title>ui</title>
+<indexterm><primary>ui</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>ui</secondary></indexterm>
+<para><computeroutput>Ui::AdminWindow* AdminWindow::ui<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>points to adminwindow UI </para>
+</para>
+<para>
+Definition at line 110 of file adminwindow.h.</para>
+<para>
+Referenced by ~AdminWindow().</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_adminwindow_8h">adminwindow.h</link><link linkend="_adminwindow_8cpp">adminwindow.cpp</link></section>
+</section>

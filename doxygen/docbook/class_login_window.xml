@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_login_window">
+<title>LoginWindow Class Reference</title>
+<indexterm><primary>LoginWindow</primary></indexterm>
+<para>
+<computeroutput>#include &lt;loginwindow.h&gt;</computeroutput>
+</para>
+Inheritance diagram for LoginWindow:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_login_window__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for LoginWindow:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_login_window__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Slots    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_login_window_1abe037678032bbd0584251373cc6670b9">onPlanClick</link> ()</para>
+
+<para>executes <link linkend="_classtrip_planner">tripPlanner</link> class obj </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_login_window_1a99244d50f34fe69cceeee38151f16df9">onLoginClick</link> ()</para>
+
+<para>executes login sequence for user validates user and pass and usertype </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_login_window_1af307b9c8ab38cb4f7a5785d181e19533">onCreateClick</link> ()</para>
+
+<para>executes createuser </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_login_window_1a6fa354fcb799ca0afb2ac9cf48b18a93">onClearClick</link> ()</para>
+
+<para>clears dialog </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_login_window_1aa4c04d26b299de00156bbf3c32b2a082">LoginWindow</link> (QWidget *parent=nullptr)</para>
+
+<para>default explicit Constructor </para>
+</listitem>
+            <listitem><para><link linkend="_class_login_window_1a0c49fe788dcce29aa50e7d974e1ad158">~LoginWindow</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Slots    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_login_window_1a589504e28cc50062c30d6a26ad444fb3">on_Username_returnPressed</link> ()</para>
+
+<para>execute onLoginClock </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_login_window_1ab0218fdb5f9c0a0f4c8c8fa4e7256ca6">on_Password_returnPressed</link> ()</para>
+
+<para>execute onLoginClock </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_login_window_1a4072c1992a805b45728be2be1ad44af9">on_loginButton_pressed</link> ()</para>
+
+<para>execute onLoginClock </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Ui::LoginWindow * <link linkend="_class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0">ui</link></para>
+
+<para>points to loginwindow UI </para>
+</listitem>
+            <listitem><para><link linkend="_class_db_manager">DbManager</link> <link linkend="_class_login_window_1addd8a2b9a2903d59c13b68ca43d142e6">myDb</link> = <link linkend="_class_db_manager">DbManager</link>(PROJECT_PATH + &quot;/college.db&quot;)</para>
+
+<para>assigns DB to predefined PROJECT_PATH constant </para>
+</listitem>
+            <listitem><para><link linkend="_class_admin_window">AdminWindow</link> * <link linkend="_class_login_window_1a0bd2fc8ba5af5142895306aef730bca8">admin</link></para>
+
+<para>pointer for instance of adminwindow for adminType </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 28 of file loginwindow.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_login_window_1aa4c04d26b299de00156bbf3c32b2a082"/>    <section>
+    <title>LoginWindow()</title>
+<indexterm><primary>LoginWindow</primary><secondary>LoginWindow</secondary></indexterm>
+<indexterm><primary>LoginWindow</primary><secondary>LoginWindow</secondary></indexterm>
+<para><computeroutput>LoginWindow::LoginWindow (QWidget * parent = <computeroutput>nullptr</computeroutput>
+)</computeroutput></para><para>
+
+<para>default explicit Constructor </para>
+</para>
+
+<para>Constructor sets up ui for loginwindow creates a tripTable and verifies connection to database 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>*parent</entry>
+                                <entry>
+<para>- for QDialog </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 7 of file loginwindow.cpp.</para>
+    </section><anchor xml:id="_class_login_window_1a0c49fe788dcce29aa50e7d974e1ad158"/>    <section>
+    <title>~LoginWindow()</title>
+<indexterm><primary>~LoginWindow</primary><secondary>LoginWindow</secondary></indexterm>
+<indexterm><primary>LoginWindow</primary><secondary>~LoginWindow</secondary></indexterm>
+<para><computeroutput>LoginWindow::~LoginWindow ( )</computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+
+<para>Close the loginwindow UI </para>
+<para>
+Definition at line 41 of file loginwindow.cpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_login_window_1a4072c1992a805b45728be2be1ad44af9"/>    <section>
+    <title>on_loginButton_pressed</title>
+<indexterm><primary>on_loginButton_pressed</primary><secondary>LoginWindow</secondary></indexterm>
+<indexterm><primary>LoginWindow</primary><secondary>on_loginButton_pressed</secondary></indexterm>
+<para><computeroutput>void LoginWindow::on_loginButton_pressed ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>execute onLoginClock </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>none-void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 136 of file loginwindow.cpp.</para>
+    </section><anchor xml:id="_class_login_window_1ab0218fdb5f9c0a0f4c8c8fa4e7256ca6"/>    <section>
+    <title>on_Password_returnPressed</title>
+<indexterm><primary>on_Password_returnPressed</primary><secondary>LoginWindow</secondary></indexterm>
+<indexterm><primary>LoginWindow</primary><secondary>on_Password_returnPressed</secondary></indexterm>
+<para><computeroutput>void LoginWindow::on_Password_returnPressed ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>execute onLoginClock </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>none-void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 126 of file loginwindow.cpp.</para>
+    </section><anchor xml:id="_class_login_window_1a589504e28cc50062c30d6a26ad444fb3"/>    <section>
+    <title>on_Username_returnPressed</title>
+<indexterm><primary>on_Username_returnPressed</primary><secondary>LoginWindow</secondary></indexterm>
+<indexterm><primary>LoginWindow</primary><secondary>on_Username_returnPressed</secondary></indexterm>
+<para><computeroutput>void LoginWindow::on_Username_returnPressed ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>execute onLoginClock </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>none-void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 131 of file loginwindow.cpp.</para>
+    </section><anchor xml:id="_class_login_window_1a6fa354fcb799ca0afb2ac9cf48b18a93"/>    <section>
+    <title>onClearClick</title>
+<indexterm><primary>onClearClick</primary><secondary>LoginWindow</secondary></indexterm>
+<indexterm><primary>LoginWindow</primary><secondary>onClearClick</secondary></indexterm>
+<para><computeroutput>void LoginWindow::onClearClick ( )<computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>clears dialog </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>none- void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 115 of file loginwindow.cpp.</para>
+    </section><anchor xml:id="_class_login_window_1af307b9c8ab38cb4f7a5785d181e19533"/>    <section>
+    <title>onCreateClick</title>
+<indexterm><primary>onCreateClick</primary><secondary>LoginWindow</secondary></indexterm>
+<indexterm><primary>LoginWindow</primary><secondary>onCreateClick</secondary></indexterm>
+<para><computeroutput>void LoginWindow::onCreateClick ( )<computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>executes createuser </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>none- void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 93 of file loginwindow.cpp.</para>
+    </section><anchor xml:id="_class_login_window_1a99244d50f34fe69cceeee38151f16df9"/>    <section>
+    <title>onLoginClick</title>
+<indexterm><primary>onLoginClick</primary><secondary>LoginWindow</secondary></indexterm>
+<indexterm><primary>LoginWindow</primary><secondary>onLoginClick</secondary></indexterm>
+<para><computeroutput>void LoginWindow::onLoginClick ( )<computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>executes login sequence for user validates user and pass and usertype </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>none- void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 54 of file loginwindow.cpp.</para>
+    </section><anchor xml:id="_class_login_window_1abe037678032bbd0584251373cc6670b9"/>    <section>
+    <title>onPlanClick</title>
+<indexterm><primary>onPlanClick</primary><secondary>LoginWindow</secondary></indexterm>
+<indexterm><primary>LoginWindow</primary><secondary>onPlanClick</secondary></indexterm>
+<para><computeroutput>void LoginWindow::onPlanClick ( )<computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>executes <link linkend="_classtrip_planner">tripPlanner</link> class obj </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>none- void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 47 of file loginwindow.cpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_login_window_1a0bd2fc8ba5af5142895306aef730bca8"/>    <section>
+    <title>admin</title>
+<indexterm><primary>admin</primary><secondary>LoginWindow</secondary></indexterm>
+<indexterm><primary>LoginWindow</primary><secondary>admin</secondary></indexterm>
+<para><computeroutput><link linkend="_class_admin_window">AdminWindow</link>* LoginWindow::admin<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>pointer for instance of adminwindow for adminType </para>
+</para>
+<para>
+Definition at line 110 of file loginwindow.h.</para>
+    </section><anchor xml:id="_class_login_window_1addd8a2b9a2903d59c13b68ca43d142e6"/>    <section>
+    <title>myDb</title>
+<indexterm><primary>myDb</primary><secondary>LoginWindow</secondary></indexterm>
+<indexterm><primary>LoginWindow</primary><secondary>myDb</secondary></indexterm>
+<para><computeroutput><link linkend="_class_db_manager">DbManager</link> LoginWindow::myDb = <link linkend="_class_db_manager">DbManager</link>(PROJECT_PATH + &quot;/college.db&quot;)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>assigns DB to predefined PROJECT_PATH constant </para>
+</para>
+<para>
+Definition at line 105 of file loginwindow.h.</para>
+    </section><anchor xml:id="_class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0"/>    <section>
+    <title>ui</title>
+<indexterm><primary>ui</primary><secondary>LoginWindow</secondary></indexterm>
+<indexterm><primary>LoginWindow</primary><secondary>ui</secondary></indexterm>
+<para><computeroutput>Ui::LoginWindow* LoginWindow::ui<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>points to loginwindow UI </para>
+</para>
+<para>
+Definition at line 100 of file loginwindow.h.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_loginwindow_8h">loginwindow.h</link><link linkend="_loginwindow_8cpp">loginwindow.cpp</link></section>
+</section>

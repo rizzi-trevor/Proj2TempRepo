@@ -1,0 +1,441 @@
+\hypertarget{class_admin_window}{}\doxysection{Admin\+Window Class Reference}
+\label{class_admin_window}\index{AdminWindow@{AdminWindow}}
+
+
+class initializes \mbox{\hyperlink{class_admin_window}{Admin\+Window}} UI and manages all Admin only permissive execution in editing user database, college database, souv database, etc  
+
+
+
+
+{\ttfamily \#include $<$adminwindow.\+h$>$}
+
+
+
+Inheritance diagram for Admin\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{class_admin_window__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Admin\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{class_admin_window__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_admin_window_a0a68db6e97108a5b789d7b90dd962f76}{Admin\+Window}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em explicit default Constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_window_ad1eabd086ea9878c73481fffc7506321}{update\+College\+Table}} ()
+\begin{DoxyCompactList}\small\item\em updates sql data table for colleges when called \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_window_aa2e06bdd9305f8c591cf97e8c580f293}{update\+Souvenir\+Table}} ()
+\begin{DoxyCompactList}\small\item\em updates sql data table for college souvenirs when called \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_admin_window_ad31a734a759bfb65008b03e6bb9014d0}{$\sim$\+Admin\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_admin_window_a79ff9b05e6c99ca908f35e64877b2f8b}{on\+Initialise}} ()
+\begin{DoxyCompactList}\small\item\em runs a verification of \mbox{\hyperlink{classconfirm_page}{confirm\+Page}}, if verfied, initalizes distance, college, souvenir lists, updates appropiate data tables and UI models \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_window_adb75fb0689794491accb94c3bd9989be}{clear\+College\+Data}} ()
+\begin{DoxyCompactList}\small\item\em clears database of data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_window_af609806ed07d37eedbfa96274c2cd86a}{on\+\_\+add\+Souvenir\+\_\+released}} ()
+\begin{DoxyCompactList}\small\item\em executes \mbox{\hyperlink{classadd_souvenir}{add\+Souvenir}} class obj \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_window_ab4bb07b30224270802c48b3666514a89}{on\+\_\+remove\+Souvenir\+\_\+released}} ()
+\begin{DoxyCompactList}\small\item\em deletes souvenir from data tables \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_window_abd378ec54897e75624563d579837ee40}{on\+Add\+Colleges}} ()
+\begin{DoxyCompactList}\small\item\em adds college to connected database \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_window_a3f70aadf219465d9683e9ca52a1472a5}{on\+\_\+souvenir\+View\+\_\+clicked}} (const Q\+Model\+Index \&index)
+\begin{DoxyCompactList}\small\item\em displays and prints data from souvenir data set to UI \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_window_a9da5cb0c07bdf0cb6d8f7d980ec33c49}{on\+\_\+remove\+Souvenir\+\_\+2\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_admin_window_ac2d7d04600f0df63ad3fab0756567c01}{on\+\_\+push\+Button\+\_\+5\+\_\+released}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{class_admin_window_a26cd0782e15716c24dd3567e75169fc0}{souve}}
+\begin{DoxyCompactList}\small\item\em string stores temp souv data \end{DoxyCompactList}\item 
+Ui\+::\+Admin\+Window $\ast$ \mbox{\hyperlink{class_admin_window_a3fa27571cf4952084a71a6fdc9b070b2}{ui}}
+\begin{DoxyCompactList}\small\item\em points to adminwindow UI \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_db_manager}{Db\+Manager}} \mbox{\hyperlink{class_admin_window_a500f2c07a0c34aa491c7d75ba0c8e3e5}{my\+Db}} = \mbox{\hyperlink{class_db_manager}{Db\+Manager}}(P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH + \char`\"{}/college.\+db\char`\"{})
+\begin{DoxyCompactList}\small\item\em assigns DB to predefined P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH constant \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class initializes \mbox{\hyperlink{class_admin_window}{Admin\+Window}} UI and manages all Admin only permissive execution in editing user database, college database, souv database, etc 
+
+\mbox{\hyperlink{class_admin_window}{Admin\+Window}} allows admin users only to intialize lists, edit lists, add individual college, souv data values 
+
+Definition at line 27 of file adminwindow.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_admin_window_a0a68db6e97108a5b789d7b90dd962f76}\label{class_admin_window_a0a68db6e97108a5b789d7b90dd962f76}} 
+\index{AdminWindow@{AdminWindow}!AdminWindow@{AdminWindow}}
+\index{AdminWindow@{AdminWindow}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{AdminWindow()}{AdminWindow()}}
+{\footnotesize\ttfamily Admin\+Window\+::\+Admin\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+explicit default Constructor 
+
+Constructor intializes UI for adminwindow calls \mbox{\hyperlink{class_admin_window_ad1eabd086ea9878c73481fffc7506321}{update\+College\+Table()}} and \mbox{\hyperlink{class_admin_window_aa2e06bdd9305f8c591cf97e8c580f293}{update\+Souvenir\+Table()}} 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & -\/ for Q\+Dialog \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file adminwindow.\+cpp.
+
+
+
+References update\+College\+Table(), and update\+Souvenir\+Table().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_admin_window_a0a68db6e97108a5b789d7b90dd962f76_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_admin_window_ad31a734a759bfb65008b03e6bb9014d0}\label{class_admin_window_ad31a734a759bfb65008b03e6bb9014d0}} 
+\index{AdminWindow@{AdminWindow}!````~AdminWindow@{$\sim$AdminWindow}}
+\index{````~AdminWindow@{$\sim$AdminWindow}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{$\sim$AdminWindow()}{~AdminWindow()}}
+{\footnotesize\ttfamily Admin\+Window\+::$\sim$\+Admin\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Close the \mbox{\hyperlink{class_admin_window}{Admin\+Window}} UI 
+
+Definition at line 15 of file adminwindow.\+cpp.
+
+
+
+References ui.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_admin_window_adb75fb0689794491accb94c3bd9989be}\label{class_admin_window_adb75fb0689794491accb94c3bd9989be}} 
+\index{AdminWindow@{AdminWindow}!clearCollegeData@{clearCollegeData}}
+\index{clearCollegeData@{clearCollegeData}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{clearCollegeData}{clearCollegeData}}
+{\footnotesize\ttfamily void Admin\+Window\+::clear\+College\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+clears database of data 
+
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file adminwindow.\+cpp.
+
+
+
+References confirmpage\+::get\+Data(), confirmpage\+::on\+\_\+ok\+Button\+\_\+released(), update\+College\+Table(), and update\+Souvenir\+Table().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_admin_window_adb75fb0689794491accb94c3bd9989be_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_admin_window_af609806ed07d37eedbfa96274c2cd86a}\label{class_admin_window_af609806ed07d37eedbfa96274c2cd86a}} 
+\index{AdminWindow@{AdminWindow}!on\_addSouvenir\_released@{on\_addSouvenir\_released}}
+\index{on\_addSouvenir\_released@{on\_addSouvenir\_released}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{on\_addSouvenir\_released}{on\_addSouvenir\_released}}
+{\footnotesize\ttfamily void Admin\+Window\+::on\+\_\+add\+Souvenir\+\_\+released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+executes \mbox{\hyperlink{classadd_souvenir}{add\+Souvenir}} class obj 
+
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file adminwindow.\+cpp.
+
+
+
+References add\+Souvenir\+::on\+\_\+push\+Button\+\_\+2\+\_\+released(), and update\+Souvenir\+Table().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_admin_window_af609806ed07d37eedbfa96274c2cd86a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_admin_window_ac2d7d04600f0df63ad3fab0756567c01}\label{class_admin_window_ac2d7d04600f0df63ad3fab0756567c01}} 
+\index{AdminWindow@{AdminWindow}!on\_pushButton\_5\_released@{on\_pushButton\_5\_released}}
+\index{on\_pushButton\_5\_released@{on\_pushButton\_5\_released}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_5\_released}{on\_pushButton\_5\_released}}
+{\footnotesize\ttfamily void Admin\+Window\+::on\+\_\+push\+Button\+\_\+5\+\_\+released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 250 of file adminwindow.\+cpp.
+
+\mbox{\Hypertarget{class_admin_window_a9da5cb0c07bdf0cb6d8f7d980ec33c49}\label{class_admin_window_a9da5cb0c07bdf0cb6d8f7d980ec33c49}} 
+\index{AdminWindow@{AdminWindow}!on\_removeSouvenir\_2\_clicked@{on\_removeSouvenir\_2\_clicked}}
+\index{on\_removeSouvenir\_2\_clicked@{on\_removeSouvenir\_2\_clicked}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{on\_removeSouvenir\_2\_clicked}{on\_removeSouvenir\_2\_clicked}}
+{\footnotesize\ttfamily void Admin\+Window\+::on\+\_\+remove\+Souvenir\+\_\+2\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 204 of file adminwindow.\+cpp.
+
+
+
+References confirmpage\+::get\+Data(), confirmpage\+::on\+\_\+ok\+Button\+\_\+released(), and update\+Souvenir\+Table().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_admin_window_a9da5cb0c07bdf0cb6d8f7d980ec33c49_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_admin_window_ab4bb07b30224270802c48b3666514a89}\label{class_admin_window_ab4bb07b30224270802c48b3666514a89}} 
+\index{AdminWindow@{AdminWindow}!on\_removeSouvenir\_released@{on\_removeSouvenir\_released}}
+\index{on\_removeSouvenir\_released@{on\_removeSouvenir\_released}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{on\_removeSouvenir\_released}{on\_removeSouvenir\_released}}
+{\footnotesize\ttfamily void Admin\+Window\+::on\+\_\+remove\+Souvenir\+\_\+released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+deletes souvenir from data tables 
+
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file adminwindow.\+cpp.
+
+
+
+References confirmpage\+::get\+Data(), confirmpage\+::on\+\_\+ok\+Button\+\_\+released(), and update\+Souvenir\+Table().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_admin_window_ab4bb07b30224270802c48b3666514a89_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_admin_window_a3f70aadf219465d9683e9ca52a1472a5}\label{class_admin_window_a3f70aadf219465d9683e9ca52a1472a5}} 
+\index{AdminWindow@{AdminWindow}!on\_souvenirView\_clicked@{on\_souvenirView\_clicked}}
+\index{on\_souvenirView\_clicked@{on\_souvenirView\_clicked}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{on\_souvenirView\_clicked}{on\_souvenirView\_clicked}}
+{\footnotesize\ttfamily void Admin\+Window\+::on\+\_\+souvenir\+View\+\_\+clicked (\begin{DoxyParamCaption}\item[{const Q\+Model\+Index \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+displays and prints data from souvenir data set to UI 
+
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 183 of file adminwindow.\+cpp.
+
+\mbox{\Hypertarget{class_admin_window_abd378ec54897e75624563d579837ee40}\label{class_admin_window_abd378ec54897e75624563d579837ee40}} 
+\index{AdminWindow@{AdminWindow}!onAddColleges@{onAddColleges}}
+\index{onAddColleges@{onAddColleges}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{onAddColleges}{onAddColleges}}
+{\footnotesize\ttfamily void Admin\+Window\+::on\+Add\+Colleges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+adds college to connected database 
+
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 161 of file adminwindow.\+cpp.
+
+
+
+References confirmpage\+::get\+Data(), confirmpage\+::on\+\_\+ok\+Button\+\_\+released(), update\+College\+Table(), and update\+Souvenir\+Table().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_admin_window_abd378ec54897e75624563d579837ee40_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_admin_window_a79ff9b05e6c99ca908f35e64877b2f8b}\label{class_admin_window_a79ff9b05e6c99ca908f35e64877b2f8b}} 
+\index{AdminWindow@{AdminWindow}!onInitialise@{onInitialise}}
+\index{onInitialise@{onInitialise}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{onInitialise}{onInitialise}}
+{\footnotesize\ttfamily void Admin\+Window\+::on\+Initialise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+runs a verification of \mbox{\hyperlink{classconfirm_page}{confirm\+Page}}, if verfied, initalizes distance, college, souvenir lists, updates appropiate data tables and UI models 
+
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file adminwindow.\+cpp.
+
+
+
+References confirmpage\+::get\+Data(), confirmpage\+::on\+\_\+ok\+Button\+\_\+released(), update\+College\+Table(), and update\+Souvenir\+Table().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_admin_window_a79ff9b05e6c99ca908f35e64877b2f8b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_admin_window_ad1eabd086ea9878c73481fffc7506321}\label{class_admin_window_ad1eabd086ea9878c73481fffc7506321}} 
+\index{AdminWindow@{AdminWindow}!updateCollegeTable@{updateCollegeTable}}
+\index{updateCollegeTable@{updateCollegeTable}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{updateCollegeTable()}{updateCollegeTable()}}
+{\footnotesize\ttfamily void Admin\+Window\+::update\+College\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+updates sql data table for colleges when called 
+
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file adminwindow.\+cpp.
+
+
+
+Referenced by Admin\+Window(), clear\+College\+Data(), on\+Add\+Colleges(), and on\+Initialise().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_admin_window_ad1eabd086ea9878c73481fffc7506321_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_admin_window_aa2e06bdd9305f8c591cf97e8c580f293}\label{class_admin_window_aa2e06bdd9305f8c591cf97e8c580f293}} 
+\index{AdminWindow@{AdminWindow}!updateSouvenirTable@{updateSouvenirTable}}
+\index{updateSouvenirTable@{updateSouvenirTable}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{updateSouvenirTable()}{updateSouvenirTable()}}
+{\footnotesize\ttfamily void Admin\+Window\+::update\+Souvenir\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+updates sql data table for college souvenirs when called 
+
+\begin{DoxyReturn}{Returns}
+void -\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file adminwindow.\+cpp.
+
+
+
+Referenced by Admin\+Window(), clear\+College\+Data(), on\+\_\+add\+Souvenir\+\_\+released(), on\+\_\+remove\+Souvenir\+\_\+2\+\_\+clicked(), on\+\_\+remove\+Souvenir\+\_\+released(), on\+Add\+Colleges(), and on\+Initialise().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_admin_window_aa2e06bdd9305f8c591cf97e8c580f293_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_admin_window_a500f2c07a0c34aa491c7d75ba0c8e3e5}\label{class_admin_window_a500f2c07a0c34aa491c7d75ba0c8e3e5}} 
+\index{AdminWindow@{AdminWindow}!myDb@{myDb}}
+\index{myDb@{myDb}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{myDb}{myDb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_db_manager}{Db\+Manager}} Admin\+Window\+::my\+Db = \mbox{\hyperlink{class_db_manager}{Db\+Manager}}(P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH + \char`\"{}/college.\+db\char`\"{})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+assigns DB to predefined P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH constant 
+
+
+
+Definition at line 115 of file adminwindow.\+h.
+
+\mbox{\Hypertarget{class_admin_window_a26cd0782e15716c24dd3567e75169fc0}\label{class_admin_window_a26cd0782e15716c24dd3567e75169fc0}} 
+\index{AdminWindow@{AdminWindow}!souve@{souve}}
+\index{souve@{souve}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{souve}{souve}}
+{\footnotesize\ttfamily Q\+String Admin\+Window\+::souve\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+string stores temp souv data 
+
+
+
+Definition at line 105 of file adminwindow.\+h.
+
+\mbox{\Hypertarget{class_admin_window_a3fa27571cf4952084a71a6fdc9b070b2}\label{class_admin_window_a3fa27571cf4952084a71a6fdc9b070b2}} 
+\index{AdminWindow@{AdminWindow}!ui@{ui}}
+\index{ui@{ui}!AdminWindow@{AdminWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Admin\+Window$\ast$ Admin\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+points to adminwindow UI 
+
+
+
+Definition at line 110 of file adminwindow.\+h.
+
+
+
+Referenced by $\sim$\+Admin\+Window().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{adminwindow_8h}{adminwindow.\+h}}\item 
+\mbox{\hyperlink{adminwindow_8cpp}{adminwindow.\+cpp}}\end{DoxyCompactItemize}

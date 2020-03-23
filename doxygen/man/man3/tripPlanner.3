@@ -1,0 +1,404 @@
+.TH "tripPlanner" 3 "Mon Mar 23 2020" "Version 1" "CS1D - Project1 - College Touring" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tripPlanner \- class recusively planning (calculating) the most efficient trip, manages data tables, checks if data is valid, and begins inital processes of planning a trip  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tripplanner\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtripPlanner\fP (QWidget *parent=nullptr)"
+.br
+.RI "default explicit Constructor "
+.ti -1c
+.RI "\fB~tripPlanner\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "void \fBinitializeList\fP ()"
+.br
+.RI "initalizes list of colleges and their distances from start colleges, as well as the UI for selecting and pushing colleges via checkBoxVector "
+.ti -1c
+.RI "void \fBselectedCollegeList\fP ()"
+.br
+.RI "stores and displays list of user/student selected colleges for current trip in progress/planned "
+.ti -1c
+.RI "void \fBplanAlgorithm\fP (QString start, int dist)"
+.br
+.RI "method that calculates most efficient route between all selected colleges, from start to finish "
+.ti -1c
+.RI "bool \fBcollegeDoesExist\fP (QString colName)"
+.br
+.RI "method that checks whether college in sql col exists "
+.ti -1c
+.RI "bool \fBplanDoesExist\fP (QString colName)"
+.br
+.RI "method that checks whether plan in sql col exists "
+.ti -1c
+.RI "void \fBupdateCollegeTable\fP (QString start)"
+.br
+.RI "updates sql table with college data, with trip starting and ending colleges with their distances "
+.ti -1c
+.RI "void \fBupdateSouvTable\fP (QString start)"
+.br
+.RI "updates sql table with souvenir data, with prices, quantity, souvenier name, and associated college "
+.ti -1c
+.RI "void \fBshowTrip\fP (QString ID)"
+.br
+.RI "updates sql table with tripID data and displays/updates trip data table "
+.ti -1c
+.RI "void \fBupdateCombo\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBChecboxChanged\fP ()"
+.br
+.RI "manages and updates checkbox for user selected colleges "
+.ti -1c
+.RI "void \fBonPlanClick\fP ()"
+.br
+.RI "displays user input and manages initliazation of planning college trips, distances\&. Calls planAlgorithim showTrip, and updates all tables "
+.ti -1c
+.RI "void \fBonDisplayClick\fP ()"
+.br
+.RI "updates and displays souv and college tables "
+.ti -1c
+.RI "void \fBonStartClick\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::tripPlanner * \fBui\fP"
+.br
+.RI "points to \fBtripPlanner\fP UI "
+.ti -1c
+.RI "\fBDbManager\fP \fBmyDb\fP = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')"
+.br
+.RI "assigns DB to predefined PROJECT_PATH constant "
+.ti -1c
+.RI "QVector< QCheckBox * > \fBcheckBoxVector\fP"
+.br
+.RI "vector for managing user selecting colleges via checkbox "
+.ti -1c
+.RI "QStringList \fBselectedColleges\fP"
+.br
+.RI "a string to hold the selected colleges - should be helpful for the plan trip algorithm "
+.ti -1c
+.RI "QStringList \fBplannedColleges\fP"
+.br
+.RI "a string to hold the planned colleges - should be helpful for the plan trip algorithm "
+.ti -1c
+.RI "int \fBdistance\fP"
+.br
+.RI "field member holding distance "
+.ti -1c
+.RI "QString \fBid\fP"
+.br
+.RI "field member holding tripID "
+.ti -1c
+.RI "QList< int > \fBdistanceTo\fP"
+.br
+.ti -1c
+.RI "\fBtripprogress\fP * \fBprogress\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+class recusively planning (calculating) the most efficient trip, manages data tables, checks if data is valid, and begins inital processes of planning a trip 
+
+\fBtripPlanner\fP manages the calculations for creating the most efficient trip for the student this updates all data tables for colleges, their names and specific data values, and souveniers, with their respectives data values 
+.PP
+Definition at line 30 of file tripplanner\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "tripPlanner::tripPlanner (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+default explicit Constructor Constructor sets up ui for \fBtripPlanner\fP and executes initalizeList(), and \fBupdateCombo()\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI*parent\fP - for QDialog 
+.RE
+.PP
+
+.PP
+Definition at line 6 of file tripplanner\&.cpp\&.
+.PP
+References initializeList(), and updateCombo()\&.
+.SS "tripPlanner::~tripPlanner ()"
+
+.PP
+Destructor\&. Close the \fBtripPlanner\fP UI 
+.PP
+Definition at line 16 of file tripplanner\&.cpp\&.
+.PP
+References ui\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void tripPlanner::ChecboxChanged ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+manages and updates checkbox for user selected colleges 
+.PP
+\fBReturns\fP
+.RS 4
+none- void 
+.RE
+.PP
+
+.PP
+Definition at line 81 of file tripplanner\&.cpp\&.
+.SS "bool tripPlanner::collegeDoesExist (QString colName)"
+
+.PP
+method that checks whether college in sql col exists 
+.PP
+\fBReturns\fP
+.RS 4
+bool - true or false(whether data exists) 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIcolname\fP - college col to be checked 
+.RE
+.PP
+
+.PP
+Definition at line 241 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::initializeList ()"
+
+.PP
+initalizes list of colleges and their distances from start colleges, as well as the UI for selecting and pushing colleges via checkBoxVector 
+.PP
+\fBReturns\fP
+.RS 4
+nothing - void 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file tripplanner\&.cpp\&.
+.PP
+Referenced by tripPlanner()\&.
+.SS "void tripPlanner::onDisplayClick ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+updates and displays souv and college tables 
+.PP
+\fBReturns\fP
+.RS 4
+none- void 
+.RE
+.PP
+
+.PP
+Definition at line 335 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::onPlanClick ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+displays user input and manages initliazation of planning college trips, distances\&. Calls planAlgorithim showTrip, and updates all tables 
+.PP
+\fBReturns\fP
+.RS 4
+none- void 
+.RE
+.PP
+
+.PP
+Definition at line 147 of file tripplanner\&.cpp\&.
+.PP
+References distance, and selectedCollegeList()\&.
+.SS "void tripPlanner::onStartClick ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 346 of file tripplanner\&.cpp\&.
+.PP
+References tripprogress::on_souvTable_clicked()\&.
+.SS "void tripPlanner::planAlgorithm (QString start, int dist)"
+
+.PP
+method that calculates most efficient route between all selected colleges, from start to finish 
+.PP
+\fBReturns\fP
+.RS 4
+nothing - void 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart\fP - starting destination 
+.br
+\fIdist\fP - stores distance between destination for recursive 
+.RE
+.PP
+
+.PP
+Definition at line 201 of file tripplanner\&.cpp\&.
+.SS "bool tripPlanner::planDoesExist (QString colName)"
+
+.PP
+method that checks whether plan in sql col exists 
+.PP
+\fBReturns\fP
+.RS 4
+bool - true or false(whether data exists) 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIcolname\fP - plan col to be checked 
+.RE
+.PP
+
+.PP
+Definition at line 254 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::selectedCollegeList ()"
+
+.PP
+stores and displays list of user/student selected colleges for current trip in progress/planned 
+.PP
+\fBReturns\fP
+.RS 4
+nothing - void 
+.RE
+.PP
+
+.PP
+Definition at line 116 of file tripplanner\&.cpp\&.
+.PP
+Referenced by onPlanClick()\&.
+.SS "void tripPlanner::showTrip (QString ID)"
+
+.PP
+updates sql table with tripID data and displays/updates trip data table 
+.PP
+\fBParameters\fP
+.RS 4
+\fIID\fP - tripID 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+none- void 
+.RE
+.PP
+
+.PP
+Definition at line 312 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::updateCollegeTable (QString start)"
+
+.PP
+updates sql table with college data, with trip starting and ending colleges with their distances 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart,starting\fP college for trip 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+none- void 
+.RE
+.PP
+
+.PP
+Definition at line 267 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::updateCombo ()"
+
+.PP
+Definition at line 21 of file tripplanner\&.cpp\&.
+.PP
+Referenced by tripPlanner()\&.
+.SS "void tripPlanner::updateSouvTable (QString start)"
+
+.PP
+updates sql table with souvenir data, with prices, quantity, souvenier name, and associated college 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart,starting\fP college for trip 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+none- void 
+.RE
+.PP
+
+.PP
+Definition at line 288 of file tripplanner\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QVector<QCheckBox*> tripPlanner::checkBoxVector\fC [private]\fP"
+
+.PP
+vector for managing user selecting colleges via checkbox 
+.PP
+Definition at line 143 of file tripplanner\&.h\&.
+.SS "int tripPlanner::distance\fC [private]\fP"
+
+.PP
+field member holding distance 
+.PP
+Definition at line 158 of file tripplanner\&.h\&.
+.PP
+Referenced by onPlanClick()\&.
+.SS "QList<int> tripPlanner::distanceTo\fC [private]\fP"
+
+.PP
+Definition at line 165 of file tripplanner\&.h\&.
+.SS "QString tripPlanner::id\fC [private]\fP"
+
+.PP
+field member holding tripID 
+.PP
+Definition at line 163 of file tripplanner\&.h\&.
+.SS "\fBDbManager\fP tripPlanner::myDb = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')\fC [private]\fP"
+
+.PP
+assigns DB to predefined PROJECT_PATH constant 
+.PP
+Definition at line 138 of file tripplanner\&.h\&.
+.SS "QStringList tripPlanner::plannedColleges\fC [private]\fP"
+
+.PP
+a string to hold the planned colleges - should be helpful for the plan trip algorithm 
+.PP
+Definition at line 153 of file tripplanner\&.h\&.
+.SS "\fBtripprogress\fP* tripPlanner::progress\fC [private]\fP"
+
+.PP
+Definition at line 167 of file tripplanner\&.h\&.
+.SS "QStringList tripPlanner::selectedColleges\fC [private]\fP"
+
+.PP
+a string to hold the selected colleges - should be helpful for the plan trip algorithm 
+.PP
+Definition at line 148 of file tripplanner\&.h\&.
+.SS "Ui::tripPlanner* tripPlanner::ui\fC [private]\fP"
+
+.PP
+points to \fBtripPlanner\fP UI 
+.PP
+Definition at line 133 of file tripplanner\&.h\&.
+.PP
+Referenced by ~tripPlanner()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D - Project1 - College Touring from the source code\&.

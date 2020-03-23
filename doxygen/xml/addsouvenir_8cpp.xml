@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="addsouvenir_8cpp" kind="file" language="C++">
+    <compoundname>addsouvenir.cpp</compoundname>
+    <includes refid="addsouvenir_8h" local="yes">addsouvenir.h</includes>
+    <includes local="yes">ui_addsouvenir.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>addsouvenir.h</label>
+        <link refid="addsouvenir_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ui_addsouvenir.h</label>
+      </node>
+      <node id="11">
+        <label>confirmpage.h</label>
+        <link refid="confirmpage_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>QSqlDatabase</label>
+      </node>
+      <node id="3">
+        <label>QDialog</label>
+      </node>
+      <node id="7">
+        <label>QDebug</label>
+      </node>
+      <node id="1">
+        <label>addsouvenir.cpp</label>
+        <link refid="addsouvenir_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QAbstractItemModel</label>
+      </node>
+      <node id="10">
+        <label>QSqlQuery</label>
+      </node>
+      <node id="4">
+        <label>dbmanager.h</label>
+        <link refid="dbmanager_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>QtSql</label>
+      </node>
+      <node id="8">
+        <label>QFileInfo</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="addsouvenir_8h" kindref="compound">addsouvenir.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ui_addsouvenir.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="classadd_souvenir_1a754edf8aeeabeb26a3f7cb2831194fdc" refkind="member"><highlight class="normal"><ref refid="classadd_souvenir_1a754edf8aeeabeb26a3f7cb2831194fdc" kindref="member">addSouvenir::addSouvenir</ref>(QWidget<sp/>*parent)<sp/>:</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>QDialog(parent),</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>ui(new<sp/><ref refid="namespace_ui" kindref="compound">Ui</ref>::<ref refid="classadd_souvenir" kindref="compound">addSouvenir</ref>)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" kindref="member">ui</ref>-&gt;setupUi(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classadd_souvenir_1a99c04458b2631c5febcb4cb6c9811736" kindref="member">updateCombo</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classadd_souvenir_1a4264e5a67963e30c43739903d0fc6fca" refkind="member"><highlight class="normal"><ref refid="classadd_souvenir_1a4264e5a67963e30c43739903d0fc6fca" kindref="member">addSouvenir::~addSouvenir</ref>()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" kindref="member">ui</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classadd_souvenir_1a99c04458b2631c5febcb4cb6c9811736" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classadd_souvenir_1a99c04458b2631c5febcb4cb6c9811736" kindref="member">addSouvenir::updateCombo</ref>()</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>QSqlQueryModel*<sp/>model=</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QSqlQueryModel();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>QSqlQuery*<sp/>qry=</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QSqlQuery();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>qry-&gt;prepare(</highlight><highlight class="stringliteral">&quot;SELECT<sp/>DISTINCT<sp/>startCollege<sp/>FROM<sp/>Distances&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(qry-&gt;exec())</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;college1<sp/>table<sp/>updated.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;failed&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>model-&gt;setQuery(*qry);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" kindref="member">ui</ref>-&gt;comboBox-&gt;setModel(model);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classadd_souvenir_1a3e20aa6346cf68e1ec80cb8bdd106392" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classadd_souvenir_1a3e20aa6346cf68e1ec80cb8bdd106392" kindref="member">addSouvenir::on_pushButton_2_released</ref>()</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>hide();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classadd_souvenir_1ad1c3059a79d8df7f357d0a89927c54da" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classadd_souvenir_1ad1c3059a79d8df7f357d0a89927c54da" kindref="member">addSouvenir::on_pushButton_released</ref>()</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classconfirmpage" kindref="compound">confirmpage</ref><sp/>confirm;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>check<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>success<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>collegeName<sp/>=<sp/><ref refid="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" kindref="member">ui</ref>-&gt;comboBox-&gt;currentText();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" kindref="member">ui</ref>-&gt;souEdit-&gt;text()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" kindref="member">ui</ref>-&gt;souEdit-&gt;setPlaceholderText(</highlight><highlight class="stringliteral">&quot;souvinir<sp/>name<sp/>empty!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>success<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classadd_souvenir_1a0848f56796dd5cbe4d914e6fcaf717ef" kindref="member">myDb</ref>.<ref refid="class_db_manager_1acdbad81f27cdb3f8e3bbf656eeeba382" kindref="member">souExists</ref>(<ref refid="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" kindref="member">ui</ref>-&gt;souEdit-&gt;text(),<sp/>collegeName))</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()<sp/>&lt;&lt;<sp/>collegeName;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()<sp/>&lt;&lt;<sp/><ref refid="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" kindref="member">ui</ref>-&gt;souEdit-&gt;text();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" kindref="member">ui</ref>-&gt;souEdit-&gt;setText(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" kindref="member">ui</ref>-&gt;souEdit-&gt;setPlaceholderText(</highlight><highlight class="stringliteral">&quot;souvinir<sp/>name<sp/>exists!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>success<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!success)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>confirm.setModal(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>confirm.exec();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check<sp/>=<sp/>confirm.<ref refid="classconfirmpage_1a14e6471474d987fc336bba295be937d1" kindref="member">getData</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!success<sp/>&amp;&amp;<sp/>check)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classadd_souvenir_1a0848f56796dd5cbe4d914e6fcaf717ef" kindref="member">myDb</ref>.<ref refid="class_db_manager_1aba2fa2af8d63efc7aec75bf690c69a3c" kindref="member">addSou</ref>(collegeName,<ref refid="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" kindref="member">ui</ref>-&gt;souEdit-&gt;text(),<ref refid="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" kindref="member">ui</ref>-&gt;costBox-&gt;value());</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hide();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="addsouvenir.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,679 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classtrip_planner">
+<title>tripPlanner Class Reference</title>
+<indexterm><primary>tripPlanner</primary></indexterm>
+<para>
+
+<para>class recusively planning (calculating) the most efficient trip, manages data tables, checks if data is valid, and begins inital processes of planning a trip </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;tripplanner.h&gt;</computeroutput>
+</para>
+Inheritance diagram for tripPlanner:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_planner__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for tripPlanner:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_planner__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classtrip_planner_1a4f1efc2b2d8bc3be648de0584d7f90ba">tripPlanner</link> (QWidget *parent=nullptr)</para>
+
+<para>default explicit Constructor </para>
+</listitem>
+            <listitem><para><link linkend="_classtrip_planner_1adf0269ba1adf0967b99b524572753371">~tripPlanner</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_planner_1a09ff51f12d0e4eece8f5fd2db9017d38">initializeList</link> ()</para>
+
+<para>initalizes list of colleges and their distances from start colleges, as well as the UI for selecting and pushing colleges via checkBoxVector </para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_planner_1a4d03f6e0f7b127bbc9e8d49b756891c6">selectedCollegeList</link> ()</para>
+
+<para>stores and displays list of user/student selected colleges for current trip in progress/planned </para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_planner_1a76da0bd6a537c328a8f7b7d0b8a5c7c3">planAlgorithm</link> (QString start, int dist)</para>
+
+<para>method that calculates most efficient route between all selected colleges, from start to finish </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classtrip_planner_1aae916f968748c5bca52525e298e27d6c">collegeDoesExist</link> (QString colName)</para>
+
+<para>method that checks whether college in sql col exists </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classtrip_planner_1a2b7a2f1f4418737c5a0d9d40616de033">planDoesExist</link> (QString colName)</para>
+
+<para>method that checks whether plan in sql col exists </para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_planner_1af0aa45427afac7ce03d47edb8eaaf04e">updateCollegeTable</link> (QString start)</para>
+
+<para>updates sql table with college data, with trip starting and ending colleges with their distances </para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_planner_1a8ab9722a483480aa6ddf51a2a90e13c0">updateSouvTable</link> (QString start)</para>
+
+<para>updates sql table with souvenir data, with prices, quantity, souvenier name, and associated college </para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_planner_1afa3d43939dff604fe0efa70618d9d75c">showTrip</link> (QString ID)</para>
+
+<para>updates sql table with tripID data and displays/updates trip data table </para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_planner_1a83f8c209f19db50a76b7ff24eb7527bc">updateCombo</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Slots    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classtrip_planner_1a49b42218c58074af9c51e5cc72811147">ChecboxChanged</link> ()</para>
+
+<para>manages and updates checkbox for user selected colleges </para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_planner_1a41bad123ae9fe695f0142baee4517e82">onPlanClick</link> ()</para>
+
+<para>displays user input and manages initliazation of planning college trips, distances. Calls planAlgorithim showTrip, and updates all tables </para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_planner_1ada9cb769efac5b9bfb321e88b1a02b36">onDisplayClick</link> ()</para>
+
+<para>updates and displays souv and college tables </para>
+</listitem>
+            <listitem><para>void <link linkend="_classtrip_planner_1ae89f2d2671f765b8ae4e6701f682046c">onStartClick</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Ui::tripPlanner * <link linkend="_classtrip_planner_1a5426d7d7375464a717292faf1f3138aa">ui</link></para>
+
+<para>points to <link linkend="_classtrip_planner">tripPlanner</link> UI </para>
+</listitem>
+            <listitem><para><link linkend="_class_db_manager">DbManager</link> <link linkend="_classtrip_planner_1ac3011789615ebab31141a9ad9a642dc5">myDb</link> = <link linkend="_class_db_manager">DbManager</link>(PROJECT_PATH + &quot;/college.db&quot;)</para>
+
+<para>assigns DB to predefined PROJECT_PATH constant </para>
+</listitem>
+            <listitem><para>QVector&lt; QCheckBox * &gt; <link linkend="_classtrip_planner_1ac59a255ea747293cedcf60e3817f7496">checkBoxVector</link></para>
+
+<para>vector for managing user selecting colleges via checkbox </para>
+</listitem>
+            <listitem><para>QStringList <link linkend="_classtrip_planner_1a1884c3bf6bb1b09119c7670e1c5ae395">selectedColleges</link></para>
+
+<para>a string to hold the selected colleges - should be helpful for the plan trip algorithm </para>
+</listitem>
+            <listitem><para>QStringList <link linkend="_classtrip_planner_1ab0953b84602b02cebcdf722294f6d4de">plannedColleges</link></para>
+
+<para>a string to hold the planned colleges - should be helpful for the plan trip algorithm </para>
+</listitem>
+            <listitem><para>int <link linkend="_classtrip_planner_1a97602084ee12e0cc86907ffb9bb5bc68">distance</link></para>
+
+<para>field member holding distance </para>
+</listitem>
+            <listitem><para>QString <link linkend="_classtrip_planner_1a9d8d4e58496c284dabe31279407f5ce3">id</link></para>
+
+<para>field member holding tripID </para>
+</listitem>
+            <listitem><para>QList&lt; int &gt; <link linkend="_classtrip_planner_1a34865f6c097f3ed90791e6a519b5c5d1">distanceTo</link></para>
+</listitem>
+            <listitem><para><link linkend="_classtripprogress">tripprogress</link> * <link linkend="_classtrip_planner_1a0d904628227e4c833391fc5cb7d187b4">progress</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>class recusively planning (calculating) the most efficient trip, manages data tables, checks if data is valid, and begins inital processes of planning a trip </para>
+
+
+
+<para><link linkend="_classtrip_planner">tripPlanner</link> manages the calculations for creating the most efficient trip for the student this updates all data tables for colleges, their names and specific data values, and souveniers, with their respectives data values </para>
+<para>
+Definition at line 30 of file tripplanner.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classtrip_planner_1a4f1efc2b2d8bc3be648de0584d7f90ba"/>    <section>
+    <title>tripPlanner()</title>
+<indexterm><primary>tripPlanner</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>tripPlanner</secondary></indexterm>
+<para><computeroutput>tripPlanner::tripPlanner (QWidget * parent = <computeroutput>nullptr</computeroutput>
+)<computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>default explicit Constructor </para>
+</para>
+
+<para>Constructor sets up ui for <link linkend="_classtrip_planner">tripPlanner</link> and executes initalizeList(), and <link linkend="_classtrip_planner_1a83f8c209f19db50a76b7ff24eb7527bc">updateCombo()</link> 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>*parent</entry>
+                                <entry>
+<para>- for QDialog </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 6 of file tripplanner.cpp.</para>
+<para>
+References initializeList(), and updateCombo().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_planner_a4f1efc2b2d8bc3be648de0584d7f90ba_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classtrip_planner_1adf0269ba1adf0967b99b524572753371"/>    <section>
+    <title>~tripPlanner()</title>
+<indexterm><primary>~tripPlanner</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>~tripPlanner</secondary></indexterm>
+<para><computeroutput>tripPlanner::~tripPlanner ( )</computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+
+<para>Close the <link linkend="_classtrip_planner">tripPlanner</link> UI </para>
+<para>
+Definition at line 16 of file tripplanner.cpp.</para>
+<para>
+References ui.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classtrip_planner_1a49b42218c58074af9c51e5cc72811147"/>    <section>
+    <title>ChecboxChanged</title>
+<indexterm><primary>ChecboxChanged</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>ChecboxChanged</secondary></indexterm>
+<para><computeroutput>void tripPlanner::ChecboxChanged ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>manages and updates checkbox for user selected colleges </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>none- void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 81 of file tripplanner.cpp.</para>
+    </section><anchor xml:id="_classtrip_planner_1aae916f968748c5bca52525e298e27d6c"/>    <section>
+    <title>collegeDoesExist()</title>
+<indexterm><primary>collegeDoesExist</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>collegeDoesExist</secondary></indexterm>
+<para><computeroutput>bool tripPlanner::collegeDoesExist (QString colName)</computeroutput></para><para>
+
+<para>method that checks whether college in sql col exists </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>bool - true or false(whether data exists) </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>colname</entry>
+                                <entry>
+<para>- college col to be checked </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 241 of file tripplanner.cpp.</para>
+    </section><anchor xml:id="_classtrip_planner_1a09ff51f12d0e4eece8f5fd2db9017d38"/>    <section>
+    <title>initializeList()</title>
+<indexterm><primary>initializeList</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>initializeList</secondary></indexterm>
+<para><computeroutput>void tripPlanner::initializeList ( )</computeroutput></para><para>
+
+<para>initalizes list of colleges and their distances from start colleges, as well as the UI for selecting and pushing colleges via checkBoxVector </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>nothing - void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 42 of file tripplanner.cpp.</para>
+<para>
+Referenced by tripPlanner().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_planner_a09ff51f12d0e4eece8f5fd2db9017d38_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classtrip_planner_1ada9cb769efac5b9bfb321e88b1a02b36"/>    <section>
+    <title>onDisplayClick</title>
+<indexterm><primary>onDisplayClick</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>onDisplayClick</secondary></indexterm>
+<para><computeroutput>void tripPlanner::onDisplayClick ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>updates and displays souv and college tables </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>none- void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 335 of file tripplanner.cpp.</para>
+    </section><anchor xml:id="_classtrip_planner_1a41bad123ae9fe695f0142baee4517e82"/>    <section>
+    <title>onPlanClick</title>
+<indexterm><primary>onPlanClick</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>onPlanClick</secondary></indexterm>
+<para><computeroutput>void tripPlanner::onPlanClick ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>displays user input and manages initliazation of planning college trips, distances. Calls planAlgorithim showTrip, and updates all tables </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>none- void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 147 of file tripplanner.cpp.</para>
+<para>
+References distance, and selectedCollegeList().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_planner_a41bad123ae9fe695f0142baee4517e82_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classtrip_planner_1ae89f2d2671f765b8ae4e6701f682046c"/>    <section>
+    <title>onStartClick</title>
+<indexterm><primary>onStartClick</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>onStartClick</secondary></indexterm>
+<para><computeroutput>void tripPlanner::onStartClick ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 346 of file tripplanner.cpp.</para>
+<para>
+References tripprogress::on_souvTable_clicked().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_planner_ae89f2d2671f765b8ae4e6701f682046c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classtrip_planner_1a76da0bd6a537c328a8f7b7d0b8a5c7c3"/>    <section>
+    <title>planAlgorithm()</title>
+<indexterm><primary>planAlgorithm</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>planAlgorithm</secondary></indexterm>
+<para><computeroutput>void tripPlanner::planAlgorithm (QString start, int dist)</computeroutput></para><para>
+
+<para>method that calculates most efficient route between all selected colleges, from start to finish </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>nothing - void </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>start</entry>
+                                <entry>
+<para>- starting destination </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>dist</entry>
+                                <entry>
+<para>- stores distance between destination for recursive </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 201 of file tripplanner.cpp.</para>
+    </section><anchor xml:id="_classtrip_planner_1a2b7a2f1f4418737c5a0d9d40616de033"/>    <section>
+    <title>planDoesExist()</title>
+<indexterm><primary>planDoesExist</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>planDoesExist</secondary></indexterm>
+<para><computeroutput>bool tripPlanner::planDoesExist (QString colName)</computeroutput></para><para>
+
+<para>method that checks whether plan in sql col exists </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>bool - true or false(whether data exists) </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>colname</entry>
+                                <entry>
+<para>- plan col to be checked </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 254 of file tripplanner.cpp.</para>
+    </section><anchor xml:id="_classtrip_planner_1a4d03f6e0f7b127bbc9e8d49b756891c6"/>    <section>
+    <title>selectedCollegeList()</title>
+<indexterm><primary>selectedCollegeList</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>selectedCollegeList</secondary></indexterm>
+<para><computeroutput>void tripPlanner::selectedCollegeList ( )</computeroutput></para><para>
+
+<para>stores and displays list of user/student selected colleges for current trip in progress/planned </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>nothing - void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 116 of file tripplanner.cpp.</para>
+<para>
+Referenced by onPlanClick().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_planner_a4d03f6e0f7b127bbc9e8d49b756891c6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classtrip_planner_1afa3d43939dff604fe0efa70618d9d75c"/>    <section>
+    <title>showTrip()</title>
+<indexterm><primary>showTrip</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>showTrip</secondary></indexterm>
+<para><computeroutput>void tripPlanner::showTrip (QString ID)</computeroutput></para><para>
+
+<para>updates sql table with tripID data and displays/updates trip data table </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID</entry>
+                                <entry>
+<para>- tripID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>none- void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 312 of file tripplanner.cpp.</para>
+    </section><anchor xml:id="_classtrip_planner_1af0aa45427afac7ce03d47edb8eaaf04e"/>    <section>
+    <title>updateCollegeTable()</title>
+<indexterm><primary>updateCollegeTable</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>updateCollegeTable</secondary></indexterm>
+<para><computeroutput>void tripPlanner::updateCollegeTable (QString start)</computeroutput></para><para>
+
+<para>updates sql table with college data, with trip starting and ending colleges with their distances </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>start, starting</entry>
+                                <entry>
+<para>college for trip </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>none- void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 267 of file tripplanner.cpp.</para>
+    </section><anchor xml:id="_classtrip_planner_1a83f8c209f19db50a76b7ff24eb7527bc"/>    <section>
+    <title>updateCombo()</title>
+<indexterm><primary>updateCombo</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>updateCombo</secondary></indexterm>
+<para><computeroutput>void tripPlanner::updateCombo ( )</computeroutput></para><para>
+Definition at line 21 of file tripplanner.cpp.</para>
+<para>
+Referenced by tripPlanner().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classtrip_planner_a83f8c209f19db50a76b7ff24eb7527bc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classtrip_planner_1a8ab9722a483480aa6ddf51a2a90e13c0"/>    <section>
+    <title>updateSouvTable()</title>
+<indexterm><primary>updateSouvTable</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>updateSouvTable</secondary></indexterm>
+<para><computeroutput>void tripPlanner::updateSouvTable (QString start)</computeroutput></para><para>
+
+<para>updates sql table with souvenir data, with prices, quantity, souvenier name, and associated college </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>start, starting</entry>
+                                <entry>
+<para>college for trip </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>none- void </para>
+</formalpara>
+</para>
+<para>
+Definition at line 288 of file tripplanner.cpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classtrip_planner_1ac59a255ea747293cedcf60e3817f7496"/>    <section>
+    <title>checkBoxVector</title>
+<indexterm><primary>checkBoxVector</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>checkBoxVector</secondary></indexterm>
+<para><computeroutput>QVector&lt;QCheckBox*&gt; tripPlanner::checkBoxVector<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>vector for managing user selecting colleges via checkbox </para>
+</para>
+<para>
+Definition at line 143 of file tripplanner.h.</para>
+    </section><anchor xml:id="_classtrip_planner_1a97602084ee12e0cc86907ffb9bb5bc68"/>    <section>
+    <title>distance</title>
+<indexterm><primary>distance</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>distance</secondary></indexterm>
+<para><computeroutput>int tripPlanner::distance<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>field member holding distance </para>
+</para>
+<para>
+Definition at line 158 of file tripplanner.h.</para>
+<para>
+Referenced by onPlanClick().</para>
+    </section><anchor xml:id="_classtrip_planner_1a34865f6c097f3ed90791e6a519b5c5d1"/>    <section>
+    <title>distanceTo</title>
+<indexterm><primary>distanceTo</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>distanceTo</secondary></indexterm>
+<para><computeroutput>QList&lt;int&gt; tripPlanner::distanceTo<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 165 of file tripplanner.h.</para>
+    </section><anchor xml:id="_classtrip_planner_1a9d8d4e58496c284dabe31279407f5ce3"/>    <section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>QString tripPlanner::id<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>field member holding tripID </para>
+</para>
+<para>
+Definition at line 163 of file tripplanner.h.</para>
+    </section><anchor xml:id="_classtrip_planner_1ac3011789615ebab31141a9ad9a642dc5"/>    <section>
+    <title>myDb</title>
+<indexterm><primary>myDb</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>myDb</secondary></indexterm>
+<para><computeroutput><link linkend="_class_db_manager">DbManager</link> tripPlanner::myDb = <link linkend="_class_db_manager">DbManager</link>(PROJECT_PATH + &quot;/college.db&quot;)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>assigns DB to predefined PROJECT_PATH constant </para>
+</para>
+<para>
+Definition at line 138 of file tripplanner.h.</para>
+    </section><anchor xml:id="_classtrip_planner_1ab0953b84602b02cebcdf722294f6d4de"/>    <section>
+    <title>plannedColleges</title>
+<indexterm><primary>plannedColleges</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>plannedColleges</secondary></indexterm>
+<para><computeroutput>QStringList tripPlanner::plannedColleges<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>a string to hold the planned colleges - should be helpful for the plan trip algorithm </para>
+</para>
+<para>
+Definition at line 153 of file tripplanner.h.</para>
+    </section><anchor xml:id="_classtrip_planner_1a0d904628227e4c833391fc5cb7d187b4"/>    <section>
+    <title>progress</title>
+<indexterm><primary>progress</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>progress</secondary></indexterm>
+<para><computeroutput><link linkend="_classtripprogress">tripprogress</link>* tripPlanner::progress<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 167 of file tripplanner.h.</para>
+    </section><anchor xml:id="_classtrip_planner_1a1884c3bf6bb1b09119c7670e1c5ae395"/>    <section>
+    <title>selectedColleges</title>
+<indexterm><primary>selectedColleges</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>selectedColleges</secondary></indexterm>
+<para><computeroutput>QStringList tripPlanner::selectedColleges<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>a string to hold the selected colleges - should be helpful for the plan trip algorithm </para>
+</para>
+<para>
+Definition at line 148 of file tripplanner.h.</para>
+    </section><anchor xml:id="_classtrip_planner_1a5426d7d7375464a717292faf1f3138aa"/>    <section>
+    <title>ui</title>
+<indexterm><primary>ui</primary><secondary>tripPlanner</secondary></indexterm>
+<indexterm><primary>tripPlanner</primary><secondary>ui</secondary></indexterm>
+<para><computeroutput>Ui::tripPlanner* tripPlanner::ui<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>points to <link linkend="_classtrip_planner">tripPlanner</link> UI </para>
+</para>
+<para>
+Definition at line 133 of file tripplanner.h.</para>
+<para>
+Referenced by ~tripPlanner().</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_tripplanner_8h">tripplanner.h</link><link linkend="_tripplanner_8cpp">tripplanner.cpp</link></section>
+</section>

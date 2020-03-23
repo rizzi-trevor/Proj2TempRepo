@@ -1,0 +1,302 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="loginwindow_8cpp" kind="file" language="C++">
+    <compoundname>loginwindow.cpp</compoundname>
+    <includes refid="loginwindow_8h" local="yes">loginwindow.h</includes>
+    <includes local="yes">ui_loginwindow.h</includes>
+    <includes refid="dbmanager_8h" local="yes">dbmanager.h</includes>
+    <includes refid="tripplanner_8h" local="yes">tripplanner.h</includes>
+    <incdepgraph>
+      <node id="13">
+        <label>addsouvenir.h</label>
+        <link refid="addsouvenir_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>QList</label>
+      </node>
+      <node id="19">
+        <label>tripprogress.h</label>
+        <link refid="tripprogress_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QMainWindow</label>
+      </node>
+      <node id="15">
+        <label>tripplanner.h</label>
+        <link refid="tripplanner_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>confirmpage.h</label>
+        <link refid="confirmpage_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>tripsummary.h</label>
+        <link refid="tripsummary_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>loginwindow.cpp</label>
+        <link refid="loginwindow_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>QSqlDatabase</label>
+      </node>
+      <node id="12">
+        <label>QDialog</label>
+      </node>
+      <node id="7">
+        <label>QDebug</label>
+      </node>
+      <node id="17">
+        <label>qcheckbox.h</label>
+      </node>
+      <node id="5">
+        <label>QAbstractItemModel</label>
+      </node>
+      <node id="10">
+        <label>QSqlQuery</label>
+      </node>
+      <node id="4">
+        <label>dbmanager.h</label>
+        <link refid="dbmanager_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>QPixmap</label>
+      </node>
+      <node id="6">
+        <label>QtSql</label>
+      </node>
+      <node id="2">
+        <label>loginwindow.h</label>
+        <link refid="loginwindow_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>QFileInfo</label>
+      </node>
+      <node id="11">
+        <label>adminwindow.h</label>
+        <link refid="adminwindow_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>ui_loginwindow.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="loginwindow_8h" kindref="compound">loginwindow.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ui_loginwindow.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dbmanager_8h" kindref="compound">dbmanager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tripplanner_8h" kindref="compound">tripplanner.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_login_window_1aa4c04d26b299de00156bbf3c32b2a082" refkind="member"><highlight class="normal"><ref refid="class_login_window_1aa4c04d26b299de00156bbf3c32b2a082" kindref="member">LoginWindow::LoginWindow</ref>(QWidget<sp/>*parent)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>QMainWindow(parent)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>ui(new<sp/><ref refid="namespace_ui" kindref="compound">Ui</ref>::<ref refid="class_login_window" kindref="compound">LoginWindow</ref>)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" kindref="member">ui</ref>-&gt;setupUi(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Running<sp/>instances<sp/>just<sp/>to<sp/>test<sp/>the<sp/>database<sp/>creation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Makes<sp/>necessary<sp/>tables<sp/>from<sp/>input<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//myDb.clearDb();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//myDb.InitCollegeList(PROJECT_PATH<sp/>+<sp/>&quot;/College<sp/>Campus<sp/>Distances<sp/>and<sp/>Souvenirs.xlsx&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//myDb.initSouvenirList(PROJECT_PATH<sp/>+<sp/>&quot;/College<sp/>Campus<sp/>Distances<sp/>and<sp/>Souvenirs.xlsx&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//myDb.initDistanceList(PROJECT_PATH<sp/>+<sp/>&quot;/College<sp/>Campus<sp/>Distances<sp/>and<sp/>Souvenirs.xlsx&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_login_window_1addd8a2b9a2903d59c13b68ca43d142e6" kindref="member">myDb</ref>.<ref refid="class_db_manager_1a42e94ab2a5751c839a6d57221d3d4e99" kindref="member">createTripTable</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>tables<sp/>with<sp/>college<sp/>info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="class_login_window_1addd8a2b9a2903d59c13b68ca43d142e6" kindref="member">myDb</ref>.<ref refid="class_db_manager_1ac04baba8f5d5197f8bcd9230393501de" kindref="member">isOpen</ref>())</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" kindref="member">ui</ref>-&gt;dbStatus-&gt;setText(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>open<sp/>database!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" kindref="member">ui</ref>-&gt;dbStatus-&gt;setText(</highlight><highlight class="stringliteral">&quot;Connected...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>QPixmap<sp/>pix(PROJECT_PATH<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/logo.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" kindref="member">ui</ref>-&gt;logoLabel-&gt;setPixmap(pix);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_login_window_1a0c49fe788dcce29aa50e7d974e1ad158" refkind="member"><highlight class="normal"><ref refid="class_login_window_1a0c49fe788dcce29aa50e7d974e1ad158" kindref="member">LoginWindow::~LoginWindow</ref>()</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" kindref="member">ui</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_login_window_1abe037678032bbd0584251373cc6670b9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_login_window_1abe037678032bbd0584251373cc6670b9" kindref="member">LoginWindow::onPlanClick</ref>()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;hide();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtrip_planner" kindref="compound">tripPlanner</ref><sp/>*planner<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner" kindref="compound">tripPlanner</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>planner-&gt;show();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_login_window_1a99244d50f34fe69cceeee38151f16df9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_login_window_1a99244d50f34fe69cceeee38151f16df9" kindref="member">LoginWindow::onLoginClick</ref>()</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>passWord;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>userName;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>userName<sp/>=<sp/>this-&gt;<ref refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" kindref="member">ui</ref>-&gt;Username-&gt;text();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>passWord<sp/>=<sp/>this-&gt;<ref refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" kindref="member">ui</ref>-&gt;Password-&gt;text();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//check<sp/>for<sp/>admin<sp/>login<sp/>-&gt;<sp/>open<sp/>admin<sp/>window</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//check<sp/>for<sp/>reg<sp/>login<sp/>-&gt;open<sp/>user<sp/>window</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//***************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(passWord<sp/>==<sp/><ref refid="class_login_window_1addd8a2b9a2903d59c13b68ca43d142e6" kindref="member">myDb</ref>.<ref refid="class_db_manager_1a5d730ddded1f92e418a9c88e570b2117" kindref="member">getPassword</ref>(userName))</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_login_window_1addd8a2b9a2903d59c13b68ca43d142e6" kindref="member">myDb</ref>.<ref refid="class_db_manager_1a3ef6d1b5c19b8192420ba8743c7172ef" kindref="member">checkAdmin</ref>(userName))</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;hide();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_login_window_1a0bd2fc8ba5af5142895306aef730bca8" kindref="member">admin</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_admin_window" kindref="compound">AdminWindow</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_login_window_1a0bd2fc8ba5af5142895306aef730bca8" kindref="member">admin</ref>-&gt;show();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;User<sp/>login<sp/>succuss&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;hide();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrip_planner" kindref="compound">tripPlanner</ref><sp/>*planner<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner" kindref="compound">tripPlanner</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>planner-&gt;show();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" kindref="member">ui</ref>-&gt;invalidLabel-&gt;setText(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>Credentials!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="class_login_window_1af307b9c8ab38cb4f7a5785d181e19533" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_login_window_1af307b9c8ab38cb4f7a5785d181e19533" kindref="member">LoginWindow::onCreateClick</ref>()</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>passWord;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>userName;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>userName<sp/>=<sp/>this-&gt;<ref refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" kindref="member">ui</ref>-&gt;Username-&gt;text();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>passWord<sp/>=<sp/>this-&gt;<ref refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" kindref="member">ui</ref>-&gt;Password-&gt;text();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(userName<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>passWord!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_login_window_1addd8a2b9a2903d59c13b68ca43d142e6" kindref="member">myDb</ref>.<ref refid="class_db_manager_1a8f06e6e0365900ada1bf178576299c58" kindref="member">addUser</ref>(userName,<sp/>passWord);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//now<sp/>open<sp/>the<sp/>user<sp/>window</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;hide();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//myUser<sp/>=<sp/>new<sp/>userWindow(this);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//myUser-&gt;show();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="class_login_window_1a6fa354fcb799ca0afb2ac9cf48b18a93" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_login_window_1a6fa354fcb799ca0afb2ac9cf48b18a93" kindref="member">LoginWindow::onClearClick</ref>()</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" kindref="member">ui</ref>-&gt;Username-&gt;setText(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" kindref="member">ui</ref>-&gt;Password-&gt;setText(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" kindref="member">ui</ref>-&gt;invalidLabel-&gt;setText(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="class_login_window_1ab0218fdb5f9c0a0f4c8c8fa4e7256ca6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_login_window_1ab0218fdb5f9c0a0f4c8c8fa4e7256ca6" kindref="member">LoginWindow::on_Password_returnPressed</ref>()</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_login_window_1a99244d50f34fe69cceeee38151f16df9" kindref="member">onLoginClick</ref>();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="class_login_window_1a589504e28cc50062c30d6a26ad444fb3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_login_window_1a589504e28cc50062c30d6a26ad444fb3" kindref="member">LoginWindow::on_Username_returnPressed</ref>()</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_login_window_1a99244d50f34fe69cceeee38151f16df9" kindref="member">onLoginClick</ref>();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="class_login_window_1a4072c1992a805b45728be2be1ad44af9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_login_window_1a4072c1992a805b45728be2be1ad44af9" kindref="member">LoginWindow::on_loginButton_pressed</ref>()</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_login_window_1a99244d50f34fe69cceeee38151f16df9" kindref="member">onLoginClick</ref>();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="loginwindow.cpp"/>
+  </compounddef>
+</doxygen>

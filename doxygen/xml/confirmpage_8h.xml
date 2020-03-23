@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="confirmpage_8h" kind="file" language="C++">
+    <compoundname>confirmpage.h</compoundname>
+    <includes local="no">QDialog</includes>
+    <includes local="yes">QDebug</includes>
+    <includedby refid="addsouvenir_8h" local="yes">addsouvenir.h</includedby>
+    <includedby refid="adminwindow_8cpp" local="yes">adminwindow.cpp</includedby>
+    <includedby refid="tripprogress_8h" local="yes">tripprogress.h</includedby>
+    <includedby refid="confirmpage_8cpp" local="yes">confirmpage.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>confirmpage.h</label>
+        <link refid="confirmpage_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QDialog</label>
+      </node>
+      <node id="3">
+        <label>QDebug</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13">
+        <label>confirmpage.cpp</label>
+        <link refid="confirmpage_8cpp"/>
+      </node>
+      <node id="11">
+        <label>tripplanner.cpp</label>
+        <link refid="tripplanner_8cpp"/>
+      </node>
+      <node id="8">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="2">
+        <label>addsouvenir.h</label>
+        <link refid="addsouvenir_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>tripprogress.h</label>
+        <link refid="tripprogress_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>tripprogress.cpp</label>
+        <link refid="tripprogress_8cpp"/>
+      </node>
+      <node id="5">
+        <label>adminwindow.cpp</label>
+        <link refid="adminwindow_8cpp"/>
+      </node>
+      <node id="10">
+        <label>tripplanner.h</label>
+        <link refid="tripplanner_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>confirmpage.h</label>
+        <link refid="confirmpage_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>loginwindow.cpp</label>
+        <link refid="loginwindow_8cpp"/>
+      </node>
+      <node id="3">
+        <label>addsouvenir.cpp</label>
+        <link refid="addsouvenir_8cpp"/>
+      </node>
+      <node id="6">
+        <label>loginwindow.h</label>
+        <link refid="loginwindow_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>adminwindow.h</label>
+        <link refid="adminwindow_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classconfirmpage" prot="public">confirmpage</innerclass>
+    <innernamespace refid="namespace_ui">Ui</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CONFIRMPAGE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONFIRMPAGE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDialog&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;QDebug&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_ui" kindref="compound">Ui</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classconfirmpage" kindref="compound">confirmpage</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classconfirmpage" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classconfirmpage" kindref="compound">confirmpage</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QDialog</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classconfirmpage_1aa9d064a0417fb18b27e215178c654e1a" kindref="member">confirmpage</ref>(QWidget<sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classconfirmpage_1a9ab63cac70f11a102709bf142ecb03df" kindref="member">~confirmpage</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classconfirmpage_1aa9d064a0417fb18b27e215178c654e1a" kindref="member">confirmpage</ref>(QWidget<sp/>*parent,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;returnAnswer);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classconfirmpage_1a14e6471474d987fc336bba295be937d1" kindref="member">getData</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classconfirmpage_1a63d2524a9929f2ee215da9a0ae41b686" kindref="member">on_okButton_released</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classconfirmpage_1aa2fa168c098e4d1238a72ac021fbd35e" kindref="member">on_cancelButton_released</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="67" refid="classconfirmpage_1a70abbfbae1f18f62351cdb0bcbe25370" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Ui::confirmpage<sp/>*<ref refid="classconfirmpage_1a70abbfbae1f18f62351cdb0bcbe25370" kindref="member">ui</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classconfirmpage_1a2cd5a13aaedf11aab6f14eedebaf17c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classconfirmpage_1a2cd5a13aaedf11aab6f14eedebaf17c3" kindref="member">answer</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/*/////////////////////</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"></highlight></codeline>
+<codeline lineno="78"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/><sp/><sp/>confirmpage<sp/>confirm;</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/><sp/><sp/><sp/>bool<sp/>check<sp/>=<sp/>false;</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"></highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/><sp/><sp/>confirm.setModal(true);</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/><sp/><sp/><sp/>confirm.exec();</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/>check<sp/>=<sp/>confirm.getData();</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"></highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>check;</highlight></codeline>
+<codeline lineno="87"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"></highlight></codeline>
+<codeline lineno="89"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CONFIRMPAGE_H</highlight></codeline>
+    </programlisting>
+    <location file="confirmpage.h"/>
+  </compounddef>
+</doxygen>

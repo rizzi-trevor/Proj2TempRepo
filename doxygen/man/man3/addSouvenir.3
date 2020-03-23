@@ -1,0 +1,123 @@
+.TH "addSouvenir" 3 "Mon Mar 23 2020" "Version 1" "CS1D - Project1 - College Touring" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+addSouvenir
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <addsouvenir\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBaddSouvenir\fP (QWidget *parent=nullptr)"
+.br
+.RI "explicit default Constructor "
+.ti -1c
+.RI "\fB~addSouvenir\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "void \fBupdateCombo\fP ()"
+.br
+.RI "Destructor\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_pushButton_2_released\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_pushButton_released\fP ()"
+.br
+.RI "executes process for adding a souvenir to database "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::addSouvenir * \fBui\fP"
+.br
+.RI "points to \fBaddSouvenir\fP UI "
+.ti -1c
+.RI "\fBDbManager\fP \fBmyDb\fP = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')"
+.br
+.RI "assigns DB to predefined PROJECT_PATH constant "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 12 of file addsouvenir\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "addSouvenir::addSouvenir (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+explicit default Constructor Constructor intializes UI for \fBaddSouvenir\fP calls \fBupdateCombo()\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI*parent\fP - for QDialog 
+.RE
+.PP
+
+.PP
+Definition at line 4 of file addsouvenir\&.cpp\&.
+.PP
+References updateCombo()\&.
+.SS "addSouvenir::~addSouvenir ()"
+
+.PP
+Destructor\&. Close the \fBaddSouvenir\fP UI 
+.PP
+Definition at line 13 of file addsouvenir\&.cpp\&.
+.PP
+References ui\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void addSouvenir::on_pushButton_2_released ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 40 of file addsouvenir\&.cpp\&.
+.PP
+Referenced by AdminWindow::on_addSouvenir_released()\&.
+.SS "void addSouvenir::on_pushButton_released ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+executes process for adding a souvenir to database Close the loginwindow UI 
+.PP
+Definition at line 45 of file addsouvenir\&.cpp\&.
+.PP
+References confirmpage::getData(), and confirmpage::on_okButton_released()\&.
+.SS "void addSouvenir::updateCombo ()"
+
+.PP
+Destructor\&. updates sql query for startcollege and sets ui Model 
+.PP
+Definition at line 18 of file addsouvenir\&.cpp\&.
+.PP
+Referenced by addSouvenir()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDbManager\fP addSouvenir::myDb = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')\fC [private]\fP"
+
+.PP
+assigns DB to predefined PROJECT_PATH constant 
+.PP
+Definition at line 60 of file addsouvenir\&.h\&.
+.SS "Ui::addSouvenir* addSouvenir::ui\fC [private]\fP"
+
+.PP
+points to \fBaddSouvenir\fP UI 
+.PP
+Definition at line 55 of file addsouvenir\&.h\&.
+.PP
+Referenced by ~addSouvenir()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D - Project1 - College Touring from the source code\&.

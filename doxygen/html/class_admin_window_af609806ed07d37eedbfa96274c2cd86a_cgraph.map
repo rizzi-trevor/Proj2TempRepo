@@ -1,0 +1,5 @@
+<map id="AdminWindow::on_addSouvenir_released" name="AdminWindow::on_addSouvenir_released">
+<area shape="rect" id="node1" title="executes addSouvenir class obj" alt="" coords="5,39,209,80"/>
+<area shape="rect" id="node2" href="$classadd_souvenir.html#a3e20aa6346cf68e1ec80cb8bdd106392" title=" " alt="" coords="265,5,451,47"/>
+<area shape="rect" id="node3" href="$class_admin_window.html#aa2e06bdd9305f8c591cf97e8c580f293" title="updates sql data table for college souvenirs when called" alt="" coords="257,71,459,112"/>
+</map>

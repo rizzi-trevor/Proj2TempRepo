@@ -1,0 +1,574 @@
+.TH "DbManager" 3 "Mon Mar 23 2020" "Version 1" "CS1D - Project1 - College Touring" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DbManager \- SQL Database Manager class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dbmanager\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDbManager\fP (const QString &path)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "void \fBInitCollegeList\fP (const QString &path)"
+.br
+.RI "initalizes sql data table for college and inputs all data from path parameter file location "
+.ti -1c
+.RI "void \fBinitSouvenirList\fP (const QString &path)"
+.br
+.RI "initalizes sql data table for souvenir and inputs all data from path parameter file location "
+.ti -1c
+.RI "void \fBinitDistanceList\fP (const QString &path)"
+.br
+.RI "initalizes sql data table for college distances and inputs all data from path parameter file location "
+.ti -1c
+.RI "void \fBaddUser\fP (const QString &user, const QString &pass)"
+.br
+.RI "adds a user to DB for future logins "
+.ti -1c
+.RI "void \fBaddSou\fP (const QString &college, const QString &souName, const double &cost)"
+.br
+.RI "adds a souv to DB for data tables "
+.ti -1c
+.RI "void \fBremoveSou\fP (const QString &souName, const QString &college)"
+.br
+.RI "removes a souv to DB for data tables "
+.ti -1c
+.RI "void \fBupdateSou\fP (const QString &souName, const QString &college, const double &spin, const QString &newSouvenir)"
+.br
+.RI "updates souv to DB for data tables with new values "
+.ti -1c
+.RI "void \fBaddCart\fP (const QString trip, const QString college, const QString souvenir, const double price, const int count)"
+.br
+.RI "adds souv to cart "
+.ti -1c
+.RI "void \fBupdateCart\fP (const QString college, const QString souvenir, const int count)"
+.br
+.RI "updates total items in carts with accurate corresponding data "
+.ti -1c
+.RI "int \fBcartQuantity\fP (const QString college, const QString souvenir)"
+.br
+.RI "returns quanitity of items in cart "
+.ti -1c
+.RI "void \fBremoveCart\fP (const QString college, const QString souvenir)"
+.br
+.RI "delete item from cart "
+.ti -1c
+.RI "void \fBaddPurchase\fP ()"
+.br
+.RI "adds purchase to DB and cart "
+.ti -1c
+.RI "void \fBresetCart\fP ()"
+.br
+.RI "clear all items from cart "
+.ti -1c
+.RI "void \fBaddColleges\fP (const QString &path)"
+.br
+.RI "add colleges from file to DB "
+.ti -1c
+.RI "bool \fBuserExists\fP (const QString &user)"
+.br
+.RI "checks to see if the username exists "
+.ti -1c
+.RI "bool \fBsouExists\fP (const QString &name, const QString &college)"
+.br
+.RI "checks to see if the souv exists "
+.ti -1c
+.RI "void \fBclearDb\fP ()"
+.br
+.RI "clears database of all data "
+.ti -1c
+.RI "bool \fBisOpen\fP () const"
+.br
+.RI "checks to see if \fBDbManager\fP is open "
+.ti -1c
+.RI "bool \fBcheckAdmin\fP (const QString &username) const"
+.br
+.RI "checks to see if the username entered is an admin "
+.ti -1c
+.RI "QString \fBgetPassword\fP (const QString &username) const"
+.br
+.RI "Gets password from user\&. "
+.ti -1c
+.RI "void \fBaddTrip\fP (QString tripID, QString plannedCollege, int index, int distanceTo)"
+.br
+.RI "adds a trip to appropiate dataTables "
+.ti -1c
+.RI "bool \fBtripIdExists\fP (QString tripID)"
+.br
+.RI "returns whether tripID data exists in DB "
+.ti -1c
+.RI "void \fBcreateTripTable\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QSqlDatabase \fBmyDB\fP"
+.br
+.RI "decalre database field memberobj "
+.in -1c
+.SH "Detailed Description"
+.PP 
+SQL Database Manager class\&. 
+
+\fBDbManager\fP sets up the connection with SQL database and performs some basics queries\&. The class requires existing SQL database\&. You can create it with sqlite:
+.IP "1." 4
+$ sqlite3 people\&.db
+.IP "2." 4
+sqilte> CREATE TABLE people(ids integer primary key, name text);
+.IP "3." 4
+sqlite> \&.quit 
+.PP
+
+.PP
+Definition at line 33 of file dbmanager\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DbManager::DbManager (const QString & path)"
+
+.PP
+Constructor\&. Constructor sets up connection with db and opens it 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP - absolute path to db file 
+.RE
+.PP
+
+.PP
+Definition at line 3 of file dbmanager\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void DbManager::addCart (const QString trip, const QString college, const QString souvenir, const double price, const int count)"
+
+.PP
+adds souv to cart 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcount\fP - quantity of items 
+.br
+\fIsouvenir\fP - name of souv 
+.br
+\fIprice\fP - cost of souv 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 277 of file dbmanager\&.cpp\&.
+.SS "void DbManager::addColleges (const QString & path)"
+
+.PP
+add colleges from file to DB 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP - absolute path to db file souv 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 534 of file dbmanager\&.cpp\&.
+.SS "void DbManager::addPurchase ()"
+
+.PP
+adds purchase to DB and cart 
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 247 of file dbmanager\&.cpp\&.
+.SS "void DbManager::addSou (const QString & college, const QString & souName, const double & cost)"
+
+.PP
+adds a souv to DB for data tables 
+.PP
+\fBParameters\fP
+.RS 4
+\fI&college\fP - college containing souv 
+.br
+\fI&souName\fP - name of souv 
+.br
+\fI&cost\fP - cost of souv 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 299 of file dbmanager\&.cpp\&.
+.SS "void DbManager::addTrip (QString tripID, QString plannedCollege, int index, int distanceTo)"
+
+.PP
+adds a trip to appropiate dataTables 
+.PP
+\fBParameters\fP
+.RS 4
+\fItripID\fP - passed in trip ID 
+.br
+\fIplannedCollege\fP - holds selected college name 
+.br
+\fIindex-\fP position for data structure 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void - nothing 
+.RE
+.PP
+
+.PP
+Definition at line 604 of file dbmanager\&.cpp\&.
+.SS "void DbManager::addUser (const QString & user, const QString & pass)"
+
+.PP
+adds a user to DB for future logins 
+.PP
+\fBParameters\fP
+.RS 4
+\fI&user\fP - user name 
+.br
+\fI&pass\fP - password 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 368 of file dbmanager\&.cpp\&.
+.SS "int DbManager::cartQuantity (const QString college, const QString souvenir)"
+
+.PP
+returns quanitity of items in cart 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsouvenir\fP - name of souv 
+.br
+\fIcollege\fP - name of college selling souv 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int - quanity of cart 
+.RE
+.PP
+
+.PP
+Definition at line 193 of file dbmanager\&.cpp\&.
+.SS "bool DbManager::checkAdmin (const QString & username) const"
+
+.PP
+checks to see if the username entered is an admin 
+.PP
+\fBParameters\fP
+.RS 4
+\fIusername\fP of the user 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true - will enable admin login, false - the person is not an admin 
+.RE
+.PP
+
+.PP
+Definition at line 471 of file dbmanager\&.cpp\&.
+.SS "void DbManager::clearDb ()"
+
+.PP
+clears database of all data 
+.PP
+\fBReturns\fP
+.RS 4
+void - nothing 
+.RE
+.PP
+
+.PP
+Definition at line 448 of file dbmanager\&.cpp\&.
+.SS "void DbManager::createTripTable ()"
+
+.PP
+Definition at line 580 of file dbmanager\&.cpp\&.
+.SS "QString DbManager::getPassword (const QString & username) const"
+
+.PP
+Gets password from user\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP of the user(s) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+obtains the password from user 
+.RE
+.PP
+
+.PP
+Definition at line 507 of file dbmanager\&.cpp\&.
+.SS "void DbManager::InitCollegeList (const QString & path)"
+
+.PP
+initalizes sql data table for college and inputs all data from path parameter file location 
+.PP
+\fBParameters\fP
+.RS 4
+\fI&path\fP - filepath for DB 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file dbmanager\&.cpp\&.
+.SS "void DbManager::initDistanceList (const QString & path)"
+
+.PP
+initalizes sql data table for college distances and inputs all data from path parameter file location 
+.PP
+\fBParameters\fP
+.RS 4
+\fI&path\fP - filepath for DB 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 128 of file dbmanager\&.cpp\&.
+.SS "void DbManager::initSouvenirList (const QString & path)"
+
+.PP
+initalizes sql data table for souvenir and inputs all data from path parameter file location 
+.PP
+\fBParameters\fP
+.RS 4
+\fI&path\fP - filepath for DB 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file dbmanager\&.cpp\&.
+.SS "bool DbManager::isOpen () const"
+
+.PP
+checks to see if \fBDbManager\fP is open 
+.PP
+\fBReturns\fP
+.RS 4
+true - \fBDbManager\fP is open, false - \fBDbManager\fP is closed 
+.RE
+.PP
+
+.PP
+Definition at line 466 of file dbmanager\&.cpp\&.
+.SS "void DbManager::removeCart (const QString college, const QString souvenir)"
+
+.PP
+delete item from cart 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsouvenir\fP - name of souv 
+.br
+\fIcollege\fP - name of college selling souv 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 220 of file dbmanager\&.cpp\&.
+.SS "void DbManager::removeSou (const QString & souName, const QString & college)"
+
+.PP
+removes a souv to DB for data tables 
+.PP
+\fBParameters\fP
+.RS 4
+\fI&college\fP - college containing souv 
+.br
+\fI&souName\fP - name of souv 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 173 of file dbmanager\&.cpp\&.
+.SS "void DbManager::resetCart ()"
+
+.PP
+clear all items from cart 
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 262 of file dbmanager\&.cpp\&.
+.SS "bool DbManager::souExists (const QString & name, const QString & college)"
+
+.PP
+checks to see if the souv exists 
+.PP
+\fBParameters\fP
+.RS 4
+\fI&name\fP - name of souv 
+.br
+\fI&college\fP - college that contains souv 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true - username exists, false - username does not exist 
+.RE
+.PP
+
+.PP
+Definition at line 393 of file dbmanager\&.cpp\&.
+.SS "bool DbManager::tripIdExists (QString tripID)"
+
+.PP
+returns whether tripID data exists in DB 
+.PP
+\fBParameters\fP
+.RS 4
+\fItripID-\fP trip id to verify 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool- whether data exists 
+.RE
+.PP
+
+.PP
+Definition at line 625 of file dbmanager\&.cpp\&.
+.SS "void DbManager::updateCart (const QString college, const QString souvenir, const int count)"
+
+.PP
+updates total items in carts with accurate corresponding data 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcount\fP - quantity of items 
+.br
+\fIsouvenir\fP - name of souv 
+.br
+\fIcollege\fP - name of college selling souv 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 324 of file dbmanager\&.cpp\&.
+.SS "void DbManager::updateSou (const QString & souName, const QString & college, const double & spin, const QString & newSouvenir)"
+
+.PP
+updates souv to DB for data tables with new values 
+.PP
+\fBParameters\fP
+.RS 4
+\fI&college\fP - college containing souv 
+.br
+\fI&souName\fP - name of souv 
+.br
+\fI&cost\fP - cost of souv 
+.br
+\fI&newSovenir\fP - new object data 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void - none 
+.RE
+.PP
+
+.PP
+Definition at line 343 of file dbmanager\&.cpp\&.
+.SS "bool DbManager::userExists (const QString & user)"
+
+.PP
+checks to see if the username exists 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP of the user 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true - username exists, false - username does not exist 
+.RE
+.PP
+
+.PP
+Definition at line 422 of file dbmanager\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QSqlDatabase DbManager::myDB\fC [private]\fP"
+
+.PP
+decalre database field memberobj 
+.PP
+Definition at line 220 of file dbmanager\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D - Project1 - College Touring from the source code\&.
