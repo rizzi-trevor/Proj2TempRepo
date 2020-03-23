@@ -5,6 +5,8 @@
 #include "dbmanager.h"
 #include "adminwindow.h"
 #include "tripplanner.h"
+
+#include <QPixmap>
 QT_BEGIN_NAMESPACE
 namespace Ui { class LoginWindow; }
 QT_END_NAMESPACE

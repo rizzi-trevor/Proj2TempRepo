@@ -33,6 +33,8 @@ LoginWindow::LoginWindow(QWidget *parent)
         ui->dbStatus->setText("Connected...");
     }
 
+    QPixmap pix("C:/Users/farna/Documents/CS1D-Project1-College-Touring/logo.png");
+    ui->logoLabel->setPixmap(pix);
 
 }
 

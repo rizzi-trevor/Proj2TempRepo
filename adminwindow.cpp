@@ -1,9 +1,10 @@
 #include "adminwindow.h"
 #include "ui_adminwindow.h"
 #include "confirmpage.h"
+#include "loginwindow.h"
 
 AdminWindow::AdminWindow(QWidget *parent) :
-    QMainWindow(parent),
+    QDialog(parent),
     ui(new Ui::AdminWindow)
 {
     ui->setupUi(this);
@@ -32,7 +33,7 @@ void AdminWindow::updateCollegeTable()
     model->setQuery(*qry);
 
     ui->collegeView->setModel(model);
-    ui->collegeView->setColumnWidth(0, 300);
+    ui->collegeView->resizeColumnsToContents();
 }
 
 void AdminWindow::updateSouvenirTable()
@@ -244,4 +245,13 @@ void AdminWindow::on_removeSouvenir_2_clicked()
     }
 
     updateSouvenirTable();
+}
+
+void AdminWindow::on_pushButton_5_released()
+{
+    hide();
+
+    LoginWindow *mainWindow = new LoginWindow();
+    mainWindow->show();
+
 }

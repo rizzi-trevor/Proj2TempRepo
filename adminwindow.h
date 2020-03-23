@@ -10,7 +10,7 @@ namespace Ui {
 class AdminWindow;
 }
 
-class AdminWindow : public QMainWindow
+class AdminWindow : public QDialog
 {
     Q_OBJECT
 
@@ -31,6 +31,8 @@ private slots:
     void on_souvenirView_clicked(const QModelIndex &index);
 
     void on_removeSouvenir_2_clicked();
+
+    void on_pushButton_5_released();
 
 private:
     QString souve;
