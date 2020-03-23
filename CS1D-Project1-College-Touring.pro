@@ -23,7 +23,8 @@ SOURCES += \
     main.cpp \
     loginwindow.cpp \
     tripplanner.cpp \
-    tripprogress.cpp
+    tripprogress.cpp \
+    tripsummary.cpp
 
 HEADERS += \
     addsouvenir.h \
@@ -32,7 +33,8 @@ HEADERS += \
     dbmanager.h \
     loginwindow.h \
     tripplanner.h \
-    tripprogress.h
+    tripprogress.h \
+    tripsummary.h
 
 FORMS += \
     addsouvenir.ui \
@@ -40,7 +42,8 @@ FORMS += \
     confirmpage.ui \
     loginwindow.ui \
     tripplanner.ui \
-    tripprogress.ui
+    tripprogress.ui \
+    tripsummary.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
