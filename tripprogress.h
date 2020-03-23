@@ -3,7 +3,8 @@
 
 #include <QMainWindow>
 #include "dbmanager.h"
-
+#include "confirmpage.h"
+#include "tripsummary.h"
 namespace Ui {
 class tripprogress;
 }
@@ -43,6 +44,10 @@ private slots:
     void on_pushButton_4_released();
 
     void on_removeCart_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_4_clicked();
 
 private:
     Ui::tripprogress *ui;

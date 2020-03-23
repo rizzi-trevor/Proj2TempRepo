@@ -10,7 +10,7 @@
 #include "QDebug"
 
 
-static const QString PROJECT_PATH = "C:/Users/farna/Documents/CS1D-Project1-College-Touring/";
+static const QString PROJECT_PATH = "C:/Users/Nick/source/repos/CS1D-Project1-College-Touring/";
 
 
 class DbManager

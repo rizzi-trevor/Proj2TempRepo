@@ -11,7 +11,6 @@ class confirmpage;
 class confirmpage : public QDialog
 {
     Q_OBJECT
-
 public:
     explicit confirmpage(QWidget *parent = nullptr);
     ~confirmpage();
@@ -24,11 +23,25 @@ private slots:
     void on_okButton_released();
 
     void on_cancelButton_released();
-
 private:
     Ui::confirmpage *ui;
 
     bool answer = false;
 };
 
+
+/*/////////////////////
+
+{
+    confirmpage confirm;
+    bool check = false;
+
+    confirm.setModal(true);
+    confirm.exec();
+    check = confirm.getData();
+
+    return check;
+}
+
+*///////////////////////
 #endif // CONFIRMPAGE_H

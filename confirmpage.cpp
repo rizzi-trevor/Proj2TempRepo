@@ -30,3 +30,6 @@ void confirmpage::on_cancelButton_released()
     answer = false;
     hide();
 }
+
+
+

@@ -25,6 +25,14 @@ private slots:
 
     void updateTripSchoolList();
 
+    void updateSchoolComboBox();
+
+    void updateTotalDistance();
+
+    void updateSchoolTotal();
+
+    void updateTripTotal();
+
 private:
     Ui::tripSummary *ui;
     DbManager myDb = DbManager(PROJECT_PATH + "/college.db");
