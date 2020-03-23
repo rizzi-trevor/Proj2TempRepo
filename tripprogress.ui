@@ -212,6 +212,25 @@
      <bool>false</bool>
     </attribute>
    </widget>
+   <widget class="QLabel" name="distanceLabel">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>60</y>
+      <width>501</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -248,7 +267,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>36</x>
-     <y>666</y>
+     <y>462</y>
     </hint>
    </hints>
   </connection>
@@ -264,7 +283,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>660</x>
-     <y>697</y>
+     <y>462</y>
     </hint>
    </hints>
   </connection>
@@ -280,7 +299,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>722</x>
-     <y>642</y>
+     <y>462</y>
     </hint>
    </hints>
   </connection>

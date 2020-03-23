@@ -62,7 +62,7 @@ void tripprogress::onLoadClick()
     ui->pushButton->setDisabled(false);
 
 
-
+    getDistance();
 }
 
 void tripprogress::nextTrip()// shows next college in trip
@@ -168,6 +168,35 @@ void tripprogress::prevTrip() // shows prev college in trip
 
 }
 
+void tripprogress::getDistance()
+{
+    QString distance;
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT distanceToNext From Trips WHERE (college) = (:college)");
+    qry->bindValue(":college", currentCol);
+
+    if(qry->exec())
+    {
+        while(qry->next())
+        {
+            distance = qry->value(0).toString();
+        }
+
+        if(counter+1 < max)
+            distance = "Distance to " + trip[counter+1] + ": " + distance;
+        else
+            distance = "You're at the last school!";
+
+        ui->distanceLabel->setText(distance);
+        qDebug() << distance;
+        qDebug() << "show next college!";
+    }
+    else
+        qDebug() << "doesn't show next colelge!";
+}
+
 void tripprogress::displaySouv()
 {
     QSqlQueryModel* model = new QSqlQueryModel();
@@ -194,6 +223,7 @@ void tripprogress::displaySouv()
 void tripprogress::onNextClick()
 {
     nextTrip();
+    getDistance();
 }
 
 void tripprogress::onPrevClick()
