@@ -135,7 +135,7 @@ void DbManager::initDistanceList(const QString &path)
         qDebug() << "Excel connection successful" << endl;
 
         QSqlQuery *query = new QSqlQuery(fileDB);
-        query->exec("select * from [" + QString("Distances") + "$A2:C111]");
+        query->exec("select * from [" + QString("Distances") + "$A1:C111]");
 
         QSqlQuery * querytoDb = new QSqlQuery(myDB);
 
