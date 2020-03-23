@@ -1,0 +1,5 @@
+<map id="tripprogress::on_addCart_clicked" name="tripprogress::on_addCart_clicked">
+<area shape="rect" id="node1" title="updates database, cart, and total;" alt="" coords="5,23,169,65"/>
+<area shape="rect" id="node2" href="$classtripprogress.html#a0101030d65a5d71cbc3dcb9d17b0fc65" title="calculates and displays updated student cart for souveniers, total and quantity requested by the stud..." alt="" coords="219,5,381,32"/>
+<area shape="rect" id="node3" href="$classtripprogress.html#a96e02bbd9e9bd253b04fb4a6efbb90eb" title="calculates and displays updated student price total for shopping souverniers from cart" alt="" coords="217,56,383,83"/>
+</map>

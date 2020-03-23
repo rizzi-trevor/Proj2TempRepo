@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classconfirm_page" kind="class" language="C++" prot="public">
+    <compoundname>confirmPage</compoundname>
+    <includes refid="confirmpage_8h" local="no">confirmpage.h</includes>
+    <briefdescription>
+<para>class sets breifs user on confirmation on trip planning actions </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>confirmPage</label>
+        <link refid="classconfirm_page"/>
+      </node>
+    </collaborationgraph>
+    <location file="confirmpage.h" line="12" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

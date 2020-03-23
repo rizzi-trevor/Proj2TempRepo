@@ -1,0 +1,4 @@
+<map id="tripSummary::updateTripSchoolList" name="tripSummary::updateTripSchoolList">
+<area shape="rect" id="node1" title="updates tripID and UI model when called. Prepares query for all availble tripIDs" alt="" coords="232,29,457,56"/>
+<area shape="rect" id="node2" href="$classtrip_summary.html#a990accf373da48ade41def873014fdf6" title="explicit Constructor" alt="" coords="5,29,184,56"/>
+</map>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_adminwindow_8cpp">
+<title>adminwindow.cpp File Reference</title>
+<indexterm><primary>adminwindow.cpp</primary></indexterm>
+<programlisting>#include &quot;adminwindow.h&quot;
+#include &quot;ui_adminwindow.h&quot;
+#include &quot;confirmpage.h&quot;
+#include &quot;loginwindow.h&quot;
+</programlisting>Include dependency graph for adminwindow.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="adminwindow_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

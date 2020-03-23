@@ -1,0 +1,923 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_db_manager" kind="class" language="C++" prot="public">
+    <compoundname>DbManager</compoundname>
+    <includes refid="dbmanager_8h" local="no">dbmanager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_db_manager_1a47f7984afa73f976fdc1cbd2f10753cf" prot="private" static="no" mutable="no">
+        <type>QSqlDatabase</type>
+        <definition>QSqlDatabase DbManager::myDB</definition>
+        <argsstring></argsstring>
+        <name>myDB</name>
+        <briefdescription>
+<para>decalre database field memberobj </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="220" column="18" bodyfile="dbmanager.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_db_manager_1a449b4cc451c4ec493345d799891e7eaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DbManager::DbManager</definition>
+        <argsstring>(const QString &amp;path)</argsstring>
+        <name>DbManager</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor sets up connection with db and opens it <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- absolute path to db file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="44" column="5" bodyfile="dbmanager.cpp" bodystart="3" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1a919d96426a334c5f5f2f925b36e7ce86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::InitCollegeList</definition>
+        <argsstring>(const QString &amp;path)</argsstring>
+        <name>InitCollegeList</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>initalizes sql data table for college and inputs all data from path parameter file location </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&amp;path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- filepath for DB </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="51" column="10" bodyfile="dbmanager.cpp" bodystart="30" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1ac339cd04710203c6faf8d4a5d55b0135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::initSouvenirList</definition>
+        <argsstring>(const QString &amp;path)</argsstring>
+        <name>initSouvenirList</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>initalizes sql data table for souvenir and inputs all data from path parameter file location </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&amp;path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- filepath for DB </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="58" column="10" bodyfile="dbmanager.cpp" bodystart="73" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1ac07ce420fd795d2e613d3d58151a3f13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::initDistanceList</definition>
+        <argsstring>(const QString &amp;path)</argsstring>
+        <name>initDistanceList</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>initalizes sql data table for college distances and inputs all data from path parameter file location </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&amp;path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- filepath for DB </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="65" column="10" bodyfile="dbmanager.cpp" bodystart="128" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1a8f06e6e0365900ada1bf178576299c58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::addUser</definition>
+        <argsstring>(const QString &amp;user, const QString &amp;pass)</argsstring>
+        <name>addUser</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>pass</declname>
+        </param>
+        <briefdescription>
+<para>adds a user to DB for future logins </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&amp;user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- user name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&amp;pass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- password </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="74" column="10" bodyfile="dbmanager.cpp" bodystart="368" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1aba2fa2af8d63efc7aec75bf690c69a3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::addSou</definition>
+        <argsstring>(const QString &amp;college, const QString &amp;souName, const double &amp;cost)</argsstring>
+        <name>addSou</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>college</declname>
+        </param>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>souName</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>cost</declname>
+        </param>
+        <briefdescription>
+<para>adds a souv to DB for data tables </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&amp;college</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- college containing souv </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&amp;souName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- name of souv </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&amp;cost</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- cost of souv </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="83" column="10" bodyfile="dbmanager.cpp" bodystart="299" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1aec7a231230eb9e7f4fac4224304130cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::removeSou</definition>
+        <argsstring>(const QString &amp;souName, const QString &amp;college)</argsstring>
+        <name>removeSou</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>souName</declname>
+        </param>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>college</declname>
+        </param>
+        <briefdescription>
+<para>removes a souv to DB for data tables </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&amp;college</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- college containing souv </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&amp;souName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- name of souv </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="91" column="10" bodyfile="dbmanager.cpp" bodystart="173" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1adf32025a73fc9b230a8135cb0af35c5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::updateSou</definition>
+        <argsstring>(const QString &amp;souName, const QString &amp;college, const double &amp;spin, const QString &amp;newSouvenir)</argsstring>
+        <name>updateSou</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>souName</declname>
+        </param>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>college</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>spin</declname>
+        </param>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>newSouvenir</declname>
+        </param>
+        <briefdescription>
+<para>updates souv to DB for data tables with new values </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&amp;college</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- college containing souv </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&amp;souName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- name of souv </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&amp;cost</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- cost of souv </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&amp;newSovenir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- new object data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="101" column="10" bodyfile="dbmanager.cpp" bodystart="343" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1a066c64eeb0214baf725d17cb56227e5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::addCart</definition>
+        <argsstring>(const QString trip, const QString college, const QString souvenir, const double price, const int count)</argsstring>
+        <name>addCart</name>
+        <param>
+          <type>const QString</type>
+          <declname>trip</declname>
+        </param>
+        <param>
+          <type>const QString</type>
+          <declname>college</declname>
+        </param>
+        <param>
+          <type>const QString</type>
+          <declname>souvenir</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>price</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>adds souv to cart </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- quantity of items </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>souvenir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- name of souv </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- cost of souv </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="110" column="10" bodyfile="dbmanager.cpp" bodystart="277" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1a0d17a065e941949c2472ddc19436e1a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::updateCart</definition>
+        <argsstring>(const QString college, const QString souvenir, const int count)</argsstring>
+        <name>updateCart</name>
+        <param>
+          <type>const QString</type>
+          <declname>college</declname>
+        </param>
+        <param>
+          <type>const QString</type>
+          <declname>souvenir</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>updates total items in carts with accurate corresponding data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- quantity of items </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>souvenir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- name of souv </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>college</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- name of college selling souv </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="119" column="10" bodyfile="dbmanager.cpp" bodystart="324" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1ab139c436a07cbd611edd0d169962f5fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DbManager::cartQuantity</definition>
+        <argsstring>(const QString college, const QString souvenir)</argsstring>
+        <name>cartQuantity</name>
+        <param>
+          <type>const QString</type>
+          <declname>college</declname>
+        </param>
+        <param>
+          <type>const QString</type>
+          <declname>souvenir</declname>
+        </param>
+        <briefdescription>
+<para>returns quanitity of items in cart </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>souvenir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- name of souv </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>college</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- name of college selling souv </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int - quanity of cart </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="127" column="9" bodyfile="dbmanager.cpp" bodystart="193" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1a2d75fe15fff87d86cf7445e147f1dc0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::removeCart</definition>
+        <argsstring>(const QString college, const QString souvenir)</argsstring>
+        <name>removeCart</name>
+        <param>
+          <type>const QString</type>
+          <declname>college</declname>
+        </param>
+        <param>
+          <type>const QString</type>
+          <declname>souvenir</declname>
+        </param>
+        <briefdescription>
+<para>delete item from cart </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>souvenir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- name of souv </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>college</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- name of college selling souv </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="135" column="10" bodyfile="dbmanager.cpp" bodystart="220" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1aedfdf8a34ade856e4fab1ea3adcef5b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::addPurchase</definition>
+        <argsstring>()</argsstring>
+        <name>addPurchase</name>
+        <briefdescription>
+<para>adds purchase to DB and cart </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="141" column="10" bodyfile="dbmanager.cpp" bodystart="247" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1aeaac0d5a8393040e7b52208c80ea3fd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::resetCart</definition>
+        <argsstring>()</argsstring>
+        <name>resetCart</name>
+        <briefdescription>
+<para>clear all items from cart </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="147" column="10" bodyfile="dbmanager.cpp" bodystart="262" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1a3fb7e05878d16c1c5cea11b53cf04d4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::addColleges</definition>
+        <argsstring>(const QString &amp;path)</argsstring>
+        <name>addColleges</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>add colleges from file to DB </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- absolute path to db file souv </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void - none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="154" column="10" bodyfile="dbmanager.cpp" bodystart="534" bodyend="578"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1ae1a3c72afdf29e00bc16fd128dc35b94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DbManager::userExists</definition>
+        <argsstring>(const QString &amp;user)</argsstring>
+        <name>userExists</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+<para>checks to see if the username exists </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of the user </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true - username exists, false - username does not exist </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="161" column="10" bodyfile="dbmanager.cpp" bodystart="422" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1acdbad81f27cdb3f8e3bbf656eeeba382" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DbManager::souExists</definition>
+        <argsstring>(const QString &amp;name, const QString &amp;college)</argsstring>
+        <name>souExists</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>college</declname>
+        </param>
+        <briefdescription>
+<para>checks to see if the souv exists </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&amp;name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- name of souv </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&amp;college</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- college that contains souv </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true - username exists, false - username does not exist </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="169" column="10" bodyfile="dbmanager.cpp" bodystart="393" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1af9547f6dc3ad170a70c0ee4d89f714fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::clearDb</definition>
+        <argsstring>()</argsstring>
+        <name>clearDb</name>
+        <briefdescription>
+<para>clears database of all data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void - nothing </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="175" column="10" bodyfile="dbmanager.cpp" bodystart="448" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1ac04baba8f5d5197f8bcd9230393501de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DbManager::isOpen</definition>
+        <argsstring>() const</argsstring>
+        <name>isOpen</name>
+        <briefdescription>
+<para>checks to see if <ref refid="class_db_manager" kindref="compound">DbManager</ref> is open </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true - <ref refid="class_db_manager" kindref="compound">DbManager</ref> is open, false - <ref refid="class_db_manager" kindref="compound">DbManager</ref> is closed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="181" column="10" bodyfile="dbmanager.cpp" bodystart="466" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1a3ef6d1b5c19b8192420ba8743c7172ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DbManager::checkAdmin</definition>
+        <argsstring>(const QString &amp;username) const</argsstring>
+        <name>checkAdmin</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+<para>checks to see if the username entered is an admin </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of the user </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true - will enable admin login, false - the person is not an admin </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="188" column="10" bodyfile="dbmanager.cpp" bodystart="471" bodyend="505"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1a5d730ddded1f92e418a9c88e570b2117" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString DbManager::getPassword</definition>
+        <argsstring>(const QString &amp;username) const</argsstring>
+        <name>getPassword</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+<para>Gets password from user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of the user(s) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>obtains the password from user </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="195" column="13" bodyfile="dbmanager.cpp" bodystart="507" bodyend="532"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1ae790551011d6cb42a4fd20a173eb9598" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::addTrip</definition>
+        <argsstring>(QString tripID, QString plannedCollege, int index, int distanceTo)</argsstring>
+        <name>addTrip</name>
+        <param>
+          <type>QString</type>
+          <declname>tripID</declname>
+        </param>
+        <param>
+          <type>QString</type>
+          <declname>plannedCollege</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>distanceTo</declname>
+        </param>
+        <briefdescription>
+<para>adds a trip to appropiate dataTables </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tripID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passed in trip ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plannedCollege</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- holds selected college name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index-</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position for data structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void - nothing </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="204" column="10" bodyfile="dbmanager.cpp" bodystart="604" bodyend="622"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1a5bd60338e1ad8ffd0c63f34e84f88808" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DbManager::tripIdExists</definition>
+        <argsstring>(QString tripID)</argsstring>
+        <name>tripIdExists</name>
+        <param>
+          <type>QString</type>
+          <declname>tripID</declname>
+        </param>
+        <briefdescription>
+<para>returns whether tripID data exists in DB </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tripID-</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>trip id to verify </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool- whether data exists </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="211" column="10" bodyfile="dbmanager.cpp" bodystart="625" bodyend="649"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1a42e94ab2a5751c839a6d57221d3d4e99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::createTripTable</definition>
+        <argsstring>()</argsstring>
+        <name>createTripTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="213" column="10" bodyfile="dbmanager.cpp" bodystart="580" bodyend="602"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SQL Database Manager class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_db_manager" kindref="compound">DbManager</ref> sets up the connection with SQL database and performs some basics queries. The class requires existing SQL database. You can create it with sqlite:<orderedlist>
+<listitem><para>$ sqlite3 people.db</para>
+</listitem><listitem><para>sqilte&gt; CREATE TABLE people(ids integer primary key, name text);</para>
+</listitem><listitem><para>sqlite&gt; .quit </para>
+</listitem></orderedlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>DbManager</label>
+        <link refid="class_db_manager"/>
+      </node>
+    </collaborationgraph>
+    <location file="dbmanager.h" line="34" column="1" bodyfile="dbmanager.h" bodystart="33" bodyend="221"/>
+    <listofallmembers>
+      <member refid="class_db_manager_1a066c64eeb0214baf725d17cb56227e5f" prot="public" virt="non-virtual"><scope>DbManager</scope><name>addCart</name></member>
+      <member refid="class_db_manager_1a3fb7e05878d16c1c5cea11b53cf04d4d" prot="public" virt="non-virtual"><scope>DbManager</scope><name>addColleges</name></member>
+      <member refid="class_db_manager_1aedfdf8a34ade856e4fab1ea3adcef5b3" prot="public" virt="non-virtual"><scope>DbManager</scope><name>addPurchase</name></member>
+      <member refid="class_db_manager_1aba2fa2af8d63efc7aec75bf690c69a3c" prot="public" virt="non-virtual"><scope>DbManager</scope><name>addSou</name></member>
+      <member refid="class_db_manager_1ae790551011d6cb42a4fd20a173eb9598" prot="public" virt="non-virtual"><scope>DbManager</scope><name>addTrip</name></member>
+      <member refid="class_db_manager_1a8f06e6e0365900ada1bf178576299c58" prot="public" virt="non-virtual"><scope>DbManager</scope><name>addUser</name></member>
+      <member refid="class_db_manager_1ab139c436a07cbd611edd0d169962f5fa" prot="public" virt="non-virtual"><scope>DbManager</scope><name>cartQuantity</name></member>
+      <member refid="class_db_manager_1a3ef6d1b5c19b8192420ba8743c7172ef" prot="public" virt="non-virtual"><scope>DbManager</scope><name>checkAdmin</name></member>
+      <member refid="class_db_manager_1af9547f6dc3ad170a70c0ee4d89f714fc" prot="public" virt="non-virtual"><scope>DbManager</scope><name>clearDb</name></member>
+      <member refid="class_db_manager_1a42e94ab2a5751c839a6d57221d3d4e99" prot="public" virt="non-virtual"><scope>DbManager</scope><name>createTripTable</name></member>
+      <member refid="class_db_manager_1a449b4cc451c4ec493345d799891e7eaa" prot="public" virt="non-virtual"><scope>DbManager</scope><name>DbManager</name></member>
+      <member refid="class_db_manager_1a5d730ddded1f92e418a9c88e570b2117" prot="public" virt="non-virtual"><scope>DbManager</scope><name>getPassword</name></member>
+      <member refid="class_db_manager_1a919d96426a334c5f5f2f925b36e7ce86" prot="public" virt="non-virtual"><scope>DbManager</scope><name>InitCollegeList</name></member>
+      <member refid="class_db_manager_1ac07ce420fd795d2e613d3d58151a3f13" prot="public" virt="non-virtual"><scope>DbManager</scope><name>initDistanceList</name></member>
+      <member refid="class_db_manager_1ac339cd04710203c6faf8d4a5d55b0135" prot="public" virt="non-virtual"><scope>DbManager</scope><name>initSouvenirList</name></member>
+      <member refid="class_db_manager_1ac04baba8f5d5197f8bcd9230393501de" prot="public" virt="non-virtual"><scope>DbManager</scope><name>isOpen</name></member>
+      <member refid="class_db_manager_1a47f7984afa73f976fdc1cbd2f10753cf" prot="private" virt="non-virtual"><scope>DbManager</scope><name>myDB</name></member>
+      <member refid="class_db_manager_1a2d75fe15fff87d86cf7445e147f1dc0a" prot="public" virt="non-virtual"><scope>DbManager</scope><name>removeCart</name></member>
+      <member refid="class_db_manager_1aec7a231230eb9e7f4fac4224304130cb" prot="public" virt="non-virtual"><scope>DbManager</scope><name>removeSou</name></member>
+      <member refid="class_db_manager_1aeaac0d5a8393040e7b52208c80ea3fd4" prot="public" virt="non-virtual"><scope>DbManager</scope><name>resetCart</name></member>
+      <member refid="class_db_manager_1acdbad81f27cdb3f8e3bbf656eeeba382" prot="public" virt="non-virtual"><scope>DbManager</scope><name>souExists</name></member>
+      <member refid="class_db_manager_1a5bd60338e1ad8ffd0c63f34e84f88808" prot="public" virt="non-virtual"><scope>DbManager</scope><name>tripIdExists</name></member>
+      <member refid="class_db_manager_1a0d17a065e941949c2472ddc19436e1a0" prot="public" virt="non-virtual"><scope>DbManager</scope><name>updateCart</name></member>
+      <member refid="class_db_manager_1adf32025a73fc9b230a8135cb0af35c5d" prot="public" virt="non-virtual"><scope>DbManager</scope><name>updateSou</name></member>
+      <member refid="class_db_manager_1ae1a3c72afdf29e00bc16fd128dc35b94" prot="public" virt="non-virtual"><scope>DbManager</scope><name>userExists</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

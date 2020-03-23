@@ -1,0 +1,7 @@
+<map id="AdminWindow::clearCollegeData" name="AdminWindow::clearCollegeData">
+<area shape="rect" id="node1" title="clears database of data" alt="" coords="5,97,216,124"/>
+<area shape="rect" id="node2" href="$classconfirmpage.html#a14e6471474d987fc336bba295be937d1" title="returns answer to calling function" alt="" coords="292,5,437,32"/>
+<area shape="rect" id="node3" href="$classconfirmpage.html#a63d2524a9929f2ee215da9a0ae41b686" title="sets answer to true, hides ui" alt="" coords="278,57,451,98"/>
+<area shape="rect" id="node4" href="$class_admin_window.html#ad1eabd086ea9878c73481fffc7506321" title="updates sql data table for colleges when called" alt="" coords="267,122,462,163"/>
+<area shape="rect" id="node5" href="$class_admin_window.html#aa2e06bdd9305f8c591cf97e8c580f293" title="updates sql data table for college souvenirs when called" alt="" coords="264,187,465,229"/>
+</map>

@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classadd_souvenir" kind="class" language="C++" prot="public">
+    <compoundname>addSouvenir</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QDialog</basecompoundref>
+    <includes refid="addsouvenir_8h" local="no">addsouvenir.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" prot="private" static="no" mutable="no">
+        <type>Ui::addSouvenir *</type>
+        <definition>Ui::addSouvenir* addSouvenir::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+<para>points to <ref refid="classadd_souvenir" kindref="compound">addSouvenir</ref> UI </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="addsouvenir.h" line="55" column="21" bodyfile="addsouvenir.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classadd_souvenir_1a4264e5a67963e30c43739903d0fc6fca" compoundref="addsouvenir_8cpp" startline="13" endline="16">~addSouvenir</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classadd_souvenir_1a0848f56796dd5cbe4d914e6fcaf717ef" prot="private" static="no" mutable="no">
+        <type><ref refid="class_db_manager" kindref="compound">DbManager</ref></type>
+        <definition>DbManager addSouvenir::myDb</definition>
+        <argsstring></argsstring>
+        <name>myDb</name>
+        <initializer>= <ref refid="class_db_manager" kindref="compound">DbManager</ref>(PROJECT_PATH + &quot;/college.db&quot;)</initializer>
+        <briefdescription>
+<para>assigns DB to predefined PROJECT_PATH constant </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="addsouvenir.h" line="60" column="15" bodyfile="addsouvenir.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classadd_souvenir_1a754edf8aeeabeb26a3f7cb2831194fdc" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>addSouvenir::addSouvenir</definition>
+        <argsstring>(QWidget *parent=nullptr)</argsstring>
+        <name>addSouvenir</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>explicit default Constructor </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor intializes UI for <ref refid="classadd_souvenir" kindref="compound">addSouvenir</ref> calls <ref refid="classadd_souvenir_1a99c04458b2631c5febcb4cb6c9811736" kindref="member">updateCombo()</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- for QDialog </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="addsouvenir.h" line="24" column="14" bodyfile="addsouvenir.cpp" bodystart="4" bodyend="11"/>
+        <references refid="classadd_souvenir_1a99c04458b2631c5febcb4cb6c9811736" compoundref="addsouvenir_8cpp" startline="18" endline="38">updateCombo</references>
+      </memberdef>
+      <memberdef kind="function" id="classadd_souvenir_1a4264e5a67963e30c43739903d0fc6fca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>addSouvenir::~addSouvenir</definition>
+        <argsstring>()</argsstring>
+        <name>~addSouvenir</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Close the <ref refid="classadd_souvenir" kindref="compound">addSouvenir</ref> UI </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="addsouvenir.h" line="31" column="5" bodyfile="addsouvenir.cpp" bodystart="13" bodyend="16"/>
+        <references refid="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" compoundref="addsouvenir_8h" startline="55">ui</references>
+      </memberdef>
+      <memberdef kind="function" id="classadd_souvenir_1a99c04458b2631c5febcb4cb6c9811736" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addSouvenir::updateCombo</definition>
+        <argsstring>()</argsstring>
+        <name>updateCombo</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>updates sql query for startcollege and sets ui Model </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="addsouvenir.h" line="38" column="10" bodyfile="addsouvenir.cpp" bodystart="18" bodyend="38"/>
+        <referencedby refid="classadd_souvenir_1a754edf8aeeabeb26a3f7cb2831194fdc" compoundref="addsouvenir_8cpp" startline="4" endline="11">addSouvenir</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="classadd_souvenir_1a3e20aa6346cf68e1ec80cb8bdd106392" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addSouvenir::on_pushButton_2_released</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_2_released</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="addsouvenir.h" line="41" column="10" bodyfile="addsouvenir.cpp" bodystart="40" bodyend="43"/>
+        <referencedby refid="class_admin_window_1af609806ed07d37eedbfa96274c2cd86a" compoundref="adminwindow_8cpp" startline="111" endline="119">AdminWindow::on_addSouvenir_released</referencedby>
+      </memberdef>
+      <memberdef kind="slot" id="classadd_souvenir_1ad1c3059a79d8df7f357d0a89927c54da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addSouvenir::on_pushButton_released</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_released</name>
+        <briefdescription>
+<para>executes process for adding a souvenir to database </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Close the loginwindow UI </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="addsouvenir.h" line="48" column="10" bodyfile="addsouvenir.cpp" bodystart="45" bodyend="80"/>
+        <references refid="classconfirmpage_1a14e6471474d987fc336bba295be937d1" compoundref="confirmpage_8cpp" startline="16" endline="20">confirmpage::getData</references>
+        <references refid="classconfirmpage_1a63d2524a9929f2ee215da9a0ae41b686" compoundref="confirmpage_8cpp" startline="22" endline="26">confirmpage::on_okButton_released</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QDialog</label>
+      </node>
+      <node id="1">
+        <label>addSouvenir</label>
+        <link refid="classadd_souvenir"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>DbManager</label>
+        <link refid="class_db_manager"/>
+      </node>
+      <node id="2">
+        <label>QDialog</label>
+      </node>
+      <node id="1">
+        <label>addSouvenir</label>
+        <link refid="classadd_souvenir"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-myDb</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="addsouvenir.h" line="13" column="1" bodyfile="addsouvenir.h" bodystart="12" bodyend="63"/>
+    <listofallmembers>
+      <member refid="classadd_souvenir_1a754edf8aeeabeb26a3f7cb2831194fdc" prot="public" virt="non-virtual"><scope>addSouvenir</scope><name>addSouvenir</name></member>
+      <member refid="classadd_souvenir_1a0848f56796dd5cbe4d914e6fcaf717ef" prot="private" virt="non-virtual"><scope>addSouvenir</scope><name>myDb</name></member>
+      <member refid="classadd_souvenir_1a3e20aa6346cf68e1ec80cb8bdd106392" prot="private" virt="non-virtual"><scope>addSouvenir</scope><name>on_pushButton_2_released</name></member>
+      <member refid="classadd_souvenir_1ad1c3059a79d8df7f357d0a89927c54da" prot="private" virt="non-virtual"><scope>addSouvenir</scope><name>on_pushButton_released</name></member>
+      <member refid="classadd_souvenir_1a9a15eb98cbb3eabccf19e8b54b59cbea" prot="private" virt="non-virtual"><scope>addSouvenir</scope><name>ui</name></member>
+      <member refid="classadd_souvenir_1a99c04458b2631c5febcb4cb6c9811736" prot="public" virt="non-virtual"><scope>addSouvenir</scope><name>updateCombo</name></member>
+      <member refid="classadd_souvenir_1a4264e5a67963e30c43739903d0fc6fca" prot="public" virt="non-virtual"><scope>addSouvenir</scope><name>~addSouvenir</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

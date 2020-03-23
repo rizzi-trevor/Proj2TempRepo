@@ -1,0 +1,156 @@
+.TH "confirmpage" 3 "Mon Mar 23 2020" "Version 1" "CS1D - Project1 - College Touring" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+confirmpage
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <confirmpage\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBconfirmpage\fP (QWidget *parent=nullptr)"
+.br
+.RI "explicit default Constructor "
+.ti -1c
+.RI "\fB~confirmpage\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "\fBconfirmpage\fP (QWidget *parent, bool &returnAnswer)"
+.br
+.ti -1c
+.RI "bool \fBgetData\fP ()"
+.br
+.RI "returns answer to calling function "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_okButton_released\fP ()"
+.br
+.RI "sets answer to true, hides ui "
+.ti -1c
+.RI "void \fBon_cancelButton_released\fP ()"
+.br
+.RI "sets answer to false, hides ui "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::confirmpage * \fBui\fP"
+.br
+.RI "points to confirmpage UI "
+.ti -1c
+.RI "bool \fBanswer\fP = false"
+.br
+.RI "declares boolean to default val "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 24 of file confirmpage\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "confirmpage::confirmpage (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+explicit default Constructor Constructor intializes UI for confirmpage 
+.PP
+\fBParameters\fP
+.RS 4
+\fI*parent\fP - for QDialog 
+.RE
+.PP
+
+.PP
+Definition at line 4 of file confirmpage\&.cpp\&.
+.SS "confirmpage::~confirmpage ()"
+
+.PP
+Destructor\&. Close the loginwindow UI 
+.PP
+Definition at line 11 of file confirmpage\&.cpp\&.
+.PP
+References ui\&.
+.SS "confirmpage::confirmpage (QWidget * parent, bool & returnAnswer)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool confirmpage::getData ()"
+
+.PP
+returns answer to calling function 
+.PP
+\fBReturns\fP
+.RS 4
+bool- answer 
+.RE
+.PP
+
+.PP
+Definition at line 16 of file confirmpage\&.cpp\&.
+.PP
+References answer\&.
+.PP
+Referenced by AdminWindow::clearCollegeData(), tripprogress::nextTrip(), tripprogress::on_pushButton_4_released(), addSouvenir::on_pushButton_released(), AdminWindow::on_removeSouvenir_2_clicked(), AdminWindow::on_removeSouvenir_released(), AdminWindow::onAddColleges(), and AdminWindow::onInitialise()\&.
+.SS "void confirmpage::on_cancelButton_released ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+sets answer to false, hides ui 
+.PP
+\fBReturns\fP
+.RS 4
+void- none 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file confirmpage\&.cpp\&.
+.PP
+References answer\&.
+.SS "void confirmpage::on_okButton_released ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+sets answer to true, hides ui 
+.PP
+\fBReturns\fP
+.RS 4
+void- none 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file confirmpage\&.cpp\&.
+.PP
+References answer\&.
+.PP
+Referenced by AdminWindow::clearCollegeData(), tripprogress::nextTrip(), tripprogress::on_pushButton_4_released(), addSouvenir::on_pushButton_released(), AdminWindow::on_removeSouvenir_2_clicked(), AdminWindow::on_removeSouvenir_released(), AdminWindow::onAddColleges(), and AdminWindow::onInitialise()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool confirmpage::answer = false\fC [private]\fP"
+
+.PP
+declares boolean to default val 
+.PP
+Definition at line 72 of file confirmpage\&.h\&.
+.PP
+Referenced by getData(), on_cancelButton_released(), and on_okButton_released()\&.
+.SS "Ui::confirmpage* confirmpage::ui\fC [private]\fP"
+
+.PP
+points to confirmpage UI 
+.PP
+Definition at line 67 of file confirmpage\&.h\&.
+.PP
+Referenced by ~confirmpage()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D - Project1 - College Touring from the source code\&.

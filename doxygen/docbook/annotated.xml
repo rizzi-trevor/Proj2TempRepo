@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_classadd_souvenir">addSouvenir</link><link linkend="_class_admin_window">AdminWindow</link>
+<para>Class initializes <link linkend="_class_admin_window">AdminWindow</link> UI and manages all Admin only permissive execution in editing user database, college database, souv database, etc </para>
+<link linkend="_classconfirm_page">confirmPage</link>
+<para>Class sets breifs user on confirmation on trip planning actions </para>
+<link linkend="_classconfirmpage">confirmpage</link><link linkend="_class_db_manager">DbManager</link>
+<para>SQL Database Manager class </para>
+<link linkend="_class_login_window">LoginWindow</link><link linkend="_classlogin_window">loginWindow</link>
+<para>Class sets ui and manages execution for validating username and password </para>
+<link linkend="_classtrip_planner">tripPlanner</link>
+<para>Class recusively planning (calculating) the most efficient trip, manages data tables, checks if data is valid, and begins inital processes of planning a trip </para>
+<link linkend="_classtripprogress">tripprogress</link>
+<para>Class for displaying and calculating student trip progress, destinations, and student shopping cart for souverniers </para>
+<link linkend="_classtrip_summary">tripSummary</link>
+<para>Class for generating and updating sql data from read DB and overall planned trip summary </para>
+</section>

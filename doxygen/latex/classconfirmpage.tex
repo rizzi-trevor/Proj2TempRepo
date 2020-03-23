@@ -1,0 +1,239 @@
+\hypertarget{classconfirmpage}{}\doxysection{confirmpage Class Reference}
+\label{classconfirmpage}\index{confirmpage@{confirmpage}}
+
+
+{\ttfamily \#include $<$confirmpage.\+h$>$}
+
+
+
+Inheritance diagram for confirmpage\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classconfirmpage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for confirmpage\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classconfirmpage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classconfirmpage_aa9d064a0417fb18b27e215178c654e1a}{confirmpage}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em explicit default Constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classconfirmpage_a9ab63cac70f11a102709bf142ecb03df}{$\sim$confirmpage}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classconfirmpage_aab79592328400a263a72cdea47ef829a}{confirmpage}} (Q\+Widget $\ast$parent, bool \&return\+Answer)
+\item 
+bool \mbox{\hyperlink{classconfirmpage_a14e6471474d987fc336bba295be937d1}{get\+Data}} ()
+\begin{DoxyCompactList}\small\item\em returns answer to calling function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classconfirmpage_a63d2524a9929f2ee215da9a0ae41b686}{on\+\_\+ok\+Button\+\_\+released}} ()
+\begin{DoxyCompactList}\small\item\em sets answer to true, hides ui \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconfirmpage_aa2fa168c098e4d1238a72ac021fbd35e}{on\+\_\+cancel\+Button\+\_\+released}} ()
+\begin{DoxyCompactList}\small\item\em sets answer to false, hides ui \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::confirmpage $\ast$ \mbox{\hyperlink{classconfirmpage_a70abbfbae1f18f62351cdb0bcbe25370}{ui}}
+\begin{DoxyCompactList}\small\item\em points to confirmpage UI \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classconfirmpage_a2cd5a13aaedf11aab6f14eedebaf17c3}{answer}} = false
+\begin{DoxyCompactList}\small\item\em declares boolean to default val \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 24 of file confirmpage.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classconfirmpage_aa9d064a0417fb18b27e215178c654e1a}\label{classconfirmpage_aa9d064a0417fb18b27e215178c654e1a}} 
+\index{confirmpage@{confirmpage}!confirmpage@{confirmpage}}
+\index{confirmpage@{confirmpage}!confirmpage@{confirmpage}}
+\doxysubsubsection{\texorpdfstring{confirmpage()}{confirmpage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily confirmpage\+::confirmpage (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+explicit default Constructor 
+
+Constructor intializes UI for confirmpage 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$parent} & -\/ for Q\+Dialog \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file confirmpage.\+cpp.
+
+\mbox{\Hypertarget{classconfirmpage_a9ab63cac70f11a102709bf142ecb03df}\label{classconfirmpage_a9ab63cac70f11a102709bf142ecb03df}} 
+\index{confirmpage@{confirmpage}!````~confirmpage@{$\sim$confirmpage}}
+\index{````~confirmpage@{$\sim$confirmpage}!confirmpage@{confirmpage}}
+\doxysubsubsection{\texorpdfstring{$\sim$confirmpage()}{~confirmpage()}}
+{\footnotesize\ttfamily confirmpage\+::$\sim$confirmpage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Close the loginwindow UI 
+
+Definition at line 11 of file confirmpage.\+cpp.
+
+
+
+References ui.
+
+\mbox{\Hypertarget{classconfirmpage_aab79592328400a263a72cdea47ef829a}\label{classconfirmpage_aab79592328400a263a72cdea47ef829a}} 
+\index{confirmpage@{confirmpage}!confirmpage@{confirmpage}}
+\index{confirmpage@{confirmpage}!confirmpage@{confirmpage}}
+\doxysubsubsection{\texorpdfstring{confirmpage()}{confirmpage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily confirmpage\+::confirmpage (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent,  }\item[{bool \&}]{return\+Answer }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classconfirmpage_a14e6471474d987fc336bba295be937d1}\label{classconfirmpage_a14e6471474d987fc336bba295be937d1}} 
+\index{confirmpage@{confirmpage}!getData@{getData}}
+\index{getData@{getData}!confirmpage@{confirmpage}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily bool confirmpage\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns answer to calling function 
+
+\begin{DoxyReturn}{Returns}
+bool-\/ answer 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file confirmpage.\+cpp.
+
+
+
+References answer.
+
+
+
+Referenced by Admin\+Window\+::clear\+College\+Data(), tripprogress\+::next\+Trip(), tripprogress\+::on\+\_\+push\+Button\+\_\+4\+\_\+released(), add\+Souvenir\+::on\+\_\+push\+Button\+\_\+released(), Admin\+Window\+::on\+\_\+remove\+Souvenir\+\_\+2\+\_\+clicked(), Admin\+Window\+::on\+\_\+remove\+Souvenir\+\_\+released(), Admin\+Window\+::on\+Add\+Colleges(), and Admin\+Window\+::on\+Initialise().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classconfirmpage_a14e6471474d987fc336bba295be937d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classconfirmpage_aa2fa168c098e4d1238a72ac021fbd35e}\label{classconfirmpage_aa2fa168c098e4d1238a72ac021fbd35e}} 
+\index{confirmpage@{confirmpage}!on\_cancelButton\_released@{on\_cancelButton\_released}}
+\index{on\_cancelButton\_released@{on\_cancelButton\_released}!confirmpage@{confirmpage}}
+\doxysubsubsection{\texorpdfstring{on\_cancelButton\_released}{on\_cancelButton\_released}}
+{\footnotesize\ttfamily void confirmpage\+::on\+\_\+cancel\+Button\+\_\+released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+sets answer to false, hides ui 
+
+\begin{DoxyReturn}{Returns}
+void-\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 28 of file confirmpage.\+cpp.
+
+
+
+References answer.
+
+\mbox{\Hypertarget{classconfirmpage_a63d2524a9929f2ee215da9a0ae41b686}\label{classconfirmpage_a63d2524a9929f2ee215da9a0ae41b686}} 
+\index{confirmpage@{confirmpage}!on\_okButton\_released@{on\_okButton\_released}}
+\index{on\_okButton\_released@{on\_okButton\_released}!confirmpage@{confirmpage}}
+\doxysubsubsection{\texorpdfstring{on\_okButton\_released}{on\_okButton\_released}}
+{\footnotesize\ttfamily void confirmpage\+::on\+\_\+ok\+Button\+\_\+released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+sets answer to true, hides ui 
+
+\begin{DoxyReturn}{Returns}
+void-\/ none 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file confirmpage.\+cpp.
+
+
+
+References answer.
+
+
+
+Referenced by Admin\+Window\+::clear\+College\+Data(), tripprogress\+::next\+Trip(), tripprogress\+::on\+\_\+push\+Button\+\_\+4\+\_\+released(), add\+Souvenir\+::on\+\_\+push\+Button\+\_\+released(), Admin\+Window\+::on\+\_\+remove\+Souvenir\+\_\+2\+\_\+clicked(), Admin\+Window\+::on\+\_\+remove\+Souvenir\+\_\+released(), Admin\+Window\+::on\+Add\+Colleges(), and Admin\+Window\+::on\+Initialise().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classconfirmpage_a63d2524a9929f2ee215da9a0ae41b686_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classconfirmpage_a2cd5a13aaedf11aab6f14eedebaf17c3}\label{classconfirmpage_a2cd5a13aaedf11aab6f14eedebaf17c3}} 
+\index{confirmpage@{confirmpage}!answer@{answer}}
+\index{answer@{answer}!confirmpage@{confirmpage}}
+\doxysubsubsection{\texorpdfstring{answer}{answer}}
+{\footnotesize\ttfamily bool confirmpage\+::answer = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+declares boolean to default val 
+
+
+
+Definition at line 72 of file confirmpage.\+h.
+
+
+
+Referenced by get\+Data(), on\+\_\+cancel\+Button\+\_\+released(), and on\+\_\+ok\+Button\+\_\+released().
+
+\mbox{\Hypertarget{classconfirmpage_a70abbfbae1f18f62351cdb0bcbe25370}\label{classconfirmpage_a70abbfbae1f18f62351cdb0bcbe25370}} 
+\index{confirmpage@{confirmpage}!ui@{ui}}
+\index{ui@{ui}!confirmpage@{confirmpage}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::confirmpage$\ast$ confirmpage\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+points to confirmpage UI 
+
+
+
+Definition at line 67 of file confirmpage.\+h.
+
+
+
+Referenced by $\sim$confirmpage().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{confirmpage_8h}{confirmpage.\+h}}\item 
+\mbox{\hyperlink{confirmpage_8cpp}{confirmpage.\+cpp}}\end{DoxyCompactItemize}

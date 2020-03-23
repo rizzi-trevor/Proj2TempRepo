@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dbmanager_8h">
+<title>dbmanager.h File Reference</title>
+<indexterm><primary>dbmanager.h</primary></indexterm>
+<programlisting>#include &lt;QAbstractItemModel&gt;
+#include &lt;QtSql&gt;
+#include &lt;QDebug&gt;
+#include &lt;QFileInfo&gt;
+#include &quot;QSqlDatabase&quot;
+#include &quot;QSqlQuery&quot;
+</programlisting>Include dependency graph for dbmanager.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dbmanager_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dbmanager_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_db_manager">DbManager</link></para>
+
+<para>SQL Database Manager class. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>
