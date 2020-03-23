@@ -8,11 +8,16 @@ tripprogress::tripprogress(QWidget *parent) :
     ui->setupUi(this);
     counter = -1;
 
+    //Hiding previous
+    ui->pushButton_2->hide();
+    myDb.resetCart();
 
 }
 
 tripprogress::~tripprogress()
 {
+    myDb.resetCart();
+
     delete ui;
 }
 
@@ -47,14 +52,29 @@ void tripprogress::onLoadClick()
     nextTrip();
 
     this->ui->load->deleteLater();
+
+
+    ui->addCart->setDisabled(false);
+    ui->addCart->setDisabled(false);
+    ui->removeCart->setDisabled(false);
+    ui->pushButton_4->setDisabled(false);
+    ui->pushButton_2->setDisabled(false);
+    ui->pushButton->setDisabled(false);
+
+
+
 }
 
 void tripprogress::nextTrip()// shows next college in trip
 {
+    myDb.resetCart();
+    updateCart();
+    updateTotal();
+
     QSqlQueryModel* model=new QSqlQueryModel();
 
     QSqlQuery* qry=new QSqlQuery();
-
+    qDebug() << counter;
     counter++;
 
     if( counter < max)
@@ -84,7 +104,26 @@ void tripprogress::nextTrip()// shows next college in trip
     }
     else
     {
-        counter--;
+        confirmpage confirm;
+        bool check = false;
+
+        confirm.setModal(true);
+        confirm.exec();
+        check = confirm.getData();
+
+        if(check)
+        {
+            this->hide();
+            tripSummary *summary = new tripSummary(tripID, this);
+
+            summary->show();
+        }
+        else
+        {
+            counter--;
+        }
+
+
     }
 
 
@@ -200,9 +239,14 @@ void tripprogress::updateTotal()
 
     model->setQuery(*qry);
 
-    ui->totalView->setModel(model);
-}
+    model->setHeaderData(0, Qt::Horizontal, tr("Cart Total") );
 
+    ui->totalView->setModel(model);
+
+
+
+
+}
 void tripprogress::on_souvTable_clicked(const QModelIndex &index)
 {
 
@@ -249,6 +293,9 @@ void tripprogress::on_pushButton_4_released()
 {
     myDb.addPurchase();
     myDb.resetCart();
+    updateCart();
+    updateTotal();
+
 }
 
 void tripprogress::on_removeCart_clicked()
