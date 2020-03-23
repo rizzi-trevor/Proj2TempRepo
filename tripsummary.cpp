@@ -40,12 +40,10 @@ void tripSummary::on_school_comboBox_currentIndexChanged(const QString &schoolNa
     qry->bindValue(":college" , schoolName);
     if(qry->exec())
     {
-        qDebug() << "";
+        qDebug() << "on_school_comboBox_currentIndexChanged SUCCESS";
     }
     else
-    {
-        qDebug() << "";
-    }
+        qDebug() << "on_school_comboBox_currentIndexChanged FAIL";
 
     model->setQuery(*qry);
 
@@ -67,18 +65,20 @@ void tripSummary::updateTripSchoolList()
     QSqlQuery* qry=new QSqlQuery();
     qDebug() << tripID;
 
-    qry->prepare("SELECT college, distance FROM Trips WHERE tripID = (:tripId) ORDER BY tripProgess ASC");
+    qry->prepare("SELECT college, distanceToNext FROM Trips WHERE tripID = (:tripId) ORDER BY tripProgress ASC");
     qry->bindValue(":tripId" , tripID);
     if(qry->exec())
     {
-        qDebug() << "trip table updated.";
+        qDebug() << "updateTripSchoolList SUCCESS";
     }
     else
-        qDebug() << "failed trip table";
+        qDebug() << "updateTripSchoolList FAIL";
 
     model->setQuery(*qry);
     ui->tripOrder_tableView->setModel(model);
 }
+
+
 
 void tripSummary::updateSchoolComboBox()
 {
@@ -87,14 +87,15 @@ void tripSummary::updateSchoolComboBox()
     QSqlQuery* qry=new QSqlQuery();
     qDebug() << tripID;
 
-    qry->prepare("SELECT college FROM Trips WHERE tripID = (:tripId) ORDER BY tripProgess ASC");
+    qry->prepare("SELECT college FROM Trips WHERE tripID = (:tripId)");
     qry->bindValue(":tripId" , tripID);
     if(qry->exec())
     {
-        qDebug() << "trip table updated.";
+        qDebug() << "updateSchoolComboBox SUCCESS";
     }
     else
-        qDebug() << "failed trip table";
+        qDebug() << "updateSchoolComboBox FAIL";
+
 
     model->setQuery(*qry);
     ui->school_comboBox->setModel(model);
@@ -107,21 +108,21 @@ void tripSummary::updateTotalDistance()
 
    qDebug() << tripID;
 
-   qry.prepare("SELECT SUM(distance) FROM trips WHERE (tripID) = (:tripId)");
+   qry.prepare("SELECT SUM(DistanceToNext) FROM trips WHERE (tripID) = (:tripId)");
    qry.bindValue(":tripId" , tripID);
 
    if(qry.exec())
    {
-       qDebug() << "trip table updated.";
+       qDebug() << "updateTotalDistance SUCCESS";
    }
    else
-       qDebug() << "failed trip table";
+       qDebug() << "updateTotalDistance FAIL";
 
    qry.next();
 
    total = qry.record().value(0).toInt();
 
-   ui->schoolTotal_label->setText(QString::number(total) + " mi.");
+   ui->totalDistanceDisplay_label->setText(QString::number(total) + " mi.");
 }
 
 void tripSummary::updateSchoolTotal()
@@ -137,16 +138,16 @@ void tripSummary::updateSchoolTotal()
 
     if(qry.exec())
     {
-        qDebug() << "trip table updated.";
+        qDebug() << "updateSchoolTotal SUCCESS";
     }
     else
-        qDebug() << "failed trip table";
+        qDebug() << "updateSchoolTotal FAIL";
 
     qry.next();
 
     total = qry.record().value(0).toDouble();
 
-    ui->schoolTotal_label->setText('$' + QString::number(total));
+    ui->schoolTotalDisplay_label->setText('$' + QString::number(total));
 }
 
 void tripSummary::updateTripTotal()
@@ -162,10 +163,10 @@ void tripSummary::updateTripTotal()
     qry.bindValue(":tripId" , tripID);
     if(qry.exec())
     {
-        qDebug() << "trip table updated.";
+        qDebug() << "updateTripTotal SUCCESS";
     }
     else
-        qDebug() << "failed trip table";
+        qDebug() << "updateTripTotal FAIL";
 
     qry.next();
 
