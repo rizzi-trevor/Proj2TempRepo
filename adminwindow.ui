@@ -22,6 +22,267 @@
      <height>591</height>
     </rect>
    </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>1061</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="Main">
+     <attribute name="title">
+      <string>Main</string>
+     </attribute>
+     <widget class="QPushButton" name="createDb">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>201</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Initialise Database</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>180</y>
+        <width>201</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add Distance</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>201</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Clear Database</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addMLB">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>260</y>
+        <width>201</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add MLB</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>MLB information</string>
+     </attribute>
+     <widget class="QTableView" name="souvenirView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>1041</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::ExtendedSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>470</y>
+        <width>151</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="searchButton">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>470</y>
+        <width>80</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="showALL">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>470</y>
+        <width>80</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Show ALL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="showStadiums">
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>470</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Show Team Name</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="showStadiums_2">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>470</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Show Stadiums</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>470</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>American League</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>470</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>National  League</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>470</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Typology</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="colleges">
+     <attribute name="title">
+      <string>Distances</string>
+     </attribute>
+     <widget class="QTableView" name="collegeView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>541</width>
+        <height>501</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Souvenirs</string>
+     </attribute>
+     <widget class="QTableView" name="souTable">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>541</width>
+        <height>501</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>110</y>
+        <width>131</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add Souvenir...</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>170</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>170</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -42,213 +303,6 @@
      <height>22</height>
     </rect>
    </property>
-  </widget>
-  <widget class="QTabWidget" name="tabWidget">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>20</y>
-     <width>1061</width>
-     <height>551</height>
-    </rect>
-   </property>
-   <property name="currentIndex">
-    <number>1</number>
-   </property>
-   <widget class="QWidget" name="Main">
-    <attribute name="title">
-     <string>Main</string>
-    </attribute>
-    <widget class="QPushButton" name="createDb">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>20</y>
-       <width>201</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Initialise Database</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>180</y>
-       <width>201</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Add Distance</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>100</y>
-       <width>201</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Clear Database</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="addMLB">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>260</y>
-       <width>201</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Add MLB</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="tab">
-    <attribute name="title">
-     <string>MLB information</string>
-    </attribute>
-    <widget class="QTableView" name="souvenirView">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>1041</width>
-       <height>451</height>
-      </rect>
-     </property>
-     <property name="selectionMode">
-      <enum>QAbstractItemView::ExtendedSelection</enum>
-     </property>
-     <property name="selectionBehavior">
-      <enum>QAbstractItemView::SelectRows</enum>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>470</y>
-       <width>151</width>
-       <height>22</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="searchButton">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>470</y>
-       <width>80</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Search</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="showALL">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>470</y>
-       <width>80</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Show ALL</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="showStadiums">
-     <property name="geometry">
-      <rect>
-       <x>930</x>
-       <y>470</y>
-       <width>101</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Show Team Name</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="showStadiums_2">
-     <property name="geometry">
-      <rect>
-       <x>830</x>
-       <y>470</y>
-       <width>91</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Show Stadiums</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_3">
-     <property name="geometry">
-      <rect>
-       <x>720</x>
-       <y>470</y>
-       <width>101</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>American League</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_4">
-     <property name="geometry">
-      <rect>
-       <x>610</x>
-       <y>470</y>
-       <width>101</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>National  League</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_6">
-     <property name="geometry">
-      <rect>
-       <x>500</x>
-       <y>470</y>
-       <width>101</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Typology</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="colleges">
-    <attribute name="title">
-     <string>Distances</string>
-    </attribute>
-    <widget class="QTableView" name="collegeView">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>541</width>
-       <height>501</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
   </widget>
   <widget class="QPushButton" name="pushButton_5">
    <property name="geometry">

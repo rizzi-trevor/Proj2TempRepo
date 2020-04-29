@@ -209,6 +209,71 @@
        <string>Sort by:</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>500</y>
+        <width>101</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Roof Type</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>530</y>
+        <width>101</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Date Opened</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>530</y>
+        <width>101</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Seat Capacity</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>470</y>
+        <width>101</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dist to CF(great)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>500</y>
+        <width>101</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dist to CF(least)</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="colleges">
      <attribute name="title">
@@ -342,6 +407,86 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>tripPlanner</receiver>
+   <slot>onRoofClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>690</x>
+     <y>542</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>688</x>
+     <y>606</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>tripPlanner</receiver>
+   <slot>onDateClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>674</x>
+     <y>575</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>646</x>
+     <y>621</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>tripPlanner</receiver>
+   <slot>onSeatingClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>805</x>
+     <y>572</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>805</x>
+     <y>635</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>tripPlanner</receiver>
+   <slot>onGreatClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1032</x>
+     <y>509</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>922</x>
+     <y>619</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>tripPlanner</receiver>
+   <slot>onLeastClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>996</x>
+     <y>545</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>999</x>
+     <y>605</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>onPlanClick()</slot>
@@ -355,5 +500,10 @@
   <slot>onStadiumsClick()</slot>
   <slot>onTeamClick()</slot>
   <slot>onSearchClick()</slot>
+  <slot>onRoofClick()</slot>
+  <slot>onDateClick()</slot>
+  <slot>onSeatingClick()</slot>
+  <slot>onGreatClick()</slot>
+  <slot>onLeastClick()</slot>
  </slots>
 </ui>

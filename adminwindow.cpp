@@ -11,6 +11,7 @@ AdminWindow::AdminWindow(QWidget *parent) :
     updateCollegeTable();
     updateSouvenirTable();
     updateCombo();
+    souvTable();
 }
 
 AdminWindow::~AdminWindow()
@@ -18,7 +19,7 @@ AdminWindow::~AdminWindow()
     delete ui;
 }
 
-void AdminWindow::updateCollegeTable()
+void AdminWindow::updateCollegeTable() //CHANGE FUNC NAME
 {
     QSqlQueryModel* model=new QSqlQueryModel();
 
@@ -37,7 +38,7 @@ void AdminWindow::updateCollegeTable()
     ui->collegeView->resizeColumnsToContents();
 }
 
-void AdminWindow::updateSouvenirTable()
+void AdminWindow::updateSouvenirTable() // CHANGE FUNC NAME
 {
     QSqlQueryModel* model=new QSqlQueryModel();
 
@@ -380,4 +381,26 @@ void AdminWindow::on_pushButton_6_clicked()
     ui->souvenirView->setModel(model);
     ui->souvenirView->setModel(model);
     ui->souvenirView->resizeColumnsToContents();
+}
+
+void AdminWindow::souvTable()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT * FROM souvenirs");
+
+    if(qry->exec())
+    {
+        qDebug() << "REAL table updated.";
+    }
+
+    model->setQuery(*qry);
+
+    ui->souTable->setModel(model);
+    ui->souTable->setColumnWidth(0, 220);
+
+
+
 }

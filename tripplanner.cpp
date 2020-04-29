@@ -246,3 +246,116 @@ void tripPlanner::onSearchClick()
 
 
 }
+
+void tripPlanner::onRoofClick()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT TeamName, StadiumName, RoofType FROM MLB WHERE RoofType = (:RoofType) ORDER BY TeamName ASC");
+    qry->bindValue(":RoofType", "Open");
+
+    if(qry->exec())
+    {
+        qDebug() << "souvenir table updated.";
+    }
+
+    model->setQuery(*qry);
+
+    ui->souvenirView->setModel(model);
+    ui->souvenirView->setModel(model);
+    ui->souvenirView->resizeColumnsToContents();
+
+
+}
+
+void tripPlanner::onDateClick()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT TeamName, StadiumName, DataOpened FROM MLB ORDER BY DataOpened ASC");
+
+    if(qry->exec())
+    {
+        qDebug() << "souvenir table updated.";
+    }
+
+    model->setQuery(*qry);
+
+    ui->souvenirView->setModel(model);
+    ui->souvenirView->setModel(model);
+    ui->souvenirView->resizeColumnsToContents();
+
+}
+
+void tripPlanner::onSeatingClick()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT TeamName, StadiumName, SeatingCapacity FROM MLB ORDER BY SeatingCapacity ASC");
+
+    if(qry->exec())
+    {
+        qDebug() << "souvenir table updated.";
+    }
+
+    model->setQuery(*qry);
+
+    ui->souvenirView->setModel(model);
+    ui->souvenirView->setModel(model);
+    ui->souvenirView->resizeColumnsToContents();
+
+
+
+}
+
+void tripPlanner::onGreatClick()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT TeamName, StadiumName, max(DistanceField) FROM MLB ");
+
+    if(qry->exec())
+    {
+        qDebug() << "souvenir table updated.";
+    }
+
+    model->setQuery(*qry);
+
+    ui->souvenirView->setModel(model);
+    ui->souvenirView->setModel(model);
+    ui->souvenirView->resizeColumnsToContents();
+
+
+
+}
+
+void tripPlanner::onLeastClick()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT TeamName, StadiumName, min(DistanceField) FROM MLB ");
+
+    if(qry->exec())
+    {
+        qDebug() << "souvenir table updated.";
+    }
+
+    model->setQuery(*qry);
+
+    ui->souvenirView->setModel(model);
+    ui->souvenirView->setModel(model);
+    ui->souvenirView->resizeColumnsToContents();
+
+
+
+}

@@ -117,6 +117,8 @@ private slots:
 
     void on_pushButton_6_clicked();
 
+    void souvTable();
+
 private:
     /**
 * @brief string stores temp souv data

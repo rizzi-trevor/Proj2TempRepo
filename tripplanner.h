@@ -69,6 +69,16 @@ public slots:
 
     void onSearchClick();
 
+    void onRoofClick();
+
+    void onDateClick();
+
+    void onSeatingClick();
+
+    void onGreatClick();
+
+    void onLeastClick();
+
 
 
 private slots:
