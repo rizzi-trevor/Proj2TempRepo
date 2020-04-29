@@ -70,6 +70,133 @@ void DbManager::InitCollegeList(const QString &path)//path to the excel file
    }
 }
 
+void DbManager::initMlbList(const QString &path)
+{
+    QSqlDatabase fileDB = QSqlDatabase::addDatabase("QODBC", "xlsx_connection");
+    fileDB.setDatabaseName("DRIVER={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};DBQ=" + path);
+
+    if(fileDB.open())
+    {
+        qDebug() << "Excel connection successful" << endl;
+
+        QSqlQuery *query = new QSqlQuery(fileDB);
+        query->exec("select * from [" + QString("Sheet1") + "$A1:J31]");
+
+        QSqlQuery * querytoDb = new QSqlQuery(myDB);
+
+        querytoDb->exec("CREATE TABLE MLB ("
+                        "TeamName        TEXT,"
+                        "StadiumName     TEXT,"
+                        "SeatingCapacity INTEGER,"
+                        "Location        TEXT,"
+                        "PlayingSurface  TEXT,"
+                        "League          TEXT,"
+                        "DataOpened      INTEGER,"
+                        "DistanceField   INTEGER,"
+                        "Ballpark        TEXT,"
+                        "RoofType        TEXT"
+                        ");");
+
+        QString tempColumn1;
+        QString check;
+
+        while(query->next())
+        {
+            if(myDB.open())
+            {
+                querytoDb->prepare("INSERT INTO MLB(TeamName, StadiumName, SeatingCapacity, Location, PlayingSurface, League, DataOpened, DistanceField, Ballpark, RoofType)"
+                                   "VALUES(:TeamName, :StadiumName, :SeatingCapacity, :Location, :PlayingSurface, :League, :DataOpened, :DistanceField, :Ballpark, :RoofType)");
+
+                QString column0 = query->value(0).toString();
+                QString column1 = query->value(1).toString();
+                check = column1;
+                if(column1 == "" || column1 == " ")
+                {
+                    column1 = tempColumn1;
+                }
+
+                int column2 = query->value(2).toInt();
+
+                QString column3 = query->value(3).toString();
+                QString column4 = query->value(4).toString();
+                QString column5 = query->value(5).toString();
+
+               int column6 = query->value(6).toInt();
+               QString column7 = query->value(7).toString();
+
+               QString column8 = query->value(8).toString();
+               QString column9 = query->value(9).toString();
+
+                    querytoDb->bindValue(":TeamName", column0);
+                    querytoDb->bindValue(":StadiumName", column1);
+                    querytoDb->bindValue(":SeatingCapacity",column2);
+                    querytoDb->bindValue(":Location",column3);
+                    querytoDb->bindValue(":PlayingSurface",column4);
+                    querytoDb->bindValue(":League",column5);
+                    querytoDb->bindValue(":DataOpened",column6);
+                    querytoDb->bindValue(":DistanceField",column7);
+                    querytoDb->bindValue(":Ballpark",column8);
+                    querytoDb->bindValue(":RoofType",column9);
+
+                    if(querytoDb->exec())
+                    {
+                        qDebug() << "WORKED!";
+                    }
+                    else
+                        qDebug() << "FAIL!";
+
+
+                tempColumn1 = column1;
+            }
+        }
+        fileDB.close();
+    }
+
+}
+
+void DbManager::initStadiumList(const QString &path)
+{
+    QSqlDatabase fileDB = QSqlDatabase::addDatabase("QODBC", "xlsx_connection");
+    fileDB.setDatabaseName("DRIVER={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};DBQ=" + path);
+
+    if(fileDB.open())
+    {
+        qDebug() << "Excel connection successful" << endl;
+
+        QSqlQuery *query = new QSqlQuery(fileDB);
+        query->exec("select * from [" + QString("Distances") + "$A1:C107]");
+
+        QSqlQuery * querytoDb = new QSqlQuery(myDB);
+
+        querytoDb->exec("CREATE TABLE Distances ("
+                        "begStadium TEXT,"
+                        "endStadium TEXT,"
+                        "distance INTEGER);");
+
+        while(query->next())
+        {
+            //QSqlDatabase myDB = QSqlDatabase::database("sqlite_connection");
+
+            if(myDB.open())
+            {
+                querytoDb->prepare("INSERT INTO Distances(begStadium, endStadium, distance) VALUES(:begStadium, :endStadium, :distance)");
+
+                QString column1 = query->value(0).toString();
+
+                QString column2 = query->value(1).toString();
+
+                int column3 = query->value(2).toInt();
+
+                querytoDb->bindValue(":begStadium", column1);
+                querytoDb->bindValue(":endStadium",column2);
+                querytoDb->bindValue(":distance",column3);
+                qDebug() << querytoDb->exec();
+            }
+        }
+        fileDB.close();
+    }
+}
+
 void DbManager::initSouvenirList(const QString &path)
 {
     QSqlDatabase fileDB = QSqlDatabase::addDatabase("QODBC", "xlsx_connection");
@@ -449,7 +576,7 @@ void DbManager::clearDb()
 {
     QSqlQuery *deleteQuery = new QSqlQuery(myDB);
 
-    deleteQuery->prepare("DROP TABLE IF EXISTS Colleges");
+    deleteQuery->prepare("DROP TABLE IF EXISTS MLB");
 
     deleteQuery->exec();
 
@@ -457,7 +584,7 @@ void DbManager::clearDb()
 
     deleteQuery->exec();
 
-    deleteQuery->prepare("DROP TABLE IF EXISTS Souvenirs");
+    deleteQuery->prepare("DROP TABLE IF EXISTS souvenirs");
 
     deleteQuery->exec();
 
@@ -531,6 +658,67 @@ QString DbManager::getPassword(const QString &username) const
         return password;
 }
 
+void DbManager::addMLB(const QString &path)
+{
+    QSqlDatabase fileDB = QSqlDatabase::addDatabase("QODBC", "xlsx_connection");
+    fileDB.setDatabaseName("DRIVER={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};DBQ=" + path);
+
+    if(fileDB.open())
+    {
+        qDebug() << "Excel connection successful" << endl;
+
+        QSqlQuery *query = new QSqlQuery(fileDB);
+        query->exec("select * from [" + QString("Sheet1") + "$A1:j2]");
+
+        QSqlQuery * querytoDb = new QSqlQuery(myDB);
+
+        while(query->next())
+        {
+            if(myDB.open())
+            {
+                querytoDb->prepare("INSERT INTO MLB(TeamName, StadiumName, SeatingCapacity, Location, PlayingSurface, League, DataOpened, DistanceField, Ballpark, RoofType)"
+                                   "VALUES(:TeamName, :StadiumName, :SeatingCapacity, :Location, :PlayingSurface, :League, :DataOpened, :DistanceField, :Ballpark, :RoofType)");
+
+                QString column0 = query->value(0).toString();
+                QString column1 = query->value(1).toString();
+
+                int column2 = query->value(2).toInt();
+
+                QString column3 = query->value(3).toString();
+                QString column4 = query->value(4).toString();
+                QString column5 = query->value(5).toString();
+
+               int column6 = query->value(6).toInt();
+               QString column7 = query->value(7).toString();
+
+               QString column8 = query->value(8).toString();
+               QString column9 = query->value(9).toString();
+
+                    querytoDb->bindValue(":TeamName", column0);
+                    querytoDb->bindValue(":StadiumName", column1);
+                    querytoDb->bindValue(":SeatingCapacity",column2);
+                    querytoDb->bindValue(":Location",column3);
+                    querytoDb->bindValue(":PlayingSurface",column4);
+                    querytoDb->bindValue(":League",column5);
+                    querytoDb->bindValue(":DataOpened",column6);
+                    querytoDb->bindValue(":DistanceField",column7);
+                    querytoDb->bindValue(":Ballpark",column8);
+                    querytoDb->bindValue(":RoofType",column9);
+
+                    if(querytoDb->exec())
+                    {
+                        qDebug() << "WORKED!";
+                    }
+                    else
+                        qDebug() << "FAIL!";
+
+            }
+        }
+
+        fileDB.close();
+    }
+}
+
 void DbManager::addColleges(const QString &path)
 {
     QSqlDatabase fileDB = QSqlDatabase::addDatabase("QODBC", "xlsx_connection");
@@ -541,7 +729,7 @@ void DbManager::addColleges(const QString &path)
         qDebug() << "Excel connection successful" << endl;
 
         QSqlQuery *query = new QSqlQuery(fileDB);
-        query->exec("select * from [" + QString("New Campuses") + "$A2:C47]");
+        query->exec("select * from [" + QString("Sheet1") + "$A1:C4]");
 
         QSqlQuery * querytoDb = new QSqlQuery(myDB);
         QSqlQuery * querytoList = new QSqlQuery(myDB);
@@ -550,7 +738,7 @@ void DbManager::addColleges(const QString &path)
         {
             if(myDB.open())
             {
-                querytoDb->prepare("INSERT INTO Distances(startCollege, endCollege, distance) VALUES(:startCollege, :endCollege, :distance)");
+                querytoDb->prepare("INSERT INTO Distances(begStadium, endStadium, distance) VALUES(:startCollege, :endCollege, :distance)");
                 querytoList->prepare("INSERT OR REPLACE INTO Colleges(collegeName) values(:collegeName)");
 
                 QString column1 = query->value(0).toString();
@@ -645,5 +833,85 @@ bool DbManager::tripIdExists(QString tripID)
     }
 
     return exists;
+
+}
+
+void DbManager::createSouvTable()
+{
+    QSqlQuery *query = new QSqlQuery(myDB);
+    QSqlQuery *dataQuery = new QSqlQuery(myDB);
+
+    QString souvName;
+    QStringList teamName;
+    double price;
+    int j = 0;
+    int track = 0;
+
+
+    if(myDB.open())
+    {
+        dataQuery->exec("SELECT TeamName FROM MLB");
+        while(dataQuery->next())
+        {
+            teamName << dataQuery->value(0).toString();
+            qDebug() << dataQuery->value(0).toString();
+        }
+
+        query->exec("CREATE TABLE souvenirs ("
+                    "TeamName TEXT,"
+                    "SouvenirName TEXT,"
+                    "Price DOUBLE);");
+
+        for(int i = 0; i < ((teamName.size() * 5)-5); i++)
+        {
+            if(j == 5)
+            {
+                j = 0;
+                track++;
+
+            }
+            switch(j)
+            {
+            case 0:
+                souvName = "Baseball Cap";
+                price = 18.99;
+                break;
+
+            case 1:
+                souvName = "Baseball Bat";
+                price = 89.39;
+                break;
+
+            case 2:
+                souvName = "Team Pennant";
+                price = 17.99;
+                break;
+
+            case 3:
+                souvName = "Autographed Baseball";
+                price = 29.99;
+                break;
+
+            case 4:
+                souvName = "Team Jersey";
+                price = 199.99;
+                break;
+
+            }
+
+
+            query->prepare("INSERT INTO souvenirs(TeamName, SouvenirName, Price) VALUES(:TeamName, :SouvenirName, :Price)");
+
+            query->bindValue(":TeamName", teamName[track]);
+            query->bindValue(":SouvenirName", souvName);
+            query->bindValue(":Price", price);
+            qDebug() << query->exec();
+
+            j++;
+        }
+    }
+
+
+
 
 }

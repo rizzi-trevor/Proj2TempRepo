@@ -93,7 +93,7 @@ void tripPlanner::ChecboxChanged()
         }
     }
 
-    if(checkedCount == 11)
+    if(checkedCount == 20)
     {
         for(int i = 0; i < checkBoxVector.size(); i++)
         {

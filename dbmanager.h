@@ -27,7 +27,7 @@
  * 3. sqlite> .quit
  */
 
-static const QString PROJECT_PATH = "C:/Users/farna/Documents/CS1D-Project1-College-Touring/";
+static const QString PROJECT_PATH = "C:/Users/Trevor Rizzi/Desktop/CS1D-PROJ2/";
 
 
 class DbManager
@@ -56,7 +56,8 @@ public:
     * @return void - none
     */
     void initSouvenirList(const QString &path);
-
+    void initMlbList(const QString &path);
+    void initStadiumList(const QString &path);
     /**
     * @brief initalizes sql data table for college distances and inputs all data from path parameter file location
     * @param &path - filepath for DB
@@ -152,6 +153,7 @@ public:
     * @return void - none
     */
     void addColleges(const QString &path);
+    void addMLB(const QString &path);
 
     /**
     * @brief checks to see if the username exists
@@ -211,6 +213,8 @@ public:
     bool tripIdExists(QString tripID);
 
     void createTripTable();
+
+    void createSouvTable();
 
 
 private:

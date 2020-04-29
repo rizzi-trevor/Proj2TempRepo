@@ -157,7 +157,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Plan a Trip!</string>
+     <string>BETA</string>
     </property>
    </widget>
    <widget class="QLabel" name="invalidLabel">

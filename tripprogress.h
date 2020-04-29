@@ -136,10 +136,6 @@ private slots:
 
     void on_removeCart_clicked();
 
-    void on_pushButton_clicked();
-
-    void on_pushButton_4_clicked();
-
 private:
     /**
     * @brief points to tripprogress UI

@@ -29,6 +29,7 @@ class AdminWindow : public QDialog
     Q_OBJECT
 
 public:
+    void updateCombo();
     /**
     * @brief explicit default Constructor
     *
@@ -97,6 +98,24 @@ private slots:
     void on_removeSouvenir_2_clicked();
 
     void on_pushButton_5_released();
+
+    void on_pushButton_2_clicked();
+
+    void on_addMLB_clicked();
+
+    void on_searchButton_clicked();
+
+    void on_showALL_clicked();
+
+    void on_showStadiums_clicked();
+
+    void on_showStadiums_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_6_clicked();
 
 private:
     /**
