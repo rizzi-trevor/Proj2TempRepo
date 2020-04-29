@@ -6,303 +6,339 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1105</width>
-    <height>685</height>
+    <width>1095</width>
+    <height>598</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QScrollArea" name="CollegeList_scrollArea">
+  <widget class="QWidget" name="centralwidget" native="true">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>10</y>
-     <width>301</width>
-     <height>531</height>
+     <x>0</x>
+     <y>0</y>
+     <width>1111</width>
+     <height>591</height>
     </rect>
    </property>
-   <property name="widgetResizable">
-    <bool>true</bool>
-   </property>
-   <widget class="QWidget" name="scrollAreaWidgetContents">
+   <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>299</width>
-      <height>529</height>
+      <x>10</x>
+      <y>10</y>
+      <width>1061</width>
+      <height>661</height>
      </rect>
     </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="Main">
+     <attribute name="title">
+      <string>Main</string>
+     </attribute>
+     <widget class="QPushButton" name="createDb">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>210</y>
+        <width>421</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Develop your dream trip!</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>180</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>BETA</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>MLB information</string>
+     </attribute>
+     <widget class="QTableView" name="souvenirView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>1041</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::ExtendedSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>470</y>
+        <width>151</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="searchButton">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>470</y>
+        <width>80</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="showALL">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>470</y>
+        <width>80</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Show ALL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="showStadiums">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>500</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Team Name (A-Z)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="showStadiums_2">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>470</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Stadiums (A-Z)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>470</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>American League</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>500</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>National  League</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>470</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Typology</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>470</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sort by:</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="colleges">
+     <attribute name="title">
+      <string>Distances</string>
+     </attribute>
+     <widget class="QTableView" name="collegeView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>541</width>
+        <height>501</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
    </widget>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>190</y>
-     <width>131</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Find shortest route!</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="startCampusHeader">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>10</y>
-     <width>221</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Select starting campus:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="warningLabel">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>140</y>
-     <width>291</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QTableView" name="sadView">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>280</y>
-     <width>351</width>
-     <height>241</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTableView" name="sadView_2">
-   <property name="geometry">
-    <rect>
-     <x>760</x>
-     <y>280</y>
-     <width>141</width>
-     <height>241</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="trip">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>100</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>70</y>
-     <width>121</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>3-Character Trip ID:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="tripWarning">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>160</y>
-     <width>301</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="colName">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>40</y>
-     <width>221</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="collegeLabel">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>260</y>
-     <width>321</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>College distances from: </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="souvLabel">
-   <property name="geometry">
-    <rect>
-     <x>760</x>
-     <y>260</y>
-     <width>291</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Souvenirs at: </string>
-   </property>
-  </widget>
-  <widget class="QTableView" name="window">
-   <property name="geometry">
-    <rect>
-     <x>710</x>
-     <y>30</y>
-     <width>261</width>
-     <height>192</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>710</x>
-     <y>10</y>
-     <width>91</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>My ordered trip: </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>10</y>
-     <width>47</width>
-     <height>14</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Distance: </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="dist">
-   <property name="geometry">
-    <rect>
-     <x>900</x>
-     <y>10</y>
-     <width>47</width>
-     <height>14</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="display">
-   <property name="geometry">
-    <rect>
-     <x>560</x>
-     <y>40</y>
-     <width>81</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Display</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="start">
-   <property name="geometry">
-    <rect>
-     <x>1000</x>
-     <y>70</y>
-     <width>71</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Start Trip!</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="startLabel">
-   <property name="geometry">
-    <rect>
-     <x>1000</x>
-     <y>40</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
   </widget>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton</sender>
+   <sender>pushButton_6</sender>
    <signal>clicked()</signal>
    <receiver>tripPlanner</receiver>
-   <slot>onPlanClick()</slot>
+   <slot>onTypologyClick()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>524</x>
-     <y>289</y>
+     <x>674</x>
+     <y>513</y>
     </hint>
     <hint type="destinationlabel">
-     <x>603</x>
+     <x>674</x>
+     <y>606</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>tripPlanner</receiver>
+   <slot>onAmericanClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>775</x>
+     <y>521</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>778</x>
+     <y>602</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showALL</sender>
+   <signal>clicked()</signal>
+   <receiver>tripPlanner</receiver>
+   <slot>onShowClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>304</x>
+     <y>521</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>306</x>
+     <y>601</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>tripPlanner</receiver>
+   <slot>onNationalClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>765</x>
+     <y>545</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>765</x>
+     <y>606</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showStadiums_2</sender>
+   <signal>clicked()</signal>
+   <receiver>tripPlanner</receiver>
+   <slot>onStadiumsClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>886</x>
+     <y>513</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>887</x>
+     <y>611</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showStadiums</sender>
+   <signal>clicked()</signal>
+   <receiver>tripPlanner</receiver>
+   <slot>onTeamClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>906</x>
+     <y>551</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>902</x>
      <y>619</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>display</sender>
+   <sender>searchButton</sender>
    <signal>clicked()</signal>
    <receiver>tripPlanner</receiver>
-   <slot>onDisplayClick()</slot>
+   <slot>onSearchClick()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>596</x>
-     <y>49</y>
+     <x>220</x>
+     <y>514</y>
     </hint>
     <hint type="destinationlabel">
-     <x>694</x>
-     <y>455</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>start</sender>
-   <signal>clicked()</signal>
-   <receiver>tripPlanner</receiver>
-   <slot>onStartClick()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>923</x>
-     <y>80</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>916</x>
-     <y>763</y>
+     <x>224</x>
+     <y>608</y>
     </hint>
    </hints>
   </connection>
@@ -311,5 +347,13 @@
   <slot>onPlanClick()</slot>
   <slot>onDisplayClick()</slot>
   <slot>onStartClick()</slot>
+  <slot>slot1()</slot>
+  <slot>onTypologyClick()</slot>
+  <slot>onAmericanClick()</slot>
+  <slot>onShowClick()</slot>
+  <slot>onNationalClick()</slot>
+  <slot>onStadiumsClick()</slot>
+  <slot>onTeamClick()</slot>
+  <slot>onSearchClick()</slot>
  </slots>
 </ui>
