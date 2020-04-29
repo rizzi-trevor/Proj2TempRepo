@@ -27,7 +27,7 @@
  * 3. sqlite> .quit
  */
 
-static const QString PROJECT_PATH = "C:/Users/Trevor Rizzi/Desktop/CS1D-PROJ2/";
+static const QString PROJECT_PATH = "C:/Users/farna/Documents/project 2/Proj2TempRepo";
 
 
 class DbManager
@@ -215,6 +215,8 @@ public:
     void createTripTable();
 
     void createSouvTable();
+
+    bool reOpen();
 
 
 private:

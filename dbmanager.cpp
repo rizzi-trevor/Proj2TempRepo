@@ -301,19 +301,21 @@ void DbManager::removeSou(const QString &souName, const QString &college)
 {
     QSqlQuery *query = new QSqlQuery(myDB);
 
-    if(souExists(souName, college))
-    {
         if(myDB.open())
         {
-            query->prepare("DELETE FROM Souvenirs WHERE (souvenirName) = (:souvenirName)");
+            query->prepare("DELETE FROM souvenirs WHERE (SouvenirName, TeamName) = (:souvenirName, :TeamName)");
             query->bindValue(":souvenirName", souName);
+            query->bindValue(":TeamName", college);
 
             if(query->exec())
                 qDebug() << "sou delete success!";
             else
                 qDebug() << "sou delete failed!";
         }
-    }
+        else
+        {
+            qDebug() << "LSKDJFKLKSDJFLKSJDFKJSDLKFJSDLKJFKSDJFLSDJF";
+        }
 
 }
 
@@ -431,7 +433,7 @@ void DbManager::addSou(const QString &college, const QString &souName, const dou
     {
         if(myDB.open())
         {
-            query->prepare("INSERT INTO Souvenirs(collegeName, souvenirName, cost) VALUES(:collegeName, :souvenirName, :cost)");
+            query->prepare("INSERT INTO souvenirs(TeamName, SouvenirName, price) VALUES(:collegeName, :souvenirName, :cost)");
             query->bindValue(":collegeName", college);
             query->bindValue(":souvenirName", souName);
             query->bindValue(":cost", cost);
@@ -474,8 +476,8 @@ void DbManager::updateSou(const QString &souName, const QString &college, const 
 
     if(myDB.open())
     {
-        query->prepare("UPDATE Souvenirs SET (souvenirName, cost) = (:newSouvenirName, :cost) "
-                       "WHERE (collegeName, souvenirName) = (:collegeName, :souvenirName)");
+        query->prepare("UPDATE souvenirs SET (SouvenirName, Price) = (:newSouvenirName, :cost) "
+                       "WHERE (TeamName, SouvenirName) = (:collegeName, :souvenirName)");
         query->bindValue(":newSouvenirName", newSouvenir);
         query->bindValue(":collegeName", college);
         query->bindValue(":souvenirName", souName);
@@ -523,9 +525,9 @@ bool DbManager::souExists(const QString &name, const QString &college)
 
     QSqlQuery *checkQuery = new QSqlQuery(myDB);
 
-    checkQuery->prepare("SELECT souvenirName FROM Souvenirs WHERE (collegeName, souvenirName) = (:collegeName, :souvenirName)");
-    checkQuery->bindValue(":souvenirName", name);
-    checkQuery->bindValue(":collegeName", college);
+    checkQuery->prepare("SELECT SouvenirName FROM souvenirs WHERE (TeamName, SouvenirName) = (:TeamName, :SouvenirName)");
+    checkQuery->bindValue(":SouvenirName", name);
+    checkQuery->bindValue(":TeamName", college);
 
 
     if(checkQuery->exec())
@@ -533,8 +535,8 @@ bool DbManager::souExists(const QString &name, const QString &college)
         if(checkQuery->next())
         {
             exists = true;
-            QString souName = checkQuery->value("souvenirName").toString();
-            QString college = checkQuery->value("collegeName").toString();
+            QString souName = checkQuery->value(1).toString();
+            QString college = checkQuery->value(0).toString();
             qDebug() << souName << " " << college;
         }
     }
@@ -914,4 +916,24 @@ void DbManager::createSouvTable()
 
 
 
+}
+
+bool DbManager::reOpen()
+{
+    bool answer = false;
+
+    myDB = QSqlDatabase::addDatabase("QSQLITE");
+    myDB.setDatabaseName(PROJECT_PATH + "/college.db");
+
+    if (!myDB.open())
+    {
+        qDebug() << "Error: connection with database fail";
+    }
+    else
+    {
+        qDebug() << "Database: connection ok";
+        answer = true;
+    }
+
+    return answer;
 }

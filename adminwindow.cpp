@@ -59,7 +59,6 @@ void AdminWindow::updateSouvenirTable() // CHANGE FUNC NAME
 
 }
 
-
 void AdminWindow::onInitialise()
 {
     confirmpage confirm;
@@ -389,7 +388,7 @@ void AdminWindow::souvTable()
 
     QSqlQuery* qry=new QSqlQuery();
 
-    qry->prepare("SELECT * FROM souvenirs");
+    qry->prepare("SELECT * FROM souvenirs ORDER BY TeamName ASC");
 
     if(qry->exec())
     {
@@ -402,5 +401,136 @@ void AdminWindow::souvTable()
     ui->souTable->setColumnWidth(0, 220);
 
 
+
+}
+
+void AdminWindow::on_pushButton_7_clicked()
+{
+    addSouvenir adding;
+    adding.setModal(true);
+    adding.exec();
+
+    myDb.reOpen();
+    souvTable();
+}
+
+void AdminWindow::on_souTable_clicked(const QModelIndex &index)
+{
+    if(index.isValid())
+        {
+            int row = index.row();
+            QString firstText = index.sibling(row, 0).data().toString();
+            QString secondText = index.sibling(row, 1).data().toString();
+            souve = index.sibling(row, 1).data().toString();
+            double thirdText = index.sibling(row, 2).data().toDouble();
+
+            ui->removeEdit->setText(secondText);
+            ui->labelCollege->setText(firstText);
+            ui->priceSpin->setValue(thirdText);
+
+            qDebug() << firstText << " " << secondText << " " << thirdText << endl;
+            qDebug() << index << endl;
+        }
+
+    bool open = myDb.isOpen();
+
+    if(open)
+        qDebug() << "DB OPEN!";
+    else
+        qDebug() << "DB CLOSE!";
+}
+
+void AdminWindow::on_pushButton_8_clicked()
+{
+        bool success = false;
+        confirmpage confirm;
+        bool check = false;
+
+
+        bool open = myDb.isOpen();
+
+        if(open)
+            qDebug() << "DB OPEN!";
+        else
+            qDebug() << "DB CLOSE!";
+
+        if(ui->removeEdit->text() == "")
+        {
+            ui->removeEdit->setPlaceholderText("souvenir name empty!");
+            success = true;
+        }
+
+        if(!myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()))
+        {
+           ui->removeEdit->setText("");
+           ui->removeEdit->setPlaceholderText("souvenir doesn't exist!");
+           success = true;
+        }
+
+        if(!success)
+        {
+            confirm.setModal(true);
+            confirm.exec();
+            check = confirm.getData();
+        }
+
+        if(myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()) && !success && check)
+        {
+            myDb.removeSou(ui->removeEdit->text(), ui->labelCollege->text());
+            ui->removeEdit->setText("");
+            ui->removeEdit->setPlaceholderText("souvenir name");
+        }
+        else
+        {
+            qDebug() << "remove didn't work!";
+        }
+
+        souvTable();
+}
+
+void AdminWindow::on_updateButton_clicked()
+{
+    bool success = false;
+        confirmpage confirm;
+        bool check = false;
+
+        if(ui->removeEdit->text() == "")
+        {
+            ui->removeEdit->setPlaceholderText("souvenir name empty!");
+            success = true;
+        }
+
+        if(!success)
+        {
+            confirm.setModal(true);
+            confirm.exec();
+            check = confirm.getData();
+        }
+
+
+        if(!myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()))
+        {
+            if(!success && check)
+            {
+                myDb.updateSou(souve, ui->labelCollege->text(),ui->priceSpin->value(), ui->removeEdit->text());
+            }
+            else
+            {
+                qDebug() << "remove didn't work!";
+            }
+        }
+        else if(souve == ui->removeEdit->text())
+        {
+            if(!success && check)
+            {
+                myDb.updateSou(souve, ui->labelCollege->text(),ui->priceSpin->value(), ui->removeEdit->text());
+            }
+            else
+            {
+                qDebug() << "remove didn't work!";
+            }
+        }
+
+        souvTable();
 
 }

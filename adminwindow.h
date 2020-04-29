@@ -119,6 +119,14 @@ private slots:
 
     void souvTable();
 
+    void on_pushButton_7_clicked();
+
+    void on_souTable_clicked(const QModelIndex &index);
+
+    void on_pushButton_8_clicked();
+
+    void on_updateButton_clicked();
+
 private:
     /**
 * @brief string stores temp souv data
