@@ -45,7 +45,7 @@
     </font>
    </property>
    <property name="text">
-    <string>College Name</string>
+    <string>Team Name</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">

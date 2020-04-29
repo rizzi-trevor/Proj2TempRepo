@@ -21,7 +21,7 @@ void addSouvenir::updateCombo()
 
     QSqlQuery* qry=new QSqlQuery();
 
-    qry->prepare("SELECT DISTINCT startCollege FROM Distances");
+    qry->prepare("SELECT DISTINCT TeamName FROM MLB");
 
     if(qry->exec())
     {
