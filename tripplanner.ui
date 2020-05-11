@@ -34,45 +34,32 @@
     <property name="currentIndex">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="Main">
+    <widget class="QWidget" name="Plan">
      <attribute name="title">
-      <string>Main</string>
+      <string>Plan</string>
      </attribute>
-     <widget class="QPushButton" name="createDb">
+     <widget class="QScrollArea" name="scrollArea">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>210</y>
-        <width>421</width>
-        <height>101</height>
+        <x>10</x>
+        <y>10</y>
+        <width>301</width>
+        <height>531</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <pointsize>20</pointsize>
-       </font>
+      <property name="widgetResizable">
+       <bool>true</bool>
       </property>
-      <property name="text">
-       <string>Develop your dream trip!</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_2">
-      <property name="geometry">
-       <rect>
-        <x>490</x>
-        <y>180</y>
-        <width>131</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>BETA</string>
-      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>299</width>
+         <height>529</height>
+        </rect>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="tab">

@@ -79,9 +79,14 @@ public slots:
 
     void onLeastClick();
 
+    void initializeList();
+
 
 
 private slots:
+     void ChecboxChanged();
+
+
 private:
     /**
     * @brief points to tripPlanner UI
@@ -94,6 +99,8 @@ private:
     DbManager myDb = DbManager(PROJECT_PATH + "/college.db");
 
     tripprogress *progress;
+
+    QVector<QCheckBox*> checkBoxVector;
 
 
 };
