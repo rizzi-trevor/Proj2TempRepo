@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1138</width>
-    <height>599</height>
+    <width>1099</width>
+    <height>851</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Admin Panel</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: #101010;</string>
   </property>
   <widget class="QWidget" name="centralwidget" native="true">
    <property name="geometry">
@@ -19,22 +22,28 @@
      <x>0</x>
      <y>0</y>
      <width>1111</width>
-     <height>591</height>
+     <height>891</height>
     </rect>
    </property>
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>30</x>
       <y>20</y>
       <width>1061</width>
-      <height>551</height>
+      <height>821</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background: #101010;</string>
+    </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="Main">
+     <property name="styleSheet">
+      <string notr="true">background: #101010;</string>
+     </property>
      <attribute name="title">
       <string>Main</string>
      </attribute>
@@ -46,6 +55,12 @@
         <width>201</width>
         <height>61</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #339;
+Color: #fefefe;</string>
       </property>
       <property name="text">
        <string>Initialise Database</string>
@@ -60,6 +75,12 @@
         <height>61</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #393;
+Color: #fefefe;</string>
+      </property>
       <property name="text">
        <string>Add Distance</string>
       </property>
@@ -72,6 +93,12 @@
         <width>201</width>
         <height>61</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #933;
+Color: #fefefe;</string>
       </property>
       <property name="text">
        <string>Clear Database</string>
@@ -86,12 +113,40 @@
         <height>61</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #393;
+Color: #fefefe;</string>
+      </property>
       <property name="text">
        <string>Add MLB</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>40</y>
+        <width>491</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../Desktop/LetsPlayFootball-master/Project Images/baseball-logo-design_62569-116.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab">
+     <property name="styleSheet">
+      <string notr="true">background: #101010;</string>
+     </property>
      <attribute name="title">
       <string>MLB information</string>
      </attribute>
@@ -103,6 +158,9 @@
         <width>1041</width>
         <height>451</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="selectionMode">
        <enum>QAbstractItemView::ExtendedSelection</enum>
@@ -120,6 +178,9 @@
         <height>22</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
      </widget>
      <widget class="QPushButton" name="searchButton">
       <property name="geometry">
@@ -129,6 +190,12 @@
         <width>80</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #393;
+Color: #fefefe;</string>
       </property>
       <property name="text">
        <string>Search</string>
@@ -143,6 +210,12 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #393;
+Color: #fefefe;</string>
+      </property>
       <property name="text">
        <string>Show ALL</string>
       </property>
@@ -155,6 +228,12 @@
         <width>101</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #393;
+Color: #fefefe;</string>
       </property>
       <property name="text">
        <string>Show Team Name</string>
@@ -169,6 +248,12 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #393;
+Color: #fefefe;</string>
+      </property>
       <property name="text">
        <string>Show Stadiums</string>
       </property>
@@ -181,6 +266,12 @@
         <width>101</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #393;
+Color: #fefefe;</string>
       </property>
       <property name="text">
        <string>American League</string>
@@ -195,6 +286,12 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #393;
+Color: #fefefe;</string>
+      </property>
       <property name="text">
        <string>National  League</string>
       </property>
@@ -208,12 +305,437 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #393;
+Color: #fefefe;</string>
+      </property>
       <property name="text">
        <string>Typology</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>680</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Location</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="ballEdit">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>670</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">padding-left: 20px;
+padding-right: 20px;
+border-radius: 20px;
+background: #333;
+color: #fefefe;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="leagueEdit">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>600</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">padding-left: 20px;
+padding-right: 20px;
+border-radius: 20px;
+background: #333;
+color: #fefefe;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="stadiumEdit">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>600</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">padding-left: 20px;
+padding-right: 20px;
+border-radius: 20px;
+background: #333;
+color: #fefefe;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>600</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Stadium Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="playingEdit">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>740</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">padding-left: 20px;
+padding-right: 20px;
+border-radius: 20px;
+background: #333;
+color: #fefefe;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="teamLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>500</y>
+        <width>361</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>24</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Team Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="locationEdit">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>670</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">padding-left: 20px;
+padding-right: 20px;
+border-radius: 20px;
+background: #333;
+color: #fefefe;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="roofEdit">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>740</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">padding-left: 20px;
+padding-right: 20px;
+border-radius: 20px;
+background: #333;
+color: #fefefe;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>600</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>League</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>670</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Ballpark</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>740</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Roof type</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>750</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Playing Surface</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="dateBox">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>740</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1900</number>
+      </property>
+      <property name="maximum">
+       <number>2030</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="seatBox">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>680</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>60000</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>680</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Seating Capacity</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>740</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Date Opened</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>600</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Distance Field</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>710</y>
+        <width>80</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #933;
+Color: #fefefe;</string>
+      </property>
+      <property name="text">
+       <string>Remove</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="updateMLB">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>750</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #393;
+Color: #fefefe;</string>
+      </property>
+      <property name="text">
+       <string>UPDATE</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="leagueEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>600</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">padding-left: 20px;
+padding-right: 20px;
+border-radius: 20px;
+background: #333;
+color: #fefefe;</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="colleges">
+     <property name="styleSheet">
+      <string notr="true">background: #101010;</string>
+     </property>
      <attribute name="title">
       <string>Distances</string>
      </attribute>
@@ -226,9 +748,15 @@
         <height>501</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
+     <property name="styleSheet">
+      <string notr="true">background: #101010;</string>
+     </property>
      <attribute name="title">
       <string>Souvenirs</string>
      </attribute>
@@ -238,8 +766,11 @@
         <x>20</x>
         <y>10</y>
         <width>541</width>
-        <height>501</height>
+        <height>771</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="selectionBehavior">
        <enum>QAbstractItemView::SelectRows</enum>
@@ -249,10 +780,13 @@
       <property name="geometry">
        <rect>
         <x>570</x>
-        <y>430</y>
+        <y>690</y>
         <width>131</width>
         <height>81</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Add Souvenir...</string>
@@ -262,10 +796,16 @@
       <property name="geometry">
        <rect>
         <x>570</x>
-        <y>490</y>
+        <y>750</y>
         <width>75</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #393;
+Color: #fefefe;</string>
       </property>
       <property name="text">
        <string>Add Souvenir</string>
@@ -276,7 +816,7 @@
        <rect>
         <x>570</x>
         <y>10</y>
-        <width>201</width>
+        <width>301</width>
         <height>51</height>
        </rect>
       </property>
@@ -287,6 +827,9 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Team Name</string>
       </property>
@@ -294,11 +837,14 @@
      <widget class="QDoubleSpinBox" name="priceSpin">
       <property name="geometry">
        <rect>
-        <x>570</x>
-        <y>120</y>
+        <x>580</x>
+        <y>130</y>
         <width>62</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_8">
@@ -310,6 +856,12 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #933;
+Color: #fefefe;</string>
+      </property>
       <property name="text">
        <string>Remove</string>
       </property>
@@ -319,9 +871,16 @@
        <rect>
         <x>570</x>
         <y>70</y>
-        <width>113</width>
-        <height>21</height>
+        <width>161</width>
+        <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">padding-left: 20px;
+padding-right: 20px;
+border-radius: 20px;
+background: #333;
+color: #fefefe;</string>
       </property>
      </widget>
      <widget class="QPushButton" name="updateButton">
@@ -332,6 +891,12 @@
         <width>80</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #393;
+Color: #fefefe;</string>
       </property>
       <property name="text">
        <string>UPDATE</string>
@@ -345,7 +910,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>877</width>
+     <width>1138</width>
      <height>20</height>
     </rect>
    </property>
@@ -368,6 +933,12 @@
      <width>80</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #933;
+Color: #fefefe;</string>
    </property>
    <property name="text">
     <string>Logout</string>

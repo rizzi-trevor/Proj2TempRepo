@@ -325,7 +325,7 @@ int DbManager::cartQuantity(const QString college, const QString souvenir)
     QSqlQuery *query = new QSqlQuery(myDB);
     if(myDB.open())
     {
-        query->prepare("SELECT quantity FROM Cart WHERE (college, souvenir) = (:college, :souvenir)");
+        query->prepare("SELECT quantity FROM Cart WHERE (stadium, souvenir) = (:college, :souvenir)");
         query->bindValue(":college", college);
         query->bindValue(":souvenir", souvenir);
 
@@ -361,7 +361,7 @@ void DbManager::removeCart(const QString college, const QString souvenir)
 
         if(myDB.open())
         {
-            query->prepare("DELETE FROM Cart WHERE (college, souvenir) = (:college, :souvenir)");
+            query->prepare("DELETE FROM Cart WHERE (stadium, souvenir) = (:college, :souvenir)");
             query->bindValue(":college", college);
             query->bindValue(":souvenir", souvenir);
 
@@ -397,7 +397,7 @@ void DbManager::resetCart()
         query->prepare("DELETE FROM cart");
 
         if(query->exec())
-            qDebug() << "Delete cART!";
+            qDebug() << "Delete CART!";
         else
             qDebug() << "coudln't delete cart!";
     }
@@ -409,7 +409,7 @@ void DbManager::addCart(const QString trip, const QString college, const QString
 
    if(myDB.open())
    {
-       query->prepare("INSERT INTO Cart(tripID, college, souvenir, price, quantity) VALUES(:tripID, :college, :souvenir, :price, :quantity)");
+       query->prepare("INSERT INTO Cart(tripID, stadium, souvenir, price, quantity) VALUES(:tripID, :college, :souvenir, :price, :quantity)");
        query->bindValue(":tripID", trip);
        query->bindValue(":college", college);
        query->bindValue(":souvenir", souvenir);
@@ -456,7 +456,7 @@ void DbManager::updateCart(const QString college, const QString souvenir, const 
 
     if(myDB.open())
     {
-        query->prepare("UPDATE Cart SET (quantity) = (:quantity) WHERE (college, souvenir) = (:college, :souvenir)");
+        query->prepare("UPDATE Cart SET (quantity) = (:quantity) WHERE (stadium, souvenir) = (:college, :souvenir)");
         query->bindValue(":college", college);
         query->bindValue(":souvenir", souvenir);
         query->bindValue(":quantity", count);
@@ -467,6 +467,42 @@ void DbManager::updateCart(const QString college, const QString souvenir, const 
             qDebug() << "UPDATE failed: " << query->lastError() << endl;
     }
 
+}
+
+void DbManager::updateMLB(const QString &team, const QString &stadium, const int &seat,
+               const QString &location, const QString &playing, const QString & league,
+               const int &date, const QString &distance, const QString &ball, const QString &roof)
+{
+    QSqlQuery *query = new QSqlQuery(myDB);
+
+    if(myDB.open())
+    {
+        query->prepare("UPDATE MLB SET (StadiumName, SeatingCapacity, Location, PlayingSurface, League, DataOpened, DistanceField, Ballpark, RoofType) "
+                       "= (:StadiumName, :SeatingCapacity, :Location, :PlayingSurface, :League, :DataOpened, :DistanceField, :balls, :RoofType) "
+                       "WHERE (TeamName) = (:collegeName)");
+
+        query->bindValue(":collegeName", team);
+        query->bindValue(":StadiumName", stadium);
+        query->bindValue(":SeatingCapacity", seat);
+        query->bindValue(":Location", location);
+        query->bindValue(":PlayingSurface", playing);
+        query->bindValue(":League", league);
+        query->bindValue(":DataOpened", date);
+        query->bindValue(":DistanceField", distance);
+        query->bindValue(":balls", ball);
+        query->bindValue(":RoofType", roof);
+
+
+
+        if(query->exec())
+        {
+            qDebug() << "UPDATE WORKED" << endl;
+        }
+        else
+        {
+            qDebug() << "UPDATE failed: " << query->lastError() << endl;
+        }
+    }
 }
 
 void DbManager::updateSou(const QString &souName, const QString &college, const double &spin, const QString &newSouvenir)
@@ -776,16 +812,27 @@ void DbManager::createTripTable()
     {
         query->exec("CREATE TABLE Trips ("
                     "tripID TEXT,"
-                    "college TEXT,"
+                    "stadium TEXT,"
                     "tripProgress INT,"
                     "distanceToNext INT);");
 
         query->exec("CREATE TABLE Purchases ("
                     "tripID TEXT,"
-                    "college TEXT,"
+                    "stadium TEXT,"
                     "souvenir TEXT,"
                     "price DOUBLE,"
-                    "quantity INTEGER);");
+                    "quantity INTEGER,"
+                    "total DOUBLE);");
+
+        query->exec("CREATE TABLE Cart ("
+                    "tripID TEXT,"
+                    "stadium TEXT,"
+                    "souvenir TEXT,"
+                    "price DOUBLE,"
+                    "quantity INTEGER,"
+                    "total DOUBLE);");
+
+        query->exec("CREATE TRIGGER totalCalc ON Cart AFTER INSERT, UPDATE AS SET total = (price * quantity);");
 
     }
 
@@ -797,10 +844,10 @@ void DbManager::addTrip(QString tripID, QString plannedCollege, int index, int d
 
     if(myDB.open())
     {
-        query->prepare("INSERT INTO Trips(tripID, college, tripProgress, distanceToNext) VALUES(:tripID, :college, :int, :distanceToNext)");
+        query->prepare("INSERT INTO Trips(tripID, stadium, tripProgress, distanceToNext) VALUES(:tripID, :stadium, :int, :distanceToNext)");
 
         query->bindValue(":tripID", tripID);
-        query->bindValue(":college", plannedCollege);
+        query->bindValue(":stadium", plannedCollege);
         query->bindValue(":int", (index + 1));
         query->bindValue(":distanceToNext", distanceTo);
         qDebug() << query->exec();
@@ -914,6 +961,25 @@ void DbManager::createSouvTable()
     }
 
 
+
+
+}
+
+void DbManager::addNewSouv()
+{
+        QSqlQuery *query = new QSqlQuery(myDB);
+        QString teamName = "Las Vegas Gamblers";
+        QString sou[5] = {"Baseball Cap", "Baseball Bat", "Team Pennant", "Autographed Baseball", "Team Jersey"};
+        double pri[5] = {18.99, 89.39, 17.99, 29.99, 199.99};
+        query->prepare("INSERT INTO souvenirs(TeamName, SouvenirName, Price) VALUES(:TeamName, :SouvenirName, :Price)");
+
+        for(int i = 0; i < 5; i++)
+        {
+            query->bindValue(":TeamName", teamName);
+            query->bindValue(":SouvenirName",sou[i]);
+            query->bindValue(":Price", pri[i]);
+            query->exec();
+        }
 
 
 }

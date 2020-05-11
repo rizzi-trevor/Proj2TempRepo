@@ -27,7 +27,7 @@
  * 3. sqlite> .quit
  */
 
-static const QString PROJECT_PATH = "C:/Users/Trevor Rizzi/Desktop/CS1D-PROJ2/";
+static const QString PROJECT_PATH = "C:/Users/farna/Documents/project 2/Proj2TempRepo/";
 
 
 class DbManager
@@ -65,6 +65,7 @@ public:
     */
     void initDistanceList(const QString &path);
 
+    void addNewSouv();
 
     /**
     * @brief adds a user to DB for future logins
@@ -100,6 +101,10 @@ public:
     * @return void - none
     */
     void updateSou(const QString &souName, const QString &college, const double &spin, const QString &newSouvenir);
+
+    void updateMLB(const QString &team, const QString &stadium, const int &seat,
+                   const QString &location, const QString &playing, const QString & league,
+                   const int &date, const QString &distance, const QString & ball, const QString &roof);
 
     /**
     * @brief adds souv to cart

@@ -127,6 +127,8 @@ private slots:
 
     void on_updateButton_clicked();
 
+    void on_updateMLB_clicked();
+
 private:
     /**
 * @brief string stores temp souv data

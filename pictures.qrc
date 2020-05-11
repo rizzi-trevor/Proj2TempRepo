@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/img"/>
+    <qresource prefix="/">
+        <file>img/c91f19b5efe396f3af75a474ec89dd5d.jpg</file>
+        <file>img/baseball-logo-design_62569-116.jpg</file>
+        <file>img/1200px-Major_League_Baseball_logo.svg.png</file>
+        <file>img/207cefd6286ef1a28c7314c2fcd77c8e.png</file>
+        <file>img/10-512.png</file>
+        <file>img/1573b04303569bdc44d78de1b332d628.gif</file>
+        <file>img/giphy.gif</file>
+        <file>img/giphy (1).gif</file>
+        <file>img/abstract-blue-red-splash-thick-4k-dw.jpg</file>
+        <file>img/wall-wallpaper-concrete-colored-painted-textured-concept_53876-31799.jpg</file>
+        <file>img/giphy (2).gif</file>
+        <file>img/screaming-baseball-logo-164767-7529310.gif</file>
+    </qresource>
+</RCC>

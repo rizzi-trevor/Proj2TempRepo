@@ -79,7 +79,7 @@ void AdminWindow::onInitialise()
         myDb.createSouvTable();
         //myDb.initSouvenirList(PROJECT_PATH + "/College_Campus_Distances_and_Souvenirs.xlsx");
 
-       // myDb.initDistanceList(PROJECT_PATH + "/College_Campus_Distances_and_Souvenirs.xlsx");
+        // myDb.initDistanceList(PROJECT_PATH + "/College_Campus_Distances_and_Souvenirs.xlsx");
     }
     else
     {
@@ -88,7 +88,8 @@ void AdminWindow::onInitialise()
 
     updateCollegeTable();
     updateSouvenirTable();
-        updateCombo();
+    updateCombo();
+    souvTable();
 
 }
 
@@ -113,6 +114,7 @@ void AdminWindow::clearCollegeData()
 
     updateCollegeTable();
     updateSouvenirTable();
+    souvTable();
 }
 
 void AdminWindow::on_addSouvenir_released()
@@ -155,7 +157,32 @@ void AdminWindow::onAddColleges()
 
 void AdminWindow::on_souvenirView_clicked(const QModelIndex &index)
 {
+    if(index.isValid())
+    {
+        int row = index.row();
+        QString firstText = index.sibling(row, 0).data().toString();
+        QString secondText = index.sibling(row, 1).data().toString();
+        int third = index.sibling(row, 2).data().toInt();
+        QString fourth = index.sibling(row, 3).data().toString();
+        QString five= index.sibling(row, 4).data().toString();
+       QString six = index.sibling(row, 5).data().toString();
+       int seven = index.sibling(row, 6).data().toInt();
+       QString eight = index.sibling(row, 7).data().toString();
+       QString nine = index.sibling(row, 8).data().toString();
+       QString ten = index.sibling(row, 9).data().toString();
 
+
+       ui->teamLabel->setText(firstText);
+       ui->stadiumEdit->setText(secondText);
+       ui->seatBox->setValue(third);
+       ui->locationEdit->setText(fourth);
+       ui->playingEdit->setText(five);
+       ui->leagueEdit->setText(six);
+       ui->dateBox->setValue(seven);
+       ui->leagueEdit_2->setText(eight);
+       ui->ballEdit->setText(nine);
+       ui->roofEdit->setText(ten);
+    }
 
 }
 
@@ -190,6 +217,7 @@ void AdminWindow::on_addMLB_clicked()
     if(check)
     {
         myDb.addMLB(PROJECT_PATH + "/MLB_Information_Expansion.xlsx");
+        myDb.addNewSouv();
     }
     else
     {
@@ -199,6 +227,7 @@ void AdminWindow::on_addMLB_clicked()
     updateCollegeTable();
     updateSouvenirTable();
     updateCombo();
+    souvTable();
 }
 
 void AdminWindow::updateCombo()
@@ -223,27 +252,27 @@ void AdminWindow::updateCombo()
 
 void AdminWindow::on_searchButton_clicked()
 {
-   QString collegeName = this->ui->comboBox->currentText();
-   qDebug() << collegeName;
+    QString collegeName = this->ui->comboBox->currentText();
+    qDebug() << collegeName;
 
-   QSqlQueryModel* model=new QSqlQueryModel();
+    QSqlQueryModel* model=new QSqlQueryModel();
 
-   QSqlQuery* qry=new QSqlQuery();
+    QSqlQuery* qry=new QSqlQuery();
 
-   qry->prepare("SELECT * FROM MLB WHERE TeamName = (:TeamName)");
+    qry->prepare("SELECT * FROM MLB WHERE TeamName = (:TeamName)");
 
-   qry->bindValue(":TeamName", collegeName);
+    qry->bindValue(":TeamName", collegeName);
 
-   if(qry->exec())
-   {
-       qDebug() << "souvenir table updated.";
-   }
+    if(qry->exec())
+    {
+        qDebug() << "souvenir table updated.";
+    }
 
-   model->setQuery(*qry);
+    model->setQuery(*qry);
 
-   ui->souvenirView->setModel(model);
-   ui->souvenirView->setModel(model);
-   ui->souvenirView->resizeColumnsToContents();
+    ui->souvenirView->setModel(model);
+    ui->souvenirView->setModel(model);
+    ui->souvenirView->resizeColumnsToContents();
 
 }
 
@@ -417,20 +446,20 @@ void AdminWindow::on_pushButton_7_clicked()
 void AdminWindow::on_souTable_clicked(const QModelIndex &index)
 {
     if(index.isValid())
-        {
-            int row = index.row();
-            QString firstText = index.sibling(row, 0).data().toString();
-            QString secondText = index.sibling(row, 1).data().toString();
-            souve = index.sibling(row, 1).data().toString();
-            double thirdText = index.sibling(row, 2).data().toDouble();
+    {
+        int row = index.row();
+        QString firstText = index.sibling(row, 0).data().toString();
+        QString secondText = index.sibling(row, 1).data().toString();
+        souve = index.sibling(row, 1).data().toString();
+        double thirdText = index.sibling(row, 2).data().toDouble();
 
-            ui->removeEdit->setText(secondText);
-            ui->labelCollege->setText(firstText);
-            ui->priceSpin->setValue(thirdText);
+        ui->removeEdit->setText(secondText);
+        ui->labelCollege->setText(firstText);
+        ui->priceSpin->setValue(thirdText);
 
-            qDebug() << firstText << " " << secondText << " " << thirdText << endl;
-            qDebug() << index << endl;
-        }
+        qDebug() << firstText << " " << secondText << " " << thirdText << endl;
+        qDebug() << index << endl;
+    }
 
     bool open = myDb.isOpen();
 
@@ -442,95 +471,130 @@ void AdminWindow::on_souTable_clicked(const QModelIndex &index)
 
 void AdminWindow::on_pushButton_8_clicked()
 {
-        bool success = false;
-        confirmpage confirm;
-        bool check = false;
+    bool success = false;
+    confirmpage confirm;
+    bool check = false;
 
 
-        bool open = myDb.isOpen();
+    bool open = myDb.isOpen();
 
-        if(open)
-            qDebug() << "DB OPEN!";
-        else
-            qDebug() << "DB CLOSE!";
+    if(open)
+        qDebug() << "DB OPEN!";
+    else
+        qDebug() << "DB CLOSE!";
 
-        if(ui->removeEdit->text() == "")
-        {
-            ui->removeEdit->setPlaceholderText("souvenir name empty!");
-            success = true;
-        }
+    if(ui->removeEdit->text() == "")
+    {
+        ui->removeEdit->setPlaceholderText("souvenir name empty!");
+        success = true;
+    }
 
-        if(!myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()))
-        {
-           ui->removeEdit->setText("");
-           ui->removeEdit->setPlaceholderText("souvenir doesn't exist!");
-           success = true;
-        }
+    if(!myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()))
+    {
+        ui->removeEdit->setText("");
+        ui->removeEdit->setPlaceholderText("souvenir doesn't exist!");
+        success = true;
+    }
 
-        if(!success)
-        {
-            confirm.setModal(true);
-            confirm.exec();
-            check = confirm.getData();
-        }
+    if(!success)
+    {
+        confirm.setModal(true);
+        confirm.exec();
+        check = confirm.getData();
+    }
 
-        if(myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()) && !success && check)
-        {
-            myDb.removeSou(ui->removeEdit->text(), ui->labelCollege->text());
-            ui->removeEdit->setText("");
-            ui->removeEdit->setPlaceholderText("souvenir name");
-        }
-        else
-        {
-            qDebug() << "remove didn't work!";
-        }
+    if(myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()) && !success && check)
+    {
+        myDb.removeSou(ui->removeEdit->text(), ui->labelCollege->text());
+        ui->removeEdit->setText("");
+        ui->removeEdit->setPlaceholderText("souvenir name");
+    }
+    else
+    {
+        qDebug() << "remove didn't work!";
+    }
 
-        souvTable();
+    souvTable();
 }
 
 void AdminWindow::on_updateButton_clicked()
 {
     bool success = false;
-        confirmpage confirm;
-        bool check = false;
+    confirmpage confirm;
+    bool check = false;
 
-        if(ui->removeEdit->text() == "")
+    if(ui->removeEdit->text() == "")
+    {
+        ui->removeEdit->setPlaceholderText("souvenir name empty!");
+        success = true;
+    }
+
+    if(!success)
+    {
+        confirm.setModal(true);
+        confirm.exec();
+        check = confirm.getData();
+    }
+
+
+    if(!myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()))
+    {
+        if(!success && check)
         {
-            ui->removeEdit->setPlaceholderText("souvenir name empty!");
-            success = true;
+            myDb.updateSou(souve, ui->labelCollege->text(),ui->priceSpin->value(), ui->removeEdit->text());
         }
-
-        if(!success)
+        else
         {
-            confirm.setModal(true);
-            confirm.exec();
-            check = confirm.getData();
+            qDebug() << "remove didn't work!";
         }
-
-
-        if(!myDb.souExists(ui->removeEdit->text(), ui->labelCollege->text()))
+    }
+    else if(souve == ui->removeEdit->text())
+    {
+        if(!success && check)
         {
-            if(!success && check)
-            {
-                myDb.updateSou(souve, ui->labelCollege->text(),ui->priceSpin->value(), ui->removeEdit->text());
-            }
-            else
-            {
-                qDebug() << "remove didn't work!";
-            }
+            myDb.updateSou(souve, ui->labelCollege->text(),ui->priceSpin->value(), ui->removeEdit->text());
         }
-        else if(souve == ui->removeEdit->text())
+        else
         {
-            if(!success && check)
-            {
-                myDb.updateSou(souve, ui->labelCollege->text(),ui->priceSpin->value(), ui->removeEdit->text());
-            }
-            else
-            {
-                qDebug() << "remove didn't work!";
-            }
+            qDebug() << "remove didn't work!";
         }
+    }
 
-        souvTable();
+    souvTable();
 
+}
+
+void AdminWindow::on_updateMLB_clicked()
+{
+    bool success = false;
+    confirmpage confirm;
+    bool check = false;
+
+    if(ui->stadiumEdit->text() == "")
+    {
+        ui->stadiumEdit->setPlaceholderText("stadium name empty!");
+        success = true;
+    }
+
+
+    if(!success)
+    {
+        confirm.setModal(true);
+        confirm.exec();
+        check = confirm.getData();
+    }
+
+    qDebug() << ui->leagueEdit_2->text().toInt();
+    qDebug() << ui->ballEdit->text();
+    if(check)
+    {
+        myDb.updateMLB(ui->teamLabel->text(), ui->stadiumEdit->text(), ui->seatBox->value(),
+                       ui->locationEdit->text(),ui->playingEdit->text(), ui->leagueEdit->text(),
+                       ui->dateBox->value(),ui->leagueEdit_2->text(),ui->ballEdit->text(),
+                       ui->roofEdit->text());
+    }
+
+    updateSouvenirTable();
+    updateCollegeTable();
+    souvTable();
 }

@@ -1,10 +1,28 @@
 #include "tripprogress.h"
 #include "ui_tripprogress.h"
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QMovie>
 
 tripprogress::tripprogress(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::tripprogress)
 {
+    ui->setupUi(this);
+    counter = -1;
+
+    //Hiding previous
+    ui->pushButton_2->hide();
+    myDb.resetCart();
+
+}
+
+tripprogress::tripprogress(QWidget *parent, QString I_D)
+    :QDialog(parent),
+      ui(new Ui::tripprogress)
+{
+    tripID = I_D;
+
     ui->setupUi(this);
     counter = -1;
 
@@ -25,7 +43,7 @@ void tripprogress::onLoadClick()
 {
     QSqlQuery* qry=new QSqlQuery();
 
-    qry->prepare("SELECT college FROM Trips WHERE tripID = (:tripId)");
+    qry->prepare("SELECT stadium FROM Trips WHERE tripID = (:tripId)");
     qry->bindValue(":tripId" , tripID);
 
     trip.clear();
@@ -40,8 +58,8 @@ void tripprogress::onLoadClick()
     {
         while(qry->next())
         {
-                QString temp = qry->value("college").toString();
-                trip << temp;
+            QString temp = qry->value("stadium").toString();
+            trip << temp;
         }
 
     }
@@ -53,9 +71,6 @@ void tripprogress::onLoadClick()
 
     this->ui->load->deleteLater();
 
-
-    ui->addCart->setDisabled(false);
-    ui->addCart->setDisabled(false);
     ui->removeCart->setDisabled(false);
     ui->pushButton_4->setDisabled(false);
     ui->pushButton_2->setDisabled(false);
@@ -67,6 +82,7 @@ void tripprogress::onLoadClick()
 
 void tripprogress::nextTrip()// shows next college in trip
 {
+    ui->addCart->setEnabled(false);
     myDb.resetCart();
     updateCart();
     updateTotal();
@@ -79,27 +95,37 @@ void tripprogress::nextTrip()// shows next college in trip
 
     if( counter < max)
     {
+        qry->prepare("SELECT TeamName FROM MLB WHERE StadiumName = (:stadiumName)");
+        qry->bindValue(":stadiumName", trip[counter]);
 
-         QString curCol;
+        if(qry->exec())
+        {
+            qry->first();
+            teamName = qry->value(0).toString();
+        }
 
-         curCol = trip[counter];
+        QString curCol;
 
-         currentCol = trip[counter];
+        curCol = trip[counter];
 
-         this->ui->label->setText("CURRENTLY AT: " + curCol);
+        currentCol = trip[counter];
 
-         qry->prepare("SELECT souvenirName, cost FROM Souvenirs WHERE collegeName = (:collegeName)");
-         qry->bindValue(":collegeName", curCol);
 
-         if(qry->exec())
-         {
-             qDebug() << "souvenir table updated.";
-         }
+        this->ui->label->setText("CURRENTLY AT: " + curCol);
 
-         model->setQuery(*qry);
+        qry->prepare("SELECT SouvenirName, Price FROM Souvenirs WHERE TeamName = (:teamName)");
+        qry->bindValue(":teamName", teamName);
 
-         ui->souvTable->setModel(model);
-         ui->souvTable->resizeColumnsToContents();
+        if(qry->exec())
+        {
+            qry->first();
+            qDebug() << "souvenir table updated.";
+        }
+
+        model->setQuery(*qry);
+
+        ui->souvTable->setModel(model);
+        ui->souvTable->resizeColumnsToContents();
 
     }
     else
@@ -141,25 +167,25 @@ void tripprogress::prevTrip() // shows prev college in trip
     if( counter >= 0)
     {
 
-         QString curCol;
+        QString curCol;
 
-         curCol = trip[counter];
-         currentCol = trip[counter];
+        curCol = trip[counter];
+        currentCol = trip[counter];
 
-         this->ui->label->setText("CURRENTLY AT: " + curCol);
+        this->ui->label->setText("CURRENTLY AT: " + curCol);
 
-         qry->prepare("SELECT souvenirName, cost FROM Souvenirs WHERE collegeName = (:collegeName)");
-         qry->bindValue(":collegeName", curCol);
+        qry->prepare("SELECT SouvenirName, Price FROM Souvenirs WHERE TeamName = (:teamName)");
+        qry->bindValue(":teamName", curCol);
 
-         if(qry->exec())
-         {
-             qDebug() << "souvenir table updated.";
-         }
+        if(qry->exec())
+        {
+            qDebug() << "souvenir table updated.";
+        }
 
-         model->setQuery(*qry);
+        model->setQuery(*qry);
 
-         ui->souvTable->setModel(model);
-         ui->souvTable->resizeColumnsToContents();
+        ui->souvTable->setModel(model);
+        ui->souvTable->resizeColumnsToContents();
     }
     else
     {
@@ -174,8 +200,8 @@ void tripprogress::getDistance()
 
     QSqlQuery* qry=new QSqlQuery();
 
-    qry->prepare("SELECT distanceToNext From Trips WHERE (college) = (:college)");
-    qry->bindValue(":college", currentCol);
+    qry->prepare("SELECT distanceToNext From Trips WHERE (stadium) = (:stadium)");
+    qry->bindValue(":stadium", currentCol);
 
     if(qry->exec())
     {
@@ -187,7 +213,7 @@ void tripprogress::getDistance()
         if(counter+1 < max)
             distance = "Distance to " + trip[counter+1] + ": " + distance;
         else
-            distance = "You're at the last school!";
+            distance = "You're at the last stadium!";
 
         ui->distanceLabel->setText(distance);
         qDebug() << distance;
@@ -203,8 +229,8 @@ void tripprogress::displaySouv()
 
     QSqlQuery* qry=new QSqlQuery();
 
-    qry->prepare("SELECT souvenirName FROM Souvenirs WHERE collegeName = (:startCollege)");
-    qry->bindValue(":startCollege", currentCol);
+    qry->prepare("SELECT SouvenirName FROM Souvenirs WHERE StadiumName = (:stadiumName)");
+    qry->bindValue(":stadiumName", currentCol);
 
     if(qry->exec())
     {
@@ -282,6 +308,7 @@ void tripprogress::on_souvTable_clicked(const QModelIndex &index)
 
     if(index.isValid())
     {
+        ui->addCart->setEnabled(true);
         row = index.row();
         souvenirName = index.sibling(row, 0).data().toString();
         souvenirPrice = index.sibling(row, 1).data().toDouble();
@@ -328,6 +355,7 @@ void tripprogress::on_pushButton_4_released()
     confirm.exec();
     check = confirm.getData();
 
+    myDb.reOpen();
     if(check)
     {
         myDb.addPurchase();

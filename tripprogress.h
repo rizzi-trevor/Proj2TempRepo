@@ -39,6 +39,8 @@ public:
     */
     explicit tripprogress(QWidget *parent = nullptr);
 
+    tripprogress(QWidget *parent, QString I_D);
+
     /**
     * @brief Destructor
     *
@@ -151,6 +153,8 @@ private:
     * @brief stores list of each trip/destination data
     */
     QStringList trip;
+
+    QString teamName;
 
     int counter;
     int max;

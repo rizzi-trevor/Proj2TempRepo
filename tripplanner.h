@@ -3,25 +3,12 @@
 
 #include <QDialog>
 #include <QList>
+#include "graphinfo.h"
 #include "dbmanager.h"
 #include <qcheckbox.h>
 #include "tripsummary.h"
 #include "tripprogress.h"
-
-/**
- * @file
- */
-
-
-/**
- * \class tripPlanner
- *
- * \brief class recusively planning (calculating) the most efficient trip, manages data tables, checks if data is valid, and begins inital processes of planning a trip
- *
- * tripPlanner manages the calculations for creating the most efficient trip for the student
- * this updates all data tables for colleges, their names and specific data values, and souveniers, with their respectives data values
- *
- */
+#include "recursivetrip.h"
 
 namespace Ui {
 class tripPlanner;
@@ -54,6 +41,19 @@ public:
 
     void updateMLBTable();
 
+    void selectedCollegeList();
+
+    bool collegeDoesExist(QString colName);
+
+    bool planDoesExist(QString colName);
+
+    void showTrip(QString ID);
+
+    void updateComboTwo();
+
+    void algorithm();
+
+
 public slots:
     void onTypologyClick();
 
@@ -81,11 +81,19 @@ public slots:
 
     void initializeList();
 
+    void onPlanClick();
+
+    void onGraphInfoClick();
+
+    void onStartTrip();
+
 
 
 private slots:
      void ChecboxChanged();
 
+
+     void on_pushButton_9_clicked();
 
 private:
     /**
@@ -96,11 +104,32 @@ private:
     /**
     * @brief assigns DB to predefined PROJECT_PATH constant
     */
+
     DbManager myDb = DbManager(PROJECT_PATH + "/college.db");
 
     tripprogress *progress;
 
     QVector<QCheckBox*> checkBoxVector;
+
+    QStringList selectedColleges;
+
+    QStringList plannedColleges;
+    int distance;
+
+    QString id;
+
+    QList<int> distanceTo;
+
+    graphInfo *info;
+
+    unorderedMap<Team> umap;
+
+    vector<QString> path;
+
+    vector<QString> remainingChoices;
+
+    vector<int> distNext;
+
 
 
 };

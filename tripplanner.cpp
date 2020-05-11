@@ -1,5 +1,9 @@
 #include "tripplanner.h"
 #include "ui_tripplanner.h"
+#include <vector>
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QMovie>
 
 #include "QVBoxLayout"
 
@@ -9,10 +13,19 @@ tripPlanner::tripPlanner(QWidget *parent) :
 {
     ui->setupUi(this);
     updateCombo();
+    updateComboTwo();
     updateDistTable();
     updateMLBTable();
     initializeList();
+    ui->startTrip->setEnabled(false);
 
+    QMovie *movie = new QMovie(":/img/giphy (1).gif");
+    ui->movieLabel->setMovie(movie);
+    movie->start();
+
+    QMovie *movie1 = new QMovie(":/img/giphy (2).gif");
+    ui->label_3->setMovie(movie1);
+    movie1->start();
 }
 
 tripPlanner::~tripPlanner()
@@ -297,6 +310,7 @@ void tripPlanner::onSeatingClick()
     QSqlQueryModel* model=new QSqlQueryModel();
 
     QSqlQuery* qry=new QSqlQuery();
+    QSqlQuery* tqry=new QSqlQuery();
 
     qry->prepare("SELECT TeamName, StadiumName, SeatingCapacity FROM MLB ORDER BY SeatingCapacity ASC");
 
@@ -310,7 +324,6 @@ void tripPlanner::onSeatingClick()
     ui->souvenirView->setModel(model);
     ui->souvenirView->setModel(model);
     ui->souvenirView->resizeColumnsToContents();
-
 
 
 }
@@ -376,7 +389,7 @@ void tripPlanner::initializeList()
 
 
 
-    query->prepare("SELECT TeamName FROM MLB");
+    query->prepare("SELECT DISTINCT begStadium FROM Distances");
     if(!query->exec())
     {
         qDebug() << "tripPlanner initializeList query failed";
@@ -433,4 +446,253 @@ void tripPlanner::ChecboxChanged()
             checkBoxVector[i]->setDisabled(false);
         }
     }
+}
+
+
+void tripPlanner::selectedCollegeList()// creates a list of the selected colleges from the checked boxes
+{
+    selectedColleges.clear();
+    QSqlQuery *query = new QSqlQuery();
+    int i = 0;
+
+    query->prepare("SELECT DISTINCT begStadium FROM Distances");
+    if(!query->exec())
+    {
+        qDebug() << "tripPlanner initializeList query failed";
+
+
+    }
+    else
+    {
+        while(query->next())
+        {
+            if(checkBoxVector[i]->checkState() == Qt::CheckState::Checked)
+            {
+                QString temp = query->value("begStadium").toString();
+                selectedColleges << temp;
+                qDebug() << temp;
+            }
+            i++;
+        }
+
+    }
+
+}
+
+void tripPlanner::onPlanClick()
+{
+    distance = 0;
+    QString startingStadium;
+    QString tripID;
+    startingStadium = this->ui->colName->currentText();
+    tripID = this->ui->trip->text();
+
+    selectedCollegeList();
+
+    for(int i = 0; i < selectedColleges.size(); i++)
+    {
+        if(selectedColleges[i] != startingStadium)
+        {
+            remainingChoices.push_back(selectedColleges[i]);
+        }
+    }
+    path.push_back(startingStadium);
+
+
+    if(!collegeDoesExist(startingStadium)) // checks if the user input a correct stadium
+    {
+        this->ui->warningLabel->setText("Please enter a college that you have selected on the left!");
+    }
+    else
+    {
+
+        qDebug() << myDb.tripIdExists(tripID);
+        qDebug() << tripID;
+        if(tripID.size() == 3 && !myDb.tripIdExists(tripID))
+        {
+            this->ui->warningLabel->setText("");
+
+            plannedColleges.clear();
+            id = tripID;
+
+            algorithm();
+
+            distanceTo << 0; // adds 0 for distance to next college at last college
+
+            myDb.reOpen();
+
+            for(int index = 0; index < path.size(); index++)
+            {
+                myDb.addTrip(tripID, path[index], index, distNext[index]); // uploads trip to DB
+            }
+
+
+            qDebug() << path;
+
+            showTrip(tripID);
+
+            QString out = QString::number(distance);
+            ui->startTrip->setEnabled(true);
+
+
+        }
+        else
+        {
+            qDebug() << "I AM HERE//idk ";
+        }
+
+    }
+
+    for(int i = 0; i < plannedColleges.size(); i++)
+    {
+        qDebug() << plannedColleges[i];
+    }
+
+    path.clear();
+    remainingChoices.clear();
+    distNext.clear();
+
+}
+
+bool tripPlanner::collegeDoesExist(QString colName)// checks if a college is added to the trip
+{
+    for(int i = 0; i < selectedColleges.size(); i++)
+    {
+        if(colName == selectedColleges[i]) // only going once!!!!
+        {
+            qDebug() << "true";
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool tripPlanner::planDoesExist(QString colName) // checks if a college is in the planned list
+{
+    for(int i = 0; i < plannedColleges.size(); i++)
+    {
+        if(colName == plannedColleges[i])
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+void tripPlanner::showTrip(QString ID)
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+    qDebug() << ID;
+
+    qry->prepare("SELECT stadium FROM Trips WHERE tripID = (:tripId)");
+    qry->bindValue(":tripId" , ID);
+    if(qry->exec())
+    {
+        qDebug() << "trip table updated.";
+    }
+    else
+        qDebug() << "failed trip table";
+
+    model->setQuery(*qry);
+
+    //clear here?
+    ui->window->setModel(new QSqlQueryModel());
+    ui->window->setModel(model);
+    ui->window->setColumnWidth(20, 400);
+}
+
+void tripPlanner::updateComboTwo()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+    QSqlQuery* qry=new QSqlQuery();
+
+    qry->prepare("SELECT DISTINCT begStadium FROM Distances");
+
+    if(qry->exec())
+    {
+        qDebug() << "college1 table updated.";
+    }
+    else
+        qDebug() << "failed";
+
+    model->setQuery(*qry);
+
+    ui->team1->setModel(model);
+    ui->team2->setModel(model);
+    ui->colName->setModel(model);
+}
+
+void tripPlanner::onGraphInfoClick()
+{
+    info = new graphInfo;
+
+    info->show();
+
+}
+
+
+void tripPlanner::algorithm()// start is the user selected starting college
+{
+    QStringList local;
+    int closestDist = 100000;
+    int closestIndex;
+    int tempDist;
+
+    if(remainingChoices.size() > 0)
+    {
+        for(int i = 0; i < remainingChoices.size(); i++)
+        {
+            local << path.back() << remainingChoices[i];
+            tempDist = performDijkstra(local);
+            if(tempDist < closestDist)
+            {
+                closestDist = tempDist;
+                closestIndex = i;
+            }
+
+            local.clear();
+        }
+
+        distNext.push_back(closestDist);
+        qDebug() << closestDist;
+        path.push_back(remainingChoices.at(closestIndex));
+        qDebug() << remainingChoices.at(closestIndex);
+        remainingChoices.erase(remainingChoices.begin() + closestIndex);
+
+        algorithm();
+
+    }
+    else
+    {
+        distNext.push_back(0);
+    }
+
+
+}
+
+void tripPlanner::onStartTrip()
+{
+    this->hide();
+    progress = new tripprogress(this, id);
+
+    progress->show();
+
+}
+
+void tripPlanner::on_pushButton_9_clicked()
+{
+    QStringList pass;
+
+    pass << ui->team1->currentText() << ui->team2->currentText();
+
+   int temp = performDijkstra(pass);
+
+   QString text = "Distance: " + QString::number(temp);
+   ui->distanceLabel->setText(text);
+
 }

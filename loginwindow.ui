@@ -17,11 +17,17 @@
    <widget class="QPushButton" name="loginButton">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>260</y>
-      <width>75</width>
+      <x>70</x>
+      <y>150</y>
+      <width>91</width>
       <height>23</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Login</string>
@@ -36,11 +42,14 @@
    <widget class="QPushButton" name="clearButton">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>260</y>
-      <width>75</width>
+      <x>180</x>
+      <y>150</y>
+      <width>91</width>
       <height>23</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Clear</string>
@@ -68,11 +77,15 @@
    <widget class="QLineEdit" name="Username">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>150</y>
+      <x>170</x>
+      <y>50</y>
       <width>161</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0,0,0);
+background-color: rgba(255,255,255,150)</string>
     </property>
     <property name="placeholderText">
      <string>username</string>
@@ -81,11 +94,15 @@
    <widget class="QLineEdit" name="Password">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>200</y>
+      <x>170</x>
+      <y>100</y>
       <width>161</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0,0,0);
+background-color: rgba(255,255,255,150)</string>
     </property>
     <property name="text">
      <string/>
@@ -100,11 +117,21 @@
    <widget class="QLabel" name="usernameLabel">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>150</y>
-      <width>47</width>
-      <height>16</height>
+      <x>50</x>
+      <y>45</y>
+      <width>111</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);</string>
     </property>
     <property name="text">
      <string>Username</string>
@@ -113,11 +140,21 @@
    <widget class="QLabel" name="passLabel">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>200</y>
-      <width>47</width>
-      <height>13</height>
+      <x>50</x>
+      <y>95</y>
+      <width>131</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);</string>
     </property>
     <property name="text">
      <string>Password</string>
@@ -126,11 +163,14 @@
    <widget class="QPushButton" name="accountButton">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>300</y>
+      <x>90</x>
+      <y>190</y>
       <width>161</width>
       <height>23</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Create Account</string>
@@ -145,10 +185,10 @@
    <widget class="QPushButton" name="planButton">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>180</y>
-      <width>271</width>
-      <height>101</height>
+      <x>390</x>
+      <y>290</y>
+      <width>211</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">
@@ -156,8 +196,11 @@
       <pointsize>30</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/img/207cefd6286ef1a28c7314c2fcd77c8e.png);</string>
+    </property>
     <property name="text">
-     <string>BETA</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="invalidLabel">
@@ -173,19 +216,36 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="logoLabel">
+   <widget class="QLabel" name="backgroundWallpaper">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>30</y>
-      <width>341</width>
-      <height>90</height>
+      <x>0</x>
+      <y>0</y>
+      <width>831</width>
+      <height>431</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="pixmap">
+     <pixmap resource="pictures.qrc">:/img/1200px-Major_League_Baseball_logo.svg.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
+   <zorder>backgroundWallpaper</zorder>
+   <zorder>loginButton</zorder>
+   <zorder>clearButton</zorder>
+   <zorder>dbStatus</zorder>
+   <zorder>Username</zorder>
+   <zorder>Password</zorder>
+   <zorder>usernameLabel</zorder>
+   <zorder>passLabel</zorder>
+   <zorder>accountButton</zorder>
+   <zorder>planButton</zorder>
+   <zorder>invalidLabel</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -207,7 +267,9 @@
   <tabstop>accountButton</tabstop>
   <tabstop>clearButton</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="pictures.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>planButton</sender>

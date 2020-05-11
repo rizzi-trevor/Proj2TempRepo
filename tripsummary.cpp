@@ -1,11 +1,18 @@
 #include "tripsummary.h"
 #include "ui_tripsummary.h"
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QMovie>
 
 tripSummary::tripSummary(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::tripSummary)
 {
     ui->setupUi(this);
+
+    QMovie *movie3 = new QMovie(":/img/giphy (1).gif");
+    ui->label_2->setMovie(movie3);
+    movie3->start();
 }
 
 tripSummary::tripSummary(const QString &id, QWidget *parent) :
@@ -35,7 +42,7 @@ void tripSummary::on_school_comboBox_currentIndexChanged(const QString &schoolNa
     QSqlQuery* qry=new QSqlQuery();
     qDebug() << tripID;
 
-    qry->prepare("SELECT souvenir, price, quantity, total FROM Purchases WHERE (tripID, college) = (:tripId, :college)");
+    qry->prepare("SELECT souvenir, price, quantity, total FROM Purchases WHERE (tripID, stadium) = (:tripId, :college)");
     qry->bindValue(":tripId" , tripID);
     qry->bindValue(":college" , schoolName);
     if(qry->exec())
@@ -65,7 +72,7 @@ void tripSummary::updateTripSchoolList()
     QSqlQuery* qry=new QSqlQuery();
     qDebug() << tripID;
 
-    qry->prepare("SELECT college, distanceToNext FROM Trips WHERE tripID = (:tripId) ORDER BY tripProgress ASC");
+    qry->prepare("SELECT stadium, distanceToNext FROM Trips WHERE tripID = (:tripId) ORDER BY tripProgress ASC");
     qry->bindValue(":tripId" , tripID);
     if(qry->exec())
     {
@@ -87,7 +94,7 @@ void tripSummary::updateSchoolComboBox()
     QSqlQuery* qry=new QSqlQuery();
     qDebug() << tripID;
 
-    qry->prepare("SELECT college FROM Trips WHERE tripID = (:tripId)");
+    qry->prepare("SELECT stadium FROM Trips WHERE tripID = (:tripId)");
     qry->bindValue(":tripId" , tripID);
     if(qry->exec())
     {
@@ -132,7 +139,7 @@ void tripSummary::updateSchoolTotal()
 
     qDebug() << tripID;
 
-    qry.prepare("SELECT SUM(total) FROM Purchases WHERE (tripID, college) = (:tripId, :college)");
+    qry.prepare("SELECT SUM(total) FROM Purchases WHERE (tripID, stadium) = (:tripId, :college)");
     qry.bindValue(":tripId" , tripID);
     qry.bindValue(":college" , ui->school_comboBox->currentText());
 

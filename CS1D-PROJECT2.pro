@@ -18,8 +18,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     addsouvenir.cpp \
     adminwindow.cpp \
+    bfs.cpp \
     confirmpage.cpp \
     dbmanager.cpp \
+    dfsgraph.cpp \
+    graph.cpp \
+    graphAdjList.cpp \
+    graphinfo.cpp \
     main.cpp \
     loginwindow.cpp \
     tripplanner.cpp \
@@ -29,17 +34,25 @@ SOURCES += \
 HEADERS += \
     addsouvenir.h \
     adminwindow.h \
+    bfs.h \
     confirmpage.h \
     dbmanager.h \
+    dfsgraph.h \
+    graph.h \
+    graphAdjList.h \
+    graphinfo.h \
     loginwindow.h \
+    recursivetrip.h \
     tripplanner.h \
     tripprogress.h \
-    tripsummary.h
+    tripsummary.h \
+    unorderedMap.h
 
 FORMS += \
     addsouvenir.ui \
     adminwindow.ui \
     confirmpage.ui \
+    graphinfo.ui \
     loginwindow.ui \
     tripplanner.ui \
     tripprogress.ui \
@@ -49,3 +62,20 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    .gitignore \
+    CS1D-PROJECT2.pro.user \
+    CS1D-Project1-College-Touring.pro.user \
+    Coding Standard (2).pdf \
+    DatabasePlanning.pdf \
+    Distance_between_expansion_stadium.xlsx \
+    Distance_between_stadiums.xlsx \
+    MLB_Information.xlsx \
+    MLB_Information_Expansion.xlsx \
+    README.md \
+    college.db \
+    logo.png
+
+RESOURCES += \
+    pictures.qrc

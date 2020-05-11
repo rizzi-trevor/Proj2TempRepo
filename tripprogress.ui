@@ -27,7 +27,7 @@
      <rect>
       <x>30</x>
       <y>130</y>
-      <width>151</width>
+      <width>221</width>
       <height>221</height>
      </rect>
     </property>
@@ -81,6 +81,12 @@
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #339;
+Color: #fefefe;</string>
+    </property>
     <property name="text">
      <string>Next</string>
     </property>
@@ -97,6 +103,12 @@
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #933;
+Color: #fefefe;</string>
+    </property>
     <property name="text">
      <string>Prev</string>
     </property>
@@ -112,6 +124,12 @@
       <width>221</width>
       <height>23</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #393;
+Color: #fefefe;</string>
     </property>
     <property name="text">
      <string>Add to Cart</string>
@@ -157,6 +175,12 @@
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #393;
+Color: #fefefe;</string>
+    </property>
     <property name="text">
      <string>Click to Start Trip</string>
     </property>
@@ -173,6 +197,12 @@
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #339;
+Color: #fefefe;</string>
+    </property>
     <property name="text">
      <string>Checkout</string>
     </property>
@@ -188,6 +218,12 @@
       <width>221</width>
       <height>23</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Padding: 1px;
+Border-radius: 5px;
+Background: #933;
+Color: #fefefe;</string>
     </property>
     <property name="text">
      <string>Remove From Cart</string>
@@ -231,6 +267,39 @@
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="backgroundWallpaper">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>771</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="pictures.qrc">:/img/wall-wallpaper-concrete-colored-painted-textured-concept_53876-31799.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>backgroundWallpaper</zorder>
+   <zorder>souvTable</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>addCart</zorder>
+   <zorder>cartTable</zorder>
+   <zorder>label_3</zorder>
+   <zorder>load</zorder>
+   <zorder>pushButton_4</zorder>
+   <zorder>removeCart</zorder>
+   <zorder>totalView</zorder>
+   <zorder>distanceLabel</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -253,7 +322,9 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="pictures.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>load</sender>
