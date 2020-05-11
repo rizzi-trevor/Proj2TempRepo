@@ -325,7 +325,7 @@ int DbManager::cartQuantity(const QString college, const QString souvenir)
     QSqlQuery *query = new QSqlQuery(myDB);
     if(myDB.open())
     {
-        query->prepare("SELECT quantity FROM Cart WHERE (college, souvenir) = (:college, :souvenir)");
+        query->prepare("SELECT quantity FROM Cart WHERE (stadium, souvenir) = (:college, :souvenir)");
         query->bindValue(":college", college);
         query->bindValue(":souvenir", souvenir);
 
@@ -361,7 +361,7 @@ void DbManager::removeCart(const QString college, const QString souvenir)
 
         if(myDB.open())
         {
-            query->prepare("DELETE FROM Cart WHERE (college, souvenir) = (:college, :souvenir)");
+            query->prepare("DELETE FROM Cart WHERE (stadium, souvenir) = (:college, :souvenir)");
             query->bindValue(":college", college);
             query->bindValue(":souvenir", souvenir);
 
@@ -409,7 +409,7 @@ void DbManager::addCart(const QString trip, const QString college, const QString
 
    if(myDB.open())
    {
-       query->prepare("INSERT INTO Cart(tripID, college, souvenir, price, quantity) VALUES(:tripID, :college, :souvenir, :price, :quantity)");
+       query->prepare("INSERT INTO Cart(tripID, stadium, souvenir, price, quantity) VALUES(:tripID, :college, :souvenir, :price, :quantity)");
        query->bindValue(":tripID", trip);
        query->bindValue(":college", college);
        query->bindValue(":souvenir", souvenir);
@@ -456,7 +456,7 @@ void DbManager::updateCart(const QString college, const QString souvenir, const 
 
     if(myDB.open())
     {
-        query->prepare("UPDATE Cart SET (quantity) = (:quantity) WHERE (college, souvenir) = (:college, :souvenir)");
+        query->prepare("UPDATE Cart SET (quantity) = (:quantity) WHERE (stadium, souvenir) = (:college, :souvenir)");
         query->bindValue(":college", college);
         query->bindValue(":souvenir", souvenir);
         query->bindValue(":quantity", count);
@@ -785,7 +785,8 @@ void DbManager::createTripTable()
                     "stadium TEXT,"
                     "souvenir TEXT,"
                     "price DOUBLE,"
-                    "quantity INTEGER);");
+                    "quantity INTEGER,"
+                    "total DOUBLE);");
 
         query->exec("CREATE TABLE Cart ("
                     "tripID TEXT,"

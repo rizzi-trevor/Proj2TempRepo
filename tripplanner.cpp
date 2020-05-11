@@ -300,6 +300,7 @@ void tripPlanner::onSeatingClick()
     QSqlQueryModel* model=new QSqlQueryModel();
 
     QSqlQuery* qry=new QSqlQuery();
+    QSqlQuery* tqry=new QSqlQuery();
 
     qry->prepare("SELECT TeamName, StadiumName, SeatingCapacity FROM MLB ORDER BY SeatingCapacity ASC");
 
@@ -313,7 +314,6 @@ void tripPlanner::onSeatingClick()
     ui->souvenirView->setModel(model);
     ui->souvenirView->setModel(model);
     ui->souvenirView->resizeColumnsToContents();
-
 
 
 }

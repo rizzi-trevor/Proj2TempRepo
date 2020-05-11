@@ -16,7 +16,7 @@ tripprogress::tripprogress(QWidget *parent) :
 
 tripprogress::tripprogress(QWidget *parent, QString I_D)
     :QDialog(parent),
-    ui(new Ui::tripprogress)
+      ui(new Ui::tripprogress)
 {
     tripID = I_D;
 
@@ -55,8 +55,8 @@ void tripprogress::onLoadClick()
     {
         while(qry->next())
         {
-                QString temp = qry->value("stadium").toString();
-                trip << temp;
+            QString temp = qry->value("stadium").toString();
+            trip << temp;
         }
 
     }
@@ -68,9 +68,6 @@ void tripprogress::onLoadClick()
 
     this->ui->load->deleteLater();
 
-
-    ui->addCart->setDisabled(false);
-    ui->addCart->setDisabled(false);
     ui->removeCart->setDisabled(false);
     ui->pushButton_4->setDisabled(false);
     ui->pushButton_2->setDisabled(false);
@@ -82,6 +79,7 @@ void tripprogress::onLoadClick()
 
 void tripprogress::nextTrip()// shows next college in trip
 {
+    ui->addCart->setEnabled(false);
     myDb.resetCart();
     updateCart();
     updateTotal();
@@ -94,36 +92,37 @@ void tripprogress::nextTrip()// shows next college in trip
 
     if( counter < max)
     {
+        qry->prepare("SELECT TeamName FROM MLB WHERE StadiumName = (:stadiumName)");
+        qry->bindValue(":stadiumName", trip[counter]);
 
-         QString curCol;
+        if(qry->exec())
+        {
+            qry->first();
+            teamName = qry->value(0).toString();
+        }
 
-         curCol = trip[counter];
+        QString curCol;
 
-         currentCol = trip[counter];
+        curCol = trip[counter];
 
-         qry->prepare("SELECT TeamName FROM MLB WHERE StadiumName = (:stadiumName)");
-         qry->bindValue(":stadiumName", trip[counter]);
-
-         if(qry->exec())
-         {
-             teamName = qry->value(0).toString();
-         }
+        currentCol = trip[counter];
 
 
-         this->ui->label->setText("CURRENTLY AT: " + curCol);
+        this->ui->label->setText("CURRENTLY AT: " + curCol);
 
-         qry->prepare("SELECT SouvenirName, Price FROM Souvenirs WHERE TeamName = (:teamName)");
-         qry->bindValue(":teamName", teamName);
+        qry->prepare("SELECT SouvenirName, Price FROM Souvenirs WHERE TeamName = (:teamName)");
+        qry->bindValue(":teamName", teamName);
 
-         if(qry->exec())
-         {
-             qDebug() << "souvenir table updated.";
-         }
+        if(qry->exec())
+        {
+            qry->first();
+            qDebug() << "souvenir table updated.";
+        }
 
-         model->setQuery(*qry);
+        model->setQuery(*qry);
 
-         ui->souvTable->setModel(model);
-         ui->souvTable->resizeColumnsToContents();
+        ui->souvTable->setModel(model);
+        ui->souvTable->resizeColumnsToContents();
 
     }
     else
@@ -165,25 +164,25 @@ void tripprogress::prevTrip() // shows prev college in trip
     if( counter >= 0)
     {
 
-         QString curCol;
+        QString curCol;
 
-         curCol = trip[counter];
-         currentCol = trip[counter];
+        curCol = trip[counter];
+        currentCol = trip[counter];
 
-         this->ui->label->setText("CURRENTLY AT: " + curCol);
+        this->ui->label->setText("CURRENTLY AT: " + curCol);
 
-         qry->prepare("SELECT SouvenirName, Price FROM Souvenirs WHERE TeamName = (:teamName)");
-         qry->bindValue(":teamName", curCol);
+        qry->prepare("SELECT SouvenirName, Price FROM Souvenirs WHERE TeamName = (:teamName)");
+        qry->bindValue(":teamName", curCol);
 
-         if(qry->exec())
-         {
-             qDebug() << "souvenir table updated.";
-         }
+        if(qry->exec())
+        {
+            qDebug() << "souvenir table updated.";
+        }
 
-         model->setQuery(*qry);
+        model->setQuery(*qry);
 
-         ui->souvTable->setModel(model);
-         ui->souvTable->resizeColumnsToContents();
+        ui->souvTable->setModel(model);
+        ui->souvTable->resizeColumnsToContents();
     }
     else
     {
@@ -306,6 +305,7 @@ void tripprogress::on_souvTable_clicked(const QModelIndex &index)
 
     if(index.isValid())
     {
+        ui->addCart->setEnabled(true);
         row = index.row();
         souvenirName = index.sibling(row, 0).data().toString();
         souvenirPrice = index.sibling(row, 1).data().toDouble();
@@ -352,6 +352,7 @@ void tripprogress::on_pushButton_4_released()
     confirm.exec();
     check = confirm.getData();
 
+    myDb.reOpen();
     if(check)
     {
         myDb.addPurchase();
