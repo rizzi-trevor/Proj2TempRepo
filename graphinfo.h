@@ -16,7 +16,7 @@
 
 
 int performMST();
-int performDijkstra(QStringList teamsSelected, QString ID) ;
+int performDijkstra(QStringList teamsSelected) ;
 QStringList convertTeamNamesToStadiumNames(QStringList teamsSelected) ;
 int performBFS();
 int performDFS();

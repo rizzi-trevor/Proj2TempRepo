@@ -397,7 +397,7 @@ void DbManager::resetCart()
         query->prepare("DELETE FROM cart");
 
         if(query->exec())
-            qDebug() << "Delete cART!";
+            qDebug() << "Delete CART!";
         else
             qDebug() << "coudln't delete cart!";
     }
@@ -786,6 +786,16 @@ void DbManager::createTripTable()
                     "souvenir TEXT,"
                     "price DOUBLE,"
                     "quantity INTEGER);");
+
+        query->exec("CREATE TABLE Cart ("
+                    "tripID TEXT,"
+                    "stadium TEXT,"
+                    "souvenir TEXT,"
+                    "price DOUBLE,"
+                    "quantity INTEGER,"
+                    "total DOUBLE);");
+
+        query->exec("CREATE TRIGGER totalCalc ON Cart AFTER INSERT, UPDATE AS SET total = (price * quantity);");
 
     }
 

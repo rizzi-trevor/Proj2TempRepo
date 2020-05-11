@@ -8,6 +8,7 @@
 #include <qcheckbox.h>
 #include "tripsummary.h"
 #include "tripprogress.h"
+#include "recursivetrip.h"
 
 namespace Ui {
 class tripPlanner;
@@ -42,8 +43,6 @@ public:
 
     void selectedCollegeList();
 
-    void planAlgorithm(QString start, int dist);
-
     bool collegeDoesExist(QString colName);
 
     bool planDoesExist(QString colName);
@@ -51,6 +50,8 @@ public:
     void showTrip(QString ID);
 
     void updateComboTwo();
+
+    void algorithm();
 
 
 public slots:
@@ -84,6 +85,8 @@ public slots:
 
     void onGraphInfoClick();
 
+    void onStartTrip();
+
 
 
 private slots:
@@ -99,6 +102,7 @@ private:
     /**
     * @brief assigns DB to predefined PROJECT_PATH constant
     */
+
     DbManager myDb = DbManager(PROJECT_PATH + "/college.db");
 
     tripprogress *progress;
@@ -115,6 +119,14 @@ private:
     QList<int> distanceTo;
 
     graphInfo *info;
+
+    unorderedMap<Team> umap;
+
+    vector<QString> path;
+
+    vector<QString> remainingChoices;
+
+    vector<int> distNext;
 
 
 

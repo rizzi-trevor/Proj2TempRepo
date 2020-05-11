@@ -50,7 +50,7 @@ QStringList convertTeamNamesToStadiumNames(QStringList teamsSelected) {
     return temp;        /// returns the stadium name list
 }
 
-int performDijkstra(QStringList teamsSelected, QString ID)
+int performDijkstra(QStringList teamsSelected)
 {
     QString lastStadium;
     int last;
@@ -109,7 +109,7 @@ int performDijkstra(QStringList teamsSelected, QString ID)
         totalDistance += costs[graph.findVertex(temp.at(i + 1).toStdString())];
         int tempDist = costs[graph.findVertex(temp.at(i + 1).toStdString())];
 
-         myDb.addTrip(ID, temp.at(i), i, tempDist);
+         //myDb.addTrip(ID, temp.at(i), i, tempDist);
 
          lastStadium = temp.at(i + 1);
 
@@ -117,7 +117,6 @@ int performDijkstra(QStringList teamsSelected, QString ID)
          last = i + 1;
 
     }
-    myDb.addTrip(ID, lastStadium, last, 0);
 
     cout << endl;
     cout << "TOTAL DISTANCE: " << totalDistance << endl;

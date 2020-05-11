@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1095</width>
-    <height>598</height>
+    <width>955</width>
+    <height>583</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,7 +27,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>1061</width>
+      <width>1041</width>
       <height>661</height>
      </rect>
     </property>
@@ -64,9 +64,9 @@
      <widget class="QPushButton" name="planButton">
       <property name="geometry">
        <rect>
-        <x>560</x>
-        <y>142</y>
-        <width>151</width>
+        <x>410</x>
+        <y>50</y>
+        <width>161</width>
         <height>41</height>
        </rect>
       </property>
@@ -77,8 +77,8 @@
      <widget class="QComboBox" name="colName">
       <property name="geometry">
        <rect>
-        <x>560</x>
-        <y>100</y>
+        <x>410</x>
+        <y>10</y>
         <width>161</width>
         <height>22</height>
        </rect>
@@ -87,21 +87,21 @@
      <widget class="QLabel" name="warningLabel">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>250</y>
-        <width>161</width>
+        <x>410</x>
+        <y>100</y>
+        <width>211</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>asdasdasd</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>700</x>
-        <y>360</y>
+        <x>410</x>
+        <y>170</y>
         <width>121</width>
         <height>16</height>
        </rect>
@@ -113,8 +113,8 @@
      <widget class="QLineEdit" name="trip">
       <property name="geometry">
        <rect>
-        <x>700</x>
-        <y>390</y>
+        <x>410</x>
+        <y>190</y>
         <width>113</width>
         <height>20</height>
        </rect>
@@ -123,8 +123,8 @@
      <widget class="QTableView" name="window">
       <property name="geometry">
        <rect>
-        <x>780</x>
-        <y>40</y>
+        <x>630</x>
+        <y>20</y>
         <width>261</width>
         <height>192</height>
        </rect>
@@ -133,14 +133,27 @@
      <widget class="QPushButton" name="graphInfo">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>30</y>
+        <x>320</x>
+        <y>10</y>
         <width>75</width>
         <height>23</height>
        </rect>
       </property>
       <property name="text">
        <string>Graph Info</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="startTrip">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>212</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Start Trip !</string>
       </property>
      </widget>
     </widget>
@@ -376,7 +389,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>674</x>
-     <y>606</y>
+     <y>582</y>
     </hint>
    </hints>
   </connection>
@@ -392,7 +405,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>778</x>
-     <y>602</y>
+     <y>582</y>
     </hint>
    </hints>
   </connection>
@@ -408,7 +421,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>306</x>
-     <y>601</y>
+     <y>582</y>
     </hint>
    </hints>
   </connection>
@@ -424,7 +437,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>765</x>
-     <y>606</y>
+     <y>582</y>
     </hint>
    </hints>
   </connection>
@@ -440,7 +453,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>887</x>
-     <y>611</y>
+     <y>582</y>
     </hint>
    </hints>
   </connection>
@@ -456,7 +469,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>902</x>
-     <y>619</y>
+     <y>582</y>
     </hint>
    </hints>
   </connection>
@@ -472,7 +485,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>224</x>
-     <y>608</y>
+     <y>582</y>
     </hint>
    </hints>
   </connection>
@@ -488,7 +501,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>688</x>
-     <y>606</y>
+     <y>582</y>
     </hint>
    </hints>
   </connection>
@@ -504,7 +517,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>646</x>
-     <y>621</y>
+     <y>582</y>
     </hint>
    </hints>
   </connection>
@@ -520,7 +533,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>805</x>
-     <y>635</y>
+     <y>582</y>
     </hint>
    </hints>
   </connection>
@@ -536,7 +549,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>922</x>
-     <y>619</y>
+     <y>582</y>
     </hint>
    </hints>
   </connection>
@@ -551,8 +564,8 @@
      <y>545</y>
     </hint>
     <hint type="destinationlabel">
-     <x>999</x>
-     <y>605</y>
+     <x>954</x>
+     <y>582</y>
     </hint>
    </hints>
   </connection>
@@ -563,28 +576,28 @@
    <slot>onPlanClick()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>658</x>
-     <y>195</y>
+     <x>508</x>
+     <y>103</y>
     </hint>
     <hint type="destinationlabel">
      <x>653</x>
-     <y>657</y>
+     <y>582</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>graphInfo</sender>
+   <sender>startTrip</sender>
    <signal>clicked()</signal>
    <receiver>tripPlanner</receiver>
-   <slot>onGraphInfoClick()</slot>
+   <slot>onStartTrip()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>414</x>
-     <y>69</y>
+     <x>791</x>
+     <y>276</y>
     </hint>
     <hint type="destinationlabel">
-     <x>433</x>
-     <y>612</y>
+     <x>789</x>
+     <y>627</y>
     </hint>
    </hints>
   </connection>
@@ -607,5 +620,6 @@
   <slot>onGreatClick()</slot>
   <slot>onLeastClick()</slot>
   <slot>onGraphInfoClick()</slot>
+  <slot>onStartTrip()</slot>
  </slots>
 </ui>

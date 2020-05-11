@@ -71,12 +71,7 @@ public:
         bool isFull() 	 {return ocupied == map.size();}
         bool isEmpty()	 {return size == 0;}
 
-        /**
-        * @author Jonathan Brubaker
-        * @brief creates a pointer list of all objects
-        * @return vector<t*> of all elements
-        * @param NA
-        */
+
         vector<t*> createList(){
                 vector<t*> elements;
 

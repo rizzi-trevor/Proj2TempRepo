@@ -2,6 +2,7 @@
 #define RECURSIVETRIP_H
 
 #include "unorderedMap.h"
+#include <QDebug>
 
 class Trip{
 private:
@@ -45,7 +46,6 @@ public:
         map->find(teamsNames.front())->visited = true;
         //vector<int> cost = dijkstra(teamsNames.front());
         teamsNames.erase(teamsNames.begin());
-
 
         for(int i = 0; i < teamsNames.size(); i++)
         {

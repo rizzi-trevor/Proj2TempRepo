@@ -1,5 +1,6 @@
 #include "tripplanner.h"
 #include "ui_tripplanner.h"
+#include <vector>
 
 #include "QVBoxLayout"
 
@@ -13,6 +14,7 @@ tripPlanner::tripPlanner(QWidget *parent) :
     updateDistTable();
     updateMLBTable();
     initializeList();
+    ui->startTrip->setEnabled(false);
 
 }
 
@@ -477,36 +479,52 @@ void tripPlanner::onPlanClick()
 
     selectedCollegeList();
 
-    if(!collegeDoesExist(startingStadium)) // checks if the user input a correct college
+    for(int i = 0; i < selectedColleges.size(); i++)
+    {
+        if(selectedColleges[i] != startingStadium)
+        {
+            remainingChoices.push_back(selectedColleges[i]);
+        }
+    }
+    path.push_back(startingStadium);
+
+
+    if(!collegeDoesExist(startingStadium)) // checks if the user input a correct stadium
     {
         this->ui->warningLabel->setText("Please enter a college that you have selected on the left!");
     }
     else
     {
-        //updateSouvTable(startingCollege);
-        //updateCollegeTable(startingCollege);
 
         qDebug() << myDb.tripIdExists(tripID);
         qDebug() << tripID;
         if(tripID.size() == 3 && !myDb.tripIdExists(tripID))
         {
             this->ui->warningLabel->setText("");
-            //this->ui->tripWarning->setText("");
+
             plannedColleges.clear();
             id = tripID;
-            planAlgorithm(startingStadium, distance); // will plan the trip
+
+            algorithm();
+
             distanceTo << 0; // adds 0 for distance to next college at last college
-            for(int index = 0; index < plannedColleges.size(); index++)
+
+            myDb.reOpen();
+
+            for(int index = 0; index < path.size(); index++)
             {
-                myDb.addTrip(tripID, plannedColleges[index], index, distanceTo[index]); // uploads trip to DB
+                myDb.addTrip(tripID, path[index], index, distNext[index]); // uploads trip to DB
             }
+
+
+            qDebug() << path;
+
             showTrip(tripID);
 
             QString out = QString::number(distance);
-            //this->ui->dist->setText(out);
+            ui->startTrip->setEnabled(true);
 
-            //tripSummary *summary = new tripSummary(this);
-            //summary->show();
+
         }
         else
         {
@@ -516,16 +534,13 @@ void tripPlanner::onPlanClick()
     }
 
     for(int i = 0; i < plannedColleges.size(); i++)
-                {
-                    qDebug() << plannedColleges[i];
-                }
+    {
+        qDebug() << plannedColleges[i];
+    }
 
-}
-
-void tripPlanner::planAlgorithm(QString start, int dist)// start is the user selected starting stadium
-{
-
-    performDijkstra(selectedColleges, id);
+    path.clear();
+    remainingChoices.clear();
+    distNext.clear();
 
 }
 
@@ -575,6 +590,7 @@ void tripPlanner::showTrip(QString ID)
     model->setQuery(*qry);
 
     //clear here?
+    ui->window->setModel(new QSqlQueryModel());
     ui->window->setModel(model);
     ui->window->setColumnWidth(20, 400);
 }
@@ -604,5 +620,54 @@ void tripPlanner::onGraphInfoClick()
     info = new graphInfo;
 
     info->show();
+
+}
+
+
+void tripPlanner::algorithm()// start is the user selected starting college
+{
+    QStringList local;
+    int closestDist = 100000;
+    int closestIndex;
+    int tempDist;
+
+    if(remainingChoices.size() > 0)
+    {
+        for(int i = 0; i < remainingChoices.size(); i++)
+        {
+            local << path.back() << remainingChoices[i];
+            tempDist = performDijkstra(local);
+            if(tempDist < closestDist)
+            {
+                closestDist = tempDist;
+                closestIndex = i;
+            }
+
+            local.clear();
+        }
+
+        distNext.push_back(closestDist);
+        qDebug() << closestDist;
+        path.push_back(remainingChoices.at(closestIndex));
+        qDebug() << remainingChoices.at(closestIndex);
+        remainingChoices.erase(remainingChoices.begin() + closestIndex);
+
+        algorithm();
+
+    }
+    else
+    {
+        distNext.push_back(0);
+    }
+
+
+}
+
+void tripPlanner::onStartTrip()
+{
+    this->hide();
+    progress = new tripprogress(this, id);
+
+    progress->show();
 
 }
