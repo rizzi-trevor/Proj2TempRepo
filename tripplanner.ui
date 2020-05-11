@@ -61,6 +61,88 @@
        </property>
       </widget>
      </widget>
+     <widget class="QPushButton" name="planButton">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>142</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Plan</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="colName">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>100</y>
+        <width>161</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="warningLabel">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>250</y>
+        <width>161</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>asdasdasd</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>360</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>3-Character Trip ID:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="trip">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>390</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableView" name="window">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>40</y>
+        <width>261</width>
+        <height>192</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="graphInfo">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Graph Info</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -474,6 +556,38 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>planButton</sender>
+   <signal>clicked()</signal>
+   <receiver>tripPlanner</receiver>
+   <slot>onPlanClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>658</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>653</x>
+     <y>657</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>graphInfo</sender>
+   <signal>clicked()</signal>
+   <receiver>tripPlanner</receiver>
+   <slot>onGraphInfoClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>414</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>433</x>
+     <y>612</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>onPlanClick()</slot>
@@ -492,5 +606,6 @@
   <slot>onSeatingClick()</slot>
   <slot>onGreatClick()</slot>
   <slot>onLeastClick()</slot>
+  <slot>onGraphInfoClick()</slot>
  </slots>
 </ui>

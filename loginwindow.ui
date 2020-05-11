@@ -186,6 +186,19 @@
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="distance">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>320</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -193,7 +206,7 @@
      <x>0</x>
      <y>0</y>
      <width>832</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

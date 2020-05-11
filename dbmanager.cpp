@@ -776,13 +776,13 @@ void DbManager::createTripTable()
     {
         query->exec("CREATE TABLE Trips ("
                     "tripID TEXT,"
-                    "college TEXT,"
+                    "stadium TEXT,"
                     "tripProgress INT,"
                     "distanceToNext INT);");
 
         query->exec("CREATE TABLE Purchases ("
                     "tripID TEXT,"
-                    "college TEXT,"
+                    "stadium TEXT,"
                     "souvenir TEXT,"
                     "price DOUBLE,"
                     "quantity INTEGER);");
@@ -797,10 +797,10 @@ void DbManager::addTrip(QString tripID, QString plannedCollege, int index, int d
 
     if(myDB.open())
     {
-        query->prepare("INSERT INTO Trips(tripID, college, tripProgress, distanceToNext) VALUES(:tripID, :college, :int, :distanceToNext)");
+        query->prepare("INSERT INTO Trips(tripID, stadium, tripProgress, distanceToNext) VALUES(:tripID, :stadium, :int, :distanceToNext)");
 
         query->bindValue(":tripID", tripID);
-        query->bindValue(":college", plannedCollege);
+        query->bindValue(":stadium", plannedCollege);
         query->bindValue(":int", (index + 1));
         query->bindValue(":distanceToNext", distanceTo);
         qDebug() << query->exec();

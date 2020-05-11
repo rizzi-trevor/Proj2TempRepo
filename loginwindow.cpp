@@ -1,8 +1,6 @@
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
 #include "dbmanager.h"
-#include "tripplanner.h"
-
 
 LoginWindow::LoginWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -10,15 +8,7 @@ LoginWindow::LoginWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    //Running instances just to test the database creation
-    // Makes necessary tables from input file
-    //myDb.clearDb();
-
-    //myDb.InitCollegeList(PROJECT_PATH + "/College Campus Distances and Souvenirs.xlsx");
-
-    //myDb.initSouvenirList(PROJECT_PATH + "/College Campus Distances and Souvenirs.xlsx");
-
-    //myDb.initDistanceList(PROJECT_PATH + "/College Campus Distances and Souvenirs.xlsx");
+    myDb.createTripTable();
         
 
      // the tables with college info
