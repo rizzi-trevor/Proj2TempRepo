@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CS1D - Project1 - College Touring: dbmanager.h Source File</title>
+<title>CS1D - Project2 - Baseball: dbmanager.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">CS1D - Project1 - College Touring
+   <div id="projectname">CS1D - Project2 - Baseball
    &#160;<span id="projectnumber">1</span>
    </div>
   </td>
@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('dbmanager_8h_source.html','');});
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * 3. sqlite&gt; .quit</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> QString PROJECT_PATH = <span class="stringliteral">&quot;C:/Users/Nick/source/repos/CS1D-Project1-College-Touring/&quot;</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> QString PROJECT_PATH = <span class="stringliteral">&quot;C:/Users/Trevor Rizzi/Desktop/CS1D-PROJ2/&quot;</span>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_db_manager.html">   33</a></span>&#160;<span class="keyword">class</span> <a class="code" href="class_db_manager.html">DbManager</a></div>
@@ -151,197 +151,234 @@ $(document).ready(function(){initNavTree('dbmanager_8h_source.html','');});
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#ac339cd04710203c6faf8d4a5d55b0135">initSouvenirList</a>(<span class="keyword">const</span> QString &amp;path);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    * @brief initalizes sql data table for college distances and inputs all data from path parameter file location</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">    * @param &amp;path - filepath for DB</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    * @return void - none</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#ac07ce420fd795d2e613d3d58151a3f13">initDistanceList</a>(<span class="keyword">const</span> QString &amp;path);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">    * @brief adds a user to DB for future logins</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">    * @param &amp;user - user name</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">    * @param &amp;pass - password</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    * @return void - none</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a8f06e6e0365900ada1bf178576299c58">addUser</a>(<span class="keyword">const</span> QString &amp;user, <span class="keyword">const</span> QString &amp;pass);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">    * @brief adds a souv to DB for data tables</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">    * @param &amp;college - college containing souv</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">    * @param &amp;souName - name of souv</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">    * @param &amp;cost - cost of souv</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">    * @return void - none</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#aba2fa2af8d63efc7aec75bf690c69a3c">addSou</a>(<span class="keyword">const</span> QString &amp;college, <span class="keyword">const</span> QString &amp;souName, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp;cost);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">    * @brief removes a souv to DB for data tables</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">    * @param &amp;college - college containing souv</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">    * @param &amp;souName - name of souv</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">    * @return void - none</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#aec7a231230eb9e7f4fac4224304130cb">removeSou</a>(<span class="keyword">const</span> QString &amp;souName, <span class="keyword">const</span> QString &amp;college);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">    * @brief updates souv to DB for data tables with new values</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">    * @param &amp;college - college containing souv</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">    * @param &amp;souName - name of souv</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">    * @param &amp;cost - cost of souv</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">    * @param &amp;newSovenir - new object data</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">    * @return void - none</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#adf32025a73fc9b230a8135cb0af35c5d">updateSou</a>(<span class="keyword">const</span> QString &amp;souName, <span class="keyword">const</span> QString &amp;college, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp;spin, <span class="keyword">const</span> QString &amp;newSouvenir);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">    * @brief adds souv to cart</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">    * @param count - quantity of items</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">    * @param souvenir - name of souv</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">    * @param price - cost of souv</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">    * @return void - none</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a066c64eeb0214baf725d17cb56227e5f">addCart</a>(<span class="keyword">const</span> QString trip, <span class="keyword">const</span> QString college, <span class="keyword">const</span> QString souvenir, <span class="keyword">const</span> <span class="keywordtype">double</span> price, <span class="keyword">const</span> <span class="keywordtype">int</span> count);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">    * @brief updates total items in carts with accurate corresponding data</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">    * @param count - quantity of items</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">    * @param souvenir - name of souv</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">    * @param college - name of college selling souv</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">    * @return void - none</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a0d17a065e941949c2472ddc19436e1a0">updateCart</a>(<span class="keyword">const</span> QString college, <span class="keyword">const</span> QString souvenir, <span class="keyword">const</span> <span class="keywordtype">int</span> count);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">    * @brief returns quanitity of items in cart</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">    * @param souvenir - name of souv</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">    * @param college - name of college selling souv</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">    * @return int - quanity of cart</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_db_manager.html#ab139c436a07cbd611edd0d169962f5fa">cartQuantity</a>(<span class="keyword">const</span> QString college, <span class="keyword">const</span> QString souvenir);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">    * @brief delete item from cart</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">    * @param souvenir - name of souv</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">    * @param college - name of college selling souv</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">    * @return void - none</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a2d75fe15fff87d86cf7445e147f1dc0a">removeCart</a>(<span class="keyword">const</span> QString college, <span class="keyword">const</span> QString souvenir);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">    * @brief adds purchase to DB and cart</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">    * @return void - none</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#aedfdf8a34ade856e4fab1ea3adcef5b3">addPurchase</a>();</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">    * @brief clear all items from cart</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">    * @return void - none</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#aeaac0d5a8393040e7b52208c80ea3fd4">resetCart</a>();</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">    * @brief add colleges from file to DB</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">    * @param path - absolute path to db file souv</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">    * @return void - none</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a3fb7e05878d16c1c5cea11b53cf04d4d">addColleges</a>(<span class="keyword">const</span> QString &amp;path);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">    * @brief checks to see if the username exists</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">    * @param name of the user</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">    * @return true - username exists, false - username does not exist</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_db_manager.html#ae1a3c72afdf29e00bc16fd128dc35b94">userExists</a>(<span class="keyword">const</span> QString &amp;user);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">    * @brief checks to see if the souv exists</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">    * @param &amp;name - name of souv</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">    * @param &amp;college - college that contains souv</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">    * @return true - username exists, false - username does not exist</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_db_manager.html#acdbad81f27cdb3f8e3bbf656eeeba382">souExists</a>(<span class="keyword">const</span> QString &amp;name, <span class="keyword">const</span> QString &amp;college);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">    * @brief clears database of all data</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">    * @return void - nothing</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#af9547f6dc3ad170a70c0ee4d89f714fc">clearDb</a>();</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">     * @brief checks to see if DbManager is open</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">     * @return true - DbManager is open, false - DbManager is closed</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_db_manager.html#ac04baba8f5d5197f8bcd9230393501de">isOpen</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">     * @brief checks to see if the username entered is an admin</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">     * @param username of the user</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">     * @return true - will enable admin login, false - the person is not an admin</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_db_manager.html#a3ef6d1b5c19b8192420ba8743c7172ef">checkAdmin</a>(<span class="keyword">const</span> QString &amp;username) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">     * @brief Gets password from user</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">     * @param name of the user(s)</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">     * @return obtains the password from user</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="class_db_manager.html#a5d730ddded1f92e418a9c88e570b2117">QString</a> <a class="code" href="class_db_manager.html#a5d730ddded1f92e418a9c88e570b2117">getPassword</a>(<span class="keyword">const</span> <a class="code" href="class_db_manager.html#a5d730ddded1f92e418a9c88e570b2117">QString</a> &amp;<a class="code" href="class_db_manager.html#a5d730ddded1f92e418a9c88e570b2117">username</a>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment">    * @brief adds a trip to appropiate dataTables</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment">    * @param tripID - passed in trip ID</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">    * @param plannedCollege - holds selected college name</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">    * @param index- position for data structure</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">    * @return void - nothing</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#ae790551011d6cb42a4fd20a173eb9598">addTrip</a>(QString tripID, QString plannedCollege, <span class="keywordtype">int</span> index, <span class="keywordtype">int</span> distanceTo);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment">    * @brief returns whether tripID data exists in DB</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment">    * @param tripID- trip id to verify</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">    * @return bool- whether data exists</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_db_manager.html#a5bd60338e1ad8ffd0c63f34e84f88808">tripIdExists</a>(QString tripID);</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a42e94ab2a5751c839a6d57221d3d4e99">createTripTable</a>();</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment"> * @brief decalre database field memberobj</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="class_db_manager.html#a47f7984afa73f976fdc1cbd2f10753cf">  220</a></span>&#160;    <a class="code" href="class_db_manager.html#a47f7984afa73f976fdc1cbd2f10753cf">QSqlDatabase</a> <a class="code" href="class_db_manager.html#a47f7984afa73f976fdc1cbd2f10753cf">myDB</a>;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">     * @brief Initializes MLB stadium data from xlsx file at given path</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">     * @param path</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a27e3cf03a3af42d289aa3a858c1b1d5f">initMlbList</a>(<span class="keyword">const</span> QString &amp;path);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">     * @brief Initalizes the database storing distances between stadiums</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">     * @param path</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#af6bbe50328823ab15a3ed3ea9c19735e">initStadiumList</a>(<span class="keyword">const</span> QString &amp;path);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    * @brief initalizes sql data table for college distances and inputs all data from path parameter file location</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">    * @param &amp;path - filepath for DB</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">    * @return void - none</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#ac07ce420fd795d2e613d3d58151a3f13">initDistanceList</a>(<span class="keyword">const</span> QString &amp;path);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">    * @brief adds a user to DB for future logins</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">    * @param &amp;user - user name</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">    * @param &amp;pass - password</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">    * @return void - none</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a8f06e6e0365900ada1bf178576299c58">addUser</a>(<span class="keyword">const</span> QString &amp;user, <span class="keyword">const</span> QString &amp;pass);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">    * @brief adds a souv to DB for data tables</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">    * @param &amp;college - college containing souv</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">    * @param &amp;souName - name of souv</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">    * @param &amp;cost - cost of souv</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">    * @return void - none</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#aba2fa2af8d63efc7aec75bf690c69a3c">addSou</a>(<span class="keyword">const</span> QString &amp;college, <span class="keyword">const</span> QString &amp;souName, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp;cost);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">    * @brief removes a souv to DB for data tables</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">    * @param &amp;college - college containing souv</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">    * @param &amp;souName - name of souv</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">    * @return void - none</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#aec7a231230eb9e7f4fac4224304130cb">removeSou</a>(<span class="keyword">const</span> QString &amp;souName, <span class="keyword">const</span> QString &amp;college);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">    * @brief updates souv to DB for data tables with new values</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">    * @param &amp;college - college containing souv</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">    * @param &amp;souName - name of souv</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">    * @param &amp;cost - cost of souv</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">    * @param &amp;newSovenir - new object data</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">    * @return void - none</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#adf32025a73fc9b230a8135cb0af35c5d">updateSou</a>(<span class="keyword">const</span> QString &amp;souName, <span class="keyword">const</span> QString &amp;college, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp;spin, <span class="keyword">const</span> QString &amp;newSouvenir);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">    * @brief adds souv to cart</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">    * @param count - quantity of items</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">    * @param souvenir - name of souv</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">    * @param price - cost of souv</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">    * @return void - none</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a066c64eeb0214baf725d17cb56227e5f">addCart</a>(<span class="keyword">const</span> QString trip, <span class="keyword">const</span> QString college, <span class="keyword">const</span> QString souvenir, <span class="keyword">const</span> <span class="keywordtype">double</span> price, <span class="keyword">const</span> <span class="keywordtype">int</span> count);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">    * @brief updates total items in carts with accurate corresponding data</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">    * @param count - quantity of items</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">    * @param souvenir - name of souv</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">    * @param college - name of college selling souv</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">    * @return void - none</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a0d17a065e941949c2472ddc19436e1a0">updateCart</a>(<span class="keyword">const</span> QString college, <span class="keyword">const</span> QString souvenir, <span class="keyword">const</span> <span class="keywordtype">int</span> count);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">    * @brief returns quanitity of items in cart</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">    * @param souvenir - name of souv</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">    * @param college - name of college selling souv</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">    * @return int - quanity of cart</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_db_manager.html#ab139c436a07cbd611edd0d169962f5fa">cartQuantity</a>(<span class="keyword">const</span> QString college, <span class="keyword">const</span> QString souvenir);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">    * @brief delete item from cart</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">    * @param souvenir - name of souv</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">    * @param college - name of college selling souv</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">    * @return void - none</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a2d75fe15fff87d86cf7445e147f1dc0a">removeCart</a>(<span class="keyword">const</span> QString college, <span class="keyword">const</span> QString souvenir);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">    * @brief adds purchase to DB and cart</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">    * @return void - none</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#aedfdf8a34ade856e4fab1ea3adcef5b3">addPurchase</a>();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">    * @brief clear all items from cart</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">    * @return void - none</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#aeaac0d5a8393040e7b52208c80ea3fd4">resetCart</a>();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">    * @brief add colleges from file to DB</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">    * @param path - absolute path to db file souv</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">    * @return void - none</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a3fb7e05878d16c1c5cea11b53cf04d4d">addColleges</a>(<span class="keyword">const</span> QString &amp;path);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">     * @brief Reads MLB data from an xlsx file at the given path</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">     * @param path</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a104d9d622610c93e1b2aee8f73589c1e">addMLB</a>(<span class="keyword">const</span> QString &amp;path);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">    * @brief checks to see if the username exists</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">    * @param name of the user</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment">    * @return true - username exists, false - username does not exist</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_db_manager.html#ae1a3c72afdf29e00bc16fd128dc35b94">userExists</a>(<span class="keyword">const</span> QString &amp;user);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment">    * @brief checks to see if the souv exists</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment">    * @param &amp;name - name of souv</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment">    * @param &amp;college - college that contains souv</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">    * @return true - username exists, false - username does not exist</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_db_manager.html#acdbad81f27cdb3f8e3bbf656eeeba382">souExists</a>(<span class="keyword">const</span> QString &amp;name, <span class="keyword">const</span> QString &amp;college);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment">    * @brief clears database of all data</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment">    * @return void - nothing</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#af9547f6dc3ad170a70c0ee4d89f714fc">clearDb</a>();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment">     * @brief checks to see if DbManager is open</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">     * @return true - DbManager is open, false - DbManager is closed</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_db_manager.html#ac04baba8f5d5197f8bcd9230393501de">isOpen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">     * @brief checks to see if the username entered is an admin</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">     * @param username of the user</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">     * @return true - will enable admin login, false - the person is not an admin</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_db_manager.html#a3ef6d1b5c19b8192420ba8743c7172ef">checkAdmin</a>(<span class="keyword">const</span> QString &amp;username) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment">     * @brief Gets password from user</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">     * @param name of the user(s)</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">     * @return obtains the password from user</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <a class="code" href="class_db_manager.html#a5d730ddded1f92e418a9c88e570b2117">QString</a> <a class="code" href="class_db_manager.html#a5d730ddded1f92e418a9c88e570b2117">getPassword</a>(<span class="keyword">const</span> <a class="code" href="class_db_manager.html#a5d730ddded1f92e418a9c88e570b2117">QString</a> &amp;<a class="code" href="class_db_manager.html#a5d730ddded1f92e418a9c88e570b2117">username</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment">    * @brief adds a trip to appropiate dataTables</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">    * @param tripID - passed in trip ID</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">    * @param plannedCollege - holds selected college name</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">    * @param index- position for data structure</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">    * @return void - nothing</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#ae790551011d6cb42a4fd20a173eb9598">addTrip</a>(QString tripID, QString plannedCollege, <span class="keywordtype">int</span> index, <span class="keywordtype">int</span> distanceTo);</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DBMANAGER_H</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">    * @brief returns whether tripID data exists in DB</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">    * @param tripID- trip id to verify</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">    * @return bool- whether data exists</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_db_manager.html#a5bd60338e1ad8ffd0c63f34e84f88808">tripIdExists</a>(QString tripID);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">     * @brief Creates tables in the database used in the trip planning process</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a42e94ab2a5751c839a6d57221d3d4e99">createTripTable</a>();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment">     * @brief Initializes a database table with standard souvenirs for each stadium</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_db_manager.html#a5f7bde3d8a96b46f7cf6c3186ea0f3a4">createSouvTable</a>();</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment">     * @brief Re opens the database</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="comment">     * @return</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_db_manager.html#ad687c4a68f09e305d048b5686f0aef81">reOpen</a>();</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment"> * @brief decalre database field memberobj</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="class_db_manager.html#a47f7984afa73f976fdc1cbd2f10753cf">  252</a></span>&#160;    <a class="code" href="class_db_manager.html#a47f7984afa73f976fdc1cbd2f10753cf">QSqlDatabase</a> <a class="code" href="class_db_manager.html#a47f7984afa73f976fdc1cbd2f10753cf">myDB</a>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;};</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DBMANAGER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_db_manager_html_a0d17a065e941949c2472ddc19436e1a0"><div class="ttname"><a href="class_db_manager.html#a0d17a065e941949c2472ddc19436e1a0">DbManager::updateCart</a></div><div class="ttdeci">void updateCart(const QString college, const QString souvenir, const int count)</div><div class="ttdoc">updates total items in carts with accurate corresponding data</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00324">dbmanager.cpp:324</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_ae1a3c72afdf29e00bc16fd128dc35b94"><div class="ttname"><a href="class_db_manager.html#ae1a3c72afdf29e00bc16fd128dc35b94">DbManager::userExists</a></div><div class="ttdeci">bool userExists(const QString &amp;user)</div><div class="ttdoc">checks to see if the username exists</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00422">dbmanager.cpp:422</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_ab139c436a07cbd611edd0d169962f5fa"><div class="ttname"><a href="class_db_manager.html#ab139c436a07cbd611edd0d169962f5fa">DbManager::cartQuantity</a></div><div class="ttdeci">int cartQuantity(const QString college, const QString souvenir)</div><div class="ttdoc">returns quanitity of items in cart</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00193">dbmanager.cpp:193</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_a5d730ddded1f92e418a9c88e570b2117"><div class="ttname"><a href="class_db_manager.html#a5d730ddded1f92e418a9c88e570b2117">DbManager::getPassword</a></div><div class="ttdeci">QString getPassword(const QString &amp;username) const</div><div class="ttdoc">Gets password from user.</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00507">dbmanager.cpp:507</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_a8f06e6e0365900ada1bf178576299c58"><div class="ttname"><a href="class_db_manager.html#a8f06e6e0365900ada1bf178576299c58">DbManager::addUser</a></div><div class="ttdeci">void addUser(const QString &amp;user, const QString &amp;pass)</div><div class="ttdoc">adds a user to DB for future logins</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00368">dbmanager.cpp:368</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_aba2fa2af8d63efc7aec75bf690c69a3c"><div class="ttname"><a href="class_db_manager.html#aba2fa2af8d63efc7aec75bf690c69a3c">DbManager::addSou</a></div><div class="ttdeci">void addSou(const QString &amp;college, const QString &amp;souName, const double &amp;cost)</div><div class="ttdoc">adds a souv to DB for data tables</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00299">dbmanager.cpp:299</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_aedfdf8a34ade856e4fab1ea3adcef5b3"><div class="ttname"><a href="class_db_manager.html#aedfdf8a34ade856e4fab1ea3adcef5b3">DbManager::addPurchase</a></div><div class="ttdeci">void addPurchase()</div><div class="ttdoc">adds purchase to DB and cart</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00247">dbmanager.cpp:247</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_ac07ce420fd795d2e613d3d58151a3f13"><div class="ttname"><a href="class_db_manager.html#ac07ce420fd795d2e613d3d58151a3f13">DbManager::initDistanceList</a></div><div class="ttdeci">void initDistanceList(const QString &amp;path)</div><div class="ttdoc">initalizes sql data table for college distances and inputs all data from path parameter file location</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00128">dbmanager.cpp:128</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_a0d17a065e941949c2472ddc19436e1a0"><div class="ttname"><a href="class_db_manager.html#a0d17a065e941949c2472ddc19436e1a0">DbManager::updateCart</a></div><div class="ttdeci">void updateCart(const QString college, const QString souvenir, const int count)</div><div class="ttdoc">updates total items in carts with accurate corresponding data</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00449">dbmanager.cpp:449</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_ae1a3c72afdf29e00bc16fd128dc35b94"><div class="ttname"><a href="class_db_manager.html#ae1a3c72afdf29e00bc16fd128dc35b94">DbManager::userExists</a></div><div class="ttdeci">bool userExists(const QString &amp;user)</div><div class="ttdoc">checks to see if the username exists</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00547">dbmanager.cpp:547</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_ab139c436a07cbd611edd0d169962f5fa"><div class="ttname"><a href="class_db_manager.html#ab139c436a07cbd611edd0d169962f5fa">DbManager::cartQuantity</a></div><div class="ttdeci">int cartQuantity(const QString college, const QString souvenir)</div><div class="ttdoc">returns quanitity of items in cart</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00318">dbmanager.cpp:318</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_a5d730ddded1f92e418a9c88e570b2117"><div class="ttname"><a href="class_db_manager.html#a5d730ddded1f92e418a9c88e570b2117">DbManager::getPassword</a></div><div class="ttdeci">QString getPassword(const QString &amp;username) const</div><div class="ttdoc">Gets password from user.</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00632">dbmanager.cpp:632</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_a8f06e6e0365900ada1bf178576299c58"><div class="ttname"><a href="class_db_manager.html#a8f06e6e0365900ada1bf178576299c58">DbManager::addUser</a></div><div class="ttdeci">void addUser(const QString &amp;user, const QString &amp;pass)</div><div class="ttdoc">adds a user to DB for future logins</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00493">dbmanager.cpp:493</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_aba2fa2af8d63efc7aec75bf690c69a3c"><div class="ttname"><a href="class_db_manager.html#aba2fa2af8d63efc7aec75bf690c69a3c">DbManager::addSou</a></div><div class="ttdeci">void addSou(const QString &amp;college, const QString &amp;souName, const double &amp;cost)</div><div class="ttdoc">adds a souv to DB for data tables</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00424">dbmanager.cpp:424</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_aedfdf8a34ade856e4fab1ea3adcef5b3"><div class="ttname"><a href="class_db_manager.html#aedfdf8a34ade856e4fab1ea3adcef5b3">DbManager::addPurchase</a></div><div class="ttdeci">void addPurchase()</div><div class="ttdoc">adds purchase to DB and cart</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00372">dbmanager.cpp:372</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_ad687c4a68f09e305d048b5686f0aef81"><div class="ttname"><a href="class_db_manager.html#ad687c4a68f09e305d048b5686f0aef81">DbManager::reOpen</a></div><div class="ttdeci">bool reOpen()</div><div class="ttdoc">Re opens the database.</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00928">dbmanager.cpp:928</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_ac07ce420fd795d2e613d3d58151a3f13"><div class="ttname"><a href="class_db_manager.html#ac07ce420fd795d2e613d3d58151a3f13">DbManager::initDistanceList</a></div><div class="ttdeci">void initDistanceList(const QString &amp;path)</div><div class="ttdoc">initalizes sql data table for college distances and inputs all data from path parameter file location</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00254">dbmanager.cpp:254</a></div></div>
 <div class="ttc" id="aclass_db_manager_html_a449b4cc451c4ec493345d799891e7eaa"><div class="ttname"><a href="class_db_manager.html#a449b4cc451c4ec493345d799891e7eaa">DbManager::DbManager</a></div><div class="ttdeci">DbManager(const QString &amp;path)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00003">dbmanager.cpp:3</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_a2d75fe15fff87d86cf7445e147f1dc0a"><div class="ttname"><a href="class_db_manager.html#a2d75fe15fff87d86cf7445e147f1dc0a">DbManager::removeCart</a></div><div class="ttdeci">void removeCart(const QString college, const QString souvenir)</div><div class="ttdoc">delete item from cart</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00220">dbmanager.cpp:220</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_acdbad81f27cdb3f8e3bbf656eeeba382"><div class="ttname"><a href="class_db_manager.html#acdbad81f27cdb3f8e3bbf656eeeba382">DbManager::souExists</a></div><div class="ttdeci">bool souExists(const QString &amp;name, const QString &amp;college)</div><div class="ttdoc">checks to see if the souv exists</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00393">dbmanager.cpp:393</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_aeaac0d5a8393040e7b52208c80ea3fd4"><div class="ttname"><a href="class_db_manager.html#aeaac0d5a8393040e7b52208c80ea3fd4">DbManager::resetCart</a></div><div class="ttdeci">void resetCart()</div><div class="ttdoc">clear all items from cart</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00262">dbmanager.cpp:262</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_a2d75fe15fff87d86cf7445e147f1dc0a"><div class="ttname"><a href="class_db_manager.html#a2d75fe15fff87d86cf7445e147f1dc0a">DbManager::removeCart</a></div><div class="ttdeci">void removeCart(const QString college, const QString souvenir)</div><div class="ttdoc">delete item from cart</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00345">dbmanager.cpp:345</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_acdbad81f27cdb3f8e3bbf656eeeba382"><div class="ttname"><a href="class_db_manager.html#acdbad81f27cdb3f8e3bbf656eeeba382">DbManager::souExists</a></div><div class="ttdeci">bool souExists(const QString &amp;name, const QString &amp;college)</div><div class="ttdoc">checks to see if the souv exists</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00518">dbmanager.cpp:518</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_aeaac0d5a8393040e7b52208c80ea3fd4"><div class="ttname"><a href="class_db_manager.html#aeaac0d5a8393040e7b52208c80ea3fd4">DbManager::resetCart</a></div><div class="ttdeci">void resetCart()</div><div class="ttdoc">clear all items from cart</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00387">dbmanager.cpp:387</a></div></div>
 <div class="ttc" id="aclass_db_manager_html"><div class="ttname"><a href="class_db_manager.html">DbManager</a></div><div class="ttdoc">SQL Database Manager class.</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8h_source.html#l00033">dbmanager.h:33</a></div></div>
 <div class="ttc" id="aclass_db_manager_html_a919d96426a334c5f5f2f925b36e7ce86"><div class="ttname"><a href="class_db_manager.html#a919d96426a334c5f5f2f925b36e7ce86">DbManager::InitCollegeList</a></div><div class="ttdeci">void InitCollegeList(const QString &amp;path)</div><div class="ttdoc">initalizes sql data table for college and inputs all data from path parameter file location</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00030">dbmanager.cpp:30</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_ac04baba8f5d5197f8bcd9230393501de"><div class="ttname"><a href="class_db_manager.html#ac04baba8f5d5197f8bcd9230393501de">DbManager::isOpen</a></div><div class="ttdeci">bool isOpen() const</div><div class="ttdoc">checks to see if DbManager is open</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00466">dbmanager.cpp:466</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_a42e94ab2a5751c839a6d57221d3d4e99"><div class="ttname"><a href="class_db_manager.html#a42e94ab2a5751c839a6d57221d3d4e99">DbManager::createTripTable</a></div><div class="ttdeci">void createTripTable()</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00580">dbmanager.cpp:580</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_a3ef6d1b5c19b8192420ba8743c7172ef"><div class="ttname"><a href="class_db_manager.html#a3ef6d1b5c19b8192420ba8743c7172ef">DbManager::checkAdmin</a></div><div class="ttdeci">bool checkAdmin(const QString &amp;username) const</div><div class="ttdoc">checks to see if the username entered is an admin</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00471">dbmanager.cpp:471</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_a5bd60338e1ad8ffd0c63f34e84f88808"><div class="ttname"><a href="class_db_manager.html#a5bd60338e1ad8ffd0c63f34e84f88808">DbManager::tripIdExists</a></div><div class="ttdeci">bool tripIdExists(QString tripID)</div><div class="ttdoc">returns whether tripID data exists in DB</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00625">dbmanager.cpp:625</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_ae790551011d6cb42a4fd20a173eb9598"><div class="ttname"><a href="class_db_manager.html#ae790551011d6cb42a4fd20a173eb9598">DbManager::addTrip</a></div><div class="ttdeci">void addTrip(QString tripID, QString plannedCollege, int index, int distanceTo)</div><div class="ttdoc">adds a trip to appropiate dataTables</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00604">dbmanager.cpp:604</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_a47f7984afa73f976fdc1cbd2f10753cf"><div class="ttname"><a href="class_db_manager.html#a47f7984afa73f976fdc1cbd2f10753cf">DbManager::myDB</a></div><div class="ttdeci">QSqlDatabase myDB</div><div class="ttdoc">decalre database field memberobj</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8h_source.html#l00220">dbmanager.h:220</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_a066c64eeb0214baf725d17cb56227e5f"><div class="ttname"><a href="class_db_manager.html#a066c64eeb0214baf725d17cb56227e5f">DbManager::addCart</a></div><div class="ttdeci">void addCart(const QString trip, const QString college, const QString souvenir, const double price, const int count)</div><div class="ttdoc">adds souv to cart</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00277">dbmanager.cpp:277</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_ac339cd04710203c6faf8d4a5d55b0135"><div class="ttname"><a href="class_db_manager.html#ac339cd04710203c6faf8d4a5d55b0135">DbManager::initSouvenirList</a></div><div class="ttdeci">void initSouvenirList(const QString &amp;path)</div><div class="ttdoc">initalizes sql data table for souvenir and inputs all data from path parameter file location</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00073">dbmanager.cpp:73</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_aec7a231230eb9e7f4fac4224304130cb"><div class="ttname"><a href="class_db_manager.html#aec7a231230eb9e7f4fac4224304130cb">DbManager::removeSou</a></div><div class="ttdeci">void removeSou(const QString &amp;souName, const QString &amp;college)</div><div class="ttdoc">removes a souv to DB for data tables</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00173">dbmanager.cpp:173</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_a3fb7e05878d16c1c5cea11b53cf04d4d"><div class="ttname"><a href="class_db_manager.html#a3fb7e05878d16c1c5cea11b53cf04d4d">DbManager::addColleges</a></div><div class="ttdeci">void addColleges(const QString &amp;path)</div><div class="ttdoc">add colleges from file to DB</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00534">dbmanager.cpp:534</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_adf32025a73fc9b230a8135cb0af35c5d"><div class="ttname"><a href="class_db_manager.html#adf32025a73fc9b230a8135cb0af35c5d">DbManager::updateSou</a></div><div class="ttdeci">void updateSou(const QString &amp;souName, const QString &amp;college, const double &amp;spin, const QString &amp;newSouvenir)</div><div class="ttdoc">updates souv to DB for data tables with new values</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00343">dbmanager.cpp:343</a></div></div>
-<div class="ttc" id="aclass_db_manager_html_af9547f6dc3ad170a70c0ee4d89f714fc"><div class="ttname"><a href="class_db_manager.html#af9547f6dc3ad170a70c0ee4d89f714fc">DbManager::clearDb</a></div><div class="ttdeci">void clearDb()</div><div class="ttdoc">clears database of all data</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00448">dbmanager.cpp:448</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_ac04baba8f5d5197f8bcd9230393501de"><div class="ttname"><a href="class_db_manager.html#ac04baba8f5d5197f8bcd9230393501de">DbManager::isOpen</a></div><div class="ttdeci">bool isOpen() const</div><div class="ttdoc">checks to see if DbManager is open</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00591">dbmanager.cpp:591</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_a104d9d622610c93e1b2aee8f73589c1e"><div class="ttname"><a href="class_db_manager.html#a104d9d622610c93e1b2aee8f73589c1e">DbManager::addMLB</a></div><div class="ttdeci">void addMLB(const QString &amp;path)</div><div class="ttdoc">Reads MLB data from an xlsx file at the given path.</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00659">dbmanager.cpp:659</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_a42e94ab2a5751c839a6d57221d3d4e99"><div class="ttname"><a href="class_db_manager.html#a42e94ab2a5751c839a6d57221d3d4e99">DbManager::createTripTable</a></div><div class="ttdeci">void createTripTable()</div><div class="ttdoc">Creates tables in the database used in the trip planning process.</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00766">dbmanager.cpp:766</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_a3ef6d1b5c19b8192420ba8743c7172ef"><div class="ttname"><a href="class_db_manager.html#a3ef6d1b5c19b8192420ba8743c7172ef">DbManager::checkAdmin</a></div><div class="ttdeci">bool checkAdmin(const QString &amp;username) const</div><div class="ttdoc">checks to see if the username entered is an admin</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00596">dbmanager.cpp:596</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_a5bd60338e1ad8ffd0c63f34e84f88808"><div class="ttname"><a href="class_db_manager.html#a5bd60338e1ad8ffd0c63f34e84f88808">DbManager::tripIdExists</a></div><div class="ttdeci">bool tripIdExists(QString tripID)</div><div class="ttdoc">returns whether tripID data exists in DB</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00822">dbmanager.cpp:822</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_af6bbe50328823ab15a3ed3ea9c19735e"><div class="ttname"><a href="class_db_manager.html#af6bbe50328823ab15a3ed3ea9c19735e">DbManager::initStadiumList</a></div><div class="ttdeci">void initStadiumList(const QString &amp;path)</div><div class="ttdoc">Initalizes the database storing distances between stadiums.</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00157">dbmanager.cpp:157</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_a5f7bde3d8a96b46f7cf6c3186ea0f3a4"><div class="ttname"><a href="class_db_manager.html#a5f7bde3d8a96b46f7cf6c3186ea0f3a4">DbManager::createSouvTable</a></div><div class="ttdeci">void createSouvTable()</div><div class="ttdoc">Initializes a database table with standard souvenirs for each stadium.</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00848">dbmanager.cpp:848</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_ae790551011d6cb42a4fd20a173eb9598"><div class="ttname"><a href="class_db_manager.html#ae790551011d6cb42a4fd20a173eb9598">DbManager::addTrip</a></div><div class="ttdeci">void addTrip(QString tripID, QString plannedCollege, int index, int distanceTo)</div><div class="ttdoc">adds a trip to appropiate dataTables</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00801">dbmanager.cpp:801</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_a47f7984afa73f976fdc1cbd2f10753cf"><div class="ttname"><a href="class_db_manager.html#a47f7984afa73f976fdc1cbd2f10753cf">DbManager::myDB</a></div><div class="ttdeci">QSqlDatabase myDB</div><div class="ttdoc">decalre database field memberobj</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8h_source.html#l00252">dbmanager.h:252</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_a066c64eeb0214baf725d17cb56227e5f"><div class="ttname"><a href="class_db_manager.html#a066c64eeb0214baf725d17cb56227e5f">DbManager::addCart</a></div><div class="ttdeci">void addCart(const QString trip, const QString college, const QString souvenir, const double price, const int count)</div><div class="ttdoc">adds souv to cart</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00402">dbmanager.cpp:402</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_a27e3cf03a3af42d289aa3a858c1b1d5f"><div class="ttname"><a href="class_db_manager.html#a27e3cf03a3af42d289aa3a858c1b1d5f">DbManager::initMlbList</a></div><div class="ttdeci">void initMlbList(const QString &amp;path)</div><div class="ttdoc">Initializes MLB stadium data from xlsx file at given path.</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00073">dbmanager.cpp:73</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_ac339cd04710203c6faf8d4a5d55b0135"><div class="ttname"><a href="class_db_manager.html#ac339cd04710203c6faf8d4a5d55b0135">DbManager::initSouvenirList</a></div><div class="ttdeci">void initSouvenirList(const QString &amp;path)</div><div class="ttdoc">initalizes sql data table for souvenir and inputs all data from path parameter file location</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00199">dbmanager.cpp:199</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_aec7a231230eb9e7f4fac4224304130cb"><div class="ttname"><a href="class_db_manager.html#aec7a231230eb9e7f4fac4224304130cb">DbManager::removeSou</a></div><div class="ttdeci">void removeSou(const QString &amp;souName, const QString &amp;college)</div><div class="ttdoc">removes a souv to DB for data tables</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00296">dbmanager.cpp:296</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_a3fb7e05878d16c1c5cea11b53cf04d4d"><div class="ttname"><a href="class_db_manager.html#a3fb7e05878d16c1c5cea11b53cf04d4d">DbManager::addColleges</a></div><div class="ttdeci">void addColleges(const QString &amp;path)</div><div class="ttdoc">add colleges from file to DB</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00720">dbmanager.cpp:720</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_adf32025a73fc9b230a8135cb0af35c5d"><div class="ttname"><a href="class_db_manager.html#adf32025a73fc9b230a8135cb0af35c5d">DbManager::updateSou</a></div><div class="ttdeci">void updateSou(const QString &amp;souName, const QString &amp;college, const double &amp;spin, const QString &amp;newSouvenir)</div><div class="ttdoc">updates souv to DB for data tables with new values</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00468">dbmanager.cpp:468</a></div></div>
+<div class="ttc" id="aclass_db_manager_html_af9547f6dc3ad170a70c0ee4d89f714fc"><div class="ttname"><a href="class_db_manager.html#af9547f6dc3ad170a70c0ee4d89f714fc">DbManager::clearDb</a></div><div class="ttdeci">void clearDb()</div><div class="ttdoc">clears database of all data</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8cpp_source.html#l00573">dbmanager.cpp:573</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

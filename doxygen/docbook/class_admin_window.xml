@@ -31,6 +31,8 @@ Collaboration diagram for AdminWindow:<para>
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
+            <listitem><para>void <link linkend="_class_admin_window_1ae7d7cfa69b98c1d127073e7f94041583">updateCombo</link> ()</para>
+</listitem>
             <listitem><para><link linkend="_class_admin_window_1a0a68db6e97108a5b789d7b90dd962f76">AdminWindow</link> (QWidget *parent=nullptr)</para>
 
 <para>explicit default Constructor </para>
@@ -79,6 +81,34 @@ Collaboration diagram for AdminWindow:<para>
             <listitem><para>void <link linkend="_class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49">on_removeSouvenir_2_clicked</link> ()</para>
 </listitem>
             <listitem><para>void <link linkend="_class_admin_window_1ac2d7d04600f0df63ad3fab0756567c01">on_pushButton_5_released</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1a2b20d726b1946fe54143de45f235a8b1">on_pushButton_2_clicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1a2f4241f561a61338473a6a123c47198f">on_addMLB_clicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1a2886deed312f15a0a2f39d108555210b">on_searchButton_clicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1aed0795bb41b78b99e1faf01e04950ea7">on_showALL_clicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1af005476020875d7573969c383180f16d">on_showStadiums_clicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1abc2b261e1b61062843d85644bacb7292">on_showStadiums_2_clicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1af3589241bd7a70aa5bbc5c42e31bf4de">on_pushButton_3_clicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1a4cee509b1c69bd414a153d532380d8ee">on_pushButton_4_clicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1af31f8728eee0658d934c871182f1609c">on_pushButton_6_clicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1af4978d5e30b829abf4a401c580546587">souvTable</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1aacfea2bd7cc348782faf61b04b91fa1b">on_pushButton_7_clicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1acd63087338f381acc3680c356013f634">on_souTable_clicked</link> (const QModelIndex &amp;index)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1a2a4734a78aac844065dc013433c3d872">on_pushButton_8_clicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_admin_window_1acc2ae27f04c9096aaa33227922d28346">on_updateButton_clicked</link> ()</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -147,12 +177,23 @@ Parameters                    </title>
 <para>
 Definition at line 6 of file adminwindow.cpp.</para>
 <para>
-References updateCollegeTable(), and updateSouvenirTable().</para>
+References AdminWindow(), souvTable(), updateCollegeTable(), and updateSouvenirTable().</para>
+<para>
+Referenced by AdminWindow().</para>
 Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
                 <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_a0a68db6e97108a5b789d7b90dd962f76_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_a0a68db6e97108a5b789d7b90dd962f76_icgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -168,7 +209,7 @@ Here is the call graph for this function:<para>
 
 <para>Close the <link linkend="_class_admin_window">AdminWindow</link> UI </para>
 <para>
-Definition at line 15 of file adminwindow.cpp.</para>
+Definition at line 17 of file adminwindow.cpp.</para>
 <para>
 References ui.</para>
 </section>
@@ -190,7 +231,7 @@ References ui.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 88 of file adminwindow.cpp.</para>
+Definition at line 95 of file adminwindow.cpp.</para>
 <para>
 References confirmpage::getData(), confirmpage::on_okButton_released(), updateCollegeTable(), and updateSouvenirTable().</para>
 Here is the call graph for this function:<para>
@@ -198,6 +239,23 @@ Here is the call graph for this function:<para>
         <mediaobject>
             <imageobject>
                 <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_adb75fb0689794491accb94c3bd9989be_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_admin_window_1a2f4241f561a61338473a6a123c47198f"/>    <section>
+    <title>on_addMLB_clicked</title>
+<indexterm><primary>on_addMLB_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_addMLB_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_addMLB_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 181 of file adminwindow.cpp.</para>
+<para>
+References confirmpage::getData(), confirmpage::on_okButton_released(), updateCollegeTable(), and updateSouvenirTable().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_a2f4241f561a61338473a6a123c47198f_cgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -217,7 +275,7 @@ Here is the call graph for this function:<para>
 </formalpara>
 </para>
 <para>
-Definition at line 111 of file adminwindow.cpp.</para>
+Definition at line 118 of file adminwindow.cpp.</para>
 <para>
 References addSouvenir::on_pushButton_2_released(), and updateSouvenirTable().</para>
 Here is the call graph for this function:<para>
@@ -229,29 +287,76 @@ Here is the call graph for this function:<para>
         </mediaobject>
     </informalfigure>
 </para>
+    </section><anchor xml:id="_class_admin_window_1a2b20d726b1946fe54143de45f235a8b1"/>    <section>
+    <title>on_pushButton_2_clicked</title>
+<indexterm><primary>on_pushButton_2_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_pushButton_2_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_pushButton_2_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 176 of file adminwindow.cpp.</para>
+    </section><anchor xml:id="_class_admin_window_1af3589241bd7a70aa5bbc5c42e31bf4de"/>    <section>
+    <title>on_pushButton_3_clicked</title>
+<indexterm><primary>on_pushButton_3_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_pushButton_3_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_pushButton_3_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 311 of file adminwindow.cpp.</para>
+    </section><anchor xml:id="_class_admin_window_1a4cee509b1c69bd414a153d532380d8ee"/>    <section>
+    <title>on_pushButton_4_clicked</title>
+<indexterm><primary>on_pushButton_4_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_pushButton_4_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_pushButton_4_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 336 of file adminwindow.cpp.</para>
     </section><anchor xml:id="_class_admin_window_1ac2d7d04600f0df63ad3fab0756567c01"/>    <section>
     <title>on_pushButton_5_released</title>
 <indexterm><primary>on_pushButton_5_released</primary><secondary>AdminWindow</secondary></indexterm>
 <indexterm><primary>AdminWindow</primary><secondary>on_pushButton_5_released</secondary></indexterm>
 <para><computeroutput>void AdminWindow::on_pushButton_5_released ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
-Definition at line 250 of file adminwindow.cpp.</para>
+Definition at line 167 of file adminwindow.cpp.</para>
+    </section><anchor xml:id="_class_admin_window_1af31f8728eee0658d934c871182f1609c"/>    <section>
+    <title>on_pushButton_6_clicked</title>
+<indexterm><primary>on_pushButton_6_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_pushButton_6_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_pushButton_6_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 361 of file adminwindow.cpp.</para>
+    </section><anchor xml:id="_class_admin_window_1aacfea2bd7cc348782faf61b04b91fa1b"/>    <section>
+    <title>on_pushButton_7_clicked</title>
+<indexterm><primary>on_pushButton_7_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_pushButton_7_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_pushButton_7_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 407 of file adminwindow.cpp.</para>
+<para>
+References addSouvenir::on_pushButton_2_released(), and souvTable().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_aacfea2bd7cc348782faf61b04b91fa1b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_admin_window_1a2a4734a78aac844065dc013433c3d872"/>    <section>
+    <title>on_pushButton_8_clicked</title>
+<indexterm><primary>on_pushButton_8_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_pushButton_8_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_pushButton_8_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 443 of file adminwindow.cpp.</para>
+<para>
+References confirmpage::getData(), confirmpage::on_okButton_released(), and souvTable().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_a2a4734a78aac844065dc013433c3d872_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
     </section><anchor xml:id="_class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49"/>    <section>
     <title>on_removeSouvenir_2_clicked</title>
 <indexterm><primary>on_removeSouvenir_2_clicked</primary><secondary>AdminWindow</secondary></indexterm>
 <indexterm><primary>AdminWindow</primary><secondary>on_removeSouvenir_2_clicked</secondary></indexterm>
 <para><computeroutput>void AdminWindow::on_removeSouvenir_2_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
-Definition at line 204 of file adminwindow.cpp.</para>
-<para>
-References confirmpage::getData(), confirmpage::on_okButton_released(), and updateSouvenirTable().</para>
-Here is the call graph for this function:<para>
-    <informalfigure>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_a9da5cb0c07bdf0cb6d8f7d980ec33c49_cgraph.png"></imagedata>
-            </imageobject>
-        </mediaobject>
-    </informalfigure>
-</para>
+Definition at line 162 of file adminwindow.cpp.</para>
     </section><anchor xml:id="_class_admin_window_1ab4bb07b30224270802c48b3666514a89"/>    <section>
     <title>on_removeSouvenir_released</title>
 <indexterm><primary>on_removeSouvenir_released</primary><secondary>AdminWindow</secondary></indexterm>
@@ -267,18 +372,37 @@ Here is the call graph for this function:<para>
 </formalpara>
 </para>
 <para>
-Definition at line 121 of file adminwindow.cpp.</para>
-<para>
-References confirmpage::getData(), confirmpage::on_okButton_released(), and updateSouvenirTable().</para>
-Here is the call graph for this function:<para>
-    <informalfigure>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_ab4bb07b30224270802c48b3666514a89_cgraph.png"></imagedata>
-            </imageobject>
-        </mediaobject>
-    </informalfigure>
-</para>
+Definition at line 128 of file adminwindow.cpp.</para>
+    </section><anchor xml:id="_class_admin_window_1a2886deed312f15a0a2f39d108555210b"/>    <section>
+    <title>on_searchButton_clicked</title>
+<indexterm><primary>on_searchButton_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_searchButton_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_searchButton_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 224 of file adminwindow.cpp.</para>
+    </section><anchor xml:id="_class_admin_window_1aed0795bb41b78b99e1faf01e04950ea7"/>    <section>
+    <title>on_showALL_clicked</title>
+<indexterm><primary>on_showALL_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_showALL_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_showALL_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 250 of file adminwindow.cpp.</para>
+    </section><anchor xml:id="_class_admin_window_1abc2b261e1b61062843d85644bacb7292"/>    <section>
+    <title>on_showStadiums_2_clicked</title>
+<indexterm><primary>on_showStadiums_2_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_showStadiums_2_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_showStadiums_2_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 291 of file adminwindow.cpp.</para>
+    </section><anchor xml:id="_class_admin_window_1af005476020875d7573969c383180f16d"/>    <section>
+    <title>on_showStadiums_clicked</title>
+<indexterm><primary>on_showStadiums_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_showStadiums_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_showStadiums_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 271 of file adminwindow.cpp.</para>
+    </section><anchor xml:id="_class_admin_window_1acd63087338f381acc3680c356013f634"/>    <section>
+    <title>on_souTable_clicked</title>
+<indexterm><primary>on_souTable_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_souTable_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_souTable_clicked (const QModelIndex &amp; index)<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 417 of file adminwindow.cpp.</para>
     </section><anchor xml:id="_class_admin_window_1a3f70aadf219465d9683e9ca52a1472a5"/>    <section>
     <title>on_souvenirView_clicked</title>
 <indexterm><primary>on_souvenirView_clicked</primary><secondary>AdminWindow</secondary></indexterm>
@@ -294,7 +418,24 @@ Here is the call graph for this function:<para>
 </formalpara>
 </para>
 <para>
-Definition at line 183 of file adminwindow.cpp.</para>
+Definition at line 156 of file adminwindow.cpp.</para>
+    </section><anchor xml:id="_class_admin_window_1acc2ae27f04c9096aaa33227922d28346"/>    <section>
+    <title>on_updateButton_clicked</title>
+<indexterm><primary>on_updateButton_clicked</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>on_updateButton_clicked</secondary></indexterm>
+<para><computeroutput>void AdminWindow::on_updateButton_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 491 of file adminwindow.cpp.</para>
+<para>
+References confirmpage::getData(), confirmpage::on_okButton_released(), and souvTable().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_acc2ae27f04c9096aaa33227922d28346_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
     </section><anchor xml:id="_class_admin_window_1abd378ec54897e75624563d579837ee40"/>    <section>
     <title>onAddColleges</title>
 <indexterm><primary>onAddColleges</primary><secondary>AdminWindow</secondary></indexterm>
@@ -310,7 +451,7 @@ Definition at line 183 of file adminwindow.cpp.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 161 of file adminwindow.cpp.</para>
+Definition at line 133 of file adminwindow.cpp.</para>
 <para>
 References confirmpage::getData(), confirmpage::on_okButton_released(), updateCollegeTable(), and updateSouvenirTable().</para>
 Here is the call graph for this function:<para>
@@ -337,7 +478,7 @@ Here is the call graph for this function:<para>
 </formalpara>
 </para>
 <para>
-Definition at line 59 of file adminwindow.cpp.</para>
+Definition at line 62 of file adminwindow.cpp.</para>
 <para>
 References confirmpage::getData(), confirmpage::on_okButton_released(), updateCollegeTable(), and updateSouvenirTable().</para>
 Here is the call graph for this function:<para>
@@ -345,6 +486,23 @@ Here is the call graph for this function:<para>
         <mediaobject>
             <imageobject>
                 <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_a79ff9b05e6c99ca908f35e64877b2f8b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_admin_window_1af4978d5e30b829abf4a401c580546587"/>    <section>
+    <title>souvTable</title>
+<indexterm><primary>souvTable</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>souvTable</secondary></indexterm>
+<para><computeroutput>void AdminWindow::souvTable ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 385 of file adminwindow.cpp.</para>
+<para>
+Referenced by AdminWindow(), on_pushButton_7_clicked(), on_pushButton_8_clicked(), and on_updateButton_clicked().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_admin_window_af4978d5e30b829abf4a401c580546587_icgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -364,9 +522,9 @@ Here is the call graph for this function:<para>
 </formalpara>
 </para>
 <para>
-Definition at line 20 of file adminwindow.cpp.</para>
+Definition at line 22 of file adminwindow.cpp.</para>
 <para>
-Referenced by AdminWindow(), clearCollegeData(), onAddColleges(), and onInitialise().</para>
+Referenced by AdminWindow(), clearCollegeData(), on_addMLB_clicked(), onAddColleges(), and onInitialise().</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -376,6 +534,12 @@ Here is the caller graph for this function:<para>
         </mediaobject>
     </informalfigure>
 </para>
+    </section><anchor xml:id="_class_admin_window_1ae7d7cfa69b98c1d127073e7f94041583"/>    <section>
+    <title>updateCombo()</title>
+<indexterm><primary>updateCombo</primary><secondary>AdminWindow</secondary></indexterm>
+<indexterm><primary>AdminWindow</primary><secondary>updateCombo</secondary></indexterm>
+<para><computeroutput>void AdminWindow::updateCombo ( )</computeroutput></para><para>
+Definition at line 204 of file adminwindow.cpp.</para>
     </section><anchor xml:id="_class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293"/>    <section>
     <title>updateSouvenirTable()</title>
 <indexterm><primary>updateSouvenirTable</primary><secondary>AdminWindow</secondary></indexterm>
@@ -391,9 +555,9 @@ Here is the caller graph for this function:<para>
 </formalpara>
 </para>
 <para>
-Definition at line 39 of file adminwindow.cpp.</para>
+Definition at line 41 of file adminwindow.cpp.</para>
 <para>
-Referenced by AdminWindow(), clearCollegeData(), on_addSouvenir_released(), on_removeSouvenir_2_clicked(), on_removeSouvenir_released(), onAddColleges(), and onInitialise().</para>
+Referenced by AdminWindow(), clearCollegeData(), on_addMLB_clicked(), on_addSouvenir_released(), onAddColleges(), and onInitialise().</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -416,7 +580,7 @@ Here is the caller graph for this function:<para>
 <para>assigns DB to predefined PROJECT_PATH constant </para>
 </para>
 <para>
-Definition at line 115 of file adminwindow.h.</para>
+Definition at line 144 of file adminwindow.h.</para>
     </section><anchor xml:id="_class_admin_window_1a26cd0782e15716c24dd3567e75169fc0"/>    <section>
     <title>souve</title>
 <indexterm><primary>souve</primary><secondary>AdminWindow</secondary></indexterm>
@@ -426,7 +590,7 @@ Definition at line 115 of file adminwindow.h.</para>
 <para>string stores temp souv data </para>
 </para>
 <para>
-Definition at line 105 of file adminwindow.h.</para>
+Definition at line 134 of file adminwindow.h.</para>
     </section><anchor xml:id="_class_admin_window_1a3fa27571cf4952084a71a6fdc9b070b2"/>    <section>
     <title>ui</title>
 <indexterm><primary>ui</primary><secondary>AdminWindow</secondary></indexterm>
@@ -436,7 +600,7 @@ Definition at line 105 of file adminwindow.h.</para>
 <para>points to adminwindow UI </para>
 </para>
 <para>
-Definition at line 110 of file adminwindow.h.</para>
+Definition at line 139 of file adminwindow.h.</para>
 <para>
 Referenced by ~AdminWindow().</para>
 </section>

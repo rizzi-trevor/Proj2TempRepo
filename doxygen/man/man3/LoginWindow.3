@@ -1,20 +1,217 @@
-.TH "loginWindow" 3 "Mon Mar 23 2020" "Version 1" "CS1D - Project1 - College Touring" \" -*- nroff -*-
+.TH "LoginWindow" 3 "Mon May 11 2020" "Version 1" "CS1D - Project2 - Baseball" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-loginWindow \- class sets ui and manages execution for validating username and password  
-
+LoginWindow
 .SH SYNOPSIS
 .br
 .PP
 .PP
 \fC#include <loginwindow\&.h>\fP
+.PP
+Inherits QMainWindow\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBonPlanClick\fP ()"
+.br
+.RI "executes \fBtripPlanner\fP class obj "
+.ti -1c
+.RI "void \fBonLoginClick\fP ()"
+.br
+.RI "executes login sequence for user validates user and pass and usertype "
+.ti -1c
+.RI "void \fBonCreateClick\fP ()"
+.br
+.RI "executes createuser "
+.ti -1c
+.RI "void \fBonClearClick\fP ()"
+.br
+.RI "clears dialog "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLoginWindow\fP (QWidget *parent=nullptr)"
+.br
+.RI "default explicit Constructor "
+.ti -1c
+.RI "\fB~LoginWindow\fP ()"
+.br
+.RI "Destructor\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_Username_returnPressed\fP ()"
+.br
+.RI "execute onLoginClock "
+.ti -1c
+.RI "void \fBon_Password_returnPressed\fP ()"
+.br
+.RI "execute onLoginClock "
+.ti -1c
+.RI "void \fBon_loginButton_pressed\fP ()"
+.br
+.RI "execute onLoginClock "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::LoginWindow * \fBui\fP"
+.br
+.RI "points to loginwindow UI "
+.ti -1c
+.RI "\fBDbManager\fP \fBmyDb\fP = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')"
+.br
+.RI "assigns DB to predefined PROJECT_PATH constant "
+.ti -1c
+.RI "\fBAdminWindow\fP * \fBadmin\fP"
+.br
+.RI "pointer for instance of adminwindow for adminType "
+.in -1c
 .SH "Detailed Description"
 .PP 
-class sets ui and manages execution for validating username and password 
+Definition at line 28 of file loginwindow\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "LoginWindow::LoginWindow (QWidget * parent = \fCnullptr\fP)"
 
-\fBloginWindow\fP validates the credentials entered by the user, conncects to the database, and prompts the appropiate screen for the appropate user to execute after the user has been logged in and validated 
+.PP
+default explicit Constructor Constructor sets up ui for loginwindow creates a tripTable and verifies connection to database 
+.PP
+\fBParameters\fP
+.RS 4
+\fI*parent\fP - for QDialog 
+.RE
+.PP
+
+.PP
+Definition at line 5 of file loginwindow\&.cpp\&.
+.SS "LoginWindow::~LoginWindow ()"
+
+.PP
+Destructor\&. Close the loginwindow UI 
+.PP
+Definition at line 30 of file loginwindow\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void LoginWindow::on_loginButton_pressed ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+execute onLoginClock 
+.PP
+\fBReturns\fP
+.RS 4
+none-void 
+.RE
+.PP
+
+.PP
+Definition at line 125 of file loginwindow\&.cpp\&.
+.SS "void LoginWindow::on_Password_returnPressed ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+execute onLoginClock 
+.PP
+\fBReturns\fP
+.RS 4
+none-void 
+.RE
+.PP
+
+.PP
+Definition at line 115 of file loginwindow\&.cpp\&.
+.SS "void LoginWindow::on_Username_returnPressed ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+execute onLoginClock 
+.PP
+\fBReturns\fP
+.RS 4
+none-void 
+.RE
+.PP
+
+.PP
+Definition at line 120 of file loginwindow\&.cpp\&.
+.SS "void LoginWindow::onClearClick ()\fC [slot]\fP"
+
+.PP
+clears dialog 
+.PP
+\fBReturns\fP
+.RS 4
+none- void 
+.RE
+.PP
+
+.PP
+Definition at line 104 of file loginwindow\&.cpp\&.
+.SS "void LoginWindow::onCreateClick ()\fC [slot]\fP"
+
+.PP
+executes createuser 
+.PP
+\fBReturns\fP
+.RS 4
+none- void 
+.RE
+.PP
+
+.PP
+Definition at line 82 of file loginwindow\&.cpp\&.
+.SS "void LoginWindow::onLoginClick ()\fC [slot]\fP"
+
+.PP
+executes login sequence for user validates user and pass and usertype 
+.PP
+\fBReturns\fP
+.RS 4
+none- void 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file loginwindow\&.cpp\&.
+.SS "void LoginWindow::onPlanClick ()\fC [slot]\fP"
+
+.PP
+executes \fBtripPlanner\fP class obj 
+.PP
+\fBReturns\fP
+.RS 4
+none- void 
+.RE
+.PP
+
+.PP
+Definition at line 36 of file loginwindow\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBAdminWindow\fP* LoginWindow::admin\fC [private]\fP"
+
+.PP
+pointer for instance of adminwindow for adminType 
+.PP
+Definition at line 110 of file loginwindow\&.h\&.
+.SS "\fBDbManager\fP LoginWindow::myDb = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')\fC [private]\fP"
+
+.PP
+assigns DB to predefined PROJECT_PATH constant 
+.PP
+Definition at line 105 of file loginwindow\&.h\&.
+.SS "Ui::LoginWindow* LoginWindow::ui\fC [private]\fP"
+
+.PP
+points to loginwindow UI 
+.PP
+Definition at line 100 of file loginwindow\&.h\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for CS1D - Project1 - College Touring from the source code\&.
+Generated automatically by Doxygen for CS1D - Project2 - Baseball from the source code\&.

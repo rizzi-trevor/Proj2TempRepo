@@ -9,19 +9,6 @@
     <includedby refid="adminwindow_8cpp" local="yes">adminwindow.cpp</includedby>
     <includedby refid="loginwindow_8h" local="yes">loginwindow.h</includedby>
     <incdepgraph>
-      <node id="11">
-        <label>addsouvenir.h</label>
-        <link refid="addsouvenir_8h"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>QMainWindow</label>
-      </node>
       <node id="12">
         <label>confirmpage.h</label>
         <link refid="confirmpage_8h"/>
@@ -29,6 +16,9 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+      </node>
+      <node id="2">
+        <label>QMainWindow</label>
       </node>
       <node id="8">
         <label>QSqlDatabase</label>
@@ -38,12 +28,6 @@
       </node>
       <node id="6">
         <label>QDebug</label>
-      </node>
-      <node id="4">
-        <label>QAbstractItemModel</label>
-      </node>
-      <node id="9">
-        <label>QSqlQuery</label>
       </node>
       <node id="3">
         <label>dbmanager.h</label>
@@ -60,6 +44,22 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
+      </node>
+      <node id="11">
+        <label>addsouvenir.h</label>
+        <link refid="addsouvenir_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QAbstractItemModel</label>
+      </node>
+      <node id="9">
+        <label>QSqlQuery</label>
       </node>
       <node id="5">
         <label>QtSql</label>
@@ -81,17 +81,13 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="5">
-        <label>main.cpp</label>
-        <link refid="main_8cpp"/>
-      </node>
-      <node id="2">
-        <label>adminwindow.cpp</label>
-        <link refid="adminwindow_8cpp"/>
-      </node>
       <node id="4">
         <label>loginwindow.cpp</label>
         <link refid="loginwindow_8cpp"/>
+      </node>
+      <node id="5">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
       </node>
       <node id="3">
         <label>loginwindow.h</label>
@@ -102,6 +98,10 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+      </node>
+      <node id="2">
+        <label>adminwindow.cpp</label>
+        <link refid="adminwindow_8cpp"/>
       </node>
       <node id="1">
         <label>adminwindow.h</label>
@@ -136,41 +136,70 @@
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a0a68db6e97108a5b789d7b90dd962f76" kindref="member">AdminWindow</ref>(QWidget<sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1ad1eabd086ea9878c73481fffc7506321" kindref="member">updateCollegeTable</ref>();</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293" kindref="member">updateSouvenirTable</ref>();</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_admin_window_1ad31a734a759bfb65008b03e6bb9014d0" kindref="member">~AdminWindow</ref>();</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b" kindref="member">onInitialise</ref>();</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1adb75fb0689794491accb94c3bd9989be" kindref="member">clearCollegeData</ref>();</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1af609806ed07d37eedbfa96274c2cd86a" kindref="member">on_addSouvenir_released</ref>();</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1ab4bb07b30224270802c48b3666514a89" kindref="member">on_removeSouvenir_released</ref>();</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1abd378ec54897e75624563d579837ee40" kindref="member">onAddColleges</ref>();</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a3f70aadf219465d9683e9ca52a1472a5" kindref="member">on_souvenirView_clicked</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QModelIndex<sp/>&amp;index);</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49" kindref="member">on_removeSouvenir_2_clicked</ref>();</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1ac2d7d04600f0df63ad3fab0756567c01" kindref="member">on_pushButton_5_released</ref>();</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="105" refid="class_admin_window_1a26cd0782e15716c24dd3567e75169fc0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_admin_window_1a26cd0782e15716c24dd3567e75169fc0" kindref="member">souve</ref>;</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110" refid="class_admin_window_1a3fa27571cf4952084a71a6fdc9b070b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Ui::AdminWindow<sp/>*<ref refid="class_admin_window_1a3fa27571cf4952084a71a6fdc9b070b2" kindref="member">ui</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1ae7d7cfa69b98c1d127073e7f94041583" kindref="member">updateCombo</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a0a68db6e97108a5b789d7b90dd962f76" kindref="member">AdminWindow</ref>(QWidget<sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1ad1eabd086ea9878c73481fffc7506321" kindref="member">updateCollegeTable</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293" kindref="member">updateSouvenirTable</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_admin_window_1ad31a734a759bfb65008b03e6bb9014d0" kindref="member">~AdminWindow</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b" kindref="member">onInitialise</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1adb75fb0689794491accb94c3bd9989be" kindref="member">clearCollegeData</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1af609806ed07d37eedbfa96274c2cd86a" kindref="member">on_addSouvenir_released</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1ab4bb07b30224270802c48b3666514a89" kindref="member">on_removeSouvenir_released</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1abd378ec54897e75624563d579837ee40" kindref="member">onAddColleges</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a3f70aadf219465d9683e9ca52a1472a5" kindref="member">on_souvenirView_clicked</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QModelIndex<sp/>&amp;index);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49" kindref="member">on_removeSouvenir_2_clicked</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1ac2d7d04600f0df63ad3fab0756567c01" kindref="member">on_pushButton_5_released</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a2b20d726b1946fe54143de45f235a8b1" kindref="member">on_pushButton_2_clicked</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a2f4241f561a61338473a6a123c47198f" kindref="member">on_addMLB_clicked</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a2886deed312f15a0a2f39d108555210b" kindref="member">on_searchButton_clicked</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1aed0795bb41b78b99e1faf01e04950ea7" kindref="member">on_showALL_clicked</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1af005476020875d7573969c383180f16d" kindref="member">on_showStadiums_clicked</ref>();</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115" refid="class_admin_window_1a500f2c07a0c34aa491c7d75ba0c8e3e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_db_manager" kindref="compound">DbManager</ref><sp/><ref refid="class_admin_window_1a500f2c07a0c34aa491c7d75ba0c8e3e5" kindref="member">myDb</ref><sp/>=<sp/><ref refid="class_db_manager" kindref="compound">DbManager</ref>(PROJECT_PATH<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/college.db&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ADMINWINDOW_H</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1abc2b261e1b61062843d85644bacb7292" kindref="member">on_showStadiums_2_clicked</ref>();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1af3589241bd7a70aa5bbc5c42e31bf4de" kindref="member">on_pushButton_3_clicked</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a4cee509b1c69bd414a153d532380d8ee" kindref="member">on_pushButton_4_clicked</ref>();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1af31f8728eee0658d934c871182f1609c" kindref="member">on_pushButton_6_clicked</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1af4978d5e30b829abf4a401c580546587" kindref="member">souvTable</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1aacfea2bd7cc348782faf61b04b91fa1b" kindref="member">on_pushButton_7_clicked</ref>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1acd63087338f381acc3680c356013f634" kindref="member">on_souTable_clicked</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QModelIndex<sp/>&amp;index);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1a2a4734a78aac844065dc013433c3d872" kindref="member">on_pushButton_8_clicked</ref>();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_admin_window_1acc2ae27f04c9096aaa33227922d28346" kindref="member">on_updateButton_clicked</ref>();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="134" refid="class_admin_window_1a26cd0782e15716c24dd3567e75169fc0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_admin_window_1a26cd0782e15716c24dd3567e75169fc0" kindref="member">souve</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="class_admin_window_1a3fa27571cf4952084a71a6fdc9b070b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Ui::AdminWindow<sp/>*<ref refid="class_admin_window_1a3fa27571cf4952084a71a6fdc9b070b2" kindref="member">ui</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="class_admin_window_1a500f2c07a0c34aa491c7d75ba0c8e3e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_db_manager" kindref="compound">DbManager</ref><sp/><ref refid="class_admin_window_1a500f2c07a0c34aa491c7d75ba0c8e3e5" kindref="member">myDb</ref><sp/>=<sp/><ref refid="class_db_manager" kindref="compound">DbManager</ref>(PROJECT_PATH<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/college.db&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ADMINWINDOW_H</highlight></codeline>
     </programlisting>
     <location file="adminwindow.h"/>
   </compounddef>

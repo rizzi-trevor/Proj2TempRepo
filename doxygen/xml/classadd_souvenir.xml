@@ -113,7 +113,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="addsouvenir.h" line="41" column="10" bodyfile="addsouvenir.cpp" bodystart="40" bodyend="43"/>
-        <referencedby refid="class_admin_window_1af609806ed07d37eedbfa96274c2cd86a" compoundref="adminwindow_8cpp" startline="111" endline="119">AdminWindow::on_addSouvenir_released</referencedby>
+        <referencedby refid="class_admin_window_1af609806ed07d37eedbfa96274c2cd86a" compoundref="adminwindow_8cpp" startline="118" endline="126">AdminWindow::on_addSouvenir_released</referencedby>
+        <referencedby refid="class_admin_window_1aacfea2bd7cc348782faf61b04b91fa1b" compoundref="adminwindow_8cpp" startline="407" endline="415">AdminWindow::on_pushButton_7_clicked</referencedby>
       </memberdef>
       <memberdef kind="slot" id="classadd_souvenir_1ad1c3059a79d8df7f357d0a89927c54da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>

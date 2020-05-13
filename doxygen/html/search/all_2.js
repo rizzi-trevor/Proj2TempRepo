@@ -1,9 +1,27 @@
 var searchData=
 [
-  ['dbmanager_28',['DbManager',['../class_db_manager.html',1,'DbManager'],['../class_db_manager.html#a449b4cc451c4ec493345d799891e7eaa',1,'DbManager::DbManager()']]],
-  ['dbmanager_2ecpp_29',['dbmanager.cpp',['../dbmanager_8cpp.html',1,'']]],
-  ['dbmanager_2eh_30',['dbmanager.h',['../dbmanager_8h.html',1,'']]],
-  ['displaysouv_31',['displaySouv',['../classtripprogress.html#a7bfe8b49dc2f937e09808514087ae912',1,'tripprogress']]],
-  ['distance_32',['distance',['../classtrip_planner.html#a97602084ee12e0cc86907ffb9bb5bc68',1,'tripPlanner']]],
-  ['distanceto_33',['distanceTo',['../classtrip_planner.html#a34865f6c097f3ed90791e6a519b5c5d1',1,'tripPlanner']]]
+  ['calctotaldist_23',['calcTotalDist',['../classbfs.html#a2bd1017875301bdf7e083f767555146d',1,'bfs']]],
+  ['cartquantity_24',['cartQuantity',['../class_db_manager.html#ab139c436a07cbd611edd0d169962f5fa',1,'DbManager']]],
+  ['checboxchanged_25',['ChecboxChanged',['../classtrip_planner.html#a49b42218c58074af9c51e5cc72811147',1,'tripPlanner']]],
+  ['checkadmin_26',['checkAdmin',['../class_db_manager.html#a3ef6d1b5c19b8192420ba8743c7172ef',1,'DbManager']]],
+  ['checkboxvector_27',['checkBoxVector',['../classtrip_planner.html#ac59a255ea747293cedcf60e3817f7496',1,'tripPlanner']]],
+  ['cities_28',['cities',['../classgraph.html#a22d424297601a83c01d53271a92847bc',1,'graph']]],
+  ['citiesthislevel_29',['citiesThisLevel',['../classbfs.html#aa6023679bb3e4689ae46a42c751ef6a8',1,'bfs']]],
+  ['city_30',['city',['../struct_vertex.html#a66d0ac65926bb37beba729b440443022',1,'Vertex']]],
+  ['city1_31',['city1',['../structedge.html#ad3ff4de92b4ae1adab7c703aa4bfd5da',1,'edge']]],
+  ['city2_32',['city2',['../structedge.html#abdb7827827da29e9c1f150e4de314e73',1,'edge']]],
+  ['cityname_33',['cityName',['../structadj_list_vertex.html#adde1bbdeff332a82a3ed7e537b27c328',1,'adjListVertex']]],
+  ['clearcollegedata_34',['clearCollegeData',['../class_admin_window.html#adb75fb0689794491accb94c3bd9989be',1,'AdminWindow']]],
+  ['cleardb_35',['clearDb',['../class_db_manager.html#af9547f6dc3ad170a70c0ee4d89f714fc',1,'DbManager']]],
+  ['collegedoesexist_36',['collegeDoesExist',['../classtrip_planner.html#aae916f968748c5bca52525e298e27d6c',1,'tripPlanner']]],
+  ['confirmpage_37',['confirmPage',['../classconfirm_page.html',1,'confirmPage'],['../classconfirmpage.html',1,'confirmpage'],['../classconfirmpage.html#aa9d064a0417fb18b27e215178c654e1a',1,'confirmpage::confirmpage(QWidget *parent=nullptr)'],['../classconfirmpage.html#aab79592328400a263a72cdea47ef829a',1,'confirmpage::confirmpage(QWidget *parent, bool &amp;returnAnswer)']]],
+  ['confirmpage_2ecpp_38',['confirmpage.cpp',['../confirmpage_8cpp.html',1,'']]],
+  ['confirmpage_2eh_39',['confirmpage.h',['../confirmpage_8h.html',1,'']]],
+  ['convertteamnamestostadiumnames_40',['convertTeamNamesToStadiumNames',['../graphinfo_8h.html#a5f19f37e9dd3250d58c0121e516927c4',1,'convertTeamNamesToStadiumNames(QStringList teamsSelected):&#160;graphinfo.cpp'],['../graphinfo_8cpp.html#a5f19f37e9dd3250d58c0121e516927c4',1,'convertTeamNamesToStadiumNames(QStringList teamsSelected):&#160;graphinfo.cpp']]],
+  ['counter_41',['counter',['../classtripprogress.html#a3a728c8ec21f34eb9aca73c4c64fbd8c',1,'tripprogress']]],
+  ['createsouvtable_42',['createSouvTable',['../class_db_manager.html#a5f7bde3d8a96b46f7cf6c3186ea0f3a4',1,'DbManager']]],
+  ['createtriptable_43',['createTripTable',['../class_db_manager.html#a42e94ab2a5751c839a6d57221d3d4e99',1,'DbManager']]],
+  ['crossedges_44',['crossEdges',['../classbfs.html#a148cbd34c2c506bc4a7c1614b78cc062',1,'bfs']]],
+  ['currentcol_45',['currentCol',['../classtripprogress.html#a856d3a6267e275be3dfdcfb8ffe257a0',1,'tripprogress']]],
+  ['cs1d_2dproject1_2dcollege_2dtouring_46',['CS1D-Project1-College-Touring',['../md__r_e_a_d_m_e.html',1,'']]]
 ];

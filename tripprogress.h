@@ -92,6 +92,9 @@ public:
     */
     void prevTrip();
 
+    /**
+     * @brief Retreives teh distance to the next stadium from the database for display
+     */
     void getDistance();
 
     /**
@@ -126,6 +129,11 @@ public:
     void onPrevClick();
 
 private slots:
+
+    /**
+     * @brief Gets the data of the chosen cell in the table
+     * @param index - Cell click in the table
+     */
     void on_souvTable_clicked(const QModelIndex &index);
 
     /**
@@ -134,8 +142,14 @@ private slots:
     */
     void on_addCart_clicked();
 
+    /**
+     * @brief Checkout the cart to make a purchase
+     */
     void on_pushButton_4_released();
 
+    /**
+     * @brief Removes an item from the cart
+     */
     void on_removeCart_clicked();
 
 private:

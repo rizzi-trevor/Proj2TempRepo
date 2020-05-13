@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['loginwindow_135',['LoginWindow',['../class_login_window.html',1,'LoginWindow'],['../classlogin_window.html',1,'loginWindow']]]
+  ['dbmanager_268',['DbManager',['../class_db_manager.html',1,'']]],
+  ['dfsgraph_269',['dfsGraph',['../classdfs_graph.html',1,'']]]
 ];

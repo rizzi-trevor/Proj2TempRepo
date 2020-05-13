@@ -56,7 +56,17 @@ public:
     * @return void - none
     */
     void initSouvenirList(const QString &path);
+
+    /**
+     * @brief Initializes MLB stadium data from xlsx file at given path
+     * @param path
+     */
     void initMlbList(const QString &path);
+
+    /**
+     * @brief Initalizes the database storing distances between stadiums
+     * @param path
+     */
     void initStadiumList(const QString &path);
     /**
     * @brief initalizes sql data table for college distances and inputs all data from path parameter file location
@@ -153,6 +163,11 @@ public:
     * @return void - none
     */
     void addColleges(const QString &path);
+
+    /**
+     * @brief Reads MLB data from an xlsx file at the given path
+     * @param path
+     */
     void addMLB(const QString &path);
 
     /**
@@ -212,10 +227,21 @@ public:
     */
     bool tripIdExists(QString tripID);
 
+
+    /**
+     * @brief Creates tables in the database used in the trip planning process
+     */
     void createTripTable();
 
+    /**
+     * @brief Initializes a database table with standard souvenirs for each stadium
+     */
     void createSouvTable();
 
+    /**
+     * @brief Re opens the database
+     * @return
+     */
     bool reOpen();
 
 

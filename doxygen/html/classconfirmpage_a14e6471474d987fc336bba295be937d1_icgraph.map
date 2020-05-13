@@ -1,13 +1,14 @@
 <map id="confirmpage::getData" name="confirmpage::getData">
-<area shape="rect" id="node1" title="returns answer to calling function" alt="" coords="495,213,640,240"/>
-<area shape="rect" id="node2" href="$class_admin_window.html#adb75fb0689794491accb94c3bd9989be" title="clears database of data" alt="" coords="229,5,440,32"/>
-<area shape="rect" id="node3" href="$classtripprogress.html#a67309d76ccd8f5f0fff245e4663f4a56" title="calculates and displays next destination for student planned trip" alt="" coords="263,56,407,83"/>
-<area shape="rect" id="node6" href="$classtripprogress.html#ace30eef309fc1cb6ce4abaecf4472e1a" title=" " alt="" coords="242,107,427,149"/>
-<area shape="rect" id="node7" href="$classadd_souvenir.html#ad1c3059a79d8df7f357d0a89927c54da" title="executes process for adding a souvenir to database" alt="" coords="241,173,428,214"/>
-<area shape="rect" id="node8" href="$class_admin_window.html#a9da5cb0c07bdf0cb6d8f7d980ec33c49" title=" " alt="" coords="223,238,447,279"/>
-<area shape="rect" id="node9" href="$class_admin_window.html#ab4bb07b30224270802c48b3666514a89" title="deletes souvenir from data tables" alt="" coords="223,303,447,345"/>
-<area shape="rect" id="node10" href="$class_admin_window.html#abd378ec54897e75624563d579837ee40" title="adds college to connected database" alt="" coords="235,369,435,396"/>
-<area shape="rect" id="node11" href="$class_admin_window.html#a79ff9b05e6c99ca908f35e64877b2f8b" title="runs a verification of confirmPage, if verfied, initalizes distance, college, souvenir lists,..." alt="" coords="247,420,422,447"/>
+<area shape="rect" id="node1" title="returns answer to calling function" alt="" coords="481,245,627,272"/>
+<area shape="rect" id="node2" href="$class_admin_window.html#adb75fb0689794491accb94c3bd9989be" title="clears database of data" alt="" coords="223,5,433,32"/>
+<area shape="rect" id="node3" href="$classtripprogress.html#a67309d76ccd8f5f0fff245e4663f4a56" title="calculates and displays next destination for student planned trip" alt="" coords="256,56,400,83"/>
+<area shape="rect" id="node6" href="$class_admin_window.html#a2f4241f561a61338473a6a123c47198f" title=" " alt="" coords="237,107,419,149"/>
+<area shape="rect" id="node7" href="$classtripprogress.html#ace30eef309fc1cb6ce4abaecf4472e1a" title="Checkout the cart to make a purchase." alt="" coords="235,173,421,214"/>
+<area shape="rect" id="node8" href="$class_admin_window.html#a2a4734a78aac844065dc013433c3d872" title=" " alt="" coords="228,238,428,279"/>
+<area shape="rect" id="node9" href="$classadd_souvenir.html#ad1c3059a79d8df7f357d0a89927c54da" title="executes process for adding a souvenir to database" alt="" coords="235,303,421,345"/>
+<area shape="rect" id="node10" href="$class_admin_window.html#acc2ae27f04c9096aaa33227922d28346" title=" " alt="" coords="223,369,433,410"/>
+<area shape="rect" id="node11" href="$class_admin_window.html#abd378ec54897e75624563d579837ee40" title="adds college to connected database" alt="" coords="228,435,428,461"/>
+<area shape="rect" id="node12" href="$class_admin_window.html#a79ff9b05e6c99ca908f35e64877b2f8b" title="runs a verification of confirmPage, if verfied, initalizes distance, college, souvenir lists,..." alt="" coords="241,485,415,512"/>
 <area shape="rect" id="node4" href="$classtripprogress.html#af61ad9424ede3e9f90394c5870fc8ef6" title="initializes tripProgress on execution , binds tripID, updates size, and calculates nextTrip" alt="" coords="5,31,175,57"/>
 <area shape="rect" id="node5" href="$classtripprogress.html#a310e32e2a2054d98098d7744797dd7db" title="executes nextTrip();" alt="" coords="6,81,174,108"/>
 </map>

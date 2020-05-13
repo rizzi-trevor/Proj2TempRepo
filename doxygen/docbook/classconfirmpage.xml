@@ -150,7 +150,7 @@ Definition at line 16 of file confirmpage.cpp.</para>
 <para>
 References answer.</para>
 <para>
-Referenced by AdminWindow::clearCollegeData(), tripprogress::nextTrip(), tripprogress::on_pushButton_4_released(), addSouvenir::on_pushButton_released(), AdminWindow::on_removeSouvenir_2_clicked(), AdminWindow::on_removeSouvenir_released(), AdminWindow::onAddColleges(), and AdminWindow::onInitialise().</para>
+Referenced by AdminWindow::clearCollegeData(), tripprogress::nextTrip(), AdminWindow::on_addMLB_clicked(), tripprogress::on_pushButton_4_released(), AdminWindow::on_pushButton_8_clicked(), addSouvenir::on_pushButton_released(), AdminWindow::on_updateButton_clicked(), AdminWindow::onAddColleges(), and AdminWindow::onInitialise().</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -197,7 +197,7 @@ Definition at line 22 of file confirmpage.cpp.</para>
 <para>
 References answer.</para>
 <para>
-Referenced by AdminWindow::clearCollegeData(), tripprogress::nextTrip(), tripprogress::on_pushButton_4_released(), addSouvenir::on_pushButton_released(), AdminWindow::on_removeSouvenir_2_clicked(), AdminWindow::on_removeSouvenir_released(), AdminWindow::onAddColleges(), and AdminWindow::onInitialise().</para>
+Referenced by AdminWindow::clearCollegeData(), tripprogress::nextTrip(), AdminWindow::on_addMLB_clicked(), tripprogress::on_pushButton_4_released(), AdminWindow::on_pushButton_8_clicked(), addSouvenir::on_pushButton_released(), AdminWindow::on_updateButton_clicked(), AdminWindow::onAddColleges(), and AdminWindow::onInitialise().</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>

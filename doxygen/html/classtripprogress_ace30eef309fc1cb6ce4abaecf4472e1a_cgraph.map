@@ -1,5 +1,5 @@
 <map id="tripprogress::on_pushButton_4_released" name="tripprogress::on_pushButton_4_released">
-<area shape="rect" id="node1" title=" " alt="" coords="5,27,191,69"/>
+<area shape="rect" id="node1" title="Checkout the cart to make a purchase." alt="" coords="5,27,191,69"/>
 <area shape="rect" id="node2" href="$classconfirmpage.html#a14e6471474d987fc336bba295be937d1" title="returns answer to calling function" alt="" coords="253,5,398,32"/>
 <area shape="rect" id="node3" href="$classconfirmpage.html#a63d2524a9929f2ee215da9a0ae41b686" title="sets answer to true, hides ui" alt="" coords="239,57,412,98"/>
 </map>

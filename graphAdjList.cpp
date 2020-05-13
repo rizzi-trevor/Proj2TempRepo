@@ -1,23 +1,23 @@
 #include "graphAdjList.h"
 
 
-/// default constructor
-graphAdjList::graphAdjList() {
+graphAdjList::graphAdjList()
+{
     MSTDistance = 0;
 }
 
-/// destructor
-graphAdjList::~graphAdjList() {
+graphAdjList::~graphAdjList()
+{
 
 }
 
-/// check if the list is empty
-bool graphAdjList::empty() {
+bool graphAdjList::empty()
+{
     return graph.empty();
 }
 
-/// size of the list
-int graphAdjList::size() {
+int graphAdjList::size()
+{
     return graph.size();
 }
 
@@ -28,7 +28,8 @@ int graphAdjList::findVertex(string city)
     bool found = false;
 
     /// Finds the city that you're looking for
-    while(index < graph.size() && !found) {
+    while(index < graph.size() && !found)
+    {
         if(graph.at(index).cityName == city)
         {
             found = true;
@@ -46,7 +47,8 @@ int graphAdjList::findVertex(string city)
 void graphAdjList::insertVertex(string cityName)
 {
     /// Adds the vertex to the graph if it does not yet exist.
-    if(findVertex(cityName) == graph.size()) {
+    if(findVertex(cityName) == graph.size())
+    {
         adjListVertex newVertex;
 
         newVertex.cityName = cityName;
@@ -58,47 +60,53 @@ void graphAdjList::insertVertex(string cityName)
     }
 }
 
-/// insert the edges
+
 void graphAdjList::insertEdge(string startCity, string endCity, int weight) {
-    int index = findVertex(startCity);	/// finds the vertex
+    int index = findVertex(startCity);
 
-    /// if the index is the same as the city, add the edge
+
     if(index == graph.size()) {
-        insertVertex(startCity);					/// insert the vertex
+        insertVertex(startCity);
 
-        insertEdge(startCity, endCity, weight);		/// inserts the edge
+        insertEdge(startCity, endCity, weight);
     }
     else
     {
-        adjListEdge newEdge;								/// make a new edge
+        adjListEdge newEdge;
 
         newEdge.startCity = startCity;
         newEdge.endCity = endCity;
         newEdge.weight = weight;
 
-        graph.at(index).edgeList.push_back(newEdge);/// adds the new edge
+        graph.at(index).edgeList.push_back(newEdge);
     }
 }
 
-// vector of all vertices
+
+
 vector<string> graphAdjList::vertices()
 {
-    vector<string> cityNames; // name of cities
+    vector<string> cityNames;
 
     for(int i = 0; i < graph.size(); i++) {
-        cityNames.push_back(graph[i].cityName);	/// adds all the city names
+        cityNames.push_back(graph[i].cityName);
     }
 
     return cityNames;
 }
 
-// edges vector
-vector<string> graphAdjList::edges() {
-    vector<string> edgeList; /// vector of edges
 
-    for(int i = 0; i < graph.size(); i++) {				/// outputs the edges
-        if(graph.at(i).edgeList.size() != 0) {
-            for(int j = 0; j < graph.at(i).edgeList.size(); j++) {
+
+vector<string> graphAdjList::edges() {
+    vector<string> edgeList;
+
+
+    for(int i = 0; i < graph.size(); i++)
+    {
+        if(graph.at(i).edgeList.size() != 0)
+        {
+            for(int j = 0; j < graph.at(i).edgeList.size(); j++)
+            {
                 edgeList.push_back("(" + graph.at(i).edgeList.at(j).startCity + ", "
                                        + graph.at(i).edgeList.at(j).endCity + ")");
             }
@@ -108,14 +116,16 @@ vector<string> graphAdjList::edges() {
     return edgeList;
 }
 
-/// returns how many are visited
-int graphAdjList::verticesVisited() {
+int graphAdjList::verticesVisited()
+{
     int visits = 0;
 
     vector<adjListVertex>::iterator graphIt = graph.begin();
 
-    while(graphIt != graph.end()) {
-        if(graphIt->visited) {
+    while(graphIt != graph.end())
+    {
+        if(graphIt->visited)
+        {
             visits++;
         }
         graphIt++;
@@ -124,11 +134,10 @@ int graphAdjList::verticesVisited() {
     return visits;
 }
 
-/// edges discovered
 int graphAdjList::edgesDiscovered(int currentVertex) {
-    int visits = 0; // edges discovered
+    int visits = 0;
 
-    /// counts how many edges discovered
+
     for(int i = 0; i < graph.at(currentVertex).edgeList.size(); i++)
     {
         if(graph.at(findVertex(graph.at(currentVertex).edgeList.at(i).endCity)).visited)
@@ -140,14 +149,18 @@ int graphAdjList::edgesDiscovered(int currentVertex) {
     return visits;
 }
 
-/// Dijkstra
+
 void graphAdjList::shortestPathsDijkstra(string startingCity, vector<string> &insertGraph,
-                                         int costs[], int parent[]) {
-    if(verticesVisited() == graph.size()) {
-        for (int i=0; i<graph.size(); i++) {
+                                         int costs[], int parent[])
+{
+    if(verticesVisited() == graph.size())
+    {
+        for (int i=0; i < graph.size(); i++)
+        {
             graph[i].visited = false;
 
-            for (int j=0; j< graph.at(i).edgeList.size(); j++) {
+            for (int j=0; j < graph.at(i).edgeList.size(); j++)
+            {
                 graph[i].edgeList[j].discEdge = false;
             }
         }
@@ -167,13 +180,14 @@ void graphAdjList::shortestPathsDijkstra(string startingCity, vector<string> &in
     }
 }
 
-vector<string> graphAdjList::returnPath(string startCity,
-                                        string endCity, int parent[]) {
-    vector<string> path;				// path (start to end)
+vector<string> graphAdjList::returnPath(string startCity, string endCity, int parent[])
+{
+    vector<string> path;
 
-    int vertex = findVertex(endCity);	// find vertex of endCity
+    int vertex = findVertex(endCity);
 
-    while(parent[vertex] != -1) {
+    while(parent[vertex] != -1)
+    {
         path.push_back(graph[vertex].cityName);
         vertex = parent[vertex];
     }
@@ -185,13 +199,16 @@ vector<string> graphAdjList::returnPath(string startCity,
     return path;
 }
 
-/// Prim-Jarnik MST
-int graphAdjList::primJarnikMST(string startingCity, vector<string> &MST) {
-    if(verticesVisited() == size()) {
-        for (int i=0; i<graph.size(); i++) {
+int graphAdjList::primJarnikMST(string startingCity, vector<string> &MST)
+{
+    if(verticesVisited() == size())
+    {
+        for (int i=0; i<graph.size(); i++)
+        {
             graph[i].visited = false;
 
-            for (int j=0; j< graph.at(i).edgeList.size(); j++) {
+            for (int j=0; j< graph.at(i).edgeList.size(); j++)
+            {
                 graph[i].edgeList[j].discEdge = false;
             }
         }
@@ -205,7 +222,8 @@ int graphAdjList::primJarnikMST(string startingCity, vector<string> &MST) {
 
     MST.push_back(startingCity);
 
-    if(MST.size() != size()) {
+    if(MST.size() != size())
+    {
         int nextVertex = smallestEdgeMST(MST);
         primJarnikMST(graph.at(nextVertex).cityName, MST);
     }
@@ -216,7 +234,8 @@ int graphAdjList::primJarnikMST(string startingCity, vector<string> &MST) {
 /// finds the closest vertex
 void graphAdjList::findClosest(vector<string> &T, int costs[], int parent[])
 {
-    if(T.size() == 1) {
+    if(T.size() == 1)
+    {
         int frontVer = findVertex(T.front());
 
         int nextVer = smallestEdge(frontVer);
@@ -228,7 +247,8 @@ void graphAdjList::findClosest(vector<string> &T, int costs[], int parent[])
 
         T.push_back(graph[nextVer].cityName);
     }
-    else {
+    else
+    {
         int smallID = 0;
         int comparatorID = smallID + 1;
 
@@ -237,15 +257,19 @@ void graphAdjList::findClosest(vector<string> &T, int costs[], int parent[])
 
         int size = T.size();
 
-        while(comparatorID < size) {
+        while(comparatorID < size)
+        {
             int smallVer = findVertex(T[smallID]);
             int compVer = findVertex(T[comparatorID]);
 
-            if(graph[smallVer].edgeList.size() == edgesDiscovered(smallVer)) {
+            if(graph[smallVer].edgeList.size() == edgesDiscovered(smallVer))
+            {
                 smallID++;
             }
-            else {
-                if(graph[compVer].edgeList.size() != edgesDiscovered(compVer)) {
+            else
+            {
+                if(graph[compVer].edgeList.size() != edgesDiscovered(compVer))
+                {
                     smallDistance = distanceBetween(smallVer, smallestEdge(smallVer))
                                 + distanceFromStart(graph[smallVer].cityName, costs,
                                                     parent);
@@ -254,7 +278,8 @@ void graphAdjList::findClosest(vector<string> &T, int costs[], int parent[])
                                 + distanceFromStart(graph[compVer].cityName, costs,
                                                     parent);
 
-                    if(smallDistance > comparatorDistance) {
+                    if(smallDistance > comparatorDistance)
+                    {
                         smallID = comparatorID;
                         smallDistance = comparatorDistance;
                     }
@@ -274,14 +299,15 @@ void graphAdjList::findClosest(vector<string> &T, int costs[], int parent[])
     }
 }
 
-/// distance from city
+
 int graphAdjList::distanceFromStart(string city, int costs[], int parent[])
 {
     int distance = 0;
 
     int vertex = findVertex(city);
 
-    while(costs[vertex] != 0) {
+    while(costs[vertex] != 0)
+    {
         distance += distanceBetween(vertex, parent[vertex]);
         vertex = parent[vertex];
     }
@@ -289,8 +315,8 @@ int graphAdjList::distanceFromStart(string city, int costs[], int parent[])
     return distance;
 }
 
-/// smallest edge for MST
-int graphAdjList::smallestEdgeMST(vector<string> &MST) {
+int graphAdjList::smallestEdgeMST(vector<string> &MST)
+{
     if(MST.size() == 1) {
         int smallestVertex = smallestEdge(findVertex(MST.front()));
 
@@ -302,7 +328,8 @@ int graphAdjList::smallestEdgeMST(vector<string> &MST) {
 
         return smallestEdge(findVertex(MST.front()));
     }
-    else {
+    else
+    {
         int smallID = 0;
         int compId = smallID + 1;
 
@@ -312,14 +339,17 @@ int graphAdjList::smallestEdgeMST(vector<string> &MST) {
             int smallVer = findVertex(MST[smallID]);
             int compVer = findVertex(MST[compId]);
 
-            if(graph[smallVer].edgeList.size() == edgesDiscovered(smallVer)) {
+            if(graph[smallVer].edgeList.size() == edgesDiscovered(smallVer))
+            {
                 smallID++;
             }
             else {
-                if(graph[compVer].edgeList.size() != edgesDiscovered(compVer)) {
+                if(graph[compVer].edgeList.size() != edgesDiscovered(compVer))
+                {
                     int smallDist = distanceBetween(smallVer, smallestEdge(smallVer));
                     int compDist =  distanceBetween(compVer, smallestEdge(compVer));
-                    if(smallDist > compDist) {
+                    if(smallDist > compDist)
+                    {
                         smallID = compId;
                     }
                 }
@@ -344,8 +374,8 @@ int graphAdjList::smallestEdgeMST(vector<string> &MST) {
     }
 }
 
-/// smallest edge
-int graphAdjList::smallestEdge(int vertex) {
+int graphAdjList::smallestEdge(int vertex)
+{
     int smallestIndex = 0;
 
     int compIndex = smallestIndex + 1;
@@ -375,7 +405,6 @@ int graphAdjList::smallestEdge(int vertex) {
     return smallestIndex;
 }
 
-/// distance between the two cities
 int graphAdjList::distanceBetween(int city1, int city2) {
     int i = 0;
 

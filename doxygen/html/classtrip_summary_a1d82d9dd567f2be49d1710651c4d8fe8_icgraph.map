@@ -1,4 +1,4 @@
 <map id="tripSummary::updateTotalDistance" name="tripSummary::updateTotalDistance">
-<area shape="rect" id="node1" title=" " alt="" coords="232,22,403,63"/>
+<area shape="rect" id="node1" title="updates the total distance of the trip" alt="" coords="232,22,403,63"/>
 <area shape="rect" id="node2" href="$classtrip_summary.html#a990accf373da48ade41def873014fdf6" title="explicit Constructor" alt="" coords="5,29,184,56"/>
 </map>

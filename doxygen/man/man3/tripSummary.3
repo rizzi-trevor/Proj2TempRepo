@@ -1,4 +1,4 @@
-.TH "tripSummary" 3 "Mon Mar 23 2020" "Version 1" "CS1D - Project1 - College Touring" \" -*- nroff -*-
+.TH "tripSummary" 3 "Mon May 11 2020" "Version 1" "CS1D - Project2 - Baseball" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -41,15 +41,19 @@ Inherits QDialog\&.
 .ti -1c
 .RI "void \fBupdateSchoolComboBox\fP ()"
 .br
+.RI "updates the combo box with the stadiums on the trip "
 .ti -1c
 .RI "void \fBupdateTotalDistance\fP ()"
 .br
+.RI "updates the total distance of the trip "
 .ti -1c
 .RI "void \fBupdateSchoolTotal\fP ()"
 .br
+.RI "updates the total of the currently selected stadium from the combo box "
 .ti -1c
 .RI "void \fBupdateTripTotal\fP ()"
 .br
+.RI "updates the total of the entire trip "
 .in -1c
 .SS "Private Attributes"
 
@@ -137,17 +141,23 @@ Referenced by tripprogress::nextTrip()\&.
 .SS "void tripSummary::updateSchoolComboBox ()\fC [private]\fP, \fC [slot]\fP"
 
 .PP
+updates the combo box with the stadiums on the trip 
+.PP
 Definition at line 83 of file tripsummary\&.cpp\&.
 .PP
 Referenced by tripSummary()\&.
 .SS "void tripSummary::updateSchoolTotal ()\fC [private]\fP, \fC [slot]\fP"
 
 .PP
+updates the total of the currently selected stadium from the combo box 
+.PP
 Definition at line 128 of file tripsummary\&.cpp\&.
 .PP
 Referenced by on_school_comboBox_currentIndexChanged()\&.
 .SS "void tripSummary::updateTotalDistance ()\fC [private]\fP, \fC [slot]\fP"
 
+.PP
+updates the total distance of the trip 
 .PP
 Definition at line 104 of file tripsummary\&.cpp\&.
 .PP
@@ -170,6 +180,8 @@ Referenced by tripSummary()\&.
 .SS "void tripSummary::updateTripTotal ()\fC [private]\fP, \fC [slot]\fP"
 
 .PP
+updates the total of the entire trip 
+.PP
 Definition at line 153 of file tripsummary\&.cpp\&.
 .PP
 Referenced by tripSummary()\&.
@@ -180,20 +192,20 @@ Referenced by tripSummary()\&.
 .PP
 assigns DB to predefined PROJECT_PATH constant 
 .PP
-Definition at line 88 of file tripsummary\&.h\&.
+Definition at line 100 of file tripsummary\&.h\&.
 .SS "QString tripSummary::tripID\fC [private]\fP"
 
 .PP
-Definition at line 90 of file tripsummary\&.h\&.
+Definition at line 102 of file tripsummary\&.h\&.
 .SS "Ui::tripSummary* tripSummary::ui\fC [private]\fP"
 
 .PP
 points to \fBtripSummary\fP UI 
 .PP
-Definition at line 83 of file tripsummary\&.h\&.
+Definition at line 95 of file tripsummary\&.h\&.
 .PP
 Referenced by ~tripSummary()\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for CS1D - Project1 - College Touring from the source code\&.
+Generated automatically by Doxygen for CS1D - Project2 - Baseball from the source code\&.

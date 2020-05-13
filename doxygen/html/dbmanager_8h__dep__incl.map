@@ -1,17 +1,19 @@
 <map id="dbmanager.h" name="dbmanager.h">
-<area shape="rect" id="node1" title=" " alt="" coords="286,5,383,32"/>
-<area shape="rect" id="node2" href="$addsouvenir_8h.html" title=" " alt="" coords="85,80,187,107"/>
-<area shape="rect" id="node4" href="$adminwindow_8h.html" title=" " alt="" coords="73,229,183,256"/>
-<area shape="rect" id="node6" href="$loginwindow_8h.html" title=" " alt="" coords="177,304,279,331"/>
-<area shape="rect" id="node7" href="$loginwindow_8cpp.html" title=" " alt="" coords="305,379,421,405"/>
-<area shape="rect" id="node9" href="$tripplanner_8h.html" title=" " alt="" coords="279,229,372,256"/>
-<area shape="rect" id="node11" href="$tripsummary_8h.html" title=" " alt="" coords="342,80,447,107"/>
-<area shape="rect" id="node12" href="$tripprogress_8h.html" title=" " alt="" coords="507,155,608,181"/>
-<area shape="rect" id="node15" href="$dbmanager_8cpp.html" title=" " alt="" coords="683,80,794,107"/>
-<area shape="rect" id="node3" href="$addsouvenir_8cpp.html" title=" " alt="" coords="21,155,136,181"/>
-<area shape="rect" id="node5" href="$adminwindow_8cpp.html" title=" " alt="" coords="57,379,181,405"/>
-<area shape="rect" id="node8" href="$main_8cpp.html" title=" " alt="" coords="205,379,280,405"/>
-<area shape="rect" id="node10" href="$tripplanner_8cpp.html" title=" " alt="" coords="363,304,469,331"/>
-<area shape="rect" id="node14" href="$tripsummary_8cpp.html" title=" " alt="" coords="363,155,482,181"/>
-<area shape="rect" id="node13" href="$tripprogress_8cpp.html" title=" " alt="" coords="493,229,608,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="343,5,440,32"/>
+<area shape="rect" id="node2" href="$addsouvenir_8h.html" title=" " alt="" coords="90,80,192,107"/>
+<area shape="rect" id="node4" href="$adminwindow_8h.html" title=" " alt="" coords="80,229,191,256"/>
+<area shape="rect" id="node6" href="$loginwindow_8h.html" title=" " alt="" coords="192,304,295,331"/>
+<area shape="rect" id="node7" href="$loginwindow_8cpp.html" title=" " alt="" coords="543,379,659,405"/>
+<area shape="rect" id="node9" href="$graphinfo_8h.html" title=" " alt="" coords="349,80,434,107"/>
+<area shape="rect" id="node10" href="$tripplanner_8h.html" title=" " alt="" coords="406,229,500,256"/>
+<area shape="rect" id="node13" href="$tripsummary_8h.html" title=" " alt="" coords="486,80,591,107"/>
+<area shape="rect" id="node14" href="$tripprogress_8h.html" title=" " alt="" coords="685,155,786,181"/>
+<area shape="rect" id="node17" href="$dbmanager_8cpp.html" title=" " alt="" coords="862,80,972,107"/>
+<area shape="rect" id="node3" href="$addsouvenir_8cpp.html" title=" " alt="" coords="26,155,141,181"/>
+<area shape="rect" id="node5" href="$adminwindow_8cpp.html" title=" " alt="" coords="74,379,198,405"/>
+<area shape="rect" id="node8" href="$main_8cpp.html" title=" " alt="" coords="222,379,297,405"/>
+<area shape="rect" id="node12" href="$graphinfo_8cpp.html" title=" " alt="" coords="317,155,416,181"/>
+<area shape="rect" id="node11" href="$tripplanner_8cpp.html" title=" " alt="" coords="400,304,506,331"/>
+<area shape="rect" id="node16" href="$tripsummary_8cpp.html" title=" " alt="" coords="542,155,660,181"/>
+<area shape="rect" id="node15" href="$tripprogress_8cpp.html" title=" " alt="" coords="672,229,786,256"/>
 </map>

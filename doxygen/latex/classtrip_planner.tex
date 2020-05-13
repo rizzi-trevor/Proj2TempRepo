@@ -2,11 +2,6 @@
 \label{classtrip_planner}\index{tripPlanner@{tripPlanner}}
 
 
-class recusively planning (calculating) the most efficient trip, manages data tables, checks if data is valid, and begins inital processes of planning a trip  
-
-
-
-
 {\ttfamily \#include $<$tripplanner.\+h$>$}
 
 
@@ -16,7 +11,7 @@ Inheritance diagram for trip\+Planner\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=196pt]{classtrip_planner__inherit__graph}
+\includegraphics[height=550pt]{classtrip_planner__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -29,6 +24,41 @@ Collaboration diagram for trip\+Planner\+:
 \includegraphics[height=550pt]{classtrip_planner__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtrip_planner_a24b9b27b96d5d792686509f2b587c448}{on\+Typology\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Displays stadiums by ballpark topology in M\+LB information tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_aeeb41ff97a66d8c7ec7907918705e874}{on\+American\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Displays stadiums in the American League in M\+LB information tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a75efb6412d9b4d20ab290686b87c2d11}{on\+Show\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Displays all stadiums in M\+LB information tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_ae24d81aa09309953e0775a7145046174}{on\+National\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Displays stadiums in the National League in M\+LB information tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a470452828b5e03f5ae522d4db6af3d4a}{on\+Stadiums\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Displays teams and stadiums sorted by stadium name in M\+LB information tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a94a58a8b06c55ea7ec3084460856ae47}{on\+Team\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Displays teams and stadiums sorted by team name in M\+LB information tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a084ff8f733394876cf7cd348fa2fecdc}{on\+Search\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Displays team that matches searched team name in M\+LB information tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a518edc426240d374733308865238e449}{on\+Roof\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Displays stadiums by roof type in M\+LB information tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a7990e0365cda4745426a55fb26d1257b}{on\+Date\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Displays stadiums by creation year in M\+LB information tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a1d57483bec85dd872d5ae255c821d8c4}{on\+Seating\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Displays stadiums by number of seats in M\+LB information tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a938624c1a1c2ae0d0d8b7d3b57403a1d}{on\+Great\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Displays stadiums by largest distance field in M\+LB information tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a7387395271abc89080e2acf77b6be958}{on\+Least\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Displays stadiums by shortest distance field in M\+LB information tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a09ff51f12d0e4eece8f5fd2db9017d38}{initialize\+List}} ()
+\begin{DoxyCompactList}\small\item\em Initalizes checkbox list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a41bad123ae9fe695f0142baee4517e82}{on\+Plan\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Plans trip path requires a valid trip\+ID entered uses the algorithm function to determine path through stadiums requires a valid starting stadium. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a092f4088c35dcf30eebebb7b7a0f6644}{on\+Graph\+Info\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Opens a dialogue displaying the B\+FS, D\+FS, and M\+ST distances of the stadium graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a326ee7d2d74b05c09f164b0bffd763ae}{on\+Start\+Trip}} ()
+\begin{DoxyCompactList}\small\item\em Initiates the start of the trip requires valid trip plan and ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,34 +66,28 @@ Collaboration diagram for trip\+Planner\+:
 \begin{DoxyCompactList}\small\item\em default explicit Constructor \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classtrip_planner_adf0269ba1adf0967b99b524572753371}{$\sim$trip\+Planner}} ()
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtrip_planner_a09ff51f12d0e4eece8f5fd2db9017d38}{initialize\+List}} ()
-\begin{DoxyCompactList}\small\item\em initalizes list of colleges and their distances from start colleges, as well as the UI for selecting and pushing colleges via check\+Box\+Vector \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtrip_planner_a4d03f6e0f7b127bbc9e8d49b756891c6}{selected\+College\+List}} ()
-\begin{DoxyCompactList}\small\item\em stores and displays list of user/student selected colleges for current trip in progress/planned \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtrip_planner_a76da0bd6a537c328a8f7b7d0b8a5c7c3}{plan\+Algorithm}} (Q\+String start, int dist)
-\begin{DoxyCompactList}\small\item\em method that calculates most efficient route between all selected colleges, from start to finish \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classtrip_planner_aae916f968748c5bca52525e298e27d6c}{college\+Does\+Exist}} (Q\+String col\+Name)
-\begin{DoxyCompactList}\small\item\em method that checks whether college in sql col exists \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classtrip_planner_a2b7a2f1f4418737c5a0d9d40616de033}{plan\+Does\+Exist}} (Q\+String col\+Name)
-\begin{DoxyCompactList}\small\item\em method that checks whether plan in sql col exists \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtrip_planner_af0aa45427afac7ce03d47edb8eaaf04e}{update\+College\+Table}} (Q\+String start)
-\begin{DoxyCompactList}\small\item\em updates sql table with college data, with trip starting and ending colleges with their distances \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtrip_planner_a8ab9722a483480aa6ddf51a2a90e13c0}{update\+Souv\+Table}} (Q\+String start)
-\begin{DoxyCompactList}\small\item\em updates sql table with souvenir data, with prices, quantity, souvenier name, and associated college \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtrip_planner_afa3d43939dff604fe0efa70618d9d75c}{show\+Trip}} (Q\+String ID)
-\begin{DoxyCompactList}\small\item\em updates sql table with trip\+ID data and displays/updates trip data table \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classtrip_planner_a83f8c209f19db50a76b7ff24eb7527bc}{update\+Combo}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Updates combo box in M\+LB information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_adcabaf282aa097a5f2f6b8a326df8c46}{update\+Dist\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Updates the table in the Distances tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a5ce520f9de46b775e0c4b6ddaa9db765}{update\+M\+L\+B\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Updates the table in the M\+LB information tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a4d03f6e0f7b127bbc9e8d49b756891c6}{selected\+College\+List}} ()
+\begin{DoxyCompactList}\small\item\em Creates the checkbox list of stadiums. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtrip_planner_aae916f968748c5bca52525e298e27d6c}{college\+Does\+Exist}} (Q\+String col\+Name)
+\begin{DoxyCompactList}\small\item\em Checks if a stadium name exists. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtrip_planner_a2b7a2f1f4418737c5a0d9d40616de033}{plan\+Does\+Exist}} (Q\+String col\+Name)
+\begin{DoxyCompactList}\small\item\em Checks if the given trip ID already exists. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_afa3d43939dff604fe0efa70618d9d75c}{show\+Trip}} (Q\+String ID)
+\begin{DoxyCompactList}\small\item\em Displays the trip order of the stadiums. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_a0995eab75003d7dce53d41210439331b}{update\+Combo\+Two}} ()
+\begin{DoxyCompactList}\small\item\em Updates teh combo box for available stadiums. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtrip_planner_aed59a1963a1acaf7434dfccfa1b33cd8}{algorithm}} ()
+\begin{DoxyCompactList}\small\item\em Trip planning algorithm using dijkstra. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classtrip_planner_a49b42218c58074af9c51e5cc72811147}{Checbox\+Changed}} ()
-\begin{DoxyCompactList}\small\item\em manages and updates checkbox for user selected colleges \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtrip_planner_a41bad123ae9fe695f0142baee4517e82}{on\+Plan\+Click}} ()
-\begin{DoxyCompactList}\small\item\em displays user input and manages initliazation of planning college trips, distances. Calls plan\+Algorithim show\+Trip, and updates all tables \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtrip_planner_ada9cb769efac5b9bfb321e88b1a02b36}{on\+Display\+Click}} ()
-\begin{DoxyCompactList}\small\item\em updates and displays souv and college tables \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtrip_planner_ae89f2d2671f765b8ae4e6701f682046c}{on\+Start\+Click}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -72,28 +96,34 @@ Ui\+::trip\+Planner $\ast$ \mbox{\hyperlink{classtrip_planner_a5426d7d7375464a71
 \begin{DoxyCompactList}\small\item\em points to \mbox{\hyperlink{classtrip_planner}{trip\+Planner}} UI \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_db_manager}{Db\+Manager}} \mbox{\hyperlink{classtrip_planner_ac3011789615ebab31141a9ad9a642dc5}{my\+Db}} = \mbox{\hyperlink{class_db_manager}{Db\+Manager}}(P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH + \char`\"{}/college.\+db\char`\"{})
 \begin{DoxyCompactList}\small\item\em assigns DB to predefined P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH constant \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtripprogress}{tripprogress}} $\ast$ \mbox{\hyperlink{classtrip_planner_a0d904628227e4c833391fc5cb7d187b4}{progress}}
+\item 
 Q\+Vector$<$ Q\+Check\+Box $\ast$ $>$ \mbox{\hyperlink{classtrip_planner_ac59a255ea747293cedcf60e3817f7496}{check\+Box\+Vector}}
-\begin{DoxyCompactList}\small\item\em vector for managing user selecting colleges via checkbox \end{DoxyCompactList}\item 
+\item 
 Q\+String\+List \mbox{\hyperlink{classtrip_planner_a1884c3bf6bb1b09119c7670e1c5ae395}{selected\+Colleges}}
-\begin{DoxyCompactList}\small\item\em a string to hold the selected colleges -\/ should be helpful for the plan trip algorithm \end{DoxyCompactList}\item 
+\item 
 Q\+String\+List \mbox{\hyperlink{classtrip_planner_ab0953b84602b02cebcdf722294f6d4de}{planned\+Colleges}}
-\begin{DoxyCompactList}\small\item\em a string to hold the planned colleges -\/ should be helpful for the plan trip algorithm \end{DoxyCompactList}\item 
+\item 
 int \mbox{\hyperlink{classtrip_planner_a97602084ee12e0cc86907ffb9bb5bc68}{distance}}
-\begin{DoxyCompactList}\small\item\em field member holding distance \end{DoxyCompactList}\item 
+\item 
 Q\+String \mbox{\hyperlink{classtrip_planner_a9d8d4e58496c284dabe31279407f5ce3}{id}}
-\begin{DoxyCompactList}\small\item\em field member holding trip\+ID \end{DoxyCompactList}\item 
+\item 
 Q\+List$<$ int $>$ \mbox{\hyperlink{classtrip_planner_a34865f6c097f3ed90791e6a519b5c5d1}{distance\+To}}
 \item 
-\mbox{\hyperlink{classtripprogress}{tripprogress}} $\ast$ \mbox{\hyperlink{classtrip_planner_a0d904628227e4c833391fc5cb7d187b4}{progress}}
+\mbox{\hyperlink{classgraph_info}{graph\+Info}} $\ast$ \mbox{\hyperlink{classtrip_planner_a86be86f61460b03958343b5b4c526bfc}{info}}
+\item 
+vector$<$ Q\+String $>$ \mbox{\hyperlink{classtrip_planner_a4b0222c2b26509a2f209f3614c64c1f0}{path}}
+\item 
+vector$<$ Q\+String $>$ \mbox{\hyperlink{classtrip_planner_a0e51a2079e2a5f6f15c2380a281e267a}{remaining\+Choices}}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{classtrip_planner_a252f150f6c4e48fa426e0e00064e6223}{dist\+Next}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-class recusively planning (calculating) the most efficient trip, manages data tables, checks if data is valid, and begins inital processes of planning a trip 
 
-\mbox{\hyperlink{classtrip_planner}{trip\+Planner}} manages the calculations for creating the most efficient trip for the student this updates all data tables for colleges, their names and specific data values, and souveniers, with their respectives data values 
 
-Definition at line 30 of file tripplanner.\+h.
+Definition at line 16 of file tripplanner.\+h.
 
 
 
@@ -115,11 +145,11 @@ Constructor sets up ui for \mbox{\hyperlink{classtrip_planner}{trip\+Planner}} a
 \end{DoxyParams}
 
 
-Definition at line 6 of file tripplanner.\+cpp.
+Definition at line 7 of file tripplanner.\+cpp.
 
 
 
-References initialize\+List(), and update\+Combo().
+References initialize\+List(), update\+Combo(), update\+Combo\+Two(), update\+Dist\+Table(), and update\+M\+L\+B\+Table().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -141,7 +171,7 @@ Destructor.
 
 Close the \mbox{\hyperlink{classtrip_planner}{trip\+Planner}} UI 
 
-Definition at line 16 of file tripplanner.\+cpp.
+Definition at line 21 of file tripplanner.\+cpp.
 
 
 
@@ -150,6 +180,44 @@ References ui.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtrip_planner_aed59a1963a1acaf7434dfccfa1b33cd8}\label{classtrip_planner_aed59a1963a1acaf7434dfccfa1b33cd8}} 
+\index{tripPlanner@{tripPlanner}!algorithm@{algorithm}}
+\index{algorithm@{algorithm}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{algorithm()}{algorithm()}}
+{\footnotesize\ttfamily void trip\+Planner\+::algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Trip planning algorithm using dijkstra. 
+
+
+
+Definition at line 627 of file tripplanner.\+cpp.
+
+
+
+References algorithm().
+
+
+
+Referenced by algorithm(), and on\+Plan\+Click().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classtrip_planner_aed59a1963a1acaf7434dfccfa1b33cd8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classtrip_planner_aed59a1963a1acaf7434dfccfa1b33cd8_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classtrip_planner_a49b42218c58074af9c51e5cc72811147}\label{classtrip_planner_a49b42218c58074af9c51e5cc72811147}} 
 \index{tripPlanner@{tripPlanner}!ChecboxChanged@{ChecboxChanged}}
 \index{ChecboxChanged@{ChecboxChanged}!tripPlanner@{tripPlanner}}
@@ -158,14 +226,7 @@ References ui.
 
 
 
-manages and updates checkbox for user selected colleges 
-
-\begin{DoxyReturn}{Returns}
-none-\/ void 
-\end{DoxyReturn}
-
-
-Definition at line 81 of file tripplanner.\+cpp.
+Definition at line 406 of file tripplanner.\+cpp.
 
 \mbox{\Hypertarget{classtrip_planner_aae916f968748c5bca52525e298e27d6c}\label{classtrip_planner_aae916f968748c5bca52525e298e27d6c}} 
 \index{tripPlanner@{tripPlanner}!collegeDoesExist@{collegeDoesExist}}
@@ -175,36 +236,25 @@ Definition at line 81 of file tripplanner.\+cpp.
 
 
 
-method that checks whether college in sql col exists 
-
-\begin{DoxyReturn}{Returns}
-bool -\/ true or false(whether data exists) 
-\end{DoxyReturn}
-
-\begin{DoxyParams}{Parameters}
-{\em colname} & -\/ college col to be checked \\
-\hline
-\end{DoxyParams}
+Checks if a stadium name exists. 
 
 
-Definition at line 241 of file tripplanner.\+cpp.
+
+Definition at line 547 of file tripplanner.\+cpp.
 
 \mbox{\Hypertarget{classtrip_planner_a09ff51f12d0e4eece8f5fd2db9017d38}\label{classtrip_planner_a09ff51f12d0e4eece8f5fd2db9017d38}} 
 \index{tripPlanner@{tripPlanner}!initializeList@{initializeList}}
 \index{initializeList@{initializeList}!tripPlanner@{tripPlanner}}
-\doxysubsubsection{\texorpdfstring{initializeList()}{initializeList()}}
-{\footnotesize\ttfamily void trip\+Planner\+::initialize\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{initializeList}{initializeList}}
+{\footnotesize\ttfamily void trip\+Planner\+::initialize\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
 
-initalizes list of colleges and their distances from start colleges, as well as the UI for selecting and pushing colleges via check\+Box\+Vector 
-
-\begin{DoxyReturn}{Returns}
-nothing -\/ void 
-\end{DoxyReturn}
+Initalizes checkbox list. 
 
 
-Definition at line 42 of file tripplanner.\+cpp.
+
+Definition at line 367 of file tripplanner.\+cpp.
 
 
 
@@ -218,43 +268,119 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{classtrip_planner_a09ff51f12d0e4eece8f5fd2db9017d38_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classtrip_planner_ada9cb769efac5b9bfb321e88b1a02b36}\label{classtrip_planner_ada9cb769efac5b9bfb321e88b1a02b36}} 
-\index{tripPlanner@{tripPlanner}!onDisplayClick@{onDisplayClick}}
-\index{onDisplayClick@{onDisplayClick}!tripPlanner@{tripPlanner}}
-\doxysubsubsection{\texorpdfstring{onDisplayClick}{onDisplayClick}}
-{\footnotesize\ttfamily void trip\+Planner\+::on\+Display\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+\mbox{\Hypertarget{classtrip_planner_aeeb41ff97a66d8c7ec7907918705e874}\label{classtrip_planner_aeeb41ff97a66d8c7ec7907918705e874}} 
+\index{tripPlanner@{tripPlanner}!onAmericanClick@{onAmericanClick}}
+\index{onAmericanClick@{onAmericanClick}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{onAmericanClick}{onAmericanClick}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+American\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
 
-updates and displays souv and college tables 
-
-\begin{DoxyReturn}{Returns}
-none-\/ void 
-\end{DoxyReturn}
+Displays stadiums in the American League in M\+LB information tab. 
 
 
-Definition at line 335 of file tripplanner.\+cpp.
+
+Definition at line 51 of file tripplanner.\+cpp.
+
+\mbox{\Hypertarget{classtrip_planner_a7990e0365cda4745426a55fb26d1257b}\label{classtrip_planner_a7990e0365cda4745426a55fb26d1257b}} 
+\index{tripPlanner@{tripPlanner}!onDateClick@{onDateClick}}
+\index{onDateClick@{onDateClick}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{onDateClick}{onDateClick}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+Date\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Displays stadiums by creation year in M\+LB information tab. 
+
+
+
+Definition at line 277 of file tripplanner.\+cpp.
+
+\mbox{\Hypertarget{classtrip_planner_a092f4088c35dcf30eebebb7b7a0f6644}\label{classtrip_planner_a092f4088c35dcf30eebebb7b7a0f6644}} 
+\index{tripPlanner@{tripPlanner}!onGraphInfoClick@{onGraphInfoClick}}
+\index{onGraphInfoClick@{onGraphInfoClick}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{onGraphInfoClick}{onGraphInfoClick}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+Graph\+Info\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Opens a dialogue displaying the B\+FS, D\+FS, and M\+ST distances of the stadium graph. 
+
+
+
+Definition at line 618 of file tripplanner.\+cpp.
+
+
+
+References info, and graph\+Info\+::on\+Close\+Click().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtrip_planner_a092f4088c35dcf30eebebb7b7a0f6644_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtrip_planner_a938624c1a1c2ae0d0d8b7d3b57403a1d}\label{classtrip_planner_a938624c1a1c2ae0d0d8b7d3b57403a1d}} 
+\index{tripPlanner@{tripPlanner}!onGreatClick@{onGreatClick}}
+\index{onGreatClick@{onGreatClick}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{onGreatClick}{onGreatClick}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+Great\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Displays stadiums by largest distance field in M\+LB information tab. 
+
+
+
+Definition at line 321 of file tripplanner.\+cpp.
+
+\mbox{\Hypertarget{classtrip_planner_a7387395271abc89080e2acf77b6be958}\label{classtrip_planner_a7387395271abc89080e2acf77b6be958}} 
+\index{tripPlanner@{tripPlanner}!onLeastClick@{onLeastClick}}
+\index{onLeastClick@{onLeastClick}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{onLeastClick}{onLeastClick}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+Least\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Displays stadiums by shortest distance field in M\+LB information tab. 
+
+
+
+Definition at line 344 of file tripplanner.\+cpp.
+
+\mbox{\Hypertarget{classtrip_planner_ae24d81aa09309953e0775a7145046174}\label{classtrip_planner_ae24d81aa09309953e0775a7145046174}} 
+\index{tripPlanner@{tripPlanner}!onNationalClick@{onNationalClick}}
+\index{onNationalClick@{onNationalClick}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{onNationalClick}{onNationalClick}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+National\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Displays stadiums in the National League in M\+LB information tab. 
+
+
+
+Definition at line 98 of file tripplanner.\+cpp.
 
 \mbox{\Hypertarget{classtrip_planner_a41bad123ae9fe695f0142baee4517e82}\label{classtrip_planner_a41bad123ae9fe695f0142baee4517e82}} 
 \index{tripPlanner@{tripPlanner}!onPlanClick@{onPlanClick}}
 \index{onPlanClick@{onPlanClick}!tripPlanner@{tripPlanner}}
 \doxysubsubsection{\texorpdfstring{onPlanClick}{onPlanClick}}
-{\footnotesize\ttfamily void trip\+Planner\+::on\+Plan\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+Plan\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
 
-displays user input and manages initliazation of planning college trips, distances. Calls plan\+Algorithim show\+Trip, and updates all tables 
-
-\begin{DoxyReturn}{Returns}
-none-\/ void 
-\end{DoxyReturn}
-
-
-Definition at line 147 of file tripplanner.\+cpp.
+Plans trip path requires a valid trip\+ID entered uses the algorithm function to determine path through stadiums requires a valid starting stadium. 
 
 
 
-References distance, and selected\+College\+List().
+Definition at line 472 of file tripplanner.\+cpp.
+
+
+
+References algorithm(), distance, and selected\+College\+List().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -264,51 +390,117 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{classtrip_planner_a41bad123ae9fe695f0142baee4517e82_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classtrip_planner_ae89f2d2671f765b8ae4e6701f682046c}\label{classtrip_planner_ae89f2d2671f765b8ae4e6701f682046c}} 
-\index{tripPlanner@{tripPlanner}!onStartClick@{onStartClick}}
-\index{onStartClick@{onStartClick}!tripPlanner@{tripPlanner}}
-\doxysubsubsection{\texorpdfstring{onStartClick}{onStartClick}}
-{\footnotesize\ttfamily void trip\+Planner\+::on\+Start\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+\mbox{\Hypertarget{classtrip_planner_a518edc426240d374733308865238e449}\label{classtrip_planner_a518edc426240d374733308865238e449}} 
+\index{tripPlanner@{tripPlanner}!onRoofClick@{onRoofClick}}
+\index{onRoofClick@{onRoofClick}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{onRoofClick}{onRoofClick}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+Roof\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
 
-Definition at line 346 of file tripplanner.\+cpp.
+Displays stadiums by roof type in M\+LB information tab. 
 
 
 
-References tripprogress\+::on\+\_\+souv\+Table\+\_\+clicked().
+Definition at line 254 of file tripplanner.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classtrip_planner_ae89f2d2671f765b8ae4e6701f682046c_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classtrip_planner_a76da0bd6a537c328a8f7b7d0b8a5c7c3}\label{classtrip_planner_a76da0bd6a537c328a8f7b7d0b8a5c7c3}} 
-\index{tripPlanner@{tripPlanner}!planAlgorithm@{planAlgorithm}}
-\index{planAlgorithm@{planAlgorithm}!tripPlanner@{tripPlanner}}
-\doxysubsubsection{\texorpdfstring{planAlgorithm()}{planAlgorithm()}}
-{\footnotesize\ttfamily void trip\+Planner\+::plan\+Algorithm (\begin{DoxyParamCaption}\item[{Q\+String}]{start,  }\item[{int}]{dist }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classtrip_planner_a084ff8f733394876cf7cd348fa2fecdc}\label{classtrip_planner_a084ff8f733394876cf7cd348fa2fecdc}} 
+\index{tripPlanner@{tripPlanner}!onSearchClick@{onSearchClick}}
+\index{onSearchClick@{onSearchClick}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{onSearchClick}{onSearchClick}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+Search\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
 
-method that calculates most efficient route between all selected colleges, from start to finish 
-
-\begin{DoxyReturn}{Returns}
-nothing -\/ void 
-\end{DoxyReturn}
-
-\begin{DoxyParams}{Parameters}
-{\em start} & -\/ starting destination \\
-\hline
-{\em dist} & -\/ stores distance between destination for recursive \\
-\hline
-\end{DoxyParams}
+Displays team that matches searched team name in M\+LB information tab. 
 
 
-Definition at line 201 of file tripplanner.\+cpp.
+
+Definition at line 227 of file tripplanner.\+cpp.
+
+\mbox{\Hypertarget{classtrip_planner_a1d57483bec85dd872d5ae255c821d8c4}\label{classtrip_planner_a1d57483bec85dd872d5ae255c821d8c4}} 
+\index{tripPlanner@{tripPlanner}!onSeatingClick@{onSeatingClick}}
+\index{onSeatingClick@{onSeatingClick}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{onSeatingClick}{onSeatingClick}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+Seating\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Displays stadiums by number of seats in M\+LB information tab. 
+
+
+
+Definition at line 298 of file tripplanner.\+cpp.
+
+\mbox{\Hypertarget{classtrip_planner_a75efb6412d9b4d20ab290686b87c2d11}\label{classtrip_planner_a75efb6412d9b4d20ab290686b87c2d11}} 
+\index{tripPlanner@{tripPlanner}!onShowClick@{onShowClick}}
+\index{onShowClick@{onShowClick}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{onShowClick}{onShowClick}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+Show\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Displays all stadiums in M\+LB information tab. 
+
+
+
+Definition at line 76 of file tripplanner.\+cpp.
+
+\mbox{\Hypertarget{classtrip_planner_a470452828b5e03f5ae522d4db6af3d4a}\label{classtrip_planner_a470452828b5e03f5ae522d4db6af3d4a}} 
+\index{tripPlanner@{tripPlanner}!onStadiumsClick@{onStadiumsClick}}
+\index{onStadiumsClick@{onStadiumsClick}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{onStadiumsClick}{onStadiumsClick}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+Stadiums\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Displays teams and stadiums sorted by stadium name in M\+LB information tab. 
+
+
+
+Definition at line 124 of file tripplanner.\+cpp.
+
+\mbox{\Hypertarget{classtrip_planner_a326ee7d2d74b05c09f164b0bffd763ae}\label{classtrip_planner_a326ee7d2d74b05c09f164b0bffd763ae}} 
+\index{tripPlanner@{tripPlanner}!onStartTrip@{onStartTrip}}
+\index{onStartTrip@{onStartTrip}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{onStartTrip}{onStartTrip}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+Start\+Trip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Initiates the start of the trip requires valid trip plan and ID. 
+
+
+
+Definition at line 666 of file tripplanner.\+cpp.
+
+\mbox{\Hypertarget{classtrip_planner_a94a58a8b06c55ea7ec3084460856ae47}\label{classtrip_planner_a94a58a8b06c55ea7ec3084460856ae47}} 
+\index{tripPlanner@{tripPlanner}!onTeamClick@{onTeamClick}}
+\index{onTeamClick@{onTeamClick}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{onTeamClick}{onTeamClick}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+Team\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Displays teams and stadiums sorted by team name in M\+LB information tab. 
+
+
+
+Definition at line 145 of file tripplanner.\+cpp.
+
+\mbox{\Hypertarget{classtrip_planner_a24b9b27b96d5d792686509f2b587c448}\label{classtrip_planner_a24b9b27b96d5d792686509f2b587c448}} 
+\index{tripPlanner@{tripPlanner}!onTypologyClick@{onTypologyClick}}
+\index{onTypologyClick@{onTypologyClick}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{onTypologyClick}{onTypologyClick}}
+{\footnotesize\ttfamily void trip\+Planner\+::on\+Typology\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Displays stadiums by ballpark topology in M\+LB information tab. 
+
+
+
+Definition at line 26 of file tripplanner.\+cpp.
 
 \mbox{\Hypertarget{classtrip_planner_a2b7a2f1f4418737c5a0d9d40616de033}\label{classtrip_planner_a2b7a2f1f4418737c5a0d9d40616de033}} 
 \index{tripPlanner@{tripPlanner}!planDoesExist@{planDoesExist}}
@@ -318,19 +510,11 @@ Definition at line 201 of file tripplanner.\+cpp.
 
 
 
-method that checks whether plan in sql col exists 
-
-\begin{DoxyReturn}{Returns}
-bool -\/ true or false(whether data exists) 
-\end{DoxyReturn}
-
-\begin{DoxyParams}{Parameters}
-{\em colname} & -\/ plan col to be checked \\
-\hline
-\end{DoxyParams}
+Checks if the given trip ID already exists. 
 
 
-Definition at line 254 of file tripplanner.\+cpp.
+
+Definition at line 561 of file tripplanner.\+cpp.
 
 \mbox{\Hypertarget{classtrip_planner_a4d03f6e0f7b127bbc9e8d49b756891c6}\label{classtrip_planner_a4d03f6e0f7b127bbc9e8d49b756891c6}} 
 \index{tripPlanner@{tripPlanner}!selectedCollegeList@{selectedCollegeList}}
@@ -340,14 +524,11 @@ Definition at line 254 of file tripplanner.\+cpp.
 
 
 
-stores and displays list of user/student selected colleges for current trip in progress/planned 
-
-\begin{DoxyReturn}{Returns}
-nothing -\/ void 
-\end{DoxyReturn}
+Creates the checkbox list of stadiums. 
 
 
-Definition at line 116 of file tripplanner.\+cpp.
+
+Definition at line 442 of file tripplanner.\+cpp.
 
 
 
@@ -369,41 +550,11 @@ Here is the caller graph for this function\+:
 
 
 
-updates sql table with trip\+ID data and displays/updates trip data table 
-
-
-\begin{DoxyParams}{Parameters}
-{\em ID} & -\/ trip\+ID \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-none-\/ void 
-\end{DoxyReturn}
-
-
-Definition at line 312 of file tripplanner.\+cpp.
-
-\mbox{\Hypertarget{classtrip_planner_af0aa45427afac7ce03d47edb8eaaf04e}\label{classtrip_planner_af0aa45427afac7ce03d47edb8eaaf04e}} 
-\index{tripPlanner@{tripPlanner}!updateCollegeTable@{updateCollegeTable}}
-\index{updateCollegeTable@{updateCollegeTable}!tripPlanner@{tripPlanner}}
-\doxysubsubsection{\texorpdfstring{updateCollegeTable()}{updateCollegeTable()}}
-{\footnotesize\ttfamily void trip\+Planner\+::update\+College\+Table (\begin{DoxyParamCaption}\item[{Q\+String}]{start }\end{DoxyParamCaption})}
+Displays the trip order of the stadiums. 
 
 
 
-updates sql table with college data, with trip starting and ending colleges with their distances 
-
-
-\begin{DoxyParams}{Parameters}
-{\em start,starting} & college for trip \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-none-\/ void 
-\end{DoxyReturn}
-
-
-Definition at line 267 of file tripplanner.\+cpp.
+Definition at line 574 of file tripplanner.\+cpp.
 
 \mbox{\Hypertarget{classtrip_planner_a83f8c209f19db50a76b7ff24eb7527bc}\label{classtrip_planner_a83f8c209f19db50a76b7ff24eb7527bc}} 
 \index{tripPlanner@{tripPlanner}!updateCombo@{updateCombo}}
@@ -413,7 +564,11 @@ Definition at line 267 of file tripplanner.\+cpp.
 
 
 
-Definition at line 21 of file tripplanner.\+cpp.
+Updates combo box in M\+LB information. 
+
+
+
+Definition at line 166 of file tripplanner.\+cpp.
 
 
 
@@ -427,28 +582,84 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{classtrip_planner_a83f8c209f19db50a76b7ff24eb7527bc_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classtrip_planner_a8ab9722a483480aa6ddf51a2a90e13c0}\label{classtrip_planner_a8ab9722a483480aa6ddf51a2a90e13c0}} 
-\index{tripPlanner@{tripPlanner}!updateSouvTable@{updateSouvTable}}
-\index{updateSouvTable@{updateSouvTable}!tripPlanner@{tripPlanner}}
-\doxysubsubsection{\texorpdfstring{updateSouvTable()}{updateSouvTable()}}
-{\footnotesize\ttfamily void trip\+Planner\+::update\+Souv\+Table (\begin{DoxyParamCaption}\item[{Q\+String}]{start }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classtrip_planner_a0995eab75003d7dce53d41210439331b}\label{classtrip_planner_a0995eab75003d7dce53d41210439331b}} 
+\index{tripPlanner@{tripPlanner}!updateComboTwo@{updateComboTwo}}
+\index{updateComboTwo@{updateComboTwo}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{updateComboTwo()}{updateComboTwo()}}
+{\footnotesize\ttfamily void trip\+Planner\+::update\+Combo\+Two (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-updates sql table with souvenir data, with prices, quantity, souvenier name, and associated college 
+Updates teh combo box for available stadiums. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em start,starting} & college for trip \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-none-\/ void 
-\end{DoxyReturn}
+
+Definition at line 598 of file tripplanner.\+cpp.
 
 
-Definition at line 288 of file tripplanner.\+cpp.
 
+Referenced by trip\+Planner().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtrip_planner_a0995eab75003d7dce53d41210439331b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtrip_planner_adcabaf282aa097a5f2f6b8a326df8c46}\label{classtrip_planner_adcabaf282aa097a5f2f6b8a326df8c46}} 
+\index{tripPlanner@{tripPlanner}!updateDistTable@{updateDistTable}}
+\index{updateDistTable@{updateDistTable}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{updateDistTable()}{updateDistTable()}}
+{\footnotesize\ttfamily void trip\+Planner\+::update\+Dist\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the table in the Distances tab. 
+
+
+
+Definition at line 187 of file tripplanner.\+cpp.
+
+
+
+Referenced by trip\+Planner().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtrip_planner_adcabaf282aa097a5f2f6b8a326df8c46_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtrip_planner_a5ce520f9de46b775e0c4b6ddaa9db765}\label{classtrip_planner_a5ce520f9de46b775e0c4b6ddaa9db765}} 
+\index{tripPlanner@{tripPlanner}!updateMLBTable@{updateMLBTable}}
+\index{updateMLBTable@{updateMLBTable}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{updateMLBTable()}{updateMLBTable()}}
+{\footnotesize\ttfamily void trip\+Planner\+::update\+M\+L\+B\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the table in the M\+LB information tab. 
+
+
+
+Definition at line 206 of file tripplanner.\+cpp.
+
+
+
+Referenced by trip\+Planner().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtrip_planner_a5ce520f9de46b775e0c4b6ddaa9db765_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}
@@ -460,11 +671,7 @@ Definition at line 288 of file tripplanner.\+cpp.
 
 
 
-vector for managing user selecting colleges via checkbox 
-
-
-
-Definition at line 143 of file tripplanner.\+h.
+Definition at line 203 of file tripplanner.\+h.
 
 \mbox{\Hypertarget{classtrip_planner_a97602084ee12e0cc86907ffb9bb5bc68}\label{classtrip_planner_a97602084ee12e0cc86907ffb9bb5bc68}} 
 \index{tripPlanner@{tripPlanner}!distance@{distance}}
@@ -474,11 +681,7 @@ Definition at line 143 of file tripplanner.\+h.
 
 
 
-field member holding distance 
-
-
-
-Definition at line 158 of file tripplanner.\+h.
+Definition at line 208 of file tripplanner.\+h.
 
 
 
@@ -492,7 +695,17 @@ Referenced by on\+Plan\+Click().
 
 
 
-Definition at line 165 of file tripplanner.\+h.
+Definition at line 212 of file tripplanner.\+h.
+
+\mbox{\Hypertarget{classtrip_planner_a252f150f6c4e48fa426e0e00064e6223}\label{classtrip_planner_a252f150f6c4e48fa426e0e00064e6223}} 
+\index{tripPlanner@{tripPlanner}!distNext@{distNext}}
+\index{distNext@{distNext}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{distNext}{distNext}}
+{\footnotesize\ttfamily vector$<$int$>$ trip\+Planner\+::dist\+Next\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 220 of file tripplanner.\+h.
 
 \mbox{\Hypertarget{classtrip_planner_a9d8d4e58496c284dabe31279407f5ce3}\label{classtrip_planner_a9d8d4e58496c284dabe31279407f5ce3}} 
 \index{tripPlanner@{tripPlanner}!id@{id}}
@@ -502,11 +715,21 @@ Definition at line 165 of file tripplanner.\+h.
 
 
 
-field member holding trip\+ID 
+Definition at line 210 of file tripplanner.\+h.
+
+\mbox{\Hypertarget{classtrip_planner_a86be86f61460b03958343b5b4c526bfc}\label{classtrip_planner_a86be86f61460b03958343b5b4c526bfc}} 
+\index{tripPlanner@{tripPlanner}!info@{info}}
+\index{info@{info}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{info}{info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgraph_info}{graph\+Info}}$\ast$ trip\+Planner\+::info\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line 163 of file tripplanner.\+h.
+Definition at line 214 of file tripplanner.\+h.
+
+
+
+Referenced by on\+Graph\+Info\+Click().
 
 \mbox{\Hypertarget{classtrip_planner_ac3011789615ebab31141a9ad9a642dc5}\label{classtrip_planner_ac3011789615ebab31141a9ad9a642dc5}} 
 \index{tripPlanner@{tripPlanner}!myDb@{myDb}}
@@ -520,7 +743,17 @@ assigns DB to predefined P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH constant
 
 
 
-Definition at line 138 of file tripplanner.\+h.
+Definition at line 199 of file tripplanner.\+h.
+
+\mbox{\Hypertarget{classtrip_planner_a4b0222c2b26509a2f209f3614c64c1f0}\label{classtrip_planner_a4b0222c2b26509a2f209f3614c64c1f0}} 
+\index{tripPlanner@{tripPlanner}!path@{path}}
+\index{path@{path}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily vector$<$Q\+String$>$ trip\+Planner\+::path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 216 of file tripplanner.\+h.
 
 \mbox{\Hypertarget{classtrip_planner_ab0953b84602b02cebcdf722294f6d4de}\label{classtrip_planner_ab0953b84602b02cebcdf722294f6d4de}} 
 \index{tripPlanner@{tripPlanner}!plannedColleges@{plannedColleges}}
@@ -530,11 +763,7 @@ Definition at line 138 of file tripplanner.\+h.
 
 
 
-a string to hold the planned colleges -\/ should be helpful for the plan trip algorithm 
-
-
-
-Definition at line 153 of file tripplanner.\+h.
+Definition at line 207 of file tripplanner.\+h.
 
 \mbox{\Hypertarget{classtrip_planner_a0d904628227e4c833391fc5cb7d187b4}\label{classtrip_planner_a0d904628227e4c833391fc5cb7d187b4}} 
 \index{tripPlanner@{tripPlanner}!progress@{progress}}
@@ -544,7 +773,17 @@ Definition at line 153 of file tripplanner.\+h.
 
 
 
-Definition at line 167 of file tripplanner.\+h.
+Definition at line 201 of file tripplanner.\+h.
+
+\mbox{\Hypertarget{classtrip_planner_a0e51a2079e2a5f6f15c2380a281e267a}\label{classtrip_planner_a0e51a2079e2a5f6f15c2380a281e267a}} 
+\index{tripPlanner@{tripPlanner}!remainingChoices@{remainingChoices}}
+\index{remainingChoices@{remainingChoices}!tripPlanner@{tripPlanner}}
+\doxysubsubsection{\texorpdfstring{remainingChoices}{remainingChoices}}
+{\footnotesize\ttfamily vector$<$Q\+String$>$ trip\+Planner\+::remaining\+Choices\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 218 of file tripplanner.\+h.
 
 \mbox{\Hypertarget{classtrip_planner_a1884c3bf6bb1b09119c7670e1c5ae395}\label{classtrip_planner_a1884c3bf6bb1b09119c7670e1c5ae395}} 
 \index{tripPlanner@{tripPlanner}!selectedColleges@{selectedColleges}}
@@ -554,11 +793,7 @@ Definition at line 167 of file tripplanner.\+h.
 
 
 
-a string to hold the selected colleges -\/ should be helpful for the plan trip algorithm 
-
-
-
-Definition at line 148 of file tripplanner.\+h.
+Definition at line 205 of file tripplanner.\+h.
 
 \mbox{\Hypertarget{classtrip_planner_a5426d7d7375464a717292faf1f3138aa}\label{classtrip_planner_a5426d7d7375464a717292faf1f3138aa}} 
 \index{tripPlanner@{tripPlanner}!ui@{ui}}
@@ -572,7 +807,7 @@ points to \mbox{\hyperlink{classtrip_planner}{trip\+Planner}} UI
 
 
 
-Definition at line 133 of file tripplanner.\+h.
+Definition at line 193 of file tripplanner.\+h.
 
 
 

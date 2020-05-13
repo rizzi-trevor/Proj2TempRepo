@@ -123,14 +123,15 @@
         </inbodydescription>
         <location file="confirmpage.h" line="49" column="10" bodyfile="confirmpage.cpp" bodystart="16" bodyend="20"/>
         <references refid="classconfirmpage_1a2cd5a13aaedf11aab6f14eedebaf17c3" compoundref="confirmpage_8h" startline="72">answer</references>
-        <referencedby refid="class_admin_window_1adb75fb0689794491accb94c3bd9989be" compoundref="adminwindow_8cpp" startline="88" endline="109">AdminWindow::clearCollegeData</referencedby>
-        <referencedby refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" compoundref="tripprogress_8cpp" startline="68" endline="130">tripprogress::nextTrip</referencedby>
-        <referencedby refid="classtripprogress_1ace30eef309fc1cb6ce4abaecf4472e1a" compoundref="tripprogress_8cpp" startline="322" endline="336">tripprogress::on_pushButton_4_released</referencedby>
+        <referencedby refid="class_admin_window_1adb75fb0689794491accb94c3bd9989be" compoundref="adminwindow_8cpp" startline="95" endline="116">AdminWindow::clearCollegeData</referencedby>
+        <referencedby refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" compoundref="tripprogress_8cpp" startline="80" endline="153">tripprogress::nextTrip</referencedby>
+        <referencedby refid="class_admin_window_1a2f4241f561a61338473a6a123c47198f" compoundref="adminwindow_8cpp" startline="181" endline="202">AdminWindow::on_addMLB_clicked</referencedby>
+        <referencedby refid="classtripprogress_1ace30eef309fc1cb6ce4abaecf4472e1a" compoundref="tripprogress_8cpp" startline="346" endline="361">tripprogress::on_pushButton_4_released</referencedby>
+        <referencedby refid="class_admin_window_1a2a4734a78aac844065dc013433c3d872" compoundref="adminwindow_8cpp" startline="443" endline="489">AdminWindow::on_pushButton_8_clicked</referencedby>
         <referencedby refid="classadd_souvenir_1ad1c3059a79d8df7f357d0a89927c54da" compoundref="addsouvenir_8cpp" startline="45" endline="80">addSouvenir::on_pushButton_released</referencedby>
-        <referencedby refid="class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49" compoundref="adminwindow_8cpp" startline="204" endline="248">AdminWindow::on_removeSouvenir_2_clicked</referencedby>
-        <referencedby refid="class_admin_window_1ab4bb07b30224270802c48b3666514a89" compoundref="adminwindow_8cpp" startline="121" endline="159">AdminWindow::on_removeSouvenir_released</referencedby>
-        <referencedby refid="class_admin_window_1abd378ec54897e75624563d579837ee40" compoundref="adminwindow_8cpp" startline="161" endline="181">AdminWindow::onAddColleges</referencedby>
-        <referencedby refid="class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b" compoundref="adminwindow_8cpp" startline="59" endline="86">AdminWindow::onInitialise</referencedby>
+        <referencedby refid="class_admin_window_1acc2ae27f04c9096aaa33227922d28346" compoundref="adminwindow_8cpp" startline="491" endline="536">AdminWindow::on_updateButton_clicked</referencedby>
+        <referencedby refid="class_admin_window_1abd378ec54897e75624563d579837ee40" compoundref="adminwindow_8cpp" startline="133" endline="154">AdminWindow::onAddColleges</referencedby>
+        <referencedby refid="class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b" compoundref="adminwindow_8cpp" startline="62" endline="93">AdminWindow::onInitialise</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-slot">
@@ -151,14 +152,15 @@
         </inbodydescription>
         <location file="confirmpage.h" line="56" column="10" bodyfile="confirmpage.cpp" bodystart="22" bodyend="26"/>
         <references refid="classconfirmpage_1a2cd5a13aaedf11aab6f14eedebaf17c3" compoundref="confirmpage_8h" startline="72">answer</references>
-        <referencedby refid="class_admin_window_1adb75fb0689794491accb94c3bd9989be" compoundref="adminwindow_8cpp" startline="88" endline="109">AdminWindow::clearCollegeData</referencedby>
-        <referencedby refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" compoundref="tripprogress_8cpp" startline="68" endline="130">tripprogress::nextTrip</referencedby>
-        <referencedby refid="classtripprogress_1ace30eef309fc1cb6ce4abaecf4472e1a" compoundref="tripprogress_8cpp" startline="322" endline="336">tripprogress::on_pushButton_4_released</referencedby>
+        <referencedby refid="class_admin_window_1adb75fb0689794491accb94c3bd9989be" compoundref="adminwindow_8cpp" startline="95" endline="116">AdminWindow::clearCollegeData</referencedby>
+        <referencedby refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" compoundref="tripprogress_8cpp" startline="80" endline="153">tripprogress::nextTrip</referencedby>
+        <referencedby refid="class_admin_window_1a2f4241f561a61338473a6a123c47198f" compoundref="adminwindow_8cpp" startline="181" endline="202">AdminWindow::on_addMLB_clicked</referencedby>
+        <referencedby refid="classtripprogress_1ace30eef309fc1cb6ce4abaecf4472e1a" compoundref="tripprogress_8cpp" startline="346" endline="361">tripprogress::on_pushButton_4_released</referencedby>
+        <referencedby refid="class_admin_window_1a2a4734a78aac844065dc013433c3d872" compoundref="adminwindow_8cpp" startline="443" endline="489">AdminWindow::on_pushButton_8_clicked</referencedby>
         <referencedby refid="classadd_souvenir_1ad1c3059a79d8df7f357d0a89927c54da" compoundref="addsouvenir_8cpp" startline="45" endline="80">addSouvenir::on_pushButton_released</referencedby>
-        <referencedby refid="class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49" compoundref="adminwindow_8cpp" startline="204" endline="248">AdminWindow::on_removeSouvenir_2_clicked</referencedby>
-        <referencedby refid="class_admin_window_1ab4bb07b30224270802c48b3666514a89" compoundref="adminwindow_8cpp" startline="121" endline="159">AdminWindow::on_removeSouvenir_released</referencedby>
-        <referencedby refid="class_admin_window_1abd378ec54897e75624563d579837ee40" compoundref="adminwindow_8cpp" startline="161" endline="181">AdminWindow::onAddColleges</referencedby>
-        <referencedby refid="class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b" compoundref="adminwindow_8cpp" startline="59" endline="86">AdminWindow::onInitialise</referencedby>
+        <referencedby refid="class_admin_window_1acc2ae27f04c9096aaa33227922d28346" compoundref="adminwindow_8cpp" startline="491" endline="536">AdminWindow::on_updateButton_clicked</referencedby>
+        <referencedby refid="class_admin_window_1abd378ec54897e75624563d579837ee40" compoundref="adminwindow_8cpp" startline="133" endline="154">AdminWindow::onAddColleges</referencedby>
+        <referencedby refid="class_admin_window_1a79ff9b05e6c99ca908f35e64877b2f8b" compoundref="adminwindow_8cpp" startline="62" endline="93">AdminWindow::onInitialise</referencedby>
       </memberdef>
       <memberdef kind="slot" id="classconfirmpage_1aa2fa168c098e4d1238a72ac021fbd35e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>

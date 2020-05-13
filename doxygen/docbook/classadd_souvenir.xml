@@ -141,7 +141,7 @@ References ui.</para>
 <para><computeroutput>void addSouvenir::on_pushButton_2_released ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
 Definition at line 40 of file addsouvenir.cpp.</para>
 <para>
-Referenced by AdminWindow::on_addSouvenir_released().</para>
+Referenced by AdminWindow::on_addSouvenir_released(), and AdminWindow::on_pushButton_7_clicked().</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>

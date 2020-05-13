@@ -28,6 +28,10 @@ void \mbox{\hyperlink{class_db_manager_a919d96426a334c5f5f2f925b36e7ce86}{Init\+
 \begin{DoxyCompactList}\small\item\em initalizes sql data table for college and inputs all data from path parameter file location \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_db_manager_ac339cd04710203c6faf8d4a5d55b0135}{init\+Souvenir\+List}} (const Q\+String \&path)
 \begin{DoxyCompactList}\small\item\em initalizes sql data table for souvenir and inputs all data from path parameter file location \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_a27e3cf03a3af42d289aa3a858c1b1d5f}{init\+Mlb\+List}} (const Q\+String \&path)
+\begin{DoxyCompactList}\small\item\em Initializes M\+LB stadium data from xlsx file at given path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_af6bbe50328823ab15a3ed3ea9c19735e}{init\+Stadium\+List}} (const Q\+String \&path)
+\begin{DoxyCompactList}\small\item\em Initalizes the database storing distances between stadiums. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_db_manager_ac07ce420fd795d2e613d3d58151a3f13}{init\+Distance\+List}} (const Q\+String \&path)
 \begin{DoxyCompactList}\small\item\em initalizes sql data table for college distances and inputs all data from path parameter file location \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_db_manager_a8f06e6e0365900ada1bf178576299c58}{add\+User}} (const Q\+String \&user, const Q\+String \&pass)
@@ -52,6 +56,8 @@ void \mbox{\hyperlink{class_db_manager_aeaac0d5a8393040e7b52208c80ea3fd4}{reset\
 \begin{DoxyCompactList}\small\item\em clear all items from cart \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_db_manager_a3fb7e05878d16c1c5cea11b53cf04d4d}{add\+Colleges}} (const Q\+String \&path)
 \begin{DoxyCompactList}\small\item\em add colleges from file to DB \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_a104d9d622610c93e1b2aee8f73589c1e}{add\+M\+LB}} (const Q\+String \&path)
+\begin{DoxyCompactList}\small\item\em Reads M\+LB data from an xlsx file at the given path. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_db_manager_ae1a3c72afdf29e00bc16fd128dc35b94}{user\+Exists}} (const Q\+String \&user)
 \begin{DoxyCompactList}\small\item\em checks to see if the username exists \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_db_manager_acdbad81f27cdb3f8e3bbf656eeeba382}{sou\+Exists}} (const Q\+String \&name, const Q\+String \&college)
@@ -69,7 +75,11 @@ void \mbox{\hyperlink{class_db_manager_ae790551011d6cb42a4fd20a173eb9598}{add\+T
 bool \mbox{\hyperlink{class_db_manager_a5bd60338e1ad8ffd0c63f34e84f88808}{trip\+Id\+Exists}} (Q\+String trip\+ID)
 \begin{DoxyCompactList}\small\item\em returns whether trip\+ID data exists in DB \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_db_manager_a42e94ab2a5751c839a6d57221d3d4e99}{create\+Trip\+Table}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates tables in the database used in the trip planning process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_db_manager_a5f7bde3d8a96b46f7cf6c3186ea0f3a4}{create\+Souv\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a database table with standard souvenirs for each stadium. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_db_manager_ad687c4a68f09e305d048b5686f0aef81}{re\+Open}} ()
+\begin{DoxyCompactList}\small\item\em Re opens the database. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -138,7 +148,7 @@ void -\/ none
 \end{DoxyReturn}
 
 
-Definition at line 277 of file dbmanager.\+cpp.
+Definition at line 402 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_a3fb7e05878d16c1c5cea11b53cf04d4d}\label{class_db_manager_a3fb7e05878d16c1c5cea11b53cf04d4d}} 
 \index{DbManager@{DbManager}!addColleges@{addColleges}}
@@ -160,7 +170,26 @@ void -\/ none
 \end{DoxyReturn}
 
 
-Definition at line 534 of file dbmanager.\+cpp.
+Definition at line 720 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_a104d9d622610c93e1b2aee8f73589c1e}\label{class_db_manager_a104d9d622610c93e1b2aee8f73589c1e}} 
+\index{DbManager@{DbManager}!addMLB@{addMLB}}
+\index{addMLB@{addMLB}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{addMLB()}{addMLB()}}
+{\footnotesize\ttfamily void Db\+Manager\+::add\+M\+LB (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Reads M\+LB data from an xlsx file at the given path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 659 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_aedfdf8a34ade856e4fab1ea3adcef5b3}\label{class_db_manager_aedfdf8a34ade856e4fab1ea3adcef5b3}} 
 \index{DbManager@{DbManager}!addPurchase@{addPurchase}}
@@ -177,7 +206,7 @@ void -\/ none
 \end{DoxyReturn}
 
 
-Definition at line 247 of file dbmanager.\+cpp.
+Definition at line 372 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_aba2fa2af8d63efc7aec75bf690c69a3c}\label{class_db_manager_aba2fa2af8d63efc7aec75bf690c69a3c}} 
 \index{DbManager@{DbManager}!addSou@{addSou}}
@@ -203,7 +232,7 @@ void -\/ none
 \end{DoxyReturn}
 
 
-Definition at line 299 of file dbmanager.\+cpp.
+Definition at line 424 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_ae790551011d6cb42a4fd20a173eb9598}\label{class_db_manager_ae790551011d6cb42a4fd20a173eb9598}} 
 \index{DbManager@{DbManager}!addTrip@{addTrip}}
@@ -229,7 +258,7 @@ void -\/ nothing
 \end{DoxyReturn}
 
 
-Definition at line 604 of file dbmanager.\+cpp.
+Definition at line 801 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_a8f06e6e0365900ada1bf178576299c58}\label{class_db_manager_a8f06e6e0365900ada1bf178576299c58}} 
 \index{DbManager@{DbManager}!addUser@{addUser}}
@@ -253,7 +282,7 @@ void -\/ none
 \end{DoxyReturn}
 
 
-Definition at line 368 of file dbmanager.\+cpp.
+Definition at line 493 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_ab139c436a07cbd611edd0d169962f5fa}\label{class_db_manager_ab139c436a07cbd611edd0d169962f5fa}} 
 \index{DbManager@{DbManager}!cartQuantity@{cartQuantity}}
@@ -277,7 +306,7 @@ int -\/ quanity of cart
 \end{DoxyReturn}
 
 
-Definition at line 193 of file dbmanager.\+cpp.
+Definition at line 318 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_a3ef6d1b5c19b8192420ba8743c7172ef}\label{class_db_manager_a3ef6d1b5c19b8192420ba8743c7172ef}} 
 \index{DbManager@{DbManager}!checkAdmin@{checkAdmin}}
@@ -299,7 +328,7 @@ true -\/ will enable admin login, false -\/ the person is not an admin
 \end{DoxyReturn}
 
 
-Definition at line 471 of file dbmanager.\+cpp.
+Definition at line 596 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_af9547f6dc3ad170a70c0ee4d89f714fc}\label{class_db_manager_af9547f6dc3ad170a70c0ee4d89f714fc}} 
 \index{DbManager@{DbManager}!clearDb@{clearDb}}
@@ -316,7 +345,21 @@ void -\/ nothing
 \end{DoxyReturn}
 
 
-Definition at line 448 of file dbmanager.\+cpp.
+Definition at line 573 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_a5f7bde3d8a96b46f7cf6c3186ea0f3a4}\label{class_db_manager_a5f7bde3d8a96b46f7cf6c3186ea0f3a4}} 
+\index{DbManager@{DbManager}!createSouvTable@{createSouvTable}}
+\index{createSouvTable@{createSouvTable}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{createSouvTable()}{createSouvTable()}}
+{\footnotesize\ttfamily void Db\+Manager\+::create\+Souv\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes a database table with standard souvenirs for each stadium. 
+
+
+
+Definition at line 848 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_a42e94ab2a5751c839a6d57221d3d4e99}\label{class_db_manager_a42e94ab2a5751c839a6d57221d3d4e99}} 
 \index{DbManager@{DbManager}!createTripTable@{createTripTable}}
@@ -326,7 +369,11 @@ Definition at line 448 of file dbmanager.\+cpp.
 
 
 
-Definition at line 580 of file dbmanager.\+cpp.
+Creates tables in the database used in the trip planning process. 
+
+
+
+Definition at line 766 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_a5d730ddded1f92e418a9c88e570b2117}\label{class_db_manager_a5d730ddded1f92e418a9c88e570b2117}} 
 \index{DbManager@{DbManager}!getPassword@{getPassword}}
@@ -348,7 +395,7 @@ obtains the password from user
 \end{DoxyReturn}
 
 
-Definition at line 507 of file dbmanager.\+cpp.
+Definition at line 632 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_a919d96426a334c5f5f2f925b36e7ce86}\label{class_db_manager_a919d96426a334c5f5f2f925b36e7ce86}} 
 \index{DbManager@{DbManager}!InitCollegeList@{InitCollegeList}}
@@ -392,7 +439,26 @@ void -\/ none
 \end{DoxyReturn}
 
 
-Definition at line 128 of file dbmanager.\+cpp.
+Definition at line 254 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_a27e3cf03a3af42d289aa3a858c1b1d5f}\label{class_db_manager_a27e3cf03a3af42d289aa3a858c1b1d5f}} 
+\index{DbManager@{DbManager}!initMlbList@{initMlbList}}
+\index{initMlbList@{initMlbList}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{initMlbList()}{initMlbList()}}
+{\footnotesize\ttfamily void Db\+Manager\+::init\+Mlb\+List (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Initializes M\+LB stadium data from xlsx file at given path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 73 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_ac339cd04710203c6faf8d4a5d55b0135}\label{class_db_manager_ac339cd04710203c6faf8d4a5d55b0135}} 
 \index{DbManager@{DbManager}!initSouvenirList@{initSouvenirList}}
@@ -414,7 +480,26 @@ void -\/ none
 \end{DoxyReturn}
 
 
-Definition at line 73 of file dbmanager.\+cpp.
+Definition at line 199 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_af6bbe50328823ab15a3ed3ea9c19735e}\label{class_db_manager_af6bbe50328823ab15a3ed3ea9c19735e}} 
+\index{DbManager@{DbManager}!initStadiumList@{initStadiumList}}
+\index{initStadiumList@{initStadiumList}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{initStadiumList()}{initStadiumList()}}
+{\footnotesize\ttfamily void Db\+Manager\+::init\+Stadium\+List (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Initalizes the database storing distances between stadiums. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 157 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_ac04baba8f5d5197f8bcd9230393501de}\label{class_db_manager_ac04baba8f5d5197f8bcd9230393501de}} 
 \index{DbManager@{DbManager}!isOpen@{isOpen}}
@@ -431,7 +516,7 @@ true -\/ \mbox{\hyperlink{class_db_manager}{Db\+Manager}} is open, false -\/ \mb
 \end{DoxyReturn}
 
 
-Definition at line 466 of file dbmanager.\+cpp.
+Definition at line 591 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_a2d75fe15fff87d86cf7445e147f1dc0a}\label{class_db_manager_a2d75fe15fff87d86cf7445e147f1dc0a}} 
 \index{DbManager@{DbManager}!removeCart@{removeCart}}
@@ -455,7 +540,7 @@ void -\/ none
 \end{DoxyReturn}
 
 
-Definition at line 220 of file dbmanager.\+cpp.
+Definition at line 345 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_aec7a231230eb9e7f4fac4224304130cb}\label{class_db_manager_aec7a231230eb9e7f4fac4224304130cb}} 
 \index{DbManager@{DbManager}!removeSou@{removeSou}}
@@ -479,7 +564,24 @@ void -\/ none
 \end{DoxyReturn}
 
 
-Definition at line 173 of file dbmanager.\+cpp.
+Definition at line 296 of file dbmanager.\+cpp.
+
+\mbox{\Hypertarget{class_db_manager_ad687c4a68f09e305d048b5686f0aef81}\label{class_db_manager_ad687c4a68f09e305d048b5686f0aef81}} 
+\index{DbManager@{DbManager}!reOpen@{reOpen}}
+\index{reOpen@{reOpen}!DbManager@{DbManager}}
+\doxysubsubsection{\texorpdfstring{reOpen()}{reOpen()}}
+{\footnotesize\ttfamily bool Db\+Manager\+::re\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Re opens the database. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 928 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_aeaac0d5a8393040e7b52208c80ea3fd4}\label{class_db_manager_aeaac0d5a8393040e7b52208c80ea3fd4}} 
 \index{DbManager@{DbManager}!resetCart@{resetCart}}
@@ -496,7 +598,7 @@ void -\/ none
 \end{DoxyReturn}
 
 
-Definition at line 262 of file dbmanager.\+cpp.
+Definition at line 387 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_acdbad81f27cdb3f8e3bbf656eeeba382}\label{class_db_manager_acdbad81f27cdb3f8e3bbf656eeeba382}} 
 \index{DbManager@{DbManager}!souExists@{souExists}}
@@ -520,7 +622,7 @@ true -\/ username exists, false -\/ username does not exist
 \end{DoxyReturn}
 
 
-Definition at line 393 of file dbmanager.\+cpp.
+Definition at line 518 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_a5bd60338e1ad8ffd0c63f34e84f88808}\label{class_db_manager_a5bd60338e1ad8ffd0c63f34e84f88808}} 
 \index{DbManager@{DbManager}!tripIdExists@{tripIdExists}}
@@ -542,7 +644,7 @@ bool-\/ whether data exists
 \end{DoxyReturn}
 
 
-Definition at line 625 of file dbmanager.\+cpp.
+Definition at line 822 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_a0d17a065e941949c2472ddc19436e1a0}\label{class_db_manager_a0d17a065e941949c2472ddc19436e1a0}} 
 \index{DbManager@{DbManager}!updateCart@{updateCart}}
@@ -568,7 +670,7 @@ void -\/ none
 \end{DoxyReturn}
 
 
-Definition at line 324 of file dbmanager.\+cpp.
+Definition at line 449 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_adf32025a73fc9b230a8135cb0af35c5d}\label{class_db_manager_adf32025a73fc9b230a8135cb0af35c5d}} 
 \index{DbManager@{DbManager}!updateSou@{updateSou}}
@@ -596,7 +698,7 @@ void -\/ none
 \end{DoxyReturn}
 
 
-Definition at line 343 of file dbmanager.\+cpp.
+Definition at line 468 of file dbmanager.\+cpp.
 
 \mbox{\Hypertarget{class_db_manager_ae1a3c72afdf29e00bc16fd128dc35b94}\label{class_db_manager_ae1a3c72afdf29e00bc16fd128dc35b94}} 
 \index{DbManager@{DbManager}!userExists@{userExists}}
@@ -618,7 +720,7 @@ true -\/ username exists, false -\/ username does not exist
 \end{DoxyReturn}
 
 
-Definition at line 422 of file dbmanager.\+cpp.
+Definition at line 547 of file dbmanager.\+cpp.
 
 
 
@@ -635,7 +737,7 @@ decalre database field memberobj
 
 
 
-Definition at line 220 of file dbmanager.\+h.
+Definition at line 252 of file dbmanager.\+h.
 
 
 

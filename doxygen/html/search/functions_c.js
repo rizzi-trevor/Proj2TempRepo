@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['tripidexists_226',['tripIdExists',['../class_db_manager.html#a5bd60338e1ad8ffd0c63f34e84f88808',1,'DbManager']]],
-  ['tripplanner_227',['tripPlanner',['../classtrip_planner.html#a4f1efc2b2d8bc3be648de0584d7f90ba',1,'tripPlanner']]],
-  ['tripprogress_228',['tripprogress',['../classtripprogress.html#aa7127633dc3a458db319f23b06dc8c38',1,'tripprogress']]],
-  ['tripsummary_229',['tripSummary',['../classtrip_summary.html#a4ac151fe65a383fdd04e9ac133f21d55',1,'tripSummary::tripSummary(QWidget *parent=nullptr)'],['../classtrip_summary.html#a990accf373da48ade41def873014fdf6',1,'tripSummary::tripSummary(const QString &amp;id, QWidget *parent=nullptr)']]]
+  ['performbfs_434',['performBFS',['../graphinfo_8h.html#ae2ac26dc1144f69e34ccc67402f7d69c',1,'performBFS():&#160;graphinfo.cpp'],['../graphinfo_8cpp.html#ae2ac26dc1144f69e34ccc67402f7d69c',1,'performBFS():&#160;graphinfo.cpp']]],
+  ['performdfs_435',['performDFS',['../graphinfo_8h.html#a654b1349d433a3a9a466ec1fc77d43c7',1,'performDFS():&#160;graphinfo.cpp'],['../graphinfo_8cpp.html#a654b1349d433a3a9a466ec1fc77d43c7',1,'performDFS():&#160;graphinfo.cpp']]],
+  ['performdijkstra_436',['performDijkstra',['../graphinfo_8h.html#a3a388b082c0a08752b5102db7f37f25c',1,'performDijkstra(QStringList teamsSelected):&#160;graphinfo.cpp'],['../graphinfo_8cpp.html#a3a388b082c0a08752b5102db7f37f25c',1,'performDijkstra(QStringList teamsSelected):&#160;graphinfo.cpp']]],
+  ['performmst_437',['performMST',['../graphinfo_8h.html#a4678912f4b89dfcf833f86bc68dfaf15',1,'performMST():&#160;graphinfo.cpp'],['../graphinfo_8cpp.html#a4678912f4b89dfcf833f86bc68dfaf15',1,'performMST():&#160;graphinfo.cpp']]],
+  ['plandoesexist_438',['planDoesExist',['../classtrip_planner.html#a2b7a2f1f4418737c5a0d9d40616de033',1,'tripPlanner']]],
+  ['prevtrip_439',['prevTrip',['../classtripprogress.html#af5ebcd299537bca0cffe94483aea1633',1,'tripprogress']]],
+  ['primjarnikmst_440',['primJarnikMST',['../classgraph_adj_list.html#a1ffca4fb0794edb7be6eeaaf9624011a',1,'graphAdjList']]],
+  ['printresults_441',['printResults',['../classbfs.html#a969947cd3d94f0e420b19723cf23b752',1,'bfs']]]
 ];

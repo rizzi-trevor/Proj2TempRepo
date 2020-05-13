@@ -57,12 +57,20 @@ Collaboration diagram for tripSummary:<para>
 <para>updates tripID and UI model when called. Prepares query for all availble tripIDs </para>
 </listitem>
             <listitem><para>void <link linkend="_classtrip_summary_1adb1411877190127a126618a437ff47b3">updateSchoolComboBox</link> ()</para>
+
+<para>updates the combo box with the stadiums on the trip </para>
 </listitem>
             <listitem><para>void <link linkend="_classtrip_summary_1a1d82d9dd567f2be49d1710651c4d8fe8">updateTotalDistance</link> ()</para>
+
+<para>updates the total distance of the trip </para>
 </listitem>
             <listitem><para>void <link linkend="_classtrip_summary_1a3b1175846c928336711b236e878dfd11">updateSchoolTotal</link> ()</para>
+
+<para>updates the total of the currently selected stadium from the combo box </para>
 </listitem>
             <listitem><para>void <link linkend="_classtrip_summary_1ad20de08790de627fdf704c0991222c09">updateTripTotal</link> ()</para>
+
+<para>updates the total of the entire trip </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -251,6 +259,10 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>updateSchoolComboBox</primary><secondary>tripSummary</secondary></indexterm>
 <indexterm><primary>tripSummary</primary><secondary>updateSchoolComboBox</secondary></indexterm>
 <para><computeroutput>void tripSummary::updateSchoolComboBox ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>updates the combo box with the stadiums on the trip </para>
+</para>
+<para>
 Definition at line 83 of file tripsummary.cpp.</para>
 <para>
 Referenced by tripSummary().</para>
@@ -268,6 +280,10 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>updateSchoolTotal</primary><secondary>tripSummary</secondary></indexterm>
 <indexterm><primary>tripSummary</primary><secondary>updateSchoolTotal</secondary></indexterm>
 <para><computeroutput>void tripSummary::updateSchoolTotal ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>updates the total of the currently selected stadium from the combo box </para>
+</para>
+<para>
 Definition at line 128 of file tripsummary.cpp.</para>
 <para>
 Referenced by on_school_comboBox_currentIndexChanged().</para>
@@ -285,6 +301,10 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>updateTotalDistance</primary><secondary>tripSummary</secondary></indexterm>
 <indexterm><primary>tripSummary</primary><secondary>updateTotalDistance</secondary></indexterm>
 <para><computeroutput>void tripSummary::updateTotalDistance ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>updates the total distance of the trip </para>
+</para>
+<para>
 Definition at line 104 of file tripsummary.cpp.</para>
 <para>
 Referenced by tripSummary().</para>
@@ -329,6 +349,10 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>updateTripTotal</primary><secondary>tripSummary</secondary></indexterm>
 <indexterm><primary>tripSummary</primary><secondary>updateTripTotal</secondary></indexterm>
 <para><computeroutput>void tripSummary::updateTripTotal ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>updates the total of the entire trip </para>
+</para>
+<para>
 Definition at line 153 of file tripsummary.cpp.</para>
 <para>
 Referenced by tripSummary().</para>
@@ -354,13 +378,13 @@ Here is the caller graph for this function:<para>
 <para>assigns DB to predefined PROJECT_PATH constant </para>
 </para>
 <para>
-Definition at line 88 of file tripsummary.h.</para>
+Definition at line 100 of file tripsummary.h.</para>
     </section><anchor xml:id="_classtrip_summary_1acb03d46422badb024292c69c3763c433"/>    <section>
     <title>tripID</title>
 <indexterm><primary>tripID</primary><secondary>tripSummary</secondary></indexterm>
 <indexterm><primary>tripSummary</primary><secondary>tripID</secondary></indexterm>
 <para><computeroutput>QString tripSummary::tripID<computeroutput>[private]</computeroutput></computeroutput></para><para>
-Definition at line 90 of file tripsummary.h.</para>
+Definition at line 102 of file tripsummary.h.</para>
     </section><anchor xml:id="_classtrip_summary_1a7d531afb03fb3f3b426bf8f164b57c41"/>    <section>
     <title>ui</title>
 <indexterm><primary>ui</primary><secondary>tripSummary</secondary></indexterm>
@@ -370,7 +394,7 @@ Definition at line 90 of file tripsummary.h.</para>
 <para>points to <link linkend="_classtrip_summary">tripSummary</link> UI </para>
 </para>
 <para>
-Definition at line 83 of file tripsummary.h.</para>
+Definition at line 95 of file tripsummary.h.</para>
 <para>
 Referenced by ~tripSummary().</para>
 </section>

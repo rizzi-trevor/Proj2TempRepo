@@ -34,6 +34,14 @@ Collaboration diagram for DbManager:<para>
 
 <para>initalizes sql data table for souvenir and inputs all data from path parameter file location </para>
 </listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1a27e3cf03a3af42d289aa3a858c1b1d5f">initMlbList</link> (const QString &amp;path)</para>
+
+<para>Initializes MLB stadium data from xlsx file at given path. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1af6bbe50328823ab15a3ed3ea9c19735e">initStadiumList</link> (const QString &amp;path)</para>
+
+<para>Initalizes the database storing distances between stadiums. </para>
+</listitem>
             <listitem><para>void <link linkend="_class_db_manager_1ac07ce420fd795d2e613d3d58151a3f13">initDistanceList</link> (const QString &amp;path)</para>
 
 <para>initalizes sql data table for college distances and inputs all data from path parameter file location </para>
@@ -82,6 +90,10 @@ Collaboration diagram for DbManager:<para>
 
 <para>add colleges from file to DB </para>
 </listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1a104d9d622610c93e1b2aee8f73589c1e">addMLB</link> (const QString &amp;path)</para>
+
+<para>Reads MLB data from an xlsx file at the given path. </para>
+</listitem>
             <listitem><para>bool <link linkend="_class_db_manager_1ae1a3c72afdf29e00bc16fd128dc35b94">userExists</link> (const QString &amp;user)</para>
 
 <para>checks to see if the username exists </para>
@@ -115,6 +127,16 @@ Collaboration diagram for DbManager:<para>
 <para>returns whether tripID data exists in DB </para>
 </listitem>
             <listitem><para>void <link linkend="_class_db_manager_1a42e94ab2a5751c839a6d57221d3d4e99">createTripTable</link> ()</para>
+
+<para>Creates tables in the database used in the trip planning process. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_db_manager_1a5f7bde3d8a96b46f7cf6c3186ea0f3a4">createSouvTable</link> ()</para>
+
+<para>Initializes a database table with standard souvenirs for each stadium. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_db_manager_1ad687c4a68f09e305d048b5686f0aef81">reOpen</link> ()</para>
+
+<para>Re opens the database. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -233,7 +255,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 277 of file dbmanager.cpp.</para>
+Definition at line 402 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1a3fb7e05878d16c1c5cea11b53cf04d4d"/>    <section>
     <title>addColleges()</title>
 <indexterm><primary>addColleges</primary><secondary>DbManager</secondary></indexterm>
@@ -270,7 +292,40 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 534 of file dbmanager.cpp.</para>
+Definition at line 720 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1a104d9d622610c93e1b2aee8f73589c1e"/>    <section>
+    <title>addMLB()</title>
+<indexterm><primary>addMLB</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>addMLB</secondary></indexterm>
+<para><computeroutput>void DbManager::addMLB (const QString &amp; path)</computeroutput></para><para>
+
+<para>Reads MLB data from an xlsx file at the given path. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>path</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 659 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1aedfdf8a34ade856e4fab1ea3adcef5b3"/>    <section>
     <title>addPurchase()</title>
 <indexterm><primary>addPurchase</primary><secondary>DbManager</secondary></indexterm>
@@ -286,7 +341,7 @@ Definition at line 534 of file dbmanager.cpp.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 247 of file dbmanager.cpp.</para>
+Definition at line 372 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1aba2fa2af8d63efc7aec75bf690c69a3c"/>    <section>
     <title>addSou()</title>
 <indexterm><primary>addSou</primary><secondary>DbManager</secondary></indexterm>
@@ -335,7 +390,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 299 of file dbmanager.cpp.</para>
+Definition at line 424 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1ae790551011d6cb42a4fd20a173eb9598"/>    <section>
     <title>addTrip()</title>
 <indexterm><primary>addTrip</primary><secondary>DbManager</secondary></indexterm>
@@ -384,7 +439,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 604 of file dbmanager.cpp.</para>
+Definition at line 801 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1a8f06e6e0365900ada1bf178576299c58"/>    <section>
     <title>addUser()</title>
 <indexterm><primary>addUser</primary><secondary>DbManager</secondary></indexterm>
@@ -427,7 +482,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 368 of file dbmanager.cpp.</para>
+Definition at line 493 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1ab139c436a07cbd611edd0d169962f5fa"/>    <section>
     <title>cartQuantity()</title>
 <indexterm><primary>cartQuantity</primary><secondary>DbManager</secondary></indexterm>
@@ -470,7 +525,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 193 of file dbmanager.cpp.</para>
+Definition at line 318 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1a3ef6d1b5c19b8192420ba8743c7172ef"/>    <section>
     <title>checkAdmin()</title>
 <indexterm><primary>checkAdmin</primary><secondary>DbManager</secondary></indexterm>
@@ -507,7 +562,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 471 of file dbmanager.cpp.</para>
+Definition at line 596 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1af9547f6dc3ad170a70c0ee4d89f714fc"/>    <section>
     <title>clearDb()</title>
 <indexterm><primary>clearDb</primary><secondary>DbManager</secondary></indexterm>
@@ -523,13 +578,27 @@ Definition at line 471 of file dbmanager.cpp.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 448 of file dbmanager.cpp.</para>
+Definition at line 573 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1a5f7bde3d8a96b46f7cf6c3186ea0f3a4"/>    <section>
+    <title>createSouvTable()</title>
+<indexterm><primary>createSouvTable</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>createSouvTable</secondary></indexterm>
+<para><computeroutput>void DbManager::createSouvTable ( )</computeroutput></para><para>
+
+<para>Initializes a database table with standard souvenirs for each stadium. </para>
+</para>
+<para>
+Definition at line 848 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1a42e94ab2a5751c839a6d57221d3d4e99"/>    <section>
     <title>createTripTable()</title>
 <indexterm><primary>createTripTable</primary><secondary>DbManager</secondary></indexterm>
 <indexterm><primary>DbManager</primary><secondary>createTripTable</secondary></indexterm>
 <para><computeroutput>void DbManager::createTripTable ( )</computeroutput></para><para>
-Definition at line 580 of file dbmanager.cpp.</para>
+
+<para>Creates tables in the database used in the trip planning process. </para>
+</para>
+<para>
+Definition at line 766 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1a5d730ddded1f92e418a9c88e570b2117"/>    <section>
     <title>getPassword()</title>
 <indexterm><primary>getPassword</primary><secondary>DbManager</secondary></indexterm>
@@ -566,7 +635,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 507 of file dbmanager.cpp.</para>
+Definition at line 632 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1a919d96426a334c5f5f2f925b36e7ce86"/>    <section>
     <title>InitCollegeList()</title>
 <indexterm><primary>InitCollegeList</primary><secondary>DbManager</secondary></indexterm>
@@ -640,7 +709,40 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 128 of file dbmanager.cpp.</para>
+Definition at line 254 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1a27e3cf03a3af42d289aa3a858c1b1d5f"/>    <section>
+    <title>initMlbList()</title>
+<indexterm><primary>initMlbList</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>initMlbList</secondary></indexterm>
+<para><computeroutput>void DbManager::initMlbList (const QString &amp; path)</computeroutput></para><para>
+
+<para>Initializes MLB stadium data from xlsx file at given path. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>path</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 73 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1ac339cd04710203c6faf8d4a5d55b0135"/>    <section>
     <title>initSouvenirList()</title>
 <indexterm><primary>initSouvenirList</primary><secondary>DbManager</secondary></indexterm>
@@ -677,7 +779,40 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 73 of file dbmanager.cpp.</para>
+Definition at line 199 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1af6bbe50328823ab15a3ed3ea9c19735e"/>    <section>
+    <title>initStadiumList()</title>
+<indexterm><primary>initStadiumList</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>initStadiumList</secondary></indexterm>
+<para><computeroutput>void DbManager::initStadiumList (const QString &amp; path)</computeroutput></para><para>
+
+<para>Initalizes the database storing distances between stadiums. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>path</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 157 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1ac04baba8f5d5197f8bcd9230393501de"/>    <section>
     <title>isOpen()</title>
 <indexterm><primary>isOpen</primary><secondary>DbManager</secondary></indexterm>
@@ -693,7 +828,7 @@ Definition at line 73 of file dbmanager.cpp.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 466 of file dbmanager.cpp.</para>
+Definition at line 591 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1a2d75fe15fff87d86cf7445e147f1dc0a"/>    <section>
     <title>removeCart()</title>
 <indexterm><primary>removeCart</primary><secondary>DbManager</secondary></indexterm>
@@ -736,7 +871,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 220 of file dbmanager.cpp.</para>
+Definition at line 345 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1aec7a231230eb9e7f4fac4224304130cb"/>    <section>
     <title>removeSou()</title>
 <indexterm><primary>removeSou</primary><secondary>DbManager</secondary></indexterm>
@@ -779,7 +914,23 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 173 of file dbmanager.cpp.</para>
+Definition at line 296 of file dbmanager.cpp.</para>
+    </section><anchor xml:id="_class_db_manager_1ad687c4a68f09e305d048b5686f0aef81"/>    <section>
+    <title>reOpen()</title>
+<indexterm><primary>reOpen</primary><secondary>DbManager</secondary></indexterm>
+<indexterm><primary>DbManager</primary><secondary>reOpen</secondary></indexterm>
+<para><computeroutput>bool DbManager::reOpen ( )</computeroutput></para><para>
+
+<para>Re opens the database. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+<para>
+Definition at line 928 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1aeaac0d5a8393040e7b52208c80ea3fd4"/>    <section>
     <title>resetCart()</title>
 <indexterm><primary>resetCart</primary><secondary>DbManager</secondary></indexterm>
@@ -795,7 +946,7 @@ Definition at line 173 of file dbmanager.cpp.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 262 of file dbmanager.cpp.</para>
+Definition at line 387 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1acdbad81f27cdb3f8e3bbf656eeeba382"/>    <section>
     <title>souExists()</title>
 <indexterm><primary>souExists</primary><secondary>DbManager</secondary></indexterm>
@@ -838,7 +989,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 393 of file dbmanager.cpp.</para>
+Definition at line 518 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1a5bd60338e1ad8ffd0c63f34e84f88808"/>    <section>
     <title>tripIdExists()</title>
 <indexterm><primary>tripIdExists</primary><secondary>DbManager</secondary></indexterm>
@@ -875,7 +1026,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 625 of file dbmanager.cpp.</para>
+Definition at line 822 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1a0d17a065e941949c2472ddc19436e1a0"/>    <section>
     <title>updateCart()</title>
 <indexterm><primary>updateCart</primary><secondary>DbManager</secondary></indexterm>
@@ -924,7 +1075,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 324 of file dbmanager.cpp.</para>
+Definition at line 449 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1adf32025a73fc9b230a8135cb0af35c5d"/>    <section>
     <title>updateSou()</title>
 <indexterm><primary>updateSou</primary><secondary>DbManager</secondary></indexterm>
@@ -979,7 +1130,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 343 of file dbmanager.cpp.</para>
+Definition at line 468 of file dbmanager.cpp.</para>
     </section><anchor xml:id="_class_db_manager_1ae1a3c72afdf29e00bc16fd128dc35b94"/>    <section>
     <title>userExists()</title>
 <indexterm><primary>userExists</primary><secondary>DbManager</secondary></indexterm>
@@ -1016,7 +1167,7 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 422 of file dbmanager.cpp.</para>
+Definition at line 547 of file dbmanager.cpp.</para>
 </section>
 </section>
 <section>
@@ -1030,7 +1181,7 @@ Definition at line 422 of file dbmanager.cpp.</para>
 <para>decalre database field memberobj </para>
 </para>
 <para>
-Definition at line 220 of file dbmanager.h.</para>
+Definition at line 252 of file dbmanager.h.</para>
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>

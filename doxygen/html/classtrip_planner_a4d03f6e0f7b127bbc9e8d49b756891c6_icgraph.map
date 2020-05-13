@@ -1,4 +1,4 @@
 <map id="tripPlanner::selectedCollegeList" name="tripPlanner::selectedCollegeList">
-<area shape="rect" id="node1" title="stores and displays list of user/student selected colleges for current trip in progress/planned" alt="" coords="215,5,420,32"/>
-<area shape="rect" id="node2" href="$classtrip_planner.html#a41bad123ae9fe695f0142baee4517e82" title="displays user input and manages initliazation of planning college trips, distances...." alt="" coords="5,5,167,32"/>
+<area shape="rect" id="node1" title="Creates the checkbox list of stadiums." alt="" coords="215,5,420,32"/>
+<area shape="rect" id="node2" href="$classtrip_planner.html#a41bad123ae9fe695f0142baee4517e82" title="Plans trip path requires a valid tripID entered uses the algorithm function to determine path through..." alt="" coords="5,5,167,32"/>
 </map>

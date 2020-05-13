@@ -1,5 +1,5 @@
 <map id="AdminWindow" name="AdminWindow">
-<area shape="rect" id="node1" title="class initializes AdminWindow UI and manages all Admin only permissive execution in editing user data..." alt="" coords="5,292,211,560"/>
+<area shape="rect" id="node1" title="class initializes AdminWindow UI and manages all Admin only permissive execution in editing user data..." alt="" coords="5,292,211,619"/>
 <area shape="rect" id="node2" title=" " alt="" coords="13,79,81,156"/>
 <area shape="rect" id="node3" href="$class_db_manager.html" title="SQL Database Manager class." alt="" coords="105,5,236,229"/>
 </map>

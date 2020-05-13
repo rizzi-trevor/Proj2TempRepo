@@ -11,8 +11,7 @@ class for generating and updating sql data from read DB and overall planned trip
 
 
 
-Inheritance diagram for trip\+Summary\+:
-\nopagebreak
+Inheritance diagram for trip\+Summary\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -46,13 +45,13 @@ void \mbox{\hyperlink{classtrip_summary_a7e935c92f7047ad2b207c6dec90a54ff}{on\+\
 void \mbox{\hyperlink{classtrip_summary_ac5267f51220eb49c45707b1eccce8587}{update\+Trip\+School\+List}} ()
 \begin{DoxyCompactList}\small\item\em updates trip\+ID and UI model when called. Prepares query for all availble trip\+I\+Ds \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classtrip_summary_adb1411877190127a126618a437ff47b3}{update\+School\+Combo\+Box}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em updates the combo box with the stadiums on the trip \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classtrip_summary_a1d82d9dd567f2be49d1710651c4d8fe8}{update\+Total\+Distance}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em updates the total distance of the trip \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classtrip_summary_a3b1175846c928336711b236e878dfd11}{update\+School\+Total}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em updates the total of the currently selected stadium from the combo box \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classtrip_summary_ad20de08790de627fdf704c0991222c09}{update\+Trip\+Total}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em updates the total of the entire trip \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -130,8 +129,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{classtrip_summary_a990accf373da48ade41def873014fdf6_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -192,8 +190,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{classtrip_summary_a7e935c92f7047ad2b207c6dec90a54ff_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -205,6 +202,10 @@ Here is the caller graph for this function\+:
 \index{updateSchoolComboBox@{updateSchoolComboBox}!tripSummary@{tripSummary}}
 \doxysubsubsection{\texorpdfstring{updateSchoolComboBox}{updateSchoolComboBox}}
 {\footnotesize\ttfamily void trip\+Summary\+::update\+School\+Combo\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+updates the combo box with the stadiums on the trip 
 
 
 
@@ -230,6 +231,10 @@ Here is the caller graph for this function\+:
 
 
 
+updates the total of the currently selected stadium from the combo box 
+
+
+
 Definition at line 128 of file tripsummary.\+cpp.
 
 
@@ -249,6 +254,10 @@ Here is the caller graph for this function\+:
 \index{updateTotalDistance@{updateTotalDistance}!tripSummary@{tripSummary}}
 \doxysubsubsection{\texorpdfstring{updateTotalDistance}{updateTotalDistance}}
 {\footnotesize\ttfamily void trip\+Summary\+::update\+Total\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+updates the total distance of the trip 
 
 
 
@@ -287,8 +296,7 @@ Definition at line 61 of file tripsummary.\+cpp.
 
 Referenced by trip\+Summary().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -300,6 +308,10 @@ Here is the caller graph for this function\+:
 \index{updateTripTotal@{updateTripTotal}!tripSummary@{tripSummary}}
 \doxysubsubsection{\texorpdfstring{updateTripTotal}{updateTripTotal}}
 {\footnotesize\ttfamily void trip\+Summary\+::update\+Trip\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+updates the total of the entire trip 
 
 
 
@@ -332,7 +344,7 @@ assigns DB to predefined P\+R\+O\+J\+E\+C\+T\+\_\+\+P\+A\+TH constant
 
 
 
-Definition at line 88 of file tripsummary.\+h.
+Definition at line 100 of file tripsummary.\+h.
 
 \mbox{\Hypertarget{classtrip_summary_acb03d46422badb024292c69c3763c433}\label{classtrip_summary_acb03d46422badb024292c69c3763c433}} 
 \index{tripSummary@{tripSummary}!tripID@{tripID}}
@@ -342,7 +354,7 @@ Definition at line 88 of file tripsummary.\+h.
 
 
 
-Definition at line 90 of file tripsummary.\+h.
+Definition at line 102 of file tripsummary.\+h.
 
 \mbox{\Hypertarget{classtrip_summary_a7d531afb03fb3f3b426bf8f164b57c41}\label{classtrip_summary_a7d531afb03fb3f3b426bf8f164b57c41}} 
 \index{tripSummary@{tripSummary}!ui@{ui}}
@@ -356,7 +368,7 @@ points to \mbox{\hyperlink{classtrip_summary}{trip\+Summary}} UI
 
 
 
-Definition at line 83 of file tripsummary.\+h.
+Definition at line 95 of file tripsummary.\+h.
 
 
 

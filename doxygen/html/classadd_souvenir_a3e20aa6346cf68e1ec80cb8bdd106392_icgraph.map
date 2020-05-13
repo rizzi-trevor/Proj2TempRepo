@@ -1,4 +1,5 @@
 <map id="addSouvenir::on_pushButton_2_released" name="addSouvenir::on_pushButton_2_released">
-<area shape="rect" id="node1" title=" " alt="" coords="257,5,444,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="257,39,444,80"/>
 <area shape="rect" id="node2" href="$class_admin_window.html#af609806ed07d37eedbfa96274c2cd86a" title="executes addSouvenir class obj" alt="" coords="5,5,209,47"/>
+<area shape="rect" id="node3" href="$class_admin_window.html#aacfea2bd7cc348782faf61b04b91fa1b" title=" " alt="" coords="7,71,207,112"/>
 </map>

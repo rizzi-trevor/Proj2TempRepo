@@ -1,8 +1,8 @@
 <map id="tripplanner.h" name="tripplanner.h">
-<area shape="rect" id="node1" title=" " alt="" coords="257,5,350,32"/>
-<area shape="rect" id="node2" href="$loginwindow_8h.html" title=" " alt="" coords="148,80,251,107"/>
-<area shape="rect" id="node4" href="$loginwindow_8cpp.html" title=" " alt="" coords="253,155,369,181"/>
-<area shape="rect" id="node6" href="$tripplanner_8cpp.html" title=" " alt="" coords="341,80,447,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="229,5,322,32"/>
+<area shape="rect" id="node2" href="$loginwindow_8h.html" title=" " alt="" coords="160,80,263,107"/>
+<area shape="rect" id="node6" href="$tripplanner_8cpp.html" title=" " alt="" coords="287,80,394,107"/>
 <area shape="rect" id="node3" href="$adminwindow_8cpp.html" title=" " alt="" coords="5,155,129,181"/>
-<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="154,155,229,181"/>
+<area shape="rect" id="node4" href="$loginwindow_8cpp.html" title=" " alt="" coords="153,155,269,181"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="294,155,369,181"/>
 </map>

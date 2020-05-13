@@ -115,7 +115,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Select a School</string>
+    <string>Select a Stadium</string>
    </property>
   </widget>
   <widget class="QTableView" name="souvenirsBySchool_tableView">
@@ -201,7 +201,7 @@
     </font>
    </property>
    <property name="text">
-    <string>School Total :</string>
+    <string>Stadium Total :</string>
    </property>
   </widget>
   <widget class="QLabel" name="tripTotalDisplay_label">

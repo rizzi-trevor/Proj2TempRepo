@@ -175,7 +175,6 @@ void DbManager::initStadiumList(const QString &path)
 
         while(query->next())
         {
-            //QSqlDatabase myDB = QSqlDatabase::database("sqlite_connection");
 
             if(myDB.open())
             {
@@ -273,7 +272,6 @@ void DbManager::initDistanceList(const QString &path)
 
         while(query->next())
         {
-            //QSqlDatabase myDB = QSqlDatabase::database("sqlite_connection");
 
             if(myDB.open())
             {
@@ -294,8 +292,6 @@ void DbManager::initDistanceList(const QString &path)
         fileDB.close();
     }
 }
-
-//QSqlDatabase::removeDatabase("xlsx_connection"); // need to put this out of scope of the initialised db
 
 void DbManager::removeSou(const QString &souName, const QString &college)
 {

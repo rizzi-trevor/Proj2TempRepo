@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="loginwindow.h" line="37" column="10" bodyfile="loginwindow.cpp" bodystart="47" bodyend="52"/>
+        <location file="loginwindow.h" line="37" column="10" bodyfile="loginwindow.cpp" bodystart="36" bodyend="41"/>
       </memberdef>
       <memberdef kind="slot" id="class_login_window_1a99244d50f34fe69cceeee38151f16df9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="loginwindow.h" line="44" column="10" bodyfile="loginwindow.cpp" bodystart="54" bodyend="91"/>
+        <location file="loginwindow.h" line="44" column="10" bodyfile="loginwindow.cpp" bodystart="43" bodyend="80"/>
       </memberdef>
       <memberdef kind="slot" id="class_login_window_1af307b9c8ab38cb4f7a5785d181e19533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="loginwindow.h" line="50" column="10" bodyfile="loginwindow.cpp" bodystart="93" bodyend="113"/>
+        <location file="loginwindow.h" line="50" column="10" bodyfile="loginwindow.cpp" bodystart="82" bodyend="102"/>
       </memberdef>
       <memberdef kind="slot" id="class_login_window_1a6fa354fcb799ca0afb2ac9cf48b18a93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="loginwindow.h" line="56" column="10" bodyfile="loginwindow.cpp" bodystart="115" bodyend="122"/>
+        <location file="loginwindow.h" line="56" column="10" bodyfile="loginwindow.cpp" bodystart="104" bodyend="111"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -147,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="loginwindow.h" line="68" column="5" bodyfile="loginwindow.cpp" bodystart="7" bodyend="39"/>
+        <location file="loginwindow.h" line="68" column="5" bodyfile="loginwindow.cpp" bodystart="5" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="class_login_window_1a0c49fe788dcce29aa50e7d974e1ad158" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="loginwindow.h" line="75" column="5" bodyfile="loginwindow.cpp" bodystart="41" bodyend="44"/>
+        <location file="loginwindow.h" line="75" column="5" bodyfile="loginwindow.cpp" bodystart="30" bodyend="33"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-slot">
@@ -181,7 +181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="loginwindow.h" line="82" column="10" bodyfile="loginwindow.cpp" bodystart="131" bodyend="134"/>
+        <location file="loginwindow.h" line="82" column="10" bodyfile="loginwindow.cpp" bodystart="120" bodyend="123"/>
       </memberdef>
       <memberdef kind="slot" id="class_login_window_1ab0218fdb5f9c0a0f4c8c8fa4e7256ca6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="loginwindow.h" line="88" column="10" bodyfile="loginwindow.cpp" bodystart="126" bodyend="129"/>
+        <location file="loginwindow.h" line="88" column="10" bodyfile="loginwindow.cpp" bodystart="115" bodyend="118"/>
       </memberdef>
       <memberdef kind="slot" id="class_login_window_1a4072c1992a805b45728be2be1ad44af9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -215,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="loginwindow.h" line="94" column="10" bodyfile="loginwindow.cpp" bodystart="136" bodyend="139"/>
+        <location file="loginwindow.h" line="94" column="10" bodyfile="loginwindow.cpp" bodystart="125" bodyend="128"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

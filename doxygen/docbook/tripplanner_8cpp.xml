@@ -4,6 +4,7 @@
 <indexterm><primary>tripplanner.cpp</primary></indexterm>
 <programlisting>#include &quot;tripplanner.h&quot;
 #include &quot;ui_tripplanner.h&quot;
+#include &lt;vector&gt;
 #include &quot;QVBoxLayout&quot;
 </programlisting>Include dependency graph for tripplanner.cpp:<para>
     <informalfigure>

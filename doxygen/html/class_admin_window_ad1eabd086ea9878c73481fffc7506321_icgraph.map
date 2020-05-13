@@ -1,7 +1,8 @@
 <map id="AdminWindow::updateCollegeTable" name="AdminWindow::updateCollegeTable">
-<area shape="rect" id="node1" title="updates sql data table for colleges when called" alt="" coords="264,74,459,115"/>
-<area shape="rect" id="node2" href="$class_admin_window.html#a0a68db6e97108a5b789d7b90dd962f76" title="explicit default Constructor" alt="" coords="13,5,209,32"/>
-<area shape="rect" id="node3" href="$class_admin_window.html#adb75fb0689794491accb94c3bd9989be" title="clears database of data" alt="" coords="5,56,216,83"/>
-<area shape="rect" id="node4" href="$class_admin_window.html#abd378ec54897e75624563d579837ee40" title="adds college to connected database" alt="" coords="11,107,211,133"/>
-<area shape="rect" id="node5" href="$class_admin_window.html#a79ff9b05e6c99ca908f35e64877b2f8b" title="runs a verification of confirmPage, if verfied, initalizes distance, college, souvenir lists,..." alt="" coords="23,157,198,184"/>
+<area shape="rect" id="node1" title="updates sql data table for colleges when called" alt="" coords="264,131,459,173"/>
+<area shape="rect" id="node2" href="$class_admin_window.html#a0a68db6e97108a5b789d7b90dd962f76" title="explicit default Constructor" alt="" coords="13,29,209,56"/>
+<area shape="rect" id="node3" href="$class_admin_window.html#adb75fb0689794491accb94c3bd9989be" title="clears database of data" alt="" coords="5,80,216,107"/>
+<area shape="rect" id="node4" href="$class_admin_window.html#a2f4241f561a61338473a6a123c47198f" title=" " alt="" coords="19,131,202,173"/>
+<area shape="rect" id="node5" href="$class_admin_window.html#abd378ec54897e75624563d579837ee40" title="adds college to connected database" alt="" coords="11,197,211,224"/>
+<area shape="rect" id="node6" href="$class_admin_window.html#a79ff9b05e6c99ca908f35e64877b2f8b" title="runs a verification of confirmPage, if verfied, initalizes distance, college, souvenir lists,..." alt="" coords="23,248,198,275"/>
 </map>

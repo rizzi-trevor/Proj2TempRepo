@@ -1,4 +1,4 @@
 <map id="tripPlanner::initializeList" name="tripPlanner::initializeList">
-<area shape="rect" id="node1" title="initalizes list of colleges and their distances from start colleges, as well as the UI for selecting ..." alt="" coords="208,5,368,32"/>
+<area shape="rect" id="node1" title="Initalizes checkbox list." alt="" coords="208,5,368,32"/>
 <area shape="rect" id="node2" href="$classtrip_planner.html#a4f1efc2b2d8bc3be648de0584d7f90ba" title="default explicit Constructor" alt="" coords="5,5,160,32"/>
 </map>

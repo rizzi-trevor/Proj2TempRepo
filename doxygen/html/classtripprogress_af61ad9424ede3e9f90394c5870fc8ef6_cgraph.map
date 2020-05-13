@@ -1,11 +1,11 @@
 <map id="tripprogress::onLoadClick" name="tripprogress::onLoadClick">
 <area shape="rect" id="node1" title="initializes tripProgress on execution , binds tripID, updates size, and calculates nextTrip" alt="" coords="5,104,175,131"/>
-<area shape="rect" id="node2" href="$classtripprogress.html#a8d485f178adc042180af1aa82359ede8" title=" " alt="" coords="223,79,389,105"/>
+<area shape="rect" id="node2" href="$classtripprogress.html#a8d485f178adc042180af1aa82359ede8" title="Retreives teh distance to the next stadium from the database for display." alt="" coords="223,79,389,105"/>
 <area shape="rect" id="node3" href="$classtripprogress.html#a67309d76ccd8f5f0fff245e4663f4a56" title="calculates and displays next destination for student planned trip" alt="" coords="234,129,378,156"/>
 <area shape="rect" id="node4" href="$classconfirmpage.html#a14e6471474d987fc336bba295be937d1" title="returns answer to calling function" alt="" coords="475,5,620,32"/>
 <area shape="rect" id="node5" href="$classconfirmpage.html#a63d2524a9929f2ee215da9a0ae41b686" title="sets answer to true, hides ui" alt="" coords="461,57,634,98"/>
 <area shape="rect" id="node6" href="$classtrip_summary.html#a7e935c92f7047ad2b207c6dec90a54ff" title="prepares a query and binds tripId and collegeNames to appropiate Database" alt="" coords="437,122,657,163"/>
 <area shape="rect" id="node8" href="$classtripprogress.html#a0101030d65a5d71cbc3dcb9d17b0fc65" title="calculates and displays updated student cart for souveniers, total and quantity requested by the stud..." alt="" coords="467,188,628,215"/>
 <area shape="rect" id="node9" href="$classtripprogress.html#a96e02bbd9e9bd253b04fb4a6efbb90eb" title="calculates and displays updated student price total for shopping souverniers from cart" alt="" coords="465,239,630,265"/>
-<area shape="rect" id="node7" href="$classtrip_summary.html#a3b1175846c928336711b236e878dfd11" title=" " alt="" coords="705,122,888,163"/>
+<area shape="rect" id="node7" href="$classtrip_summary.html#a3b1175846c928336711b236e878dfd11" title="updates the total of the currently selected stadium from the combo box" alt="" coords="705,122,888,163"/>
 </map>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="220" column="18" bodyfile="dbmanager.h" bodystart="220" bodyend="-1"/>
+        <location file="dbmanager.h" line="252" column="18" bodyfile="dbmanager.h" bodystart="252" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -106,7 +106,63 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="58" column="10" bodyfile="dbmanager.cpp" bodystart="73" bodyend="126"/>
+        <location file="dbmanager.h" line="58" column="10" bodyfile="dbmanager.cpp" bodystart="199" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1a27e3cf03a3af42d289aa3a858c1b1d5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::initMlbList</definition>
+        <argsstring>(const QString &amp;path)</argsstring>
+        <name>initMlbList</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Initializes MLB stadium data from xlsx file at given path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="64" column="10" bodyfile="dbmanager.cpp" bodystart="73" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1af6bbe50328823ab15a3ed3ea9c19735e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::initStadiumList</definition>
+        <argsstring>(const QString &amp;path)</argsstring>
+        <name>initStadiumList</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Initalizes the database storing distances between stadiums. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="70" column="10" bodyfile="dbmanager.cpp" bodystart="157" bodyend="197"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1ac07ce420fd795d2e613d3d58151a3f13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -136,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="65" column="10" bodyfile="dbmanager.cpp" bodystart="128" bodyend="169"/>
+        <location file="dbmanager.h" line="76" column="10" bodyfile="dbmanager.cpp" bodystart="254" bodyend="294"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1a8f06e6e0365900ada1bf178576299c58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -178,7 +234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="74" column="10" bodyfile="dbmanager.cpp" bodystart="368" bodyend="391"/>
+        <location file="dbmanager.h" line="85" column="10" bodyfile="dbmanager.cpp" bodystart="493" bodyend="516"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1aba2fa2af8d63efc7aec75bf690c69a3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -232,7 +288,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="83" column="10" bodyfile="dbmanager.cpp" bodystart="299" bodyend="322"/>
+        <location file="dbmanager.h" line="94" column="10" bodyfile="dbmanager.cpp" bodystart="424" bodyend="447"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1aec7a231230eb9e7f4fac4224304130cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -274,7 +330,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="91" column="10" bodyfile="dbmanager.cpp" bodystart="173" bodyend="191"/>
+        <location file="dbmanager.h" line="102" column="10" bodyfile="dbmanager.cpp" bodystart="296" bodyend="316"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1adf32025a73fc9b230a8135cb0af35c5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -340,7 +396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="101" column="10" bodyfile="dbmanager.cpp" bodystart="343" bodyend="366"/>
+        <location file="dbmanager.h" line="112" column="10" bodyfile="dbmanager.cpp" bodystart="468" bodyend="491"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1a066c64eeb0214baf725d17cb56227e5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -402,7 +458,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="110" column="10" bodyfile="dbmanager.cpp" bodystart="277" bodyend="296"/>
+        <location file="dbmanager.h" line="121" column="10" bodyfile="dbmanager.cpp" bodystart="402" bodyend="421"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1a0d17a065e941949c2472ddc19436e1a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -456,7 +512,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="119" column="10" bodyfile="dbmanager.cpp" bodystart="324" bodyend="341"/>
+        <location file="dbmanager.h" line="130" column="10" bodyfile="dbmanager.cpp" bodystart="449" bodyend="466"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1ab139c436a07cbd611edd0d169962f5fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -498,7 +554,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="127" column="9" bodyfile="dbmanager.cpp" bodystart="193" bodyend="218"/>
+        <location file="dbmanager.h" line="138" column="9" bodyfile="dbmanager.cpp" bodystart="318" bodyend="343"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1a2d75fe15fff87d86cf7445e147f1dc0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -540,7 +596,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="135" column="10" bodyfile="dbmanager.cpp" bodystart="220" bodyend="245"/>
+        <location file="dbmanager.h" line="146" column="10" bodyfile="dbmanager.cpp" bodystart="345" bodyend="370"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1aedfdf8a34ade856e4fab1ea3adcef5b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -557,7 +613,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="141" column="10" bodyfile="dbmanager.cpp" bodystart="247" bodyend="260"/>
+        <location file="dbmanager.h" line="152" column="10" bodyfile="dbmanager.cpp" bodystart="372" bodyend="385"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1aeaac0d5a8393040e7b52208c80ea3fd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -574,7 +630,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="147" column="10" bodyfile="dbmanager.cpp" bodystart="262" bodyend="275"/>
+        <location file="dbmanager.h" line="158" column="10" bodyfile="dbmanager.cpp" bodystart="387" bodyend="400"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1a3fb7e05878d16c1c5cea11b53cf04d4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -604,7 +660,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="154" column="10" bodyfile="dbmanager.cpp" bodystart="534" bodyend="578"/>
+        <location file="dbmanager.h" line="165" column="10" bodyfile="dbmanager.cpp" bodystart="720" bodyend="764"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1a104d9d622610c93e1b2aee8f73589c1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::addMLB</definition>
+        <argsstring>(const QString &amp;path)</argsstring>
+        <name>addMLB</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Reads MLB data from an xlsx file at the given path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="171" column="10" bodyfile="dbmanager.cpp" bodystart="659" bodyend="718"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1ae1a3c72afdf29e00bc16fd128dc35b94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -634,7 +718,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="161" column="10" bodyfile="dbmanager.cpp" bodystart="422" bodyend="446"/>
+        <location file="dbmanager.h" line="178" column="10" bodyfile="dbmanager.cpp" bodystart="547" bodyend="571"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1acdbad81f27cdb3f8e3bbf656eeeba382" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -676,7 +760,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="169" column="10" bodyfile="dbmanager.cpp" bodystart="393" bodyend="420"/>
+        <location file="dbmanager.h" line="186" column="10" bodyfile="dbmanager.cpp" bodystart="518" bodyend="545"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1af9547f6dc3ad170a70c0ee4d89f714fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -693,7 +777,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="175" column="10" bodyfile="dbmanager.cpp" bodystart="448" bodyend="464"/>
+        <location file="dbmanager.h" line="192" column="10" bodyfile="dbmanager.cpp" bodystart="573" bodyend="589"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1ac04baba8f5d5197f8bcd9230393501de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -710,7 +794,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="181" column="10" bodyfile="dbmanager.cpp" bodystart="466" bodyend="469"/>
+        <location file="dbmanager.h" line="198" column="10" bodyfile="dbmanager.cpp" bodystart="591" bodyend="594"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1a3ef6d1b5c19b8192420ba8743c7172ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -740,7 +824,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="188" column="10" bodyfile="dbmanager.cpp" bodystart="471" bodyend="505"/>
+        <location file="dbmanager.h" line="205" column="10" bodyfile="dbmanager.cpp" bodystart="596" bodyend="630"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1a5d730ddded1f92e418a9c88e570b2117" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>QString</type>
@@ -770,7 +854,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="195" column="13" bodyfile="dbmanager.cpp" bodystart="507" bodyend="532"/>
+        <location file="dbmanager.h" line="212" column="13" bodyfile="dbmanager.cpp" bodystart="632" bodyend="657"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1ae790551011d6cb42a4fd20a173eb9598" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -828,7 +912,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="204" column="10" bodyfile="dbmanager.cpp" bodystart="604" bodyend="622"/>
+        <location file="dbmanager.h" line="221" column="10" bodyfile="dbmanager.cpp" bodystart="801" bodyend="819"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1a5bd60338e1ad8ffd0c63f34e84f88808" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -858,7 +942,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="211" column="10" bodyfile="dbmanager.cpp" bodystart="625" bodyend="649"/>
+        <location file="dbmanager.h" line="228" column="10" bodyfile="dbmanager.cpp" bodystart="822" bodyend="846"/>
       </memberdef>
       <memberdef kind="function" id="class_db_manager_1a42e94ab2a5751c839a6d57221d3d4e99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -866,12 +950,44 @@
         <argsstring>()</argsstring>
         <name>createTripTable</name>
         <briefdescription>
+<para>Creates tables in the database used in the trip planning process. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="dbmanager.h" line="213" column="10" bodyfile="dbmanager.cpp" bodystart="580" bodyend="602"/>
+        <location file="dbmanager.h" line="234" column="10" bodyfile="dbmanager.cpp" bodystart="766" bodyend="799"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1a5f7bde3d8a96b46f7cf6c3186ea0f3a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbManager::createSouvTable</definition>
+        <argsstring>()</argsstring>
+        <name>createSouvTable</name>
+        <briefdescription>
+<para>Initializes a database table with standard souvenirs for each stadium. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="239" column="10" bodyfile="dbmanager.cpp" bodystart="848" bodyend="926"/>
+      </memberdef>
+      <memberdef kind="function" id="class_db_manager_1ad687c4a68f09e305d048b5686f0aef81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DbManager::reOpen</definition>
+        <argsstring>()</argsstring>
+        <name>reOpen</name>
+        <briefdescription>
+<para>Re opens the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbmanager.h" line="245" column="10" bodyfile="dbmanager.cpp" bodystart="928" bodyend="946"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -891,10 +1007,11 @@
         <link refid="class_db_manager"/>
       </node>
     </collaborationgraph>
-    <location file="dbmanager.h" line="34" column="1" bodyfile="dbmanager.h" bodystart="33" bodyend="221"/>
+    <location file="dbmanager.h" line="34" column="1" bodyfile="dbmanager.h" bodystart="33" bodyend="253"/>
     <listofallmembers>
       <member refid="class_db_manager_1a066c64eeb0214baf725d17cb56227e5f" prot="public" virt="non-virtual"><scope>DbManager</scope><name>addCart</name></member>
       <member refid="class_db_manager_1a3fb7e05878d16c1c5cea11b53cf04d4d" prot="public" virt="non-virtual"><scope>DbManager</scope><name>addColleges</name></member>
+      <member refid="class_db_manager_1a104d9d622610c93e1b2aee8f73589c1e" prot="public" virt="non-virtual"><scope>DbManager</scope><name>addMLB</name></member>
       <member refid="class_db_manager_1aedfdf8a34ade856e4fab1ea3adcef5b3" prot="public" virt="non-virtual"><scope>DbManager</scope><name>addPurchase</name></member>
       <member refid="class_db_manager_1aba2fa2af8d63efc7aec75bf690c69a3c" prot="public" virt="non-virtual"><scope>DbManager</scope><name>addSou</name></member>
       <member refid="class_db_manager_1ae790551011d6cb42a4fd20a173eb9598" prot="public" virt="non-virtual"><scope>DbManager</scope><name>addTrip</name></member>
@@ -902,16 +1019,20 @@
       <member refid="class_db_manager_1ab139c436a07cbd611edd0d169962f5fa" prot="public" virt="non-virtual"><scope>DbManager</scope><name>cartQuantity</name></member>
       <member refid="class_db_manager_1a3ef6d1b5c19b8192420ba8743c7172ef" prot="public" virt="non-virtual"><scope>DbManager</scope><name>checkAdmin</name></member>
       <member refid="class_db_manager_1af9547f6dc3ad170a70c0ee4d89f714fc" prot="public" virt="non-virtual"><scope>DbManager</scope><name>clearDb</name></member>
+      <member refid="class_db_manager_1a5f7bde3d8a96b46f7cf6c3186ea0f3a4" prot="public" virt="non-virtual"><scope>DbManager</scope><name>createSouvTable</name></member>
       <member refid="class_db_manager_1a42e94ab2a5751c839a6d57221d3d4e99" prot="public" virt="non-virtual"><scope>DbManager</scope><name>createTripTable</name></member>
       <member refid="class_db_manager_1a449b4cc451c4ec493345d799891e7eaa" prot="public" virt="non-virtual"><scope>DbManager</scope><name>DbManager</name></member>
       <member refid="class_db_manager_1a5d730ddded1f92e418a9c88e570b2117" prot="public" virt="non-virtual"><scope>DbManager</scope><name>getPassword</name></member>
       <member refid="class_db_manager_1a919d96426a334c5f5f2f925b36e7ce86" prot="public" virt="non-virtual"><scope>DbManager</scope><name>InitCollegeList</name></member>
       <member refid="class_db_manager_1ac07ce420fd795d2e613d3d58151a3f13" prot="public" virt="non-virtual"><scope>DbManager</scope><name>initDistanceList</name></member>
+      <member refid="class_db_manager_1a27e3cf03a3af42d289aa3a858c1b1d5f" prot="public" virt="non-virtual"><scope>DbManager</scope><name>initMlbList</name></member>
       <member refid="class_db_manager_1ac339cd04710203c6faf8d4a5d55b0135" prot="public" virt="non-virtual"><scope>DbManager</scope><name>initSouvenirList</name></member>
+      <member refid="class_db_manager_1af6bbe50328823ab15a3ed3ea9c19735e" prot="public" virt="non-virtual"><scope>DbManager</scope><name>initStadiumList</name></member>
       <member refid="class_db_manager_1ac04baba8f5d5197f8bcd9230393501de" prot="public" virt="non-virtual"><scope>DbManager</scope><name>isOpen</name></member>
       <member refid="class_db_manager_1a47f7984afa73f976fdc1cbd2f10753cf" prot="private" virt="non-virtual"><scope>DbManager</scope><name>myDB</name></member>
       <member refid="class_db_manager_1a2d75fe15fff87d86cf7445e147f1dc0a" prot="public" virt="non-virtual"><scope>DbManager</scope><name>removeCart</name></member>
       <member refid="class_db_manager_1aec7a231230eb9e7f4fac4224304130cb" prot="public" virt="non-virtual"><scope>DbManager</scope><name>removeSou</name></member>
+      <member refid="class_db_manager_1ad687c4a68f09e305d048b5686f0aef81" prot="public" virt="non-virtual"><scope>DbManager</scope><name>reOpen</name></member>
       <member refid="class_db_manager_1aeaac0d5a8393040e7b52208c80ea3fd4" prot="public" virt="non-virtual"><scope>DbManager</scope><name>resetCart</name></member>
       <member refid="class_db_manager_1acdbad81f27cdb3f8e3bbf656eeeba382" prot="public" virt="non-virtual"><scope>DbManager</scope><name>souExists</name></member>
       <member refid="class_db_manager_1a5bd60338e1ad8ffd0c63f34e84f88808" prot="public" virt="non-virtual"><scope>DbManager</scope><name>tripIdExists</name></member>

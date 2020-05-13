@@ -1,7 +1,7 @@
 <map id="tripSummary::tripSummary" name="tripSummary::tripSummary">
 <area shape="rect" id="node1" title="explicit Constructor" alt="" coords="5,107,184,134"/>
-<area shape="rect" id="node2" href="$classtrip_summary.html#adb1411877190127a126618a437ff47b3" title=" " alt="" coords="253,5,436,47"/>
-<area shape="rect" id="node3" href="$classtrip_summary.html#a1d82d9dd567f2be49d1710651c4d8fe8" title=" " alt="" coords="259,71,430,112"/>
+<area shape="rect" id="node2" href="$classtrip_summary.html#adb1411877190127a126618a437ff47b3" title="updates the combo box with the stadiums on the trip" alt="" coords="253,5,436,47"/>
+<area shape="rect" id="node3" href="$classtrip_summary.html#a1d82d9dd567f2be49d1710651c4d8fe8" title="updates the total distance of the trip" alt="" coords="259,71,430,112"/>
 <area shape="rect" id="node4" href="$classtrip_summary.html#ac5267f51220eb49c45707b1eccce8587" title="updates tripID and UI model when called. Prepares query for all availble tripIDs" alt="" coords="232,137,457,163"/>
-<area shape="rect" id="node5" href="$classtrip_summary.html#ad20de08790de627fdf704c0991222c09" title=" " alt="" coords="249,187,441,214"/>
+<area shape="rect" id="node5" href="$classtrip_summary.html#ad20de08790de627fdf704c0991222c09" title="updates the total of the entire trip" alt="" coords="249,187,441,214"/>
 </map>

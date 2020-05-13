@@ -1,6 +1,7 @@
 <map id="tripPlanner" name="tripPlanner">
-<area shape="rect" id="node1" title="class recusively planning (calculating) the most efficient trip, manages data tables,..." alt="" coords="59,784,213,1155"/>
-<area shape="rect" id="node2" title=" " alt="" coords="9,79,77,156"/>
-<area shape="rect" id="node4" href="$classtripprogress.html" title="class for displaying and calculating student trip progress, destinations, and student shopping cart f..." alt="" coords="39,292,233,721"/>
-<area shape="rect" id="node3" href="$class_db_manager.html" title="SQL Database Manager class." alt="" coords="143,5,273,229"/>
+<area shape="rect" id="node1" title=" " alt="" coords="105,784,260,1316"/>
+<area shape="rect" id="node2" title=" " alt="" coords="73,79,141,156"/>
+<area shape="rect" id="node3" href="$classgraph_info.html" title=" " alt="" coords="47,453,166,560"/>
+<area shape="rect" id="node5" href="$classtripprogress.html" title="class for displaying and calculating student trip progress, destinations, and student shopping cart f..." alt="" coords="191,292,385,721"/>
+<area shape="rect" id="node4" href="$class_db_manager.html" title="SQL Database Manager class." alt="" coords="331,5,461,229"/>
 </map>

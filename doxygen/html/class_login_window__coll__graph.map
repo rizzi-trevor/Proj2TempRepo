@@ -1,7 +1,7 @@
 <map id="LoginWindow" name="LoginWindow">
-<area shape="rect" id="node1" title=" " alt="" coords="135,623,342,817"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,387,112,465"/>
-<area shape="rect" id="node3" href="$class_admin_window.html" title="class initializes AdminWindow UI and manages all Admin only permissive execution in editing user data..." alt="" coords="136,292,341,560"/>
+<area shape="rect" id="node1" title=" " alt="" coords="135,681,342,876"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,417,112,494"/>
+<area shape="rect" id="node3" href="$class_admin_window.html" title="class initializes AdminWindow UI and manages all Admin only permissive execution in editing user data..." alt="" coords="136,292,341,619"/>
 <area shape="rect" id="node4" title=" " alt="" coords="205,79,273,156"/>
 <area shape="rect" id="node5" href="$class_db_manager.html" title="SQL Database Manager class." alt="" coords="311,5,441,229"/>
 </map>

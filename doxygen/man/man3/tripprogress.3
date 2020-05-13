@@ -1,4 +1,4 @@
-.TH "tripprogress" 3 "Mon Mar 23 2020" "Version 1" "CS1D - Project1 - College Touring" \" -*- nroff -*-
+.TH "tripprogress" 3 "Mon May 11 2020" "Version 1" "CS1D - Project2 - Baseball" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -35,6 +35,9 @@ Inherits QDialog\&.
 .br
 .RI "default explicit Constructor "
 .ti -1c
+.RI "\fBtripprogress\fP (QWidget *parent, QString I_D)"
+.br
+.ti -1c
 .RI "\fB~tripprogress\fP ()"
 .br
 .RI "Destructor\&. "
@@ -53,6 +56,7 @@ Inherits QDialog\&.
 .ti -1c
 .RI "void \fBgetDistance\fP ()"
 .br
+.RI "Retreives teh distance to the next stadium from the database for display\&. "
 .ti -1c
 .RI "void \fBupdateCart\fP ()"
 .br
@@ -92,6 +96,7 @@ Inherits QDialog\&.
 .ti -1c
 .RI "void \fBon_souvTable_clicked\fP (const QModelIndex &index)"
 .br
+.RI "Gets the data of the chosen cell in the table\&. "
 .ti -1c
 .RI "void \fBon_addCart_clicked\fP ()"
 .br
@@ -99,15 +104,11 @@ Inherits QDialog\&.
 .ti -1c
 .RI "void \fBon_pushButton_4_released\fP ()"
 .br
+.RI "Checkout the cart to make a purchase\&. "
 .ti -1c
 .RI "void \fBon_removeCart_clicked\fP ()"
 .br
-.ti -1c
-.RI "void \fBon_pushButton_clicked\fP ()"
-.br
-.ti -1c
-.RI "void \fBon_pushButton_4_clicked\fP ()"
-.br
+.RI "Removes an item from the cart\&. "
 .in -1c
 .SS "Private Attributes"
 
@@ -124,6 +125,9 @@ Inherits QDialog\&.
 .RI "QStringList \fBtrip\fP"
 .br
 .RI "stores list of each trip/destination data "
+.ti -1c
+.RI "QString \fBteamName\fP"
+.br
 .ti -1c
 .RI "int \fBcounter\fP"
 .br
@@ -155,12 +159,20 @@ default explicit Constructor Constructor sets up ui for tripprogress and initial
 Definition at line 4 of file tripprogress\&.cpp\&.
 .PP
 References counter\&.
+.SS "tripprogress::tripprogress (QWidget * parent, QString I_D)"
+
+.PP
+Definition at line 17 of file tripprogress\&.cpp\&.
+.PP
+References counter, and tripprogress()\&.
+.PP
+Referenced by tripprogress()\&.
 .SS "tripprogress::~tripprogress ()"
 
 .PP
 Destructor\&. Close the tripprogress UI 
 .PP
-Definition at line 17 of file tripprogress\&.cpp\&.
+Definition at line 32 of file tripprogress\&.cpp\&.
 .PP
 References ui\&.
 .SH "Member Function Documentation"
@@ -177,11 +189,13 @@ nothing - void
 .PP
 
 .PP
-Definition at line 200 of file tripprogress\&.cpp\&.
+Definition at line 223 of file tripprogress\&.cpp\&.
 .SS "void tripprogress::getDistance ()"
 
 .PP
-Definition at line 171 of file tripprogress\&.cpp\&.
+Retreives teh distance to the next stadium from the database for display\&. 
+.PP
+Definition at line 194 of file tripprogress\&.cpp\&.
 .PP
 Referenced by onLoadClick(), and onNextClick()\&.
 .SS "void tripprogress::nextTrip ()"
@@ -196,7 +210,7 @@ nothing - void
 .PP
 
 .PP
-Definition at line 68 of file tripprogress\&.cpp\&.
+Definition at line 80 of file tripprogress\&.cpp\&.
 .PP
 References counter, confirmpage::getData(), max, confirmpage::on_okButton_released(), tripSummary::on_school_comboBox_currentIndexChanged(), updateCart(), and updateTotal()\&.
 .PP
@@ -213,31 +227,38 @@ nothing - void
 .PP
 
 .PP
-Definition at line 299 of file tripprogress\&.cpp\&.
+Definition at line 323 of file tripprogress\&.cpp\&.
 .PP
 References updateCart(), and updateTotal()\&.
-.SS "void tripprogress::on_pushButton_4_clicked ()\fC [private]\fP, \fC [slot]\fP"
-
 .SS "void tripprogress::on_pushButton_4_released ()\fC [private]\fP, \fC [slot]\fP"
 
 .PP
-Definition at line 322 of file tripprogress\&.cpp\&.
+Checkout the cart to make a purchase\&. 
+.PP
+Definition at line 346 of file tripprogress\&.cpp\&.
 .PP
 References confirmpage::getData(), and confirmpage::on_okButton_released()\&.
-.SS "void tripprogress::on_pushButton_clicked ()\fC [private]\fP, \fC [slot]\fP"
-
 .SS "void tripprogress::on_removeCart_clicked ()\fC [private]\fP, \fC [slot]\fP"
 
 .PP
-Definition at line 338 of file tripprogress\&.cpp\&.
+Removes an item from the cart\&. 
+.PP
+Definition at line 363 of file tripprogress\&.cpp\&.
 .PP
 References updateCart(), and updateTotal()\&.
 .SS "void tripprogress::on_souvTable_clicked (const QModelIndex & index)\fC [private]\fP, \fC [slot]\fP"
 
 .PP
-Definition at line 280 of file tripprogress\&.cpp\&.
+Gets the data of the chosen cell in the table\&. 
 .PP
-Referenced by tripPlanner::onStartClick()\&.
+\fBParameters\fP
+.RS 4
+\fIindex\fP - Cell click in the table 
+.RE
+.PP
+
+.PP
+Definition at line 303 of file tripprogress\&.cpp\&.
 .SS "void tripprogress::onLoadClick ()\fC [slot]\fP"
 
 .PP
@@ -250,7 +271,7 @@ nothing - void
 .PP
 
 .PP
-Definition at line 24 of file tripprogress\&.cpp\&.
+Definition at line 39 of file tripprogress\&.cpp\&.
 .PP
 References getDistance(), and nextTrip()\&.
 .SS "void tripprogress::onNextClick ()\fC [slot]\fP"
@@ -265,7 +286,7 @@ nothing - void
 .PP
 
 .PP
-Definition at line 223 of file tripprogress\&.cpp\&.
+Definition at line 246 of file tripprogress\&.cpp\&.
 .PP
 References getDistance(), and nextTrip()\&.
 .SS "void tripprogress::onPrevClick ()\fC [slot]\fP"
@@ -280,7 +301,7 @@ nothing - void
 .PP
 
 .PP
-Definition at line 229 of file tripprogress\&.cpp\&.
+Definition at line 252 of file tripprogress\&.cpp\&.
 .PP
 References prevTrip()\&.
 .SS "void tripprogress::prevTrip ()"
@@ -295,7 +316,7 @@ nothing - void
 .PP
 
 .PP
-Definition at line 133 of file tripprogress\&.cpp\&.
+Definition at line 156 of file tripprogress\&.cpp\&.
 .PP
 References counter\&.
 .PP
@@ -312,7 +333,7 @@ nothing - void
 .PP
 
 .PP
-Definition at line 234 of file tripprogress\&.cpp\&.
+Definition at line 257 of file tripprogress\&.cpp\&.
 .PP
 Referenced by nextTrip(), on_addCart_clicked(), and on_removeCart_clicked()\&.
 .SS "void tripprogress::updateTotal ()"
@@ -327,7 +348,7 @@ nothing - void
 .PP
 
 .PP
-Definition at line 255 of file tripprogress\&.cpp\&.
+Definition at line 278 of file tripprogress\&.cpp\&.
 .PP
 Referenced by nextTrip(), on_addCart_clicked(), and on_removeCart_clicked()\&.
 .SH "Member Data Documentation"
@@ -335,7 +356,7 @@ Referenced by nextTrip(), on_addCart_clicked(), and on_removeCart_clicked()\&.
 .SS "int tripprogress::counter\fC [private]\fP"
 
 .PP
-Definition at line 159 of file tripprogress\&.h\&.
+Definition at line 173 of file tripprogress\&.h\&.
 .PP
 Referenced by nextTrip(), prevTrip(), and tripprogress()\&.
 .SS "QString tripprogress::currentCol"
@@ -343,11 +364,11 @@ Referenced by nextTrip(), prevTrip(), and tripprogress()\&.
 .PP
 field member for storing currentCol(db) 
 .PP
-Definition at line 58 of file tripprogress\&.h\&.
+Definition at line 60 of file tripprogress\&.h\&.
 .SS "int tripprogress::max\fC [private]\fP"
 
 .PP
-Definition at line 160 of file tripprogress\&.h\&.
+Definition at line 174 of file tripprogress\&.h\&.
 .PP
 Referenced by nextTrip()\&.
 .SS "\fBDbManager\fP tripprogress::myDb = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')\fC [private]\fP"
@@ -355,46 +376,50 @@ Referenced by nextTrip()\&.
 .PP
 assigns DB to predefined PROJECT_PATH constant 
 .PP
-Definition at line 152 of file tripprogress\&.h\&.
+Definition at line 164 of file tripprogress\&.h\&.
 .SS "int tripprogress::row"
 
 .PP
 field member for storing sql table row 
 .PP
-Definition at line 73 of file tripprogress\&.h\&.
+Definition at line 75 of file tripprogress\&.h\&.
 .SS "QString tripprogress::souvenirName"
 
 .PP
 field member for storing college souvenirName 
 .PP
-Definition at line 63 of file tripprogress\&.h\&.
+Definition at line 65 of file tripprogress\&.h\&.
 .SS "double tripprogress::souvenirPrice"
 
 .PP
 field member for storing college souvenirPrice 
 .PP
-Definition at line 68 of file tripprogress\&.h\&.
+Definition at line 70 of file tripprogress\&.h\&.
+.SS "QString tripprogress::teamName\fC [private]\fP"
+
+.PP
+Definition at line 171 of file tripprogress\&.h\&.
 .SS "QStringList tripprogress::trip\fC [private]\fP"
 
 .PP
 stores list of each trip/destination data 
 .PP
-Definition at line 157 of file tripprogress\&.h\&.
+Definition at line 169 of file tripprogress\&.h\&.
 .SS "QString tripprogress::tripID"
 
 .PP
 field member for storing tripID 
 .PP
-Definition at line 53 of file tripprogress\&.h\&.
+Definition at line 55 of file tripprogress\&.h\&.
 .SS "Ui::tripprogress* tripprogress::ui\fC [private]\fP"
 
 .PP
 points to tripprogress UI 
 .PP
-Definition at line 147 of file tripprogress\&.h\&.
+Definition at line 159 of file tripprogress\&.h\&.
 .PP
 Referenced by ~tripprogress()\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for CS1D - Project1 - College Touring from the source code\&.
+Generated automatically by Doxygen for CS1D - Project2 - Baseball from the source code\&.

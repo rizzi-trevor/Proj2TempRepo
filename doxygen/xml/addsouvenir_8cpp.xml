@@ -5,19 +5,6 @@
     <includes refid="addsouvenir_8h" local="yes">addsouvenir.h</includes>
     <includes local="yes">ui_addsouvenir.h</includes>
     <incdepgraph>
-      <node id="2">
-        <label>addsouvenir.h</label>
-        <link refid="addsouvenir_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>ui_addsouvenir.h</label>
-      </node>
       <node id="11">
         <label>confirmpage.h</label>
         <link refid="confirmpage_8h"/>
@@ -25,6 +12,9 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+      </node>
+      <node id="12">
+        <label>ui_addsouvenir.h</label>
       </node>
       <node id="9">
         <label>QSqlDatabase</label>
@@ -34,20 +24,6 @@
       </node>
       <node id="7">
         <label>QDebug</label>
-      </node>
-      <node id="1">
-        <label>addsouvenir.cpp</label>
-        <link refid="addsouvenir_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>QAbstractItemModel</label>
-      </node>
-      <node id="10">
-        <label>QSqlQuery</label>
       </node>
       <node id="4">
         <label>dbmanager.h</label>
@@ -63,6 +39,30 @@
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>addsouvenir.h</label>
+        <link refid="addsouvenir_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QAbstractItemModel</label>
+      </node>
+      <node id="10">
+        <label>QSqlQuery</label>
+      </node>
+      <node id="1">
+        <label>addsouvenir.cpp</label>
+        <link refid="addsouvenir_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -100,7 +100,7 @@
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>QSqlQuery*<sp/>qry=</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QSqlQuery();</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>qry-&gt;prepare(</highlight><highlight class="stringliteral">&quot;SELECT<sp/>DISTINCT<sp/>startCollege<sp/>FROM<sp/>Distances&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>qry-&gt;prepare(</highlight><highlight class="stringliteral">&quot;SELECT<sp/>DISTINCT<sp/>TeamName<sp/>FROM<sp/>MLB&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(qry-&gt;exec())</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>

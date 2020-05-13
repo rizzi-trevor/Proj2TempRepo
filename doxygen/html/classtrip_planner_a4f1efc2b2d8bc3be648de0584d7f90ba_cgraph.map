@@ -1,5 +1,8 @@
 <map id="tripPlanner::tripPlanner" name="tripPlanner::tripPlanner">
-<area shape="rect" id="node1" title="default explicit Constructor" alt="" coords="5,31,160,57"/>
-<area shape="rect" id="node2" href="$classtrip_planner.html#a09ff51f12d0e4eece8f5fd2db9017d38" title="initalizes list of colleges and their distances from start colleges, as well as the UI for selecting ..." alt="" coords="214,5,374,32"/>
-<area shape="rect" id="node3" href="$classtrip_planner.html#a83f8c209f19db50a76b7ff24eb7527bc" title=" " alt="" coords="208,56,380,83"/>
+<area shape="rect" id="node1" title="default explicit Constructor" alt="" coords="5,107,160,133"/>
+<area shape="rect" id="node2" href="$classtrip_planner.html#a09ff51f12d0e4eece8f5fd2db9017d38" title="Initalizes checkbox list." alt="" coords="225,5,385,32"/>
+<area shape="rect" id="node3" href="$classtrip_planner.html#a83f8c209f19db50a76b7ff24eb7527bc" title="Updates combo box in MLB information." alt="" coords="219,56,391,83"/>
+<area shape="rect" id="node4" href="$classtrip_planner.html#a0995eab75003d7dce53d41210439331b" title="Updates teh combo box for available stadiums." alt="" coords="208,107,403,133"/>
+<area shape="rect" id="node5" href="$classtrip_planner.html#adcabaf282aa097a5f2f6b8a326df8c46" title="Updates the table in the Distances tab." alt="" coords="213,157,398,184"/>
+<area shape="rect" id="node6" href="$classtrip_planner.html#a5ce520f9de46b775e0c4b6ddaa9db765" title="Updates the table in the MLB information tab." alt="" coords="211,208,400,235"/>
 </map>

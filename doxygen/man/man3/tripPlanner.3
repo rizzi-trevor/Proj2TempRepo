@@ -1,9 +1,8 @@
-.TH "tripPlanner" 3 "Mon Mar 23 2020" "Version 1" "CS1D - Project1 - College Touring" \" -*- nroff -*-
+.TH "tripPlanner" 3 "Mon May 11 2020" "Version 1" "CS1D - Project2 - Baseball" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-tripPlanner \- class recusively planning (calculating) the most efficient trip, manages data tables, checks if data is valid, and begins inital processes of planning a trip  
-
+tripPlanner
 .SH SYNOPSIS
 .br
 .PP
@@ -11,6 +10,74 @@ tripPlanner \- class recusively planning (calculating) the most efficient trip, 
 \fC#include <tripplanner\&.h>\fP
 .PP
 Inherits QDialog\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBonTypologyClick\fP ()"
+.br
+.RI "Displays stadiums by ballpark topology in MLB information tab\&. "
+.ti -1c
+.RI "void \fBonAmericanClick\fP ()"
+.br
+.RI "Displays stadiums in the American League in MLB information tab\&. "
+.ti -1c
+.RI "void \fBonShowClick\fP ()"
+.br
+.RI "Displays all stadiums in MLB information tab\&. "
+.ti -1c
+.RI "void \fBonNationalClick\fP ()"
+.br
+.RI "Displays stadiums in the National League in MLB information tab\&. "
+.ti -1c
+.RI "void \fBonStadiumsClick\fP ()"
+.br
+.RI "Displays teams and stadiums sorted by stadium name in MLB information tab\&. "
+.ti -1c
+.RI "void \fBonTeamClick\fP ()"
+.br
+.RI "Displays teams and stadiums sorted by team name in MLB information tab\&. "
+.ti -1c
+.RI "void \fBonSearchClick\fP ()"
+.br
+.RI "Displays team that matches searched team name in MLB information tab\&. "
+.ti -1c
+.RI "void \fBonRoofClick\fP ()"
+.br
+.RI "Displays stadiums by roof type in MLB information tab\&. "
+.ti -1c
+.RI "void \fBonDateClick\fP ()"
+.br
+.RI "Displays stadiums by creation year in MLB information tab\&. "
+.ti -1c
+.RI "void \fBonSeatingClick\fP ()"
+.br
+.RI "Displays stadiums by number of seats in MLB information tab\&. "
+.ti -1c
+.RI "void \fBonGreatClick\fP ()"
+.br
+.RI "Displays stadiums by largest distance field in MLB information tab\&. "
+.ti -1c
+.RI "void \fBonLeastClick\fP ()"
+.br
+.RI "Displays stadiums by shortest distance field in MLB information tab\&. "
+.ti -1c
+.RI "void \fBinitializeList\fP ()"
+.br
+.RI "Initalizes checkbox list\&. "
+.ti -1c
+.RI "void \fBonPlanClick\fP ()"
+.br
+.RI "Plans trip path requires a valid tripID entered uses the algorithm function to determine path through stadiums requires a valid starting stadium\&. "
+.ti -1c
+.RI "void \fBonGraphInfoClick\fP ()"
+.br
+.RI "Opens a dialogue displaying the BFS, DFS, and MST distances of the stadium graph\&. "
+.ti -1c
+.RI "void \fBonStartTrip\fP ()"
+.br
+.RI "Initiates the start of the trip requires valid trip plan and ID\&. "
+.in -1c
 .SS "Public Member Functions"
 
 .in +1c
@@ -23,58 +90,47 @@ Inherits QDialog\&.
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "void \fBinitializeList\fP ()"
+.RI "void \fBupdateCombo\fP ()"
 .br
-.RI "initalizes list of colleges and their distances from start colleges, as well as the UI for selecting and pushing colleges via checkBoxVector "
+.RI "Updates combo box in MLB information\&. "
+.ti -1c
+.RI "void \fBupdateDistTable\fP ()"
+.br
+.RI "Updates the table in the Distances tab\&. "
+.ti -1c
+.RI "void \fBupdateMLBTable\fP ()"
+.br
+.RI "Updates the table in the MLB information tab\&. "
 .ti -1c
 .RI "void \fBselectedCollegeList\fP ()"
 .br
-.RI "stores and displays list of user/student selected colleges for current trip in progress/planned "
-.ti -1c
-.RI "void \fBplanAlgorithm\fP (QString start, int dist)"
-.br
-.RI "method that calculates most efficient route between all selected colleges, from start to finish "
+.RI "Creates the checkbox list of stadiums\&. "
 .ti -1c
 .RI "bool \fBcollegeDoesExist\fP (QString colName)"
 .br
-.RI "method that checks whether college in sql col exists "
+.RI "Checks if a stadium name exists\&. "
 .ti -1c
 .RI "bool \fBplanDoesExist\fP (QString colName)"
 .br
-.RI "method that checks whether plan in sql col exists "
-.ti -1c
-.RI "void \fBupdateCollegeTable\fP (QString start)"
-.br
-.RI "updates sql table with college data, with trip starting and ending colleges with their distances "
-.ti -1c
-.RI "void \fBupdateSouvTable\fP (QString start)"
-.br
-.RI "updates sql table with souvenir data, with prices, quantity, souvenier name, and associated college "
+.RI "Checks if the given trip ID already exists\&. "
 .ti -1c
 .RI "void \fBshowTrip\fP (QString ID)"
 .br
-.RI "updates sql table with tripID data and displays/updates trip data table "
+.RI "Displays the trip order of the stadiums\&. "
 .ti -1c
-.RI "void \fBupdateCombo\fP ()"
+.RI "void \fBupdateComboTwo\fP ()"
 .br
+.RI "Updates teh combo box for available stadiums\&. "
+.ti -1c
+.RI "void \fBalgorithm\fP ()"
+.br
+.RI "Trip planning algorithm using dijkstra\&. "
 .in -1c
 .SS "Private Slots"
 
 .in +1c
 .ti -1c
 .RI "void \fBChecboxChanged\fP ()"
-.br
-.RI "manages and updates checkbox for user selected colleges "
-.ti -1c
-.RI "void \fBonPlanClick\fP ()"
-.br
-.RI "displays user input and manages initliazation of planning college trips, distances\&. Calls planAlgorithim showTrip, and updates all tables "
-.ti -1c
-.RI "void \fBonDisplayClick\fP ()"
-.br
-.RI "updates and displays souv and college tables "
-.ti -1c
-.RI "void \fBonStartClick\fP ()"
 .br
 .in -1c
 .SS "Private Attributes"
@@ -89,39 +145,42 @@ Inherits QDialog\&.
 .br
 .RI "assigns DB to predefined PROJECT_PATH constant "
 .ti -1c
+.RI "\fBtripprogress\fP * \fBprogress\fP"
+.br
+.ti -1c
 .RI "QVector< QCheckBox * > \fBcheckBoxVector\fP"
 .br
-.RI "vector for managing user selecting colleges via checkbox "
 .ti -1c
 .RI "QStringList \fBselectedColleges\fP"
 .br
-.RI "a string to hold the selected colleges - should be helpful for the plan trip algorithm "
 .ti -1c
 .RI "QStringList \fBplannedColleges\fP"
 .br
-.RI "a string to hold the planned colleges - should be helpful for the plan trip algorithm "
 .ti -1c
 .RI "int \fBdistance\fP"
 .br
-.RI "field member holding distance "
 .ti -1c
 .RI "QString \fBid\fP"
 .br
-.RI "field member holding tripID "
 .ti -1c
 .RI "QList< int > \fBdistanceTo\fP"
 .br
 .ti -1c
-.RI "\fBtripprogress\fP * \fBprogress\fP"
+.RI "\fBgraphInfo\fP * \fBinfo\fP"
+.br
+.ti -1c
+.RI "vector< QString > \fBpath\fP"
+.br
+.ti -1c
+.RI "vector< QString > \fBremainingChoices\fP"
+.br
+.ti -1c
+.RI "vector< int > \fBdistNext\fP"
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
-class recusively planning (calculating) the most efficient trip, manages data tables, checks if data is valid, and begins inital processes of planning a trip 
-
-\fBtripPlanner\fP manages the calculations for creating the most efficient trip for the student this updates all data tables for colleges, their names and specific data values, and souveniers, with their respectives data values 
-.PP
-Definition at line 30 of file tripplanner\&.h\&.
+Definition at line 16 of file tripplanner\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "tripPlanner::tripPlanner (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
@@ -136,269 +195,258 @@ default explicit Constructor Constructor sets up ui for \fBtripPlanner\fP and ex
 .PP
 
 .PP
-Definition at line 6 of file tripplanner\&.cpp\&.
+Definition at line 7 of file tripplanner\&.cpp\&.
 .PP
-References initializeList(), and updateCombo()\&.
+References initializeList(), updateCombo(), updateComboTwo(), updateDistTable(), and updateMLBTable()\&.
 .SS "tripPlanner::~tripPlanner ()"
 
 .PP
 Destructor\&. Close the \fBtripPlanner\fP UI 
 .PP
-Definition at line 16 of file tripplanner\&.cpp\&.
+Definition at line 21 of file tripplanner\&.cpp\&.
 .PP
 References ui\&.
 .SH "Member Function Documentation"
 .PP 
+.SS "void tripPlanner::algorithm ()"
+
+.PP
+Trip planning algorithm using dijkstra\&. 
+.PP
+Definition at line 627 of file tripplanner\&.cpp\&.
+.PP
+References algorithm()\&.
+.PP
+Referenced by algorithm(), and onPlanClick()\&.
 .SS "void tripPlanner::ChecboxChanged ()\fC [private]\fP, \fC [slot]\fP"
 
 .PP
-manages and updates checkbox for user selected colleges 
-.PP
-\fBReturns\fP
-.RS 4
-none- void 
-.RE
-.PP
-
-.PP
-Definition at line 81 of file tripplanner\&.cpp\&.
+Definition at line 406 of file tripplanner\&.cpp\&.
 .SS "bool tripPlanner::collegeDoesExist (QString colName)"
 
 .PP
-method that checks whether college in sql col exists 
+Checks if a stadium name exists\&. 
 .PP
-\fBReturns\fP
-.RS 4
-bool - true or false(whether data exists) 
-.RE
-.PP
-\fBParameters\fP
-.RS 4
-\fIcolname\fP - college col to be checked 
-.RE
-.PP
+Definition at line 547 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::initializeList ()\fC [slot]\fP"
 
 .PP
-Definition at line 241 of file tripplanner\&.cpp\&.
-.SS "void tripPlanner::initializeList ()"
-
+Initalizes checkbox list\&. 
 .PP
-initalizes list of colleges and their distances from start colleges, as well as the UI for selecting and pushing colleges via checkBoxVector 
-.PP
-\fBReturns\fP
-.RS 4
-nothing - void 
-.RE
-.PP
-
-.PP
-Definition at line 42 of file tripplanner\&.cpp\&.
+Definition at line 367 of file tripplanner\&.cpp\&.
 .PP
 Referenced by tripPlanner()\&.
-.SS "void tripPlanner::onDisplayClick ()\fC [private]\fP, \fC [slot]\fP"
+.SS "void tripPlanner::onAmericanClick ()\fC [slot]\fP"
 
 .PP
-updates and displays souv and college tables 
+Displays stadiums in the American League in MLB information tab\&. 
 .PP
-\fBReturns\fP
-.RS 4
-none- void 
-.RE
-.PP
+Definition at line 51 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::onDateClick ()\fC [slot]\fP"
 
 .PP
-Definition at line 335 of file tripplanner\&.cpp\&.
-.SS "void tripPlanner::onPlanClick ()\fC [private]\fP, \fC [slot]\fP"
+Displays stadiums by creation year in MLB information tab\&. 
+.PP
+Definition at line 277 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::onGraphInfoClick ()\fC [slot]\fP"
 
 .PP
-displays user input and manages initliazation of planning college trips, distances\&. Calls planAlgorithim showTrip, and updates all tables 
+Opens a dialogue displaying the BFS, DFS, and MST distances of the stadium graph\&. 
 .PP
-\fBReturns\fP
-.RS 4
-none- void 
-.RE
+Definition at line 618 of file tripplanner\&.cpp\&.
 .PP
+References info, and graphInfo::onCloseClick()\&.
+.SS "void tripPlanner::onGreatClick ()\fC [slot]\fP"
 
 .PP
-Definition at line 147 of file tripplanner\&.cpp\&.
+Displays stadiums by largest distance field in MLB information tab\&. 
 .PP
-References distance, and selectedCollegeList()\&.
-.SS "void tripPlanner::onStartClick ()\fC [private]\fP, \fC [slot]\fP"
+Definition at line 321 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::onLeastClick ()\fC [slot]\fP"
 
 .PP
-Definition at line 346 of file tripplanner\&.cpp\&.
+Displays stadiums by shortest distance field in MLB information tab\&. 
 .PP
-References tripprogress::on_souvTable_clicked()\&.
-.SS "void tripPlanner::planAlgorithm (QString start, int dist)"
+Definition at line 344 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::onNationalClick ()\fC [slot]\fP"
 
 .PP
-method that calculates most efficient route between all selected colleges, from start to finish 
+Displays stadiums in the National League in MLB information tab\&. 
 .PP
-\fBReturns\fP
-.RS 4
-nothing - void 
-.RE
-.PP
-\fBParameters\fP
-.RS 4
-\fIstart\fP - starting destination 
-.br
-\fIdist\fP - stores distance between destination for recursive 
-.RE
-.PP
+Definition at line 98 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::onPlanClick ()\fC [slot]\fP"
 
 .PP
-Definition at line 201 of file tripplanner\&.cpp\&.
+Plans trip path requires a valid tripID entered uses the algorithm function to determine path through stadiums requires a valid starting stadium\&. 
+.PP
+Definition at line 472 of file tripplanner\&.cpp\&.
+.PP
+References algorithm(), distance, and selectedCollegeList()\&.
+.SS "void tripPlanner::onRoofClick ()\fC [slot]\fP"
+
+.PP
+Displays stadiums by roof type in MLB information tab\&. 
+.PP
+Definition at line 254 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::onSearchClick ()\fC [slot]\fP"
+
+.PP
+Displays team that matches searched team name in MLB information tab\&. 
+.PP
+Definition at line 227 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::onSeatingClick ()\fC [slot]\fP"
+
+.PP
+Displays stadiums by number of seats in MLB information tab\&. 
+.PP
+Definition at line 298 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::onShowClick ()\fC [slot]\fP"
+
+.PP
+Displays all stadiums in MLB information tab\&. 
+.PP
+Definition at line 76 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::onStadiumsClick ()\fC [slot]\fP"
+
+.PP
+Displays teams and stadiums sorted by stadium name in MLB information tab\&. 
+.PP
+Definition at line 124 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::onStartTrip ()\fC [slot]\fP"
+
+.PP
+Initiates the start of the trip requires valid trip plan and ID\&. 
+.PP
+Definition at line 666 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::onTeamClick ()\fC [slot]\fP"
+
+.PP
+Displays teams and stadiums sorted by team name in MLB information tab\&. 
+.PP
+Definition at line 145 of file tripplanner\&.cpp\&.
+.SS "void tripPlanner::onTypologyClick ()\fC [slot]\fP"
+
+.PP
+Displays stadiums by ballpark topology in MLB information tab\&. 
+.PP
+Definition at line 26 of file tripplanner\&.cpp\&.
 .SS "bool tripPlanner::planDoesExist (QString colName)"
 
 .PP
-method that checks whether plan in sql col exists 
+Checks if the given trip ID already exists\&. 
 .PP
-\fBReturns\fP
-.RS 4
-bool - true or false(whether data exists) 
-.RE
-.PP
-\fBParameters\fP
-.RS 4
-\fIcolname\fP - plan col to be checked 
-.RE
-.PP
-
-.PP
-Definition at line 254 of file tripplanner\&.cpp\&.
+Definition at line 561 of file tripplanner\&.cpp\&.
 .SS "void tripPlanner::selectedCollegeList ()"
 
 .PP
-stores and displays list of user/student selected colleges for current trip in progress/planned 
+Creates the checkbox list of stadiums\&. 
 .PP
-\fBReturns\fP
-.RS 4
-nothing - void 
-.RE
-.PP
-
-.PP
-Definition at line 116 of file tripplanner\&.cpp\&.
+Definition at line 442 of file tripplanner\&.cpp\&.
 .PP
 Referenced by onPlanClick()\&.
 .SS "void tripPlanner::showTrip (QString ID)"
 
 .PP
-updates sql table with tripID data and displays/updates trip data table 
+Displays the trip order of the stadiums\&. 
 .PP
-\fBParameters\fP
-.RS 4
-\fIID\fP - tripID 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-none- void 
-.RE
-.PP
-
-.PP
-Definition at line 312 of file tripplanner\&.cpp\&.
-.SS "void tripPlanner::updateCollegeTable (QString start)"
-
-.PP
-updates sql table with college data, with trip starting and ending colleges with their distances 
-.PP
-\fBParameters\fP
-.RS 4
-\fIstart,starting\fP college for trip 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-none- void 
-.RE
-.PP
-
-.PP
-Definition at line 267 of file tripplanner\&.cpp\&.
+Definition at line 574 of file tripplanner\&.cpp\&.
 .SS "void tripPlanner::updateCombo ()"
 
 .PP
-Definition at line 21 of file tripplanner\&.cpp\&.
+Updates combo box in MLB information\&. 
+.PP
+Definition at line 166 of file tripplanner\&.cpp\&.
 .PP
 Referenced by tripPlanner()\&.
-.SS "void tripPlanner::updateSouvTable (QString start)"
+.SS "void tripPlanner::updateComboTwo ()"
 
 .PP
-updates sql table with souvenir data, with prices, quantity, souvenier name, and associated college 
+Updates teh combo box for available stadiums\&. 
 .PP
-\fBParameters\fP
-.RS 4
-\fIstart,starting\fP college for trip 
-.RE
+Definition at line 598 of file tripplanner\&.cpp\&.
 .PP
-\fBReturns\fP
-.RS 4
-none- void 
-.RE
-.PP
+Referenced by tripPlanner()\&.
+.SS "void tripPlanner::updateDistTable ()"
 
 .PP
-Definition at line 288 of file tripplanner\&.cpp\&.
+Updates the table in the Distances tab\&. 
+.PP
+Definition at line 187 of file tripplanner\&.cpp\&.
+.PP
+Referenced by tripPlanner()\&.
+.SS "void tripPlanner::updateMLBTable ()"
+
+.PP
+Updates the table in the MLB information tab\&. 
+.PP
+Definition at line 206 of file tripplanner\&.cpp\&.
+.PP
+Referenced by tripPlanner()\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "QVector<QCheckBox*> tripPlanner::checkBoxVector\fC [private]\fP"
 
 .PP
-vector for managing user selecting colleges via checkbox 
-.PP
-Definition at line 143 of file tripplanner\&.h\&.
+Definition at line 203 of file tripplanner\&.h\&.
 .SS "int tripPlanner::distance\fC [private]\fP"
 
 .PP
-field member holding distance 
-.PP
-Definition at line 158 of file tripplanner\&.h\&.
+Definition at line 208 of file tripplanner\&.h\&.
 .PP
 Referenced by onPlanClick()\&.
 .SS "QList<int> tripPlanner::distanceTo\fC [private]\fP"
 
 .PP
-Definition at line 165 of file tripplanner\&.h\&.
+Definition at line 212 of file tripplanner\&.h\&.
+.SS "vector<int> tripPlanner::distNext\fC [private]\fP"
+
+.PP
+Definition at line 220 of file tripplanner\&.h\&.
 .SS "QString tripPlanner::id\fC [private]\fP"
 
 .PP
-field member holding tripID 
+Definition at line 210 of file tripplanner\&.h\&.
+.SS "\fBgraphInfo\fP* tripPlanner::info\fC [private]\fP"
+
 .PP
-Definition at line 163 of file tripplanner\&.h\&.
+Definition at line 214 of file tripplanner\&.h\&.
+.PP
+Referenced by onGraphInfoClick()\&.
 .SS "\fBDbManager\fP tripPlanner::myDb = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')\fC [private]\fP"
 
 .PP
 assigns DB to predefined PROJECT_PATH constant 
 .PP
-Definition at line 138 of file tripplanner\&.h\&.
+Definition at line 199 of file tripplanner\&.h\&.
+.SS "vector<QString> tripPlanner::path\fC [private]\fP"
+
+.PP
+Definition at line 216 of file tripplanner\&.h\&.
 .SS "QStringList tripPlanner::plannedColleges\fC [private]\fP"
 
 .PP
-a string to hold the planned colleges - should be helpful for the plan trip algorithm 
-.PP
-Definition at line 153 of file tripplanner\&.h\&.
+Definition at line 207 of file tripplanner\&.h\&.
 .SS "\fBtripprogress\fP* tripPlanner::progress\fC [private]\fP"
 
 .PP
-Definition at line 167 of file tripplanner\&.h\&.
+Definition at line 201 of file tripplanner\&.h\&.
+.SS "vector<QString> tripPlanner::remainingChoices\fC [private]\fP"
+
+.PP
+Definition at line 218 of file tripplanner\&.h\&.
 .SS "QStringList tripPlanner::selectedColleges\fC [private]\fP"
 
 .PP
-a string to hold the selected colleges - should be helpful for the plan trip algorithm 
-.PP
-Definition at line 148 of file tripplanner\&.h\&.
+Definition at line 205 of file tripplanner\&.h\&.
 .SS "Ui::tripPlanner* tripPlanner::ui\fC [private]\fP"
 
 .PP
 points to \fBtripPlanner\fP UI 
 .PP
-Definition at line 133 of file tripplanner\&.h\&.
+Definition at line 193 of file tripplanner\&.h\&.
 .PP
 Referenced by ~tripPlanner()\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for CS1D - Project1 - College Touring from the source code\&.
+Generated automatically by Doxygen for CS1D - Project2 - Baseball from the source code\&.

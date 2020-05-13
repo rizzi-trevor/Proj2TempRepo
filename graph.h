@@ -8,6 +8,17 @@
 #include <QDebug>
 using namespace std;
 
+
+
+/**
+ * \class graph
+ *
+ * \brief  Graph data strcture for use in the BFS class
+ *
+ * Graph is an adjacency list
+ *
+ */
+
 class graph {
 public:
 

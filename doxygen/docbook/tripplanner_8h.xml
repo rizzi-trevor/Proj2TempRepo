@@ -4,6 +4,7 @@
 <indexterm><primary>tripplanner.h</primary></indexterm>
 <programlisting>#include &lt;QDialog&gt;
 #include &lt;QList&gt;
+#include &quot;graphinfo.h&quot;
 #include &quot;dbmanager.h&quot;
 #include &lt;qcheckbox.h&gt;
 #include &quot;tripsummary.h&quot;
@@ -30,8 +31,6 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_classtrip_planner">tripPlanner</link></para>
-
-<para>class recusively planning (calculating) the most efficient trip, manages data tables, checks if data is valid, and begins inital processes of planning a trip </para>
 </listitem>
         </itemizedlist>
 </simplesect>

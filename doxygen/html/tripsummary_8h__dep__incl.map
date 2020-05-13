@@ -1,12 +1,12 @@
 <map id="tripsummary.h" name="tripsummary.h">
-<area shape="rect" id="node1" title=" " alt="" coords="339,5,444,32"/>
-<area shape="rect" id="node2" href="$tripplanner_8h.html" title=" " alt="" coords="257,155,350,181"/>
-<area shape="rect" id="node8" href="$tripprogress_8h.html" title=" " alt="" coords="341,80,442,107"/>
-<area shape="rect" id="node10" href="$tripsummary_8cpp.html" title=" " alt="" coords="467,80,585,107"/>
-<area shape="rect" id="node3" href="$loginwindow_8h.html" title=" " alt="" coords="148,229,251,256"/>
-<area shape="rect" id="node5" href="$loginwindow_8cpp.html" title=" " alt="" coords="253,304,369,331"/>
-<area shape="rect" id="node7" href="$tripplanner_8cpp.html" title=" " alt="" coords="341,229,447,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="311,5,416,32"/>
+<area shape="rect" id="node2" href="$tripplanner_8h.html" title=" " alt="" coords="229,155,322,181"/>
+<area shape="rect" id="node8" href="$tripprogress_8h.html" title=" " alt="" coords="313,80,414,107"/>
+<area shape="rect" id="node10" href="$tripsummary_8cpp.html" title=" " alt="" coords="439,80,557,107"/>
+<area shape="rect" id="node3" href="$loginwindow_8h.html" title=" " alt="" coords="160,229,263,256"/>
+<area shape="rect" id="node7" href="$tripplanner_8cpp.html" title=" " alt="" coords="287,229,394,256"/>
 <area shape="rect" id="node4" href="$adminwindow_8cpp.html" title=" " alt="" coords="5,304,129,331"/>
-<area shape="rect" id="node6" href="$main_8cpp.html" title=" " alt="" coords="154,304,229,331"/>
-<area shape="rect" id="node9" href="$tripprogress_8cpp.html" title=" " alt="" coords="374,155,489,181"/>
+<area shape="rect" id="node5" href="$loginwindow_8cpp.html" title=" " alt="" coords="153,304,269,331"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title=" " alt="" coords="294,304,369,331"/>
+<area shape="rect" id="node9" href="$tripprogress_8cpp.html" title=" " alt="" coords="346,155,461,181"/>
 </map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CS1D - Project1 - College Touring: DbManager Class Reference</title>
+<title>CS1D - Project2 - Baseball: DbManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">CS1D - Project1 - College Touring
+   <div id="projectname">CS1D - Project2 - Baseball
    &#160;<span id="projectnumber">1</span>
    </div>
   </td>
@@ -120,6 +120,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac339cd04710203c6faf8d4a5d55b0135"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_db_manager.html#ac339cd04710203c6faf8d4a5d55b0135">initSouvenirList</a> (const QString &amp;path)</td></tr>
 <tr class="memdesc:ac339cd04710203c6faf8d4a5d55b0135"><td class="mdescLeft">&#160;</td><td class="mdescRight">initalizes sql data table for souvenir and inputs all data from path parameter file location  <a href="class_db_manager.html#ac339cd04710203c6faf8d4a5d55b0135">More...</a><br /></td></tr>
 <tr class="separator:ac339cd04710203c6faf8d4a5d55b0135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e3cf03a3af42d289aa3a858c1b1d5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_db_manager.html#a27e3cf03a3af42d289aa3a858c1b1d5f">initMlbList</a> (const QString &amp;path)</td></tr>
+<tr class="memdesc:a27e3cf03a3af42d289aa3a858c1b1d5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes MLB stadium data from xlsx file at given path.  <a href="class_db_manager.html#a27e3cf03a3af42d289aa3a858c1b1d5f">More...</a><br /></td></tr>
+<tr class="separator:a27e3cf03a3af42d289aa3a858c1b1d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6bbe50328823ab15a3ed3ea9c19735e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_db_manager.html#af6bbe50328823ab15a3ed3ea9c19735e">initStadiumList</a> (const QString &amp;path)</td></tr>
+<tr class="memdesc:af6bbe50328823ab15a3ed3ea9c19735e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalizes the database storing distances between stadiums.  <a href="class_db_manager.html#af6bbe50328823ab15a3ed3ea9c19735e">More...</a><br /></td></tr>
+<tr class="separator:af6bbe50328823ab15a3ed3ea9c19735e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac07ce420fd795d2e613d3d58151a3f13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_db_manager.html#ac07ce420fd795d2e613d3d58151a3f13">initDistanceList</a> (const QString &amp;path)</td></tr>
 <tr class="memdesc:ac07ce420fd795d2e613d3d58151a3f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">initalizes sql data table for college distances and inputs all data from path parameter file location  <a href="class_db_manager.html#ac07ce420fd795d2e613d3d58151a3f13">More...</a><br /></td></tr>
 <tr class="separator:ac07ce420fd795d2e613d3d58151a3f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,6 +162,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3fb7e05878d16c1c5cea11b53cf04d4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_db_manager.html#a3fb7e05878d16c1c5cea11b53cf04d4d">addColleges</a> (const QString &amp;path)</td></tr>
 <tr class="memdesc:a3fb7e05878d16c1c5cea11b53cf04d4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">add colleges from file to DB  <a href="class_db_manager.html#a3fb7e05878d16c1c5cea11b53cf04d4d">More...</a><br /></td></tr>
 <tr class="separator:a3fb7e05878d16c1c5cea11b53cf04d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a104d9d622610c93e1b2aee8f73589c1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_db_manager.html#a104d9d622610c93e1b2aee8f73589c1e">addMLB</a> (const QString &amp;path)</td></tr>
+<tr class="memdesc:a104d9d622610c93e1b2aee8f73589c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads MLB data from an xlsx file at the given path.  <a href="class_db_manager.html#a104d9d622610c93e1b2aee8f73589c1e">More...</a><br /></td></tr>
+<tr class="separator:a104d9d622610c93e1b2aee8f73589c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1a3c72afdf29e00bc16fd128dc35b94"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_db_manager.html#ae1a3c72afdf29e00bc16fd128dc35b94">userExists</a> (const QString &amp;user)</td></tr>
 <tr class="memdesc:ae1a3c72afdf29e00bc16fd128dc35b94"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks to see if the username exists  <a href="class_db_manager.html#ae1a3c72afdf29e00bc16fd128dc35b94">More...</a><br /></td></tr>
 <tr class="separator:ae1a3c72afdf29e00bc16fd128dc35b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,7 +190,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5bd60338e1ad8ffd0c63f34e84f88808"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether tripID data exists in DB  <a href="class_db_manager.html#a5bd60338e1ad8ffd0c63f34e84f88808">More...</a><br /></td></tr>
 <tr class="separator:a5bd60338e1ad8ffd0c63f34e84f88808"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42e94ab2a5751c839a6d57221d3d4e99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_db_manager.html#a42e94ab2a5751c839a6d57221d3d4e99">createTripTable</a> ()</td></tr>
+<tr class="memdesc:a42e94ab2a5751c839a6d57221d3d4e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates tables in the database used in the trip planning process.  <a href="class_db_manager.html#a42e94ab2a5751c839a6d57221d3d4e99">More...</a><br /></td></tr>
 <tr class="separator:a42e94ab2a5751c839a6d57221d3d4e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f7bde3d8a96b46f7cf6c3186ea0f3a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_db_manager.html#a5f7bde3d8a96b46f7cf6c3186ea0f3a4">createSouvTable</a> ()</td></tr>
+<tr class="memdesc:a5f7bde3d8a96b46f7cf6c3186ea0f3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a database table with standard souvenirs for each stadium.  <a href="class_db_manager.html#a5f7bde3d8a96b46f7cf6c3186ea0f3a4">More...</a><br /></td></tr>
+<tr class="separator:a5f7bde3d8a96b46f7cf6c3186ea0f3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad687c4a68f09e305d048b5686f0aef81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_db_manager.html#ad687c4a68f09e305d048b5686f0aef81">reOpen</a> ()</td></tr>
+<tr class="memdesc:ad687c4a68f09e305d048b5686f0aef81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re opens the database.  <a href="class_db_manager.html#ad687c4a68f09e305d048b5686f0aef81">More...</a><br /></td></tr>
+<tr class="separator:ad687c4a68f09e305d048b5686f0aef81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -283,7 +299,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void - none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00277">277</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00402">402</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -312,7 +328,35 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void - none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00534">534</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00720">720</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a104d9d622610c93e1b2aee8f73589c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a104d9d622610c93e1b2aee8f73589c1e">&#9670;&nbsp;</a></span>addMLB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbManager::addMLB </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads MLB data from an xlsx file at the given path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00659">659</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -334,7 +378,7 @@ Private Attributes</h2></td></tr>
 <p>adds purchase to DB and cart </p>
 <dl class="section return"><dt>Returns</dt><dd>void - none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00247">247</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00372">372</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -381,7 +425,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void - none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00299">299</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00424">424</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -434,7 +478,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void - nothing </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00604">604</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00801">801</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -474,7 +518,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void - none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00368">368</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00493">493</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -514,7 +558,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int - quanity of cart </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00193">193</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00318">318</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -543,7 +587,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true - will enable admin login, false - the person is not an admin </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00471">471</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00596">596</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -565,7 +609,28 @@ Private Attributes</h2></td></tr>
 <p>clears database of all data </p>
 <dl class="section return"><dt>Returns</dt><dd>void - nothing </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00448">448</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00573">573</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5f7bde3d8a96b46f7cf6c3186ea0f3a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f7bde3d8a96b46f7cf6c3186ea0f3a4">&#9670;&nbsp;</a></span>createSouvTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbManager::createSouvTable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a database table with standard souvenirs for each stadium. </p>
+
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00848">848</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -584,7 +649,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00580">580</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p>Creates tables in the database used in the trip planning process. </p>
+
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00766">766</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -613,7 +680,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>obtains the password from user </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00507">507</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00632">632</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -671,7 +738,35 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void - none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00128">128</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00254">254</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a27e3cf03a3af42d289aa3a858c1b1d5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27e3cf03a3af42d289aa3a858c1b1d5f">&#9670;&nbsp;</a></span>initMlbList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbManager::initMlbList </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes MLB stadium data from xlsx file at given path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00073">73</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -700,7 +795,35 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void - none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00073">73</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00199">199</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af6bbe50328823ab15a3ed3ea9c19735e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6bbe50328823ab15a3ed3ea9c19735e">&#9670;&nbsp;</a></span>initStadiumList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbManager::initStadiumList </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initalizes the database storing distances between stadiums. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00157">157</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -722,7 +845,7 @@ Private Attributes</h2></td></tr>
 <p>checks to see if <a class="el" href="class_db_manager.html" title="SQL Database Manager class.">DbManager</a> is open </p>
 <dl class="section return"><dt>Returns</dt><dd>true - <a class="el" href="class_db_manager.html" title="SQL Database Manager class.">DbManager</a> is open, false - <a class="el" href="class_db_manager.html" title="SQL Database Manager class.">DbManager</a> is closed </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00466">466</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00591">591</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -762,7 +885,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void - none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00220">220</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00345">345</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -802,7 +925,29 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void - none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00173">173</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00296">296</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad687c4a68f09e305d048b5686f0aef81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad687c4a68f09e305d048b5686f0aef81">&#9670;&nbsp;</a></span>reOpen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DbManager::reOpen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Re opens the database. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00928">928</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -824,7 +969,7 @@ Private Attributes</h2></td></tr>
 <p>clear all items from cart </p>
 <dl class="section return"><dt>Returns</dt><dd>void - none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00262">262</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00387">387</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -864,7 +1009,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true - username exists, false - username does not exist </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00393">393</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00518">518</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -893,7 +1038,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool- whether data exists </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00625">625</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00822">822</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -940,7 +1085,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void - none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00324">324</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00449">449</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -994,7 +1139,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void - none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00343">343</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00468">468</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1023,7 +1168,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true - username exists, false - username does not exist </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00422">422</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8cpp_source.html#l00547">547</a> of file <a class="el" href="dbmanager_8cpp_source.html">dbmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1050,7 +1195,7 @@ Private Attributes</h2></td></tr>
 
 <p>decalre database field memberobj </p>
 
-<p class="definition">Definition at line <a class="el" href="dbmanager_8h_source.html#l00220">220</a> of file <a class="el" href="dbmanager_8h_source.html">dbmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbmanager_8h_source.html#l00252">252</a> of file <a class="el" href="dbmanager_8h_source.html">dbmanager.h</a>.</p>
 
 </div>
 </div>

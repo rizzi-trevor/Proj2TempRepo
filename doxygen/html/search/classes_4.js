@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['tripplanner_136',['tripPlanner',['../classtrip_planner.html',1,'']]],
-  ['tripprogress_137',['tripprogress',['../classtripprogress.html',1,'']]],
-  ['tripsummary_138',['tripSummary',['../classtrip_summary.html',1,'']]]
+  ['edge_270',['edge',['../structedge.html',1,'edge'],['../struct_edge.html',1,'Edge']]]
 ];

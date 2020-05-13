@@ -1,15 +1,14 @@
 var searchData=
 [
-  ['trip_98',['trip',['../classtripprogress.html#a2b31d42774f3ece541d191a5f555965e',1,'tripprogress']]],
-  ['tripid_99',['tripID',['../classtrip_summary.html#acb03d46422badb024292c69c3763c433',1,'tripSummary::tripID()'],['../classtripprogress.html#ab1335cc9223dad530a3f35eb06972b78',1,'tripprogress::tripID()']]],
-  ['tripidexists_100',['tripIdExists',['../class_db_manager.html#a5bd60338e1ad8ffd0c63f34e84f88808',1,'DbManager']]],
-  ['tripplanner_101',['tripPlanner',['../classtrip_planner.html',1,'tripPlanner'],['../classtrip_planner.html#a4f1efc2b2d8bc3be648de0584d7f90ba',1,'tripPlanner::tripPlanner()']]],
-  ['tripplanner_2ecpp_102',['tripplanner.cpp',['../tripplanner_8cpp.html',1,'']]],
-  ['tripplanner_2eh_103',['tripplanner.h',['../tripplanner_8h.html',1,'']]],
-  ['tripprogress_104',['tripprogress',['../classtripprogress.html',1,'tripprogress'],['../classtripprogress.html#aa7127633dc3a458db319f23b06dc8c38',1,'tripprogress::tripprogress()']]],
-  ['tripprogress_2ecpp_105',['tripprogress.cpp',['../tripprogress_8cpp.html',1,'']]],
-  ['tripprogress_2eh_106',['tripprogress.h',['../tripprogress_8h.html',1,'']]],
-  ['tripsummary_107',['tripSummary',['../classtrip_summary.html',1,'tripSummary'],['../classtrip_summary.html#a4ac151fe65a383fdd04e9ac133f21d55',1,'tripSummary::tripSummary(QWidget *parent=nullptr)'],['../classtrip_summary.html#a990accf373da48ade41def873014fdf6',1,'tripSummary::tripSummary(const QString &amp;id, QWidget *parent=nullptr)']]],
-  ['tripsummary_2ecpp_108',['tripsummary.cpp',['../tripsummary_8cpp.html',1,'']]],
-  ['tripsummary_2eh_109',['tripsummary.h',['../tripsummary_8h.html',1,'']]]
+  ['path_179',['path',['../classtrip_planner.html#a4b0222c2b26509a2f209f3614c64c1f0',1,'tripPlanner']]],
+  ['performbfs_180',['performBFS',['../graphinfo_8h.html#ae2ac26dc1144f69e34ccc67402f7d69c',1,'performBFS():&#160;graphinfo.cpp'],['../graphinfo_8cpp.html#ae2ac26dc1144f69e34ccc67402f7d69c',1,'performBFS():&#160;graphinfo.cpp']]],
+  ['performdfs_181',['performDFS',['../graphinfo_8h.html#a654b1349d433a3a9a466ec1fc77d43c7',1,'performDFS():&#160;graphinfo.cpp'],['../graphinfo_8cpp.html#a654b1349d433a3a9a466ec1fc77d43c7',1,'performDFS():&#160;graphinfo.cpp']]],
+  ['performdijkstra_182',['performDijkstra',['../graphinfo_8h.html#a3a388b082c0a08752b5102db7f37f25c',1,'performDijkstra(QStringList teamsSelected):&#160;graphinfo.cpp'],['../graphinfo_8cpp.html#a3a388b082c0a08752b5102db7f37f25c',1,'performDijkstra(QStringList teamsSelected):&#160;graphinfo.cpp']]],
+  ['performmst_183',['performMST',['../graphinfo_8h.html#a4678912f4b89dfcf833f86bc68dfaf15',1,'performMST():&#160;graphinfo.cpp'],['../graphinfo_8cpp.html#a4678912f4b89dfcf833f86bc68dfaf15',1,'performMST():&#160;graphinfo.cpp']]],
+  ['plandoesexist_184',['planDoesExist',['../classtrip_planner.html#a2b7a2f1f4418737c5a0d9d40616de033',1,'tripPlanner']]],
+  ['plannedcolleges_185',['plannedColleges',['../classtrip_planner.html#ab0953b84602b02cebcdf722294f6d4de',1,'tripPlanner']]],
+  ['prevtrip_186',['prevTrip',['../classtripprogress.html#af5ebcd299537bca0cffe94483aea1633',1,'tripprogress']]],
+  ['primjarnikmst_187',['primJarnikMST',['../classgraph_adj_list.html#a1ffca4fb0794edb7be6eeaaf9624011a',1,'graphAdjList']]],
+  ['printresults_188',['printResults',['../classbfs.html#a969947cd3d94f0e420b19723cf23b752',1,'bfs']]],
+  ['progress_189',['progress',['../classtrip_planner.html#a0d904628227e4c833391fc5cb7d187b4',1,'tripPlanner']]]
 ];

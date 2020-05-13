@@ -68,12 +68,24 @@ private slots:
     */
     void updateTripSchoolList();
 
+    /**
+     * @brief updates the combo box with the stadiums on the trip
+     */
     void updateSchoolComboBox();
 
+    /**
+     * @brief updates the total distance of the trip
+     */
     void updateTotalDistance();
 
+    /**
+     * @brief updates the total of the currently selected stadium from the combo box
+     */
     void updateSchoolTotal();
 
+    /**
+     * @brief updates the total of the entire trip
+     */
     void updateTripTotal();
 
 private:

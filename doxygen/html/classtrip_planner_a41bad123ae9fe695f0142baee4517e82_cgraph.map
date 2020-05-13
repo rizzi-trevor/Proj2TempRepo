@@ -1,4 +1,5 @@
 <map id="tripPlanner::onPlanClick" name="tripPlanner::onPlanClick">
-<area shape="rect" id="node1" title="displays user input and manages initliazation of planning college trips, distances...." alt="" coords="5,5,167,32"/>
-<area shape="rect" id="node2" href="$classtrip_planner.html#a4d03f6e0f7b127bbc9e8d49b756891c6" title="stores and displays list of user/student selected colleges for current trip in progress/planned" alt="" coords="215,5,420,32"/>
+<area shape="rect" id="node1" title="Plans trip path requires a valid tripID entered uses the algorithm function to determine path through..." alt="" coords="5,55,167,81"/>
+<area shape="rect" id="node2" href="$classtrip_planner.html#aed59a1963a1acaf7434dfccfa1b33cd8" title="Trip planning algorithm using dijkstra." alt="" coords="245,29,390,56"/>
+<area shape="rect" id="node3" href="$classtrip_planner.html#a4d03f6e0f7b127bbc9e8d49b756891c6" title="Creates the checkbox list of stadiums." alt="" coords="215,80,420,107"/>
 </map>

@@ -1,14 +1,13 @@
 var classtripprogress =
 [
     [ "tripprogress", "classtripprogress.html#aa7127633dc3a458db319f23b06dc8c38", null ],
+    [ "tripprogress", "classtripprogress.html#a9a2b52be2e30ffec5382fb009e7f1a11", null ],
     [ "~tripprogress", "classtripprogress.html#a82e49a09f6f78bbf740db47483e0faed", null ],
     [ "displaySouv", "classtripprogress.html#a7bfe8b49dc2f937e09808514087ae912", null ],
     [ "getDistance", "classtripprogress.html#a8d485f178adc042180af1aa82359ede8", null ],
     [ "nextTrip", "classtripprogress.html#a67309d76ccd8f5f0fff245e4663f4a56", null ],
     [ "on_addCart_clicked", "classtripprogress.html#a557a636592a8c518dab01e7ec9d4650c", null ],
-    [ "on_pushButton_4_clicked", "classtripprogress.html#a97ede8978e517a6913fa31747085357d", null ],
     [ "on_pushButton_4_released", "classtripprogress.html#ace30eef309fc1cb6ce4abaecf4472e1a", null ],
-    [ "on_pushButton_clicked", "classtripprogress.html#a2b0d1e4a4428ecc61911d38cc63f8f86", null ],
     [ "on_removeCart_clicked", "classtripprogress.html#a569959bf68a5a8b3d680f9a799032bd6", null ],
     [ "on_souvTable_clicked", "classtripprogress.html#a25dab95c13ca05aa89fb4faf3059d51a", null ],
     [ "onLoadClick", "classtripprogress.html#af61ad9424ede3e9f90394c5870fc8ef6", null ],
@@ -24,6 +23,7 @@ var classtripprogress =
     [ "row", "classtripprogress.html#a2c34c3a30ec0761d13a8d9b8595a0c93", null ],
     [ "souvenirName", "classtripprogress.html#a4e1d0acb1efdfd2a3765d8d79e939af9", null ],
     [ "souvenirPrice", "classtripprogress.html#a9ba6e7ced08717df6b9062b56f2414ce", null ],
+    [ "teamName", "classtripprogress.html#a97a76aa181b88084b36e39623a0939bd", null ],
     [ "trip", "classtripprogress.html#a2b31d42774f3ece541d191a5f555965e", null ],
     [ "tripID", "classtripprogress.html#ab1335cc9223dad530a3f35eb06972b78", null ],
     [ "ui", "classtripprogress.html#afc2d14cce76354532bd5a6c8584001e4", null ]

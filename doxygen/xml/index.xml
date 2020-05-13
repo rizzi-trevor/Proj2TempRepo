@@ -9,10 +9,24 @@
     <member refid="classadd_souvenir_1a3e20aa6346cf68e1ec80cb8bdd106392" kind="slot"><name>on_pushButton_2_released</name></member>
     <member refid="classadd_souvenir_1ad1c3059a79d8df7f357d0a89927c54da" kind="slot"><name>on_pushButton_released</name></member>
   </compound>
+  <compound refid="structadj_list_edge" kind="struct"><name>adjListEdge</name>
+    <member refid="structadj_list_edge_1a5947af724a378799d6df3efc5ff829c5" kind="variable"><name>startCity</name></member>
+    <member refid="structadj_list_edge_1aef4f00bfb57d003c8e0a47b764de2ca2" kind="variable"><name>endCity</name></member>
+    <member refid="structadj_list_edge_1a873ddfbfd902569fe0f35b0485e8bb9e" kind="variable"><name>discEdge</name></member>
+    <member refid="structadj_list_edge_1a7f1f1954d392edd1cf630edbadf34855" kind="variable"><name>weight</name></member>
+    <member refid="structadj_list_edge_1ae638bc9fe0881dc8b92bedf3b208f291" kind="function"><name>adjListEdge</name></member>
+  </compound>
+  <compound refid="structadj_list_vertex" kind="struct"><name>adjListVertex</name>
+    <member refid="structadj_list_vertex_1adde1bbdeff332a82a3ed7e537b27c328" kind="variable"><name>cityName</name></member>
+    <member refid="structadj_list_vertex_1a3b0e7d7dfdd55e17c31bffb5e0de76f8" kind="variable"><name>visited</name></member>
+    <member refid="structadj_list_vertex_1a3d72b084b5ecdf113d907c252a325c80" kind="variable"><name>edgeList</name></member>
+    <member refid="structadj_list_vertex_1a4bd0d7d51777ef05e3e9492362d81128" kind="function"><name>adjListVertex</name></member>
+  </compound>
   <compound refid="class_admin_window" kind="class"><name>AdminWindow</name>
     <member refid="class_admin_window_1a26cd0782e15716c24dd3567e75169fc0" kind="variable"><name>souve</name></member>
     <member refid="class_admin_window_1a3fa27571cf4952084a71a6fdc9b070b2" kind="variable"><name>ui</name></member>
     <member refid="class_admin_window_1a500f2c07a0c34aa491c7d75ba0c8e3e5" kind="variable"><name>myDb</name></member>
+    <member refid="class_admin_window_1ae7d7cfa69b98c1d127073e7f94041583" kind="function"><name>updateCombo</name></member>
     <member refid="class_admin_window_1a0a68db6e97108a5b789d7b90dd962f76" kind="function"><name>AdminWindow</name></member>
     <member refid="class_admin_window_1ad1eabd086ea9878c73481fffc7506321" kind="function"><name>updateCollegeTable</name></member>
     <member refid="class_admin_window_1aa2e06bdd9305f8c591cf97e8c580f293" kind="function"><name>updateSouvenirTable</name></member>
@@ -25,6 +39,41 @@
     <member refid="class_admin_window_1a3f70aadf219465d9683e9ca52a1472a5" kind="slot"><name>on_souvenirView_clicked</name></member>
     <member refid="class_admin_window_1a9da5cb0c07bdf0cb6d8f7d980ec33c49" kind="slot"><name>on_removeSouvenir_2_clicked</name></member>
     <member refid="class_admin_window_1ac2d7d04600f0df63ad3fab0756567c01" kind="slot"><name>on_pushButton_5_released</name></member>
+    <member refid="class_admin_window_1a2b20d726b1946fe54143de45f235a8b1" kind="slot"><name>on_pushButton_2_clicked</name></member>
+    <member refid="class_admin_window_1a2f4241f561a61338473a6a123c47198f" kind="slot"><name>on_addMLB_clicked</name></member>
+    <member refid="class_admin_window_1a2886deed312f15a0a2f39d108555210b" kind="slot"><name>on_searchButton_clicked</name></member>
+    <member refid="class_admin_window_1aed0795bb41b78b99e1faf01e04950ea7" kind="slot"><name>on_showALL_clicked</name></member>
+    <member refid="class_admin_window_1af005476020875d7573969c383180f16d" kind="slot"><name>on_showStadiums_clicked</name></member>
+    <member refid="class_admin_window_1abc2b261e1b61062843d85644bacb7292" kind="slot"><name>on_showStadiums_2_clicked</name></member>
+    <member refid="class_admin_window_1af3589241bd7a70aa5bbc5c42e31bf4de" kind="slot"><name>on_pushButton_3_clicked</name></member>
+    <member refid="class_admin_window_1a4cee509b1c69bd414a153d532380d8ee" kind="slot"><name>on_pushButton_4_clicked</name></member>
+    <member refid="class_admin_window_1af31f8728eee0658d934c871182f1609c" kind="slot"><name>on_pushButton_6_clicked</name></member>
+    <member refid="class_admin_window_1af4978d5e30b829abf4a401c580546587" kind="slot"><name>souvTable</name></member>
+    <member refid="class_admin_window_1aacfea2bd7cc348782faf61b04b91fa1b" kind="slot"><name>on_pushButton_7_clicked</name></member>
+    <member refid="class_admin_window_1acd63087338f381acc3680c356013f634" kind="slot"><name>on_souTable_clicked</name></member>
+    <member refid="class_admin_window_1a2a4734a78aac844065dc013433c3d872" kind="slot"><name>on_pushButton_8_clicked</name></member>
+    <member refid="class_admin_window_1acc2ae27f04c9096aaa33227922d28346" kind="slot"><name>on_updateButton_clicked</name></member>
+  </compound>
+  <compound refid="classbfs" kind="class"><name>bfs</name>
+    <member refid="classbfs_1aa6023679bb3e4689ae46a42c751ef6a8" kind="variable"><name>citiesThisLevel</name></member>
+    <member refid="classbfs_1a30ed28365e3dabb50e9bdd354298d09d" kind="variable"><name>edgesThisLevel</name></member>
+    <member refid="classbfs_1ad0a49adef7561c49b5bbc13919bf0f2b" kind="variable"><name>nextLevel</name></member>
+    <member refid="classbfs_1a85affc801f374f233514798c7c3311da" kind="variable"><name>foundVerticies</name></member>
+    <member refid="classbfs_1a9a66e102aa8b4db7eea50f80d33a893f" kind="variable"><name>discEdges</name></member>
+    <member refid="classbfs_1a148cbd34c2c506bc4a7c1614b78cc062" kind="variable"><name>crossEdges</name></member>
+    <member refid="classbfs_1a8e377b16c9f9089eafd37ad50098ae33" kind="variable"><name>myGraph</name></member>
+    <member refid="classbfs_1a2fd636c87e863a6526a131c5e65d124d" kind="function"><name>bfs</name></member>
+    <member refid="classbfs_1a674ad9c5887cad1b83e4aff22cab5af4" kind="function"><name>startSearch</name></member>
+    <member refid="classbfs_1a08c0fe62780758a5625a8342c002523e" kind="function"><name>startSearch</name></member>
+    <member refid="classbfs_1aad56d2166e81400fd56e46251ca0b513" kind="function"><name>searchLevel</name></member>
+    <member refid="classbfs_1a725d13215985be30fd9f650f4ae41799" kind="function"><name>sortEdges</name></member>
+    <member refid="classbfs_1a2b2cf16a252fe8c59a94ff3a8aea8dd0" kind="function"><name>reinitialize</name></member>
+    <member refid="classbfs_1a87a3ed9362e9fc1505ba1bc069eca928" kind="function"><name>getEdgesForThisLevel</name></member>
+    <member refid="classbfs_1a0087b6199a1625ab9dfa1acfc45da909" kind="function"><name>getEdgesForCity</name></member>
+    <member refid="classbfs_1a31026bc4313c12fa55ebbb41c0b89a66" kind="function"><name>edgeIsRepeat</name></member>
+    <member refid="classbfs_1a9fd02e7dfaeec40ba52266372ec3fb51" kind="function"><name>edgeIsCross</name></member>
+    <member refid="classbfs_1a969947cd3d94f0e420b19723cf23b752" kind="function"><name>printResults</name></member>
+    <member refid="classbfs_1a2bd1017875301bdf7e083f767555146d" kind="function"><name>calcTotalDist</name></member>
   </compound>
   <compound refid="classconfirm_page" kind="class"><name>confirmPage</name>
   </compound>
@@ -43,6 +92,8 @@
     <member refid="class_db_manager_1a449b4cc451c4ec493345d799891e7eaa" kind="function"><name>DbManager</name></member>
     <member refid="class_db_manager_1a919d96426a334c5f5f2f925b36e7ce86" kind="function"><name>InitCollegeList</name></member>
     <member refid="class_db_manager_1ac339cd04710203c6faf8d4a5d55b0135" kind="function"><name>initSouvenirList</name></member>
+    <member refid="class_db_manager_1a27e3cf03a3af42d289aa3a858c1b1d5f" kind="function"><name>initMlbList</name></member>
+    <member refid="class_db_manager_1af6bbe50328823ab15a3ed3ea9c19735e" kind="function"><name>initStadiumList</name></member>
     <member refid="class_db_manager_1ac07ce420fd795d2e613d3d58151a3f13" kind="function"><name>initDistanceList</name></member>
     <member refid="class_db_manager_1a8f06e6e0365900ada1bf178576299c58" kind="function"><name>addUser</name></member>
     <member refid="class_db_manager_1aba2fa2af8d63efc7aec75bf690c69a3c" kind="function"><name>addSou</name></member>
@@ -55,6 +106,7 @@
     <member refid="class_db_manager_1aedfdf8a34ade856e4fab1ea3adcef5b3" kind="function"><name>addPurchase</name></member>
     <member refid="class_db_manager_1aeaac0d5a8393040e7b52208c80ea3fd4" kind="function"><name>resetCart</name></member>
     <member refid="class_db_manager_1a3fb7e05878d16c1c5cea11b53cf04d4d" kind="function"><name>addColleges</name></member>
+    <member refid="class_db_manager_1a104d9d622610c93e1b2aee8f73589c1e" kind="function"><name>addMLB</name></member>
     <member refid="class_db_manager_1ae1a3c72afdf29e00bc16fd128dc35b94" kind="function"><name>userExists</name></member>
     <member refid="class_db_manager_1acdbad81f27cdb3f8e3bbf656eeeba382" kind="function"><name>souExists</name></member>
     <member refid="class_db_manager_1af9547f6dc3ad170a70c0ee4d89f714fc" kind="function"><name>clearDb</name></member>
@@ -64,6 +116,87 @@
     <member refid="class_db_manager_1ae790551011d6cb42a4fd20a173eb9598" kind="function"><name>addTrip</name></member>
     <member refid="class_db_manager_1a5bd60338e1ad8ffd0c63f34e84f88808" kind="function"><name>tripIdExists</name></member>
     <member refid="class_db_manager_1a42e94ab2a5751c839a6d57221d3d4e99" kind="function"><name>createTripTable</name></member>
+    <member refid="class_db_manager_1a5f7bde3d8a96b46f7cf6c3186ea0f3a4" kind="function"><name>createSouvTable</name></member>
+    <member refid="class_db_manager_1ad687c4a68f09e305d048b5686f0aef81" kind="function"><name>reOpen</name></member>
+  </compound>
+  <compound refid="classdfs_graph" kind="class"><name>dfsGraph</name>
+    <member refid="classdfs_graph_1a71ae84114be5d9a9eebdc612e7b5a3aa" kind="variable"><name>graph</name></member>
+    <member refid="classdfs_graph_1aaef5813088fc81874ace8ec539b5f149" kind="variable"><name>dfsDistance</name></member>
+    <member refid="classdfs_graph_1a31961f7573a26482e3acbfa17f45a040" kind="function"><name>dfsGraph</name></member>
+    <member refid="classdfs_graph_1aa6b3d13ceefda737f8e702a8226a6e16" kind="function"><name>~dfsGraph</name></member>
+    <member refid="classdfs_graph_1a2b74025aa23415c54aa0336632fa283a" kind="function"><name>empty</name></member>
+    <member refid="classdfs_graph_1afcacef0c03eed903c6e4d7224c17c912" kind="function"><name>size</name></member>
+    <member refid="classdfs_graph_1a0e0258dbca7eb65ee12c314a49500355" kind="function"><name>insertVertex</name></member>
+    <member refid="classdfs_graph_1ab9e0cbafc43b715e126efe12af35ca4c" kind="function"><name>findVertex</name></member>
+    <member refid="classdfs_graph_1a58fe53c18aa217f7caf5ac65fa879854" kind="function"><name>insertEdge</name></member>
+    <member refid="classdfs_graph_1a6ef60b3b59d1a6ffd659f1c6bd49ec5f" kind="function"><name>vertices</name></member>
+    <member refid="classdfs_graph_1a2098f61e2d32ca4343681a2f651201cc" kind="function"><name>edges</name></member>
+    <member refid="classdfs_graph_1abd57733bdb2a7b8e83beb8e10119a500" kind="function"><name>DFS</name></member>
+    <member refid="classdfs_graph_1a74d7c03d5f979c681552596ac21be384" kind="function"><name>getDiscoveryEdges</name></member>
+    <member refid="classdfs_graph_1a1b35fe4429a23975a216020690f38434" kind="function"><name>getBackEdges</name></member>
+    <member refid="classdfs_graph_1a6c1a57ff9316079b082bdcdba93c810c" kind="function"><name>smallestEdgeDFS</name></member>
+    <member refid="classdfs_graph_1a6e727cce0b6b899e468132ba45f5e6d7" kind="function"><name>verticesVisited</name></member>
+    <member refid="classdfs_graph_1a5fd419bfa08373cabc286b2363063e47" kind="function"><name>edgesDiscovered</name></member>
+    <member refid="classdfs_graph_1a58f74803e11eafc69231aa2f771e511f" kind="function"><name>deleteDuplicates</name></member>
+    <member refid="classdfs_graph_1a87a6531d11bb733f3d14960463e7bead" kind="function"><name>otherVertex</name></member>
+    <member refid="classdfs_graph_1afe9cfa9835688f319e3fc35ad8dbd8f0" kind="function"><name>distance</name></member>
+  </compound>
+  <compound refid="structedge" kind="struct"><name>edge</name>
+    <member refid="structedge_1ad3ff4de92b4ae1adab7c703aa4bfd5da" kind="variable"><name>city1</name></member>
+    <member refid="structedge_1abdb7827827da29e9c1f150e4de314e73" kind="variable"><name>city2</name></member>
+    <member refid="structedge_1a48182e762296a60018039747493814f1" kind="variable"><name>weight</name></member>
+    <member refid="structedge_1a155a243b98a020937e69d90aed4bab22" kind="function"><name>operator&lt;</name></member>
+  </compound>
+  <compound refid="struct_edge" kind="struct"><name>Edge</name>
+    <member refid="struct_edge_1ae78ce3f1c8b310fb787c87fb0457da8f" kind="variable"><name>u</name></member>
+    <member refid="struct_edge_1aa7b797ce40ab5e3fd04dd2167339f281" kind="variable"><name>v</name></member>
+    <member refid="struct_edge_1a6f3df8f9e954ebb7184ec06c4795c27e" kind="variable"><name>discoveryEdge</name></member>
+    <member refid="struct_edge_1a4d58e1f4de38fa55549497175981ebab" kind="variable"><name>weight</name></member>
+    <member refid="struct_edge_1a3106b11d60125009dbf7a738ce540fdf" kind="function"><name>Edge</name></member>
+  </compound>
+  <compound refid="classgraph" kind="class"><name>graph</name>
+    <member refid="classgraph_1a3e256dda7657e38b12b12b1eec3f8bcb" kind="variable"><name>matrix</name></member>
+    <member refid="classgraph_1a22d424297601a83c01d53271a92847bc" kind="variable"><name>cities</name></member>
+    <member refid="classgraph_1a19cfbd34d987c1ecde765313423e3a12" kind="function"><name>addCity</name></member>
+    <member refid="classgraph_1a00688b786e96e71cbc67bccc9bce2595" kind="function"><name>displayAllMatrix</name></member>
+    <member refid="classgraph_1aeb4175f849dc1b6a12b30a682377bbd0" kind="function"><name>addEdges</name></member>
+    <member refid="classgraph_1a4f3e79995da03635132289a266fa97d4" kind="function"><name>findCity</name></member>
+    <member refid="classgraph_1a122f57ed9c999f52aa671bc1bc01c648" kind="function"><name>displayMatrix</name></member>
+    <member refid="classgraph_1a6485328b59e59e915f748c3f8fd0a266" kind="function"><name>getEdgeLength</name></member>
+    <member refid="classgraph_1a199468f37d74e1ebefbdd71f6e6fa940" kind="function"><name>displayCities</name></member>
+    <member refid="classgraph_1a185cc1b884c17ec40d5f74345b201b63" kind="function"><name>getAllEdges</name></member>
+    <member refid="classgraph_1adc6213f3ebd785cbf079d87c7748e2a9" kind="function"><name>getCityName</name></member>
+  </compound>
+  <compound refid="classgraph_adj_list" kind="class"><name>graphAdjList</name>
+    <member refid="classgraph_adj_list_1aceee3e23243a90689734ca30c32eddb0" kind="variable"><name>graph</name></member>
+    <member refid="classgraph_adj_list_1a2bb26c81116e5cbc6cde0f714d0c59a8" kind="variable"><name>MSTDistance</name></member>
+    <member refid="classgraph_adj_list_1a79472788da3af65f0cc13fc7e00ddddc" kind="function"><name>graphAdjList</name></member>
+    <member refid="classgraph_adj_list_1a33890453447cb03bb2ae1a486fc350c5" kind="function"><name>~graphAdjList</name></member>
+    <member refid="classgraph_adj_list_1a05f8a6e8143238691035e4e72cc72567" kind="function"><name>empty</name></member>
+    <member refid="classgraph_adj_list_1a7402cfb48c527769d0e910ec95c8ffdb" kind="function"><name>size</name></member>
+    <member refid="classgraph_adj_list_1a7538b2ea60ff2059c541b42f78c761e4" kind="function"><name>insertVertex</name></member>
+    <member refid="classgraph_adj_list_1a3abb5a17f135811d0a579c705804ef3c" kind="function"><name>findVertex</name></member>
+    <member refid="classgraph_adj_list_1af8b7675ce3c7df4647d425ce54b14a99" kind="function"><name>insertEdge</name></member>
+    <member refid="classgraph_adj_list_1a62bb65ac854eef838368cfb075dbd2cf" kind="function"><name>vertices</name></member>
+    <member refid="classgraph_adj_list_1ae56cb981742a8d6310ec24450c5ea013" kind="function"><name>edges</name></member>
+    <member refid="classgraph_adj_list_1ab500887ce10069b983d210276c360066" kind="function"><name>shortestPathsDijkstra</name></member>
+    <member refid="classgraph_adj_list_1a0d1e5e9f624f49f042bb684cc4d333e9" kind="function"><name>returnPath</name></member>
+    <member refid="classgraph_adj_list_1a1ffca4fb0794edb7be6eeaaf9624011a" kind="function"><name>primJarnikMST</name></member>
+    <member refid="classgraph_adj_list_1a38b74e50efbf5f36ff7741216d2f0b5b" kind="function"><name>findClosest</name></member>
+    <member refid="classgraph_adj_list_1a66b9f788eb2f6be978427ae66bd65dad" kind="function"><name>distanceFromStart</name></member>
+    <member refid="classgraph_adj_list_1acd455399e2d83fd2f4d04d39d4362446" kind="function"><name>smallestEdgeMST</name></member>
+    <member refid="classgraph_adj_list_1a142c67ef637bdf7026b5b8fe44d863c1" kind="function"><name>smallestEdge</name></member>
+    <member refid="classgraph_adj_list_1a4e7659e22b1e8d13ab1dffb7d5e93f30" kind="function"><name>distanceBetween</name></member>
+    <member refid="classgraph_adj_list_1a19f132196ac81b11a04806b91decb45d" kind="function"><name>verticesVisited</name></member>
+    <member refid="classgraph_adj_list_1a900bc85b4dde349191aa88c62dba517e" kind="function"><name>edgesDiscovered</name></member>
+  </compound>
+  <compound refid="classgraph_info" kind="class"><name>graphInfo</name>
+    <member refid="classgraph_info_1ad377d98494a8cdc67307d1b02f731106" kind="variable"><name>ui</name></member>
+    <member refid="classgraph_info_1abb7826392bbce71e879bfd91ba4412a1" kind="function"><name>graphInfo</name></member>
+    <member refid="classgraph_info_1a5419468e1506c5f4405bfdc965ef4af7" kind="function"><name>~graphInfo</name></member>
+    <member refid="classgraph_info_1a6f24e7b71f300f074cf0fd21fb38cb7e" kind="slot"><name>onCloseClick</name></member>
+  </compound>
+  <compound refid="classlogin_window" kind="class"><name>loginWindow</name>
   </compound>
   <compound refid="class_login_window" kind="class"><name>LoginWindow</name>
     <member refid="class_login_window_1a583f5c7dda98acd3e65791101f9ff2a0" kind="variable"><name>ui</name></member>
@@ -79,33 +212,48 @@
     <member refid="class_login_window_1ab0218fdb5f9c0a0f4c8c8fa4e7256ca6" kind="slot"><name>on_Password_returnPressed</name></member>
     <member refid="class_login_window_1a4072c1992a805b45728be2be1ad44af9" kind="slot"><name>on_loginButton_pressed</name></member>
   </compound>
-  <compound refid="classlogin_window" kind="class"><name>loginWindow</name>
-  </compound>
   <compound refid="classtrip_planner" kind="class"><name>tripPlanner</name>
     <member refid="classtrip_planner_1a5426d7d7375464a717292faf1f3138aa" kind="variable"><name>ui</name></member>
     <member refid="classtrip_planner_1ac3011789615ebab31141a9ad9a642dc5" kind="variable"><name>myDb</name></member>
+    <member refid="classtrip_planner_1a0d904628227e4c833391fc5cb7d187b4" kind="variable"><name>progress</name></member>
     <member refid="classtrip_planner_1ac59a255ea747293cedcf60e3817f7496" kind="variable"><name>checkBoxVector</name></member>
     <member refid="classtrip_planner_1a1884c3bf6bb1b09119c7670e1c5ae395" kind="variable"><name>selectedColleges</name></member>
     <member refid="classtrip_planner_1ab0953b84602b02cebcdf722294f6d4de" kind="variable"><name>plannedColleges</name></member>
     <member refid="classtrip_planner_1a97602084ee12e0cc86907ffb9bb5bc68" kind="variable"><name>distance</name></member>
     <member refid="classtrip_planner_1a9d8d4e58496c284dabe31279407f5ce3" kind="variable"><name>id</name></member>
     <member refid="classtrip_planner_1a34865f6c097f3ed90791e6a519b5c5d1" kind="variable"><name>distanceTo</name></member>
-    <member refid="classtrip_planner_1a0d904628227e4c833391fc5cb7d187b4" kind="variable"><name>progress</name></member>
+    <member refid="classtrip_planner_1a86be86f61460b03958343b5b4c526bfc" kind="variable"><name>info</name></member>
+    <member refid="classtrip_planner_1a4b0222c2b26509a2f209f3614c64c1f0" kind="variable"><name>path</name></member>
+    <member refid="classtrip_planner_1a0e51a2079e2a5f6f15c2380a281e267a" kind="variable"><name>remainingChoices</name></member>
+    <member refid="classtrip_planner_1a252f150f6c4e48fa426e0e00064e6223" kind="variable"><name>distNext</name></member>
     <member refid="classtrip_planner_1a4f1efc2b2d8bc3be648de0584d7f90ba" kind="function"><name>tripPlanner</name></member>
     <member refid="classtrip_planner_1adf0269ba1adf0967b99b524572753371" kind="function"><name>~tripPlanner</name></member>
-    <member refid="classtrip_planner_1a09ff51f12d0e4eece8f5fd2db9017d38" kind="function"><name>initializeList</name></member>
+    <member refid="classtrip_planner_1a83f8c209f19db50a76b7ff24eb7527bc" kind="function"><name>updateCombo</name></member>
+    <member refid="classtrip_planner_1adcabaf282aa097a5f2f6b8a326df8c46" kind="function"><name>updateDistTable</name></member>
+    <member refid="classtrip_planner_1a5ce520f9de46b775e0c4b6ddaa9db765" kind="function"><name>updateMLBTable</name></member>
     <member refid="classtrip_planner_1a4d03f6e0f7b127bbc9e8d49b756891c6" kind="function"><name>selectedCollegeList</name></member>
-    <member refid="classtrip_planner_1a76da0bd6a537c328a8f7b7d0b8a5c7c3" kind="function"><name>planAlgorithm</name></member>
     <member refid="classtrip_planner_1aae916f968748c5bca52525e298e27d6c" kind="function"><name>collegeDoesExist</name></member>
     <member refid="classtrip_planner_1a2b7a2f1f4418737c5a0d9d40616de033" kind="function"><name>planDoesExist</name></member>
-    <member refid="classtrip_planner_1af0aa45427afac7ce03d47edb8eaaf04e" kind="function"><name>updateCollegeTable</name></member>
-    <member refid="classtrip_planner_1a8ab9722a483480aa6ddf51a2a90e13c0" kind="function"><name>updateSouvTable</name></member>
     <member refid="classtrip_planner_1afa3d43939dff604fe0efa70618d9d75c" kind="function"><name>showTrip</name></member>
-    <member refid="classtrip_planner_1a83f8c209f19db50a76b7ff24eb7527bc" kind="function"><name>updateCombo</name></member>
-    <member refid="classtrip_planner_1a49b42218c58074af9c51e5cc72811147" kind="slot"><name>ChecboxChanged</name></member>
+    <member refid="classtrip_planner_1a0995eab75003d7dce53d41210439331b" kind="function"><name>updateComboTwo</name></member>
+    <member refid="classtrip_planner_1aed59a1963a1acaf7434dfccfa1b33cd8" kind="function"><name>algorithm</name></member>
+    <member refid="classtrip_planner_1a24b9b27b96d5d792686509f2b587c448" kind="slot"><name>onTypologyClick</name></member>
+    <member refid="classtrip_planner_1aeeb41ff97a66d8c7ec7907918705e874" kind="slot"><name>onAmericanClick</name></member>
+    <member refid="classtrip_planner_1a75efb6412d9b4d20ab290686b87c2d11" kind="slot"><name>onShowClick</name></member>
+    <member refid="classtrip_planner_1ae24d81aa09309953e0775a7145046174" kind="slot"><name>onNationalClick</name></member>
+    <member refid="classtrip_planner_1a470452828b5e03f5ae522d4db6af3d4a" kind="slot"><name>onStadiumsClick</name></member>
+    <member refid="classtrip_planner_1a94a58a8b06c55ea7ec3084460856ae47" kind="slot"><name>onTeamClick</name></member>
+    <member refid="classtrip_planner_1a084ff8f733394876cf7cd348fa2fecdc" kind="slot"><name>onSearchClick</name></member>
+    <member refid="classtrip_planner_1a518edc426240d374733308865238e449" kind="slot"><name>onRoofClick</name></member>
+    <member refid="classtrip_planner_1a7990e0365cda4745426a55fb26d1257b" kind="slot"><name>onDateClick</name></member>
+    <member refid="classtrip_planner_1a1d57483bec85dd872d5ae255c821d8c4" kind="slot"><name>onSeatingClick</name></member>
+    <member refid="classtrip_planner_1a938624c1a1c2ae0d0d8b7d3b57403a1d" kind="slot"><name>onGreatClick</name></member>
+    <member refid="classtrip_planner_1a7387395271abc89080e2acf77b6be958" kind="slot"><name>onLeastClick</name></member>
+    <member refid="classtrip_planner_1a09ff51f12d0e4eece8f5fd2db9017d38" kind="slot"><name>initializeList</name></member>
     <member refid="classtrip_planner_1a41bad123ae9fe695f0142baee4517e82" kind="slot"><name>onPlanClick</name></member>
-    <member refid="classtrip_planner_1ada9cb769efac5b9bfb321e88b1a02b36" kind="slot"><name>onDisplayClick</name></member>
-    <member refid="classtrip_planner_1ae89f2d2671f765b8ae4e6701f682046c" kind="slot"><name>onStartClick</name></member>
+    <member refid="classtrip_planner_1a092f4088c35dcf30eebebb7b7a0f6644" kind="slot"><name>onGraphInfoClick</name></member>
+    <member refid="classtrip_planner_1a326ee7d2d74b05c09f164b0bffd763ae" kind="slot"><name>onStartTrip</name></member>
+    <member refid="classtrip_planner_1a49b42218c58074af9c51e5cc72811147" kind="slot"><name>ChecboxChanged</name></member>
   </compound>
   <compound refid="classtripprogress" kind="class"><name>tripprogress</name>
     <member refid="classtripprogress_1ab1335cc9223dad530a3f35eb06972b78" kind="variable"><name>tripID</name></member>
@@ -116,9 +264,11 @@
     <member refid="classtripprogress_1afc2d14cce76354532bd5a6c8584001e4" kind="variable"><name>ui</name></member>
     <member refid="classtripprogress_1a6c35388e562a1f48162c0de3d963033a" kind="variable"><name>myDb</name></member>
     <member refid="classtripprogress_1a2b31d42774f3ece541d191a5f555965e" kind="variable"><name>trip</name></member>
+    <member refid="classtripprogress_1a97a76aa181b88084b36e39623a0939bd" kind="variable"><name>teamName</name></member>
     <member refid="classtripprogress_1a3a728c8ec21f34eb9aca73c4c64fbd8c" kind="variable"><name>counter</name></member>
     <member refid="classtripprogress_1a84787adb6ef3ef20df3cbb77534b34c6" kind="variable"><name>max</name></member>
     <member refid="classtripprogress_1aa7127633dc3a458db319f23b06dc8c38" kind="function"><name>tripprogress</name></member>
+    <member refid="classtripprogress_1a9a2b52be2e30ffec5382fb009e7f1a11" kind="function"><name>tripprogress</name></member>
     <member refid="classtripprogress_1a82e49a09f6f78bbf740db47483e0faed" kind="function"><name>~tripprogress</name></member>
     <member refid="classtripprogress_1a7bfe8b49dc2f937e09808514087ae912" kind="function"><name>displaySouv</name></member>
     <member refid="classtripprogress_1a67309d76ccd8f5f0fff245e4663f4a56" kind="function"><name>nextTrip</name></member>
@@ -133,8 +283,6 @@
     <member refid="classtripprogress_1a557a636592a8c518dab01e7ec9d4650c" kind="slot"><name>on_addCart_clicked</name></member>
     <member refid="classtripprogress_1ace30eef309fc1cb6ce4abaecf4472e1a" kind="slot"><name>on_pushButton_4_released</name></member>
     <member refid="classtripprogress_1a569959bf68a5a8b3d680f9a799032bd6" kind="slot"><name>on_removeCart_clicked</name></member>
-    <member refid="classtripprogress_1a2b0d1e4a4428ecc61911d38cc63f8f86" kind="slot"><name>on_pushButton_clicked</name></member>
-    <member refid="classtripprogress_1a97ede8978e517a6913fa31747085357d" kind="slot"><name>on_pushButton_4_clicked</name></member>
   </compound>
   <compound refid="classtrip_summary" kind="class"><name>tripSummary</name>
     <member refid="classtrip_summary_1a7d531afb03fb3f3b426bf8f164b57c41" kind="variable"><name>ui</name></member>
@@ -150,6 +298,14 @@
     <member refid="classtrip_summary_1a3b1175846c928336711b236e878dfd11" kind="slot"><name>updateSchoolTotal</name></member>
     <member refid="classtrip_summary_1ad20de08790de627fdf704c0991222c09" kind="slot"><name>updateTripTotal</name></member>
   </compound>
+  <compound refid="struct_vertex" kind="struct"><name>Vertex</name>
+    <member refid="struct_vertex_1a66d0ac65926bb37beba729b440443022" kind="variable"><name>city</name></member>
+    <member refid="struct_vertex_1aaef9f7de91b4b8f1752d391a1aae9c2e" kind="variable"><name>visited</name></member>
+    <member refid="struct_vertex_1a147e3ae0977f0a6b19d9fb0e1406e403" kind="variable"><name>edgeList</name></member>
+    <member refid="struct_vertex_1a97488994a2482d70da74e1b91d40e169" kind="function"><name>Vertex</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
   <compound refid="namespace_ui" kind="namespace"><name>Ui</name>
   </compound>
   <compound refid="addsouvenir_8cpp" kind="file"><name>addsouvenir.cpp</name>
@@ -160,6 +316,10 @@
   </compound>
   <compound refid="adminwindow_8h" kind="file"><name>adminwindow.h</name>
   </compound>
+  <compound refid="bfs_8cpp" kind="file"><name>bfs.cpp</name>
+  </compound>
+  <compound refid="bfs_8h" kind="file"><name>bfs.h</name>
+  </compound>
   <compound refid="confirmpage_8cpp" kind="file"><name>confirmpage.cpp</name>
   </compound>
   <compound refid="confirmpage_8h" kind="file"><name>confirmpage.h</name>
@@ -168,6 +328,32 @@
   </compound>
   <compound refid="dbmanager_8h" kind="file"><name>dbmanager.h</name>
     <member refid="dbmanager_8h_1a041b7d9507fac52e3aaaece260af9dd1" kind="variable"><name>PROJECT_PATH</name></member>
+  </compound>
+  <compound refid="dfsgraph_8cpp" kind="file"><name>dfsgraph.cpp</name>
+  </compound>
+  <compound refid="dfsgraph_8h" kind="file"><name>dfsgraph.h</name>
+  </compound>
+  <compound refid="graph_8cpp" kind="file"><name>graph.cpp</name>
+  </compound>
+  <compound refid="graph_8h" kind="file"><name>graph.h</name>
+  </compound>
+  <compound refid="graph_adj_list_8cpp" kind="file"><name>graphAdjList.cpp</name>
+  </compound>
+  <compound refid="graph_adj_list_8h" kind="file"><name>graphAdjList.h</name>
+  </compound>
+  <compound refid="graphinfo_8cpp" kind="file"><name>graphinfo.cpp</name>
+    <member refid="graphinfo_8cpp_1a5f19f37e9dd3250d58c0121e516927c4" kind="function"><name>convertTeamNamesToStadiumNames</name></member>
+    <member refid="graphinfo_8cpp_1a3a388b082c0a08752b5102db7f37f25c" kind="function"><name>performDijkstra</name></member>
+    <member refid="graphinfo_8cpp_1a4678912f4b89dfcf833f86bc68dfaf15" kind="function"><name>performMST</name></member>
+    <member refid="graphinfo_8cpp_1ae2ac26dc1144f69e34ccc67402f7d69c" kind="function"><name>performBFS</name></member>
+    <member refid="graphinfo_8cpp_1a654b1349d433a3a9a466ec1fc77d43c7" kind="function"><name>performDFS</name></member>
+  </compound>
+  <compound refid="graphinfo_8h" kind="file"><name>graphinfo.h</name>
+    <member refid="graphinfo_8h_1ae2ac26dc1144f69e34ccc67402f7d69c" kind="function"><name>performBFS</name></member>
+    <member refid="graphinfo_8h_1a654b1349d433a3a9a466ec1fc77d43c7" kind="function"><name>performDFS</name></member>
+    <member refid="graphinfo_8h_1a4678912f4b89dfcf833f86bc68dfaf15" kind="function"><name>performMST</name></member>
+    <member refid="graphinfo_8h_1a3a388b082c0a08752b5102db7f37f25c" kind="function"><name>performDijkstra</name></member>
+    <member refid="graphinfo_8h_1a5f19f37e9dd3250d58c0121e516927c4" kind="function"><name>convertTeamNamesToStadiumNames</name></member>
   </compound>
   <compound refid="loginwindow_8cpp" kind="file"><name>loginwindow.cpp</name>
   </compound>

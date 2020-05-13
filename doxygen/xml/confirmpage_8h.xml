@@ -29,48 +29,6 @@
         <label>confirmpage.cpp</label>
         <link refid="confirmpage_8cpp"/>
       </node>
-      <node id="11">
-        <label>tripplanner.cpp</label>
-        <link refid="tripplanner_8cpp"/>
-      </node>
-      <node id="8">
-        <label>main.cpp</label>
-        <link refid="main_8cpp"/>
-      </node>
-      <node id="2">
-        <label>addsouvenir.h</label>
-        <link refid="addsouvenir_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>tripprogress.h</label>
-        <link refid="tripprogress_8h"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>tripprogress.cpp</label>
-        <link refid="tripprogress_8cpp"/>
-      </node>
-      <node id="5">
-        <label>adminwindow.cpp</label>
-        <link refid="adminwindow_8cpp"/>
-      </node>
-      <node id="10">
-        <label>tripplanner.h</label>
-        <link refid="tripplanner_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
       <node id="1">
         <label>confirmpage.h</label>
         <link refid="confirmpage_8h"/>
@@ -83,6 +41,38 @@
         <childnode refid="13" relation="include">
         </childnode>
       </node>
+      <node id="11">
+        <label>tripplanner.cpp</label>
+        <link refid="tripplanner_8cpp"/>
+      </node>
+      <node id="10">
+        <label>tripplanner.h</label>
+        <link refid="tripplanner_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>tripprogress.h</label>
+        <link refid="tripprogress_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>addsouvenir.h</label>
+        <link refid="addsouvenir_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>tripprogress.cpp</label>
+        <link refid="tripprogress_8cpp"/>
+      </node>
       <node id="7">
         <label>loginwindow.cpp</label>
         <link refid="loginwindow_8cpp"/>
@@ -90,6 +80,10 @@
       <node id="3">
         <label>addsouvenir.cpp</label>
         <link refid="addsouvenir_8cpp"/>
+      </node>
+      <node id="8">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
       </node>
       <node id="6">
         <label>loginwindow.h</label>
@@ -100,6 +94,10 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+      </node>
+      <node id="5">
+        <label>adminwindow.cpp</label>
+        <link refid="adminwindow_8cpp"/>
       </node>
       <node id="4">
         <label>adminwindow.h</label>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CS1D - Project1 - College Touring: tripplanner.h Source File</title>
+<title>CS1D - Project2 - Baseball: tripplanner.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">CS1D - Project1 - College Touring
+   <div id="projectname">CS1D - Project2 - Baseball
    &#160;<span id="projectnumber">1</span>
    </div>
   </td>
@@ -96,201 +96,272 @@ $(document).ready(function(){initNavTree('tripplanner_8h_source.html','');});
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">QDialog</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">QList</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="dbmanager_8h.html">&quot;dbmanager.h&quot;</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">qcheckbox</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="tripsummary_8h.html">&quot;tripsummary.h&quot;</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="tripprogress_8h.html">&quot;tripprogress.h&quot;</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * @file</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="graphinfo_8h.html">&quot;graphinfo.h&quot;</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="dbmanager_8h.html">&quot;dbmanager.h&quot;</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">qcheckbox</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="tripsummary_8h.html">&quot;tripsummary.h&quot;</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="tripprogress_8h.html">&quot;tripprogress.h&quot;</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace</span> <a class="code" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class</span> tripPlanner;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * \class tripPlanner</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * \brief class recusively planning (calculating) the most efficient trip, manages data tables, checks if data is valid, and begins inital processes of planning a trip</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * tripPlanner manages the calculations for creating the most efficient trip for the student</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * this updates all data tables for colleges, their names and specific data values, and souveniers, with their respectives data values</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace</span> <a class="code" href="namespace_ui.html">Ui</a> {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class</span> tripPlanner;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classtrip_planner.html">   16</a></span>&#160;<span class="keyword">class</span> <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">tripPlanner</a> : <span class="keyword">public</span> <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">QDialog</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">Q_OBJECT</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    * @brief default explicit Constructor</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    *</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    * Constructor sets up ui for tripPlanner</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    * and executes initalizeList(), and updateCombo()</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    * @param *parent - for QDialog</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">tripPlanner</a>(<a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">QWidget</a> *<a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">parent</a> = <span class="keywordtype">nullptr</span>);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classtrip_planner.html">   30</a></span>&#160;<span class="keyword">class</span> <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">tripPlanner</a> : <span class="keyword">public</span> <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">QDialog</a></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">Q_OBJECT</a></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    * @brief default explicit Constructor</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    *</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">    * Constructor sets up ui for tripPlanner</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">    * and executes initalizeList(), and updateCombo()</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    * @param *parent - for QDialog</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">tripPlanner</a>(<a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">QWidget</a> *<a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">parent</a> = <span class="keywordtype">nullptr</span>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    * @brief Destructor</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    *</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    * Close the tripPlanner UI</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    ~<a class="code" href="classtrip_planner.html#adf0269ba1adf0967b99b524572753371">tripPlanner</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">    * @brief initalizes list of colleges and their distances from start colleges, as well as the UI for selecting and pushing colleges via checkBoxVector</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">    * @return nothing - void</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a09ff51f12d0e4eece8f5fd2db9017d38">initializeList</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    * @brief Destructor</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">    *</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    * Close the tripPlanner UI</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ~<a class="code" href="classtrip_planner.html#adf0269ba1adf0967b99b524572753371">tripPlanner</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">     * @brief Updates combo box in MLB information</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a83f8c209f19db50a76b7ff24eb7527bc">updateCombo</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">     * @brief Updates the table in the Distances tab</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#adcabaf282aa097a5f2f6b8a326df8c46">updateDistTable</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">     * @brief Updates the table in the MLB information tab</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a5ce520f9de46b775e0c4b6ddaa9db765">updateMLBTable</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">     * @brief Creates the checkbox list of stadiums</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a4d03f6e0f7b127bbc9e8d49b756891c6">selectedCollegeList</a>();</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">    * @brief stores and displays list of user/student selected colleges for current trip in progress/planned</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">    * @return nothing - void</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a4d03f6e0f7b127bbc9e8d49b756891c6">selectedCollegeList</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">    * @brief method that calculates most efficient route between all selected colleges, from start to finish</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">    * @return nothing - void</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">    * @param start - starting destination</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    * @param dist - stores distance between destination for recursive</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a76da0bd6a537c328a8f7b7d0b8a5c7c3">planAlgorithm</a>(QString start, <span class="keywordtype">int</span> dist);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    * @brief method that checks whether college in sql col exists</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">    * @return bool - true or false(whether data exists)</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">    * @param colname - college col to be checked</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtrip_planner.html#aae916f968748c5bca52525e298e27d6c">collegeDoesExist</a>(QString colName);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">    * @brief method that checks whether plan in sql col exists</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">    * @return bool - true or false(whether data exists)</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">    * @param colname - plan col to be checked</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtrip_planner.html#a2b7a2f1f4418737c5a0d9d40616de033">planDoesExist</a>(QString colName);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">    * @brief updates sql table with college data, with trip starting and ending colleges with their distances</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">    * @param start, starting college for trip</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">    * @return none- void</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#af0aa45427afac7ce03d47edb8eaaf04e">updateCollegeTable</a>(QString start);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">    * @brief updates sql table with souvenir data, with prices, quantity, souvenier name, and associated college</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">    * @param start, starting college for trip</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">    * @return none- void</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a8ab9722a483480aa6ddf51a2a90e13c0">updateSouvTable</a>(QString start);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">    * @brief updates sql table with tripID data and displays/updates trip data table</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">    * @param ID - tripID</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">    * @return none- void</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#afa3d43939dff604fe0efa70618d9d75c">showTrip</a>(QString ID);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a83f8c209f19db50a76b7ff24eb7527bc">updateCombo</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">     * @brief Checks if a stadium name exists</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtrip_planner.html#aae916f968748c5bca52525e298e27d6c">collegeDoesExist</a>(QString colName);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">     * @brief Checks if the given trip ID already exists</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtrip_planner.html#a2b7a2f1f4418737c5a0d9d40616de033">planDoesExist</a>(QString colName);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">     * @brief Displays the trip order of the stadiums</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#afa3d43939dff604fe0efa70618d9d75c">showTrip</a>(QString ID);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">     * @brief Updates teh combo box for available stadiums</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a0995eab75003d7dce53d41210439331b">updateComboTwo</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">     * @brief Trip planning algorithm using dijkstra</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#aed59a1963a1acaf7434dfccfa1b33cd8">algorithm</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">public</span> <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">slots</a>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">     * @brief Displays stadiums by ballpark topology</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">     * in MLB information tab</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">onTypologyClick</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">     * @brief Displays stadiums in the American League</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">     * in MLB information tab</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#aeeb41ff97a66d8c7ec7907918705e874">onAmericanClick</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">     * @brief Displays all stadiums</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">     * in MLB information tab</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a75efb6412d9b4d20ab290686b87c2d11">onShowClick</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">     * @brief Displays stadiums in the National League</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">     * in MLB information tab</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#ae24d81aa09309953e0775a7145046174">onNationalClick</a>();</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">private</span> <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">slots</a>:</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">    * @brief manages and updates checkbox for user selected colleges</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">    * @return none- void</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">ChecboxChanged</a>();</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">    * @brief displays user input and manages initliazation of planning college trips, distances. Calls planAlgorithim showTrip, and updates all tables</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">    * @return none- void</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a41bad123ae9fe695f0142baee4517e82">onPlanClick</a>();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">    * @brief updates and displays souv and college tables</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">    * @return none- void</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#ada9cb769efac5b9bfb321e88b1a02b36">onDisplayClick</a>();</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#ae89f2d2671f765b8ae4e6701f682046c">onStartClick</a>();</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">    * @brief points to tripPlanner UI</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a5426d7d7375464a717292faf1f3138aa">  133</a></span>&#160;    <a class="code" href="namespace_ui.html">Ui</a>::tripPlanner *<a class="code" href="classtrip_planner.html#a5426d7d7375464a717292faf1f3138aa">ui</a>;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">    * @brief assigns DB to predefined PROJECT_PATH constant</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classtrip_planner.html#ac3011789615ebab31141a9ad9a642dc5">  138</a></span>&#160;    <a class="code" href="class_db_manager.html">DbManager</a> <a class="code" href="classtrip_planner.html#ac3011789615ebab31141a9ad9a642dc5">myDb</a> = <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">DbManager</a>(<a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">PROJECT_PATH</a> + <span class="stringliteral">&quot;/college.db&quot;</span>);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">    * @brief vector for managing user selecting colleges via checkbox</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classtrip_planner.html#ac59a255ea747293cedcf60e3817f7496">  143</a></span>&#160;    <a class="code" href="classtrip_planner.html#ac59a255ea747293cedcf60e3817f7496">QVector</a>&lt;<a class="code" href="classtrip_planner.html#ac59a255ea747293cedcf60e3817f7496">QCheckBox</a>*&gt; <a class="code" href="classtrip_planner.html#ac59a255ea747293cedcf60e3817f7496">checkBoxVector</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">     * @brief Displays teams and stadiums sorted by stadium name</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">     * in MLB information tab</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a470452828b5e03f5ae522d4db6af3d4a">onStadiumsClick</a>();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">     * @brief Displays teams and stadiums sorted by team name</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">     * in MLB information tab</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a94a58a8b06c55ea7ec3084460856ae47">onTeamClick</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">     * @brief Displays team that matches searched team name</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">     * in MLB information tab</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a084ff8f733394876cf7cd348fa2fecdc">onSearchClick</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">     * @brief Displays stadiums by roof type</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">     * in MLB information tab</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a518edc426240d374733308865238e449">onRoofClick</a>();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">     * @brief Displays stadiums by creation year</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">     * in MLB information tab</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a7990e0365cda4745426a55fb26d1257b">onDateClick</a>();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">     * @brief Displays stadiums by number of seats</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">     * in MLB information tab</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a1d57483bec85dd872d5ae255c821d8c4">onSeatingClick</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">    * @brief  a string to hold the selected colleges - should be helpful for the plan trip algorithm</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a1884c3bf6bb1b09119c7670e1c5ae395">  148</a></span>&#160;    <a class="code" href="classtrip_planner.html#a1884c3bf6bb1b09119c7670e1c5ae395">QStringList</a> <a class="code" href="classtrip_planner.html#a1884c3bf6bb1b09119c7670e1c5ae395">selectedColleges</a>; <span class="comment">// a string to hold the selected colleges - should be helpful for the plan trip algorithm</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">    * @brief  a string to hold the planned colleges - should be helpful for the plan trip algorithm</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classtrip_planner.html#ab0953b84602b02cebcdf722294f6d4de">  153</a></span>&#160;    <a class="code" href="classtrip_planner.html#ab0953b84602b02cebcdf722294f6d4de">QStringList</a> <a class="code" href="classtrip_planner.html#ab0953b84602b02cebcdf722294f6d4de">plannedColleges</a>;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">     * @brief field member holding distance</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a97602084ee12e0cc86907ffb9bb5bc68">  158</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classtrip_planner.html#a97602084ee12e0cc86907ffb9bb5bc68">distance</a>;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="comment">/**</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">    * @brief field member holding tripID</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a9d8d4e58496c284dabe31279407f5ce3">  163</a></span>&#160;    <a class="code" href="classtrip_planner.html#a9d8d4e58496c284dabe31279407f5ce3">QString</a> <a class="code" href="classtrip_planner.html#a9d8d4e58496c284dabe31279407f5ce3">id</a>;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a34865f6c097f3ed90791e6a519b5c5d1">  165</a></span>&#160;    <a class="code" href="classtrip_planner.html#a34865f6c097f3ed90791e6a519b5c5d1">QList</a>&lt;<span class="keywordtype">int</span>&gt; <a class="code" href="classtrip_planner.html#a34865f6c097f3ed90791e6a519b5c5d1">distanceTo</a>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a0d904628227e4c833391fc5cb7d187b4">  167</a></span>&#160;    <a class="code" href="classtripprogress.html#a25dab95c13ca05aa89fb4faf3059d51a">tripprogress</a> *<a class="code" href="classtrip_planner.html#a0d904628227e4c833391fc5cb7d187b4">progress</a>;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;};</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// TRIPPLANNER_H</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">     * @brief Displays stadiums by largest distance field</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">     * in MLB information tab</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a938624c1a1c2ae0d0d8b7d3b57403a1d">onGreatClick</a>();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">     * @brief Displays stadiums by shortest distance field</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">     * in MLB information tab</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a7387395271abc89080e2acf77b6be958">onLeastClick</a>();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">     * @brief Initalizes checkbox list</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a09ff51f12d0e4eece8f5fd2db9017d38">initializeList</a>();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">     * @brief Plans trip path</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">     * requires a valid tripID entered</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">     * uses the algorithm function to determine path through stadiums</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">     * requires a valid starting stadium</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a41bad123ae9fe695f0142baee4517e82">onPlanClick</a>();</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">     * @brief Opens a dialogue displaying the BFS, DFS, and MST distances of the stadium graph</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a092f4088c35dcf30eebebb7b7a0f6644">onGraphInfoClick</a>();</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">     * @brief Initiates the start of the trip</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">     * requires valid trip plan and ID</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a326ee7d2d74b05c09f164b0bffd763ae">onStartTrip</a>();</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keyword">private</span> <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">slots</a>:</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">ChecboxChanged</a>();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">    * @brief points to tripPlanner UI</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a5426d7d7375464a717292faf1f3138aa">  193</a></span>&#160;    <a class="code" href="namespace_ui.html">Ui</a>::tripPlanner *<a class="code" href="classtrip_planner.html#a5426d7d7375464a717292faf1f3138aa">ui</a>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">    * @brief assigns DB to predefined PROJECT_PATH constant</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classtrip_planner.html#ac3011789615ebab31141a9ad9a642dc5">  199</a></span>&#160;    <a class="code" href="class_db_manager.html">DbManager</a> <a class="code" href="classtrip_planner.html#ac3011789615ebab31141a9ad9a642dc5">myDb</a> = <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">DbManager</a>(<a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">PROJECT_PATH</a> + <span class="stringliteral">&quot;/college.db&quot;</span>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a0d904628227e4c833391fc5cb7d187b4">  201</a></span>&#160;    <a class="code" href="classtripprogress.html#a25dab95c13ca05aa89fb4faf3059d51a">tripprogress</a> *<a class="code" href="classtrip_planner.html#a0d904628227e4c833391fc5cb7d187b4">progress</a>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classtrip_planner.html#ac59a255ea747293cedcf60e3817f7496">  203</a></span>&#160;    <a class="code" href="classtrip_planner.html#ac59a255ea747293cedcf60e3817f7496">QVector</a>&lt;<a class="code" href="classtrip_planner.html#ac59a255ea747293cedcf60e3817f7496">QCheckBox</a>*&gt; <a class="code" href="classtrip_planner.html#ac59a255ea747293cedcf60e3817f7496">checkBoxVector</a>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a1884c3bf6bb1b09119c7670e1c5ae395">  205</a></span>&#160;    <a class="code" href="classtrip_planner.html#a1884c3bf6bb1b09119c7670e1c5ae395">QStringList</a> <a class="code" href="classtrip_planner.html#a1884c3bf6bb1b09119c7670e1c5ae395">selectedColleges</a>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="classtrip_planner.html#ab0953b84602b02cebcdf722294f6d4de">  207</a></span>&#160;    <a class="code" href="classtrip_planner.html#ab0953b84602b02cebcdf722294f6d4de">QStringList</a> <a class="code" href="classtrip_planner.html#ab0953b84602b02cebcdf722294f6d4de">plannedColleges</a>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a97602084ee12e0cc86907ffb9bb5bc68">  208</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classtrip_planner.html#a97602084ee12e0cc86907ffb9bb5bc68">distance</a>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a9d8d4e58496c284dabe31279407f5ce3">  210</a></span>&#160;    <a class="code" href="classtrip_planner.html#a9d8d4e58496c284dabe31279407f5ce3">QString</a> <a class="code" href="classtrip_planner.html#a9d8d4e58496c284dabe31279407f5ce3">id</a>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a34865f6c097f3ed90791e6a519b5c5d1">  212</a></span>&#160;    <a class="code" href="classtrip_planner.html#a34865f6c097f3ed90791e6a519b5c5d1">QList</a>&lt;<span class="keywordtype">int</span>&gt; <a class="code" href="classtrip_planner.html#a34865f6c097f3ed90791e6a519b5c5d1">distanceTo</a>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a86be86f61460b03958343b5b4c526bfc">  214</a></span>&#160;    <a class="code" href="classgraph_info.html#a6f24e7b71f300f074cf0fd21fb38cb7e">graphInfo</a> *<a class="code" href="classtrip_planner.html#a86be86f61460b03958343b5b4c526bfc">info</a>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a4b0222c2b26509a2f209f3614c64c1f0">  216</a></span>&#160;    <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">vector</a>&lt;<a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">QString</a>&gt; <a class="code" href="classtrip_planner.html#a4b0222c2b26509a2f209f3614c64c1f0">path</a>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a0e51a2079e2a5f6f15c2380a281e267a">  218</a></span>&#160;    <a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">vector</a>&lt;<a class="code" href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">QString</a>&gt; <a class="code" href="classtrip_planner.html#a0e51a2079e2a5f6f15c2380a281e267a">remainingChoices</a>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="classtrip_planner.html#a252f150f6c4e48fa426e0e00064e6223">  220</a></span>&#160;    <a class="code" href="classtrip_planner.html#a252f150f6c4e48fa426e0e00064e6223">vector</a>&lt;<span class="keywordtype">int</span>&gt; <a class="code" href="classtrip_planner.html#a252f150f6c4e48fa426e0e00064e6223">distNext</a>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;};</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// TRIPPLANNER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclasstrip_planner_html_ab0953b84602b02cebcdf722294f6d4de"><div class="ttname"><a href="classtrip_planner.html#ab0953b84602b02cebcdf722294f6d4de">tripPlanner::plannedColleges</a></div><div class="ttdeci">QStringList plannedColleges</div><div class="ttdoc">a string to hold the planned colleges - should be helpful for the plan trip algorithm</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00153">tripplanner.h:153</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_a76da0bd6a537c328a8f7b7d0b8a5c7c3"><div class="ttname"><a href="classtrip_planner.html#a76da0bd6a537c328a8f7b7d0b8a5c7c3">tripPlanner::planAlgorithm</a></div><div class="ttdeci">void planAlgorithm(QString start, int dist)</div><div class="ttdoc">method that calculates most efficient route between all selected colleges, from start to finish</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00201">tripplanner.cpp:201</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_a49b42218c58074af9c51e5cc72811147"><div class="ttname"><a href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">tripPlanner::ChecboxChanged</a></div><div class="ttdeci">void ChecboxChanged()</div><div class="ttdoc">manages and updates checkbox for user selected colleges</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00081">tripplanner.cpp:81</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_a83f8c209f19db50a76b7ff24eb7527bc"><div class="ttname"><a href="classtrip_planner.html#a83f8c209f19db50a76b7ff24eb7527bc">tripPlanner::updateCombo</a></div><div class="ttdeci">void updateCombo()</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00021">tripplanner.cpp:21</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_af0aa45427afac7ce03d47edb8eaaf04e"><div class="ttname"><a href="classtrip_planner.html#af0aa45427afac7ce03d47edb8eaaf04e">tripPlanner::updateCollegeTable</a></div><div class="ttdeci">void updateCollegeTable(QString start)</div><div class="ttdoc">updates sql table with college data, with trip starting and ending colleges with their distances</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00267">tripplanner.cpp:267</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_aae916f968748c5bca52525e298e27d6c"><div class="ttname"><a href="classtrip_planner.html#aae916f968748c5bca52525e298e27d6c">tripPlanner::collegeDoesExist</a></div><div class="ttdeci">bool collegeDoesExist(QString colName)</div><div class="ttdoc">method that checks whether college in sql col exists</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00241">tripplanner.cpp:241</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_a5426d7d7375464a717292faf1f3138aa"><div class="ttname"><a href="classtrip_planner.html#a5426d7d7375464a717292faf1f3138aa">tripPlanner::ui</a></div><div class="ttdeci">Ui::tripPlanner * ui</div><div class="ttdoc">points to tripPlanner UI</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00133">tripplanner.h:133</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_ada9cb769efac5b9bfb321e88b1a02b36"><div class="ttname"><a href="classtrip_planner.html#ada9cb769efac5b9bfb321e88b1a02b36">tripPlanner::onDisplayClick</a></div><div class="ttdeci">void onDisplayClick()</div><div class="ttdoc">updates and displays souv and college tables</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00335">tripplanner.cpp:335</a></div></div>
-<div class="ttc" id="aclasstripprogress_html_a25dab95c13ca05aa89fb4faf3059d51a"><div class="ttname"><a href="classtripprogress.html#a25dab95c13ca05aa89fb4faf3059d51a">tripprogress::on_souvTable_clicked</a></div><div class="ttdeci">void on_souvTable_clicked(const QModelIndex &amp;index)</div><div class="ttdef"><b>Definition:</b> <a href="tripprogress_8cpp_source.html#l00280">tripprogress.cpp:280</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_a1884c3bf6bb1b09119c7670e1c5ae395"><div class="ttname"><a href="classtrip_planner.html#a1884c3bf6bb1b09119c7670e1c5ae395">tripPlanner::selectedColleges</a></div><div class="ttdeci">QStringList selectedColleges</div><div class="ttdoc">a string to hold the selected colleges - should be helpful for the plan trip algorithm</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00148">tripplanner.h:148</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_a9d8d4e58496c284dabe31279407f5ce3"><div class="ttname"><a href="classtrip_planner.html#a9d8d4e58496c284dabe31279407f5ce3">tripPlanner::id</a></div><div class="ttdeci">QString id</div><div class="ttdoc">field member holding tripID</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00163">tripplanner.h:163</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_adf0269ba1adf0967b99b524572753371"><div class="ttname"><a href="classtrip_planner.html#adf0269ba1adf0967b99b524572753371">tripPlanner::~tripPlanner</a></div><div class="ttdeci">~tripPlanner()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00016">tripplanner.cpp:16</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_ab0953b84602b02cebcdf722294f6d4de"><div class="ttname"><a href="classtrip_planner.html#ab0953b84602b02cebcdf722294f6d4de">tripPlanner::plannedColleges</a></div><div class="ttdeci">QStringList plannedColleges</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00207">tripplanner.h:207</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a49b42218c58074af9c51e5cc72811147"><div class="ttname"><a href="classtrip_planner.html#a49b42218c58074af9c51e5cc72811147">tripPlanner::ChecboxChanged</a></div><div class="ttdeci">void ChecboxChanged()</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00406">tripplanner.cpp:406</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a7387395271abc89080e2acf77b6be958"><div class="ttname"><a href="classtrip_planner.html#a7387395271abc89080e2acf77b6be958">tripPlanner::onLeastClick</a></div><div class="ttdeci">void onLeastClick()</div><div class="ttdoc">Displays stadiums by shortest distance field in MLB information tab.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00344">tripplanner.cpp:344</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a1d57483bec85dd872d5ae255c821d8c4"><div class="ttname"><a href="classtrip_planner.html#a1d57483bec85dd872d5ae255c821d8c4">tripPlanner::onSeatingClick</a></div><div class="ttdeci">void onSeatingClick()</div><div class="ttdoc">Displays stadiums by number of seats in MLB information tab.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00298">tripplanner.cpp:298</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a83f8c209f19db50a76b7ff24eb7527bc"><div class="ttname"><a href="classtrip_planner.html#a83f8c209f19db50a76b7ff24eb7527bc">tripPlanner::updateCombo</a></div><div class="ttdeci">void updateCombo()</div><div class="ttdoc">Updates combo box in MLB information.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00166">tripplanner.cpp:166</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_aae916f968748c5bca52525e298e27d6c"><div class="ttname"><a href="classtrip_planner.html#aae916f968748c5bca52525e298e27d6c">tripPlanner::collegeDoesExist</a></div><div class="ttdeci">bool collegeDoesExist(QString colName)</div><div class="ttdoc">Checks if a stadium name exists.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00547">tripplanner.cpp:547</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a5426d7d7375464a717292faf1f3138aa"><div class="ttname"><a href="classtrip_planner.html#a5426d7d7375464a717292faf1f3138aa">tripPlanner::ui</a></div><div class="ttdeci">Ui::tripPlanner * ui</div><div class="ttdoc">points to tripPlanner UI</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00193">tripplanner.h:193</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a092f4088c35dcf30eebebb7b7a0f6644"><div class="ttname"><a href="classtrip_planner.html#a092f4088c35dcf30eebebb7b7a0f6644">tripPlanner::onGraphInfoClick</a></div><div class="ttdeci">void onGraphInfoClick()</div><div class="ttdoc">Opens a dialogue displaying the BFS, DFS, and MST distances of the stadium graph.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00618">tripplanner.cpp:618</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a938624c1a1c2ae0d0d8b7d3b57403a1d"><div class="ttname"><a href="classtrip_planner.html#a938624c1a1c2ae0d0d8b7d3b57403a1d">tripPlanner::onGreatClick</a></div><div class="ttdeci">void onGreatClick()</div><div class="ttdoc">Displays stadiums by largest distance field in MLB information tab.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00321">tripplanner.cpp:321</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a0e51a2079e2a5f6f15c2380a281e267a"><div class="ttname"><a href="classtrip_planner.html#a0e51a2079e2a5f6f15c2380a281e267a">tripPlanner::remainingChoices</a></div><div class="ttdeci">vector&lt; QString &gt; remainingChoices</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00218">tripplanner.h:218</a></div></div>
+<div class="ttc" id="aclasstripprogress_html_a25dab95c13ca05aa89fb4faf3059d51a"><div class="ttname"><a href="classtripprogress.html#a25dab95c13ca05aa89fb4faf3059d51a">tripprogress::on_souvTable_clicked</a></div><div class="ttdeci">void on_souvTable_clicked(const QModelIndex &amp;index)</div><div class="ttdoc">Gets the data of the chosen cell in the table.</div><div class="ttdef"><b>Definition:</b> <a href="tripprogress_8cpp_source.html#l00303">tripprogress.cpp:303</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a4b0222c2b26509a2f209f3614c64c1f0"><div class="ttname"><a href="classtrip_planner.html#a4b0222c2b26509a2f209f3614c64c1f0">tripPlanner::path</a></div><div class="ttdeci">vector&lt; QString &gt; path</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00216">tripplanner.h:216</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a1884c3bf6bb1b09119c7670e1c5ae395"><div class="ttname"><a href="classtrip_planner.html#a1884c3bf6bb1b09119c7670e1c5ae395">tripPlanner::selectedColleges</a></div><div class="ttdeci">QStringList selectedColleges</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00205">tripplanner.h:205</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a470452828b5e03f5ae522d4db6af3d4a"><div class="ttname"><a href="classtrip_planner.html#a470452828b5e03f5ae522d4db6af3d4a">tripPlanner::onStadiumsClick</a></div><div class="ttdeci">void onStadiumsClick()</div><div class="ttdoc">Displays teams and stadiums sorted by stadium name in MLB information tab.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00124">tripplanner.cpp:124</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a86be86f61460b03958343b5b4c526bfc"><div class="ttname"><a href="classtrip_planner.html#a86be86f61460b03958343b5b4c526bfc">tripPlanner::info</a></div><div class="ttdeci">graphInfo * info</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00214">tripplanner.h:214</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a9d8d4e58496c284dabe31279407f5ce3"><div class="ttname"><a href="classtrip_planner.html#a9d8d4e58496c284dabe31279407f5ce3">tripPlanner::id</a></div><div class="ttdeci">QString id</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00210">tripplanner.h:210</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a5ce520f9de46b775e0c4b6ddaa9db765"><div class="ttname"><a href="classtrip_planner.html#a5ce520f9de46b775e0c4b6ddaa9db765">tripPlanner::updateMLBTable</a></div><div class="ttdeci">void updateMLBTable()</div><div class="ttdoc">Updates the table in the MLB information tab.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00206">tripplanner.cpp:206</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_adf0269ba1adf0967b99b524572753371"><div class="ttname"><a href="classtrip_planner.html#adf0269ba1adf0967b99b524572753371">tripPlanner::~tripPlanner</a></div><div class="ttdeci">~tripPlanner()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00021">tripplanner.cpp:21</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a0995eab75003d7dce53d41210439331b"><div class="ttname"><a href="classtrip_planner.html#a0995eab75003d7dce53d41210439331b">tripPlanner::updateComboTwo</a></div><div class="ttdeci">void updateComboTwo()</div><div class="ttdoc">Updates teh combo box for available stadiums.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00598">tripplanner.cpp:598</a></div></div>
 <div class="ttc" id="aclass_db_manager_html"><div class="ttname"><a href="class_db_manager.html">DbManager</a></div><div class="ttdoc">SQL Database Manager class.</div><div class="ttdef"><b>Definition:</b> <a href="dbmanager_8h_source.html#l00033">dbmanager.h:33</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_a2b7a2f1f4418737c5a0d9d40616de033"><div class="ttname"><a href="classtrip_planner.html#a2b7a2f1f4418737c5a0d9d40616de033">tripPlanner::planDoesExist</a></div><div class="ttdeci">bool planDoesExist(QString colName)</div><div class="ttdoc">method that checks whether plan in sql col exists</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00254">tripplanner.cpp:254</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_a8ab9722a483480aa6ddf51a2a90e13c0"><div class="ttname"><a href="classtrip_planner.html#a8ab9722a483480aa6ddf51a2a90e13c0">tripPlanner::updateSouvTable</a></div><div class="ttdeci">void updateSouvTable(QString start)</div><div class="ttdoc">updates sql table with souvenir data, with prices, quantity, souvenier name, and associated college</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00288">tripplanner.cpp:288</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_afa3d43939dff604fe0efa70618d9d75c"><div class="ttname"><a href="classtrip_planner.html#afa3d43939dff604fe0efa70618d9d75c">tripPlanner::showTrip</a></div><div class="ttdeci">void showTrip(QString ID)</div><div class="ttdoc">updates sql table with tripID data and displays/updates trip data table</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00312">tripplanner.cpp:312</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_a09ff51f12d0e4eece8f5fd2db9017d38"><div class="ttname"><a href="classtrip_planner.html#a09ff51f12d0e4eece8f5fd2db9017d38">tripPlanner::initializeList</a></div><div class="ttdeci">void initializeList()</div><div class="ttdoc">initalizes list of colleges and their distances from start colleges, as well as the UI for selecting ...</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00042">tripplanner.cpp:42</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_ae89f2d2671f765b8ae4e6701f682046c"><div class="ttname"><a href="classtrip_planner.html#ae89f2d2671f765b8ae4e6701f682046c">tripPlanner::onStartClick</a></div><div class="ttdeci">void onStartClick()</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00346">tripplanner.cpp:346</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_a4d03f6e0f7b127bbc9e8d49b756891c6"><div class="ttname"><a href="classtrip_planner.html#a4d03f6e0f7b127bbc9e8d49b756891c6">tripPlanner::selectedCollegeList</a></div><div class="ttdeci">void selectedCollegeList()</div><div class="ttdoc">stores and displays list of user/student selected colleges for current trip in progress/planned</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00116">tripplanner.cpp:116</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a94a58a8b06c55ea7ec3084460856ae47"><div class="ttname"><a href="classtrip_planner.html#a94a58a8b06c55ea7ec3084460856ae47">tripPlanner::onTeamClick</a></div><div class="ttdeci">void onTeamClick()</div><div class="ttdoc">Displays teams and stadiums sorted by team name in MLB information tab.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00145">tripplanner.cpp:145</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a2b7a2f1f4418737c5a0d9d40616de033"><div class="ttname"><a href="classtrip_planner.html#a2b7a2f1f4418737c5a0d9d40616de033">tripPlanner::planDoesExist</a></div><div class="ttdeci">bool planDoesExist(QString colName)</div><div class="ttdoc">Checks if the given trip ID already exists.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00561">tripplanner.cpp:561</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_ae24d81aa09309953e0775a7145046174"><div class="ttname"><a href="classtrip_planner.html#ae24d81aa09309953e0775a7145046174">tripPlanner::onNationalClick</a></div><div class="ttdeci">void onNationalClick()</div><div class="ttdoc">Displays stadiums in the National League in MLB information tab.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00098">tripplanner.cpp:98</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_aeeb41ff97a66d8c7ec7907918705e874"><div class="ttname"><a href="classtrip_planner.html#aeeb41ff97a66d8c7ec7907918705e874">tripPlanner::onAmericanClick</a></div><div class="ttdeci">void onAmericanClick()</div><div class="ttdoc">Displays stadiums in the American League in MLB information tab.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00051">tripplanner.cpp:51</a></div></div>
+<div class="ttc" id="aclassgraph_info_html_a6f24e7b71f300f074cf0fd21fb38cb7e"><div class="ttname"><a href="classgraph_info.html#a6f24e7b71f300f074cf0fd21fb38cb7e">graphInfo::onCloseClick</a></div><div class="ttdeci">void onCloseClick()</div><div class="ttdef"><b>Definition:</b> <a href="graphinfo_8cpp_source.html#l00027">graphinfo.cpp:27</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_afa3d43939dff604fe0efa70618d9d75c"><div class="ttname"><a href="classtrip_planner.html#afa3d43939dff604fe0efa70618d9d75c">tripPlanner::showTrip</a></div><div class="ttdeci">void showTrip(QString ID)</div><div class="ttdoc">Displays the trip order of the stadiums.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00574">tripplanner.cpp:574</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a09ff51f12d0e4eece8f5fd2db9017d38"><div class="ttname"><a href="classtrip_planner.html#a09ff51f12d0e4eece8f5fd2db9017d38">tripPlanner::initializeList</a></div><div class="ttdeci">void initializeList()</div><div class="ttdoc">Initalizes checkbox list.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00367">tripplanner.cpp:367</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a4d03f6e0f7b127bbc9e8d49b756891c6"><div class="ttname"><a href="classtrip_planner.html#a4d03f6e0f7b127bbc9e8d49b756891c6">tripPlanner::selectedCollegeList</a></div><div class="ttdeci">void selectedCollegeList()</div><div class="ttdoc">Creates the checkbox list of stadiums.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00442">tripplanner.cpp:442</a></div></div>
 <div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="addsouvenir_8h_source.html#l00008">addsouvenir.h:8</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_a34865f6c097f3ed90791e6a519b5c5d1"><div class="ttname"><a href="classtrip_planner.html#a34865f6c097f3ed90791e6a519b5c5d1">tripPlanner::distanceTo</a></div><div class="ttdeci">QList&lt; int &gt; distanceTo</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00165">tripplanner.h:165</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_ac59a255ea747293cedcf60e3817f7496"><div class="ttname"><a href="classtrip_planner.html#ac59a255ea747293cedcf60e3817f7496">tripPlanner::checkBoxVector</a></div><div class="ttdeci">QVector&lt; QCheckBox * &gt; checkBoxVector</div><div class="ttdoc">vector for managing user selecting colleges via checkbox</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00143">tripplanner.h:143</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_ac3011789615ebab31141a9ad9a642dc5"><div class="ttname"><a href="classtrip_planner.html#ac3011789615ebab31141a9ad9a642dc5">tripPlanner::myDb</a></div><div class="ttdeci">DbManager myDb</div><div class="ttdoc">assigns DB to predefined PROJECT_PATH constant</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00138">tripplanner.h:138</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_a41bad123ae9fe695f0142baee4517e82"><div class="ttname"><a href="classtrip_planner.html#a41bad123ae9fe695f0142baee4517e82">tripPlanner::onPlanClick</a></div><div class="ttdeci">void onPlanClick()</div><div class="ttdoc">displays user input and manages initliazation of planning college trips, distances....</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00147">tripplanner.cpp:147</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_a97602084ee12e0cc86907ffb9bb5bc68"><div class="ttname"><a href="classtrip_planner.html#a97602084ee12e0cc86907ffb9bb5bc68">tripPlanner::distance</a></div><div class="ttdeci">int distance</div><div class="ttdoc">field member holding distance</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00158">tripplanner.h:158</a></div></div>
-<div class="ttc" id="aclasstrip_planner_html_a0d904628227e4c833391fc5cb7d187b4"><div class="ttname"><a href="classtrip_planner.html#a0d904628227e4c833391fc5cb7d187b4">tripPlanner::progress</a></div><div class="ttdeci">tripprogress * progress</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00167">tripplanner.h:167</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a326ee7d2d74b05c09f164b0bffd763ae"><div class="ttname"><a href="classtrip_planner.html#a326ee7d2d74b05c09f164b0bffd763ae">tripPlanner::onStartTrip</a></div><div class="ttdeci">void onStartTrip()</div><div class="ttdoc">Initiates the start of the trip requires valid trip plan and ID.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00666">tripplanner.cpp:666</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_adcabaf282aa097a5f2f6b8a326df8c46"><div class="ttname"><a href="classtrip_planner.html#adcabaf282aa097a5f2f6b8a326df8c46">tripPlanner::updateDistTable</a></div><div class="ttdeci">void updateDistTable()</div><div class="ttdoc">Updates the table in the Distances tab.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00187">tripplanner.cpp:187</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a252f150f6c4e48fa426e0e00064e6223"><div class="ttname"><a href="classtrip_planner.html#a252f150f6c4e48fa426e0e00064e6223">tripPlanner::distNext</a></div><div class="ttdeci">vector&lt; int &gt; distNext</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00220">tripplanner.h:220</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a34865f6c097f3ed90791e6a519b5c5d1"><div class="ttname"><a href="classtrip_planner.html#a34865f6c097f3ed90791e6a519b5c5d1">tripPlanner::distanceTo</a></div><div class="ttdeci">QList&lt; int &gt; distanceTo</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00212">tripplanner.h:212</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a518edc426240d374733308865238e449"><div class="ttname"><a href="classtrip_planner.html#a518edc426240d374733308865238e449">tripPlanner::onRoofClick</a></div><div class="ttdeci">void onRoofClick()</div><div class="ttdoc">Displays stadiums by roof type in MLB information tab.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00254">tripplanner.cpp:254</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_ac59a255ea747293cedcf60e3817f7496"><div class="ttname"><a href="classtrip_planner.html#ac59a255ea747293cedcf60e3817f7496">tripPlanner::checkBoxVector</a></div><div class="ttdeci">QVector&lt; QCheckBox * &gt; checkBoxVector</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00203">tripplanner.h:203</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_ac3011789615ebab31141a9ad9a642dc5"><div class="ttname"><a href="classtrip_planner.html#ac3011789615ebab31141a9ad9a642dc5">tripPlanner::myDb</a></div><div class="ttdeci">DbManager myDb</div><div class="ttdoc">assigns DB to predefined PROJECT_PATH constant</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00199">tripplanner.h:199</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a084ff8f733394876cf7cd348fa2fecdc"><div class="ttname"><a href="classtrip_planner.html#a084ff8f733394876cf7cd348fa2fecdc">tripPlanner::onSearchClick</a></div><div class="ttdeci">void onSearchClick()</div><div class="ttdoc">Displays team that matches searched team name in MLB information tab.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00227">tripplanner.cpp:227</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a41bad123ae9fe695f0142baee4517e82"><div class="ttname"><a href="classtrip_planner.html#a41bad123ae9fe695f0142baee4517e82">tripPlanner::onPlanClick</a></div><div class="ttdeci">void onPlanClick()</div><div class="ttdoc">Plans trip path requires a valid tripID entered uses the algorithm function to determine path through...</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00472">tripplanner.cpp:472</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a75efb6412d9b4d20ab290686b87c2d11"><div class="ttname"><a href="classtrip_planner.html#a75efb6412d9b4d20ab290686b87c2d11">tripPlanner::onShowClick</a></div><div class="ttdeci">void onShowClick()</div><div class="ttdoc">Displays all stadiums in MLB information tab.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00076">tripplanner.cpp:76</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a97602084ee12e0cc86907ffb9bb5bc68"><div class="ttname"><a href="classtrip_planner.html#a97602084ee12e0cc86907ffb9bb5bc68">tripPlanner::distance</a></div><div class="ttdeci">int distance</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00208">tripplanner.h:208</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_aed59a1963a1acaf7434dfccfa1b33cd8"><div class="ttname"><a href="classtrip_planner.html#aed59a1963a1acaf7434dfccfa1b33cd8">tripPlanner::algorithm</a></div><div class="ttdeci">void algorithm()</div><div class="ttdoc">Trip planning algorithm using dijkstra.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00627">tripplanner.cpp:627</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a7990e0365cda4745426a55fb26d1257b"><div class="ttname"><a href="classtrip_planner.html#a7990e0365cda4745426a55fb26d1257b">tripPlanner::onDateClick</a></div><div class="ttdeci">void onDateClick()</div><div class="ttdoc">Displays stadiums by creation year in MLB information tab.</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8cpp_source.html#l00277">tripplanner.cpp:277</a></div></div>
+<div class="ttc" id="aclasstrip_planner_html_a0d904628227e4c833391fc5cb7d187b4"><div class="ttname"><a href="classtrip_planner.html#a0d904628227e4c833391fc5cb7d187b4">tripPlanner::progress</a></div><div class="ttdeci">tripprogress * progress</div><div class="ttdef"><b>Definition:</b> <a href="tripplanner_8h_source.html#l00201">tripplanner.h:201</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

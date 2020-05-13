@@ -1,10 +1,9 @@
 <map id="AdminWindow::updateSouvenirTable" name="AdminWindow::updateSouvenirTable">
-<area shape="rect" id="node1" title="updates sql data table for college souvenirs when called" alt="" coords="277,173,479,214"/>
-<area shape="rect" id="node2" href="$class_admin_window.html#a0a68db6e97108a5b789d7b90dd962f76" title="explicit default Constructor" alt="" coords="19,5,215,32"/>
-<area shape="rect" id="node3" href="$class_admin_window.html#adb75fb0689794491accb94c3bd9989be" title="clears database of data" alt="" coords="12,56,223,83"/>
-<area shape="rect" id="node4" href="$class_admin_window.html#af609806ed07d37eedbfa96274c2cd86a" title="executes addSouvenir class obj" alt="" coords="15,107,219,149"/>
-<area shape="rect" id="node5" href="$class_admin_window.html#a9da5cb0c07bdf0cb6d8f7d980ec33c49" title=" " alt="" coords="5,173,229,214"/>
-<area shape="rect" id="node6" href="$class_admin_window.html#ab4bb07b30224270802c48b3666514a89" title="deletes souvenir from data tables" alt="" coords="5,238,229,279"/>
-<area shape="rect" id="node7" href="$class_admin_window.html#abd378ec54897e75624563d579837ee40" title="adds college to connected database" alt="" coords="17,304,217,331"/>
-<area shape="rect" id="node8" href="$class_admin_window.html#a79ff9b05e6c99ca908f35e64877b2f8b" title="runs a verification of confirmPage, if verfied, initalizes distance, college, souvenir lists,..." alt="" coords="30,355,205,381"/>
+<area shape="rect" id="node1" title="updates sql data table for college souvenirs when called" alt="" coords="264,165,465,206"/>
+<area shape="rect" id="node2" href="$class_admin_window.html#a0a68db6e97108a5b789d7b90dd962f76" title="explicit default Constructor" alt="" coords="13,29,209,56"/>
+<area shape="rect" id="node3" href="$class_admin_window.html#adb75fb0689794491accb94c3bd9989be" title="clears database of data" alt="" coords="5,80,216,107"/>
+<area shape="rect" id="node4" href="$class_admin_window.html#a2f4241f561a61338473a6a123c47198f" title=" " alt="" coords="19,131,202,173"/>
+<area shape="rect" id="node5" href="$class_admin_window.html#af609806ed07d37eedbfa96274c2cd86a" title="executes addSouvenir class obj" alt="" coords="9,197,213,238"/>
+<area shape="rect" id="node6" href="$class_admin_window.html#abd378ec54897e75624563d579837ee40" title="adds college to connected database" alt="" coords="11,263,211,289"/>
+<area shape="rect" id="node7" href="$class_admin_window.html#a79ff9b05e6c99ca908f35e64877b2f8b" title="runs a verification of confirmPage, if verfied, initalizes distance, college, souvenir lists,..." alt="" coords="23,313,198,340"/>
 </map>

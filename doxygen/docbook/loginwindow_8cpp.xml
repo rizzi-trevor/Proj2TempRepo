@@ -5,7 +5,6 @@
 <programlisting>#include &quot;loginwindow.h&quot;
 #include &quot;ui_loginwindow.h&quot;
 #include &quot;dbmanager.h&quot;
-#include &quot;tripplanner.h&quot;
 </programlisting>Include dependency graph for loginwindow.cpp:<para>
     <informalfigure>
         <mediaobject>

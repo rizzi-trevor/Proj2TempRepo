@@ -1,4 +1,4 @@
-.TH "DbManager" 3 "Mon Mar 23 2020" "Version 1" "CS1D - Project1 - College Touring" \" -*- nroff -*-
+.TH "DbManager" 3 "Mon May 11 2020" "Version 1" "CS1D - Project2 - Baseball" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -24,6 +24,14 @@ DbManager \- SQL Database Manager class\&.
 .RI "void \fBinitSouvenirList\fP (const QString &path)"
 .br
 .RI "initalizes sql data table for souvenir and inputs all data from path parameter file location "
+.ti -1c
+.RI "void \fBinitMlbList\fP (const QString &path)"
+.br
+.RI "Initializes MLB stadium data from xlsx file at given path\&. "
+.ti -1c
+.RI "void \fBinitStadiumList\fP (const QString &path)"
+.br
+.RI "Initalizes the database storing distances between stadiums\&. "
 .ti -1c
 .RI "void \fBinitDistanceList\fP (const QString &path)"
 .br
@@ -73,6 +81,10 @@ DbManager \- SQL Database Manager class\&.
 .br
 .RI "add colleges from file to DB "
 .ti -1c
+.RI "void \fBaddMLB\fP (const QString &path)"
+.br
+.RI "Reads MLB data from an xlsx file at the given path\&. "
+.ti -1c
 .RI "bool \fBuserExists\fP (const QString &user)"
 .br
 .RI "checks to see if the username exists "
@@ -107,6 +119,15 @@ DbManager \- SQL Database Manager class\&.
 .ti -1c
 .RI "void \fBcreateTripTable\fP ()"
 .br
+.RI "Creates tables in the database used in the trip planning process\&. "
+.ti -1c
+.RI "void \fBcreateSouvTable\fP ()"
+.br
+.RI "Initializes a database table with standard souvenirs for each stadium\&. "
+.ti -1c
+.RI "bool \fBreOpen\fP ()"
+.br
+.RI "Re opens the database\&. "
 .in -1c
 .SS "Private Attributes"
 
@@ -169,7 +190,7 @@ void - none
 .PP
 
 .PP
-Definition at line 277 of file dbmanager\&.cpp\&.
+Definition at line 402 of file dbmanager\&.cpp\&.
 .SS "void DbManager::addColleges (const QString & path)"
 
 .PP
@@ -187,7 +208,20 @@ void - none
 .PP
 
 .PP
-Definition at line 534 of file dbmanager\&.cpp\&.
+Definition at line 720 of file dbmanager\&.cpp\&.
+.SS "void DbManager::addMLB (const QString & path)"
+
+.PP
+Reads MLB data from an xlsx file at the given path\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP 
+.RE
+.PP
+
+.PP
+Definition at line 659 of file dbmanager\&.cpp\&.
 .SS "void DbManager::addPurchase ()"
 
 .PP
@@ -200,7 +234,7 @@ void - none
 .PP
 
 .PP
-Definition at line 247 of file dbmanager\&.cpp\&.
+Definition at line 372 of file dbmanager\&.cpp\&.
 .SS "void DbManager::addSou (const QString & college, const QString & souName, const double & cost)"
 
 .PP
@@ -222,7 +256,7 @@ void - none
 .PP
 
 .PP
-Definition at line 299 of file dbmanager\&.cpp\&.
+Definition at line 424 of file dbmanager\&.cpp\&.
 .SS "void DbManager::addTrip (QString tripID, QString plannedCollege, int index, int distanceTo)"
 
 .PP
@@ -244,7 +278,7 @@ void - nothing
 .PP
 
 .PP
-Definition at line 604 of file dbmanager\&.cpp\&.
+Definition at line 801 of file dbmanager\&.cpp\&.
 .SS "void DbManager::addUser (const QString & user, const QString & pass)"
 
 .PP
@@ -264,7 +298,7 @@ void - none
 .PP
 
 .PP
-Definition at line 368 of file dbmanager\&.cpp\&.
+Definition at line 493 of file dbmanager\&.cpp\&.
 .SS "int DbManager::cartQuantity (const QString college, const QString souvenir)"
 
 .PP
@@ -284,7 +318,7 @@ int - quanity of cart
 .PP
 
 .PP
-Definition at line 193 of file dbmanager\&.cpp\&.
+Definition at line 318 of file dbmanager\&.cpp\&.
 .SS "bool DbManager::checkAdmin (const QString & username) const"
 
 .PP
@@ -302,7 +336,7 @@ true - will enable admin login, false - the person is not an admin
 .PP
 
 .PP
-Definition at line 471 of file dbmanager\&.cpp\&.
+Definition at line 596 of file dbmanager\&.cpp\&.
 .SS "void DbManager::clearDb ()"
 
 .PP
@@ -315,11 +349,19 @@ void - nothing
 .PP
 
 .PP
-Definition at line 448 of file dbmanager\&.cpp\&.
+Definition at line 573 of file dbmanager\&.cpp\&.
+.SS "void DbManager::createSouvTable ()"
+
+.PP
+Initializes a database table with standard souvenirs for each stadium\&. 
+.PP
+Definition at line 848 of file dbmanager\&.cpp\&.
 .SS "void DbManager::createTripTable ()"
 
 .PP
-Definition at line 580 of file dbmanager\&.cpp\&.
+Creates tables in the database used in the trip planning process\&. 
+.PP
+Definition at line 766 of file dbmanager\&.cpp\&.
 .SS "QString DbManager::getPassword (const QString & username) const"
 
 .PP
@@ -337,7 +379,7 @@ obtains the password from user
 .PP
 
 .PP
-Definition at line 507 of file dbmanager\&.cpp\&.
+Definition at line 632 of file dbmanager\&.cpp\&.
 .SS "void DbManager::InitCollegeList (const QString & path)"
 
 .PP
@@ -373,7 +415,20 @@ void - none
 .PP
 
 .PP
-Definition at line 128 of file dbmanager\&.cpp\&.
+Definition at line 254 of file dbmanager\&.cpp\&.
+.SS "void DbManager::initMlbList (const QString & path)"
+
+.PP
+Initializes MLB stadium data from xlsx file at given path\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file dbmanager\&.cpp\&.
 .SS "void DbManager::initSouvenirList (const QString & path)"
 
 .PP
@@ -391,7 +446,20 @@ void - none
 .PP
 
 .PP
-Definition at line 73 of file dbmanager\&.cpp\&.
+Definition at line 199 of file dbmanager\&.cpp\&.
+.SS "void DbManager::initStadiumList (const QString & path)"
+
+.PP
+Initalizes the database storing distances between stadiums\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP 
+.RE
+.PP
+
+.PP
+Definition at line 157 of file dbmanager\&.cpp\&.
 .SS "bool DbManager::isOpen () const"
 
 .PP
@@ -404,7 +472,7 @@ true - \fBDbManager\fP is open, false - \fBDbManager\fP is closed
 .PP
 
 .PP
-Definition at line 466 of file dbmanager\&.cpp\&.
+Definition at line 591 of file dbmanager\&.cpp\&.
 .SS "void DbManager::removeCart (const QString college, const QString souvenir)"
 
 .PP
@@ -424,7 +492,7 @@ void - none
 .PP
 
 .PP
-Definition at line 220 of file dbmanager\&.cpp\&.
+Definition at line 345 of file dbmanager\&.cpp\&.
 .SS "void DbManager::removeSou (const QString & souName, const QString & college)"
 
 .PP
@@ -444,7 +512,20 @@ void - none
 .PP
 
 .PP
-Definition at line 173 of file dbmanager\&.cpp\&.
+Definition at line 296 of file dbmanager\&.cpp\&.
+.SS "bool DbManager::reOpen ()"
+
+.PP
+Re opens the database\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definition at line 928 of file dbmanager\&.cpp\&.
 .SS "void DbManager::resetCart ()"
 
 .PP
@@ -457,7 +538,7 @@ void - none
 .PP
 
 .PP
-Definition at line 262 of file dbmanager\&.cpp\&.
+Definition at line 387 of file dbmanager\&.cpp\&.
 .SS "bool DbManager::souExists (const QString & name, const QString & college)"
 
 .PP
@@ -477,7 +558,7 @@ true - username exists, false - username does not exist
 .PP
 
 .PP
-Definition at line 393 of file dbmanager\&.cpp\&.
+Definition at line 518 of file dbmanager\&.cpp\&.
 .SS "bool DbManager::tripIdExists (QString tripID)"
 
 .PP
@@ -495,7 +576,7 @@ bool- whether data exists
 .PP
 
 .PP
-Definition at line 625 of file dbmanager\&.cpp\&.
+Definition at line 822 of file dbmanager\&.cpp\&.
 .SS "void DbManager::updateCart (const QString college, const QString souvenir, const int count)"
 
 .PP
@@ -517,7 +598,7 @@ void - none
 .PP
 
 .PP
-Definition at line 324 of file dbmanager\&.cpp\&.
+Definition at line 449 of file dbmanager\&.cpp\&.
 .SS "void DbManager::updateSou (const QString & souName, const QString & college, const double & spin, const QString & newSouvenir)"
 
 .PP
@@ -541,7 +622,7 @@ void - none
 .PP
 
 .PP
-Definition at line 343 of file dbmanager\&.cpp\&.
+Definition at line 468 of file dbmanager\&.cpp\&.
 .SS "bool DbManager::userExists (const QString & user)"
 
 .PP
@@ -559,7 +640,7 @@ true - username exists, false - username does not exist
 .PP
 
 .PP
-Definition at line 422 of file dbmanager\&.cpp\&.
+Definition at line 547 of file dbmanager\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "QSqlDatabase DbManager::myDB\fC [private]\fP"
@@ -567,8 +648,8 @@ Definition at line 422 of file dbmanager\&.cpp\&.
 .PP
 decalre database field memberobj 
 .PP
-Definition at line 220 of file dbmanager\&.h\&.
+Definition at line 252 of file dbmanager\&.h\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for CS1D - Project1 - College Touring from the source code\&.
+Generated automatically by Doxygen for CS1D - Project2 - Baseball from the source code\&.

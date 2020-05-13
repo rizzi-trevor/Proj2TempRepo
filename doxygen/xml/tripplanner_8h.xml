@@ -4,85 +4,57 @@
     <compoundname>tripplanner.h</compoundname>
     <includes local="no">QDialog</includes>
     <includes local="no">QList</includes>
+    <includes refid="graphinfo_8h" local="yes">graphinfo.h</includes>
     <includes refid="dbmanager_8h" local="yes">dbmanager.h</includes>
     <includes local="no">qcheckbox.h</includes>
     <includes refid="tripsummary_8h" local="yes">tripsummary.h</includes>
     <includes refid="tripprogress_8h" local="yes">tripprogress.h</includes>
     <includedby refid="loginwindow_8h" local="yes">loginwindow.h</includedby>
-    <includedby refid="loginwindow_8cpp" local="yes">loginwindow.cpp</includedby>
     <includedby refid="tripplanner_8cpp" local="yes">tripplanner.cpp</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>QList</label>
+      <node id="7">
+        <label>QtDebug</label>
       </node>
-      <node id="13">
-        <label>tripprogress.h</label>
-        <link refid="tripprogress_8h"/>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
+      <node id="9">
+        <label>qsortfilterproxymodel.h</label>
       </node>
-      <node id="14">
-        <label>QMainWindow</label>
+      <node id="10">
+        <label>QMessageBox</label>
       </node>
-      <node id="1">
-        <label>tripplanner.h</label>
-        <link refid="tripplanner_8h"/>
+      <node id="18">
+        <label>dfsgraph.h</label>
+        <link refid="dfsgraph_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
       </node>
-      <node id="15">
+      <node id="30">
         <label>confirmpage.h</label>
         <link refid="confirmpage_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="12">
-        <label>tripsummary.h</label>
-        <link refid="tripsummary_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>QSqlDatabase</label>
-      </node>
-      <node id="2">
-        <label>QDialog</label>
-      </node>
-      <node id="7">
-        <label>QDebug</label>
-      </node>
-      <node id="11">
-        <label>qcheckbox.h</label>
-      </node>
-      <node id="5">
-        <label>QAbstractItemModel</label>
-      </node>
-      <node id="10">
-        <label>QSqlQuery</label>
+      <node id="3">
+        <label>QList</label>
       </node>
       <node id="4">
-        <label>dbmanager.h</label>
-        <link refid="dbmanager_8h"/>
+        <label>graphinfo.h</label>
+        <link refid="graphinfo_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
@@ -95,11 +67,147 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>graphAdjList.h</label>
+        <link refid="graph_adj_list_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>string</label>
+      </node>
+      <node id="29">
+        <label>QMainWindow</label>
+      </node>
+      <node id="12">
+        <label>graph.h</label>
+        <link refid="graph_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>fstream</label>
+      </node>
+      <node id="5">
+        <label>QListWidget</label>
+      </node>
+      <node id="25">
+        <label>QSqlDatabase</label>
+      </node>
+      <node id="1">
+        <label>tripplanner.h</label>
+        <link refid="tripplanner_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QDialog</label>
+      </node>
+      <node id="17">
+        <label>QDebug</label>
+      </node>
+      <node id="15">
+        <label>vector</label>
+      </node>
+      <node id="28">
+        <label>tripprogress.h</label>
+        <link refid="tripprogress_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>dbmanager.h</label>
+        <link refid="dbmanager_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>qcheckbox.h</label>
+      </node>
+      <node id="11">
+        <label>bfs.h</label>
+        <link refid="bfs_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>QAbstractItemModel</label>
+      </node>
+      <node id="13">
+        <label>iostream</label>
       </node>
       <node id="6">
-        <label>QtSql</label>
+        <label>QSqlQuery</label>
       </node>
       <node id="8">
+        <label>qsqlquerymodel.h</label>
+      </node>
+      <node id="27">
+        <label>tripsummary.h</label>
+        <link refid="tripsummary_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>algorithm</label>
+      </node>
+      <node id="23">
+        <label>QtSql</label>
+      </node>
+      <node id="24">
         <label>QFileInfo</label>
       </node>
     </incdepgraph>
@@ -108,20 +216,10 @@
         <label>tripplanner.cpp</label>
         <link refid="tripplanner_8cpp"/>
       </node>
-      <node id="5">
-        <label>main.cpp</label>
-        <link refid="main_8cpp"/>
-      </node>
-      <node id="3">
-        <label>adminwindow.cpp</label>
-        <link refid="adminwindow_8cpp"/>
-      </node>
       <node id="1">
         <label>tripplanner.h</label>
         <link refid="tripplanner_8h"/>
         <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
@@ -129,6 +227,10 @@
       <node id="4">
         <label>loginwindow.cpp</label>
         <link refid="loginwindow_8cpp"/>
+      </node>
+      <node id="5">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
       </node>
       <node id="2">
         <label>loginwindow.h</label>
@@ -139,6 +241,10 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+      </node>
+      <node id="3">
+        <label>adminwindow.cpp</label>
+        <link refid="adminwindow_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classtrip_planner" prot="public">tripPlanner</innerclass>
@@ -153,74 +259,117 @@
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDialog&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QList&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dbmanager_8h" kindref="compound">dbmanager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qcheckbox.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tripsummary_8h" kindref="compound">tripsummary.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tripprogress_8h" kindref="compound">tripprogress.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_ui" kindref="compound">Ui</ref><sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtrip_planner" kindref="compound">tripPlanner</ref>;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="graphinfo_8h" kindref="compound">graphinfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dbmanager_8h" kindref="compound">dbmanager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qcheckbox.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tripsummary_8h" kindref="compound">tripsummary.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tripprogress_8h" kindref="compound">tripprogress.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_ui" kindref="compound">Ui</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtrip_planner" kindref="compound">tripPlanner</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classtrip_planner" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtrip_planner" kindref="compound">tripPlanner</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QDialog</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a4f1efc2b2d8bc3be648de0584d7f90ba" kindref="member">tripPlanner</ref>(QWidget<sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30" refid="classtrip_planner" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtrip_planner" kindref="compound">tripPlanner</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QDialog</highlight></codeline>
-<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a4f1efc2b2d8bc3be648de0584d7f90ba" kindref="member">tripPlanner</ref>(QWidget<sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtrip_planner_1adf0269ba1adf0967b99b524572753371" kindref="member">~tripPlanner</ref>();</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a09ff51f12d0e4eece8f5fd2db9017d38" kindref="member">initializeList</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtrip_planner_1adf0269ba1adf0967b99b524572753371" kindref="member">~tripPlanner</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a83f8c209f19db50a76b7ff24eb7527bc" kindref="member">updateCombo</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1adcabaf282aa097a5f2f6b8a326df8c46" kindref="member">updateDistTable</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a5ce520f9de46b775e0c4b6ddaa9db765" kindref="member">updateMLBTable</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a4d03f6e0f7b127bbc9e8d49b756891c6" kindref="member">selectedCollegeList</ref>();</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a4d03f6e0f7b127bbc9e8d49b756891c6" kindref="member">selectedCollegeList</ref>();</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a76da0bd6a537c328a8f7b7d0b8a5c7c3" kindref="member">planAlgorithm</ref>(QString<sp/>start,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dist);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1aae916f968748c5bca52525e298e27d6c" kindref="member">collegeDoesExist</ref>(QString<sp/>colName);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a2b7a2f1f4418737c5a0d9d40616de033" kindref="member">planDoesExist</ref>(QString<sp/>colName);</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1af0aa45427afac7ce03d47edb8eaaf04e" kindref="member">updateCollegeTable</ref>(QString<sp/>start);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a8ab9722a483480aa6ddf51a2a90e13c0" kindref="member">updateSouvTable</ref>(QString<sp/>start);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1afa3d43939dff604fe0efa70618d9d75c" kindref="member">showTrip</ref>(QString<sp/>ID);</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a83f8c209f19db50a76b7ff24eb7527bc" kindref="member">updateCombo</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1aae916f968748c5bca52525e298e27d6c" kindref="member">collegeDoesExist</ref>(QString<sp/>colName);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a2b7a2f1f4418737c5a0d9d40616de033" kindref="member">planDoesExist</ref>(QString<sp/>colName);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1afa3d43939dff604fe0efa70618d9d75c" kindref="member">showTrip</ref>(QString<sp/>ID);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a0995eab75003d7dce53d41210439331b" kindref="member">updateComboTwo</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1aed59a1963a1acaf7434dfccfa1b33cd8" kindref="member">algorithm</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a24b9b27b96d5d792686509f2b587c448" kindref="member">onTypologyClick</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1aeeb41ff97a66d8c7ec7907918705e874" kindref="member">onAmericanClick</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a75efb6412d9b4d20ab290686b87c2d11" kindref="member">onShowClick</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1ae24d81aa09309953e0775a7145046174" kindref="member">onNationalClick</ref>();</highlight></codeline>
 <codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a49b42218c58074af9c51e5cc72811147" kindref="member">ChecboxChanged</ref>();</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a41bad123ae9fe695f0142baee4517e82" kindref="member">onPlanClick</ref>();</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1ada9cb769efac5b9bfb321e88b1a02b36" kindref="member">onDisplayClick</ref>();</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1ae89f2d2671f765b8ae4e6701f682046c" kindref="member">onStartClick</ref>();</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="133" refid="classtrip_planner_1a5426d7d7375464a717292faf1f3138aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Ui::tripPlanner<sp/>*<ref refid="classtrip_planner_1a5426d7d7375464a717292faf1f3138aa" kindref="member">ui</ref>;</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138" refid="classtrip_planner_1ac3011789615ebab31141a9ad9a642dc5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_db_manager" kindref="compound">DbManager</ref><sp/><ref refid="classtrip_planner_1ac3011789615ebab31141a9ad9a642dc5" kindref="member">myDb</ref><sp/>=<sp/><ref refid="class_db_manager" kindref="compound">DbManager</ref>(PROJECT_PATH<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/college.db&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"></highlight></codeline>
-<codeline lineno="143" refid="classtrip_planner_1ac59a255ea747293cedcf60e3817f7496" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QCheckBox*&gt;<sp/><ref refid="classtrip_planner_1ac59a255ea747293cedcf60e3817f7496" kindref="member">checkBoxVector</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a470452828b5e03f5ae522d4db6af3d4a" kindref="member">onStadiumsClick</ref>();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a94a58a8b06c55ea7ec3084460856ae47" kindref="member">onTeamClick</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a084ff8f733394876cf7cd348fa2fecdc" kindref="member">onSearchClick</ref>();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a518edc426240d374733308865238e449" kindref="member">onRoofClick</ref>();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a7990e0365cda4745426a55fb26d1257b" kindref="member">onDateClick</ref>();</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a1d57483bec85dd872d5ae255c821d8c4" kindref="member">onSeatingClick</ref>();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
 <codeline lineno="144"><highlight class="normal"></highlight></codeline>
-<codeline lineno="148" refid="classtrip_planner_1a1884c3bf6bb1b09119c7670e1c5ae395" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QStringList<sp/><ref refid="classtrip_planner_1a1884c3bf6bb1b09119c7670e1c5ae395" kindref="member">selectedColleges</ref>;<sp/></highlight><highlight class="comment">//<sp/>a<sp/>string<sp/>to<sp/>hold<sp/>the<sp/>selected<sp/>colleges<sp/>-<sp/>should<sp/>be<sp/>helpful<sp/>for<sp/>the<sp/>plan<sp/>trip<sp/>algorithm</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="149"><highlight class="normal"></highlight></codeline>
-<codeline lineno="153" refid="classtrip_planner_1ab0953b84602b02cebcdf722294f6d4de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QStringList<sp/><ref refid="classtrip_planner_1ab0953b84602b02cebcdf722294f6d4de" kindref="member">plannedColleges</ref>;</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"></highlight></codeline>
-<codeline lineno="158" refid="classtrip_planner_1a97602084ee12e0cc86907ffb9bb5bc68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a97602084ee12e0cc86907ffb9bb5bc68" kindref="member">distance</ref>;</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"></highlight></codeline>
-<codeline lineno="163" refid="classtrip_planner_1a9d8d4e58496c284dabe31279407f5ce3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="classtrip_planner_1a9d8d4e58496c284dabe31279407f5ce3" kindref="member">id</ref>;</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"></highlight></codeline>
-<codeline lineno="165" refid="classtrip_planner_1a34865f6c097f3ed90791e6a519b5c5d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QList&lt;int&gt;<sp/><ref refid="classtrip_planner_1a34865f6c097f3ed90791e6a519b5c5d1" kindref="member">distanceTo</ref>;</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"></highlight></codeline>
-<codeline lineno="167" refid="classtrip_planner_1a0d904628227e4c833391fc5cb7d187b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtripprogress" kindref="compound">tripprogress</ref><sp/>*<ref refid="classtrip_planner_1a0d904628227e4c833391fc5cb7d187b4" kindref="member">progress</ref>;</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"></highlight></codeline>
-<codeline lineno="170"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight></codeline>
-<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>TRIPPLANNER_H</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a938624c1a1c2ae0d0d8b7d3b57403a1d" kindref="member">onGreatClick</ref>();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a7387395271abc89080e2acf77b6be958" kindref="member">onLeastClick</ref>();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a09ff51f12d0e4eece8f5fd2db9017d38" kindref="member">initializeList</ref>();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a41bad123ae9fe695f0142baee4517e82" kindref="member">onPlanClick</ref>();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a092f4088c35dcf30eebebb7b7a0f6644" kindref="member">onGraphInfoClick</ref>();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a326ee7d2d74b05c09f164b0bffd763ae" kindref="member">onStartTrip</ref>();</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a49b42218c58074af9c51e5cc72811147" kindref="member">ChecboxChanged</ref>();</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="193" refid="classtrip_planner_1a5426d7d7375464a717292faf1f3138aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Ui::tripPlanner<sp/>*<ref refid="classtrip_planner_1a5426d7d7375464a717292faf1f3138aa" kindref="member">ui</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="classtrip_planner_1ac3011789615ebab31141a9ad9a642dc5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_db_manager" kindref="compound">DbManager</ref><sp/><ref refid="classtrip_planner_1ac3011789615ebab31141a9ad9a642dc5" kindref="member">myDb</ref><sp/>=<sp/><ref refid="class_db_manager" kindref="compound">DbManager</ref>(PROJECT_PATH<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/college.db&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="classtrip_planner_1a0d904628227e4c833391fc5cb7d187b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtripprogress" kindref="compound">tripprogress</ref><sp/>*<ref refid="classtrip_planner_1a0d904628227e4c833391fc5cb7d187b4" kindref="member">progress</ref>;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="classtrip_planner_1ac59a255ea747293cedcf60e3817f7496" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QCheckBox*&gt;<sp/><ref refid="classtrip_planner_1ac59a255ea747293cedcf60e3817f7496" kindref="member">checkBoxVector</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="classtrip_planner_1a1884c3bf6bb1b09119c7670e1c5ae395" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QStringList<sp/><ref refid="classtrip_planner_1a1884c3bf6bb1b09119c7670e1c5ae395" kindref="member">selectedColleges</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="classtrip_planner_1ab0953b84602b02cebcdf722294f6d4de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QStringList<sp/><ref refid="classtrip_planner_1ab0953b84602b02cebcdf722294f6d4de" kindref="member">plannedColleges</ref>;</highlight></codeline>
+<codeline lineno="208" refid="classtrip_planner_1a97602084ee12e0cc86907ffb9bb5bc68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtrip_planner_1a97602084ee12e0cc86907ffb9bb5bc68" kindref="member">distance</ref>;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="classtrip_planner_1a9d8d4e58496c284dabe31279407f5ce3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="classtrip_planner_1a9d8d4e58496c284dabe31279407f5ce3" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="classtrip_planner_1a34865f6c097f3ed90791e6a519b5c5d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QList&lt;int&gt;<sp/><ref refid="classtrip_planner_1a34865f6c097f3ed90791e6a519b5c5d1" kindref="member">distanceTo</ref>;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="classtrip_planner_1a86be86f61460b03958343b5b4c526bfc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classgraph_info" kindref="compound">graphInfo</ref><sp/>*<ref refid="classtrip_planner_1a86be86f61460b03958343b5b4c526bfc" kindref="member">info</ref>;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216" refid="classtrip_planner_1a4b0222c2b26509a2f209f3614c64c1f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;QString&gt;<sp/><ref refid="classtrip_planner_1a4b0222c2b26509a2f209f3614c64c1f0" kindref="member">path</ref>;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="classtrip_planner_1a0e51a2079e2a5f6f15c2380a281e267a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;QString&gt;<sp/><ref refid="classtrip_planner_1a0e51a2079e2a5f6f15c2380a281e267a" kindref="member">remainingChoices</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220" refid="classtrip_planner_1a252f150f6c4e48fa426e0e00064e6223" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;int&gt;<sp/><ref refid="classtrip_planner_1a252f150f6c4e48fa426e0e00064e6223" kindref="member">distNext</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>TRIPPLANNER_H</highlight></codeline>
     </programlisting>
     <location file="tripplanner.h"/>
   </compounddef>

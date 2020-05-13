@@ -8,16 +8,6 @@
     <includedby refid="addsouvenir_8cpp" local="yes">addsouvenir.cpp</includedby>
     <includedby refid="adminwindow_8h" local="yes">adminwindow.h</includedby>
     <incdepgraph>
-      <node id="1">
-        <label>addsouvenir.h</label>
-        <link refid="addsouvenir_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
       <node id="10">
         <label>confirmpage.h</label>
         <link refid="confirmpage_8h"/>
@@ -35,12 +25,6 @@
       <node id="6">
         <label>QDebug</label>
       </node>
-      <node id="4">
-        <label>QAbstractItemModel</label>
-      </node>
-      <node id="9">
-        <label>QSqlQuery</label>
-      </node>
       <node id="3">
         <label>dbmanager.h</label>
         <link refid="dbmanager_8h"/>
@@ -57,6 +41,22 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
+      <node id="1">
+        <label>addsouvenir.h</label>
+        <link refid="addsouvenir_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QAbstractItemModel</label>
+      </node>
+      <node id="9">
+        <label>QSqlQuery</label>
+      </node>
       <node id="5">
         <label>QtSql</label>
       </node>
@@ -65,10 +65,6 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="7">
-        <label>main.cpp</label>
-        <link refid="main_8cpp"/>
-      </node>
       <node id="1">
         <label>addsouvenir.h</label>
         <link refid="addsouvenir_8h"/>
@@ -77,10 +73,6 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>adminwindow.cpp</label>
-        <link refid="adminwindow_8cpp"/>
-      </node>
       <node id="6">
         <label>loginwindow.cpp</label>
         <link refid="loginwindow_8cpp"/>
@@ -88,6 +80,10 @@
       <node id="2">
         <label>addsouvenir.cpp</label>
         <link refid="addsouvenir_8cpp"/>
+      </node>
+      <node id="7">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
       </node>
       <node id="5">
         <label>loginwindow.h</label>
@@ -98,6 +94,10 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+      </node>
+      <node id="4">
+        <label>adminwindow.cpp</label>
+        <link refid="adminwindow_8cpp"/>
       </node>
       <node id="3">
         <label>adminwindow.h</label>

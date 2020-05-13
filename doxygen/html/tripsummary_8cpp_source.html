@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CS1D - Project1 - College Touring: tripsummary.cpp Source File</title>
+<title>CS1D - Project2 - Baseball: tripsummary.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">CS1D - Project1 - College Touring
+   <div id="projectname">CS1D - Project2 - Baseball
    &#160;<span id="projectnumber">1</span>
    </div>
   </td>
@@ -128,7 +128,7 @@ $(document).ready(function(){initNavTree('tripsummary_8cpp_source.html','');});
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    QSqlQuery* qry=<span class="keyword">new</span> QSqlQuery();</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    qDebug() &lt;&lt; tripID;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    qry-&gt;prepare(<span class="stringliteral">&quot;SELECT souvenir, price, quantity, total FROM Purchases WHERE (tripID, college) = (:tripId, :college)&quot;</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    qry-&gt;prepare(<span class="stringliteral">&quot;SELECT souvenir, price, quantity, total FROM Purchases WHERE (tripID, stadium) = (:tripId, :college)&quot;</span>);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    qry-&gt;bindValue(<span class="stringliteral">&quot;:tripId&quot;</span> , tripID);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    qry-&gt;bindValue(<span class="stringliteral">&quot;:college&quot;</span> , schoolName);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span>(qry-&gt;exec())</div>
@@ -158,7 +158,7 @@ $(document).ready(function(){initNavTree('tripsummary_8cpp_source.html','');});
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    QSqlQuery* qry=<span class="keyword">new</span> QSqlQuery();</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    qDebug() &lt;&lt; tripID;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    qry-&gt;prepare(<span class="stringliteral">&quot;SELECT college, distanceToNext FROM Trips WHERE tripID = (:tripId) ORDER BY tripProgress ASC&quot;</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    qry-&gt;prepare(<span class="stringliteral">&quot;SELECT stadium, distanceToNext FROM Trips WHERE tripID = (:tripId) ORDER BY tripProgress ASC&quot;</span>);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    qry-&gt;bindValue(<span class="stringliteral">&quot;:tripId&quot;</span> , tripID);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span>(qry-&gt;exec())</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
@@ -180,7 +180,7 @@ $(document).ready(function(){initNavTree('tripsummary_8cpp_source.html','');});
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    QSqlQuery* qry=<span class="keyword">new</span> QSqlQuery();</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    qDebug() &lt;&lt; tripID;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    qry-&gt;prepare(<span class="stringliteral">&quot;SELECT college FROM Trips WHERE tripID = (:tripId)&quot;</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    qry-&gt;prepare(<span class="stringliteral">&quot;SELECT stadium FROM Trips WHERE tripID = (:tripId)&quot;</span>);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    qry-&gt;bindValue(<span class="stringliteral">&quot;:tripId&quot;</span> , tripID);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span>(qry-&gt;exec())</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
@@ -225,7 +225,7 @@ $(document).ready(function(){initNavTree('tripsummary_8cpp_source.html','');});
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    qDebug() &lt;&lt; tripID;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    qry.prepare(<span class="stringliteral">&quot;SELECT SUM(total) FROM Purchases WHERE (tripID, college) = (:tripId, :college)&quot;</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    qry.prepare(<span class="stringliteral">&quot;SELECT SUM(total) FROM Purchases WHERE (tripID, stadium) = (:tripId, :college)&quot;</span>);</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    qry.bindValue(<span class="stringliteral">&quot;:tripId&quot;</span> , tripID);</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    qry.bindValue(<span class="stringliteral">&quot;:college&quot;</span> , ui-&gt;school_comboBox-&gt;currentText());</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
@@ -269,15 +269,15 @@ $(document).ready(function(){initNavTree('tripsummary_8cpp_source.html','');});
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclasstrip_summary_html_ad20de08790de627fdf704c0991222c09"><div class="ttname"><a href="classtrip_summary.html#ad20de08790de627fdf704c0991222c09">tripSummary::updateTripTotal</a></div><div class="ttdeci">void updateTripTotal()</div><div class="ttdef"><b>Definition:</b> <a href="tripsummary_8cpp_source.html#l00153">tripsummary.cpp:153</a></div></div>
+<div class="ttc" id="aclasstrip_summary_html_ad20de08790de627fdf704c0991222c09"><div class="ttname"><a href="classtrip_summary.html#ad20de08790de627fdf704c0991222c09">tripSummary::updateTripTotal</a></div><div class="ttdeci">void updateTripTotal()</div><div class="ttdoc">updates the total of the entire trip</div><div class="ttdef"><b>Definition:</b> <a href="tripsummary_8cpp_source.html#l00153">tripsummary.cpp:153</a></div></div>
 <div class="ttc" id="aclasstrip_summary_html_a7e935c92f7047ad2b207c6dec90a54ff"><div class="ttname"><a href="classtrip_summary.html#a7e935c92f7047ad2b207c6dec90a54ff">tripSummary::on_school_comboBox_currentIndexChanged</a></div><div class="ttdeci">void on_school_comboBox_currentIndexChanged(const QString &amp;arg1)</div><div class="ttdoc">prepares a query and binds tripId and collegeNames to appropiate Database</div><div class="ttdef"><b>Definition:</b> <a href="tripsummary_8cpp_source.html#l00031">tripsummary.cpp:31</a></div></div>
 <div class="ttc" id="aclasstrip_summary_html_a990accf373da48ade41def873014fdf6"><div class="ttname"><a href="classtrip_summary.html#a990accf373da48ade41def873014fdf6">tripSummary::tripSummary</a></div><div class="ttdeci">tripSummary(const QString &amp;id, QWidget *parent=nullptr)</div><div class="ttdoc">explicit Constructor</div><div class="ttdef"><b>Definition:</b> <a href="tripsummary_8cpp_source.html#l00011">tripsummary.cpp:11</a></div></div>
-<div class="ttc" id="aclasstrip_summary_html_adb1411877190127a126618a437ff47b3"><div class="ttname"><a href="classtrip_summary.html#adb1411877190127a126618a437ff47b3">tripSummary::updateSchoolComboBox</a></div><div class="ttdeci">void updateSchoolComboBox()</div><div class="ttdef"><b>Definition:</b> <a href="tripsummary_8cpp_source.html#l00083">tripsummary.cpp:83</a></div></div>
+<div class="ttc" id="aclasstrip_summary_html_adb1411877190127a126618a437ff47b3"><div class="ttname"><a href="classtrip_summary.html#adb1411877190127a126618a437ff47b3">tripSummary::updateSchoolComboBox</a></div><div class="ttdeci">void updateSchoolComboBox()</div><div class="ttdoc">updates the combo box with the stadiums on the trip</div><div class="ttdef"><b>Definition:</b> <a href="tripsummary_8cpp_source.html#l00083">tripsummary.cpp:83</a></div></div>
 <div class="ttc" id="aclasstrip_summary_html_ac5267f51220eb49c45707b1eccce8587"><div class="ttname"><a href="classtrip_summary.html#ac5267f51220eb49c45707b1eccce8587">tripSummary::updateTripSchoolList</a></div><div class="ttdeci">void updateTripSchoolList()</div><div class="ttdoc">updates tripID and UI model when called. Prepares query for all availble tripIDs</div><div class="ttdef"><b>Definition:</b> <a href="tripsummary_8cpp_source.html#l00061">tripsummary.cpp:61</a></div></div>
-<div class="ttc" id="aclasstrip_summary_html_a1d82d9dd567f2be49d1710651c4d8fe8"><div class="ttname"><a href="classtrip_summary.html#a1d82d9dd567f2be49d1710651c4d8fe8">tripSummary::updateTotalDistance</a></div><div class="ttdeci">void updateTotalDistance()</div><div class="ttdef"><b>Definition:</b> <a href="tripsummary_8cpp_source.html#l00104">tripsummary.cpp:104</a></div></div>
-<div class="ttc" id="aclasstrip_summary_html_a3b1175846c928336711b236e878dfd11"><div class="ttname"><a href="classtrip_summary.html#a3b1175846c928336711b236e878dfd11">tripSummary::updateSchoolTotal</a></div><div class="ttdeci">void updateSchoolTotal()</div><div class="ttdef"><b>Definition:</b> <a href="tripsummary_8cpp_source.html#l00128">tripsummary.cpp:128</a></div></div>
+<div class="ttc" id="aclasstrip_summary_html_a1d82d9dd567f2be49d1710651c4d8fe8"><div class="ttname"><a href="classtrip_summary.html#a1d82d9dd567f2be49d1710651c4d8fe8">tripSummary::updateTotalDistance</a></div><div class="ttdeci">void updateTotalDistance()</div><div class="ttdoc">updates the total distance of the trip</div><div class="ttdef"><b>Definition:</b> <a href="tripsummary_8cpp_source.html#l00104">tripsummary.cpp:104</a></div></div>
+<div class="ttc" id="aclasstrip_summary_html_a3b1175846c928336711b236e878dfd11"><div class="ttname"><a href="classtrip_summary.html#a3b1175846c928336711b236e878dfd11">tripSummary::updateSchoolTotal</a></div><div class="ttdeci">void updateSchoolTotal()</div><div class="ttdoc">updates the total of the currently selected stadium from the combo box</div><div class="ttdef"><b>Definition:</b> <a href="tripsummary_8cpp_source.html#l00128">tripsummary.cpp:128</a></div></div>
 <div class="ttc" id="aclasstrip_summary_html_aaccf37c3e9d1691c8dcf1dd9349b2ea2"><div class="ttname"><a href="classtrip_summary.html#aaccf37c3e9d1691c8dcf1dd9349b2ea2">tripSummary::~tripSummary</a></div><div class="ttdeci">~tripSummary()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="tripsummary_8cpp_source.html#l00024">tripsummary.cpp:24</a></div></div>
-<div class="ttc" id="aclasstrip_summary_html_a7d531afb03fb3f3b426bf8f164b57c41"><div class="ttname"><a href="classtrip_summary.html#a7d531afb03fb3f3b426bf8f164b57c41">tripSummary::ui</a></div><div class="ttdeci">Ui::tripSummary * ui</div><div class="ttdoc">points to tripSummary UI</div><div class="ttdef"><b>Definition:</b> <a href="tripsummary_8h_source.html#l00083">tripsummary.h:83</a></div></div>
+<div class="ttc" id="aclasstrip_summary_html_a7d531afb03fb3f3b426bf8f164b57c41"><div class="ttname"><a href="classtrip_summary.html#a7d531afb03fb3f3b426bf8f164b57c41">tripSummary::ui</a></div><div class="ttdeci">Ui::tripSummary * ui</div><div class="ttdoc">points to tripSummary UI</div><div class="ttdef"><b>Definition:</b> <a href="tripsummary_8h_source.html#l00095">tripsummary.h:95</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

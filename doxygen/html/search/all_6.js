@@ -1,7 +1,22 @@
 var searchData=
 [
-  ['main_46',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['main_2ecpp_47',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['max_48',['max',['../classtripprogress.html#a84787adb6ef3ef20df3cbb77534b34c6',1,'tripprogress']]],
-  ['mydb_49',['myDb',['../classadd_souvenir.html#a0848f56796dd5cbe4d914e6fcaf717ef',1,'addSouvenir::myDb()'],['../class_admin_window.html#a500f2c07a0c34aa491c7d75ba0c8e3e5',1,'AdminWindow::myDb()'],['../class_login_window.html#addd8a2b9a2903d59c13b68ca43d142e6',1,'LoginWindow::myDb()'],['../classtrip_planner.html#ac3011789615ebab31141a9ad9a642dc5',1,'tripPlanner::myDb()'],['../classtrip_summary.html#a55cf5c4aeadc2820b51c951af075b7a1',1,'tripSummary::myDb()'],['../classtripprogress.html#a6c35388e562a1f48162c0de3d963033a',1,'tripprogress::myDb()'],['../class_db_manager.html#a47f7984afa73f976fdc1cbd2f10753cf',1,'DbManager::myDB()']]]
+  ['getalledges_81',['getAllEdges',['../classgraph.html#a185cc1b884c17ec40d5f74345b201b63',1,'graph']]],
+  ['getbackedges_82',['getBackEdges',['../classdfs_graph.html#a1b35fe4429a23975a216020690f38434',1,'dfsGraph']]],
+  ['getcityname_83',['getCityName',['../classgraph.html#adc6213f3ebd785cbf079d87c7748e2a9',1,'graph']]],
+  ['getdata_84',['getData',['../classconfirmpage.html#a14e6471474d987fc336bba295be937d1',1,'confirmpage']]],
+  ['getdiscoveryedges_85',['getDiscoveryEdges',['../classdfs_graph.html#a74d7c03d5f979c681552596ac21be384',1,'dfsGraph']]],
+  ['getdistance_86',['getDistance',['../classtripprogress.html#a8d485f178adc042180af1aa82359ede8',1,'tripprogress']]],
+  ['getedgelength_87',['getEdgeLength',['../classgraph.html#a6485328b59e59e915f748c3f8fd0a266',1,'graph']]],
+  ['getedgesforcity_88',['getEdgesForCity',['../classbfs.html#a0087b6199a1625ab9dfa1acfc45da909',1,'bfs']]],
+  ['getedgesforthislevel_89',['getEdgesForThisLevel',['../classbfs.html#a87a3ed9362e9fc1505ba1bc069eca928',1,'bfs']]],
+  ['getpassword_90',['getPassword',['../class_db_manager.html#a5d730ddded1f92e418a9c88e570b2117',1,'DbManager']]],
+  ['graph_91',['graph',['../classgraph.html',1,'graph'],['../classdfs_graph.html#a71ae84114be5d9a9eebdc612e7b5a3aa',1,'dfsGraph::graph()'],['../classgraph_adj_list.html#aceee3e23243a90689734ca30c32eddb0',1,'graphAdjList::graph()']]],
+  ['graph_2ecpp_92',['graph.cpp',['../graph_8cpp.html',1,'']]],
+  ['graph_2eh_93',['graph.h',['../graph_8h.html',1,'']]],
+  ['graphadjlist_94',['graphAdjList',['../classgraph_adj_list.html',1,'graphAdjList'],['../classgraph_adj_list.html#a79472788da3af65f0cc13fc7e00ddddc',1,'graphAdjList::graphAdjList()']]],
+  ['graphadjlist_2ecpp_95',['graphAdjList.cpp',['../graph_adj_list_8cpp.html',1,'']]],
+  ['graphadjlist_2eh_96',['graphAdjList.h',['../graph_adj_list_8h.html',1,'']]],
+  ['graphinfo_97',['graphInfo',['../classgraph_info.html',1,'graphInfo'],['../classgraph_info.html#abb7826392bbce71e879bfd91ba4412a1',1,'graphInfo::graphInfo()']]],
+  ['graphinfo_2ecpp_98',['graphinfo.cpp',['../graphinfo_8cpp.html',1,'']]],
+  ['graphinfo_2eh_99',['graphinfo.h',['../graphinfo_8h.html',1,'']]]
 ];

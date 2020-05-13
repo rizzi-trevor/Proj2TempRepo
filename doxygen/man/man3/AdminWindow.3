@@ -1,4 +1,4 @@
-.TH "AdminWindow" 3 "Mon Mar 23 2020" "Version 1" "CS1D - Project1 - College Touring" \" -*- nroff -*-
+.TH "AdminWindow" 3 "Mon May 11 2020" "Version 1" "CS1D - Project2 - Baseball" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,6 +14,9 @@ Inherits QDialog\&.
 .SS "Public Member Functions"
 
 .in +1c
+.ti -1c
+.RI "void \fBupdateCombo\fP ()"
+.br
 .ti -1c
 .RI "\fBAdminWindow\fP (QWidget *parent=nullptr)"
 .br
@@ -64,6 +67,48 @@ Inherits QDialog\&.
 .ti -1c
 .RI "void \fBon_pushButton_5_released\fP ()"
 .br
+.ti -1c
+.RI "void \fBon_pushButton_2_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_addMLB_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_searchButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_showALL_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_showStadiums_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_showStadiums_2_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_pushButton_3_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_pushButton_4_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_pushButton_6_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBsouvTable\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_pushButton_7_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_souTable_clicked\fP (const QModelIndex &index)"
+.br
+.ti -1c
+.RI "void \fBon_pushButton_8_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_updateButton_clicked\fP ()"
+.br
 .in -1c
 .SS "Private Attributes"
 
@@ -104,13 +149,15 @@ explicit default Constructor Constructor intializes UI for adminwindow calls \fB
 .PP
 Definition at line 6 of file adminwindow\&.cpp\&.
 .PP
-References updateCollegeTable(), and updateSouvenirTable()\&.
+References AdminWindow(), souvTable(), updateCollegeTable(), and updateSouvenirTable()\&.
+.PP
+Referenced by AdminWindow()\&.
 .SS "AdminWindow::~AdminWindow ()"
 
 .PP
 Destructor\&. Close the \fBAdminWindow\fP UI 
 .PP
-Definition at line 15 of file adminwindow\&.cpp\&.
+Definition at line 17 of file adminwindow\&.cpp\&.
 .PP
 References ui\&.
 .SH "Member Function Documentation"
@@ -127,7 +174,13 @@ void - none
 .PP
 
 .PP
-Definition at line 88 of file adminwindow\&.cpp\&.
+Definition at line 95 of file adminwindow\&.cpp\&.
+.PP
+References confirmpage::getData(), confirmpage::on_okButton_released(), updateCollegeTable(), and updateSouvenirTable()\&.
+.SS "void AdminWindow::on_addMLB_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 181 of file adminwindow\&.cpp\&.
 .PP
 References confirmpage::getData(), confirmpage::on_okButton_released(), updateCollegeTable(), and updateSouvenirTable()\&.
 .SS "void AdminWindow::on_addSouvenir_released ()\fC [private]\fP, \fC [slot]\fP"
@@ -142,19 +195,45 @@ void - none
 .PP
 
 .PP
-Definition at line 111 of file adminwindow\&.cpp\&.
+Definition at line 118 of file adminwindow\&.cpp\&.
 .PP
 References addSouvenir::on_pushButton_2_released(), and updateSouvenirTable()\&.
+.SS "void AdminWindow::on_pushButton_2_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 176 of file adminwindow\&.cpp\&.
+.SS "void AdminWindow::on_pushButton_3_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 311 of file adminwindow\&.cpp\&.
+.SS "void AdminWindow::on_pushButton_4_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 336 of file adminwindow\&.cpp\&.
 .SS "void AdminWindow::on_pushButton_5_released ()\fC [private]\fP, \fC [slot]\fP"
 
 .PP
-Definition at line 250 of file adminwindow\&.cpp\&.
+Definition at line 167 of file adminwindow\&.cpp\&.
+.SS "void AdminWindow::on_pushButton_6_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 361 of file adminwindow\&.cpp\&.
+.SS "void AdminWindow::on_pushButton_7_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 407 of file adminwindow\&.cpp\&.
+.PP
+References addSouvenir::on_pushButton_2_released(), and souvTable()\&.
+.SS "void AdminWindow::on_pushButton_8_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 443 of file adminwindow\&.cpp\&.
+.PP
+References confirmpage::getData(), confirmpage::on_okButton_released(), and souvTable()\&.
 .SS "void AdminWindow::on_removeSouvenir_2_clicked ()\fC [private]\fP, \fC [slot]\fP"
 
 .PP
-Definition at line 204 of file adminwindow\&.cpp\&.
-.PP
-References confirmpage::getData(), confirmpage::on_okButton_released(), and updateSouvenirTable()\&.
+Definition at line 162 of file adminwindow\&.cpp\&.
 .SS "void AdminWindow::on_removeSouvenir_released ()\fC [private]\fP, \fC [slot]\fP"
 
 .PP
@@ -167,9 +246,27 @@ void - none
 .PP
 
 .PP
-Definition at line 121 of file adminwindow\&.cpp\&.
+Definition at line 128 of file adminwindow\&.cpp\&.
+.SS "void AdminWindow::on_searchButton_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
 .PP
-References confirmpage::getData(), confirmpage::on_okButton_released(), and updateSouvenirTable()\&.
+Definition at line 224 of file adminwindow\&.cpp\&.
+.SS "void AdminWindow::on_showALL_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 250 of file adminwindow\&.cpp\&.
+.SS "void AdminWindow::on_showStadiums_2_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 291 of file adminwindow\&.cpp\&.
+.SS "void AdminWindow::on_showStadiums_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 271 of file adminwindow\&.cpp\&.
+.SS "void AdminWindow::on_souTable_clicked (const QModelIndex & index)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 417 of file adminwindow\&.cpp\&.
 .SS "void AdminWindow::on_souvenirView_clicked (const QModelIndex & index)\fC [private]\fP, \fC [slot]\fP"
 
 .PP
@@ -182,7 +279,13 @@ void - none
 .PP
 
 .PP
-Definition at line 183 of file adminwindow\&.cpp\&.
+Definition at line 156 of file adminwindow\&.cpp\&.
+.SS "void AdminWindow::on_updateButton_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 491 of file adminwindow\&.cpp\&.
+.PP
+References confirmpage::getData(), confirmpage::on_okButton_released(), and souvTable()\&.
 .SS "void AdminWindow::onAddColleges ()\fC [private]\fP, \fC [slot]\fP"
 
 .PP
@@ -195,7 +298,7 @@ void - none
 .PP
 
 .PP
-Definition at line 161 of file adminwindow\&.cpp\&.
+Definition at line 133 of file adminwindow\&.cpp\&.
 .PP
 References confirmpage::getData(), confirmpage::on_okButton_released(), updateCollegeTable(), and updateSouvenirTable()\&.
 .SS "void AdminWindow::onInitialise ()\fC [private]\fP, \fC [slot]\fP"
@@ -210,9 +313,15 @@ void - none
 .PP
 
 .PP
-Definition at line 59 of file adminwindow\&.cpp\&.
+Definition at line 62 of file adminwindow\&.cpp\&.
 .PP
 References confirmpage::getData(), confirmpage::on_okButton_released(), updateCollegeTable(), and updateSouvenirTable()\&.
+.SS "void AdminWindow::souvTable ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 385 of file adminwindow\&.cpp\&.
+.PP
+Referenced by AdminWindow(), on_pushButton_7_clicked(), on_pushButton_8_clicked(), and on_updateButton_clicked()\&.
 .SS "void AdminWindow::updateCollegeTable ()"
 
 .PP
@@ -225,9 +334,13 @@ void - none
 .PP
 
 .PP
-Definition at line 20 of file adminwindow\&.cpp\&.
+Definition at line 22 of file adminwindow\&.cpp\&.
 .PP
-Referenced by AdminWindow(), clearCollegeData(), onAddColleges(), and onInitialise()\&.
+Referenced by AdminWindow(), clearCollegeData(), on_addMLB_clicked(), onAddColleges(), and onInitialise()\&.
+.SS "void AdminWindow::updateCombo ()"
+
+.PP
+Definition at line 204 of file adminwindow\&.cpp\&.
 .SS "void AdminWindow::updateSouvenirTable ()"
 
 .PP
@@ -240,9 +353,9 @@ void - none
 .PP
 
 .PP
-Definition at line 39 of file adminwindow\&.cpp\&.
+Definition at line 41 of file adminwindow\&.cpp\&.
 .PP
-Referenced by AdminWindow(), clearCollegeData(), on_addSouvenir_released(), on_removeSouvenir_2_clicked(), on_removeSouvenir_released(), onAddColleges(), and onInitialise()\&.
+Referenced by AdminWindow(), clearCollegeData(), on_addMLB_clicked(), on_addSouvenir_released(), onAddColleges(), and onInitialise()\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "\fBDbManager\fP AdminWindow::myDb = \fBDbManager\fP(PROJECT_PATH + '/college\&.db')\fC [private]\fP"
@@ -250,22 +363,22 @@ Referenced by AdminWindow(), clearCollegeData(), on_addSouvenir_released(), on_r
 .PP
 assigns DB to predefined PROJECT_PATH constant 
 .PP
-Definition at line 115 of file adminwindow\&.h\&.
+Definition at line 144 of file adminwindow\&.h\&.
 .SS "QString AdminWindow::souve\fC [private]\fP"
 
 .PP
 string stores temp souv data 
 .PP
-Definition at line 105 of file adminwindow\&.h\&.
+Definition at line 134 of file adminwindow\&.h\&.
 .SS "Ui::AdminWindow* AdminWindow::ui\fC [private]\fP"
 
 .PP
 points to adminwindow UI 
 .PP
-Definition at line 110 of file adminwindow\&.h\&.
+Definition at line 139 of file adminwindow\&.h\&.
 .PP
 Referenced by ~AdminWindow()\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for CS1D - Project1 - College Touring from the source code\&.
+Generated automatically by Doxygen for CS1D - Project2 - Baseball from the source code\&.

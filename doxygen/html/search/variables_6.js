@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['row_262',['row',['../classtripprogress.html#a2c34c3a30ec0761d13a8d9b8595a0c93',1,'tripprogress']]]
+  ['id_516',['id',['../classtrip_planner.html#a9d8d4e58496c284dabe31279407f5ce3',1,'tripPlanner']]],
+  ['info_517',['info',['../classtrip_planner.html#a86be86f61460b03958343b5b4c526bfc',1,'tripPlanner']]]
 ];

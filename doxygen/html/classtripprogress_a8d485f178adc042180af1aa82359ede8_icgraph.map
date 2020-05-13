@@ -1,5 +1,5 @@
 <map id="tripprogress::getDistance" name="tripprogress::getDistance">
-<area shape="rect" id="node1" title=" " alt="" coords="223,31,389,57"/>
+<area shape="rect" id="node1" title="Retreives teh distance to the next stadium from the database for display." alt="" coords="223,31,389,57"/>
 <area shape="rect" id="node2" href="$classtripprogress.html#af61ad9424ede3e9f90394c5870fc8ef6" title="initializes tripProgress on execution , binds tripID, updates size, and calculates nextTrip" alt="" coords="5,5,175,32"/>
 <area shape="rect" id="node3" href="$classtripprogress.html#a310e32e2a2054d98098d7744797dd7db" title="executes nextTrip();" alt="" coords="6,56,174,83"/>
 </map>

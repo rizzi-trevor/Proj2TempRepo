@@ -131,7 +131,7 @@ Parameters                    </title>
                 </formalpara>
                 </para>
 <para>
-Definition at line 7 of file loginwindow.cpp.</para>
+Definition at line 5 of file loginwindow.cpp.</para>
     </section><anchor xml:id="_class_login_window_1a0c49fe788dcce29aa50e7d974e1ad158"/>    <section>
     <title>~LoginWindow()</title>
 <indexterm><primary>~LoginWindow</primary><secondary>LoginWindow</secondary></indexterm>
@@ -143,7 +143,7 @@ Definition at line 7 of file loginwindow.cpp.</para>
 
 <para>Close the loginwindow UI </para>
 <para>
-Definition at line 41 of file loginwindow.cpp.</para>
+Definition at line 30 of file loginwindow.cpp.</para>
 </section>
 </section>
 <section>
@@ -163,7 +163,7 @@ Definition at line 41 of file loginwindow.cpp.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 136 of file loginwindow.cpp.</para>
+Definition at line 125 of file loginwindow.cpp.</para>
     </section><anchor xml:id="_class_login_window_1ab0218fdb5f9c0a0f4c8c8fa4e7256ca6"/>    <section>
     <title>on_Password_returnPressed</title>
 <indexterm><primary>on_Password_returnPressed</primary><secondary>LoginWindow</secondary></indexterm>
@@ -179,7 +179,7 @@ Definition at line 136 of file loginwindow.cpp.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 126 of file loginwindow.cpp.</para>
+Definition at line 115 of file loginwindow.cpp.</para>
     </section><anchor xml:id="_class_login_window_1a589504e28cc50062c30d6a26ad444fb3"/>    <section>
     <title>on_Username_returnPressed</title>
 <indexterm><primary>on_Username_returnPressed</primary><secondary>LoginWindow</secondary></indexterm>
@@ -195,7 +195,7 @@ Definition at line 126 of file loginwindow.cpp.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 131 of file loginwindow.cpp.</para>
+Definition at line 120 of file loginwindow.cpp.</para>
     </section><anchor xml:id="_class_login_window_1a6fa354fcb799ca0afb2ac9cf48b18a93"/>    <section>
     <title>onClearClick</title>
 <indexterm><primary>onClearClick</primary><secondary>LoginWindow</secondary></indexterm>
@@ -211,7 +211,7 @@ Definition at line 131 of file loginwindow.cpp.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 115 of file loginwindow.cpp.</para>
+Definition at line 104 of file loginwindow.cpp.</para>
     </section><anchor xml:id="_class_login_window_1af307b9c8ab38cb4f7a5785d181e19533"/>    <section>
     <title>onCreateClick</title>
 <indexterm><primary>onCreateClick</primary><secondary>LoginWindow</secondary></indexterm>
@@ -227,7 +227,7 @@ Definition at line 115 of file loginwindow.cpp.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 93 of file loginwindow.cpp.</para>
+Definition at line 82 of file loginwindow.cpp.</para>
     </section><anchor xml:id="_class_login_window_1a99244d50f34fe69cceeee38151f16df9"/>    <section>
     <title>onLoginClick</title>
 <indexterm><primary>onLoginClick</primary><secondary>LoginWindow</secondary></indexterm>
@@ -243,7 +243,7 @@ Definition at line 93 of file loginwindow.cpp.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 54 of file loginwindow.cpp.</para>
+Definition at line 43 of file loginwindow.cpp.</para>
     </section><anchor xml:id="_class_login_window_1abe037678032bbd0584251373cc6670b9"/>    <section>
     <title>onPlanClick</title>
 <indexterm><primary>onPlanClick</primary><secondary>LoginWindow</secondary></indexterm>
@@ -259,7 +259,7 @@ Definition at line 54 of file loginwindow.cpp.</para>
 </formalpara>
 </para>
 <para>
-Definition at line 47 of file loginwindow.cpp.</para>
+Definition at line 36 of file loginwindow.cpp.</para>
 </section>
 </section>
 <section>
